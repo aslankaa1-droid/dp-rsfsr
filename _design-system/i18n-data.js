@@ -75,7 +75,13 @@
         champion: {
           eyebrow: 'Government Champions',
           title: 'Champion-map · Stage 1',
-          lead: 'Шесть институциональных партнёров для wedge-старта через действующий 259-ФЗ'
+          lead: 'Шесть институциональных партнёров для wedge-старта через действующий 259-ФЗ',
+          c1_name: 'М. Г. Решетников', c1_role: 'Министр', c1_org: 'Минэкономразвития РФ · СЗПК-контур',
+          c2_name: 'В. В. Колычев', c2_role: 'Заместитель министра', c2_org: 'Минфин РФ · бюджетный контур',
+          c3_name: 'А. В. Сазанов', c3_role: 'Статс-секретарь — заместитель министра', c3_org: 'Минфин РФ · ЦФА и налоговый режим',
+          c4_name: 'А. Г. Аксаков', c4_role: 'Председатель комитета', c4_org: 'Госдума РФ · финансовые рынки',
+          c5_name: 'Р. Н. Минниханов', c5_role: 'Раис (глава)', c5_org: 'Республика Татарстан · пилот-регион',
+          c6_name: 'А. В. Моор', c6_role: 'Губернатор', c6_org: 'Тюменская область · пилот-регион'
         },
         audit: {
           eyebrow: 'Сводный аудит',
@@ -163,7 +169,13 @@
         champion: {
           eyebrow: 'Government Champions',
           title: 'Stage-1 Champion Map',
-          lead: 'Six institutional partners powering the wedge launch through the existing 259-FZ framework'
+          lead: 'Six institutional partners powering the wedge launch through the existing 259-FZ framework',
+          c1_name: 'M. G. Reshetnikov', c1_role: 'Minister', c1_org: 'Ministry of Economic Development of the RF · SZPK circuit',
+          c2_name: 'V. V. Kolychev', c2_role: 'Deputy Minister', c2_org: 'Ministry of Finance of the RF · budget circuit',
+          c3_name: 'A. V. Sazanov', c3_role: 'State Secretary — Deputy Minister', c3_org: 'Ministry of Finance of the RF · DFA and tax regime',
+          c4_name: 'A. G. Aksakov', c4_role: 'Committee Chairman', c4_org: 'State Duma of the RF · financial markets',
+          c5_name: 'R. N. Minnikhanov', c5_role: 'Rais (Head)', c5_org: 'Republic of Tatarstan · pilot region',
+          c6_name: 'A. V. Moor', c6_role: 'Governor', c6_org: 'Tyumen Region · pilot region'
         },
         audit: {
           eyebrow: 'Composite Audit',
@@ -251,7 +263,13 @@
         champion: {
           eyebrow: 'Champions gouvernementaux',
           title: 'Carte des champions · Étape 1',
-          lead: 'Six partenaires institutionnels pour amorcer le wedge dans le cadre 259-FZ existant'
+          lead: 'Six partenaires institutionnels pour amorcer le wedge dans le cadre 259-FZ existant',
+          c1_name: 'M. G. Rechetnikov', c1_role: 'Ministre', c1_org: 'Ministère du Développement économique de la FR · circuit SZPK',
+          c2_name: 'V. V. Kolytchev', c2_role: 'Vice-ministre', c2_org: 'Ministère des Finances de la FR · circuit budgétaire',
+          c3_name: 'A. V. Sazanov', c3_role: "Secrétaire d'État — Vice-ministre", c3_org: 'Ministère des Finances de la FR · AFN et régime fiscal',
+          c4_name: 'A. G. Aksakov', c4_role: 'Président de la commission', c4_org: "Douma d'État de la FR · marchés financiers",
+          c5_name: 'R. N. Minnikhanov', c5_role: 'Raïs (Chef)', c5_org: 'République du Tatarstan · région pilote',
+          c6_name: 'A. V. Moor', c6_role: 'Gouverneur', c6_org: 'Région de Tioumen · région pilote'
         },
         audit: {
           eyebrow: 'Audit consolidé',
@@ -339,7 +357,13 @@
         champion: {
           eyebrow: 'الرعاة الحكوميون',
           title: 'خريطة الرعاة · المرحلة 1',
-          lead: 'ستة شركاء مؤسسيين لانطلاق نقطة الدخول ضمن إطار 259-FZ القائم'
+          lead: 'ستة شركاء مؤسسيين لانطلاق نقطة الدخول ضمن إطار 259-FZ القائم',
+          c1_name: 'م. غ. ريشيتنيكوف', c1_role: 'وزير', c1_org: 'وزارة التنمية الاقتصادية للاتحاد الروسي · دائرة SZPK',
+          c2_name: 'ف. ف. كولوتشيف', c2_role: 'نائب الوزير', c2_org: 'وزارة المالية للاتحاد الروسي · الدائرة الميزانية',
+          c3_name: 'أ. ف. سازانوف', c3_role: 'وزير الدولة — نائب الوزير', c3_org: 'وزارة المالية للاتحاد الروسي · DFA والنظام الضريبي',
+          c4_name: 'أ. غ. أكساكوف', c4_role: 'رئيس اللجنة', c4_org: 'مجلس الدوما للاتحاد الروسي · الأسواق المالية',
+          c5_name: 'ر. ن. منيخانوف', c5_role: 'الرئيس', c5_org: 'جمهورية تتارستان · المنطقة التجريبية',
+          c6_name: 'أ. ف. مور', c6_role: 'المحافظ', c6_org: 'منطقة تيومين · المنطقة التجريبية'
         },
         audit: {
           eyebrow: 'التدقيق الموحَّد',
