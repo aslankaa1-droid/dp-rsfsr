@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../">
+  <title>Учреждение АО оператора и РКН · ЦПФСР.РФ</title>
+  <meta name="description" content="Учреждение АО оператора и РКН — Юридический фундамент. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../_design-system/tokens.css">
+  <link rel="stylesheet" href="../_design-system/global.css">
+  <link rel="stylesheet" href="../_design-system/components.css">
+  <link rel="stylesheet" href="../_design-system/rtl.css">
+  <link rel="stylesheet" href="../_design-system/print.css">
+
+  <script defer src="../_design-system/theme-switcher.js"></script>
+  <script defer src="../_design-system/i18n-data.js"></script>
+  <script defer src="../_design-system/i18n.js"></script>
+  <script defer src="../_design-system/ticker.js"></script>
+  <script defer src="../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Юридический фундамент</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Юридический фундамент</span>
+      <h1>Учреждение АО оператора и РКН</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="учреждение-ао-оператора-и-регуляторная-регистрация">Учреждение
+АО-оператора и регуляторная регистрация</h1>
+<p><strong>Документ:</strong> проект учреждения оператора-юридического
+лица и план параллельной регуляторной регистрации.
+<strong>Цель:</strong> закрыть RED-флаги B5 (отсутствие корпоративного
+оператора) и B6 (отсутствие регистрации в РКН) сводного аудита от
+24.05.2026. <strong>Автор концепции и единственный учредитель:</strong>
+Кагиров Абдул-Хаким Ахмадович (свидетельство о депонировании №4011265 от
+19.12.2024). <strong>Дата:</strong> 24.05.2026.</p>
+<hr />
+<h2 id="корпоративная-структура">1. Корпоративная структура</h2>
+<h3 id="тип-юридического-лица">1.1. Тип юридического лица</h3>
+<p><strong>АО «ЦП РСФСР» (непубличное акционерное общество, ст. 7 ФЗ от
+26.12.1995 №208-ФЗ «Об АО»).</strong></p>
+<p>Обоснование выбора формы: - Соответствует ст. 5 ч. 1 259-ФЗ
+(требование к оператору ИС ЦФА — непубличное АО, ООО или кредитная
+организация). - Позволяет точечно работать с инвесторами через выпуск
+привилегированных акций. - Допускает участие в межведомственных проектах
+уровня ВЭБ.РФ / Минэк.</p>
+<h3 id="уставный-капитал-и-собственные-средства">1.2. Уставный капитал и
+собственные средства</h3>
+<p><strong>Внимание (правовая дифференциация по 208-ФЗ vs Указанию ЦБ
+4336-У):</strong> уставный капитал (ст. 25 208-ФЗ) и собственные
+средства оператора ИС ЦФА (Указание ЦБ 4336-У в развитие 779-П) — разные
+категории. Для получения статуса оператора ИС ЦФА требуется
+одновременно:</p>
+<ul>
+<li><strong>Уставный капитал АО:</strong> не менее 100 000 ₽ (минимум по
+ст. 26 208-ФЗ для непубличного АО). На учреждении планируется ≥ 10 000
+000 ₽ оплаченных обыкновенных акций.</li>
+<li><strong>Собственные средства (капитал) ≥ 50 000 000 ₽</strong>
+(требование п. 1.2 Указания ЦБ 4336-У). Формируются за счёт оплаченного
+УК, эмиссионного дохода, нераспределённой прибыли и иных источников по
+методике ЦБ. Подтверждаются аудиторским заключением.</li>
+</ul>
+<p>Структура на момент учреждения: - 100% обыкновенных акций — у
+учредителя. - УК ≥ 10 млн ₽ + взнос в добавочный капитал/эмиссионный
+доход после Seed-раунда обеспечивают совокупные собственные средства ≥
+50 млн ₽ к моменту подачи заявления в реестр операторов ИС ЦФА. - На
+дальнейших раундах — выпуск привилегированных акций со специальными
+правами (защита от размывания контроля).</p>
+<h3 id="должностные-лица-соответствие-779-п">1.3. Должностные лица
+(соответствие 779-П)</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Должность</th>
+<th>Требование 779-П</th>
+<th>Срок назначения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Генеральный директор</strong></td>
+<td>Высшее экономическое/юридическое; ≥3 лет опыта на руководящих
+позициях в финсекторе; квалификационное соответствие</td>
+<td>T+1 мес. после учреждения</td>
+</tr>
+<tr>
+<td><strong>Председатель Совета директоров</strong></td>
+<td>Независимый; репутация подтверждена</td>
+<td>T+2 мес.</td>
+</tr>
+<tr>
+<td><strong>Главный комплаенс-офицер (HOC)</strong></td>
+<td>Сертификат ICA / IRM / ACAMS или эквивалент; ≥5 лет опыта в
+AML/KYC</td>
+<td>T+2 мес.</td>
+</tr>
+<tr>
+<td><strong>Главный информационный безопасник (CISO)</strong></td>
+<td>ФСТЭК-сертификат; ≥5 лет опыта по КИИ-1 / УЗ-1</td>
+<td>T+2 мес.</td>
+</tr>
+<tr>
+<td><strong>Главный юрист</strong></td>
+<td>Специализация по 259-ФЗ / 779-П / 152-ФЗ</td>
+<td>T+1 мес.</td>
+</tr>
+<tr>
+<td><strong>Главный риск-офицер (CRO)</strong></td>
+<td>FRM / PRM или эквивалент</td>
+<td>T+3 мес.</td>
+</tr>
+<tr>
+<td><strong>Внутренний аудитор</strong></td>
+<td>Член СРО аудиторов</td>
+<td>T+3 мес.</td>
+</tr>
+<tr>
+<td><strong>Главный бухгалтер</strong></td>
+<td>Соответствие ст. 7 ФЗ №402-ФЗ «О бухучёте», требования ст. 11.1
+86-ФЗ к должностным лицам финансовой инфраструктуры</td>
+<td>T+1 мес.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="учредительные-документы">1.4. Учредительные документы</h3>
+<p>В рамках учреждения готовится пакет: 1. <strong>Устав АО «ЦП
+РСФСР»</strong> (на основе типового устава, с учётом специальных
+положений по 779-П). 2. <strong>Решение единственного
+учредителя</strong> о создании АО. 3. <strong>Договор о создании
+АО</strong>. 4. <strong>Заявление о государственной регистрации</strong>
+(форма Р11001) в ФНС. 5. <strong>Документ об оплате уставного
+капитала</strong> (в момент учреждения — не менее 50% УК).</p>
+<p>Подготовка пакета — <strong>T+0…T+2 мес.</strong> с момента принятия
+решения о запуске.</p>
+<h3 id="структура-собственности-целевая">1.5. Структура собственности
+(целевая)</h3>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr>
+<th>Стадия</th>
+<th style="text-align: right;">Учредитель</th>
+<th style="text-align: right;">Инвестор</th>
+<th style="text-align: right;">Госкапитал</th>
+<th style="text-align: right;">Топ-менеджмент (ESOP)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Учреждение</strong></td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td><strong>После Seed-раунда $15 млн</strong></td>
+<td style="text-align: right;">79,2%</td>
+<td style="text-align: right;">15,8%</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">5,0% (ESOP)</td>
+</tr>
+<tr>
+<td><strong>После Series A (T+18 мес.)</strong></td>
+<td style="text-align: right;">64%</td>
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">11% (ESOP + новые)</td>
+</tr>
+<tr>
+<td><strong>После Series B с госкапиталом (T+36 мес.)</strong></td>
+<td style="text-align: right;">48%</td>
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;">15%</td>
+<td style="text-align: right;">12%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="постановка-на-регуляторный-учёт-параллельно-с-учреждением">2.
+Постановка на регуляторный учёт (параллельно с учреждением)</h2>
+<h3 id="регистрация-оператора-персональных-данных-152-фз-ст.-22">2.1.
+Регистрация оператора персональных данных (152-ФЗ ст. 22)</h3>
+<p><strong>Срок:</strong> уведомление в Роскомнадзор — <strong>T+0,5
+мес.</strong> (до начала любой обработки ПДн пользователей в
+demo-приложении).</p>
+<p><strong>Состав уведомления:</strong> - Цели обработки ПДн. -
+Категории ПДн (ФИО, ИНН, СНИЛС, биометрия по 572-ФЗ, паспортные данные).
+- Категории субъектов ПДн. - Перечень действий (сбор, запись,
+систематизация, хранение, использование, передача, удаление). - Описание
+мер защиты (ПП РФ №1119, приказы ФСТЭК №21 / ФСБ). - Сведения о
+трансграничной передаче (отсутствует). - Дата начала обработки. - Срок
+обработки.</p>
+<p><strong>Статус на 24.05.2026 в demo-приложении:</strong> реальные ПДн
+не собираются; уведомление РКН подаётся одновременно с регистрацией АО,
+чтобы исключить состав ст. 13.11 КоАП.</p>
+<h3 id="постановка-на-учёт-в-росфинмониторинге-115-фз">2.2. Постановка
+на учёт в Росфинмониторинге (115-ФЗ)</h3>
+<p><strong>Срок:</strong> <strong>T+1 мес.</strong> Назначение
+специального должностного лица по ПОД/ФТ; разработка ПВК (Правила
+внутреннего контроля); регистрация в Личном кабинете
+Росфинмониторинга.</p>
+<h3 id="заявка-в-реестр-операторов-ис-цфа-банк-россии-779-п">2.3. Заявка
+в реестр операторов ИС ЦФА (Банк России, 779-П)</h3>
+<p><strong>Срок:</strong> <strong>T+3…T+6 мес.</strong> после учреждения
+АО и формирования полного комплекта документов.</p>
+<p><strong>Состав заявки:</strong> - Учредительные документы АО. -
+Сведения о должностных лицах (по 779-П). - Правила ИС (ст. 6 259-ФЗ). -
+Описание DLT-инфраструктуры (с конкретным DLT-вендором: Мастерчейн /
+эквивалент). - Меры защиты по ГОСТ Р 57580.1 уровень 4. - Заключение
+ФСТЭК / ФСБ. - Заключение независимого аудита ИБ. - Документы о
+соответствии 779-П (бизнес-непрерывность, операционные риски 716-П,
+СКЗИ). - Бизнес-план оператора (на основе
+<code>04_Бизнес-план/Бизнес-план_ЦП_РСФСР.md</code> после refactor). -
+Финансовая модель (на основе
+<code>03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.md</code> после
+refactor).</p>
+<h3 id="категорирование-как-кии-187-фз-пп-рф-127">2.4. Категорирование
+как КИИ (187-ФЗ, ПП РФ №127)</h3>
+<p><strong>Срок:</strong> <strong>T+6…T+12 мес.</strong> (после
+фактической эксплуатации). Подача в ФСТЭК заявки на категорирование,
+ожидаемая категория — <strong>1-я (значимый объект КИИ)</strong>.</p>
+<h3 id="сертификация-скзи-фсб-и-средств-защиты-фстэк">2.5. Сертификация
+СКЗИ (ФСБ) и средств защиты (ФСТЭК)</h3>
+<p><strong>Срок:</strong> <strong>T+9…T+18 мес.</strong> Получение
+сертификатов ФСБ на СКЗИ (КриптоПро / СигналКом / эквивалент) и ФСТЭК на
+средства защиты периметра.</p>
+<h3
+id="заявки-в-роспатент-на-регистрацию-программ-для-эвм-ст.-1262-гк">2.6.
+Заявки в Роспатент на регистрацию программ для ЭВМ (ст. 1262 ГК)</h3>
+<p><strong>Срок:</strong> <strong>T+1…T+3 мес.</strong> Регистрация
+четырёх компонентов: 1. Мобильное приложение (PWA + Capacitor-сборки).
+2. Серверная часть (бэкенд). 3. DLT-узел оператора. 4. KYC-модуль.</p>
+<h3 id="заявка-на-товарный-знак-ст.-1477-гк">2.7. Заявка на товарный
+знак (ст. 1477 ГК)</h3>
+<p><strong>Срок:</strong> <strong>T+1 мес.</strong> Заявка на
+регистрацию словесных обозначений «ЦП РСФСР» и «RSFSR» в МКТУ 9 (ПО), 36
+(финансовые услуги), 42 (научно-технические услуги).</p>
+<h3 id="запрос-минфину-ст.-34.2-нк">2.8. Запрос Минфину (ст. 34.2
+НК)</h3>
+<p><strong>Срок:</strong> <strong>T+2 мес.</strong> Письменное обращение
+в Минфин для получения официальной налоговой квалификации: - мены
+первоначального ЦФА на инфраструктурный (ст. 39 НК vs ст. 282.2); -
+статуса оператора как налогового агента по ст. 226.1 / 214.11 НК; -
+НДС-статуса операций с ЦФА в новой редакции пп. 12.2 п. 2 ст. 149 НК; -
+статуса для упрощённой идентификации операций по ч. 1.4-2 ст. 7
+115-ФЗ.</p>
+<h3 id="заявка-в-регуляторную-песочницу-258-фз">2.9. Заявка в
+Регуляторную песочницу (258-ФЗ)</h3>
+<p><strong>Срок:</strong> <strong>T+3 мес.</strong> Заявка в Департамент
+финансовых технологий Банка России на проведение пилот-light (см.
+<code>04_Бизнес-план/Wedge_pilot-light.md</code>) в режиме
+экспериментального правового режима.</p>
+<hr />
+<h2 id="сводная-дорожная-карта-учреждения">3. Сводная дорожная карта
+учреждения</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Месяц</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T+0</td>
+<td>Принятие решения о запуске; рассылка концепции единственного
+учредителя</td>
+</tr>
+<tr>
+<td>T+0,5</td>
+<td>Уведомление РКН об обработке ПДн</td>
+</tr>
+<tr>
+<td>T+1</td>
+<td>Подача в ФНС документов на регистрацию АО; назначение генерального
+директора, главного юриста, главного бухгалтера</td>
+</tr>
+<tr>
+<td>T+1</td>
+<td>Заявка на товарный знак в Роспатент</td>
+</tr>
+<tr>
+<td>T+1</td>
+<td>Заявки в Роспатент на регистрацию программ для ЭВМ</td>
+</tr>
+<tr>
+<td>T+2</td>
+<td>Назначение CISO, главного комплаенс-офицера, председателя СД</td>
+</tr>
+<tr>
+<td>T+2</td>
+<td>Постановка на учёт в Росфинмониторинге; утверждение ПВК</td>
+</tr>
+<tr>
+<td>T+2</td>
+<td>Запрос Минфину по налоговой квалификации (ст. 34.2 НК)</td>
+</tr>
+<tr>
+<td>T+3</td>
+<td>Назначение CRO, внутреннего аудитора</td>
+</tr>
+<tr>
+<td>T+3</td>
+<td>Заявка в регуляторную песочницу Банка России</td>
+</tr>
+<tr>
+<td>T+3</td>
+<td>Подготовка комплекта документов для заявки в реестр операторов ИС
+ЦФА</td>
+</tr>
+<tr>
+<td>T+6</td>
+<td>Подача заявки в реестр операторов ИС ЦФА Банка России (779-П)</td>
+</tr>
+<tr>
+<td>T+9</td>
+<td>Старт сертификации СКЗИ / средств защиты</td>
+</tr>
+<tr>
+<td>T+12</td>
+<td>Категорирование как КИИ (по факту эксплуатации)</td>
+</tr>
+<tr>
+<td>T+18</td>
+<td>Получение всех профильных сертификатов</td>
+</tr>
+<tr>
+<td>T+24</td>
+<td>Запуск pilot-light в действующем 259-ФЗ (см. wedge-документ)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="юридические-риски-закрытые-этим-документом">4. Юридические
+риски, закрытые этим документом</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>RED-флаг аудита</th>
+<th>Закрытие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>B5</strong> Корпоративный оператор-ЮЛ отсутствует</td>
+<td>Учреждение АО с УК ≥ 50 млн ₽; план назначения должностных лиц по
+779-П</td>
+</tr>
+<tr>
+<td><strong>B6</strong> Оператор ПДн не зарегистрирован в РКН</td>
+<td>Уведомление РКН на T+0,5 мес.; до этого реальные ПДн не
+собираются</td>
+</tr>
+<tr>
+<td><strong>B2</strong> Реклама нелицензированной финуслуги в
+RuStore</td>
+<td>Описание в RuStore переведено в информационно-демонстрационный
+регистр; добавлен дисклеймер о правовом статусе (см.
+<code>09_Мобильное_приложение/Публикация_RuStore/01_Описание_приложения.md</code>)</td>
+</tr>
+<tr>
+<td><strong>A-юр AMBER A1</strong> Налоги мены ЦФА</td>
+<td>Запрос в Минфин по ст. 34.2 НК на T+2 мес.</td>
+</tr>
+<tr>
+<td><strong>A-юр AMBER A2</strong> Статус налогового агента</td>
+<td>В составе запроса в Минфин</td>
+</tr>
+<tr>
+<td><strong>A-юр AMBER A5</strong> КИИ-категорирование</td>
+<td>Подача через 6 мес. фактической эксплуатации</td>
+</tr>
+<tr>
+<td><strong>A-юр AMBER A6</strong> Песочница 258-ФЗ</td>
+<td>Заявка в Департамент финтех Банка России на T+3 мес.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="сроки-и-финансирование-первичной-регуляторной-активности">5.
+Сроки и финансирование первичной регуляторной активности</h2>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th>Статья</th>
+<th style="text-align: right;">млн ₽</th>
+<th>Сроки</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Учреждение АО (госпошлины, юр.сопровождение, нотариус)</td>
+<td style="text-align: right;">0,2</td>
+<td>T+0…T+2 мес.</td>
+</tr>
+<tr>
+<td>Заявки в Роспатент (4 программы для ЭВМ + товарный знак)</td>
+<td style="text-align: right;">0,3</td>
+<td>T+1 мес.</td>
+</tr>
+<tr>
+<td>Подготовка пакета для реестра 779-П</td>
+<td style="text-align: right;">8,0</td>
+<td>T+3…T+6 мес.</td>
+</tr>
+<tr>
+<td>Подготовка ПВК Росфинмониторинга</td>
+<td style="text-align: right;">0,8</td>
+<td>T+1…T+2 мес.</td>
+</tr>
+<tr>
+<td>Уведомление РКН</td>
+<td style="text-align: right;">0,1</td>
+<td>T+0,5 мес.</td>
+</tr>
+<tr>
+<td>Юридическое сопровождение учреждения (внешний консультант 9
+мес.)</td>
+<td style="text-align: right;">14,0</td>
+<td>T+0…T+9 мес.</td>
+</tr>
+<tr>
+<td>Налоговое заключение Минфина (юр. компонент)</td>
+<td style="text-align: right;">1,2</td>
+<td>T+2 мес.</td>
+</tr>
+<tr>
+<td><strong>ИТОГО (первый блок регуляторных расходов)</strong></td>
+<td style="text-align: right;"><strong>24,6</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Эта сумма входит в стартовый раунд $15 млн (₽ 1 335 млн).</p>
+<hr />
+<p><strong>Дата подготовки:</strong> 24.05.2026.
+<strong>Подготовлено:</strong> в рамках исправления RED-флагов сводного
+аудита; единый SoT для регуляторного контура проекта.</p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

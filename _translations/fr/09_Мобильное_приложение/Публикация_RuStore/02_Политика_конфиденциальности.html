@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../../">
+  <title>Politique de confidentialité · ЦПФСР.РФ</title>
+  <meta name="description" content="Politique de confidentialité — Politique de confidentialité. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../../_design-system/print.css">
+
+  <script defer src="../../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../../_design-system/i18n.js"></script>
+  <script defer src="../../../../_design-system/ticker.js"></script>
+  <script defer src="../../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Politique de confidentialité</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Politique de confidentialité</span>
+      <h1>Politique de confidentialité</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="politique-de-confidentialité">Politique de confidentialité</h1>
+<h2 id="application-mobile-cpfsr">Application mobile « CPFSR »</h2>
+<p><strong>Date d’entrée en vigueur :</strong> [à préciser lors de la
+publication] <strong>Contrôleur des données :</strong> Abdul-Khakim
+Akhmadovitch Kagirov, en tant qu’auteur et titulaire des droits du
+projet ; l’opérateur de la plateforme — personne morale enregistrée aux
+fins d’exploitation (ci-après — l’« Opérateur »).</p>
+<hr />
+<h2 id="dispositions-générales">1. Dispositions générales</h2>
+<p>La présente Politique de confidentialité (ci-après — la « Politique
+») définit la procédure de traitement des données personnelles des
+utilisateurs de l’application mobile « CPFSR » (ci-après — l’«
+Application ») conformément à :</p>
+<ul>
+<li>la Loi fédérale du 27.07.2006 N° 152-FZ « Sur les données
+personnelles » ;</li>
+<li>la Loi fédérale du 29.12.2022 N° 572-FZ « Sur l’identification et
+(ou) l’authentification des personnes physiques au moyen de données
+biométriques personnelles » — l’opérateur du Système biométrique unifié
+(EBS) est la SA « Centre des Technologies Biométriques » (SA CTB) ;</li>
+<li>le décret du Gouvernement de la Fédération de Russie N° 1119 du
+01.11.2012 (niveaux de sécurité) ;</li>
+<li>l’arrêté FSTEC de Russie N° 21.</li>
+</ul>
+<p>L’utilisation de l’Application vaut consentement à la présente
+Politique en ce qui concerne le traitement des données personnelles
+d’identification, de contact, techniques et liées aux actifs (catégories
+2.1, 2.2, 2.4, 2.5 ci-dessous). <strong>Le consentement au traitement
+des données biométriques personnelles (catégorie 2.3) est donné par un
+acte juridiquement significatif distinct</strong> — bouton « Je consens
+au traitement des données biométriques » avec fixation du fait du
+consentement et liaison à une version spécifique de la Politique (partie
+1, partie 4 de l’art. 9 de FZ-152 ; art. 8, 14 de FZ-572). Sans
+consentement distinct, les fonctions biométriques de l’Application sont
+indisponibles. Le consentement peut être retiré à tout moment dans la
+section « Paramètres → Confidentialité → Biométrie ».</p>
+<blockquote>
+<p><strong>Statut du traitement des données au moment de la
+publication.</strong> Le traitement effectif des données personnelles
+des utilisateurs ne commence qu’après l’envoi par l’Opérateur d’une
+notification à Roskomnadzor conformément à l’art. 22 de FZ-152 (délai —
+au moins 30 jours avant le début du traitement). Jusqu’à l’inscription
+au registre des opérateurs de DCP de Roskomnadzor, l’Application
+fonctionne en mode démo exclusivement sur des scénarios de test ; les
+données personnelles d’utilisateurs réels ne sont ni collectées ni
+traitées.</p>
+</blockquote>
+<h2 id="quelles-données-nous-traitons">2. Quelles données nous
+traitons</h2>
+<h3 id="données-didentification">2.1. Données d’identification</h3>
+<ul>
+<li>Nom, prénom, patronyme.</li>
+<li>Date de naissance.</li>
+<li>Série et numéro du document d’identité.</li>
+<li>INN.</li>
+<li>SNILS.</li>
+<li>Identifiant du compte Gosuslugi (ESIA).</li>
+</ul>
+<h3 id="coordonnées">2.2. Coordonnées</h3>
+<ul>
+<li>Numéro de téléphone mobile.</li>
+<li>Adresse e-mail.</li>
+<li>Région de résidence.</li>
+</ul>
+<h3 id="données-biométriques">2.3. Données biométriques</h3>
+<ul>
+<li>Identifiants biométriques du Système biométrique unifié — opérateur
+SA « Centre des Technologies Biométriques » (SA CTB) au titre de
+FZ-572.</li>
+<li>L’Application <strong>ne collecte, ne stocke et ne traite pas les
+vecteurs biométriques</strong> localement. Seule la vérification du fait
+de la confirmation effectuée du côté EBS est utilisée, selon le
+protocole technique de FZ-572.</li>
+<li>Le traitement de la biométrie est possible exclusivement avec un
+consentement explicite distinct de l’utilisateur (voir § 1 ci-dessus ;
+partie 1, partie 4 de l’art. 9 de FZ-152).</li>
+</ul>
+<h3 id="données-sur-les-actifs">2.4. Données sur les actifs</h3>
+<ul>
+<li>Informations sur les objets gagés (numéro cadastral, adresse,
+superficie, valeur).</li>
+<li>Documents de titre.</li>
+<li>Résultats des évaluations.</li>
+<li>Paramètres des AFN émis.</li>
+<li>Historique des versements.</li>
+</ul>
+<h3 id="données-techniques">2.5. Données techniques</h3>
+<ul>
+<li>Identifiant unique de l’appareil.</li>
+<li>Adresse IP.</li>
+<li>Système d’exploitation et sa version.</li>
+<li>Modèle de l’appareil.</li>
+<li>Heure et lieu (géolocalisation — uniquement sur consentement
+explicite) d’utilisation.</li>
+<li>Journaux des actions dans l’Application.</li>
+</ul>
+<h2 id="finalités-du-traitement">3. Finalités du traitement</h2>
+<ol type="1">
+<li>Identification et authentification de l’utilisateur.</li>
+<li>Passage de la procédure KYC conformément à FZ-115.</li>
+<li>Soumission d’un actif en garantie.</li>
+<li>Émission et service des AFN.</li>
+<li>Calcul et versement de la rémunération.</li>
+<li>Notifications relatives aux événements clés du contrat
+intelligent.</li>
+<li>Reporting réglementaire vers la Banque de Russie, Rosfinmonitoring,
+FNS.</li>
+<li>Assurance de la sécurité de l’information.</li>
+<li>Support utilisateur.</li>
+<li>Respect des exigences légales.</li>
+</ol>
+<h2 id="fondements-juridiques-du-traitement">4. Fondements juridiques du
+traitement</h2>
+<ul>
+<li>Consentement de l’utilisateur (point 1 de la partie 1 de l’art. 6 de
+FZ-152).</li>
+<li>Contrat de prestation de services (point 5 de la partie 1 de l’art.
+6 de FZ-152).</li>
+<li>Exécution des fonctions imposées par la législation de la Fédération
+de Russie (point 2 de la partie 1 de l’art. 6 de FZ-152).</li>
+<li>Atteinte d’objectifs socialement significatifs (point 7 de la partie
+1 de l’art. 6 de FZ-152).</li>
+</ul>
+<h2 id="durées-de-traitement">5. Durées de traitement</h2>
+<ul>
+<li>Pendant l’utilisation active de l’Application.</li>
+<li>Pendant 5 ans après la suppression du compte — données nécessaires à
+l’exécution des obligations envers les régulateurs.</li>
+<li>Pendant 10 ans — journaux d’audit (exigence de FZ-187 et des
+instructions de la Banque de Russie).</li>
+<li>Indéfiniment — enregistrements des AFN émis dans le registre
+distribué (avec mention de la suppression des DCP du propriétaire sur
+demande).</li>
+</ul>
+<h2 id="à-qui-nous-transmettons-les-données">6. À qui nous transmettons
+les données</h2>
+<h3 id="aux-organismes-détat">6.1. Aux organismes d’État</h3>
+<ul>
+<li>Banque de Russie (pour la supervision réglementaire).</li>
+<li>Trésor fédéral (pour le financement ciblé).</li>
+<li>Rosfinmonitoring (pour le contrôle obligatoire au titre de
+FZ-115).</li>
+<li>FNS de Russie (pour la comptabilité fiscale).</li>
+<li>Rosreestr (pour l’enregistrement des charges).</li>
+<li>Organes de maintien de l’ordre (sur demande officielle selon la
+procédure légale).</li>
+</ul>
+<h3 id="aux-partenaires-opérationnels">6.2. Aux partenaires
+opérationnels</h3>
+<ul>
+<li>Organisations d’évaluation partenaires (uniquement pour l’évaluation
+d’un actif spécifique).</li>
+<li>Organisations d’assurance partenaires (uniquement pour la
+souscription d’assurance).</li>
+<li>Organisations de crédit partenaires (pour les versements sur compte
+bancaire).</li>
+</ul>
+<h3 id="aux-prestataires-de-services">6.3. Aux prestataires de
+services</h3>
+<ul>
+<li>Fournisseurs d’infrastructure cloud sur le territoire de la
+Fédération de Russie.</li>
+<li>Fournisseurs de systèmes de sécurité (SIEM, EDR) — sans accès aux
+DCP en clair.</li>
+</ul>
+<p><strong>Le transfert de données hors de la Fédération de Russie n’est
+pas effectué</strong> conformément au point 5 de l’art. 18 de
+FZ-152.</p>
+<h2 id="mesures-de-protection-des-données">7. Mesures de protection des
+données</h2>
+<ul>
+<li>Catégorie de l’objet IIC : 1ʳᵉ (la plus élevée).</li>
+<li>Niveau de sécurité ISPDn : UZ-1.</li>
+<li>Niveau de protection au titre de GOST R 57580.1 : 4ᵉ.</li>
+<li>Cryptographie : GOST R 34.10-2012, GOST R 34.11-2012.</li>
+<li>Stockage local des données sensibles — uniquement dans les stockages
+protégés du système d’exploitation.</li>
+<li>Chiffrement des données en transit — TLS avec certificats GOST.</li>
+<li>Audit SI régulier — annuel.</li>
+<li>Pentest externe — annuel.</li>
+</ul>
+<h2 id="vos-droits">8. Vos droits</h2>
+<p>Conformément aux art. 14, 15, 16, 18 de FZ-152, vous avez le droit de
+:</p>
+<ul>
+<li>Recevoir confirmation du fait du traitement de vos DCP.</li>
+<li>Recevoir des informations sur les DCP traitées.</li>
+<li>Exiger la clarification, le blocage, la destruction des DCP
+inexactes ou traitées de manière illicite.</li>
+<li>Retirer le consentement au traitement des DCP.</li>
+<li>Faire appel des actions de l’Opérateur auprès de Roskomnadzor et
+devant les tribunaux.</li>
+</ul>
+<h3 id="comment-exercer-vos-droits">Comment exercer vos droits</h3>
+<ol type="1">
+<li>Via la section « Profil → Sécurité » dans l’Application.</li>
+<li>Par e-mail : privacy@dp-rsfsr.ru.</li>
+<li>Par demande écrite à l’adresse de l’Opérateur (à préciser après
+l’enregistrement de la personne morale).</li>
+</ol>
+<h2 id="cookies-et-technologies-similaires">9. Cookies et technologies
+similaires</h2>
+<p>L’Application utilise des stockages locaux (LocalStorage, IndexedDB)
+pour : - Sauvegarder les paramètres d’interface (thème, langue, taille
+de police). - Mettre en cache les données pour le mode hors ligne. -
+Sauvegarder les identifiants de session.</p>
+<p><strong>Les traceurs tiers et les réseaux publicitaires ne sont pas
+utilisés par l’Application.</strong></p>
+<h2 id="push-notifications">10. Push-notifications</h2>
+<p>Les push-notifications sont envoyées : - À propos des événements clés
+du contrat intelligent (échange d’AFN, versements, sinistres). - À
+propos des nouveaux programmes de financement. - À propos des travaux
+techniques.</p>
+<p>Vous pouvez désactiver les push-notifications dans la section «
+Paramètres » de l’Application ou par les moyens du système
+d’exploitation.</p>
+<h2 id="mineurs">11. Mineurs</h2>
+<p>L’Application est destinée aux personnes majeures (plus de 18 ans).
+Nous ne collectons pas sciemment de données de mineurs. Lors de la
+détection de telles données, elles sont supprimées immédiatement.</p>
+<h2 id="modifications-de-la-politique">12. Modifications de la
+Politique</h2>
+<p>Nous pouvons modifier la Politique. La notification des modifications
+est publiée dans l’Application et sur le site dp-rsfsr.ru 30 jours avant
+l’entrée en vigueur des modifications. L’utilisation de l’Application
+après l’entrée en vigueur des modifications vaut consentement à la
+nouvelle version.</p>
+<h2 id="contacts">13. Contacts</h2>
+<table>
+<thead>
+<tr>
+<th>Objet</th>
+<th>Contact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Questions sur le traitement des DCP</td>
+<td>privacy@dp-rsfsr.ru</td>
+</tr>
+<tr>
+<td>Questions juridiques</td>
+<td>legal@dp-rsfsr.ru</td>
+</tr>
+<tr>
+<td>Support utilisateur</td>
+<td>support@dp-rsfsr.ru</td>
+</tr>
+<tr>
+<td>Demandes réglementaires</td>
+<td>regulator@dp-rsfsr.ru</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Opérateur des données personnelles :</strong> [personne
+morale enregistrée pour l’exploitation de la plateforme ; sera précisé
+lors de l’enregistrement à Roskomnadzor].</p>
+<p><strong>Inscription au registre des opérateurs de DCP de Roskomnadzor
+:</strong> [numéro d’enregistrement à préciser après
+l’enregistrement].</p>
+<hr />
+<p><em>La présente Politique est établie conformément aux exigences des
+art. 14, 18, 18.1 de FZ-152 et doit être placée à l’adresse
+<code>https://dp-rsfsr.ru/privacy</code>.</em></p>
+</article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

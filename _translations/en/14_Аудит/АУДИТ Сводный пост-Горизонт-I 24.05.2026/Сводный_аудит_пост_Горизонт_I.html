@@ -1,0 +1,1236 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../../">
+  <title>Composite Audit Post-Horizon I · ЦПФСР.РФ</title>
+  <meta name="description" content="Composite Audit Post-Horizon I — Audit · Post-Horizon I. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../../_design-system/print.css">
+
+  <script defer src="../../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../../_design-system/i18n.js"></script>
+  <script defer src="../../../../_design-system/ticker.js"></script>
+  <script defer src="../../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Audit · Post-Horizon I</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Audit · Post-Horizon I</span>
+      <h1>Composite Audit Post-Horizon I</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="posthorizon-i-consolidated-audit-of-cp-rsfsr">Post–Horizon-I
+Consolidated Audit of CP RSFSR</h1>
+<p><strong>Date:</strong> 24.05.2026 (evening edition, after applying
+Horizon I) <strong>Subject:</strong>
+<code>E:\Проекты Аслана\Приложение_РСФСР\ЦП РСФСР Исправленный\</code>
+(~254 files total, ~235 excluding <code>14_Аудит</code>) <strong>Panel
+composition:</strong> 6 independent tier-1 auditors, working in
+parallel, without cross-communication.</p>
+<h2 id="executive-summary">1. Executive Summary</h2>
+<p>Horizon I (evening iteration of 24.05.2026, ≈4 hours of work across
+18 targeted corrections) produced a <strong>weighted-average score
+uplift of +0.95</strong> — from 6.54 to <strong>7.49 / 10</strong>. All
+13 RED defects from the post-refactor audit are <strong>closed at least
+at the MD-source level</strong>. Deltas by contour: A · Tech +1.2 (7.2 →
+8.4) · B · Legal +0.6 (6.8 → 7.4) · C · Fin +0.5 (5.4 → 5.9) · D · Strat
++1.3 (6.4 → 7.7) · E · Design +0.3 (7.9 → 8.2) · F · QA +2.0 (5.8 →
+7.8).</p>
+<p>Structural qualitative changes:</p>
+<ol type="1">
+<li><strong>Stage 1 (pilot-light 2026–2028) / Stage 2 (horizon 2029+) —
+two-stage architecture</strong> is now uniform across seven anchor
+artefacts (Concept § 1-bis, Legal Foundation § 4 / § 8.1-8.4, Business
+Plan §§ 1, 3.1, 3.2, 4.5, 10, 12.1, DD Report §§ 2.1, 2.3, 3.3, 4.1,
+4.3, CBR Address §§ 3.1-3.4, 6, 10.1-10.2, 12, Wedge_pilot-light,
+_shared/i18n.js × 4 locales).</li>
+<li><strong>EULA cap on “12-month commissions” — removed</strong>
+(B-NEW-7); EULA is brought into line with articles 13, 15 of the
+Consumer Rights Protection Act + articles 393, 1064, 1095 of the Civil
+Code. The RuStore-publication blocker is eliminated.</li>
+<li><strong>Live PWA and RuStore promo</strong> — rewritten for Stage 1;
+phrasings such as “targeted Bank of Russia emission” have been removed
+from installable artefacts and from the RuStore catalogue card.</li>
+<li><strong>Mobile application specification</strong> — migrated from
+React Native 0.74+ to PWA + Capacitor v6+ in MD sources and in the HTML
+mirrors of the Specification and PMI documents.</li>
+<li><strong>Financial KPIs</strong> — synchronised in the
+hero-cover-stat of 5+ key artefacts (Large Deck, Small Deck, HTML_main,
+HTML_short, Pitch Deck, root index.html partially); Business Plan §9.2
+re-laid out with project-level KPIs and an investor-level footnote;
+sub-clauses 12.2 of clause 2, art. 149 of the Tax Code are fixed in the
+MD of the Legal Foundation and DD Report.</li>
+<li><strong>Pitch Deck slide 10 “The Ask”</strong> — now carries the
+full term-sheet preview: ask $15M = ₽1.335 bn @ FX 89.0 / pre-money $80M
+Base (Reasoned $60–115M) / post-money $95M / stake 15.8% / use-of-funds
+across 5 categories with Stage markers.</li>
+<li><strong>finmodel.js EM formula</strong> — rewritten away from TVPI
+logic to the investor-share formula (although this introduced a new
+defect — double-count of tvDisc; see below).</li>
+<li><strong>sw.js SHELL_ASSETS</strong> — screenshot paths aligned with
+the actual files; the PWA offline cache is restored.</li>
+<li><strong>D-PR-4 “targeted infrastructure funding”</strong> —
+sed-residue cleaned in 8 hero-leads of public artefacts.</li>
+<li><strong>Legal Foundation § 8.2 → § 8.3 → § 8.4</strong> — duplicate
+numbering removed.</li>
+</ol>
+<p>At the same time, Horizon I uncovered a <strong>new defect
+class</strong> in the C/F blocks — <strong>sed-collision “in place of
+itself”</strong> and <strong>desynchronisation of HTML mirrors with
+updated MD sources</strong>. The main open blockers for tier-1
+communication:</p>
+<ol type="1">
+<li><strong>DD_отчёт.html has not been regenerated from MD</strong> — it
+still carries NPV 170 / Payback 2.4 / EBITDA 97% / WACC 22% (although
+the MD source is Stage-marked and updated). Gazprombank-DD / VTB-DD will
+open DD_отчёт.html as the very first move — a stop-signal in 30
+seconds.</li>
+<li><strong>TV arithmetic of SoT v3 phases I+II = 7.4 vs defensible
+₽21.03 bn (×2.84 underestimate)</strong> — the sed wave aligned all
+client documents on the declared ₽51.2 bn, but the defensible full-DCF
+EV = ₽64.69 bn. Any independent DCF reconstruction by a tier-1 valuation
+team will detect the discrepancy.</li>
+<li><strong><code>finmodel.js:211</code> double-count of tvDisc</strong>
+— <code>fullEV = npv + tvDisc</code> while <code>npv</code> already
+includes <code>tvDisc</code>. The code outputs EM ≈ 10.37× instead of
+the declared 12×.</li>
+<li><strong>Business Plan §3, §9.1 KPI table contains “NPV ₽170.1
+bn”</strong> — sed did not match the mask with the decimal part “170.1”
+(without <code>&lt;em&gt;</code>). Internal contradiction with §9.2 Base
+51.2.</li>
+<li><strong>Финмодель.md sensitivity matrices (lines 166-188)</strong>
+contain baseline 96.8 at WACC 30%, which does not derive from SoT
+(defensible 41.78 without TV or 64.69 with TV). The HTML mirror
+<code>.html:1403, 1456, 1507</code> gives “170” — three different values
+for the same quantity.</li>
+<li><strong>sed-collision “74.8% instead of 74.8%” / “12× (instead of
+12×)”</strong> — in 4 files sed processed the old and the new value with
+the same mask and left tautologies of the form “was/became with
+identical values”.</li>
+<li><strong>Business Plan §2.2, §3.4, §4.4</strong> (outside the Horizon
+I scope) — retain the Stage 2 emission model as the operational/base
+category; the HTML mirror <code>Бизнес-план_ЦП_РСФСР.html</code> lines
+140, 277, 311, 321, 366, 432, 916, 1022, 1079-1080 — same.</li>
+<li><strong>Champion map (D-PR-5), cannibalisation by the digital rouble
+(D-PR-6), copying protection (D-PR-7), LoI/MoU (D-PR-8)</strong> — four
+strategic items kept out of Horizon I scope; they form the core of the
+Horizon II strategic roadmap.</li>
+</ol>
+<p>Communication readiness: <strong>friendly + amicable VC + VEB.RF
+Industrial Projects Factory — ready; Gazprombank-DD — on the edge
+(cover-stat OK, DD report not); tier-1 VC — will pass the initial
+screening, but not the deep DD of weeks 2-4</strong>. Horizon II (sed
+wave + pandoc HTML rebuild + champion-map diffusion + LoI/MoU drafts +
+manual editing of 6 emission-related files) — 1-2 working days and
+should lift the aggregate score to <strong>8.5-9.0 / 10</strong>.</p>
+<h2 id="weighted-score-across-6-contours">2. Weighted Score Across 6
+Contours</h2>
+<table>
+<thead>
+<tr>
+<th>Contour</th>
+<th style="text-align: right;">Weight</th>
+<th style="text-align: right;">Score before Horizon I</th>
+<th style="text-align: right;">Score after</th>
+<th style="text-align: right;">Delta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A · Technical</td>
+<td style="text-align: right;">0.20</td>
+<td style="text-align: right;">7.2</td>
+<td style="text-align: right;"><strong>8.4</strong></td>
+<td style="text-align: right;"><strong>+1.2</strong></td>
+</tr>
+<tr>
+<td>B · Legal</td>
+<td style="text-align: right;">0.20</td>
+<td style="text-align: right;">6.8</td>
+<td style="text-align: right;"><strong>7.4</strong></td>
+<td style="text-align: right;"><strong>+0.6</strong></td>
+</tr>
+<tr>
+<td>C · Financial</td>
+<td style="text-align: right;">0.20</td>
+<td style="text-align: right;">5.4</td>
+<td style="text-align: right;"><strong>5.9</strong></td>
+<td style="text-align: right;"><strong>+0.5</strong></td>
+</tr>
+<tr>
+<td>D · Strategic</td>
+<td style="text-align: right;">0.15</td>
+<td style="text-align: right;">6.4</td>
+<td style="text-align: right;"><strong>7.7</strong></td>
+<td style="text-align: right;"><strong>+1.3</strong></td>
+</tr>
+<tr>
+<td>E · Design / UX</td>
+<td style="text-align: right;">0.12</td>
+<td style="text-align: right;">7.9</td>
+<td style="text-align: right;"><strong>8.2</strong></td>
+<td style="text-align: right;"><strong>+0.3</strong></td>
+</tr>
+<tr>
+<td>F · Cross-consistency</td>
+<td style="text-align: right;">0.13</td>
+<td style="text-align: right;">5.8</td>
+<td style="text-align: right;"><strong>7.8</strong></td>
+<td style="text-align: right;"><strong>+2.0</strong></td>
+</tr>
+<tr>
+<td><strong>Composite</strong></td>
+<td style="text-align: right;"><strong>1.00</strong></td>
+<td style="text-align: right;"><strong>6.54</strong></td>
+<td style="text-align: right;"><strong>7.49 / 10</strong></td>
+<td style="text-align: right;"><strong>+0.95</strong></td>
+</tr>
+</tbody>
+</table>
+<p>A delta of +0.95 after 4 hours of work is a very effective
+effort-to-result ratio. The biggest shifts: F · QA (+2.0; the sed wave
+across 15 files closed 8 of 11 key SoT parameters), D · Strat (+1.3;
+three REDs across the Business Plan / DD Report / CBR Address are closed
+and sed residue cleaned), A · Tech (+1.2; all three REDs on live PWA /
+RuStore / DD_отчёт.md are closed). The smallest delta — C · Fin (+0.5):
+code rewritten, but contains a new defect; SoT v3 TV arithmetic not
+recomputed; the Финмодель sensitivity matrices are patchwork.</p>
+<h2 id="six-contour-verdict-table">3. Six-Contour Verdict Table</h2>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th>Contour</th>
+<th style="text-align: right;">Score</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A · Tech</td>
+<td style="text-align: right;">8.4 / 10</td>
+<td>All three REDs lifted. RuStore / FSTEC / Bank of Russia 779-P —
+“conditionally ready”. Open: A-POST-5 (08_Архитектурные_диаграммы.html
+RN), A-POST-7 (hreflang 9/17), A-POST-9 (Brandbook Vision), A-POST-11
+(Prototype RN+MAUI in footer), A-POST-12 (DD_отчёт.html not rebuilt),
+A-POST-13 (04_Интеграции without Stage marker).</td>
+</tr>
+<tr>
+<td>B · Legal</td>
+<td style="text-align: right;">7.4 / 10</td>
+<td>B-NEW-7 EULA closed. B-NEW-8 § 4 / § 15 closed in MD. B-NEW-10
+numbering closed. Open: B-H1-1 (Юр.фундамент.html:619 sub-cl. 1/38),
+B-H1-2 (DD report on VAT), B-H1-3 (Business Plan §§2.2, 3.4, 4.4 —
+emission as basis), B-H1-4 (Small Deck slide 11), B-H1-5 (CBR Address §
+1, § 9).</td>
+</tr>
+<tr>
+<td>C · Fin</td>
+<td style="text-align: right;">5.9 / 10</td>
+<td>WACC build-up and 10-year NPV reproducible; hero-cover-stat
+consistent. 9 RED + 6 AMBER open: C-H1-1 (TV ×2.84 underestimate),
+C-H1-2/3 (project-level IRR/Payback not reproducible), C-H1-4
+(double-count in finmodel.js), C-H1-5..C-H1-9 (Финмодель/Business Plan
+§9.1/DD.html/Финмодель_допущения.html/Large Deck calculator).</td>
+</tr>
+<tr>
+<td>D · Strat</td>
+<td style="text-align: right;">7.7 / 10</td>
+<td>All 3 REDs closed (D-PR-1/2/3). Wedge uniform across 7 artefacts.
+Gazprombank-DD + VEB.RF IPF readiness. Open: D-PR-5 (champion map
+isolated), D-PR-6 (digital-rouble cannibalisation single line), D-PR-7
+(copying protection 0), D-PR-8 (LoI/MoU 0), D-PR-11 (EBITDA bridge
+65%→74.8%), D-PR-12 (author protection).</td>
+</tr>
+<tr>
+<td>E · Design</td>
+<td style="text-align: right;">8.2 / 10</td>
+<td>Pitch Deck slide 10 fully closed. SW screenshot cache restored. Open
+(outside Horizon I scope): emoji ☀ ☾ ★ ✓ in decks + PWA (24 lines),
+flag-emoji, semantic HTML, data-i18n coverage, RTL extension, manifest
+theme_color.</td>
+</tr>
+<tr>
+<td>F · QA</td>
+<td style="text-align: right;">7.8 / 10</td>
+<td>8 of 11 SoT parameters synchronised. Open: F-H1-1 (sed-collision in
+4 files), F-H1-2 (Large Deck JS-input), F-H1-3 (Booklet cover-stat),
+F-H1-4 (Финмодель sensitivity), F-H1-5 (index.html:198 96.8), F-H1-6
+(HTML_main 2.4), F-H1-7 (“₽170.1 bn” in 3 files), F-H1-8 (DD_отчёт.html
+not rebuilt).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-open-defects-by-contour">4. Key Open Defects by Contour</h2>
+<h3 id="a-tech-_частные_отчётыa_tech.md">4.1. A · Tech
+(<code>_частные_отчёты/A_Tech.md</code>)</h3>
+<ul>
+<li><strong>AMBER · A-POST-5</strong> —
+<code>08_Архитектурные_диаграммы.html:184-185</code> retains
+<code>(React Native)</code>; the MD source is Capacitor.</li>
+<li><strong>AMBER · A-POST-7</strong> —
+<code>sitemap.xml:105-175</code>: 9 of 17 URLs only
+<code>hreflang="ru"</code>.</li>
+<li><strong>AMBER · A-POST-9</strong> —
+<code>05_Бренд-бук/Бренд-бук_ЦП_РСФСР.md:14</code> — “Become the
+sovereign operator level of the targeted secured emission of the RF” as
+core-vision without a Stage 2 marker.</li>
+<li><strong>AMBER · A-POST-11</strong> —
+<code>Прототип/index.html:538</code> — “React Native + .NET MAUI” in the
+footer.</li>
+<li><strong>AMBER · A-POST-12</strong> —
+<code>DD_отчёт.html:230,345</code> tonal drift; the .html is not rebuilt
+from the updated .md.</li>
+<li><strong>AMBER · A-POST-13</strong> —
+<code>04_Интеграции_с_ГИС.md</code> §§ 2.5–2.6 described as the
+operating model without Stage marking.</li>
+</ul>
+<p>Horizon II on A: 30 minutes of targeted edits + pandoc pipeline →
+score 9.0+.</p>
+<h3 id="b-legal-_частные_отчётыb_legal.md">4.2. B · Legal
+(<code>_частные_отчёты/B_Legal.md</code>)</h3>
+<ul>
+<li><strong>RED · B-H1-1</strong> —
+<code>Юридический_фундамент_ЦП_РСФСР.html:619</code> retains
+“sub-clauses 1 and 38 of clause 2 of art. 149 of the Tax Code of the RF”
+(medical goods); the MD has been corrected, the HTML not rebuilt.</li>
+<li><strong>RED · B-H1-2</strong> — <code>DD_отчёт.md:245</code> +
+<code>.html:443</code> — same. A blocker for filing with the Ministry of
+Finance and for tier-1 VC DD.</li>
+<li><strong>RED · B-H1-3</strong> —
+<code>Бизнес-план_ЦП_РСФСР.md:73</code> (§2.2), <code>:131</code>
+(§3.4), <code>:173-178</code> (§4.4), <code>:192-196</code> (§4.5) —
+retain the Stage 2 emission model as the base category.</li>
+<li><strong>AMBER · B-H1-4</strong> —
+<code>Малая_презентация/index.html:376</code> — “secured targeted
+emission” as a unique signal.</li>
+<li><strong>AMBER · B-H1-5</strong> —
+<code>Доклад_для_госструктур_и_ЦБ_РФ.md:25, :207</code> — phrasings
+without a Stage 2 marker.</li>
+<li><strong>AMBER · B-NEW-12 / -13 / -14 / -15</strong> — post-refactor
+legacy (779-P inventories, escrow contract, PD disclaimer,
+operator–pledgor contract without 353-FZ).</li>
+<li><strong>AMBER · B-H1-7</strong> — T+18 (Wedge) vs T+24
+(Учреждение_АО) divergence of 6 months.</li>
+</ul>
+<p>Horizon II on B: 6 must-fix items (B-H1-1..B-H1-5 + B-NEW-12) +
+nice-to-have. After that the score should reach 8.5+ and Gazprombank-DD
+will be ready.</p>
+<h3 id="c-fin-_частные_отчётыc_fin.md">4.3. C · Fin
+(<code>_частные_отчёты/C_Fin.md</code>)</h3>
+<ul>
+<li><strong>RED · C-H1-1</strong> — SoT v3 § 5 TV arithmetic: phases
+I+II declared 7.4 vs defensible <strong>₽21.03 bn</strong> (×2.84). Full
+defensible DCF EV = <strong>₽64.69 bn</strong>, not 51.2.</li>
+<li><strong>RED · C-H1-2</strong> — IRR 62% (project-level) is not
+reproducible by the standard formula. Project-level defensible ≈ 161%;
+Investor Y7 (NPV 51.2) = 28.6%; Investor Y7 (NPV 64.69) = 33.5%.</li>
+<li><strong>RED · C-H1-3</strong> — Payback 2.8 is not reproducible by
+any of three methods (project 3.24 / investor cash distribution 4.21 /
+investor disc stake 5.32).</li>
+<li><strong>RED · C-H1-4</strong> — <code>finmodel.js:211</code> tvDisc
+double-count: <code>fullEV = npv + tvDisc</code> while <code>npv</code>
+already includes <code>tvDisc</code> → EM ≈ 10.37× instead of 12×.</li>
+<li><strong>RED · C-H1-5</strong> —
+<code>Финансовая_модель_ЦП_РСФСР.md</code> is “patchwork”: a mixture of
+new and old values in the same table.</li>
+<li><strong>RED · C-H1-6</strong> — <code>DD_отчёт.html:323-328</code>:
+NPV 170 / Payback 2.4 / EBITDA 97% / WACC 30% (only WACC has been
+updated).</li>
+<li><strong>RED · C-H1-7</strong> —
+<code>Финмодель_допущения_и_расчёты.html:351</code>: heading “WACC 30%”
+vs body “KS 18% + 4 = 22%”.</li>
+<li><strong>RED · C-H1-8</strong> —
+<code>Большая_презентация/index.html:744,746</code>: WACC slider
+<code>value="22"</code>; <code>:760-761</code> JS baseline NPV 170 /
+Payback 2.4.</li>
+<li><strong>RED · C-H1-9</strong> — Business Plan §9.1 NPV 170.1 vs §9.2
+Base 51.2 (internal contradiction).</li>
+<li><strong>AMBER · C-H1-10 / C-H1-11</strong> — sed inversion of EM 48×
+and EBITDA 74.8% in Финмодель.md:240-241.</li>
+<li><strong>AMBER · C-H1-12</strong> — Финмодель.md:166-168 scenario
+table with old Base 96.8 / EV 105.1.</li>
+<li><strong>AMBER · C-H1-13</strong> — Monte Carlo in finmodel.js not
+implemented.</li>
+<li><strong>AMBER · C-H1-14</strong> — Cash-runway bridge: three figures
+(200/750/450 mn).</li>
+<li><strong>AMBER · C-H1-15</strong> — Share of TV in NPV: 3 values
+(3.8% / 9.0% / defensible 2.9%).</li>
+</ul>
+<p>Horizon II on C: 14 P0 + 7 P1 (1–2 working days). The main task —
+recompute TV SoT v3 phases I+II to defensible 21.03 (full EV 64.69) and
+cascade-update the client documents; alternatively, justify 7.4
+explicitly via additional OpEx/CapEx/ΔWC.</p>
+<h3 id="d-strat-_частные_отчётыd_strat.md">4.4. D · Strat
+(<code>_частные_отчёты/D_Strat.md</code>)</h3>
+<ul>
+<li><strong>AMBER · D-PR-5</strong> — Champion map (Reshetnikov /
+Kolychev / Sazanov / Aksakov / Minnikhanov / Moor) is isolated in
+<code>Wedge_pilot-light.md:51-61</code>; a grep across 8 key artefacts —
+0 hits.</li>
+<li><strong>AMBER · D-PR-6</strong> — Cannibalisation by the 340-FZ
+digital rouble — a single declarative line.</li>
+<li><strong>AMBER · D-PR-7</strong> — Regulatory copying protection — 0
+mentions.</li>
+<li><strong>AMBER · D-PR-8</strong> — LoI / MoU / consultative letter —
+0 signed.</li>
+<li><strong>AMBER · D-PR-11 (new)</strong> — EBITDA margin: the gap
+65%→74.8% (2030→2034) between <code>Wedge_pilot-light.md:131-137</code>
+(§5.2) and the Business Plan / DD / Pitch Deck with no bridging
+line.</li>
+<li><strong>AMBER · D-PR-12 (new)</strong> — Protection of author
+A.Kh.A. Kagirov against squeeze-out by an institutional shareholder
+(know-how rights holder + inalienable Board seat until Series B +
+covenants in the Shareholders Agreement) is not formalised.</li>
+</ul>
+<p>Horizon II on D: 6 edits (champion-map diffusion, digital-rouble and
+copying risk sections, LoI/MoU drafts, EBITDA bridge, author
+protection). ~3 working days. Then — score 8.5+ and readiness for tier-1
+VC.</p>
+<h3 id="e-design-_частные_отчётыe_design.md">4.5. E · Design
+(<code>_частные_отчёты/E_Design.md</code>)</h3>
+<ul>
+<li><strong>AMBER · E-POST-4</strong> (priority 1) — emoji ☀ ☾ in the
+theme switcher of Pitch Deck (180-181) and Large Deck (292-293); ★ ✓ in
+hub-items of the Large Deck (858, 897, 901). After E-POST-2 is closed,
+this is the only visual blemish on the deck screenshots.</li>
+<li>Inherited unchanged: E1 PWA emoji 24 lines; E-NEW-3 flag-emoji;
+E-POST-3 manifest theme_color single; E-POST-5 Conservative/Optimistic
+without separate stat blocks; E-NEW-5 back-stack PWA; E-NEW-6 RTL 6
+selectors; E-NEW-7 data-i18n 8 elements; Semantic HTML PWA.</li>
+</ul>
+<p>Horizon II on E: the first task — emoji → SVG (12 replacements, ~30
+minutes). Then — score 9.0+.</p>
+<h3 id="f-qa-_частные_отчётыf_qa.md">4.6. F · QA
+(<code>_частные_отчёты/F_QA.md</code>)</h3>
+<ul>
+<li><strong>RED · F-H1-1</strong> — sed-collision “in place of itself”
+in 4 files (<code>Финмодель.md:240-241</code>,
+<code>Финмодель_допущения.md:106</code>,
+<code>Международная_оценка.md:24,302,304</code>).</li>
+<li><strong>RED · F-H1-2</strong> — Большая_презентация:760-761 JS
+baseline NPV 170 / Payback 2.4.</li>
+<li><strong>RED · F-H1-3</strong> — Booklet.html:182-183 cover-stat 170
+/ 2.4.</li>
+<li><strong>RED · F-H1-4</strong> — Финмодель.md sensitivity baseline
+96.8 (<code>:166, :178, :187</code>) + HTML mirror 170
+(<code>:1403, :1456, :1507</code>).</li>
+<li><strong>RED · F-H1-5</strong> — index.html:198 entry-stat 96.8.</li>
+<li><strong>RED · F-H1-6</strong> — HTML_основной:302 Payback 2.4
+(data-i18n).</li>
+<li><strong>RED · F-H1-7</strong> — “₽170.1 bn” in Бизнес-план.md/html
+and Финмодель.html.</li>
+<li><strong>RED · F-H1-8</strong> — DD_отчёт.html not rebuilt (NPV 170 /
+Payback 2.4 / EBITDA 97%).</li>
+<li><strong>AMBER · F-H1-9 / -10 / -11</strong> —
+Международная_оценка.html ERP 6%, summary 21.5% (rounded to 22%);
+Финмодель_допущения.html sed-collision “ERP 9% = 8-10%”; KS 18% in
+sensitivity column label.</li>
+<li><strong>AMBER · F-H1-12</strong> — Emission of the CBR as the MAIN
+category in 6 files without a Stage 2 marker.</li>
+</ul>
+<p>Horizon II on F: a single sed pass (commands ready in the report, ~5
+minutes) + pandoc HTML rebuild (~10 minutes) + manual editing of 6 files
+(~30 minutes) + recomputation of the sensitivity matrices (~90 minutes).
+Forecast: score 9.0-9.3.</p>
+<h2 id="aggregated-map-of-open-red-amber">5. Aggregated Map of Open RED
++ AMBER</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Code</th>
+<th>Category</th>
+<th>Contour</th>
+<th>Brief</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-POST-5</td>
+<td>AMBER</td>
+<td>A</td>
+<td>08_Архитектурные_диаграммы.html RN; MD Capacitor</td>
+</tr>
+<tr>
+<td>A-POST-7</td>
+<td>AMBER</td>
+<td>A</td>
+<td>sitemap.xml hreflang 9/17 URLs</td>
+</tr>
+<tr>
+<td>A-POST-9</td>
+<td>AMBER</td>
+<td>A</td>
+<td>Brandbook Vision Stage 2 as core</td>
+</tr>
+<tr>
+<td>A-POST-11</td>
+<td>AMBER</td>
+<td>A</td>
+<td>Прототип:538 RN+MAUI</td>
+</tr>
+<tr>
+<td>A-POST-12</td>
+<td>AMBER</td>
+<td>A</td>
+<td>DD_отчёт.html not rebuilt (tonal drift)</td>
+</tr>
+<tr>
+<td>A-POST-13</td>
+<td>AMBER</td>
+<td>A</td>
+<td>04_Интеграции §§ 2.5-2.6 without Stage marker</td>
+</tr>
+<tr>
+<td>B-H1-1</td>
+<td>RED</td>
+<td>B</td>
+<td>Юр.фундамент.html:619 sub-cl. 1/38 Tax Code</td>
+</tr>
+<tr>
+<td>B-H1-2</td>
+<td>RED</td>
+<td>B</td>
+<td>DD report on VAT not updated</td>
+</tr>
+<tr>
+<td>B-H1-3</td>
+<td>RED</td>
+<td>B</td>
+<td>Business Plan §§ 2.2, 3.4, 4.4 — emission as base</td>
+</tr>
+<tr>
+<td>B-H1-4</td>
+<td>AMBER</td>
+<td>B</td>
+<td>Small Deck slide 11 “secured targeted emission”</td>
+</tr>
+<tr>
+<td>B-H1-5</td>
+<td>AMBER</td>
+<td>B</td>
+<td>CBR Address § 1, § 9 without Stage 2 marker</td>
+</tr>
+<tr>
+<td>B-NEW-12</td>
+<td>AMBER</td>
+<td>B</td>
+<td>779-P inventories differ</td>
+</tr>
+<tr>
+<td>B-NEW-13</td>
+<td>AMBER</td>
+<td>B</td>
+<td>Escrow contract — reference to a non-existent inventory</td>
+</tr>
+<tr>
+<td>B-NEW-14</td>
+<td>AMBER</td>
+<td>B</td>
+<td>Policy — no Roskomnadzor disclaimer</td>
+</tr>
+<tr>
+<td>B-NEW-15</td>
+<td>AMBER</td>
+<td>B</td>
+<td>Operator–pledgor contract without 353-FZ</td>
+</tr>
+<tr>
+<td>B-H1-7</td>
+<td>AMBER</td>
+<td>B</td>
+<td>T+18 vs T+24 divergence</td>
+</tr>
+<tr>
+<td>C-H1-1</td>
+<td>RED</td>
+<td>C</td>
+<td>TV phases I+II 7.4 vs defensible 21.03</td>
+</tr>
+<tr>
+<td>C-H1-2</td>
+<td>RED</td>
+<td>C</td>
+<td>IRR 62% not reproducible</td>
+</tr>
+<tr>
+<td>C-H1-3</td>
+<td>RED</td>
+<td>C</td>
+<td>Payback 2.8 not reproducible</td>
+</tr>
+<tr>
+<td>C-H1-4</td>
+<td>RED</td>
+<td>C</td>
+<td>finmodel.js:211 tvDisc double-count</td>
+</tr>
+<tr>
+<td>C-H1-5</td>
+<td>RED</td>
+<td>C</td>
+<td>Финмодель.md “patchwork”</td>
+</tr>
+<tr>
+<td>C-H1-6</td>
+<td>RED</td>
+<td>C</td>
+<td>DD_отчёт.html not rebuilt</td>
+</tr>
+<tr>
+<td>C-H1-7</td>
+<td>RED</td>
+<td>C</td>
+<td>Финмодель_допущения.html heading vs body</td>
+</tr>
+<tr>
+<td>C-H1-8</td>
+<td>RED</td>
+<td>C</td>
+<td>Large Deck WACC slider = 22</td>
+</tr>
+<tr>
+<td>C-H1-9</td>
+<td>RED</td>
+<td>C</td>
+<td>Business Plan §9.1 NPV 170.1 vs §9.2 51.2</td>
+</tr>
+<tr>
+<td>C-H1-10..15</td>
+<td>AMBER</td>
+<td>C</td>
+<td>sed inversions, Monte Carlo, bridge, TV share</td>
+</tr>
+<tr>
+<td>D-PR-5</td>
+<td>AMBER</td>
+<td>D</td>
+<td>Champion map isolated</td>
+</tr>
+<tr>
+<td>D-PR-6</td>
+<td>AMBER</td>
+<td>D</td>
+<td>Digital-rouble cannibalisation single line</td>
+</tr>
+<tr>
+<td>D-PR-7</td>
+<td>AMBER</td>
+<td>D</td>
+<td>Copying protection 0</td>
+</tr>
+<tr>
+<td>D-PR-8</td>
+<td>AMBER</td>
+<td>D</td>
+<td>LoI / MoU 0 signed</td>
+</tr>
+<tr>
+<td>D-PR-11</td>
+<td>AMBER</td>
+<td>D</td>
+<td>EBITDA bridge 65%→74.8% unexplained</td>
+</tr>
+<tr>
+<td>D-PR-12</td>
+<td>AMBER</td>
+<td>D</td>
+<td>Protection of author A.Kh.A. Kagirov</td>
+</tr>
+<tr>
+<td>E-POST-4</td>
+<td>AMBER</td>
+<td>E</td>
+<td>Emoji ☀ ☾ ★ ✓ in decks + PWA</td>
+</tr>
+<tr>
+<td>E1 / E-NEW-3</td>
+<td>AMBER</td>
+<td>E</td>
+<td>PWA emoji 24 lines + flag-emoji</td>
+</tr>
+<tr>
+<td>E-NEW-5 / -6 / -7</td>
+<td>AMBER</td>
+<td>E</td>
+<td>Back-stack / RTL / data-i18n coverage</td>
+</tr>
+<tr>
+<td>E-POST-3 / -5</td>
+<td>AMBER</td>
+<td>E</td>
+<td>manifest theme_color / Conservative-Optimistic</td>
+</tr>
+<tr>
+<td>F-H1-1</td>
+<td>RED</td>
+<td>F</td>
+<td>sed-collision in 4 files</td>
+</tr>
+<tr>
+<td>F-H1-2 / -3</td>
+<td>RED</td>
+<td>F</td>
+<td>Large Deck JS-input + Booklet cover-stat</td>
+</tr>
+<tr>
+<td>F-H1-4</td>
+<td>RED</td>
+<td>F</td>
+<td>Финмодель sensitivity baseline 96.8 / HTML 170</td>
+</tr>
+<tr>
+<td>F-H1-5 / -6</td>
+<td>RED</td>
+<td>F</td>
+<td>index.html:198 96.8 + HTML_main Payback 2.4</td>
+</tr>
+<tr>
+<td>F-H1-7</td>
+<td>RED</td>
+<td>F</td>
+<td>“₽170.1 bn” in 3 files</td>
+</tr>
+<tr>
+<td>F-H1-8</td>
+<td>RED</td>
+<td>F</td>
+<td>DD_отчёт.html not rebuilt</td>
+</tr>
+<tr>
+<td>F-H1-9..13</td>
+<td>AMBER</td>
+<td>F</td>
+<td>Международная_оценка.html ERP / WACC summary / KS / CBR
+emission</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total: 18 RED + 28 AMBER = 46 open items</strong> (vs 13 RED
++ 31 AMBER before Horizon I).</p>
+<p>The paradox: the number of REDs has risen from 13 to 18 because new
+specific defects have been uncovered (sed-collision, double-count in
+code, desync of HTML mirrors). At the same time, all 13 original REDs
+are closed at the MD-source level. After Horizon II (sed + pandoc +
+manual editing of 6 files), 0-3 REDs are expected.</p>
+<h2 id="priority-roadmap-horizon-ii">6. Priority Roadmap (Horizon
+II)</h2>
+<h3 id="horizon-ii.a-sed-pandoc-rebuild-4-hours">Horizon II.A — Sed +
+pandoc rebuild (4 hours)</h3>
+<ol type="1">
+<li><strong>F-H1 sed pass</strong>: ready commands in
+<code>_частные_отчёты/F_QA.md</code> § 6 — will close 12 of 12 F-H1
+residue + sed-collision + JS-input KPI + entry-stat + Business Plan KPI
+/ DD_отчёт.html / Международная_оценка.html ERP/summary /
+Финмодель_допущения. ≈ 5 minutes.</li>
+<li><strong>Pandoc regeneration of .html from .md</strong> for
+Финмодель, Business Plan, DD Report, Expert Opinion, International
+Valuation, Legal Foundation, 08_Архитектурные_диаграммы, Brandbook,
+Promo Materials via <code>_shared/doc-template.html</code>. ≈ 15 minutes
+(if pandoc is installed; otherwise manual synchronisation).</li>
+<li><strong>B-H1-1</strong>: rebuild
+<code>Юридический_фундамент_ЦП_РСФСР.html</code> (after step 2 —
+automatic).</li>
+<li><strong>B-H1-2</strong>: edit <code>DD_отчёт.md:245</code> sub-cl.
+1/38 → sub-cl. 12.2 + automatic rebuild of the <code>.html</code>.</li>
+<li><strong>C-H1-4</strong>: fix <code>_shared/finmodel.js:211</code> —
+<code>const fullEV = npv;</code> (without <code>+ tvDisc</code>).</li>
+<li><strong>C-H1-8</strong>:
+<code>Большая_презентация/index.html:744,746,760-761,1182</code> — WACC
+slider <code>value="30"</code>; JS baseline NPV 51.2 / Payback 2.8.</li>
+<li><strong>A-POST-11</strong>: <code>Прототип/index.html:538</code> —
+RN+MAUI → PWA+Capacitor v6+.</li>
+<li><strong>A-POST-13</strong>: <code>04_Интеграции_с_ГИС.md</code> §§
+2.5–2.6 — Stage marker.</li>
+<li><strong>A-POST-9</strong>: <code>Брендбук_ЦП_РСФСР.md:14</code>
+Vision — two-stage marking.</li>
+</ol>
+<h3 id="horizon-ii.b-manual-narrative-editing-3-hours">Horizon II.B —
+Manual narrative editing (3 hours)</h3>
+<ol start="10" type="1">
+<li><strong>B-H1-3 / D-PR-3</strong>: rewrite
+<code>Бизнес-план_ЦП_РСФСР.md</code> §§ 2.2, 3.4, 4.4 under Stage 1 /
+Stage 2. Rebuild the .html.</li>
+<li><strong>B-H1-4</strong>:
+<code>Малая_презентация/index.html:376</code> — reformulate “secured
+targeted emission” via the two-stage architecture.</li>
+<li><strong>B-H1-5</strong>:
+<code>Доклад_для_госструктур_и_ЦБ_РФ.md:25, :207</code> — Stage 2
+markers.</li>
+<li><strong>C-H1-1 / SoT v3 TV arithmetic</strong> — decide: either
+recompute to defensible 21.03 (full EV 64.69) and cascade-update client
+documents, or justify 7.4 via explicit additional OpEx/CapEx/ΔWC.</li>
+<li><strong>C-H1-2 / -3</strong>: recompute IRR/Payback on the
+defensible basis (project IRR 161% or investor Y7 28.6%); cascade-update
+the hero-cover-stat.</li>
+<li><strong>C-H1-5</strong>: rebuild
+<code>Финансовая_модель_ЦП_РСФСР.md</code> in full from SoT v3, not by
+sed patching.</li>
+<li><strong>C-H1-9</strong>: Business Plan §9.1 KPI table — replace NPV
+170.1 with 51.2; align with §9.2.</li>
+</ol>
+<h3 id="horizon-ii.c-strategic-edits-3-working-days">Horizon II.C —
+Strategic edits (3 working days)</h3>
+<ol start="17" type="1">
+<li><strong>D-PR-5</strong>: champion-map diffusion into Concept.md
+(after §1-bis), Business Plan.md (new §13 “GTM”), DD_отчёт.md (§2.5),
+Pitch Deck (new slide). 6 pre-meeting briefs in
+<code>02_Юридический_фундамент/Pre-meeting_briefs/</code>.</li>
+<li><strong>D-PR-6</strong>: section “Digital rouble 340-FZ” in Business
+Plan §10 + DD §3 + CBR Address §9 (3 cannibalisation scenarios).</li>
+<li><strong>D-PR-7</strong>: section “Defensive contours against
+copying” in Business Plan §22 + DD §3.4 (network effects + IP portfolio
++ speed + contractual moat with Atomyze).</li>
+<li><strong>D-PR-8</strong>: LoI with Atomyze (3-year exclusivity);
+consultative letter to VEB.RF IPF via the Ministry of Economic
+Development; MoU with Tatarstan; MoU with Gazprombank.</li>
+<li><strong>D-PR-11</strong>: EBITDA bridge 65%→74.8% — a bridging line
+in Business Plan §12 + Wedge §5.2 + DD §4.1.</li>
+<li><strong>D-PR-12</strong>: protection of author A.Kh.A. Kagirov —
+Concept.md 1-ter + Business Plan §11.2 (know-how rights holder +
+inalienable Board seat until Series B + covenants in the Shareholders
+Agreement).</li>
+</ol>
+<h3 id="horizon-ii.d-financial-methodology-1-2-working-days">Horizon
+II.D — Financial methodology (1-2 working days)</h3>
+<ol start="23" type="1">
+<li><strong>C-H1-13</strong>: implement Monte Carlo in
+<code>finmodel.js</code> (1000 iterations, 6 parameters).</li>
+<li><strong>C-H1-14</strong>: unify the cash-runway bridge to ₽0.75
+bn.</li>
+<li><strong>C-H1-12</strong>: recompute Финмодель sensitivity matrices
+under WACC = 30%, baseline KS = 21%.</li>
+<li><strong>B-NEW-12</strong>: split the table § 1.3 of Учреждение_АО
+into “subject to CBR approval (7+1)” and “intra-corporate”.</li>
+</ol>
+<h3 id="horizon-ii.e-design-half-a-day">Horizon II.E — Design (half a
+day)</h3>
+<ol start="27" type="1">
+<li><strong>E-POST-4</strong>: emoji ☀ ☾ ★ ✓ → inline SVG (12
+replacements).</li>
+<li><strong>E-POST-5</strong>: Pitch Deck slide 5 — scenario stat
+blocks.</li>
+<li><strong>E-NEW-3</strong>: emoji flags → SVG or ISO-2.</li>
+</ol>
+<h3 id="horizon-ii.f-optional-1-3-working-days">Horizon II.F — Optional
+(1-3 working days)</h3>
+<ol start="30" type="1">
+<li>apple-touch-icon in manifest.json.</li>
+<li><strong>B-NEW-13/-14/-15</strong>: escrow contract / Policy
+disclaimer / operator contract 353-FZ.</li>
+<li>Plan for Civil Code Chapter 72 (invention).</li>
+<li><strong>A-POST-7</strong>: extend sitemap-hreflang to the remaining
+9 URLs.</li>
+<li>Create <code>BUILD_PIPELINE.md</code> with the pandoc pipeline and
+mermaid rendering — closes the architectural class “MD corrected — HTML
+lagging”.</li>
+</ol>
+<p><strong>Aggregate: ≈ 1.5-2 working days for Horizons II.A + II.B +
+II.D + II.E. + 3 working days for II.C (strategic edits and LoI/MoU
+drafts).</strong> Forecast for the aggregate score after Horizon II.A-F:
+<strong>8.5-9.0 / 10</strong>.</p>
+<h2 id="final-resolution">7. Final Resolution</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Audience</th>
+<th>Status before Horizon I</th>
+<th>Status after</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Inside Center Group</strong></td>
+<td>Ready</td>
+<td>Ready</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Friendly / family capital</strong></td>
+<td>Ready</td>
+<td>Ready</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Amicable strategic investor</strong></td>
+<td>Conditionally ready</td>
+<td><strong>Ready</strong></td>
+<td>Without reservations</td>
+</tr>
+<tr>
+<td><strong>VEB.RF IPF as co-investor</strong></td>
+<td>Not ready</td>
+<td><strong>Ready</strong></td>
+<td>Consultative letter via the Ministry of Economic Development
+channel</td>
+</tr>
+<tr>
+<td><strong>Gazprombank-DD / PSB-DD</strong></td>
+<td>Not ready</td>
+<td><strong>Conditionally ready</strong></td>
+<td>Cover-stat OK; DD_отчёт.html needs to be rebuilt (5 minutes)</td>
+</tr>
+<tr>
+<td><strong>Tier-1 VC (a16z / Sequoia / Index)</strong></td>
+<td>Not ready</td>
+<td><strong>Conditionally ready for initial screening; will not survive
+deep DD</strong></td>
+<td>Horizon II.A + II.D + II.E mandatory</td>
+</tr>
+<tr>
+<td><strong>Bank of Russia DFA Operator Register</strong></td>
+<td>Not ready</td>
+<td><strong>Conditionally ready</strong></td>
+<td>Incorporation of the JSC + CIPF T+9…T+18 (formal path)</td>
+</tr>
+<tr>
+<td><strong>RuStore publication</strong></td>
+<td>Not ready</td>
+<td><strong>Conditionally ready</strong></td>
+<td>A-POST-1/2 closed; production keystore + assetlinks.json required
+(DevSecOps)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Defensible position “as is after Horizon I”</strong>:
+friendly + amicable VC + VEB.RF IPF + Ministry of Economic Development.
+Strategic ceiling: <strong>$50-80M pre-money</strong> via wedge-pilot
+justification.</p>
+<p><strong>Defensible position after Horizon II.A-F (5-7 working
+days)</strong>: Gazprombank / PSB DD / tier-1 VC seed-stage. Strategic
+ceiling: <strong>$80-120M pre-money Base</strong> (or $100-140M at
+NPV-defensible 64.7 after C-H1-1 is resolved).</p>
+<p><strong>Defensible position after Horizon II.C (LoI/MoU signed,
+champion map active, 3-6 months)</strong>: tier-1 VC Series A + VEB.RF
+Ventures + Gazprombank Capital. Strategic ceiling: <strong>$120-180M
+pre-money</strong> subject to successful T+30 / T+90 meetings.</p>
+<h2 id="methodology-and-reservations">8. Methodology and
+Reservations</h2>
+<ol type="1">
+<li><strong>Parallelism.</strong> 6 auditors worked independently,
+without cross-communication. Aggregate score = weighted average (weights
+0.20 / 0.20 / 0.20 / 0.15 / 0.12 / 0.13).</li>
+<li><strong>Boomerang verification.</strong> For each of the 18 Horizon
+I corrections, an independent grep / Read verification was carried out
+with a fact-status (closed / partial / not executed /
+defect-in-correction).</li>
+<li><strong>Evidentiary standard.</strong> Every assertion — with a
+reference to <code>file:line</code>. Financial conclusions — with
+line-by-line recomputation of FCF / WACC / NPV / TV / EM / IRR /
+Payback. Legal conclusions — with references to specific articles of
+legal acts.</li>
+<li><strong>Read-only.</strong> Project files were not modified during
+the audit.</li>
+<li><strong>NPV reservation.</strong> SoT v3 declares full NPV 51.2. The
+defensible recomputation gives 64.69. The final decision rests with the
+financial-model owner. All Horizon I client documents are aligned to
+51.2; if the defensible 64.69 is chosen, a new sed wave will be
+required.</li>
+<li><strong>Wedge logic as baseline.</strong> All strategic assessments
+were made on the assumption that Stage 1 is the correct strategy for the
+current regulatory landscape.</li>
+<li><strong>Score vs auditor self-assessment divergence.</strong> B ·
+Legal self-rated 7.4 (with a −0.3 penalty for B-H1-1/2/3); C · Fin
+self-rated 5.9 (despite the double-count in the code). These scores are
+accepted as is; the tier-1 principle is to trust the domain
+auditor.</li>
+</ol>
+<h2 id="engagement-reference">9. Engagement Reference</h2>
+<p>Post–Horizon-I consolidated audit of CP RSFSR · 24.05.2026 (evening)
+Client: Abdul-Khakim Akhmadovich Kagirov / Center Group Company Subject:
+<code>E:\Проекты Аслана\Приложение_РСФСР\ЦП РСФСР Исправленный\</code>
+Author’s concept certificate: No. 4011265 dated 19.12.2024</p>
+
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

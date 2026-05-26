@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../../">
+  <title>Manuel de l'utilisateur · ЦПФСР.РФ</title>
+  <meta name="description" content="Manuel de l'utilisateur — Manuel de l'utilisateur. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../../_design-system/print.css">
+
+  <script defer src="../../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../../_design-system/i18n.js"></script>
+  <script defer src="../../../../_design-system/ticker.js"></script>
+  <script defer src="../../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Manuel de l'utilisateur</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Manuel de l'utilisateur</span>
+      <h1>Manuel de l'utilisateur</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="manuel-de-lutilisateur">Manuel de l’utilisateur</h1>
+<h2 id="cpfsr-application-mobile">CPFSR — application mobile</h2>
+<p><strong>Identifiant :</strong> РСФСР.МП.04.РП <strong>Norme
+:</strong> GOST 19.505-79</p>
+<hr />
+<h2 id="objet-du-programme">1. Objet du programme</h2>
+<p>L’application est destinée à la gestion du portefeuille personnel
+d’actifs et d’actifs financiers numériques (AFN) sur la Plateforme
+numérique CPFSR : soumission de biens en garantie, émission d’AFN,
+perception des revenus du placement, contrôle des contrats
+intelligents.</p>
+<h2 id="conditions-dexécution-du-programme">2. Conditions d’exécution du
+programme</h2>
+<h3 id="exigences-techniques-minimales">2.1. Exigences techniques
+minimales</h3>
+<ul>
+<li>iOS 15 et supérieur, ou</li>
+<li>Android 9 (API 28) et supérieur, ou</li>
+<li>Windows 10 (1809) et supérieur, ou</li>
+<li>un navigateur moderne avec prise en charge du Service Worker.</li>
+</ul>
+<h3 id="préparation-au-travail">2.2. Préparation au travail</h3>
+<ol type="1">
+<li>Installez l’application depuis RuStore, App Store, Google Play,
+Microsoft Store, ou ajoutez la PWA à l’écran d’accueil depuis le
+navigateur.</li>
+<li>Préparez un compte Gosuslugi confirmé.</li>
+<li>Préparez les documents de l’actif (titres de propriété, numéro
+cadastral pour l’immobilier).</li>
+</ol>
+<h2 id="travail-avec-le-programme">3. Travail avec le programme</h2>
+<h3 id="premier-lancement">3.1. Premier lancement</h3>
+<p>Au premier lancement, l’application accueille l’utilisateur par un
+écran de splash et passe automatiquement à l’écran de connexion.</p>
+<h4 id="connexion">Connexion</h4>
+<p>Deux options sont disponibles : - <strong>Se connecter via
+Gosuslugi</strong> — méthode principale pour les nouveaux utilisateurs.
+OpenID Connect vers ESIA avec un compte confirmé est utilisé. -
+<strong>Biométrie</strong> — pour les connexions répétées d’un
+utilisateur déjà enregistré via Face ID / Touch ID / Windows Hello.</p>
+<h4 id="inscription-kyc">Inscription (KYC)</h4>
+<p>Après l’autorisation initiale, une vérification d’identité en trois
+étapes est effectuée : 1. <strong>Confirmation de l’identité :</strong>
+nom, prénom, patronyme, série et numéro du passeport, INN. Les données
+sont chargées depuis le compte Gosuslugi confirmé — vérifiez leur
+exactitude. 2. <strong>Coordonnées :</strong> téléphone (pour les codes
+SMS), e-mail, région. 3. <strong>Biométrie :</strong> confirmation via
+le Système biométrique unifié. Présentez le téléphone à votre visage ou
+posez un doigt sur le capteur d’empreintes. Vous pouvez ignorer cette
+étape et configurer la biométrie plus tard depuis le menu « Paramètres
+».</p>
+<h4 id="découverte-des-fonctionnalités-onboarding">Découverte des
+fonctionnalités (Onboarding)</h4>
+<p>Après l’inscription, trois écrans d’apprentissage s’affichent : 1.
+Mettez un actif en garantie — immobilier, transport, PI, valeurs
+mobilières ; le bien reste à vous. 2. La plateforme émet l’AFN — sur la
+base de votre actif ; la Banque de Russie effectue l’émission ciblée. 3.
+Recevez des revenus — versements réguliers ; à l’expiration du terme, la
+charge est levée.</p>
+<p>Toute étape peut être ignorée en tapant « Ignorer » dans le coin
+supérieur droit.</p>
+<h3 id="écran-daccueil">3.2. Écran d’accueil</h3>
+<p>L’écran d’accueil contient : - <strong>Carte de solde</strong> —
+valeur totale des actifs en activité ; nombre d’objets gagés ; revenu
+trimestriel. - <strong>Actions rapides :</strong> Soumettre un actif,
+Mes AFN, Revenus, Documents. - <strong>Bannière de projet
+national</strong> — nouveaux programmes de financement. - <strong>Mes
+actifs</strong> — les deux derniers actifs avec possibilité d’ouvrir la
+liste complète. - <strong>Dernières opérations</strong> — les deux
+dernières opérations avec possibilité d’ouvrir l’historique complet. -
+<strong>Navigation inférieure</strong> — cinq onglets : Accueil, Actifs,
+AFN, Revenus, Profil.</p>
+<h3 id="soumission-dun-actif-en-garantie">3.3. Soumission d’un actif en
+garantie</h3>
+<h4 id="étape-1.-sélection-du-type-de-bien">Étape 1. Sélection du type
+de bien</h4>
+<p>Catégories disponibles : - Immobilier (appartement, maison, apparts)
+; - Parcelle de terrain ; - Véhicule ; - Propriété intellectuelle ; -
+Valeurs mobilières.</p>
+<h4 id="étape-2.-caractéristiques">Étape 2. Caractéristiques</h4>
+<p>Pour l’immobilier — saisissez le numéro cadastral. L’adresse, la
+superficie, l’année de construction et d’autres caractéristiques seront
+chargées automatiquement depuis EGRN via un canal sécurisé d’intégration
+avec Rosreestr (FZ-218). Un titre de propriété est également joint.</p>
+<h4 id="étape-3.-demande-dévaluation">Étape 3. Demande d’évaluation</h4>
+<p>Consultez les paramètres de la demande et confirmez l’envoi. Une
+société d’évaluation partenaire agréée selon FZ-135 effectuera
+l’évaluation sous 24 heures. Coût de la demande — 0 RUB (inclus dans le
+service plateforme).</p>
+<h4 id="étape-4.-résultat-de-lévaluation">Étape 4. Résultat de
+l’évaluation</h4>
+<p>Recevez la valeur d’évaluation et la taille maximale de l’AFN gagé
+(par défaut 50 % de l’évaluation). L’assurance du gage est incluse.
+Validité de 6 mois. Passez au contrat intelligent pour émettre
+l’AFN.</p>
+<h3 id="configuration-et-signature-du-contrat-intelligent">3.4.
+Configuration et signature du contrat intelligent</h3>
+<p>Sur l’écran du contrat intelligent, définissez : - <strong>Durée de
+l’AFN :</strong> 12, 36 ou 60 mois. - <strong>Utilisation ciblée
+:</strong> programme d’un projet national ou régional. - <strong>Valeur
+nominale de l’AFN :</strong> calculée automatiquement comme 50 % de la
+valeur d’évaluation.</p>
+<p>Consultez les paramètres calculés : taux de rémunération, revenus
+pour toute la durée, agent escrow (Banque de Russie), assurance,
+registraire de la charge (Rosreestr).</p>
+<p>Tapez « Signer (UKEP) ». Un code SMS sera envoyé à votre ligne
+téléphonique. Saisissez le code à 6 chiffres ou confirmez par la
+biométrie.</p>
+<p>Après une signature réussie, vous verrez l’écran « AFN émis avec
+succès » avec un identifiant unique de l’AFN. L’AFN a été transféré à la
+Banque de Russie, la charge est enregistrée dans EGRN.</p>
+<h3 id="gestion-du-portefeuille-afn">3.5. Gestion du portefeuille
+AFN</h3>
+<p>Dans la section « Mes AFN », la liste complète de vos AFN est
+disponible avec filtrage : Tous, Actifs, En émission, Terminés. Pour
+chaque AFN, est affiché : - ID (identifiant unique) ; - valeur nominale
+; - actif lié ; - programme cible ; - durée et taux de rémunération ; -
+statut.</p>
+<p>Un clic sur un AFN ouvre une fiche avec des informations détaillées :
+conditions du contrat intelligent, escrow, versements, historique.
+Actions disponibles : télécharger le contrat, demander un échange
+d’AFN.</p>
+<h3 id="revenus">3.6. Revenus</h3>
+<p>Dans la section « Revenus » : - Carte de solde des revenus : par an,
+par trimestre, prévision annuelle. - Graphique des recettes mensuelles.
+- Liste des versements liés à un AFN.</p>
+<h3 id="historique-des-opérations">3.7. Historique des opérations</h3>
+<p>Journal complet des opérations avec filtrage : Tous, Versements,
+Émission d’AFN, Échange. Peut être exporté en PDF ou Excel.</p>
+<h3 id="notifications">3.8. Notifications</h3>
+<p>Le centre de notifications contient : - Messages système sur les
+versements ; - Notifications sur les nouveaux programmes ; -
+Notifications sur les résultats des évaluations ; - Notifications sur
+l’enregistrement des charges et d’autres événements du contrat
+intelligent.</p>
+<p>Les notifications non lues sont signalées par un point d’accent. En
+tapant sur la cloche, on accède à toutes les notifications. En tapant
+sur l’icône « ⊘ », toutes les notifications sont marquées comme
+lues.</p>
+<h3 id="profil">3.9. Profil</h3>
+<p>Dans la section « Profil » sont disponibles : - Données personnelles.
+- Coordonnées de versement. - Mes documents. - Notifications. -
+Documents de la plateforme. - Aide et support. - Déconnexion du
+compte.</p>
+<h3 id="paramètres">3.10. Paramètres</h3>
+<p>Disponibles : - <strong>Langue :</strong> russe (par défaut),
+anglais, français, arabe. - <strong>Thème :</strong> clair, sombre,
+doux, contrasté pour les malvoyants. - <strong>Taille de police
+:</strong> plus petite, normale, plus grande. - <strong>Sécurité
+:</strong> biométrie, code PIN, authentification à deux facteurs. -
+<strong>Notifications :</strong> push-notifications.</p>
+<h3 id="documents-de-la-plateforme">3.11. Documents de la
+plateforme</h3>
+<p>La section contient des liens vers la documentation complète du
+projet CPFSR : hub des documents, grande présentation, petite
+présentation, site web, fondement juridique, évaluation internationale,
+audit DD, conclusion d’expert.</p>
+<h3 id="support">3.12. Support</h3>
+<p>Disponibles : FAQ, chat avec l’opérateur, téléphone de support,
+formulaire de retour.</p>
+<h2 id="messages-à-lopérateur">4. Messages à l’opérateur</h2>
+<h3 id="types-de-messages">4.1. Types de messages</h3>
+<ul>
+<li>Push-notifications — affichées sur l’écran d’accueil de
+l’appareil.</li>
+<li>Notifications in-app — affichées dans le centre de
+notifications.</li>
+<li>Messages de Gosuslugi — affichés dans le service standard de
+Gosuslugi.</li>
+</ul>
+<h3 id="actions-sur-les-messages">4.2. Actions sur les messages</h3>
+<p>Chaque notification contient un appel à l’action (par ex. « Confirmer
+le versement », « Lancer l’émission d’AFN »). Tapez la notification pour
+ouvrir l’écran correspondant.</p>
+<h2 id="messages-derreur">5. Messages d’erreur</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Code</th>
+<th>Message</th>
+<th>Action utilisateur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AUTH-01</td>
+<td>Impossible de confirmer l’identité via Gosuslugi</td>
+<td>Réessayez, vérifiez l’accès à Gosuslugi</td>
+</tr>
+<tr>
+<td>AUTH-02</td>
+<td>Biométrie non confirmée</td>
+<td>Saisissez le code de confirmation ou confirmez via EBS</td>
+</tr>
+<tr>
+<td>ASSET-01</td>
+<td>Objet non trouvé dans EGRN</td>
+<td>Vérifiez l’exactitude du numéro cadastral</td>
+</tr>
+<tr>
+<td>ASSET-02</td>
+<td>L’objet est déjà gagé auprès d’une autre organisation</td>
+<td>Levez la charge précédente</td>
+</tr>
+<tr>
+<td>CFA-01</td>
+<td>Impossible d’émettre l’AFN</td>
+<td>Contactez le support</td>
+</tr>
+<tr>
+<td>NET-01</td>
+<td>Pas de connexion au serveur</td>
+<td>Vérifiez Internet ; les données seront restaurées après le
+rétablissement de la connexion</td>
+</tr>
+<tr>
+<td>SIGN-01</td>
+<td>Signature électronique rejetée</td>
+<td>Vérifiez la validité du certificat</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Le document est conforme aux exigences de GOST 19.505-79 « Manuel
+de l’opérateur ».</em></p>
+</article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

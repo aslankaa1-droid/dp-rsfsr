@@ -1,0 +1,84 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "Дизайн-токены платформы ЦП РСФСР. Машиночитаемые токены для веб-сайта, мобильного приложения и шаблонов документов.",
+  "color": {
+    "brand": {
+      "primary":      { "$type": "color", "$value": "#0B2B5C" },
+      "primaryDark":  { "$type": "color", "$value": "#061A3A" },
+      "primaryLight": { "$type": "color", "$value": "#1F4A8F" },
+      "accent":       { "$type": "color", "$value": "#C9A961" },
+      "accentSoft":   { "$type": "color", "$value": "#E8D8A8" }
+    },
+    "neutral": {
+      "900": { "$type": "color", "$value": "#1A1D24" },
+      "700": { "$type": "color", "$value": "#3B414C" },
+      "500": { "$type": "color", "$value": "#6C7280" },
+      "300": { "$type": "color", "$value": "#D0D4DB" },
+      "100": { "$type": "color", "$value": "#F4F6FA" },
+      "000": { "$type": "color", "$value": "#FFFFFF" }
+    },
+    "semantic": {
+      "success": { "$type": "color", "$value": "#1E8E5C" },
+      "warning": { "$type": "color", "$value": "#C58A1C" },
+      "error":   { "$type": "color", "$value": "#B33A3A" },
+      "info":    { "$type": "color", "$value": "#3B82C4" }
+    }
+  },
+  "spacing": {
+    "0":   { "$type": "dimension", "$value": "0px" },
+    "1":   { "$type": "dimension", "$value": "4px" },
+    "2":   { "$type": "dimension", "$value": "8px" },
+    "3":   { "$type": "dimension", "$value": "12px" },
+    "4":   { "$type": "dimension", "$value": "16px" },
+    "6":   { "$type": "dimension", "$value": "24px" },
+    "8":   { "$type": "dimension", "$value": "32px" },
+    "12":  { "$type": "dimension", "$value": "48px" },
+    "16":  { "$type": "dimension", "$value": "64px" },
+    "24":  { "$type": "dimension", "$value": "96px" },
+    "32":  { "$type": "dimension", "$value": "128px" }
+  },
+  "radius": {
+    "xs":   { "$type": "dimension", "$value": "4px" },
+    "sm":   { "$type": "dimension", "$value": "8px" },
+    "md":   { "$type": "dimension", "$value": "12px" },
+    "lg":   { "$type": "dimension", "$value": "16px" },
+    "xl":   { "$type": "dimension", "$value": "24px" },
+    "pill": { "$type": "dimension", "$value": "9999px" }
+  },
+  "shadow": {
+    "elev1": { "$type": "shadow", "$value": "0 1px 2px rgba(11,43,92,0.06), 0 1px 1px rgba(11,43,92,0.04)" },
+    "elev2": { "$type": "shadow", "$value": "0 4px 8px rgba(11,43,92,0.08), 0 2px 4px rgba(11,43,92,0.04)" },
+    "elev3": { "$type": "shadow", "$value": "0 12px 24px rgba(11,43,92,0.10), 0 4px 8px rgba(11,43,92,0.06)" }
+  },
+  "fontFamily": {
+    "display": { "$type": "fontFamily", "$value": ["Onest", "PT Root UI", "Inter", "system-ui", "sans-serif"] },
+    "body":    { "$type": "fontFamily", "$value": ["Inter", "PT Sans", "system-ui", "sans-serif"] },
+    "mono":    { "$type": "fontFamily", "$value": ["JetBrains Mono", "IBM Plex Mono", "Consolas", "monospace"] }
+  },
+  "typography": {
+    "h1":      { "fontFamily": "display", "fontSize": "48px", "lineHeight": "1.1",  "fontWeight": 700 },
+    "h2":      { "fontFamily": "display", "fontSize": "36px", "lineHeight": "1.15", "fontWeight": 700 },
+    "h3":      { "fontFamily": "display", "fontSize": "28px", "lineHeight": "1.2",  "fontWeight": 600 },
+    "h4":      { "fontFamily": "body",    "fontSize": "22px", "lineHeight": "1.25", "fontWeight": 600 },
+    "h5":      { "fontFamily": "body",    "fontSize": "18px", "lineHeight": "1.3",  "fontWeight": 600 },
+    "h6":      { "fontFamily": "body",    "fontSize": "16px", "lineHeight": "1.3",  "fontWeight": 600 },
+    "bodyL":   { "fontFamily": "body",    "fontSize": "18px", "lineHeight": "1.55", "fontWeight": 400 },
+    "bodyM":   { "fontFamily": "body",    "fontSize": "16px", "lineHeight": "1.5",  "fontWeight": 400 },
+    "bodyS":   { "fontFamily": "body",    "fontSize": "14px", "lineHeight": "1.5",  "fontWeight": 400 },
+    "caption": { "fontFamily": "body",    "fontSize": "12px", "lineHeight": "1.4",  "fontWeight": 500 },
+    "legal":   { "fontFamily": "body",    "fontSize": "11px", "lineHeight": "1.4",  "fontWeight": 400 },
+    "mono":    { "fontFamily": "mono",    "fontSize": "14px", "lineHeight": "1.5",  "fontWeight": 500 }
+  },
+  "motion": {
+    "micro":    { "$type": "duration", "$value": "120ms" },
+    "standard": { "$type": "duration", "$value": "200ms" },
+    "emphasis": { "$type": "duration", "$value": "320ms" },
+    "easing":   { "$type": "cubicBezier", "$value": [0.2, 0, 0, 1] }
+  },
+  "breakpoint": {
+    "mobile":  { "$type": "dimension", "$value": "480px" },
+    "tablet":  { "$type": "dimension", "$value": "768px" },
+    "desktop": { "$type": "dimension", "$value": "1200px" },
+    "wide":    { "$type": "dimension", "$value": "1440px" }
+  }
+}

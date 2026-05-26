@@ -1,0 +1,400 @@
+﻿<!doctype html>
+<html lang="ru" data-theme="daylight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>API и интеграции · ЦП РСФСР</title>
+<meta name="theme-color" content="#0B2B5C">
+<link rel="stylesheet" href="../../_shared/brand.css">
+<style>
+/* Document-specific styles */
+body { padding-top: 80px; }
+.doc-wrap { max-width: 880px; margin: 0 auto; padding: 48px 24px 96px; }
+.doc-header {
+  padding-bottom: 24px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.doc-header .eyebrow { margin-bottom: 12px; }
+.doc-header h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--primary); margin-bottom: 12px; }
+.doc-header p { color: var(--fg-mute); font-size: .9375rem; margin: 0; }
+.doc-content h1, .doc-content h2, .doc-content h3, .doc-content h4 { color: var(--primary); margin-top: 2em; margin-bottom: .5em; }
+.doc-content h1 { font-size: 1.875rem; }
+.doc-content h2 { font-size: 1.5rem; padding-bottom: 6px; border-bottom: 1px solid var(--border-soft); }
+.doc-content h3 { font-size: 1.25rem; }
+.doc-content h4 { font-size: 1.0625rem; color: var(--fg); }
+.doc-content p { line-height: 1.7; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content ul, .doc-content ol { line-height: 1.7; padding-left: 1.5em; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content li { margin-bottom: .35em; }
+.doc-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 12px 20px;
+  margin: 1em 0;
+  background: var(--bg-soft);
+  border-radius: 0 8px 8px 0;
+  color: var(--fg-soft);
+}
+.doc-content code {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg-soft);
+  padding: 2px 6px; border-radius: 4px;
+  font-size: .875em; color: var(--primary);
+}
+.doc-content pre {
+  background: var(--bg-soft); padding: 16px; border-radius: 10px;
+  overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: .875rem;
+  border: 1px solid var(--border-soft); margin: 1em 0;
+}
+.doc-content table {
+  width: 100%; border-collapse: collapse; margin: 1.5em 0;
+  background: var(--card-bg); border: 1px solid var(--border-soft);
+  border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-1);
+}
+.doc-content table th {
+  background: var(--primary); color: var(--primary-on);
+  text-align: left; padding: 12px 16px; font-weight: 600;
+  font-size: .8125rem; letter-spacing: .04em; text-transform: uppercase;
+}
+.doc-content table td {
+  padding: 10px 16px; border-bottom: 1px solid var(--border-soft);
+  font-size: .9375rem; color: var(--fg-soft);
+}
+.doc-content table tr:last-child td { border-bottom: none; }
+.doc-content table tr:hover td { background: var(--bg-soft); }
+.doc-content hr {
+  border: none; height: 1px; background: var(--border-soft); margin: 2.5em 0;
+}
+.doc-content a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+.doc-content a:hover { color: var(--accent); }
+.doc-content strong { color: var(--fg); font-weight: 700; }
+
+.doc-actions {
+  display: flex; gap: 10px; margin-top: 32px; flex-wrap: wrap;
+}
+
+/* Floating top button */
+.totop {
+  position: fixed; bottom: 24px; right: 24px; z-index: 50;
+  background: var(--primary); color: var(--primary-on);
+  border: none; border-radius: 50%; width: 48px; height: 48px;
+  cursor: pointer; box-shadow: var(--shadow-3);
+  display: none; font-size: 1.25rem;
+  transition: transform .2s var(--ease);
+}
+.totop:hover { transform: translateY(-2px); }
+.totop.show { display: grid; place-items: center; }
+[dir="rtl"] .totop { right: auto; left: 24px; }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div class="scroll-progress"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="../../07_Презентации/Большая_презентация/index.html"><span class="brand-mark">Р</span><span data-i18n="brand.name">ЦП РСФСР</span></a>
+    <nav class="topbar-nav">
+      <a href="../../07_Презентации/Большая_презентация/index.html#about" data-i18n="nav.about">О платформе</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#hub" data-i18n="nav.hub">Документы</a>
+      <a href="../../08_Веб-сайт/HTML_основной/index.html">Сайт</a>
+      <a href="../../07_Презентации/Малая_презентация/index.html">Презентация</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#contacts" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+    <div class="topbar-actions">
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-i18n-btn="ru">RU</button>
+        <button class="tbtn" data-i18n-btn="en">EN</button>
+        <button class="tbtn" data-i18n-btn="fr">FR</button>
+        <button class="tbtn" data-i18n-btn="ar">عر</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-theme-btn="daylight" aria-label="Дневная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+        <button class="tbtn" data-theme-btn="midnight" aria-label="Тёмная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="tbtn" data-theme-btn="sepia">◐</button>
+        <button class="tbtn" data-theme-btn="contrast">A11Y</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn" data-font-action="dec">A−</button>
+        <button class="tbtn" data-font-action="reset">A</button>
+        <button class="tbtn" data-font-action="inc">A+</button>
+      </div>
+      <button class="tbtn tbtn-burger">≡</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="eyebrow">Конструкторская документация · ЦП РСФСР ·
+МП</span>
+      <h1>API и интеграции</h1>
+      <p>Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 · 19.12.2024 · ЦП РСФСР</p>
+    </header>
+    <article class="doc-content">
+<h1 id="api-и-интеграции">API и интеграции</h1>
+<h2 id="цп-рсфср-мобильное-приложение">ЦП РСФСР — мобильное
+приложение</h2>
+<p><strong>Условное обозначение:</strong> РСФСР.МП.07.API</p>
+<hr />
+<h2 id="принципы-взаимодействия">1. Принципы взаимодействия</h2>
+<ul>
+<li>REST-архитектура, JSON-форматы.</li>
+<li>Аутентификация: OAuth 2.1 (PKCE) + JWT с ГОСТ-подписью.</li>
+<li>TLS 1.3 с ГОСТ-сертификатами (КриптоПро TLS).</li>
+<li>mTLS для критичных операций.</li>
+<li>Rate limiting на стороне сервера: 100 запросов в минуту на
+пользователя.</li>
+</ul>
+<h2 id="базовые-url">2. Базовые URL</h2>
+<table>
+<thead>
+<tr>
+<th>Среда</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Production</td>
+<td><code>https://api.dp-rsfsr.ru/v1</code></td>
+</tr>
+<tr>
+<td>Staging</td>
+<td><code>https://api-staging.dp-rsfsr.ru/v1</code></td>
+</tr>
+<tr>
+<td>Pre-production</td>
+<td><code>https://api-pre.dp-rsfsr.ru/v1</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="аутентификация">3. Аутентификация</h2>
+<h3 id="post-authesiainit">POST /auth/esia/init</h3>
+<p>Инициация авторизации через ЕСИА.</p>
+<p><strong>Запрос:</strong></p>
+<pre class="json"><code>{
+  &quot;redirect_uri&quot;: &quot;ru.rsfsr.app://auth/callback&quot;,
+  &quot;code_challenge&quot;: &quot;...&quot;,
+  &quot;code_challenge_method&quot;: &quot;S256&quot;
+}</code></pre>
+<p><strong>Ответ:</strong></p>
+<pre class="json"><code>{
+  &quot;authorize_url&quot;: &quot;https://esia.gosuslugi.ru/aas/oauth2/v3/ac?...&quot;
+}</code></pre>
+<h3 id="post-authesiacallback">POST /auth/esia/callback</h3>
+<p>Завершение авторизации через ЕСИА.</p>
+<p><strong>Запрос:</strong></p>
+<pre class="json"><code>{ &quot;code&quot;: &quot;...&quot;, &quot;code_verifier&quot;: &quot;...&quot; }</code></pre>
+<p><strong>Ответ:</strong></p>
+<pre class="json"><code>{
+  &quot;access_token&quot;: &quot;...&quot;,
+  &quot;refresh_token&quot;: &quot;...&quot;,
+  &quot;expires_in&quot;: 900,
+  &quot;user&quot;: { &quot;id&quot;: &quot;...&quot;, &quot;fio&quot;: &quot;...&quot; }
+}</code></pre>
+<h3 id="post-authrefresh">POST /auth/refresh</h3>
+<p>Обновление access-токена.</p>
+<h3 id="post-authbiometric">POST /auth/biometric</h3>
+<p>Авторизация через ЕБС.</p>
+<h3 id="post-authlogout">POST /auth/logout</h3>
+<p>Завершение сессии.</p>
+<h2 id="профиль-пользователя">4. Профиль пользователя</h2>
+<h3 id="get-me">GET /me</h3>
+<p>Получение данных текущего пользователя.</p>
+<h3 id="patch-me">PATCH /me</h3>
+<p>Обновление контактных данных и настроек.</p>
+<h3 id="post-mekyc">POST /me/kyc</h3>
+<p>Прохождение KYC-проверки.</p>
+<h3 id="get-medocuments">GET /me/documents</h3>
+<p>Список документов пользователя.</p>
+<h2 id="активы">5. Активы</h2>
+<h3 id="get-assets">GET /assets</h3>
+<p>Список активов пользователя с фильтрацией и пагинацией.</p>
+<p><strong>Параметры запроса:</strong> - <code>type</code> — тип актива
+(real, land, vehicle, ip, securities). - <code>status</code> — статус
+(draft, valuation, active, returned). - <code>page</code>,
+<code>limit</code>.</p>
+<h3 id="post-assets">POST /assets</h3>
+<p>Подача нового актива на залог.</p>
+<p><strong>Запрос:</strong></p>
+<pre class="json"><code>{
+  &quot;type&quot;: &quot;real&quot;,
+  &quot;kadastr&quot;: &quot;77:01:0001000:1234&quot;,
+  &quot;address&quot;: &quot;...&quot;,
+  &quot;area&quot;: 97,
+  &quot;year&quot;: 2015,
+  &quot;ownership_doc_type&quot;: &quot;...&quot;,
+  &quot;ownership_doc_attachments&quot;: [&quot;doc-uuid-1&quot;]
+}</code></pre>
+<h3 id="get-assetsid">GET /assets/{id}</h3>
+<p>Получение детальной информации об активе.</p>
+<h3 id="post-assetsidvaluation">POST /assets/{id}/valuation</h3>
+<p>Запрос на оценку актива.</p>
+<h3 id="get-assetsidvaluation">GET /assets/{id}/valuation</h3>
+<p>Получение результата оценки.</p>
+<h3 id="delete-assetsid">DELETE /assets/{id}</h3>
+<p>Отзыв заявки (только для статуса draft).</p>
+<h2 id="смарт-контракты">6. Смарт-контракты</h2>
+<h3 id="post-contracts">POST /contracts</h3>
+<p>Создание смарт-контракта на основе оценённого актива.</p>
+<p><strong>Запрос:</strong></p>
+<pre class="json"><code>{
+  &quot;asset_id&quot;: &quot;...&quot;,
+  &quot;term_months&quot;: 36,
+  &quot;target_programme&quot;: &quot;...&quot;,
+  &quot;rate_pct&quot;: 4.2,
+  &quot;nominal&quot;: 8200000
+}</code></pre>
+<h3 id="get-contractsid">GET /contracts/{id}</h3>
+<p>Получение текста смарт-контракта в формате PDF и его параметров.</p>
+<h3 id="post-contractsidsign">POST /contracts/{id}/sign</h3>
+<p>Подписание смарт-контракта.</p>
+<p><strong>Запрос:</strong></p>
+<pre class="json"><code>{
+  &quot;signature_method&quot;: &quot;uke&quot;,
+  &quot;uke_token&quot;: &quot;...&quot;,
+  &quot;otp_code&quot;: &quot;742369&quot;
+}</code></pre>
+<h3 id="post-contractsidcancel">POST /contracts/{id}/cancel</h3>
+<p>Отзыв подписанного контракта (только до выпуска ЦФА).</p>
+<h2 id="цифровые-финансовые-активы">7. Цифровые финансовые активы</h2>
+<h3 id="get-cfas">GET /cfas</h3>
+<p>Список ЦФА пользователя.</p>
+<h3 id="get-cfasid">GET /cfas/{id}</h3>
+<p>Карточка ЦФА с условиями, выплатами, статусом в Банке России.</p>
+<h3 id="post-cfasidexchange-request">POST
+/cfas/{id}/exchange-request</h3>
+<p>Запрос на мену ЦФА (досрочная).</p>
+<h3 id="get-cfasidcontract.pdf">GET /cfas/{id}/contract.pdf</h3>
+<p>Скачивание текста смарт-контракта.</p>
+<h3 id="get-cfasidevents">GET /cfas/{id}/events</h3>
+<p>История событий по ЦФА (выпуск, мена, выплаты, страховые случаи).</p>
+<h2 id="доходы-и-история">8. Доходы и история</h2>
+<h3 id="get-income">GET /income</h3>
+<p>Сводка доходов за период.</p>
+<p><strong>Параметры запроса:</strong> - <code>from</code>,
+<code>to</code> — диапазон дат. - <code>cfa_id</code> — фильтр по
+конкретному ЦФА.</p>
+<h3 id="get-incomechart">GET /income/chart</h3>
+<p>Данные для графика помесячных поступлений.</p>
+<h3 id="get-transactions">GET /transactions</h3>
+<p>Полная история операций.</p>
+<h3 id="get-transactionsid">GET /transactions/{id}</h3>
+<p>Детальная информация о транзакции.</p>
+<h3 id="get-tax-receipt">GET /tax-receipt</h3>
+<p>Скачивание налоговой справки 2-НДФЛ за указанный период.</p>
+<h2 id="уведомления">9. Уведомления</h2>
+<h3 id="get-notifications">GET /notifications</h3>
+<p>Список уведомлений пользователя.</p>
+<h3 id="patch-notificationsid">PATCH /notifications/{id}</h3>
+<p>Изменение статуса уведомления (mark as read).</p>
+<h3 id="post-notificationsmark-all-read">POST
+/notifications/mark-all-read</h3>
+<p>Пометить все как прочитанные.</p>
+<h3 id="post-notificationssubscriptions">POST
+/notifications/subscriptions</h3>
+<p>Подписка на push-уведомления через FCM/APNS.</p>
+<p><strong>Запрос:</strong></p>
+<pre class="json"><code>{
+  &quot;platform&quot;: &quot;fcm&quot;,
+  &quot;token&quot;: &quot;...&quot;,
+  &quot;device_id&quot;: &quot;...&quot;
+}</code></pre>
+<h2 id="документы">10. Документы</h2>
+<h3 id="get-documents">GET /documents</h3>
+<p>Каталог общедоступных документов платформы.</p>
+<h3 id="get-documentsid">GET /documents/{id}</h3>
+<p>Скачивание документа в выбранном формате (PDF, HTML, DOCX).</p>
+<h2 id="поддержка">11. Поддержка</h2>
+<h3 id="post-supportticket">POST /support/ticket</h3>
+<p>Создание обращения в поддержку.</p>
+<h3 id="get-supporttickets">GET /support/tickets</h3>
+<p>История обращений пользователя.</p>
+<h3 id="post-supportchat">POST /support/chat</h3>
+<p>Сообщение в чат поддержки.</p>
+<h2 id="интеграции-с-государственными-системами">12. Интеграции с
+государственными системами</h2>
+<h3 id="есиа-госуслуги">12.1. ЕСИА (Госуслуги)</h3>
+<ul>
+<li><strong>Стандарт:</strong> OAuth 2.1 + OpenID Connect 1.0.</li>
+<li><strong>Уровень учётной записи:</strong> Подтверждённая (УЗ-3).</li>
+<li><strong>Получаемые scope:</strong> <code>openid</code>,
+<code>fullname</code>, <code>birthdate</code>, <code>gender</code>,
+<code>snils</code>, <code>inn</code>, <code>id_doc</code>,
+<code>email</code>, <code>mobile</code>.</li>
+</ul>
+<h3 id="единая-биометрическая-система">12.2. Единая биометрическая
+система</h3>
+<ul>
+<li><strong>Стандарт:</strong> Положение Банка России №482-П.</li>
+<li><strong>Типы биометрии:</strong> лицо, голос.</li>
+<li><strong>Назначение:</strong> идентификация и подтверждение
+операций.</li>
+</ul>
+<h3 id="егрн-росреестр">12.3. ЕГРН (Росреестр)</h3>
+<ul>
+<li><strong>Стандарт:</strong> Регламент электронного взаимодействия с
+Росреестром (через серверную часть платформы).</li>
+<li><strong>Сценарии:</strong> получение сведений об объекте по
+кадастровому номеру; регистрация и снятие обременений.</li>
+</ul>
+<h3 id="госуслуги-личный-кабинет">12.4. Госуслуги (личный кабинет)</h3>
+<ul>
+<li><strong>Назначение:</strong> получение официальных уведомлений;
+передача согласий на обработку ПДн.</li>
+<li><strong>Сценарии:</strong> уведомления об обременении, мене,
+выплатах.</li>
+</ul>
+<h3 id="нспк-мир">12.5. НСПК (Мир)</h3>
+<ul>
+<li><strong>Назначение:</strong> зачисление выплат на карту «Мир».</li>
+</ul>
+<h2 id="форматы-ошибок">13. Форматы ошибок</h2>
+<p>Все ошибки возвращаются в едином формате:</p>
+<pre class="json"><code>{
+  &quot;error&quot;: {
+    &quot;code&quot;: &quot;ASSET-01&quot;,
+    &quot;message&quot;: &quot;Объект не найден в ЕГРН&quot;,
+    &quot;details&quot;: {
+      &quot;kadastr&quot;: &quot;...&quot;
+    },
+    &quot;trace_id&quot;: &quot;...&quot;
+  }
+}</code></pre>
+<h2 id="версионирование-api">14. Версионирование API</h2>
+<ul>
+<li>Версия в URL: <code>/v1/</code>, <code>/v2/</code>, …</li>
+<li>Поддержка обратной совместимости в течение 12 месяцев после релиза
+новой версии.</li>
+<li>Уведомления о deprecation через response headers.</li>
+</ul>
+<h2 id="документация-api">15. Документация API</h2>
+<ul>
+<li>OpenAPI 3.1 спецификация:
+<code>https://api.dp-rsfsr.ru/openapi.json</code>.</li>
+<li>Swagger UI: <code>https://api.dp-rsfsr.ru/docs</code>.</li>
+<li>Postman-коллекция: доступна по запросу для партнёров и
+интеграторов.</li>
+</ul>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../07_Презентации/Большая_презентация/index.html#hub">К хабу документов</a>
+      <a class="btn btn--ghost" href="../../07_Презентации/Большая_презентация/index.html">Большая презентация</a>
+    </div>
+  </div>
+</main>
+
+<button class="totop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Наверх">↑</button>
+
+<script src="../../_shared/i18n.js"></script>
+<script src="../../_shared/app.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const t = document.querySelector('.totop');
+  if (t) t.classList.toggle('show', window.scrollY > 600);
+});
+</script>
+</body>
+</html>

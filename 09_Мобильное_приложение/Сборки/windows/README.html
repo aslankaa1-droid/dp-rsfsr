@@ -1,0 +1,366 @@
+﻿<!doctype html>
+<html lang="ru" data-theme="daylight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сборка windows · ЦП РСФСР</title>
+<meta name="theme-color" content="#0B2B5C">
+<link rel="stylesheet" href="../../../_shared/brand.css">
+<style>
+/* Document-specific styles */
+body { padding-top: 80px; }
+.doc-wrap { max-width: 880px; margin: 0 auto; padding: 48px 24px 96px; }
+.doc-header {
+  padding-bottom: 24px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.doc-header .eyebrow { margin-bottom: 12px; }
+.doc-header h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--primary); margin-bottom: 12px; }
+.doc-header p { color: var(--fg-mute); font-size: .9375rem; margin: 0; }
+.doc-content h1, .doc-content h2, .doc-content h3, .doc-content h4 { color: var(--primary); margin-top: 2em; margin-bottom: .5em; }
+.doc-content h1 { font-size: 1.875rem; }
+.doc-content h2 { font-size: 1.5rem; padding-bottom: 6px; border-bottom: 1px solid var(--border-soft); }
+.doc-content h3 { font-size: 1.25rem; }
+.doc-content h4 { font-size: 1.0625rem; color: var(--fg); }
+.doc-content p { line-height: 1.7; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content ul, .doc-content ol { line-height: 1.7; padding-left: 1.5em; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content li { margin-bottom: .35em; }
+.doc-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 12px 20px;
+  margin: 1em 0;
+  background: var(--bg-soft);
+  border-radius: 0 8px 8px 0;
+  color: var(--fg-soft);
+}
+.doc-content code {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg-soft);
+  padding: 2px 6px; border-radius: 4px;
+  font-size: .875em; color: var(--primary);
+}
+.doc-content pre {
+  background: var(--bg-soft); padding: 16px; border-radius: 10px;
+  overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: .875rem;
+  border: 1px solid var(--border-soft); margin: 1em 0;
+}
+.doc-content table {
+  width: 100%; border-collapse: collapse; margin: 1.5em 0;
+  background: var(--card-bg); border: 1px solid var(--border-soft);
+  border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-1);
+}
+.doc-content table th {
+  background: var(--primary); color: var(--primary-on);
+  text-align: left; padding: 12px 16px; font-weight: 600;
+  font-size: .8125rem; letter-spacing: .04em; text-transform: uppercase;
+}
+.doc-content table td {
+  padding: 10px 16px; border-bottom: 1px solid var(--border-soft);
+  font-size: .9375rem; color: var(--fg-soft);
+}
+.doc-content table tr:last-child td { border-bottom: none; }
+.doc-content table tr:hover td { background: var(--bg-soft); }
+.doc-content hr {
+  border: none; height: 1px; background: var(--border-soft); margin: 2.5em 0;
+}
+.doc-content a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+.doc-content a:hover { color: var(--accent); }
+.doc-content strong { color: var(--fg); font-weight: 700; }
+
+.doc-actions {
+  display: flex; gap: 10px; margin-top: 32px; flex-wrap: wrap;
+}
+
+/* Floating top button */
+.totop {
+  position: fixed; bottom: 24px; right: 24px; z-index: 50;
+  background: var(--primary); color: var(--primary-on);
+  border: none; border-radius: 50%; width: 48px; height: 48px;
+  cursor: pointer; box-shadow: var(--shadow-3);
+  display: none; font-size: 1.25rem;
+  transition: transform .2s var(--ease);
+}
+.totop:hover { transform: translateY(-2px); }
+.totop.show { display: grid; place-items: center; }
+[dir="rtl"] .totop { right: auto; left: 24px; }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div class="scroll-progress"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="../../../07_Презентации/Большая_презентация/index.html"><span class="brand-mark">Р</span><span data-i18n="brand.name">ЦП РСФСР</span></a>
+    <nav class="topbar-nav">
+      <a href="../../../07_Презентации/Большая_презентация/index.html#about" data-i18n="nav.about">О платформе</a>
+      <a href="../../../07_Презентации/Большая_презентация/index.html#hub" data-i18n="nav.hub">Документы</a>
+      <a href="../../../08_Веб-сайт/HTML_основной/index.html">Сайт</a>
+      <a href="../../../07_Презентации/Малая_презентация/index.html">Презентация</a>
+      <a href="../../../07_Презентации/Большая_презентация/index.html#contacts" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+    <div class="topbar-actions">
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-i18n-btn="ru">RU</button>
+        <button class="tbtn" data-i18n-btn="en">EN</button>
+        <button class="tbtn" data-i18n-btn="fr">FR</button>
+        <button class="tbtn" data-i18n-btn="ar">عر</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-theme-btn="daylight" aria-label="Дневная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+        <button class="tbtn" data-theme-btn="midnight" aria-label="Тёмная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="tbtn" data-theme-btn="sepia">◐</button>
+        <button class="tbtn" data-theme-btn="contrast">A11Y</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn" data-font-action="dec">A−</button>
+        <button class="tbtn" data-font-action="reset">A</button>
+        <button class="tbtn" data-font-action="inc">A+</button>
+      </div>
+      <button class="tbtn tbtn-burger">≡</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="eyebrow">Платформенные сборки</span>
+      <h1>Сборка windows</h1>
+      <p>Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 · 19.12.2024 · ЦП РСФСР</p>
+    </header>
+    <article class="doc-content">
+<h1 id="windows-сборка-цп-рсфср">Windows-сборка ЦП РСФСР</h1>
+<p>Инструкция сборки Windows-приложения (MSIX) для распространения через
+Microsoft Store и Enterprise.</p>
+<hr />
+<h2 id="подходы-к-сборке-windows">1. Подходы к сборке Windows</h2>
+<p>Поддерживаются два подхода:</p>
+<h3 id="a.-pwa-msix-рекомендуется">A. PWA + MSIX (рекомендуется)</h3>
+<p>Самый быстрый путь: упаковка существующей PWA в MSIX-пакет через
+<strong>PWA Builder</strong> или прямую сборку через <strong>Microsoft
+Edge WebView2</strong>.</p>
+<h3 id="b.-.net-maui-webview2">B. .NET MAUI + WebView2</h3>
+<p>Полноценное нативное приложение Windows с интеграцией PWA через
+WebView2 control. Даёт больше возможностей (нативная биометрия Windows
+Hello, защищённое хранилище), но требует больше работы.</p>
+<p>Ниже описаны оба подхода.</p>
+<hr />
+<h2 id="подход-a-pwa-builder">2. Подход A: PWA Builder</h2>
+<h3 id="требования">Требования</h3>
+<ul>
+<li>Windows 10/11.</li>
+<li>Edge или Chrome с поддержкой PWA.</li>
+<li>Аккаунт Microsoft Partner Center (для публикации).</li>
+</ul>
+<h3 id="установка-pwa-builder-cli">Установка PWA Builder CLI</h3>
+<pre class="bash"><code>npm install -g @pwabuilder/cli</code></pre>
+<h3 id="генерация-msix-пакета">Генерация MSIX-пакета</h3>
+<ol type="1">
+<li>Опубликуйте PWA на временный домен (можно использовать локальный
+HTTPS-сервер для теста):</li>
+</ol>
+<pre class="bash"><code># В корне ЦП РСФСР
+npx http-server -S -p 8443    # требует self-signed сертификат</code></pre>
+<ol start="2" type="1">
+<li>Сгенерируйте MSIX:</li>
+</ol>
+<pre class="bash"><code>pwa-builder https://app.dp-rsfsr.ru \
+            --package windows \
+            --output ./windows-build</code></pre>
+<p>Результат: <code>windows-build/RU.RSFSR.App.msix</code>.</p>
+<h3 id="подпись-msix">Подпись MSIX</h3>
+<pre class="bash"><code># Создать self-signed для тестов
+makecert -r -h 0 -n &quot;CN=RU.RSFSR.App&quot; -eku 1.3.6.1.5.5.7.3.3 \
+         -pe -sv rsfsr.pvk rsfsr.cer
+pvk2pfx -pvk rsfsr.pvk -spc rsfsr.cer -pfx rsfsr.pfx -po PASSWORD
+
+# Подписать
+signtool sign /f rsfsr.pfx /p PASSWORD \
+              /fd SHA256 /tr http://timestamp.digicert.com /td SHA256 \
+              ./windows-build/RU.RSFSR.App.msix</code></pre>
+<p>Для production-сборки используется EV Code Signing Certificate
+(отечественные УЦ: SkyDNS, RU-CENTER).</p>
+<hr />
+<h2 id="подход-b-.net-maui-webview2">3. Подход B: .NET MAUI +
+WebView2</h2>
+<h3 id="требования-1">Требования</h3>
+<ul>
+<li>Visual Studio 2022 с workload «Mobile development with .NET».</li>
+<li>.NET 8 SDK.</li>
+<li>Windows 10/11 SDK.</li>
+</ul>
+<h3 id="создание-проекта">Создание проекта</h3>
+<ol type="1">
+<li>Visual Studio → New Project → .NET MAUI App.</li>
+<li>Название: <code>RU.RSFSR.App</code>.</li>
+<li>Локация: <code>Сборки/windows/</code>.</li>
+<li>Framework: .NET 8.</li>
+</ol>
+<h3 id="структура">Структура</h3>
+<pre><code>windows/
+  App/
+    Platforms/
+      Windows/
+        Package.appxmanifest
+        App.xaml
+    Resources/
+      AppIcon/
+      Splash/
+    MauiProgram.cs
+    MainPage.xaml          ← WebView2 с PWA
+    App.csproj
+  AppPackages/
+  build/</code></pre>
+<h3 id="mainpage.xaml">MainPage.xaml</h3>
+<pre class="xml"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;ContentPage xmlns=&quot;http://schemas.microsoft.com/dotnet/2021/maui&quot;
+             xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
+             x:Class=&quot;RU.RSFSR.App.MainPage&quot;
+             BackgroundColor=&quot;#0B2B5C&quot;&gt;
+    &lt;WebView x:Name=&quot;webView&quot;
+             Source=&quot;https://app.dp-rsfsr.ru&quot;
+             HorizontalOptions=&quot;Fill&quot;
+             VerticalOptions=&quot;Fill&quot; /&gt;
+&lt;/ContentPage&gt;</code></pre>
+<h3 id="package.appxmanifest">Package.appxmanifest</h3>
+<pre class="xml"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;Package xmlns=&quot;http://schemas.microsoft.com/appx/manifest/foundation/windows10&quot;
+         xmlns:uap=&quot;http://schemas.microsoft.com/appx/manifest/uap/windows10&quot;
+         xmlns:rescap=&quot;http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities&quot;
+         IgnorableNamespaces=&quot;uap rescap&quot;&gt;
+
+  &lt;Identity Name=&quot;RU.RSFSR.App&quot;
+            Publisher=&quot;CN=Kagirov Abdul-Khakim Akhmadovich&quot;
+            Version=&quot;1.0.0.0&quot; /&gt;
+
+  &lt;Properties&gt;
+    &lt;DisplayName&gt;ЦП РСФСР&lt;/DisplayName&gt;
+    &lt;PublisherDisplayName&gt;А.-Х. А. Кагиров&lt;/PublisherDisplayName&gt;
+    &lt;Logo&gt;Resources\StoreLogo.png&lt;/Logo&gt;
+  &lt;/Properties&gt;
+
+  &lt;Dependencies&gt;
+    &lt;TargetDeviceFamily Name=&quot;Windows.Desktop&quot;
+                       MinVersion=&quot;10.0.17763.0&quot;
+                       MaxVersionTested=&quot;10.0.22621.0&quot; /&gt;
+  &lt;/Dependencies&gt;
+
+  &lt;Resources&gt;
+    &lt;Resource Language=&quot;ru-RU&quot;/&gt;
+    &lt;Resource Language=&quot;en-US&quot;/&gt;
+    &lt;Resource Language=&quot;fr-FR&quot;/&gt;
+    &lt;Resource Language=&quot;ar-SA&quot;/&gt;
+  &lt;/Resources&gt;
+
+  &lt;Applications&gt;
+    &lt;Application Id=&quot;App&quot;
+                 Executable=&quot;App.exe&quot;
+                 EntryPoint=&quot;RU.RSFSR.App.App&quot;&gt;
+      &lt;uap:VisualElements DisplayName=&quot;ЦП РСФСР&quot;
+                          Description=&quot;Российский Сервис Финансирования Социального Развития&quot;
+                          BackgroundColor=&quot;#0B2B5C&quot;
+                          Square150x150Logo=&quot;Resources\Square150x150Logo.png&quot;
+                          Square44x44Logo=&quot;Resources\Square44x44Logo.png&quot;&gt;
+        &lt;uap:DefaultTile Wide310x150Logo=&quot;Resources\Wide310x150Logo.png&quot;
+                         Square71x71Logo=&quot;Resources\Square71x71Logo.png&quot;
+                         Square310x310Logo=&quot;Resources\Square310x310Logo.png&quot; /&gt;
+        &lt;uap:SplashScreen Image=&quot;Resources\SplashScreen.png&quot;
+                          BackgroundColor=&quot;#0B2B5C&quot; /&gt;
+      &lt;/uap:VisualElements&gt;
+    &lt;/Application&gt;
+  &lt;/Applications&gt;
+
+  &lt;Capabilities&gt;
+    &lt;Capability Name=&quot;internetClient&quot; /&gt;
+    &lt;Capability Name=&quot;privateNetworkClientServer&quot; /&gt;
+    &lt;uap:Capability Name=&quot;userAccountInformation&quot; /&gt;
+  &lt;/Capabilities&gt;
+&lt;/Package&gt;</code></pre>
+<h3 id="иконки">Иконки</h3>
+<p>Требуемые размеры (Windows 11): - <code>Square44x44Logo.png</code> —
+44×44 (taskbar, jumplist) - <code>Square71x71Logo.png</code> — 71×71
+(small tile) - <code>Square150x150Logo.png</code> — 150×150 (medium
+tile) - <code>Wide310x150Logo.png</code> — 310×150 (wide tile) -
+<code>Square310x310Logo.png</code> — 310×310 (large tile) -
+<code>StoreLogo.png</code> — 50×50 (Store listing) -
+<code>SplashScreen.png</code> — 620×300</p>
+<p>Сгенерируйте из <code>Приложение/icons/icon-512.svg</code>.</p>
+<h3 id="сборка">Сборка</h3>
+<pre class="bash"><code># Из папки windows
+msbuild App.sln /p:Configuration=Release /p:Platform=x64
+
+# MSIX-bundle
+msbuild App.sln /t:Publish /p:Configuration=Release /p:Platform=x64 \
+       /p:AppxBundlePlatforms=&quot;x64|arm64&quot; \
+       /p:AppxBundle=Always \
+       /p:UapAppxPackageBuildMode=StoreUpload</code></pre>
+<p>Результат:
+<code>windows/AppPackages/App_1.0.0.0_x64_arm64_bundle.msixbundle</code>.</p>
+<h2 id="публикация-в-microsoft-store">4. Публикация в Microsoft
+Store</h2>
+<ol type="1">
+<li>Microsoft Partner Center: https://partner.microsoft.com</li>
+<li>Создайте Microsoft Store App.</li>
+<li>Зарезервируйте имя: «ЦП РСФСР».</li>
+<li>Заполните метаданные:
+<ul>
+<li>Описание (4 языка).</li>
+<li>Скриншоты (для разных размеров).</li>
+<li>Иконка 512×512.</li>
+<li>Возрастная категория.</li>
+<li>Категория: Finance.</li>
+</ul></li>
+<li>Загрузите MSIX-bundle.</li>
+<li>Отправьте на сертификацию (срок: 24–48 часов).</li>
+</ol>
+<h2 id="распространение-вне-store">5. Распространение вне Store</h2>
+<p>Для корпоративного распространения: - <strong>Microsoft
+Intune</strong> — MDM. - <strong>PowerShell-установка</strong>:
+<code>Add-AppxPackage -Path App.msixbundle</code>. -
+<strong>Web-installer</strong>: AppInstaller-файл на хосте.</p>
+<hr />
+<h2 id="чек-лист-готовности-к-публикации">6. Чек-лист готовности к
+публикации</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />Package.appxmanifest
+настроен.</label></li>
+<li><label><input type="checkbox" />Иконки всех размеров.</label></li>
+<li><label><input type="checkbox" />Splash screen.</label></li>
+<li><label><input type="checkbox" />Подпись code signing
+certificate.</label></li>
+<li><label><input type="checkbox" />Тестирование на Windows 10 и Windows
+11.</label></li>
+<li><label><input type="checkbox" />Тестирование на x64 и
+ARM64.</label></li>
+<li><label><input type="checkbox" />WebView2 Runtime
+установлен/проверка.</label></li>
+<li><label><input type="checkbox" />Промо-материалы для
+Store.</label></li>
+<li><label><input type="checkbox" />Политика
+конфиденциальности.</label></li>
+<li><label><input type="checkbox" />Microsoft Partner Center
+аккаунт.</label></li>
+</ul>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../07_Презентации/Большая_презентация/index.html#hub">К хабу документов</a>
+      <a class="btn btn--ghost" href="../../../07_Презентации/Большая_презентация/index.html">Большая презентация</a>
+    </div>
+  </div>
+</main>
+
+<button class="totop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Наверх">↑</button>
+
+<script src="../../../_shared/i18n.js"></script>
+<script src="../../../_shared/app.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const t = document.querySelector('.totop');
+  if (t) t.classList.toggle('show', window.scrollY > 600);
+});
+</script>
+</body>
+</html>

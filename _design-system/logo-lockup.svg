@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" role="img" aria-label="ЦПФСР.РФ — Цифровая Платформа Финансирования Социального Развития">
+  <defs>
+    <linearGradient id="lock-em" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B3D2E"/>
+      <stop offset="100%" stop-color="#1F6B54"/>
+    </linearGradient>
+    <linearGradient id="lock-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C5A572"/>
+      <stop offset="100%" stop-color="#E4C892"/>
+    </linearGradient>
+  </defs>
+  <!-- знак слева -->
+  <g transform="translate(8, 8)">
+    <path d="M40 0 L70 10 V40 C70 56 56 70 40 76 C24 70 10 56 10 40 V10 Z"
+          fill="url(#lock-em)" stroke="url(#lock-gold)" stroke-width="1.5"/>
+    <rect x="37.5" y="15" width="5" height="44" fill="#E4C892" opacity="0.95"/>
+    <rect x="22" y="18" width="36" height="3.5" fill="#E4C892" opacity="0.88"/>
+    <rect x="26" y="33" width="28" height="3.5" fill="#E4C892" opacity="0.78"/>
+    <rect x="30" y="48" width="20" height="3.5" fill="#E4C892" opacity="0.68"/>
+    <circle cx="40" cy="6" r="2.5" fill="#E4C892"/>
+  </g>
+  <!-- текст справа -->
+  <g transform="translate(98, 0)" font-family="'Inter Tight','Inter',system-ui,sans-serif">
+    <text x="0" y="40" font-size="32" font-weight="700" letter-spacing="-0.5" fill="currentColor">ЦПФСР.РФ</text>
+    <text x="2" y="62" font-size="10.5" font-weight="500" letter-spacing="1.6" fill="currentColor" opacity="0.62" style="text-transform:uppercase">Цифровая Платформа</text>
+    <text x="2" y="76" font-size="10.5" font-weight="500" letter-spacing="1.6" fill="currentColor" opacity="0.62" style="text-transform:uppercase">Финансирования Социального Развития</text>
+  </g>
+</svg>

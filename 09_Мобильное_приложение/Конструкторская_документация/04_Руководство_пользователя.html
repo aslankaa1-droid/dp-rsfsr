@@ -1,0 +1,366 @@
+﻿<!doctype html>
+<html lang="ru" data-theme="daylight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Руководство пользователя · ЦП РСФСР</title>
+<meta name="theme-color" content="#0B2B5C">
+<link rel="stylesheet" href="../../_shared/brand.css">
+<style>
+/* Document-specific styles */
+body { padding-top: 80px; }
+.doc-wrap { max-width: 880px; margin: 0 auto; padding: 48px 24px 96px; }
+.doc-header {
+  padding-bottom: 24px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.doc-header .eyebrow { margin-bottom: 12px; }
+.doc-header h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--primary); margin-bottom: 12px; }
+.doc-header p { color: var(--fg-mute); font-size: .9375rem; margin: 0; }
+.doc-content h1, .doc-content h2, .doc-content h3, .doc-content h4 { color: var(--primary); margin-top: 2em; margin-bottom: .5em; }
+.doc-content h1 { font-size: 1.875rem; }
+.doc-content h2 { font-size: 1.5rem; padding-bottom: 6px; border-bottom: 1px solid var(--border-soft); }
+.doc-content h3 { font-size: 1.25rem; }
+.doc-content h4 { font-size: 1.0625rem; color: var(--fg); }
+.doc-content p { line-height: 1.7; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content ul, .doc-content ol { line-height: 1.7; padding-left: 1.5em; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content li { margin-bottom: .35em; }
+.doc-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 12px 20px;
+  margin: 1em 0;
+  background: var(--bg-soft);
+  border-radius: 0 8px 8px 0;
+  color: var(--fg-soft);
+}
+.doc-content code {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg-soft);
+  padding: 2px 6px; border-radius: 4px;
+  font-size: .875em; color: var(--primary);
+}
+.doc-content pre {
+  background: var(--bg-soft); padding: 16px; border-radius: 10px;
+  overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: .875rem;
+  border: 1px solid var(--border-soft); margin: 1em 0;
+}
+.doc-content table {
+  width: 100%; border-collapse: collapse; margin: 1.5em 0;
+  background: var(--card-bg); border: 1px solid var(--border-soft);
+  border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-1);
+}
+.doc-content table th {
+  background: var(--primary); color: var(--primary-on);
+  text-align: left; padding: 12px 16px; font-weight: 600;
+  font-size: .8125rem; letter-spacing: .04em; text-transform: uppercase;
+}
+.doc-content table td {
+  padding: 10px 16px; border-bottom: 1px solid var(--border-soft);
+  font-size: .9375rem; color: var(--fg-soft);
+}
+.doc-content table tr:last-child td { border-bottom: none; }
+.doc-content table tr:hover td { background: var(--bg-soft); }
+.doc-content hr {
+  border: none; height: 1px; background: var(--border-soft); margin: 2.5em 0;
+}
+.doc-content a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+.doc-content a:hover { color: var(--accent); }
+.doc-content strong { color: var(--fg); font-weight: 700; }
+
+.doc-actions {
+  display: flex; gap: 10px; margin-top: 32px; flex-wrap: wrap;
+}
+
+/* Floating top button */
+.totop {
+  position: fixed; bottom: 24px; right: 24px; z-index: 50;
+  background: var(--primary); color: var(--primary-on);
+  border: none; border-radius: 50%; width: 48px; height: 48px;
+  cursor: pointer; box-shadow: var(--shadow-3);
+  display: none; font-size: 1.25rem;
+  transition: transform .2s var(--ease);
+}
+.totop:hover { transform: translateY(-2px); }
+.totop.show { display: grid; place-items: center; }
+[dir="rtl"] .totop { right: auto; left: 24px; }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div class="scroll-progress"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="../../07_Презентации/Большая_презентация/index.html"><span class="brand-mark">Р</span><span data-i18n="brand.name">ЦП РСФСР</span></a>
+    <nav class="topbar-nav">
+      <a href="../../07_Презентации/Большая_презентация/index.html#about" data-i18n="nav.about">О платформе</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#hub" data-i18n="nav.hub">Документы</a>
+      <a href="../../08_Веб-сайт/HTML_основной/index.html">Сайт</a>
+      <a href="../../07_Презентации/Малая_презентация/index.html">Презентация</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#contacts" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+    <div class="topbar-actions">
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-i18n-btn="ru">RU</button>
+        <button class="tbtn" data-i18n-btn="en">EN</button>
+        <button class="tbtn" data-i18n-btn="fr">FR</button>
+        <button class="tbtn" data-i18n-btn="ar">عر</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-theme-btn="daylight" aria-label="Дневная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+        <button class="tbtn" data-theme-btn="midnight" aria-label="Тёмная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="tbtn" data-theme-btn="sepia">◐</button>
+        <button class="tbtn" data-theme-btn="contrast">A11Y</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn" data-font-action="dec">A−</button>
+        <button class="tbtn" data-font-action="reset">A</button>
+        <button class="tbtn" data-font-action="inc">A+</button>
+      </div>
+      <button class="tbtn tbtn-burger">≡</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="eyebrow">Конструкторская документация · ЦП РСФСР ·
+МП</span>
+      <h1>Руководство пользователя</h1>
+      <p>Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 · 19.12.2024 · ЦП РСФСР</p>
+    </header>
+    <article class="doc-content">
+<h1 id="руководство-пользователя">Руководство пользователя</h1>
+<h2 id="цп-рсфср-мобильное-приложение">ЦП РСФСР — мобильное
+приложение</h2>
+<p><strong>Условное обозначение:</strong> РСФСР.МП.04.РП
+<strong>Стандарт:</strong> ГОСТ 19.505-79</p>
+<hr />
+<h2 id="назначение-программы">1. Назначение программы</h2>
+<p>Приложение предназначено для управления личным портфелем активов и
+цифровых финансовых активов (ЦФА) на Цифровой Платформе РСФСР: подача
+имущества на залог, выпуск ЦФА, получение дохода от размещения, контроль
+смарт-контрактов.</p>
+<h2 id="условия-выполнения-программы">2. Условия выполнения
+программы</h2>
+<h3 id="минимальные-технические-требования">2.1. Минимальные технические
+требования</h3>
+<ul>
+<li>iOS 15 и выше, либо</li>
+<li>Android 9 (API 28) и выше, либо</li>
+<li>Windows 10 (1809) и выше, либо</li>
+<li>современный браузер с поддержкой Service Worker.</li>
+</ul>
+<h3 id="подготовка-к-работе">2.2. Подготовка к работе</h3>
+<ol type="1">
+<li>Установите приложение из RuStore, App Store, Google Play, Microsoft
+Store, либо добавьте PWA на главный экран из браузера.</li>
+<li>Подготовьте подтверждённую учётную запись Госуслуг.</li>
+<li>Подготовьте документы на актив (правоустанавливающие, кадастровый
+номер для недвижимости).</li>
+</ol>
+<h2 id="работа-с-программой">3. Работа с программой</h2>
+<h3 id="первый-запуск">3.1. Первый запуск</h3>
+<p>При первом запуске приложение приветствует пользователя
+экраном-заставкой и автоматически переходит на экран входа.</p>
+<h4 id="вход-в-систему">Вход в систему</h4>
+<p>Доступны два способа: - <strong>Войти через Госуслуги</strong> —
+основной способ для новых пользователей. Используется OpenID Connect к
+ЕСИА с подтверждённой учётной записью. - <strong>Биометрия</strong> —
+для повторных входов уже зарегистрированного пользователя через Face ID
+/ Touch ID / Windows Hello.</p>
+<h4 id="регистрация-kyc">Регистрация (KYC)</h4>
+<p>После первичной авторизации проводится трёхшаговая проверка личности:
+1. <strong>Подтверждение личности</strong>: Фамилия, Имя, Отчество,
+серия и номер паспорта, ИНН. Данные подгружаются из подтверждённой
+учётной записи Госуслуг — проверьте их корректность. 2.
+<strong>Контактные данные</strong>: телефон (для SMS-кодов), email,
+регион. 3. <strong>Биометрия</strong>: подтверждение через Единую
+биометрическую систему. Поднесите телефон к лицу или приложите палец к
+датчику отпечатков. Можно пропустить этот шаг и настроить биометрию
+позже из меню «Настройки».</p>
+<h4 id="знакомство-с-возможностями-onboarding">Знакомство с
+возможностями (Onboarding)</h4>
+<p>После регистрации показываются три обучающих экрана: 1. Внесите актив
+в залог — недвижимость, транспорт, ИС, ценные бумаги; имущество остаётся
+у вас. 2. Платформа выпускает ЦФА — под ваш актив; Банк России
+производит целевую эмиссию. 3. Получайте доход — регулярные выплаты; по
+истечении срока обременение снимается.</p>
+<p>Любой шаг можно пропустить, нажав «Пропустить» в правом верхнем
+углу.</p>
+<h3 id="главный-экран">3.2. Главный экран</h3>
+<p>Главный экран содержит: - <strong>Карточка баланса</strong> — общая
+стоимость активов в работе; количество объектов в залоге; доход за
+квартал. - <strong>Быстрые действия</strong>: Подать актив, Мои ЦФА,
+Доходы, Документы. - <strong>Баннер национального проекта</strong> —
+новые программы финансирования. - <strong>Мои активы</strong> — два
+последних актива с возможностью открыть полный список. -
+<strong>Последние операции</strong> — две последние операции с
+возможностью открыть полную историю. - <strong>Нижняя навигация</strong>
+— пять вкладок: Главная, Активы, ЦФА, Доходы, Профиль.</p>
+<h3 id="подача-актива-на-залог">3.3. Подача актива на залог</h3>
+<h4 id="шаг-1.-выбор-типа-имущества">Шаг 1. Выбор типа имущества</h4>
+<p>Доступные категории: - Недвижимость (квартира, дом, апартаменты); -
+Земельный участок; - Транспортное средство; - Интеллектуальная
+собственность; - Ценные бумаги.</p>
+<h4 id="шаг-2.-характеристики">Шаг 2. Характеристики</h4>
+<p>Для недвижимости — введите кадастровый номер. Адрес, площадь, год
+постройки и другие характеристики будут подгружены автоматически из ЕГРН
+через защищённый канал интеграции с Росреестром (218-ФЗ). Также
+прикрепляется документ о праве собственности.</p>
+<h4 id="шаг-3.-заявка-на-оценку">Шаг 3. Заявка на оценку</h4>
+<p>Просмотрите параметры заявки и подтвердите отправку. Оценочная
+компания-партнёр, аккредитованная по 135-ФЗ, проведёт оценку в течение
+24 часов. Стоимость заявки — 0 ₽ (включено в платформенный сервис).</p>
+<h4 id="шаг-4.-результат-оценки">Шаг 4. Результат оценки</h4>
+<p>Получите оценочную стоимость и максимальный размер залогового ЦФА (по
+умолчанию 50% от оценки). Страхование залога включено. Действует 6
+месяцев. Перейдите к смарт-контракту, чтобы выпустить ЦФА.</p>
+<h3 id="настройка-и-подписание-смарт-контракта">3.4. Настройка и
+подписание смарт-контракта</h3>
+<p>На экране смарт-контракта установите: - <strong>Срок ЦФА</strong>:
+12, 36 или 60 месяцев. - <strong>Целевое использование</strong>:
+программа национального или регионального проекта. - <strong>Номинал
+ЦФА</strong>: рассчитывается автоматически как 50% от оценочной
+стоимости.</p>
+<p>Просмотрите расчётные параметры: ставка вознаграждения, доход за весь
+срок, эскроу-агент (Банк России), страхование, регистратор обременения
+(Росреестр).</p>
+<p>Нажмите «Подписать (УКЭП)». На вашу телефонную линию придёт SMS-код.
+Введите 6-значный код или подтвердите биометрией.</p>
+<p>После успешного подписания вы увидите экран «ЦФА успешно выпущен» с
+уникальным идентификатором ЦФА. ЦФА передан в Банк России, обременение
+зарегистрировано в ЕГРН.</p>
+<h3 id="управление-портфелем-цфа">3.5. Управление портфелем ЦФА</h3>
+<p>В разделе «Мои ЦФА» доступен полный список ваших ЦФА с фильтрацией:
+Все, Активные, На выпуске, Завершённые. По каждому ЦФА показаны: - ID
+(уникальный идентификатор); - Номинал; - Связанный актив; - Целевая
+программа; - Срок и ставка вознаграждения; - Статус.</p>
+<p>При клике на ЦФА открывается карточка с детальной информацией:
+условия смарт-контракта, эскроу, выплаты, история. Доступны действия:
+скачать договор, запросить мену ЦФА.</p>
+<h3 id="доходы">3.6. Доходы</h3>
+<p>В разделе «Доходы»: - Карточка баланса доходов: за год, за квартал,
+прогноз годовой. - График помесячных поступлений. - Список выплат с
+привязкой к ЦФА.</p>
+<h3 id="история-операций">3.7. История операций</h3>
+<p>Полный журнал операций с фильтрацией: Все, Выплаты, Выпуск ЦФА, Мена.
+Можно экспортировать в PDF или Excel.</p>
+<h3 id="уведомления">3.8. Уведомления</h3>
+<p>Центр уведомлений содержит: - Системные сообщения о выплатах; -
+Уведомления о новых программах; - Уведомления о результатах оценок; -
+Уведомления о регистрации обременений и других событиях
+смарт-контракта.</p>
+<p>Непрочитанные уведомления помечены точкой акцента. По нажатию на
+колокольчик можно перейти ко всем уведомлениям. По нажатию на иконку «⊘»
+— все уведомления отмечаются прочитанными.</p>
+<h3 id="профиль">3.9. Профиль</h3>
+<p>В разделе «Профиль» доступны: - Личные данные. - Реквизиты для
+выплат. - Мои документы. - Уведомления. - Документы платформы. - Помощь
+и поддержка. - Выход из аккаунта.</p>
+<h3 id="настройки">3.10. Настройки</h3>
+<p>Доступны: - <strong>Язык</strong>: русский (по умолчанию),
+английский, французский, арабский. - <strong>Тема оформления</strong>:
+светлая, тёмная, мягкая, контрастная для слабовидящих. - <strong>Размер
+шрифта</strong>: уменьшить, обычный, увеличить. -
+<strong>Безопасность</strong>: биометрия, PIN-код, двухфакторная
+аутентификация. - <strong>Уведомления</strong>: push-уведомления.</p>
+<h3 id="документы-платформы">3.11. Документы платформы</h3>
+<p>Раздел содержит ссылки на полную документацию проекта ЦП РСФСР: хаб
+документов, большая презентация, малая презентация, веб-сайт,
+юридический фундамент, международная оценка, DD-аудит, экспертное
+заключение.</p>
+<h3 id="поддержка">3.12. Поддержка</h3>
+<p>Доступны: FAQ, чат с оператором, телефон поддержки, форма обратной
+связи.</p>
+<h2 id="сообщения-оператору">4. Сообщения оператору</h2>
+<h3 id="виды-сообщений">4.1. Виды сообщений</h3>
+<ul>
+<li>Push-уведомления — отображаются на главном экране устройства.</li>
+<li>In-app уведомления — отображаются в центре уведомлений.</li>
+<li>Сообщения от Госуслуг — отображаются в стандартном сервисе
+Госуслуг.</li>
+</ul>
+<h3 id="действия-по-сообщениям">4.2. Действия по сообщениям</h3>
+<p>Каждое уведомление содержит призыв к действию (например, «Подтвердить
+выплату», «Запустить выпуск ЦФА»). Перейдите по уведомлению, чтобы
+открыть соответствующий экран.</p>
+<h2 id="сообщения-об-ошибках">5. Сообщения об ошибках</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Код</th>
+<th>Сообщение</th>
+<th>Действие пользователя</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AUTH-01</td>
+<td>Не удалось подтвердить личность через Госуслуги</td>
+<td>Повторите попытку, проверьте доступ к Госуслугам</td>
+</tr>
+<tr>
+<td>AUTH-02</td>
+<td>Биометрия не подтверждена</td>
+<td>Введите код подтверждения или подтвердите через ЕБС</td>
+</tr>
+<tr>
+<td>ASSET-01</td>
+<td>Объект не найден в ЕГРН</td>
+<td>Проверьте корректность кадастрового номера</td>
+</tr>
+<tr>
+<td>ASSET-02</td>
+<td>Объект уже находится в залоге у другой организации</td>
+<td>Снимите предыдущее обременение</td>
+</tr>
+<tr>
+<td>CFA-01</td>
+<td>Не удалось выпустить ЦФА</td>
+<td>Свяжитесь с поддержкой</td>
+</tr>
+<tr>
+<td>NET-01</td>
+<td>Нет соединения с сервером</td>
+<td>Проверьте интернет; данные восстановятся после восстановления
+связи</td>
+</tr>
+<tr>
+<td>SIGN-01</td>
+<td>Электронная подпись отклонена</td>
+<td>Проверьте срок действия сертификата</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Документ соответствует требованиям ГОСТ 19.505-79 «Руководство
+оператора».</em></p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../07_Презентации/Большая_презентация/index.html#hub">К хабу документов</a>
+      <a class="btn btn--ghost" href="../../07_Презентации/Большая_презентация/index.html">Большая презентация</a>
+    </div>
+  </div>
+</main>
+
+<button class="totop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Наверх">↑</button>
+
+<script src="../../_shared/i18n.js"></script>
+<script src="../../_shared/app.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const t = document.querySelector('.totop');
+  if (t) t.classList.toggle('show', window.scrollY > 600);
+});
+</script>
+</body>
+</html>

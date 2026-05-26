@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../../">
+  <title>Description de l'application (RuStore) · ЦПФСР.РФ</title>
+  <meta name="description" content="Description de l'application (RuStore) — Description de l'application (RuStore). ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../../_design-system/print.css">
+
+  <script defer src="../../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../../_design-system/i18n.js"></script>
+  <script defer src="../../../../_design-system/ticker.js"></script>
+  <script defer src="../../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Description de l'application (RuStore)</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Description de l'application (RuStore)</span>
+      <h1>Description de l'application (RuStore)</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1
+id="description-de-lapplication-pour-publication-dans-rustore">Description
+de l’application pour publication dans RuStore</h1>
+<h2
+id="cpfsr-service-russe-de-financement-du-développement-social">CPFSR —
+Service Russe de Financement du Développement Social</h2>
+<blockquote>
+<p><strong>Statut de publication (24.05.2026) :</strong> application
+d’information et de démonstration. L’application <strong>ne fournit pas
+de services financiers soumis à licence</strong> jusqu’à la constitution
+de la personne morale — opérateur du SI AFN — et son inscription au
+registre des opérateurs de la Banque de Russie (779-P). Toutes les
+interfaces, scénarios et chiffres dans l’application sont illustratifs,
+à des fins de familiarisation avec le concept et de collecte de
+feedback. L’opérateur ne fait aucune promesse de revenus, versements ou
+émission par la Banque de Russie avant obtention de la licence.</p>
+</blockquote>
+<hr />
+<h2 id="informations-de-base">Informations de base</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Champ</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nom</td>
+<td>CPFSR</td>
+</tr>
+<tr>
+<td>Sous-titre</td>
+<td>Service d’information sur le concept d’émission d’AFN ciblés</td>
+</tr>
+<tr>
+<td>Catégorie</td>
+<td>Business / Éducation</td>
+</tr>
+<tr>
+<td>Sous-catégorie</td>
+<td>Services d’information</td>
+</tr>
+<tr>
+<td>Catégorie d’âge</td>
+<td>12+</td>
+</tr>
+<tr>
+<td>Prix</td>
+<td>Gratuit</td>
+</tr>
+<tr>
+<td>Abonnement payant</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>Publicité</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>Achats internes</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>Langue d’interface</td>
+<td>Russe, anglais, français, arabe</td>
+</tr>
+<tr>
+<td>Taille</td>
+<td>jusqu’à 30 Mo</td>
+</tr>
+<tr>
+<td>Version Android minimale</td>
+<td>9.0 (API 28)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2
+id="description-brève-pour-le-catalogue-jusquà-80-caractères">Description
+brève (pour le catalogue, jusqu’à 80 caractères)</h2>
+<blockquote>
+<p>Service d’information sur le concept d’émission d’AFN ciblés contre
+garantie immobilière (démo)</p>
+</blockquote>
+<h2 id="description-complète-jusquà-4-000-caractères">Description
+complète (jusqu’à 4 000 caractères)</h2>
+<p><strong>CPFSR</strong> est une application mobile d’information de la
+Plateforme numérique « Service Russe de Financement du Développement
+Social ». L’application introduit le concept de fonctionnement du futur
+opérateur d’émission d’actifs financiers numériques ciblés contre
+garantie immobilière et collecte le retour de la communauté sur les
+scénarios d’utilisation.</p>
+<h3 id="à-quoi-est-consacrée-lapplication">À quoi est consacrée
+l’application</h3>
+<p>L’application explique comment, selon le concept de l’auteur
+(certificat de dépôt N° 4011265 du 19.12.2024), peut être organisée la
+plateforme d’émission d’AFN ciblés contre garantie immobilière des
+citoyens et organisations. Un opérateur entièrement fonctionnel ne peut
+être lancé qu’après : - constitution d’une personne morale corporative
+sous forme de société par actions non publique (art. 5 de FZ-259) ; -
+inscription de cette personne au registre des opérateurs SI AFN de la
+Banque de Russie (Règlement 779-P) ; - enregistrement en tant
+qu’opérateur de DCP auprès de Roskomnadzor (art. 22 de FZ-152) ; -
+enregistrement auprès de Rosfinmonitoring (règles de contrôle interne
+selon FZ-115) ; - obtention des approbations correspondantes du FSTEC /
+FSB.</p>
+<p>Jusqu’à l’achèvement de ces étapes, l’application fonctionne
+exclusivement comme un service d’information et de démonstration.</p>
+<h3 id="concept-de-fonctionnement-en-mode-démo">Concept de
+fonctionnement (en mode démo)</h3>
+<p>Dans le concept, le propriétaire dépose un objet lui appartenant
+(appartement, maison, parcelle de terrain, transport, propriété
+intellectuelle, valeurs mobilières) en garantie. Le bien <strong>reste
+dans la propriété</strong> du titulaire — seule une charge temporaire en
+faveur de la plateforme y est imposée.</p>
+<p>La plateforme émet, sur la base de l’actif, un actif financier
+numérique ciblé (AFN). À l’horizon de l’adoption du paquet de lois
+fédérales correspondantes (T+36 … T+60 mois), un financement ciblé via
+le canal d’infrastructure VEB.RF / Trésor avec la participation de la
+Banque de Russie en tant que régulateur de supervision est prévu pour le
+pool d’AFN ciblés. Jusqu’à l’adoption du paquet d’actes normatifs,
+l’opérateur travaille en mode pilote-light sous le FZ-259 en vigueur —
+sans financement ciblé et sans opérations exigeant des amendements au
+FZ-86.</p>
+<p>Dans le concept, le propriétaire de l’actif perçoit une rémunération
+régulière pendant toute la durée d’utilisation de l’AFN en tant
+qu’instrument de garantie. À l’expiration du terme, la charge est levée
+et le bien est restitué à la pleine disposition.</p>
+<h3 id="ce-quil-y-a-dans-lapplication-mode-démo">Ce qu’il y a dans
+l’application (mode démo)</h3>
+<p>— Consultation de l’architecture du futur service et des scénarios
+d’utilisation. — Autorisation émulée via Gosuslugi (ESIA) pour le test
+des scénarios — les identifiants de l’utilisateur ne sont pas transmis
+ni conservés. — Pages démo de soumission d’actif avec chargement
+automatique de données illustratives (pas issues d’EGRN réel). — Pages
+démo de demande d’évaluation à une société d’évaluation agréée. —
+Illustration du contrat intelligent en fonctionnement. — Démonstration
+de la vue « portefeuille » — sur des données illustratives. —
+Illustration des attestations fiscales.</p>
+<h3 id="sécurité">Sécurité</h3>
+<p>L’architecture est conforme aux exigences strictes des régulateurs
+russes : — Catégorie de l’objet d’infrastructure d’information critique
+— 1ʳᵉ (la plus élevée) après catégorisation. — Niveau de protection au
+titre de GOST R 57580.1 — 4ᵉ (maximum). — Niveau de sécurité des données
+personnelles — UZ-1. — Cryptographie : GOST R 34.10-2012, GOST R
+34.11-2012, GOST R 34.12-2015. — Conformité à FZ-152 (protection des
+DCP), FZ-187 (IIC), FZ-115 (LAB/CFT).</p>
+<p>En mode démo, les données personnelles réelles des utilisateurs ne
+sont pas collectées.</p>
+<h3 id="base-juridique-du-concept">Base juridique du concept</h3>
+<p>Le concept est construit en référence à : — Loi fédérale du
+31.07.2020 N° 259-FZ « Sur les actifs financiers numériques »
+(réglementation actuelle en vigueur). — Loi fédérale du 10.07.2002 N°
+86-FZ « Sur la Banque centrale de la Fédération de Russie » (paquet
+d’amendements à horizon T+36 … T+60 mois). — Loi fédérale du 24.07.2023
+N° 340-FZ (rouble numérique). — Règlements de la Banque de Russie N°
+779-P, N° 683-P, N° 716-P, N° 499-P.</p>
+<p>Toutes les formulations relatives au financement ciblé via la Banque
+de Russie se réfèrent correctement au <strong>futur régime
+juridique</strong> exigeant l’adoption d’un paquet de lois fédérales.
+Jusqu’à l’adoption des actes normatifs correspondants, les fonctions
+concernées dans l’application sont présentées exclusivement à titre
+illustratif.</p>
+<h3 id="multilinguisme">Multilinguisme</h3>
+<p>Localisation complète en russe, anglais, français et arabe (avec
+prise en charge RTL).</p>
+<h3 id="accessibilité">Accessibilité</h3>
+<p>WCAG 2.2 niveau AA, prise en charge des lecteurs d’écran (VoiceOver,
+TalkBack), mise à l’échelle de la police, thème contrasté.</p>
+<h3 id="droits-dauteur">Droits d’auteur</h3>
+<p>Le concept et l’architecture sont protégés par le certificat de dépôt
+N° 4011265 du 19.12.2024 (ireg.pro) — fixation de la date de priorité et
+de l’empreinte de l’œuvre ; régime de protection — savoir-faire (art.
+1465 du Code civil) et programme pour ordinateur (art. 1262 du Code
+civil, enregistrement à Rospatent — en cours). Auteur et titulaire des
+droits — Abdul-Khakim Akhmadovitch Kagirov.</p>
+<hr />
+<h2 id="mots-clés-jusquà-100-caractères">Mots-clés (jusqu’à 100
+caractères)</h2>
+<p>Concept AFN, démo, gage, financement d’infrastructure, projets
+nationaux, FZ-259, service d’information</p>
+<hr />
+<h2 id="quoi-de-neuf-pour-la-première-release">Quoi de neuf (pour la
+première release)</h2>
+<p>— Première release d’information-démonstration de l’application. — 23
+écrans de scénarios du futur opérateur (données démo). — Prise en charge
+de 4 types de biens en garantie (illustratif). — 4 thèmes, 4 langues. —
+Autorisation biométrique (uniquement pour le test des scénarios, sans
+transmission de données à EBS). — Mode hors ligne pour la consultation
+des données démo mises en cache.</p>
+<hr />
+<h2 id="coordonnées-du-développeur">Coordonnées du développeur</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Champ</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nom du développeur (titulaire actuel du savoir-faire ; transfert
+vers la SA opérateur en préparation)</td>
+<td>Abdul-Khakim Akhmadovitch Kagirov</td>
+</tr>
+<tr>
+<td>Site</td>
+<td>https://dp-rsfsr.ru</td>
+</tr>
+<tr>
+<td>E-mail de support</td>
+<td>support@dp-rsfsr.ru</td>
+</tr>
+<tr>
+<td>E-mail juridique</td>
+<td>legal@dp-rsfsr.ru</td>
+</tr>
+<tr>
+<td>E-mail DCP</td>
+<td>privacy@dp-rsfsr.ru</td>
+</tr>
+<tr>
+<td>Politique de confidentialité</td>
+<td>https://dp-rsfsr.ru/privacy</td>
+</tr>
+<tr>
+<td>Conditions d’utilisation</td>
+<td>https://dp-rsfsr.ru/terms</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="limites-et-réserves">Limites et réserves</h2>
+<p>— L’application est un <strong>service d’information et de
+démonstration</strong>, ne fournit pas de services financiers soumis à
+licence. — Soumission d’actif, demande d’évaluation, contrat
+intelligent, versements — illustratifs, n’entraînent pas d’actions
+juridiquement significatives. — Autorisation via ESIA — en mode démo
+sans transmission au contour réel de Gosuslugi. — Confirmation
+biométrique (EBS) — fonction illustrative ; la biométrie réelle n’est
+pas collectée et n’est pas transmise à EBS. — Aucune promesse de
+revenus, versements, rendement ou émission par la Banque de Russie n’est
+faite dans l’application. — L’AFN n’est pas une cryptomonnaie.
+L’application n’a aucun rapport avec des monnaies numériques non
+garanties.</p>
+<blockquote>
+<p><strong>Disclaimer sur le statut juridique (24.05.2026) :</strong>
+l’application est en mode de démonstration du concept jusqu’à
+l’achèvement de la constitution de l’opérateur-personne morale
+corporative et son inscription au registre des opérateurs SI AFN de la
+Banque de Russie (779-P). Jusqu’à ce moment, l’application ne fournit
+pas de services financiers et n’opère pas avec des AFN réels ; tous les
+chiffres et scénarios sont illustratifs. Aucune publicité d’activité
+financière soumise à licence.</p>
+</blockquote>
+</article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

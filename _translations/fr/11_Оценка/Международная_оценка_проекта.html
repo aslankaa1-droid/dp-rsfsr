@@ -1,0 +1,1278 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../">
+  <title>Évaluation internationale · ЦПФСР.РФ</title>
+  <meta name="description" content="Évaluation internationale — Évaluation. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../_design-system/print.css">
+
+  <script defer src="../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../_design-system/i18n.js"></script>
+  <script defer src="../../../_design-system/ticker.js"></script>
+  <script defer src="../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Évaluation</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Évaluation</span>
+      <h1>Évaluation internationale</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="évaluation-internationale-du-projet-cpfsr">Évaluation
+internationale du projet CPFSR</h1>
+<p><strong>Objet évalué :</strong> Plateforme numérique « Service russe
+de financement du développement social » — système d’information
+d’émission de DFA ciblés (opérateur 779-P) avec circuit horizon de
+financement ciblé via l’infrastructure institutionnelle de VEB.RF /
+Trésor fédéral, la BCR agissant comme régulateur prudentiel. Inclut une
+application mobile pleinement développée, la documentation de conception
+GOST 19, les builds plateforme Android / iOS / Windows et un pack de
+publication RuStore. <strong>Titulaire des droits de savoir-faire
+:</strong> Abdoul-Khakim Akhmadovitch Kaguirov. Certificat de dépôt n°
+4011265 du 19.12.2024 — fixation de la date de priorité et du hachage de
+l’œuvre ; régime de protection : savoir-faire (art. 1465 CC) + logiciel
+(art. 1262 CC, enregistrement Rospatent en cours). <strong>Date
+d’évaluation :</strong> 24.05.2026 (à des fins de négociation —
+pre-money, au stade « MVP + partie client finalisée » ; refactor complet
+après l’audit consolidé du 24.05.2026). <strong>Standards d’évaluation
+:</strong> IVS 2022 (International Valuation Standards), ASA Business
+Valuation Standards, IFRS 13 (Évaluation à la juste valeur), 135-FZ
+(pour usage en Fédération de Russie). <strong>Approche :</strong>
+triangulation de quatre méthodes indépendantes, réconciliation pondérée
+et décote unique (mono-étape). <strong>Source des paramètres de marché
+:</strong> <code>_Мастер/Единые_показатели_v2.md</code> (taux directeur
+BCR 21 %, FX 89,0 ₽/$, ERP RF 9 %) — Source of Truth unique pour tous
+les documents du projet.</p>
+<hr />
+<h2 id="résumé-de-lévaluation">1. Résumé de l’évaluation</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr>
+<th>Méthode</th>
+<th style="text-align: right;">Pre-money, USD</th>
+<th style="text-align: right;">Pre-money, RUB</th>
+<th style="text-align: right;">Poids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DCF (approche par les revenus, TV
+multi-phases)</strong></td>
+<td style="text-align: right;">240 M $</td>
+<td style="text-align: right;">21,4 Md ₽</td>
+<td style="text-align: right;">35 %</td>
+</tr>
+<tr>
+<td><strong>Multiples comparables</strong></td>
+<td style="text-align: right;">380 M $</td>
+<td style="text-align: right;">33,8 Md ₽</td>
+<td style="text-align: right;">30 %</td>
+</tr>
+<tr>
+<td><strong>Berkus / Risk-Adjusted</strong></td>
+<td style="text-align: right;">35 M $</td>
+<td style="text-align: right;">3,1 Md ₽</td>
+<td style="text-align: right;">25 %</td>
+</tr>
+<tr>
+<td><strong>Actifs / Coût de remplacement</strong></td>
+<td style="text-align: right;">18 M $</td>
+<td style="text-align: right;">1,6 Md ₽</td>
+<td style="text-align: right;">10 %</td>
+</tr>
+<tr>
+<td><strong>Reasoned Value (décote mono-étape)</strong></td>
+<td style="text-align: right;"><strong>60–115 M $</strong></td>
+<td style="text-align: right;"><strong>5,3–10,2 Md ₽</strong></td>
+<td style="text-align: right;">—</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Changements par rapport à l’édition précédente (à l’issue de
+l’audit consolidé du 24.05.2026) :</strong> - Suppression du
+double-discount 0,2295 — application d’une décote unique de 60 %
+par-dessus l’EV pondéré. - DCF abaissé de 540 M $ à 240 M $ après : (a)
+relèvement du CMPC de 21,5 % à 30 % (ERP Damodaran RF actualisé + base
+purement RUB-denominated, sans double-counting de CRP) ; (b)
+remplacement de la TV de Gordon par une TV multi-phases ; (c) ramener la
+marge EBITDA à 74,8 % en phase mature au lieu de 96,9 %. - Multiples
+abaissés de 460 M $ à 380 M $ — comparables révisés à la lumière de la
+correction actuelle des multiples sur le marché DFA 2026. - Berkus
+relevé de 27 M $ à 35 M $ — le facteur « Product rollout » obtient des
+points supplémentaires grâce au pack de builds complet et au matériel de
+publication. - Asset relevé de 14 M $ à 18 M $ — la documentation de
+conception et les builds sont intégrés à la valeur de remplacement. - La
+fourchette Reasoned Value reste 60–115 M $.</p>
+</blockquote>
+<p><strong>Position de négociation cible (cas Base, post-refactor)
+:</strong> - Pre-money — <strong>80 M $ (7,12 Md ₽)</strong>. -
+Post-money — <strong>95 M $ (8,46 Md ₽)</strong> avec un tour initial de
+<strong>15 M $ (1,335 Md ₽)</strong>. - Part de l’investisseur —
+<strong>15,8 %</strong>. - FX figé au 24.05.2026 : <strong>89,0
+₽/$</strong>.</p>
+<hr />
+<h2 id="méthodologie-dcf-approche-par-les-revenus">2. Méthodologie DCF
+(approche par les revenus)</h2>
+<h3 id="source-des-flux-de-trésorerie">2.1. Source des flux de
+trésorerie</h3>
+<p>Les flux de trésorerie de l’exploitation de la plateforme sur
+l’horizon 2025–2034 proviennent du modèle financier après le refactor de
+la courbe OpEx (<code>03_Финансовая_модель</code>).</p>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>Année</th>
+<th style="text-align: right;">Revenu, Md ₽</th>
+<th style="text-align: right;">OpEx, Md ₽</th>
+<th style="text-align: right;">EBITDA, Md ₽</th>
+<th style="text-align: right;">Marge EBITDA</th>
+<th style="text-align: right;">CapEx, Md ₽</th>
+<th style="text-align: right;">FCF, Md ₽</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025</td>
+<td style="text-align: right;">0,00</td>
+<td style="text-align: right;">0,72</td>
+<td style="text-align: right;">-0,72</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">0,30</td>
+<td style="text-align: right;">-1,02</td>
+</tr>
+<tr>
+<td>2026</td>
+<td style="text-align: right;">0,18</td>
+<td style="text-align: right;">0,82</td>
+<td style="text-align: right;">-0,64</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">0,42</td>
+<td style="text-align: right;">-1,06</td>
+</tr>
+<tr>
+<td>2027</td>
+<td style="text-align: right;">2,80</td>
+<td style="text-align: right;">1,46</td>
+<td style="text-align: right;">1,34</td>
+<td style="text-align: right;">47,9 %</td>
+<td style="text-align: right;">0,40</td>
+<td style="text-align: right;">0,72</td>
+</tr>
+<tr>
+<td>2028</td>
+<td style="text-align: right;">11,10</td>
+<td style="text-align: right;">3,80</td>
+<td style="text-align: right;">7,30</td>
+<td style="text-align: right;">65,8 %</td>
+<td style="text-align: right;">0,55</td>
+<td style="text-align: right;">5,68</td>
+</tr>
+<tr>
+<td>2029</td>
+<td style="text-align: right;">37,50</td>
+<td style="text-align: right;">11,75</td>
+<td style="text-align: right;">25,75</td>
+<td style="text-align: right;">68,7 %</td>
+<td style="text-align: right;">1,80</td>
+<td style="text-align: right;">19,28</td>
+</tr>
+<tr>
+<td>2030</td>
+<td style="text-align: right;">65,00</td>
+<td style="text-align: right;">19,30</td>
+<td style="text-align: right;">45,70</td>
+<td style="text-align: right;">70,3 %</td>
+<td style="text-align: right;">2,40</td>
+<td style="text-align: right;">35,02</td>
+</tr>
+<tr>
+<td>2031</td>
+<td style="text-align: right;">91,30</td>
+<td style="text-align: right;">26,40</td>
+<td style="text-align: right;">64,90</td>
+<td style="text-align: right;">71,1 %</td>
+<td style="text-align: right;">1,60</td>
+<td style="text-align: right;">50,80</td>
+</tr>
+<tr>
+<td>2032</td>
+<td style="text-align: right;">110,40</td>
+<td style="text-align: right;">30,80</td>
+<td style="text-align: right;">79,60</td>
+<td style="text-align: right;">72,1 %</td>
+<td style="text-align: right;">1,80</td>
+<td style="text-align: right;">62,50</td>
+</tr>
+<tr>
+<td>2033</td>
+<td style="text-align: right;">125,80</td>
+<td style="text-align: right;">33,90</td>
+<td style="text-align: right;">91,90</td>
+<td style="text-align: right;">73,1 %</td>
+<td style="text-align: right;">2,30</td>
+<td style="text-align: right;">71,80</td>
+</tr>
+<tr>
+<td>2034</td>
+<td style="text-align: right;">137,90</td>
+<td style="text-align: right;">34,80</td>
+<td style="text-align: right;">103,10</td>
+<td style="text-align: right;">74,8 %</td>
+<td style="text-align: right;">2,00</td>
+<td style="text-align: right;">81,30</td>
+</tr>
+<tr>
+<td><strong>Somme FCF 2025–2034</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>325,02</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Changements de la courbe OpEx (par rapport au modèle
+pré-refactor) :</strong> - +30 % bloc compliance (croissance des
+exigences 779-P, AML/KYC). - +25 % cybersécurité (KII-1, SOC 24/7,
+pentests, rotation des clés). - +40 % bloc juridique (pack contractuel,
+support réglementaire, PI). - Bloc « évaluateurs et assureurs »
+introduit — 0,8 % du volume d’émission DFA.</p>
+<p>La marge EBITDA en phase mature converge vers <strong>74,8 %</strong>
+(post-refactor, remplaçant les 96,9 % irréalistes précédents) — dans la
+fourchette des opérateurs fintech tier-1 (Visa 67 %, Bourse de Moscou 75
+%, dépositaires 50–65 %).</p>
+<h3 id="taux-dactualisation-cmpc">2.2. Taux d’actualisation (CMPC)</h3>
+<p><strong>Ajustement par l’audit :</strong> suppression du
+double-counting (CRP inutile en RUB-denominated RF) ; ERP relevé de 6 %
+à 9 % (Damodaran mai 2026) ; β fixé à 1,15 (Damodaran fintech).</p>
+<table>
+<thead>
+<tr>
+<th>Composante</th>
+<th style="text-align: right;">Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Risk-free rate (OFZ 10 ans, RUB, 24.05.2026)</td>
+<td style="text-align: right;">15,5 %</td>
+</tr>
+<tr>
+<td>ERP × β (RF mai 2026, β 1,15)</td>
+<td style="text-align: right;">9,0 % × 1,15 = 10,35 %</td>
+</tr>
+<tr>
+<td>Stage premium (MVP prêt)</td>
+<td style="text-align: right;">1,5 %</td>
+</tr>
+<tr>
+<td>Liquidity premium</td>
+<td style="text-align: right;">2,5 %</td>
+</tr>
+<tr>
+<td><strong>CMPC (RUB) — total</strong></td>
+<td style="text-align: right;"><strong>29,85 % → 30 %</strong></td>
+</tr>
+</tbody>
+</table>
+<p>CMPC alternatif via comparables globaux (USD-denominated) : 16,75 %.
+Le DCF utilise le CMPC RUB de 30 %.</p>
+<h3 id="valeur-terminale-multi-phases">2.3. Valeur terminale
+multi-phases</h3>
+<p><strong>Remplacement de la TV de Gordon par un modèle à 3
+phases</strong> (selon point d’audit C4) :</p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Années</th>
+<th style="text-align: right;">Taux de croissance g</th>
+<th style="text-align: right;">Marge EBITDA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Étape I — maturité</td>
+<td>2035–2039</td>
+<td style="text-align: right;">6 % → 4 %</td>
+<td style="text-align: right;">75 % → 70 %</td>
+</tr>
+<tr>
+<td>Étape II — stabilité</td>
+<td>2040–2044</td>
+<td style="text-align: right;">3,5 % → 2,5 %</td>
+<td style="text-align: right;">70 % → 65 %</td>
+</tr>
+<tr>
+<td>Étape III — perpétuité</td>
+<td>2045+</td>
+<td style="text-align: right;">2,0 % (= ½ de la cible BCR)</td>
+<td style="text-align: right;">60 %</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>TV₂₀₄₅ (perpétuité) = FCF₂₀₄₅ × 0,60 / (0,30 − 0,02) = 72,6 / 0,28 =
+259,3 Md ₽.</li>
+<li>Actualisée à 2025 (20 ans, facteur 0,00521) : <strong>≈ 1,35 Md
+₽</strong>.</li>
+<li>Somme des FCF actualisés Phase I+II (2035–2044) : ≈ 7,4 Md ₽.</li>
+<li><strong>Part de la TV dans la VAN totale = 1,4 %</strong> (contre 49
+% auparavant — le seuil critique est levé).</li>
+</ul>
+<h3 id="résultat-dcf-synchronisé-avec-sot-v3-du-modèle-financier">2.4.
+Résultat DCF (synchronisé avec SoT v3 du Modèle financier)</h3>
+<table>
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr>
+<th>Composante</th>
+<th style="text-align: right;">Md ₽</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Somme des FCF actualisés (2025–2034, CMPC 30 %)</td>
+<td style="text-align: right;">41,8</td>
+</tr>
+<tr>
+<td>TV multi-phases actualisée (Phases I+II 2035–2044 + perpétuité
+2045+)</td>
+<td style="text-align: right;">1,96</td>
+</tr>
+<tr>
+<td>Effet du passage des phases et stabilisation EBITDA (74,8 % → 65
+%)</td>
+<td style="text-align: right;">7,44</td>
+</tr>
+<tr>
+<td><strong>Enterprise Value (DCF) — base défendable</strong></td>
+<td style="text-align: right;"><strong>51,2</strong></td>
+</tr>
+<tr>
+<td>Évaluation défendable alternative avec TV étendue (g = 4 %, EBITDA
+70 %)</td>
+<td style="text-align: right;">63,38</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Toutes les composantes sont alignées sur
+<code>_Мастер/Единые_показатели_v2.md</code> (SoT v3, version du
+24.05.2026). Le facteur d’actualisation 2034 à CMPC 30 % est ≈ 0,094 ;
+l’effet intégral sur les FCF sur 10 ans est de 41,8 Md ₽.</p>
+</blockquote>
+<h3 id="pre-money-dcf-sot-v3">2.5. Pre-money DCF (SoT v3)</h3>
+<p>Au stade « MVP + partie client finalisée », application d’une
+<strong>décote unique de 60 %</strong> (sans double-counting) : - risque
+réglementaire (binarité des amendements à 86-FZ — atténué dans la
+construction wedge Étape 1 via Atomyze / VEB.RF) ; - risque d’exécution
+réduit ; risque technologique de la partie client — éliminé (application
+prête) ; - composante exit-discount incluse.</p>
+<p><strong>DCF pre-money = 51,2 Md ₽ × 0,40 (1 − décote 60 %) + uplift
+MVP prêt ≈ 21,4 Md ₽ ≈ 240 M $.</strong> (Borne haute défendable avec la
+TV étendue : 280 M $.)</p>
+<hr />
+<h2 id="multiples-comparables-approche-par-le-marché">3. Multiples
+comparables (approche par le marché)</h2>
+<h3 id="sociétés-et-opérations-comparables-2026">3.1. Sociétés et
+opérations comparables (2026)</h3>
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr>
+<th>Société / opération</th>
+<th>Segment</th>
+<th>Stade</th>
+<th style="text-align: right;">EV, M $</th>
+<th style="text-align: right;">Revenu, M $</th>
+<th style="text-align: right;">EV/Revenue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Securitize (tokenisation RWA, US)</td>
+<td>RWA</td>
+<td>Série C</td>
+<td style="text-align: right;">980</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">16,3×</td>
+</tr>
+<tr>
+<td>Polymath / Tokeny</td>
+<td>Security Tokens</td>
+<td>Late-stage</td>
+<td style="text-align: right;">280</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">15,6×</td>
+</tr>
+<tr>
+<td>HQLAx (collateral DLT)</td>
+<td>DLT-collateral</td>
+<td>Late-stage</td>
+<td style="text-align: right;">180</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">12,9×</td>
+</tr>
+<tr>
+<td>Atomyze (RU)</td>
+<td>Opérateur DFA</td>
+<td>Série A</td>
+<td style="text-align: right;">~85</td>
+<td style="text-align: right;">~6</td>
+<td style="text-align: right;">14,2×</td>
+</tr>
+<tr>
+<td>Sber CFA (estimation experte)</td>
+<td>Opérateur DFA</td>
+<td>Mature</td>
+<td style="text-align: right;">~230</td>
+<td style="text-align: right;">~22</td>
+<td style="text-align: right;">10,5×</td>
+</tr>
+<tr>
+<td><strong>Médiane 2026</strong></td>
+<td></td>
+<td></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>14,2×</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="application-du-multiple">3.2. Application du multiple</h3>
+<ul>
+<li>Revenu cible année 5 (2029) — 421 M $ (37,5 Md ₽ au FX 89,0).</li>
+<li>EV/Revenue 5Y = 14,2× × 421 M $ = 5,98 Md $.</li>
+<li>Décote vers le pre-money (5 ans, CMPC 30 %) = 1 / 1,30⁵ ≈ 27 %.</li>
+<li>Pre-money par Multiples = 5,98 Md $ × 0,27 ≈ 1,61 Md $.</li>
+</ul>
+<p>Avec la décote early-stage « MVP + partie client finalisée » (76 %) :
+<strong>Pre-money par Comparable Multiples ≈ 380 M $ (33,8 Md
+₽).</strong></p>
+<hr />
+<h2 id="méthode-berkus-risk-adjusted">4. Méthode Berkus /
+Risk-Adjusted</h2>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 28%" />
+<col style="width: 28%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr>
+<th>Facteur</th>
+<th style="text-align: right;">Maximum</th>
+<th style="text-align: right;">Note actuelle</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sound idea</td>
+<td style="text-align: right;">0,5 M $</td>
+<td style="text-align: right;">0,5 M $</td>
+<td>Concept unique, déposé.</td>
+</tr>
+<tr>
+<td>Prototype</td>
+<td style="text-align: right;">0,5 M $</td>
+<td style="text-align: right;">0,5 M $</td>
+<td>PWA totalement prête, 23 écrans, SW offline, manifest,
+screenshots.</td>
+</tr>
+<tr>
+<td>Quality management team</td>
+<td style="text-align: right;">0,5 M $</td>
+<td style="text-align: right;">0,35 M $</td>
+<td>Auteur + équipe initiale ; recrutement industriel à venir.</td>
+</tr>
+<tr>
+<td>Strategic relationships</td>
+<td style="text-align: right;">0,5 M $</td>
+<td style="text-align: right;">0,4 M $</td>
+<td>Intention de travailler avec ministère du Développement économique /
+Finances / VEB.RF / BCR.</td>
+</tr>
+<tr>
+<td>Product rollout or sales</td>
+<td style="text-align: right;">0,5 M $</td>
+<td style="text-align: right;">0,3 M $</td>
+<td>Pack prêt pour soumission RuStore + builds Capacitor.</td>
+</tr>
+<tr>
+<td><strong>Total Berkus</strong></td>
+<td style="text-align: right;">2,5 M $</td>
+<td style="text-align: right;"><strong>2,05 M $</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Compte tenu de l’échelle russe, du caractère étatique et de la
+pilot-light readiness (wedge dans le 259-FZ existant), un coefficient
+Risk-Adjusted Berkus <strong>×17</strong> est appliqué : <strong>Berkus
+pre-money = 35 M $ (≈ 3,1 Md ₽).</strong></p>
+<hr />
+<h2 id="actifs-coût-de-remplacement">5. Actifs / Coût de
+remplacement</h2>
+<h3 id="coût-total-de-reproduction">5.1. Coût total de reproduction</h3>
+<table>
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr>
+<th>Section</th>
+<th style="text-align: right;">M ₽</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Partie serveur (développement, licences, certification FSTEC/FSB,
+support juridique, OpEx 18 mois)</td>
+<td style="text-align: right;">645</td>
+</tr>
+<tr>
+<td>Partie client PWA + builds Capacitor + localisation 4 langues</td>
+<td style="text-align: right;">68</td>
+</tr>
+<tr>
+<td>Documentation de conception GOST 19 (13 documents)</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td>Pack publication RuStore + promo + screenshots + feature
+graphic</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td>Matériel marketing (grande présentation, compacte, site, brochure,
+pitch deck, note)</td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr>
+<td>Branding (charte graphique, design system, logos, design
+tokens)</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr>
+<td>Évaluation, audit DD, avis d’expert, audit consolidé</td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr>
+<td>Modèle financier, plan d’affaires, document wedge</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr>
+<td>Cadre juridique + projet de statuts JSC opérateur</td>
+<td style="text-align: right;">18</td>
+</tr>
+<tr>
+<td><strong>Total reproduction (hors PI)</strong></td>
+<td style="text-align: right;"><strong>815</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="prime-pour-pi-protégée">5.2. Prime pour PI protégée</h3>
+<p>Le dépôt n° 4011265 fixe la date de priorité et le hachage de
+l’œuvre. Le concept est protégé en savoir-faire (art. 1465 CC) et
+logiciel (art. 1262 CC, enregistrement Rospatent — en cours sur quatre
+composantes). Coefficient de 1,75 :</p>
+<p><strong>Pre-money basé sur les actifs ≈ 815 M ₽ × 1,75 / 89,0 = 16 M
+$, arrondi à 18 M $.</strong></p>
+<p>L’approche par les coûts fournit la borne basse de la zone de
+négociation.</p>
+<hr />
+<h2 id="triangulation-et-reasoned-value-décote-mono-étape">6.
+Triangulation et Reasoned Value (décote mono-étape)</h2>
+<h3 id="calcul-sans-double-counting">6.1. Calcul sans
+double-counting</h3>
+<p>Le double-discount précédent de 0,2295 (décote stage appliquée dans
+le DCF et au-dessus de la réconciliation) est levé. Nouvelle logique —
+décote stage unique au-dessus de l’EV pondéré.</p>
+<table>
+<thead>
+<tr>
+<th>Méthode</th>
+<th style="text-align: right;">Pre-money, M $</th>
+<th style="text-align: right;">Poids</th>
+<th style="text-align: right;">Contribution, M $</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DCF</td>
+<td style="text-align: right;">240</td>
+<td style="text-align: right;">35 %</td>
+<td style="text-align: right;">84</td>
+</tr>
+<tr>
+<td>Multiples</td>
+<td style="text-align: right;">380</td>
+<td style="text-align: right;">30 %</td>
+<td style="text-align: right;">114</td>
+</tr>
+<tr>
+<td>Berkus</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">25 %</td>
+<td style="text-align: right;">8,75</td>
+</tr>
+<tr>
+<td>Asset</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">10 %</td>
+<td style="text-align: right;">1,8</td>
+</tr>
+<tr>
+<td><strong>EV pondéré</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>≈ 208,55</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="décote-stage-unique-par-dessus-la-réconciliation">6.2. Décote
+stage (unique, par-dessus la réconciliation)</h3>
+<p>Compte tenu du stade « MVP + partie client finalisée » et du risque
+réglementaire binaire, une décote stage unique de <strong>60 %</strong>
+est retenue : - risque réglementaire (amendements à 86-FZ, T+24 à T+36
+mois) ; - exit-discount ; - risque de dilution early-stage.</p>
+<p><strong>Reasoned Value pre-money = 208,55 M $ × 0,40 ≈ 83,4 M $ →
+arrondi au Base 80 M $.</strong></p>
+<h3 id="zone-de-négociation">6.3. Zone de négociation</h3>
+<ul>
+<li><strong>Borne basse (minimum rationnel) :</strong> 60 M $ (5,34 Md
+₽).</li>
+<li><strong>Reasoned base :</strong> 80 M $ (7,12 Md ₽).</li>
+<li><strong>Borne haute (position ambitieuse) :</strong> 115 M $ (10,24
+Md ₽).</li>
+</ul>
+<hr />
+<h2 id="scénarios-pondérés-et-espérance-sot-v3">7. Scénarios pondérés et
+Espérance (SoT v3)</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scénario</th>
+<th style="text-align: right;">Probabilité</th>
+<th style="text-align: right;">Pre-money M $</th>
+<th style="text-align: right;">VAN Md ₽</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Optimiste (paquet législatif T+24, part 25 %)</td>
+<td style="text-align: right;">30 %</td>
+<td style="text-align: right;">115</td>
+<td style="text-align: right;">82</td>
+</tr>
+<tr>
+<td>Base (paquet T+36, part 18 %, wedge-pilot)</td>
+<td style="text-align: right;">55 %</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;"><strong>51,2</strong></td>
+</tr>
+<tr>
+<td>Conservateur (259-FZ uniquement, part 7 %, sans amendement)</td>
+<td style="text-align: right;">15 %</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr>
+<td><strong>Espérance</strong></td>
+<td style="text-align: right;">100 %</td>
+<td style="text-align: right;"><strong>88 M $</strong></td>
+<td style="text-align: right;"><strong>55,8 Md ₽</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>VAN synchronisées avec <code>_Мастер/Единые_показатели_v2.md</code>
+(SoT v3) : CMPC 30 %, TV multi-phases, VAN Base totale 51,2 Md ₽ (= VAN
+hors TV 41,8 + TV multi-phases actualisée 1,96 + périodes
+supplémentaires des phases de stabilisation). Référence défendable VAN
+Base ≤ 63,38 Md ₽ (avec une TV au sens large).</p>
+</blockquote>
+<p>Reasoned Base 80 M $ &lt; Espérance 88 M $ — fournit une borne basse
+défendable pour la négociation.</p>
+<hr />
+<h2 id="analyse-de-sensibilité-étendue">8. Analyse de sensibilité
+étendue</h2>
+<h3 id="au-cmpc-dcf">8.1. Au CMPC (DCF)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">CMPC</th>
+<th style="text-align: right;">Pre-money DCF, M $</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">25 %</td>
+<td style="text-align: right;">340</td>
+</tr>
+<tr>
+<td style="text-align: right;">28 %</td>
+<td style="text-align: right;">285</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>30 % (base)</strong></td>
+<td style="text-align: right;"><strong>240</strong></td>
+</tr>
+<tr>
+<td style="text-align: right;">32 %</td>
+<td style="text-align: right;">205</td>
+</tr>
+<tr>
+<td style="text-align: right;">35 %</td>
+<td style="text-align: right;">165</td>
+</tr>
+</tbody>
+</table>
+<h3
+id="à-la-part-de-marché-des-255-trillions-de-capacité-de-garantie">8.2.
+À la part de marché (% des 25,5 trillions ₽ de capacité de
+garantie)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Part année 10</th>
+<th style="text-align: right;">Pre-money Reasoned, M $</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">10 % (cons.)</td>
+<td style="text-align: right;">52</td>
+</tr>
+<tr>
+<td style="text-align: right;">18 % (base)</td>
+<td style="text-align: right;">80</td>
+</tr>
+<tr>
+<td style="text-align: right;">25 % (optim.)</td>
+<td style="text-align: right;">115</td>
+</tr>
+</tbody>
+</table>
+<h3 id="à-la-courbe-opex-délai-de-lancement-53-nouveau">8.3. À la courbe
+OpEx × délai de lancement (5×3, nouveau)</h3>
+<table>
+<thead>
+<tr>
+<th>Délai  uplift OpEx</th>
+<th style="text-align: right;">−10 %</th>
+<th style="text-align: right;">0 %</th>
+<th style="text-align: right;">+10 %</th>
+<th style="text-align: right;">+20 %</th>
+<th style="text-align: right;">+30 %</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>−6 mois</strong></td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">102</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">78</td>
+</tr>
+<tr>
+<td><strong>0 mois (base)</strong></td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">64</td>
+</tr>
+<tr>
+<td><strong>+6 mois</strong></td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">47</td>
+</tr>
+</tbody>
+</table>
+<h3
+id="diagramme-tornado-top-7-sensibilités-par-contribution-absolue-à-la-van">8.4.
+Diagramme tornado (top-7 sensibilités par contribution absolue à la
+VAN)</h3>
+<table>
+<thead>
+<tr>
+<th>Driver</th>
+<th style="text-align: right;">Effet, ± Md ₽ VAN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Délai d’adoption (T+24 vs T+36)</td>
+<td style="text-align: right;">± 54</td>
+</tr>
+<tr>
+<td>Part de marché année 10 (18 % ± 7 pp)</td>
+<td style="text-align: right;">± 38</td>
+</tr>
+<tr>
+<td>CMPC (30 % ± 3 pp)</td>
+<td style="text-align: right;">± 22</td>
+</tr>
+<tr>
+<td>Uplift OpEx (±20 %)</td>
+<td style="text-align: right;">± 18</td>
+</tr>
+<tr>
+<td>Commission tarifaire (15 bps ± 4)</td>
+<td style="text-align: right;">± 16</td>
+</tr>
+<tr>
+<td>Délai de lancement (±6 mois)</td>
+<td style="text-align: right;">± 14</td>
+</tr>
+<tr>
+<td>Marge EBITDA TV (74,8 % ± 5 pp)</td>
+<td style="text-align: right;">± 11</td>
+</tr>
+</tbody>
+</table>
+<h3 id="monte-carlo-simplifié-1-000-itérations-6-paramètres">8.5.
+Monte-Carlo (simplifié, 1 000 itérations, 6 paramètres)</h3>
+<ul>
+<li>Médiane VAN = 91 Md ₽.</li>
+<li>P10–P90 = 38–162 Md ₽.</li>
+<li>P5 = 24 Md ₽ ; P95 = 184 Md ₽.</li>
+<li>P(VAN &gt; 50 Md ₽) = 73 %.</li>
+<li>P(VAN &lt; 0) = 4,8 %.</li>
+</ul>
+<h3 id="stress-test-de-trésorerie">8.6. Stress-test de trésorerie</h3>
+<ul>
+<li>FCF cumulé 2025–2026 = −2 080 M ₽.</li>
+<li>Tour de 15 M $ (1,335 Md ₽) ferme 64 % du pic.</li>
+<li>Retard pilote +6 mois — gap supplémentaire 0,38 Md ₽.</li>
+<li><strong>Recommandation :</strong> soit tour 20 M $ (post-money 115 M
+$, part 17,4 %), soit <strong>financement-bridge 0,75 Md ₽</strong> sur
+6–9 mois via VEB.RF / Gazprombank contre gage IP — valeur unique au
+niveau du projet (synchronisée avec Modèle_financier.md § 4.7 et
+Wedge_pilot-light.md § 5).</li>
+</ul>
+<hr />
+<h2 id="comparaison-avec-les-références-internationales-2026">9.
+Comparaison avec les références internationales (2026)</h2>
+<table>
+<thead>
+<tr>
+<th>Projet</th>
+<th>Juridiction</th>
+<th style="text-align: right;">Pre-money au stade comparable, M $</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Securitize (Série C, 2026)</td>
+<td>États-Unis</td>
+<td style="text-align: right;">980</td>
+</tr>
+<tr>
+<td>Tokeny (Série A, 2025)</td>
+<td>Luxembourg</td>
+<td style="text-align: right;">60</td>
+</tr>
+<tr>
+<td>Polymath (Série A, 2025)</td>
+<td>Canada / Barbade</td>
+<td style="text-align: right;">75</td>
+</tr>
+<tr>
+<td>HQLAx (Série B, 2026)</td>
+<td>Suisse</td>
+<td style="text-align: right;">180</td>
+</tr>
+<tr>
+<td>Atomyze</td>
+<td>Russie</td>
+<td style="text-align: right;">~85</td>
+</tr>
+<tr>
+<td><strong>Reasoned CPFSR (avec MVP)</strong></td>
+<td>Russie</td>
+<td style="text-align: right;"><strong>80</strong></td>
+</tr>
+</tbody>
+</table>
+<p>La Reasoned Value se situe correctement dans la fourchette des deals
+Série A pour plateformes de tokenisation d’actifs avec partie client
+finalisée.</p>
+<hr />
+<h2 id="défendabilité-face-à-un-dd-tier-1">10. Défendabilité face à un
+DD tier-1</h2>
+<p>Après refactor du modèle financier et de l’évaluation (selon l’audit)
+: - Double-counting CRP du CMPC supprimé. - Courbe EBITDA réaliste (74,8
+% vs 96,9 %). - TV multi-phases (1,4 % de la VAN vs 49 %). - Equity
+Multiple 12× (exit-on-multiple) — référence haute défendable dans la
+zone fintech tier-1 8–12× (les comparables ambitieux 25–50× sont traités
+en upside, non en base). - Tornado, Monte-Carlo, stress-test trésorerie,
+break-even — ajoutés. - Décote stage unique sans double-counting. - Tous
+les indicateurs numériques synchronisés via
+<code>_Мастер/Единые_показатели_v2.md</code>.</p>
+<p>Maturité DD du contour d’évaluation portée de 4/10 à
+<strong>8/10</strong>.</p>
+<hr />
+<h2 id="limites-et-réserves">11. Limites et réserves</h2>
+<ol type="1">
+<li><strong>Standard IVS 2022</strong> : évaluation conduite avec les
+approches IVS 105–106.</li>
+<li><strong>Date de référence</strong> : 24.05.2026. Le pre-money est
+soumis à révision en cas de changement du taux directeur BCR, du taux de
+change ou du régime réglementaire.</li>
+<li><strong>Dépendance réglementaire</strong> : le facteur binaire
+d’adoption du paquet législatif (horizon T+36 à T+60 mois) peut déplacer
+la Reasoned Value de façon multiplicative (×0,15 à ×1,5).</li>
+<li><strong>Indépendance de l’évaluateur</strong> : le document est
+préparé dans le cadre du pack projet et ne constitue pas un rapport
+d’évaluation indépendant au sens de 135-FZ. Pour une évaluation
+officielle, l’intervention d’un évaluateur indépendant inscrit à une SRO
+est requise.</li>
+<li><strong>Mode wedge</strong> : le projet dispose d’une configuration
+pilot-light valide sous 259-FZ existant (sans amendement à 86-FZ) — voir
+<code>04_Бизнес-план/Wedge_pilot-light.md</code>.</li>
+</ol>
+<hr />
+<h2 id="conclusion-finale">12. Conclusion finale</h2>
+<p><strong>Reasoned Value pre-money de CPFSR au stade « MVP + partie
+client finalisée » (24.05.2026) :</strong></p>
+<ul>
+<li><strong>Zone de base :</strong> 80 M $ (≈ 7,12 Md ₽).</li>
+<li><strong>Fourchette de négociation :</strong> 60–115 M $ (5,34–10,24
+Md ₽).</li>
+<li><strong>Espérance sur le modèle 3-scénarios :</strong> 88 M $.</li>
+<li><strong>Potentiel en cas de succès complet :</strong> 240 M $ (DCF,
+phase mature d’investissement).</li>
+</ul>
+<p>Pour un tour initial de 15 M $ (1,335 Md ₽), la structure recommandée
+est <strong>15,8 % à l’investisseur</strong> au post-money de 95 M $
+(8,46 Md ₽).</p>
+<p><strong>Niveau de maturité du projet (TRL/IRL) :</strong> - Concept,
+juridique, financier, technique, design — finalisés. - Wedge pilot-light
+sous 259-FZ existant — formalisé. - Application mobile client PWA —
+prête pour publication (Service Worker + offline.html + icônes PNG
+192/512/1024 + mipmap + screenshots + feature graphic). - Documentation
+de conception GOST 19 (13 documents avec numérotation correcte) —
+finalisée. - Builds plateforme (Android / iOS / Windows) — préparés. -
+Pack publication RuStore — assemblé ; publicité de service sous licence
+retirée. - Partie serveur — en développement (12–18 mois jusqu’au
+lancement industriel).</p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

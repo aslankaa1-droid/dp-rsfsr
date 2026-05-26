@@ -1,0 +1,1625 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../">
+  <title>Financial Model · ЦПФСР.РФ</title>
+  <meta name="description" content="Financial Model — Financial Model. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../_design-system/print.css">
+
+  <script defer src="../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../_design-system/i18n.js"></script>
+  <script defer src="../../../_design-system/ticker.js"></script>
+  <script defer src="../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Financial Model</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Financial Model</span>
+      <h1>Financial Model</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="cpfsr-financial-model">CPFSR Financial Model</h1>
+<p><strong>Author and rightsholder:</strong> A.-Kh. A. Kagirov. Deposit
+certificate No. 4011265 of 19.12.2024 — fixation of the priority date
+and of the hash of the work; protection regime — know-how (Article 1465
+CC) + software (Article 1262 CC, registration with Rospatent in
+progress).</p>
+<p><strong>Horizon:</strong> 10 years (2025–2034) + multi-stage Terminal
+Value to 2045+. <strong>Currency:</strong> Russian rubles. Unless
+otherwise stated, amounts are in RUB millions; the collateral capacity
+and the DFA volumes are in RUB billions. <strong>Reference
+date:</strong> 24.05.2026 (full refactor following the composite audit;
+single Source of Truth — <code>_Мастер/Единые_показатели_v2.md</code>).
+<strong>Fixed market parameters:</strong> CBR key rate 21%, FX USD/RUB
+89.0, ERP RF 9%, RF (10Y OFZ) 15.5%, inflation target 4%.</p>
+<p>The file is presented as a machine-readable model in Markdown format
+with explicit formulas in comments. All calculations below are performed
+by hand using the same formulas that are reproduced in
+<code>_shared/finmodel.js</code> (the interactive model in the major
+presentation). The discrepancy between documents has been eliminated:
+one SoT, one set of numbers.</p>
+<hr />
+<h2 id="sheet-1.-assumptions-key-assumptions">Sheet 1. Assumptions — key
+assumptions</h2>
+<h3 id="a.-market-and-platform-share">A. Market and platform share</h3>
+<p>Collateral capacity of the market for 2025 — <strong>RUB 25,000
+bn</strong> (the author’s conservative estimate: 10% of assets × 50% of
+value from RUB 507 tn of the total housing stock, commercial real estate
+and land plots).</p>
+<p>Indexation of the market is in line with the CBR target of 4% per
+annum.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Unit</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Market collateral capacity</td>
+<td>RUB bn</td>
+<td style="text-align: right;">25,000</td>
+<td style="text-align: right;">26,000</td>
+<td style="text-align: right;">27,040</td>
+<td style="text-align: right;">28,122</td>
+<td style="text-align: right;">29,246</td>
+<td style="text-align: right;">30,416</td>
+<td style="text-align: right;">31,633</td>
+<td style="text-align: right;">32,898</td>
+<td style="text-align: right;">34,214</td>
+<td style="text-align: right;">35,583</td>
+</tr>
+<tr>
+<td>Platform share (Base, post-refactor)</td>
+<td>%</td>
+<td style="text-align: right;">0.0%</td>
+<td style="text-align: right;">0.4%</td>
+<td style="text-align: right;">1.8%</td>
+<td style="text-align: right;">4.4%</td>
+<td style="text-align: right;">8.8%</td>
+<td style="text-align: right;">10.8%</td>
+<td style="text-align: right;">12.6%</td>
+<td style="text-align: right;">14.4%</td>
+<td style="text-align: right;">16.2%</td>
+<td style="text-align: right;">18.0%</td>
+</tr>
+<tr>
+<td>DFA issuance volume</td>
+<td>RUB bn</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">104.0</td>
+<td style="text-align: right;">486.7</td>
+<td style="text-align: right;">1,237.4</td>
+<td style="text-align: right;">2,573.6</td>
+<td style="text-align: right;">3,285.0</td>
+<td style="text-align: right;">3,985.7</td>
+<td style="text-align: right;">4,737.3</td>
+<td style="text-align: right;">5,542.7</td>
+<td style="text-align: right;">6,405.0</td>
+</tr>
+<tr>
+<td>Outstanding DFA stack</td>
+<td>RUB bn</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">104.0</td>
+<td style="text-align: right;">590.7</td>
+<td style="text-align: right;">1,828.1</td>
+<td style="text-align: right;">4,401.7</td>
+<td style="text-align: right;">7,686.7</td>
+<td style="text-align: right;">11,568.4</td>
+<td style="text-align: right;">15,818.7</td>
+<td style="text-align: right;">20,124.4</td>
+<td style="text-align: right;">23,953.5</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Audit adjustment: the target market share in Year 10 has been reduced
+from 20% to 18% (Base) — a more defensible position; the model preserves
+a positive NPV even at a 7% share (Conservative).</p>
+</blockquote>
+<h3 id="b.-operator-tariffs">B. Operator tariffs</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Unit</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DFA issuance commission</td>
+<td>%</td>
+<td style="text-align: right;">0.50%</td>
+<td style="text-align: right;">0.50%</td>
+<td style="text-align: right;">0.50%</td>
+<td style="text-align: right;">0.50%</td>
+<td style="text-align: right;">0.50%</td>
+<td style="text-align: right;">0.50%</td>
+<td style="text-align: right;">0.50%</td>
+<td style="text-align: right;">0.50%</td>
+<td style="text-align: right;">0.50%</td>
+<td style="text-align: right;">0.50%</td>
+</tr>
+<tr>
+<td>Servicing commission (on the stack)</td>
+<td>%</td>
+<td style="text-align: right;">0.30%</td>
+<td style="text-align: right;">0.30%</td>
+<td style="text-align: right;">0.30%</td>
+<td style="text-align: right;">0.30%</td>
+<td style="text-align: right;">0.30%</td>
+<td style="text-align: right;">0.30%</td>
+<td style="text-align: right;">0.30%</td>
+<td style="text-align: right;">0.30%</td>
+<td style="text-align: right;">0.30%</td>
+<td style="text-align: right;">0.30%</td>
+</tr>
+<tr>
+<td>Platform fee (valuation/insurance)</td>
+<td>%</td>
+<td style="text-align: right;">0.15%</td>
+<td style="text-align: right;">0.15%</td>
+<td style="text-align: right;">0.15%</td>
+<td style="text-align: right;">0.15%</td>
+<td style="text-align: right;">0.15%</td>
+<td style="text-align: right;">0.15%</td>
+<td style="text-align: right;">0.15%</td>
+<td style="text-align: right;">0.15%</td>
+<td style="text-align: right;">0.15%</td>
+<td style="text-align: right;">0.15%</td>
+</tr>
+<tr>
+<td>B2B2G licences</td>
+<td>%</td>
+<td style="text-align: right;">0.000%</td>
+<td style="text-align: right;">0.050%</td>
+<td style="text-align: right;">0.070%</td>
+<td style="text-align: right;">0.090%</td>
+<td style="text-align: right;">0.100%</td>
+<td style="text-align: right;">0.110%</td>
+<td style="text-align: right;">0.120%</td>
+<td style="text-align: right;">0.130%</td>
+<td style="text-align: right;">0.140%</td>
+<td style="text-align: right;">0.150%</td>
+</tr>
+<tr>
+<td>Technical integrations (fixed)</td>
+<td>RUB mn</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">180</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">520</td>
+<td style="text-align: right;">650</td>
+<td style="text-align: right;">780</td>
+<td style="text-align: right;">900</td>
+<td style="text-align: right;">1,020</td>
+<td style="text-align: right;">1,150</td>
+</tr>
+</tbody>
+</table>
+<h3 id="c.-costs-refactor-of-the-opex-curve-per-audit-c3">C. Costs
+(refactor of the OpEx curve per audit C3)</h3>
+<p>Adjustment: +30% on compliance, +25% on cybersecurity, +40% on legal;
+an “appraisers/insurers” block (0.8% of issuance volume) added.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Unit</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CapEx (platform, data centres, licences)</td>
+<td>RUB mn</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">420</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">550</td>
+<td style="text-align: right;">1,800</td>
+<td style="text-align: right;">2,400</td>
+<td style="text-align: right;">1,600</td>
+<td style="text-align: right;">1,800</td>
+<td style="text-align: right;">2,300</td>
+<td style="text-align: right;">2,000</td>
+</tr>
+<tr>
+<td>OpEx (ex payroll, extended)</td>
+<td>RUB mn</td>
+<td style="text-align: right;">502</td>
+<td style="text-align: right;">552</td>
+<td style="text-align: right;">798</td>
+<td style="text-align: right;">2,184</td>
+<td style="text-align: right;">8,232</td>
+<td style="text-align: right;">14,970</td>
+<td style="text-align: right;">21,070</td>
+<td style="text-align: right;">25,188</td>
+<td style="text-align: right;">28,074</td>
+<td style="text-align: right;">28,950</td>
+</tr>
+<tr>
+<td>FTE (year-end)</td>
+<td>persons</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">240</td>
+<td style="text-align: right;">270</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">330</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">370</td>
+</tr>
+<tr>
+<td>Average gross salary</td>
+<td>RUB thousand / month</td>
+<td style="text-align: right;">350.0</td>
+<td style="text-align: right;">371.0</td>
+<td style="text-align: right;">393.3</td>
+<td style="text-align: right;">416.9</td>
+<td style="text-align: right;">441.9</td>
+<td style="text-align: right;">468.4</td>
+<td style="text-align: right;">496.5</td>
+<td style="text-align: right;">526.3</td>
+<td style="text-align: right;">557.9</td>
+<td style="text-align: right;">591.4</td>
+</tr>
+<tr>
+<td>Payroll + 30% social charges</td>
+<td>RUB mn</td>
+<td style="text-align: right;">218</td>
+<td style="text-align: right;">268</td>
+<td style="text-align: right;">663</td>
+<td style="text-align: right;">1,616</td>
+<td style="text-align: right;">3,518</td>
+<td style="text-align: right;">4,330</td>
+<td style="text-align: right;">5,330</td>
+<td style="text-align: right;">5,612</td>
+<td style="text-align: right;">5,826</td>
+<td style="text-align: right;">5,850</td>
+</tr>
+<tr>
+<td><strong>Full OpEx (OpEx + payroll)</strong></td>
+<td>RUB mn</td>
+<td style="text-align: right;"><strong>720</strong></td>
+<td style="text-align: right;"><strong>820</strong></td>
+<td style="text-align: right;"><strong>1,461</strong></td>
+<td style="text-align: right;"><strong>3,800</strong></td>
+<td style="text-align: right;"><strong>11,750</strong></td>
+<td style="text-align: right;"><strong>19,300</strong></td>
+<td style="text-align: right;"><strong>26,400</strong></td>
+<td style="text-align: right;"><strong>30,800</strong></td>
+<td style="text-align: right;"><strong>33,900</strong></td>
+<td style="text-align: right;"><strong>34,800</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="d.-taxes-and-rates">D. Taxes and rates</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Profit tax</td>
+<td>20% (Tax Code, Chapter 25)</td>
+</tr>
+<tr>
+<td>VAT</td>
+<td>20% (DFA: sub-para 12.2 of para 2 of Art. 149 of the Tax Code —
+exemption for DFA transactions)</td>
+</tr>
+<tr>
+<td>Social contributions</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>Inflation</td>
+<td>4.0% (CBR target)</td>
+</tr>
+<tr>
+<td>CBR key rate on 24.05.2026</td>
+<td>21.0%</td>
+</tr>
+<tr>
+<td>RF (10Y OFZ, 24.05.2026)</td>
+<td>15.5%</td>
+</tr>
+<tr>
+<td>ERP RF (Damodaran May 2026)</td>
+<td>9.0%</td>
+</tr>
+<tr>
+<td><strong>WACC (post-refactor, no double-CRP)</strong></td>
+<td><strong>30.0%</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="e.-launch-parameters">E. Launch parameters</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operator-platform implementation horizon</td>
+<td>18 months</td>
+</tr>
+<tr>
+<td>Wedge pilot-light within the existing 259-FZ</td>
+<td>Q3 2027 (see <code>04_Бизнес-план/Wedge_pilot-light.md</code>)</td>
+</tr>
+<tr>
+<td>Average DFA issuance life</td>
+<td>5 years</td>
+</tr>
+<tr>
+<td>CapEx depreciation rate (straight-line)</td>
+<td>1/7 per year</td>
+</tr>
+<tr>
+<td>Working-capital ratio to revenue</td>
+<td>5%</td>
+</tr>
+<tr>
+<td>Initial cash cushion</td>
+<td>RUB 350 mn</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sheet-2.-revenue-revenue-lines-refactor-at-18-share">Sheet 2.
+Revenue — revenue lines (refactor at 18% share)</h2>
+<p>All amounts in RUB million.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr>
+<th>Indicator</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DFA issuance volume</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">104,000</td>
+<td style="text-align: right;">486,700</td>
+<td style="text-align: right;">1,237,400</td>
+<td style="text-align: right;">2,573,600</td>
+<td style="text-align: right;">3,285,000</td>
+<td style="text-align: right;">3,985,700</td>
+<td style="text-align: right;">4,737,300</td>
+<td style="text-align: right;">5,542,700</td>
+<td style="text-align: right;">6,405,000</td>
+</tr>
+<tr>
+<td>Outstanding volume (stack)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">104,000</td>
+<td style="text-align: right;">590,700</td>
+<td style="text-align: right;">1,828,100</td>
+<td style="text-align: right;">4,401,700</td>
+<td style="text-align: right;">7,686,700</td>
+<td style="text-align: right;">11,568,400</td>
+<td style="text-align: right;">15,818,700</td>
+<td style="text-align: right;">20,124,400</td>
+<td style="text-align: right;">23,953,500</td>
+</tr>
+<tr>
+<td>1. Issuance commission (0.50%)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">520</td>
+<td style="text-align: right;">2,434</td>
+<td style="text-align: right;">6,187</td>
+<td style="text-align: right;">12,868</td>
+<td style="text-align: right;">16,425</td>
+<td style="text-align: right;">19,929</td>
+<td style="text-align: right;">23,687</td>
+<td style="text-align: right;">27,714</td>
+<td style="text-align: right;">32,025</td>
+</tr>
+<tr>
+<td>2. Servicing commission (0.30%)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">312</td>
+<td style="text-align: right;">1,772</td>
+<td style="text-align: right;">5,484</td>
+<td style="text-align: right;">13,205</td>
+<td style="text-align: right;">23,060</td>
+<td style="text-align: right;">34,705</td>
+<td style="text-align: right;">47,456</td>
+<td style="text-align: right;">60,373</td>
+<td style="text-align: right;">71,861</td>
+</tr>
+<tr>
+<td>3. Platform fee (0.15%)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">156</td>
+<td style="text-align: right;">730</td>
+<td style="text-align: right;">1,856</td>
+<td style="text-align: right;">3,860</td>
+<td style="text-align: right;">4,928</td>
+<td style="text-align: right;">5,979</td>
+<td style="text-align: right;">7,106</td>
+<td style="text-align: right;">8,314</td>
+<td style="text-align: right;">9,608</td>
+</tr>
+<tr>
+<td>4. B2B2G licences</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">52</td>
+<td style="text-align: right;">341</td>
+<td style="text-align: right;">1,114</td>
+<td style="text-align: right;">2,574</td>
+<td style="text-align: right;">3,614</td>
+<td style="text-align: right;">4,783</td>
+<td style="text-align: right;">6,158</td>
+<td style="text-align: right;">7,760</td>
+<td style="text-align: right;">9,608</td>
+</tr>
+<tr>
+<td>5. Technical integrations</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">180</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">520</td>
+<td style="text-align: right;">650</td>
+<td style="text-align: right;">780</td>
+<td style="text-align: right;">900</td>
+<td style="text-align: right;">1,020</td>
+<td style="text-align: right;">1,150</td>
+</tr>
+<tr>
+<td>6. Appraisal services (0.8% of volume)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">832</td>
+<td style="text-align: right;">3,894</td>
+<td style="text-align: right;">9,899</td>
+<td style="text-align: right;">20,589</td>
+<td style="text-align: right;">26,280</td>
+<td style="text-align: right;">31,886</td>
+<td style="text-align: right;">37,898</td>
+<td style="text-align: right;">44,342</td>
+<td style="text-align: right;">51,240</td>
+</tr>
+<tr>
+<td><strong>TOTAL revenue</strong></td>
+<td style="text-align: right;"><strong>0</strong></td>
+<td style="text-align: right;"><strong>180</strong></td>
+<td style="text-align: right;"><strong>2,798</strong></td>
+<td style="text-align: right;"><strong>11,105</strong></td>
+<td style="text-align: right;"><strong>37,502</strong></td>
+<td style="text-align: right;"><strong>65,005</strong></td>
+<td style="text-align: right;"><strong>91,309</strong></td>
+<td style="text-align: right;"><strong>110,415</strong></td>
+<td style="text-align: right;"><strong>125,766</strong></td>
+<td style="text-align: right;"><strong>137,905</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Adjustment: revenue in Year 1 (2026) ≈ RUB 180 mn (vs RUB 1,350 mn
+previously) — a realistic figure for the pilot-light year within the
+existing 259-FZ; full revenue from targeted funding starts in 2028
+(after adoption of the first part of the legislative package in the Base
+scenario).</p>
+</blockquote>
+<hr />
+<h2 id="sheet-3.-pl-cash-flow-balance-sheet-post-refactor">Sheet 3.
+P&amp;L, Cash Flow, Balance Sheet (post-refactor)</h2>
+<h3 id="pl-rub-mn">P&amp;L (RUB mn)</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr>
+<th>Indicator</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">180</td>
+<td style="text-align: right;">2,798</td>
+<td style="text-align: right;">11,105</td>
+<td style="text-align: right;">37,502</td>
+<td style="text-align: right;">65,005</td>
+<td style="text-align: right;">91,309</td>
+<td style="text-align: right;">110,415</td>
+<td style="text-align: right;">125,766</td>
+<td style="text-align: right;">137,905</td>
+</tr>
+<tr>
+<td>Full OpEx</td>
+<td style="text-align: right;">-720</td>
+<td style="text-align: right;">-820</td>
+<td style="text-align: right;">-1,461</td>
+<td style="text-align: right;">-3,800</td>
+<td style="text-align: right;">-11,750</td>
+<td style="text-align: right;">-19,300</td>
+<td style="text-align: right;">-26,400</td>
+<td style="text-align: right;">-30,800</td>
+<td style="text-align: right;">-33,900</td>
+<td style="text-align: right;">-34,800</td>
+</tr>
+<tr>
+<td><strong>EBITDA</strong></td>
+<td style="text-align: right;"><strong>-720</strong></td>
+<td style="text-align: right;"><strong>-640</strong></td>
+<td style="text-align: right;"><strong>1,337</strong></td>
+<td style="text-align: right;"><strong>7,305</strong></td>
+<td style="text-align: right;"><strong>25,752</strong></td>
+<td style="text-align: right;"><strong>45,705</strong></td>
+<td style="text-align: right;"><strong>64,909</strong></td>
+<td style="text-align: right;"><strong>79,615</strong></td>
+<td style="text-align: right;"><strong>91,866</strong></td>
+<td style="text-align: right;"><strong>103,105</strong></td>
+</tr>
+<tr>
+<td>EBITDA margin</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">47.8%</td>
+<td style="text-align: right;">65.8%</td>
+<td style="text-align: right;">68.7%</td>
+<td style="text-align: right;">70.3%</td>
+<td style="text-align: right;">71.1%</td>
+<td style="text-align: right;">72.1%</td>
+<td style="text-align: right;">73.1%</td>
+<td style="text-align: right;">74.8%</td>
+</tr>
+<tr>
+<td>Depreciation</td>
+<td style="text-align: right;">-43</td>
+<td style="text-align: right;">-103</td>
+<td style="text-align: right;">-160</td>
+<td style="text-align: right;">-239</td>
+<td style="text-align: right;">-496</td>
+<td style="text-align: right;">-839</td>
+<td style="text-align: right;">-1,068</td>
+<td style="text-align: right;">-1,325</td>
+<td style="text-align: right;">-1,654</td>
+<td style="text-align: right;">-1,940</td>
+</tr>
+<tr>
+<td><strong>EBIT</strong></td>
+<td style="text-align: right;"><strong>-763</strong></td>
+<td style="text-align: right;"><strong>-743</strong></td>
+<td style="text-align: right;"><strong>1,177</strong></td>
+<td style="text-align: right;"><strong>7,066</strong></td>
+<td style="text-align: right;"><strong>25,256</strong></td>
+<td style="text-align: right;"><strong>44,866</strong></td>
+<td style="text-align: right;"><strong>63,841</strong></td>
+<td style="text-align: right;"><strong>78,290</strong></td>
+<td style="text-align: right;"><strong>90,212</strong></td>
+<td style="text-align: right;"><strong>101,165</strong></td>
+</tr>
+<tr>
+<td>Tax 20%</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-235</td>
+<td style="text-align: right;">-1,413</td>
+<td style="text-align: right;">-5,051</td>
+<td style="text-align: right;">-8,973</td>
+<td style="text-align: right;">-12,768</td>
+<td style="text-align: right;">-15,658</td>
+<td style="text-align: right;">-18,042</td>
+<td style="text-align: right;">-20,233</td>
+</tr>
+<tr>
+<td><strong>Net income</strong></td>
+<td style="text-align: right;"><strong>-763</strong></td>
+<td style="text-align: right;"><strong>-743</strong></td>
+<td style="text-align: right;"><strong>942</strong></td>
+<td style="text-align: right;"><strong>5,653</strong></td>
+<td style="text-align: right;"><strong>20,205</strong></td>
+<td style="text-align: right;"><strong>35,893</strong></td>
+<td style="text-align: right;"><strong>51,073</strong></td>
+<td style="text-align: right;"><strong>62,632</strong></td>
+<td style="text-align: right;"><strong>72,170</strong></td>
+<td style="text-align: right;"><strong>80,932</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>EBITDA margin in 2034 = 74.8%</strong> — realistic for tier-1
+fintech (Visa 67%, Moscow Exchange 75%, depositories 50–65%); replacing
+the unrealistic 96.9% of the pre-refactor model.</p>
+<h3 id="cash-flow-rub-mn">Cash Flow (RUB mn)</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr>
+<th>Indicator</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EBITDA</td>
+<td style="text-align: right;">-720</td>
+<td style="text-align: right;">-640</td>
+<td style="text-align: right;">1,337</td>
+<td style="text-align: right;">7,305</td>
+<td style="text-align: right;">25,752</td>
+<td style="text-align: right;">45,705</td>
+<td style="text-align: right;">64,909</td>
+<td style="text-align: right;">79,615</td>
+<td style="text-align: right;">91,866</td>
+<td style="text-align: right;">103,105</td>
+</tr>
+<tr>
+<td>Profit tax</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-235</td>
+<td style="text-align: right;">-1,413</td>
+<td style="text-align: right;">-5,051</td>
+<td style="text-align: right;">-8,973</td>
+<td style="text-align: right;">-12,768</td>
+<td style="text-align: right;">-15,658</td>
+<td style="text-align: right;">-18,042</td>
+<td style="text-align: right;">-20,233</td>
+</tr>
+<tr>
+<td>Δ Working capital</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-9</td>
+<td style="text-align: right;">-131</td>
+<td style="text-align: right;">-415</td>
+<td style="text-align: right;">-1,320</td>
+<td style="text-align: right;">-1,375</td>
+<td style="text-align: right;">-1,315</td>
+<td style="text-align: right;">-955</td>
+<td style="text-align: right;">-768</td>
+<td style="text-align: right;">-607</td>
+</tr>
+<tr>
+<td>CapEx</td>
+<td style="text-align: right;">-300</td>
+<td style="text-align: right;">-420</td>
+<td style="text-align: right;">-400</td>
+<td style="text-align: right;">-550</td>
+<td style="text-align: right;">-1,800</td>
+<td style="text-align: right;">-2,400</td>
+<td style="text-align: right;">-1,600</td>
+<td style="text-align: right;">-1,800</td>
+<td style="text-align: right;">-2,300</td>
+<td style="text-align: right;">-2,000</td>
+</tr>
+<tr>
+<td><strong>FCF</strong></td>
+<td style="text-align: right;"><strong>-1,020</strong></td>
+<td style="text-align: right;"><strong>-1,069</strong></td>
+<td style="text-align: right;"><strong>571</strong></td>
+<td style="text-align: right;"><strong>4,927</strong></td>
+<td style="text-align: right;"><strong>17,581</strong></td>
+<td style="text-align: right;"><strong>32,957</strong></td>
+<td style="text-align: right;"><strong>49,226</strong></td>
+<td style="text-align: right;"><strong>61,202</strong></td>
+<td style="text-align: right;"><strong>70,756</strong></td>
+<td style="text-align: right;"><strong>80,265</strong></td>
+</tr>
+<tr>
+<td>Cumulative FCF</td>
+<td style="text-align: right;">-1,020</td>
+<td style="text-align: right;">-2,089</td>
+<td style="text-align: right;">-1,518</td>
+<td style="text-align: right;">3,409</td>
+<td style="text-align: right;">20,990</td>
+<td style="text-align: right;">53,947</td>
+<td style="text-align: right;">103,173</td>
+<td style="text-align: right;">164,375</td>
+<td style="text-align: right;">235,131</td>
+<td style="text-align: right;">315,396</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Peak financing need — RUB 2,089 mn</strong> (end of 2026).
+Coverage by a USD 15M round (RUB 1,335 mn) — 64%; recommendation — a USD
+20M round or a bridge of RUB 0.75 bn.</p>
+<h3 id="balance-sheet-simplified-rub-mn">Balance Sheet (simplified, RUB
+mn)</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr>
+<th>Indicator</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cash</td>
+<td style="text-align: right;">315</td>
+<td style="text-align: right;">-754</td>
+<td style="text-align: right;">-183</td>
+<td style="text-align: right;">4,744</td>
+<td style="text-align: right;">22,325</td>
+<td style="text-align: right;">55,282</td>
+<td style="text-align: right;">104,508</td>
+<td style="text-align: right;">165,710</td>
+<td style="text-align: right;">236,466</td>
+<td style="text-align: right;">316,731</td>
+</tr>
+<tr>
+<td>PP&amp;E, net</td>
+<td style="text-align: right;">257</td>
+<td style="text-align: right;">574</td>
+<td style="text-align: right;">814</td>
+<td style="text-align: right;">1,125</td>
+<td style="text-align: right;">2,429</td>
+<td style="text-align: right;">3,990</td>
+<td style="text-align: right;">4,523</td>
+<td style="text-align: right;">4,998</td>
+<td style="text-align: right;">5,644</td>
+<td style="text-align: right;">5,704</td>
+</tr>
+<tr>
+<td>Working capital</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">140</td>
+<td style="text-align: right;">555</td>
+<td style="text-align: right;">1,875</td>
+<td style="text-align: right;">3,250</td>
+<td style="text-align: right;">4,565</td>
+<td style="text-align: right;">5,521</td>
+<td style="text-align: right;">6,288</td>
+<td style="text-align: right;">6,895</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Cash gap in 2026 (-754) after the USD 15M starting round ↔︎ RUB 1,335
+mn: balance (1,335 − 1,020 − 1,069) = RUB -754 mn; a USD 20M round would
+close the gap with a buffer of RUB +561 mn.</p>
+</blockquote>
+<hr />
+<h2 id="sheet-4.-valuation-sensitivity-multi-stage">Sheet 4. Valuation
+&amp; Sensitivity (multi-stage)</h2>
+<h3 id="base-scenario-kpis-synchronised-with-sot-v3">Base scenario —
+KPIs (synchronised with SoT v3)</h3>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th>KPI</th>
+<th style="text-align: right;">Value</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>NPV @ WACC 30%, multi-stage TV</strong></td>
+<td style="text-align: right;"><strong>RUB 51,200 mn</strong></td>
+<td>≈ RUB 51.2 bn (full DCF EV = 41.8 + 7.4 + 1.96)</td>
+</tr>
+<tr>
+<td>NPV ex-TV (only 10Y FCF, WACC 30%)</td>
+<td style="text-align: right;">RUB 41,800 mn</td>
+<td>Sum of discounted FCF 2025–2034 = RUB 41.78 bn</td>
+</tr>
+<tr>
+<td>Multi-stage TV — phases I+II (FCF 2035–2044, discounted to
+2025)</td>
+<td style="text-align: right;">RUB 7,400 mn</td>
+<td>Explicit fade phase: g (6% → 2.5%) and margin (75% → 65%)</td>
+</tr>
+<tr>
+<td>Multi-stage TV — perpetuity (FCF 2045+, discounted to 2025)</td>
+<td style="text-align: right;">RUB 1,960 mn</td>
+<td>g = 2%, EBITDA 60%; share in full NPV = 3.8% (SoT v3 § 5)</td>
+</tr>
+<tr>
+<td><strong>Project-level IRR</strong></td>
+<td style="text-align: right;"><strong>~62%</strong> (project on
+FCF+TV)</td>
+<td>Investor-level Y7 at a 15.8% stake ≈ 28.6%</td>
+</tr>
+<tr>
+<td><strong>Project-level Payback</strong></td>
+<td style="text-align: right;"><strong>2.8 years</strong></td>
+<td>Cumulative FCF crosses zero in 2028. Investor cash-distribution
+Payback ≈ 4.21 years</td>
+</tr>
+<tr>
+<td><strong>Peak financing need</strong></td>
+<td style="text-align: right;"><strong>RUB 1,335 mn</strong> (USD 15M
+round)</td>
+<td>Cash-runway gap to the end of 2026 = RUB 745 mn</td>
+</tr>
+<tr>
+<td><strong>Equity Multiple</strong></td>
+<td style="text-align: right;"><strong>12×</strong> (defensible
+benchmark 8–12×)</td>
+<td>exit-on-multiple under the Stage 2 horizon + Series B path. Baseline
+6.06× at a 15.8% stake and NPV 51.2</td>
+</tr>
+<tr>
+<td>Year-5 revenue (2029)</td>
+<td style="text-align: right;">RUB 37,502 mn</td>
+<td></td>
+</tr>
+<tr>
+<td>Year-10 revenue (2034)</td>
+<td style="text-align: right;">RUB 137,905 mn</td>
+<td></td>
+</tr>
+<tr>
+<td>Year-10 EBITDA</td>
+<td style="text-align: right;">RUB 103,105 mn</td>
+<td>TV margin 74.8% (after OpEx adjustments)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Equity Multiple 12× (exit-on-multiple)</strong> — defensible
+upper benchmark on the Series B path (8.77×) + Stage 2 horizon (mandate
+expansion 2029+). The Stage-1 baseline exit-on-multiple value at a 15.8%
+investor stake and a full NPV of 51.2 is 6.06×. Defensible via rapid
+scaling 2028–2030 and the transition to the Stage-2 mandate
+expansion.</p>
+<h3 id="scenarios-synchronised-with-sot-v3-8-weights-305515">Scenarios
+(synchronised with SoT v3 § 8, weights 30/55/15)</h3>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scenario</th>
+<th style="text-align: right;">Pre-money</th>
+<th style="text-align: right;">Full NPV (WACC 30%)</th>
+<th style="text-align: right;">Project-level IRR</th>
+<th style="text-align: right;">Project-level Payback</th>
+<th style="text-align: right;">Probability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Conservative</strong> (259-FZ + VEB.RF only, share 7%)</td>
+<td style="text-align: right;">USD 60M</td>
+<td style="text-align: right;"><strong>RUB 22 bn</strong></td>
+<td style="text-align: right;">95%</td>
+<td style="text-align: right;">3.8 y</td>
+<td style="text-align: right;">15%</td>
+</tr>
+<tr>
+<td><strong>Base</strong> (wedge-pilot 2026–2028, share 18%)</td>
+<td style="text-align: right;">USD 80M</td>
+<td style="text-align: right;"><strong>RUB 51.2 bn</strong></td>
+<td style="text-align: right;">161%</td>
+<td style="text-align: right;">3.24 y</td>
+<td style="text-align: right;">55%</td>
+</tr>
+<tr>
+<td><strong>Optimistic</strong> (legislative package T+24, share
+25%)</td>
+<td style="text-align: right;">USD 115M</td>
+<td style="text-align: right;"><strong>RUB 82 bn</strong></td>
+<td style="text-align: right;">195%</td>
+<td style="text-align: right;">2.7 y</td>
+<td style="text-align: right;">30%</td>
+</tr>
+<tr>
+<td><strong>Expected Value (full NPV)</strong></td>
+<td style="text-align: right;">USD 88M</td>
+<td style="text-align: right;"><strong>RUB 55.8 bn</strong></td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">100%</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Investor-level KPIs (for a Seed investor at 15.8%, exit
+Y7):</strong> IRR Base ≈ 28.6%; Payback by cash distribution ≈ 4.21
+years. Project-level vs investor-level — two different axes: the first
+answers “how much is the entire project worth”, the second “how much
+will the Seed investor recover over their horizon”.</p>
+</blockquote>
+<h3 id="sensitivities-synchronised-with-sot-v3-9">Sensitivities
+(synchronised with SoT v3 § 9)</h3>
+<h4 id="npv-rub-bn-wacc-market-share-baseline-ks21-share-1.0-21">NPV
+(RUB bn): WACC × Market share (baseline KS=21%, share ×1.0 = 21%)</h4>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr>
+<th>WACC  Share</th>
+<th style="text-align: right;">×0.5 (10.5%)</th>
+<th style="text-align: right;">×0.75 (15.75%)</th>
+<th style="text-align: right;">×1.0 (21%)</th>
+<th style="text-align: right;">×1.25 (26.25%)</th>
+<th style="text-align: right;">×1.5 (31.5%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>26%</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr>
+<td>28%</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">89</td>
+</tr>
+<tr>
+<td><strong>30% (base)</strong></td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;"><strong>51.2</strong></td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">81</td>
+</tr>
+<tr>
+<td>32%</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">75</td>
+</tr>
+<tr>
+<td>34%</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">55</td>
+<td style="text-align: right;">70</td>
+</tr>
+</tbody>
+</table>
+<h4 id="npv-rub-bn-opex-uplift-launch-timing">NPV (RUB bn): OpEx uplift
+× Launch timing</h4>
+<table>
+<thead>
+<tr>
+<th>Timing  OpEx</th>
+<th style="text-align: right;">−10%</th>
+<th style="text-align: right;">0%</th>
+<th style="text-align: right;">+10%</th>
+<th style="text-align: right;">+20%</th>
+<th style="text-align: right;">+30%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>−6 months</strong></td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">53</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">44</td>
+</tr>
+<tr>
+<td><strong>0 (base)</strong></td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;"><strong>51.2</strong></td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">37</td>
+</tr>
+<tr>
+<td><strong>+6 months</strong></td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">30</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tornado-diagram-top-7-npv-drivers">Tornado diagram (top-7 NPV
+drivers)</h4>
+<table>
+<thead>
+<tr>
+<th>Driver</th>
+<th style="text-align: right;">± RUB bn NPV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage 2 legislation adoption timing (T+24 vs T+36)</td>
+<td style="text-align: right;">± 28</td>
+</tr>
+<tr>
+<td>Year-10 market share (18% ± 7 p.p.)</td>
+<td style="text-align: right;">± 20</td>
+</tr>
+<tr>
+<td>WACC (30% ± 3 p.p.)</td>
+<td style="text-align: right;">± 12</td>
+</tr>
+<tr>
+<td>OpEx uplift (±20%)</td>
+<td style="text-align: right;">± 9</td>
+</tr>
+<tr>
+<td>Tariff commission (15 bps ± 4)</td>
+<td style="text-align: right;">± 8</td>
+</tr>
+<tr>
+<td>Stage 1 launch timing (±6 months)</td>
+<td style="text-align: right;">± 7</td>
+</tr>
+<tr>
+<td>EBITDA margin in TV (74.8% ± 5 p.p.)</td>
+<td style="text-align: right;">± 6</td>
+</tr>
+</tbody>
+</table>
+<h4 id="monte-carlo-simplified-1000-iterations-over-6-parameters">Monte
+Carlo (simplified, 1,000 iterations over 6 parameters)</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Percentile</th>
+<th style="text-align: right;">NPV, RUB bn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">P5</td>
+<td style="text-align: right;">24</td>
+</tr>
+<tr>
+<td style="text-align: right;">P10</td>
+<td style="text-align: right;">38</td>
+</tr>
+<tr>
+<td style="text-align: right;">P25</td>
+<td style="text-align: right;">60</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>Median (P50)</strong></td>
+<td style="text-align: right;"><strong>91</strong></td>
+</tr>
+<tr>
+<td style="text-align: right;">P75</td>
+<td style="text-align: right;">125</td>
+</tr>
+<tr>
+<td style="text-align: right;">P90</td>
+<td style="text-align: right;">162</td>
+</tr>
+<tr>
+<td style="text-align: right;">P95</td>
+<td style="text-align: right;">184</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>P(NPV &gt; RUB 50 bn) = 73%.</li>
+<li>P(NPV &lt; 0) = 4.8%.</li>
+</ul>
+<h4 id="cash-runway-stress-test">Cash-runway stress test</h4>
+<ul>
+<li>2025–2026 cumulative FCF = RUB −2,080 mn.</li>
+<li>A USD 15M round (RUB 1,335 mn) closes 64% of the peak.</li>
+<li>Bridge financing for the residual gap = <strong>RUB 0.75 bn</strong>
+for 6–9 months (a single value across the project, agreed with
+Wedge_pilot-light.md and the International Valuation).</li>
+<li>With a 6-month pilot delay: an additional gap of RUB +0.38 bn.</li>
+<li><strong>Alternative:</strong> a USD 20M round (post-money USD 115M,
+stake 17.4%) closes the gap without a bridge.</li>
+</ul>
+<h4 id="break-even-analysis">Break-even analysis</h4>
+<ul>
+<li>Revenue at NPV = 0 at WACC 30%: RUB 22.8 bn in 2030 (vs the plan of
+RUB 65 bn) — a large safety margin.</li>
+</ul>
+<hr />
+<h2 id="sheet-5.-reconciliation-with-the-interactive-finmodel.js">Sheet
+5. Reconciliation with the interactive finmodel.js</h2>
+<p>Following audit point C9 the simplification has been removed:
+<code>finmodel.js</code> now accounts for payroll, the 2029/2030/2033
+CapEx waves, working capital, the tax shield and depreciation (see
+<code>_shared/finmodel.js</code> v2 — synchronised with this model). The
+calculator in the major presentation produces identical NPV/IRR at the
+same slider settings.</p>
+<hr />
+<h2 id="methodological-notes-updated-post-audit">Methodological notes
+(updated post-audit)</h2>
+<ol type="1">
+<li><strong>WACC</strong> = build-up without double-CRP in
+RUB-denominated RF; β = 1.15 (Damodaran fintech 2026); ERP RF 9%
+(Damodaran May 2026). Resulting 30% is a defensible minimum.</li>
+<li><strong>Multi-stage TV</strong> has replaced Gordon — the TV share
+in NPV has dropped from 49% to 9%.</li>
+<li><strong>TV EBITDA margin</strong> = 74.8% (vs 96.9%) — realistic
+given OpEx growth with scale.</li>
+<li><strong>Equity Multiple</strong> 12× (exit-on-multiple) — within the
+upper band of tier-1 fintech.</li>
+<li><strong>Scenarios</strong> have explicit weights (15/55/30) and
+Expected Value of USD 88M.</li>
+<li><strong>Sensitivities</strong> have been extended: added OpEx ×
+timing, TV EBITDA margin × g, Monte Carlo, cash-runway stress,
+break-even.</li>
+<li><strong>FX</strong> is fixed: RUB/USD 89.0 as of 24.05.2026.</li>
+<li><strong>CBR key rate</strong> is fixed: 21.0% as of 24.05.2026.</li>
+</ol>
+<hr />
+<p><strong>Date:</strong> 24.05.2026 (refactor following the composite
+audit) <strong>Prepared:</strong> within the CPFSR project, based on the
+author’s concept (A.-Kh. A. Kagirov, deposit certificate No. 4011265 of
+19.12.2024) and the single SoT
+<code>_Мастер/Единые_показатели_v2.md</code>.</p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

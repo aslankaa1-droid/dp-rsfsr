@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="256" viewBox="0 0 560 256" role="img" aria-label="Логотип Цифровой Платформы РСФСР — две концепции">
+  <title>ЦП РСФСР — фирменный знак</title>
+  <desc>Две концепции логотипа: квадратная печать с цифровой точкой (Concept A) и круглая печать с пунктирным контуром и цифровой строкой реестра (Concept B). Цвета — Primary #0B2B5C, Accent #C9A961.</desc>
+
+  <defs>
+    <style>
+      .bg-primary  { fill: #0B2B5C; }
+      .bg-white    { fill: #FFFFFF; }
+      .accent      { fill: #C9A961; }
+      .accent-stk  { stroke: #C9A961; fill: none; }
+      .primary-stk { stroke: #0B2B5C; fill: none; }
+      .mono        { font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace; font-weight: 700; }
+      .display     { font-family: 'Onest', 'Inter', sans-serif; font-weight: 700; }
+    </style>
+  </defs>
+
+  <!-- ============ CONCEPT A: квадратная печать с цифровой точкой ============ -->
+  <g transform="translate(16, 16)">
+    <!-- Подложка щита-печати -->
+    <rect x="0" y="0" width="224" height="224" rx="20" class="bg-primary"/>
+    <!-- Внутренний контур -->
+    <rect x="14" y="14" width="196" height="196" rx="12" fill="none" stroke="#1F4A8F" stroke-width="1"/>
+    <!-- Монограмма «Р» (упрощённая геометрия) -->
+    <g transform="translate(64, 52)">
+      <!-- Вертикальная стойка -->
+      <rect x="0"  y="0"   width="20" height="120" class="bg-white"/>
+      <!-- Верхняя горизонталь -->
+      <rect x="0"  y="0"   width="76" height="20"  class="bg-white"/>
+      <!-- Правая дуга буквы Р в виде блока -->
+      <rect x="56" y="0"   width="20" height="60"  class="bg-white"/>
+      <!-- Нижняя горизонталь дуги -->
+      <rect x="0"  y="50"  width="76" height="20"  class="bg-white"/>
+    </g>
+    <!-- Цифровая точка-пиксель (Accent) -->
+    <rect x="170" y="40" width="14" height="14" class="accent"/>
+    <!-- Подпись «РСФСР» под знаком -->
+    <text x="112" y="200" text-anchor="middle" font-size="18" class="mono" fill="#C9A961" letter-spacing="3">РСФСР</text>
+  </g>
+
+  <!-- Подпись Concept A -->
+  <text x="128" y="252" text-anchor="middle" font-size="11" font-family="Inter, sans-serif" fill="#6C7280">CONCEPT A</text>
+
+  <!-- ============ CONCEPT B: круглая печать с пунктирным контуром ============ -->
+  <g transform="translate(304, 16)">
+    <!-- Подложка-круг -->
+    <circle cx="112" cy="112" r="112" class="bg-primary"/>
+    <!-- Пунктирный внутренний контур -->
+    <circle cx="112" cy="112" r="98" fill="none" stroke="#1F4A8F" stroke-width="1" stroke-dasharray="3 4"/>
+    <!-- Сплошной средний контур -->
+    <circle cx="112" cy="112" r="86" fill="none" stroke="#1F4A8F" stroke-width="1"/>
+    <!-- Монограмма «Р» -->
+    <g transform="translate(74, 52)">
+      <rect x="0"  y="0"  width="18" height="108" class="bg-white"/>
+      <rect x="0"  y="0"  width="66" height="18"  class="bg-white"/>
+      <rect x="48" y="0"  width="18" height="54"  class="bg-white"/>
+      <rect x="0"  y="44" width="66" height="18"  class="bg-white"/>
+    </g>
+    <!-- Цифровая строка-реестр (Accent) -->
+    <g class="accent-stk" stroke-width="2" stroke-linecap="round">
+      <line x1="64" y1="180" x2="76"  y2="180"/>
+      <line x1="84" y1="180" x2="96"  y2="180"/>
+      <line x1="104" y1="180" x2="116" y2="180"/>
+      <line x1="124" y1="180" x2="136" y2="180"/>
+      <line x1="144" y1="180" x2="156" y2="180"/>
+    </g>
+    <!-- Точка-пиксель -->
+    <rect x="160" y="174" width="12" height="12" class="accent"/>
+  </g>
+
+  <!-- Подпись Concept B -->
+  <text x="416" y="252" text-anchor="middle" font-size="11" font-family="Inter, sans-serif" fill="#6C7280">CONCEPT B</text>
+</svg>

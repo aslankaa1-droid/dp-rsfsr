@@ -1,0 +1,1629 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../">
+  <title>Modèle financier · ЦПФСР.РФ</title>
+  <meta name="description" content="Modèle financier — Modèle financier. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../_design-system/print.css">
+
+  <script defer src="../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../_design-system/i18n.js"></script>
+  <script defer src="../../../_design-system/ticker.js"></script>
+  <script defer src="../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Modèle financier</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Modèle financier</span>
+      <h1>Modèle financier</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="modèle-financier-cpfsr">Modèle financier CPFSR</h1>
+<p><strong>Auteur et titulaire de droits :</strong> A.-Kh. A. Kaguirov.
+Certificat de dépôt n° 4011265 du 19.12.2024 — fixation de la date de
+priorité et du hachage de l’œuvre ; régime de protection : savoir-faire
+(art. 1465 CC) + logiciel (art. 1262 CC, enregistrement Rospatent en
+cours).</p>
+<p><strong>Horizon :</strong> 10 ans (2025–2034) + valeur terminale
+multi-phases jusqu’à 2045+. <strong>Devise :</strong> roubles russes.
+Sauf indication contraire, montants en millions ₽ ; capacité de garantie
+et volumes DFA en milliards ₽. <strong>Date de référence :</strong>
+24.05.2026 (refactor complet à l’issue de l’audit consolidé ; Source of
+Truth unique — <code>_Мастер/Единые_показатели_v2.md</code>).
+<strong>Paramètres de marché figés :</strong> taux directeur BCR 21 %,
+FX USD/RUB 89,0, ERP RF 9 %, RF (OFZ 10 ans) 15,5 %, cible d’inflation 4
+%.</p>
+<p>Le fichier se présente comme un modèle lisible par machine au format
+Markdown, formules explicites en commentaires. Tous les calculs
+ci-dessous sont exécutés manuellement selon les mêmes formules qui sont
+reproduites dans <code>_shared/finmodel.js</code> (modèle interactif de
+la grande présentation). L’écart entre documents est levé : un SoT, un
+set de chiffres.</p>
+<hr />
+<h2 id="feuille-1.-hypothèses-hypothèses-clés">Feuille 1. Hypothèses —
+hypothèses-clés</h2>
+<h3 id="a.-marché-et-part-de-la-plateforme">A. Marché et part de la
+plateforme</h3>
+<p>Capacité de garantie du marché pour 2025 — <strong>25 000 Md
+₽</strong> (estimation prudente de l’auteur : 10 % des actifs × 50 % de
+la valeur depuis 507 000 Md ₽ d’actif total parc résidentiel +
+immobilier commercial + terrains).</p>
+<p>Indexation du marché selon la cible BCR de 4 % par an.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Unité</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Capacité de garantie du marché</td>
+<td>Md ₽</td>
+<td style="text-align: right;">25 000</td>
+<td style="text-align: right;">26 000</td>
+<td style="text-align: right;">27 040</td>
+<td style="text-align: right;">28 122</td>
+<td style="text-align: right;">29 246</td>
+<td style="text-align: right;">30 416</td>
+<td style="text-align: right;">31 633</td>
+<td style="text-align: right;">32 898</td>
+<td style="text-align: right;">34 214</td>
+<td style="text-align: right;">35 583</td>
+</tr>
+<tr>
+<td>Part de la plateforme (Base, post-refactor)</td>
+<td>%</td>
+<td style="text-align: right;">0,0 %</td>
+<td style="text-align: right;">0,4 %</td>
+<td style="text-align: right;">1,8 %</td>
+<td style="text-align: right;">4,4 %</td>
+<td style="text-align: right;">8,8 %</td>
+<td style="text-align: right;">10,8 %</td>
+<td style="text-align: right;">12,6 %</td>
+<td style="text-align: right;">14,4 %</td>
+<td style="text-align: right;">16,2 %</td>
+<td style="text-align: right;">18,0 %</td>
+</tr>
+<tr>
+<td>Volume d’émission DFA</td>
+<td>Md ₽</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">104,0</td>
+<td style="text-align: right;">486,7</td>
+<td style="text-align: right;">1 237,4</td>
+<td style="text-align: right;">2 573,6</td>
+<td style="text-align: right;">3 285,0</td>
+<td style="text-align: right;">3 985,7</td>
+<td style="text-align: right;">4 737,3</td>
+<td style="text-align: right;">5 542,7</td>
+<td style="text-align: right;">6 405,0</td>
+</tr>
+<tr>
+<td>Stack DFA en circulation</td>
+<td>Md ₽</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">104,0</td>
+<td style="text-align: right;">590,7</td>
+<td style="text-align: right;">1 828,1</td>
+<td style="text-align: right;">4 401,7</td>
+<td style="text-align: right;">7 686,7</td>
+<td style="text-align: right;">11 568,4</td>
+<td style="text-align: right;">15 818,7</td>
+<td style="text-align: right;">20 124,4</td>
+<td style="text-align: right;">23 953,5</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Ajustement audit : part de marché cible année 10 réduite de 20 % à 18
+% (Base) — position plus défendable ; le modèle conserve une VAN
+positive même à 7 % (Conservateur).</p>
+</blockquote>
+<h3 id="b.-tarifs-de-lopérateur">B. Tarifs de l’opérateur</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Unité</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Commission d’émission DFA</td>
+<td>%</td>
+<td style="text-align: right;">0,50 %</td>
+<td style="text-align: right;">0,50 %</td>
+<td style="text-align: right;">0,50 %</td>
+<td style="text-align: right;">0,50 %</td>
+<td style="text-align: right;">0,50 %</td>
+<td style="text-align: right;">0,50 %</td>
+<td style="text-align: right;">0,50 %</td>
+<td style="text-align: right;">0,50 %</td>
+<td style="text-align: right;">0,50 %</td>
+<td style="text-align: right;">0,50 %</td>
+</tr>
+<tr>
+<td>Commission de servicing (sur le stack)</td>
+<td>%</td>
+<td style="text-align: right;">0,30 %</td>
+<td style="text-align: right;">0,30 %</td>
+<td style="text-align: right;">0,30 %</td>
+<td style="text-align: right;">0,30 %</td>
+<td style="text-align: right;">0,30 %</td>
+<td style="text-align: right;">0,30 %</td>
+<td style="text-align: right;">0,30 %</td>
+<td style="text-align: right;">0,30 %</td>
+<td style="text-align: right;">0,30 %</td>
+<td style="text-align: right;">0,30 %</td>
+</tr>
+<tr>
+<td>Frais de plateforme (évaluation/assurance)</td>
+<td>%</td>
+<td style="text-align: right;">0,15 %</td>
+<td style="text-align: right;">0,15 %</td>
+<td style="text-align: right;">0,15 %</td>
+<td style="text-align: right;">0,15 %</td>
+<td style="text-align: right;">0,15 %</td>
+<td style="text-align: right;">0,15 %</td>
+<td style="text-align: right;">0,15 %</td>
+<td style="text-align: right;">0,15 %</td>
+<td style="text-align: right;">0,15 %</td>
+<td style="text-align: right;">0,15 %</td>
+</tr>
+<tr>
+<td>Licences B2B2G</td>
+<td>%</td>
+<td style="text-align: right;">0,000 %</td>
+<td style="text-align: right;">0,050 %</td>
+<td style="text-align: right;">0,070 %</td>
+<td style="text-align: right;">0,090 %</td>
+<td style="text-align: right;">0,100 %</td>
+<td style="text-align: right;">0,110 %</td>
+<td style="text-align: right;">0,120 %</td>
+<td style="text-align: right;">0,130 %</td>
+<td style="text-align: right;">0,140 %</td>
+<td style="text-align: right;">0,150 %</td>
+</tr>
+<tr>
+<td>Intégrations techniques (fixe)</td>
+<td>M ₽</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">180</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">520</td>
+<td style="text-align: right;">650</td>
+<td style="text-align: right;">780</td>
+<td style="text-align: right;">900</td>
+<td style="text-align: right;">1 020</td>
+<td style="text-align: right;">1 150</td>
+</tr>
+</tbody>
+</table>
+<h3 id="c.-coûts-refactor-de-la-courbe-opex-selon-laudit-c3">C. Coûts
+(refactor de la courbe OpEx selon l’audit C3)</h3>
+<p>Ajustement : +30 % compliance, +25 % cybersécurité, +40 % juridique ;
+ajout d’un bloc « évaluateurs/assureurs » (0,8 % du volume
+d’émission).</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Unité</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CapEx (plateforme, data centers, licences)</td>
+<td>M ₽</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">420</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">550</td>
+<td style="text-align: right;">1 800</td>
+<td style="text-align: right;">2 400</td>
+<td style="text-align: right;">1 600</td>
+<td style="text-align: right;">1 800</td>
+<td style="text-align: right;">2 300</td>
+<td style="text-align: right;">2 000</td>
+</tr>
+<tr>
+<td>OpEx (hors masse salariale, étendu)</td>
+<td>M ₽</td>
+<td style="text-align: right;">502</td>
+<td style="text-align: right;">552</td>
+<td style="text-align: right;">798</td>
+<td style="text-align: right;">2 184</td>
+<td style="text-align: right;">8 232</td>
+<td style="text-align: right;">14 970</td>
+<td style="text-align: right;">21 070</td>
+<td style="text-align: right;">25 188</td>
+<td style="text-align: right;">28 074</td>
+<td style="text-align: right;">28 950</td>
+</tr>
+<tr>
+<td>FTE (fin d’année)</td>
+<td>pers.</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">240</td>
+<td style="text-align: right;">270</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">330</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">370</td>
+</tr>
+<tr>
+<td>Salaire moyen brut</td>
+<td>k ₽/mois</td>
+<td style="text-align: right;">350,0</td>
+<td style="text-align: right;">371,0</td>
+<td style="text-align: right;">393,3</td>
+<td style="text-align: right;">416,9</td>
+<td style="text-align: right;">441,9</td>
+<td style="text-align: right;">468,4</td>
+<td style="text-align: right;">496,5</td>
+<td style="text-align: right;">526,3</td>
+<td style="text-align: right;">557,9</td>
+<td style="text-align: right;">591,4</td>
+</tr>
+<tr>
+<td>Masse salariale + 30 % charges</td>
+<td>M ₽</td>
+<td style="text-align: right;">218</td>
+<td style="text-align: right;">268</td>
+<td style="text-align: right;">663</td>
+<td style="text-align: right;">1 616</td>
+<td style="text-align: right;">3 518</td>
+<td style="text-align: right;">4 330</td>
+<td style="text-align: right;">5 330</td>
+<td style="text-align: right;">5 612</td>
+<td style="text-align: right;">5 826</td>
+<td style="text-align: right;">5 850</td>
+</tr>
+<tr>
+<td><strong>OpEx complet (OpEx + masse salariale)</strong></td>
+<td>M ₽</td>
+<td style="text-align: right;"><strong>720</strong></td>
+<td style="text-align: right;"><strong>820</strong></td>
+<td style="text-align: right;"><strong>1 461</strong></td>
+<td style="text-align: right;"><strong>3 800</strong></td>
+<td style="text-align: right;"><strong>11 750</strong></td>
+<td style="text-align: right;"><strong>19 300</strong></td>
+<td style="text-align: right;"><strong>26 400</strong></td>
+<td style="text-align: right;"><strong>30 800</strong></td>
+<td style="text-align: right;"><strong>33 900</strong></td>
+<td style="text-align: right;"><strong>34 800</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="d.-fiscalité-et-taux">D. Fiscalité et taux</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Impôt sur les sociétés</td>
+<td>20 % (CI, chapitre 25)</td>
+</tr>
+<tr>
+<td>TVA</td>
+<td>20 % (DFA : al. 12.2 § 2 art. 149 CI — exonération des opérations
+DFA)</td>
+</tr>
+<tr>
+<td>Cotisations sociales</td>
+<td>30 %</td>
+</tr>
+<tr>
+<td>Inflation</td>
+<td>4,0 % (cible BCR)</td>
+</tr>
+<tr>
+<td>Taux directeur BCR au 24.05.2026</td>
+<td>21,0 %</td>
+</tr>
+<tr>
+<td>RF (OFZ 10 ans, 24.05.2026)</td>
+<td>15,5 %</td>
+</tr>
+<tr>
+<td>ERP RF (Damodaran mai 2026)</td>
+<td>9,0 %</td>
+</tr>
+<tr>
+<td><strong>CMPC (post-refactor, sans double-CRP)</strong></td>
+<td><strong>30,0 %</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="e.-paramètres-de-lancement">E. Paramètres de lancement</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Horizon de mise en œuvre de la plateforme-opérateur</td>
+<td>18 mois</td>
+</tr>
+<tr>
+<td>Wedge pilot-light dans 259-FZ existant</td>
+<td>Q3 2027 (voir <code>04_Бизнес-план/Wedge_pilot-light.md</code>)</td>
+</tr>
+<tr>
+<td>Durée de vie moyenne d’une émission DFA</td>
+<td>5 ans</td>
+</tr>
+<tr>
+<td>Amortissement CapEx (linéaire)</td>
+<td>1/7 par an</td>
+</tr>
+<tr>
+<td>Ratio BFR / chiffre d’affaires</td>
+<td>5 %</td>
+</tr>
+<tr>
+<td>Coussin de trésorerie initial</td>
+<td>350 M ₽</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2
+id="feuille-2.-revenu-lignes-de-revenu-refactor-à-18-de-part">Feuille 2.
+Revenu — lignes de revenu (refactor à 18 % de part)</h2>
+<p>Tous les montants en M ₽.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr>
+<th>Indicateur</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Volume d’émission DFA</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">104 000</td>
+<td style="text-align: right;">486 700</td>
+<td style="text-align: right;">1 237 400</td>
+<td style="text-align: right;">2 573 600</td>
+<td style="text-align: right;">3 285 000</td>
+<td style="text-align: right;">3 985 700</td>
+<td style="text-align: right;">4 737 300</td>
+<td style="text-align: right;">5 542 700</td>
+<td style="text-align: right;">6 405 000</td>
+</tr>
+<tr>
+<td>Volume en circulation (stack)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">104 000</td>
+<td style="text-align: right;">590 700</td>
+<td style="text-align: right;">1 828 100</td>
+<td style="text-align: right;">4 401 700</td>
+<td style="text-align: right;">7 686 700</td>
+<td style="text-align: right;">11 568 400</td>
+<td style="text-align: right;">15 818 700</td>
+<td style="text-align: right;">20 124 400</td>
+<td style="text-align: right;">23 953 500</td>
+</tr>
+<tr>
+<td>1. Commission d’émission (0,50 %)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">520</td>
+<td style="text-align: right;">2 434</td>
+<td style="text-align: right;">6 187</td>
+<td style="text-align: right;">12 868</td>
+<td style="text-align: right;">16 425</td>
+<td style="text-align: right;">19 929</td>
+<td style="text-align: right;">23 687</td>
+<td style="text-align: right;">27 714</td>
+<td style="text-align: right;">32 025</td>
+</tr>
+<tr>
+<td>2. Commission de servicing (0,30 %)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">312</td>
+<td style="text-align: right;">1 772</td>
+<td style="text-align: right;">5 484</td>
+<td style="text-align: right;">13 205</td>
+<td style="text-align: right;">23 060</td>
+<td style="text-align: right;">34 705</td>
+<td style="text-align: right;">47 456</td>
+<td style="text-align: right;">60 373</td>
+<td style="text-align: right;">71 861</td>
+</tr>
+<tr>
+<td>3. Frais de plateforme (0,15 %)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">156</td>
+<td style="text-align: right;">730</td>
+<td style="text-align: right;">1 856</td>
+<td style="text-align: right;">3 860</td>
+<td style="text-align: right;">4 928</td>
+<td style="text-align: right;">5 979</td>
+<td style="text-align: right;">7 106</td>
+<td style="text-align: right;">8 314</td>
+<td style="text-align: right;">9 608</td>
+</tr>
+<tr>
+<td>4. Licences B2B2G</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">52</td>
+<td style="text-align: right;">341</td>
+<td style="text-align: right;">1 114</td>
+<td style="text-align: right;">2 574</td>
+<td style="text-align: right;">3 614</td>
+<td style="text-align: right;">4 783</td>
+<td style="text-align: right;">6 158</td>
+<td style="text-align: right;">7 760</td>
+<td style="text-align: right;">9 608</td>
+</tr>
+<tr>
+<td>5. Intégrations techniques</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">180</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">520</td>
+<td style="text-align: right;">650</td>
+<td style="text-align: right;">780</td>
+<td style="text-align: right;">900</td>
+<td style="text-align: right;">1 020</td>
+<td style="text-align: right;">1 150</td>
+</tr>
+<tr>
+<td>6. Services d’évaluation (0,8 % du volume)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">832</td>
+<td style="text-align: right;">3 894</td>
+<td style="text-align: right;">9 899</td>
+<td style="text-align: right;">20 589</td>
+<td style="text-align: right;">26 280</td>
+<td style="text-align: right;">31 886</td>
+<td style="text-align: right;">37 898</td>
+<td style="text-align: right;">44 342</td>
+<td style="text-align: right;">51 240</td>
+</tr>
+<tr>
+<td><strong>TOTAL revenus</strong></td>
+<td style="text-align: right;"><strong>0</strong></td>
+<td style="text-align: right;"><strong>180</strong></td>
+<td style="text-align: right;"><strong>2 798</strong></td>
+<td style="text-align: right;"><strong>11 105</strong></td>
+<td style="text-align: right;"><strong>37 502</strong></td>
+<td style="text-align: right;"><strong>65 005</strong></td>
+<td style="text-align: right;"><strong>91 309</strong></td>
+<td style="text-align: right;"><strong>110 415</strong></td>
+<td style="text-align: right;"><strong>125 766</strong></td>
+<td style="text-align: right;"><strong>137 905</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Ajustement : revenu année 1 (2026) ≈ 180 M ₽ (vs 1 350 M ₽) — chiffre
+réaliste pour l’année pilot-light dans le 259-FZ existant ; le revenu
+plein du financement ciblé démarre en 2028 (après adoption de la
+première partie du paquet législatif dans le scénario Base).</p>
+</blockquote>
+<hr />
+<h2
+id="feuille-3.-compte-de-résultat-flux-de-trésorerie-bilan-post-refactor">Feuille
+3. Compte de résultat, flux de trésorerie, bilan (post-refactor)</h2>
+<h3 id="pl-m">P&amp;L (M ₽)</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr>
+<th>Indicateur</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenu</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">180</td>
+<td style="text-align: right;">2 798</td>
+<td style="text-align: right;">11 105</td>
+<td style="text-align: right;">37 502</td>
+<td style="text-align: right;">65 005</td>
+<td style="text-align: right;">91 309</td>
+<td style="text-align: right;">110 415</td>
+<td style="text-align: right;">125 766</td>
+<td style="text-align: right;">137 905</td>
+</tr>
+<tr>
+<td>OpEx complet</td>
+<td style="text-align: right;">-720</td>
+<td style="text-align: right;">-820</td>
+<td style="text-align: right;">-1 461</td>
+<td style="text-align: right;">-3 800</td>
+<td style="text-align: right;">-11 750</td>
+<td style="text-align: right;">-19 300</td>
+<td style="text-align: right;">-26 400</td>
+<td style="text-align: right;">-30 800</td>
+<td style="text-align: right;">-33 900</td>
+<td style="text-align: right;">-34 800</td>
+</tr>
+<tr>
+<td><strong>EBITDA</strong></td>
+<td style="text-align: right;"><strong>-720</strong></td>
+<td style="text-align: right;"><strong>-640</strong></td>
+<td style="text-align: right;"><strong>1 337</strong></td>
+<td style="text-align: right;"><strong>7 305</strong></td>
+<td style="text-align: right;"><strong>25 752</strong></td>
+<td style="text-align: right;"><strong>45 705</strong></td>
+<td style="text-align: right;"><strong>64 909</strong></td>
+<td style="text-align: right;"><strong>79 615</strong></td>
+<td style="text-align: right;"><strong>91 866</strong></td>
+<td style="text-align: right;"><strong>103 105</strong></td>
+</tr>
+<tr>
+<td>Marge EBITDA</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">47,8 %</td>
+<td style="text-align: right;">65,8 %</td>
+<td style="text-align: right;">68,7 %</td>
+<td style="text-align: right;">70,3 %</td>
+<td style="text-align: right;">71,1 %</td>
+<td style="text-align: right;">72,1 %</td>
+<td style="text-align: right;">73,1 %</td>
+<td style="text-align: right;">74,8 %</td>
+</tr>
+<tr>
+<td>Amortissement</td>
+<td style="text-align: right;">-43</td>
+<td style="text-align: right;">-103</td>
+<td style="text-align: right;">-160</td>
+<td style="text-align: right;">-239</td>
+<td style="text-align: right;">-496</td>
+<td style="text-align: right;">-839</td>
+<td style="text-align: right;">-1 068</td>
+<td style="text-align: right;">-1 325</td>
+<td style="text-align: right;">-1 654</td>
+<td style="text-align: right;">-1 940</td>
+</tr>
+<tr>
+<td><strong>EBIT</strong></td>
+<td style="text-align: right;"><strong>-763</strong></td>
+<td style="text-align: right;"><strong>-743</strong></td>
+<td style="text-align: right;"><strong>1 177</strong></td>
+<td style="text-align: right;"><strong>7 066</strong></td>
+<td style="text-align: right;"><strong>25 256</strong></td>
+<td style="text-align: right;"><strong>44 866</strong></td>
+<td style="text-align: right;"><strong>63 841</strong></td>
+<td style="text-align: right;"><strong>78 290</strong></td>
+<td style="text-align: right;"><strong>90 212</strong></td>
+<td style="text-align: right;"><strong>101 165</strong></td>
+</tr>
+<tr>
+<td>Impôt 20 %</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-235</td>
+<td style="text-align: right;">-1 413</td>
+<td style="text-align: right;">-5 051</td>
+<td style="text-align: right;">-8 973</td>
+<td style="text-align: right;">-12 768</td>
+<td style="text-align: right;">-15 658</td>
+<td style="text-align: right;">-18 042</td>
+<td style="text-align: right;">-20 233</td>
+</tr>
+<tr>
+<td><strong>Résultat net</strong></td>
+<td style="text-align: right;"><strong>-763</strong></td>
+<td style="text-align: right;"><strong>-743</strong></td>
+<td style="text-align: right;"><strong>942</strong></td>
+<td style="text-align: right;"><strong>5 653</strong></td>
+<td style="text-align: right;"><strong>20 205</strong></td>
+<td style="text-align: right;"><strong>35 893</strong></td>
+<td style="text-align: right;"><strong>51 073</strong></td>
+<td style="text-align: right;"><strong>62 632</strong></td>
+<td style="text-align: right;"><strong>72 170</strong></td>
+<td style="text-align: right;"><strong>80 932</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Marge EBITDA 2034 = 74,8 %</strong> — réaliste pour une
+fintech tier-1 (Visa 67 %, Bourse de Moscou 75 %, dépositaires 50–65 %)
+; remplace les 96,9 % irréalistes du modèle pré-refactor.</p>
+<h3 id="cash-flow-m">Cash Flow (M ₽)</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr>
+<th>Indicateur</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EBITDA</td>
+<td style="text-align: right;">-720</td>
+<td style="text-align: right;">-640</td>
+<td style="text-align: right;">1 337</td>
+<td style="text-align: right;">7 305</td>
+<td style="text-align: right;">25 752</td>
+<td style="text-align: right;">45 705</td>
+<td style="text-align: right;">64 909</td>
+<td style="text-align: right;">79 615</td>
+<td style="text-align: right;">91 866</td>
+<td style="text-align: right;">103 105</td>
+</tr>
+<tr>
+<td>Impôt</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-235</td>
+<td style="text-align: right;">-1 413</td>
+<td style="text-align: right;">-5 051</td>
+<td style="text-align: right;">-8 973</td>
+<td style="text-align: right;">-12 768</td>
+<td style="text-align: right;">-15 658</td>
+<td style="text-align: right;">-18 042</td>
+<td style="text-align: right;">-20 233</td>
+</tr>
+<tr>
+<td>Δ BFR</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-9</td>
+<td style="text-align: right;">-131</td>
+<td style="text-align: right;">-415</td>
+<td style="text-align: right;">-1 320</td>
+<td style="text-align: right;">-1 375</td>
+<td style="text-align: right;">-1 315</td>
+<td style="text-align: right;">-955</td>
+<td style="text-align: right;">-768</td>
+<td style="text-align: right;">-607</td>
+</tr>
+<tr>
+<td>CapEx</td>
+<td style="text-align: right;">-300</td>
+<td style="text-align: right;">-420</td>
+<td style="text-align: right;">-400</td>
+<td style="text-align: right;">-550</td>
+<td style="text-align: right;">-1 800</td>
+<td style="text-align: right;">-2 400</td>
+<td style="text-align: right;">-1 600</td>
+<td style="text-align: right;">-1 800</td>
+<td style="text-align: right;">-2 300</td>
+<td style="text-align: right;">-2 000</td>
+</tr>
+<tr>
+<td><strong>FCF</strong></td>
+<td style="text-align: right;"><strong>-1 020</strong></td>
+<td style="text-align: right;"><strong>-1 069</strong></td>
+<td style="text-align: right;"><strong>571</strong></td>
+<td style="text-align: right;"><strong>4 927</strong></td>
+<td style="text-align: right;"><strong>17 581</strong></td>
+<td style="text-align: right;"><strong>32 957</strong></td>
+<td style="text-align: right;"><strong>49 226</strong></td>
+<td style="text-align: right;"><strong>61 202</strong></td>
+<td style="text-align: right;"><strong>70 756</strong></td>
+<td style="text-align: right;"><strong>80 265</strong></td>
+</tr>
+<tr>
+<td>FCF cumulé</td>
+<td style="text-align: right;">-1 020</td>
+<td style="text-align: right;">-2 089</td>
+<td style="text-align: right;">-1 518</td>
+<td style="text-align: right;">3 409</td>
+<td style="text-align: right;">20 990</td>
+<td style="text-align: right;">53 947</td>
+<td style="text-align: right;">103 173</td>
+<td style="text-align: right;">164 375</td>
+<td style="text-align: right;">235 131</td>
+<td style="text-align: right;">315 396</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pic de besoin de financement — 2 089 M ₽</strong> (fin 2026).
+Couverture par un tour de 15 M USD (1 335 M ₽) — 64 % ; recommandation :
+tour de 20 M USD ou bridge de 0,75 Md ₽.</p>
+<h3 id="bilan-simplifié-m">Bilan (simplifié, M ₽)</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr>
+<th>Indicateur</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trésorerie</td>
+<td style="text-align: right;">315</td>
+<td style="text-align: right;">-754</td>
+<td style="text-align: right;">-183</td>
+<td style="text-align: right;">4 744</td>
+<td style="text-align: right;">22 325</td>
+<td style="text-align: right;">55 282</td>
+<td style="text-align: right;">104 508</td>
+<td style="text-align: right;">165 710</td>
+<td style="text-align: right;">236 466</td>
+<td style="text-align: right;">316 731</td>
+</tr>
+<tr>
+<td>Immobilisations corporelles, nettes</td>
+<td style="text-align: right;">257</td>
+<td style="text-align: right;">574</td>
+<td style="text-align: right;">814</td>
+<td style="text-align: right;">1 125</td>
+<td style="text-align: right;">2 429</td>
+<td style="text-align: right;">3 990</td>
+<td style="text-align: right;">4 523</td>
+<td style="text-align: right;">4 998</td>
+<td style="text-align: right;">5 644</td>
+<td style="text-align: right;">5 704</td>
+</tr>
+<tr>
+<td>BFR</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">140</td>
+<td style="text-align: right;">555</td>
+<td style="text-align: right;">1 875</td>
+<td style="text-align: right;">3 250</td>
+<td style="text-align: right;">4 565</td>
+<td style="text-align: right;">5 521</td>
+<td style="text-align: right;">6 288</td>
+<td style="text-align: right;">6 895</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Gap de trésorerie 2026 (-754) après le tour initial de 15 M USD ↔︎ 1
+335 M ₽ : solde (1 335 − 1 020 − 1 069) = -754 M ₽ ; un tour de 20 M USD
+couvre le gap avec une marge de +561 M ₽.</p>
+</blockquote>
+<hr />
+<h2 id="feuille-4.-valorisation-et-sensibilité-multi-phases">Feuille 4.
+Valorisation et sensibilité (multi-phases)</h2>
+<h3 id="scénario-de-base-kpi-synchronisés-avec-sot-v3">Scénario de base
+— KPI (synchronisés avec SoT v3)</h3>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th>KPI</th>
+<th style="text-align: right;">Valeur</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>VAN @ CMPC 30 %, TV multi-phases</strong></td>
+<td style="text-align: right;"><strong>51 200 M ₽</strong></td>
+<td>≈ 51,2 Md ₽ (DCF EV complet = 41,8 + 7,4 + 1,96)</td>
+</tr>
+<tr>
+<td>VAN hors TV (seulement FCF 10 ans, CMPC 30 %)</td>
+<td style="text-align: right;">41 800 M ₽</td>
+<td>Somme FCF actualisés 2025–2034 = 41,78 Md ₽</td>
+</tr>
+<tr>
+<td>TV multi-phases — phases I+II (FCF 2035–2044, actualisé à 2025)</td>
+<td style="text-align: right;">7 400 M ₽</td>
+<td>Phase d’atténuation explicite : g (6 % → 2,5 %) et marge (75 % → 65
+%)</td>
+</tr>
+<tr>
+<td>TV multi-phases — perpétuité (FCF 2045+, actualisé à 2025)</td>
+<td style="text-align: right;">1 960 M ₽</td>
+<td>g = 2 %, EBITDA 60 % ; part de la VAN totale = 3,8 % (SoT v3 §
+5)</td>
+</tr>
+<tr>
+<td><strong>TRI project-level</strong></td>
+<td style="text-align: right;"><strong>~62 %</strong> (projet sur
+FCF+TV)</td>
+<td>Investor-level Y7 à 15,8 % ≈ 28,6 %</td>
+</tr>
+<tr>
+<td><strong>Payback project-level</strong></td>
+<td style="text-align: right;"><strong>2,8 ans</strong></td>
+<td>FCF cumulé franchit zéro en 2028. Payback distribution investisseur
+≈ 4,21 ans</td>
+</tr>
+<tr>
+<td><strong>Pic de besoin de financement</strong></td>
+<td style="text-align: right;"><strong>1 335 M ₽</strong> (tour 15 M
+USD)</td>
+<td>Gap de trésorerie fin 2026 = 745 M ₽</td>
+</tr>
+<tr>
+<td><strong>Equity Multiple</strong></td>
+<td style="text-align: right;"><strong>12×</strong> (référence
+défendable 8–12×)</td>
+<td>exit-on-multiple dans l’horizon Étape 2 + chemin Série B. Base 6,06×
+à 15,8 % et VAN 51,2</td>
+</tr>
+<tr>
+<td>Revenu année 5 (2029)</td>
+<td style="text-align: right;">37 502 M ₽</td>
+<td></td>
+</tr>
+<tr>
+<td>Revenu année 10 (2034)</td>
+<td style="text-align: right;">137 905 M ₽</td>
+<td></td>
+</tr>
+<tr>
+<td>EBITDA année 10</td>
+<td style="text-align: right;">103 105 M ₽</td>
+<td>Marge TV 74,8 % (après ajouts OpEx)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Equity Multiple 12× (exit-on-multiple)</strong> — référence
+haute défendable sur le chemin Série B (8,77×) + horizon Étape 2
+(extension du mandat 2029+). Valeur de base exit-on-multiple sous Étape
+1 à une part investisseur de 15,8 % et VAN totale 51,2 = 6,06×.
+Défendable via la rapid scaling 2028–2030 et la transition vers la
+mandate-expansion Étape 2.</p>
+<h3 id="scénarios-synchronisés-avec-sot-v3-8-poids-305515">Scénarios
+(synchronisés avec SoT v3 § 8, poids 30/55/15)</h3>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scénario</th>
+<th style="text-align: right;">Pre-money</th>
+<th style="text-align: right;">VAN totale (CMPC 30 %)</th>
+<th style="text-align: right;">TRI project-level</th>
+<th style="text-align: right;">Payback project-level</th>
+<th style="text-align: right;">Probabilité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Conservateur</strong> (259-FZ + VEB.RF uniquement, part 7
+%)</td>
+<td style="text-align: right;">60 M USD</td>
+<td style="text-align: right;"><strong>22 Md ₽</strong></td>
+<td style="text-align: right;">95 %</td>
+<td style="text-align: right;">3,8 ans</td>
+<td style="text-align: right;">15 %</td>
+</tr>
+<tr>
+<td><strong>Base</strong> (wedge-pilot 2026–2028, part 18 %)</td>
+<td style="text-align: right;">80 M USD</td>
+<td style="text-align: right;"><strong>51,2 Md ₽</strong></td>
+<td style="text-align: right;">161 %</td>
+<td style="text-align: right;">3,24 ans</td>
+<td style="text-align: right;">55 %</td>
+</tr>
+<tr>
+<td><strong>Optimiste</strong> (paquet législatif T+24, part 25 %)</td>
+<td style="text-align: right;">115 M USD</td>
+<td style="text-align: right;"><strong>82 Md ₽</strong></td>
+<td style="text-align: right;">195 %</td>
+<td style="text-align: right;">2,7 ans</td>
+<td style="text-align: right;">30 %</td>
+</tr>
+<tr>
+<td><strong>Espérance (VAN totale)</strong></td>
+<td style="text-align: right;">88 M USD</td>
+<td style="text-align: right;"><strong>55,8 Md ₽</strong></td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">100 %</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>KPI investor-level (investisseur Seed à 15,8 %, sortie Y7)
+:</strong> TRI Base ≈ 28,6 % ; Payback distribution ≈ 4,21 ans.
+Project-level vs investor-level — deux axes : le premier répond à «
+combien vaut le projet entier », le second à « combien l’investisseur
+Seed récupère sur son horizon ».</p>
+</blockquote>
+<h3 id="sensibilités-synchronisées-avec-sot-v3-9">Sensibilités
+(synchronisées avec SoT v3 § 9)</h3>
+<h4 id="van-md-cmpc-part-de-marché-base-ks-21-share-10-21">VAN (Md ₽) :
+CMPC × part de marché (base KS = 21 %, share ×1,0 = 21 %)</h4>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr>
+<th>CMPC  Part</th>
+<th style="text-align: right;">×0,5 (10,5 %)</th>
+<th style="text-align: right;">×0,75 (15,75 %)</th>
+<th style="text-align: right;">×1,0 (21 %)</th>
+<th style="text-align: right;">×1,25 (26,25 %)</th>
+<th style="text-align: right;">×1,5 (31,5 %)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>26 %</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr>
+<td>28 %</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">89</td>
+</tr>
+<tr>
+<td><strong>30 % (base)</strong></td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;"><strong>51,2</strong></td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">81</td>
+</tr>
+<tr>
+<td>32 %</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">75</td>
+</tr>
+<tr>
+<td>34 %</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">55</td>
+<td style="text-align: right;">70</td>
+</tr>
+</tbody>
+</table>
+<h4 id="van-md-uplift-opex-délai-de-lancement">VAN (Md ₽) : uplift OpEx
+× délai de lancement</h4>
+<table>
+<thead>
+<tr>
+<th>Délai  OpEx</th>
+<th style="text-align: right;">−10 %</th>
+<th style="text-align: right;">0 %</th>
+<th style="text-align: right;">+10 %</th>
+<th style="text-align: right;">+20 %</th>
+<th style="text-align: right;">+30 %</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>−6 mois</strong></td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">53</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">44</td>
+</tr>
+<tr>
+<td><strong>0 (base)</strong></td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;"><strong>51,2</strong></td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">37</td>
+</tr>
+<tr>
+<td><strong>+6 mois</strong></td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">30</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagramme-tornado-top-7-drivers-van">Diagramme tornado (top-7
+drivers VAN)</h4>
+<table>
+<thead>
+<tr>
+<th>Driver</th>
+<th style="text-align: right;">± Md ₽ VAN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Délai d’adoption Étape 2 (T+24 vs T+36)</td>
+<td style="text-align: right;">± 28</td>
+</tr>
+<tr>
+<td>Part de marché année 10 (18 % ± 7 pp)</td>
+<td style="text-align: right;">± 20</td>
+</tr>
+<tr>
+<td>CMPC (30 % ± 3 pp)</td>
+<td style="text-align: right;">± 12</td>
+</tr>
+<tr>
+<td>Uplift OpEx (±20 %)</td>
+<td style="text-align: right;">± 9</td>
+</tr>
+<tr>
+<td>Commission tarifaire (15 bps ± 4)</td>
+<td style="text-align: right;">± 8</td>
+</tr>
+<tr>
+<td>Lancement Étape 1 (±6 mois)</td>
+<td style="text-align: right;">± 7</td>
+</tr>
+<tr>
+<td>Marge EBITDA TV (74,8 % ± 5 pp)</td>
+<td style="text-align: right;">± 6</td>
+</tr>
+</tbody>
+</table>
+<h4 id="monte-carlo-simplifié-1-000-itérations-6-paramètres">Monte-Carlo
+(simplifié, 1 000 itérations, 6 paramètres)</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Percentile</th>
+<th style="text-align: right;">VAN, Md ₽</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">P5</td>
+<td style="text-align: right;">24</td>
+</tr>
+<tr>
+<td style="text-align: right;">P10</td>
+<td style="text-align: right;">38</td>
+</tr>
+<tr>
+<td style="text-align: right;">P25</td>
+<td style="text-align: right;">60</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>Médiane (P50)</strong></td>
+<td style="text-align: right;"><strong>91</strong></td>
+</tr>
+<tr>
+<td style="text-align: right;">P75</td>
+<td style="text-align: right;">125</td>
+</tr>
+<tr>
+<td style="text-align: right;">P90</td>
+<td style="text-align: right;">162</td>
+</tr>
+<tr>
+<td style="text-align: right;">P95</td>
+<td style="text-align: right;">184</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>P(VAN &gt; 50 Md ₽) = 73 %.</li>
+<li>P(VAN &lt; 0) = 4,8 %.</li>
+</ul>
+<h4 id="stress-test-de-trésorerie">Stress-test de trésorerie</h4>
+<ul>
+<li>FCF cumulé 2025–2026 = −2 080 M ₽.</li>
+<li>Tour de 15 M USD (1 335 M ₽) ferme 64 % du pic.</li>
+<li>Financement-bridge pour le gap résiduel = <strong>0,75 Md ₽</strong>
+sur 6 à 9 mois (valeur unique au niveau du projet, alignée avec
+Wedge_pilot-light.md et l’Évaluation internationale).</li>
+<li>Avec un retard pilote de +6 mois : gap supplémentaire de +0,38 Md
+₽.</li>
+<li><strong>Alternative :</strong> tour de 20 M USD (post-money 115 M
+USD, part 17,4 %) — ferme le gap sans bridge.</li>
+</ul>
+<h4 id="analyse-break-even">Analyse break-even</h4>
+<ul>
+<li>Revenu pour VAN = 0 à CMPC 30 % : 22,8 Md ₽ en 2030 (vs plan 65 Md
+₽) — marge de sécurité importante.</li>
+</ul>
+<hr />
+<h2 id="feuille-5.-réconciliation-avec-finmodel.js-interactif">Feuille
+5. Réconciliation avec finmodel.js interactif</h2>
+<p>Après le point d’audit C9, la simplification est levée :
+<code>finmodel.js</code> intègre désormais la masse salariale, les
+vagues CapEx 2029/2030/2033, le BFR, le bouclier fiscal, l’amortissement
+(voir <code>_shared/finmodel.js</code> v2 — synchronisé avec le présent
+modèle). Le calculateur de la grande présentation produit des VAN/TRI
+identiques aux mêmes positions de curseurs.</p>
+<hr />
+<h2 id="notes-méthodologiques-mises-à-jour-post-audit">Notes
+méthodologiques (mises à jour post-audit)</h2>
+<ol type="1">
+<li><strong>CMPC</strong> = build-up sans double-CRP en RUB-denominated
+RF ; β = 1,15 (Damodaran fintech 2026) ; ERP RF 9 % (Damodaran mai
+2026). Total 30 % — minimum défendable.</li>
+<li><strong>TV multi-phases</strong> remplace Gordon — part de la TV
+dans la VAN passée de 49 % à 9 %.</li>
+<li><strong>Marge EBITDA TV</strong> = 74,8 % (vs 96,9 %) — réaliste
+compte tenu de la croissance OpEx avec l’échelle.</li>
+<li><strong>Equity Multiple</strong> 12× (exit-on-multiple) — en haut de
+la fourchette fintech tier-1.</li>
+<li><strong>Scénarios</strong> explicitement pondérés (15/55/30),
+Espérance 88 M USD.</li>
+<li><strong>Sensibilités</strong> élargies : OpEx × délai, marge EBITDA
+TV × g, Monte-Carlo, stress-test trésorerie, break-even.</li>
+<li><strong>FX</strong> figé : 89,0 ₽/$ au 24.05.2026.</li>
+<li><strong>Taux directeur BCR</strong> figé : 21,0 % au
+24.05.2026.</li>
+</ol>
+<hr />
+<p><strong>Date :</strong> 24.05.2026 (refactor à l’issue de l’audit
+consolidé) <strong>Préparé :</strong> dans le cadre du projet CPFSR, sur
+la base du concept de l’auteur (A.-Kh. A. Kaguirov, certificat de dépôt
+n° 4011265 du 19.12.2024) et de la SoT unique
+<code>_Мастер/Единые_показатели_v2.md</code>.</p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

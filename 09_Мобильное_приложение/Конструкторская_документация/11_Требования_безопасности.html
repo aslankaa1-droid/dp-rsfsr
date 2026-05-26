@@ -1,0 +1,553 @@
+﻿<!doctype html>
+<html lang="ru" data-theme="daylight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Требования безопасности · ЦП РСФСР</title>
+<meta name="theme-color" content="#0B2B5C">
+<link rel="stylesheet" href="../../_shared/brand.css">
+<style>
+/* Document-specific styles */
+body { padding-top: 80px; }
+.doc-wrap { max-width: 880px; margin: 0 auto; padding: 48px 24px 96px; }
+.doc-header {
+  padding-bottom: 24px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.doc-header .eyebrow { margin-bottom: 12px; }
+.doc-header h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--primary); margin-bottom: 12px; }
+.doc-header p { color: var(--fg-mute); font-size: .9375rem; margin: 0; }
+.doc-content h1, .doc-content h2, .doc-content h3, .doc-content h4 { color: var(--primary); margin-top: 2em; margin-bottom: .5em; }
+.doc-content h1 { font-size: 1.875rem; }
+.doc-content h2 { font-size: 1.5rem; padding-bottom: 6px; border-bottom: 1px solid var(--border-soft); }
+.doc-content h3 { font-size: 1.25rem; }
+.doc-content h4 { font-size: 1.0625rem; color: var(--fg); }
+.doc-content p { line-height: 1.7; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content ul, .doc-content ol { line-height: 1.7; padding-left: 1.5em; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content li { margin-bottom: .35em; }
+.doc-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 12px 20px;
+  margin: 1em 0;
+  background: var(--bg-soft);
+  border-radius: 0 8px 8px 0;
+  color: var(--fg-soft);
+}
+.doc-content code {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg-soft);
+  padding: 2px 6px; border-radius: 4px;
+  font-size: .875em; color: var(--primary);
+}
+.doc-content pre {
+  background: var(--bg-soft); padding: 16px; border-radius: 10px;
+  overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: .875rem;
+  border: 1px solid var(--border-soft); margin: 1em 0;
+}
+.doc-content table {
+  width: 100%; border-collapse: collapse; margin: 1.5em 0;
+  background: var(--card-bg); border: 1px solid var(--border-soft);
+  border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-1);
+}
+.doc-content table th {
+  background: var(--primary); color: var(--primary-on);
+  text-align: left; padding: 12px 16px; font-weight: 600;
+  font-size: .8125rem; letter-spacing: .04em; text-transform: uppercase;
+}
+.doc-content table td {
+  padding: 10px 16px; border-bottom: 1px solid var(--border-soft);
+  font-size: .9375rem; color: var(--fg-soft);
+}
+.doc-content table tr:last-child td { border-bottom: none; }
+.doc-content table tr:hover td { background: var(--bg-soft); }
+.doc-content hr {
+  border: none; height: 1px; background: var(--border-soft); margin: 2.5em 0;
+}
+.doc-content a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+.doc-content a:hover { color: var(--accent); }
+.doc-content strong { color: var(--fg); font-weight: 700; }
+
+.doc-actions {
+  display: flex; gap: 10px; margin-top: 32px; flex-wrap: wrap;
+}
+
+/* Floating top button */
+.totop {
+  position: fixed; bottom: 24px; right: 24px; z-index: 50;
+  background: var(--primary); color: var(--primary-on);
+  border: none; border-radius: 50%; width: 48px; height: 48px;
+  cursor: pointer; box-shadow: var(--shadow-3);
+  display: none; font-size: 1.25rem;
+  transition: transform .2s var(--ease);
+}
+.totop:hover { transform: translateY(-2px); }
+.totop.show { display: grid; place-items: center; }
+[dir="rtl"] .totop { right: auto; left: 24px; }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div class="scroll-progress"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="../../07_Презентации/Большая_презентация/index.html"><span class="brand-mark">Р</span><span data-i18n="brand.name">ЦП РСФСР</span></a>
+    <nav class="topbar-nav">
+      <a href="../../07_Презентации/Большая_презентация/index.html#about" data-i18n="nav.about">О платформе</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#hub" data-i18n="nav.hub">Документы</a>
+      <a href="../../08_Веб-сайт/HTML_основной/index.html">Сайт</a>
+      <a href="../../07_Презентации/Малая_презентация/index.html">Презентация</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#contacts" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+    <div class="topbar-actions">
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-i18n-btn="ru">RU</button>
+        <button class="tbtn" data-i18n-btn="en">EN</button>
+        <button class="tbtn" data-i18n-btn="fr">FR</button>
+        <button class="tbtn" data-i18n-btn="ar">عر</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-theme-btn="daylight" aria-label="Дневная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+        <button class="tbtn" data-theme-btn="midnight" aria-label="Тёмная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="tbtn" data-theme-btn="sepia">◐</button>
+        <button class="tbtn" data-theme-btn="contrast">A11Y</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn" data-font-action="dec">A−</button>
+        <button class="tbtn" data-font-action="reset">A</button>
+        <button class="tbtn" data-font-action="inc">A+</button>
+      </div>
+      <button class="tbtn tbtn-burger">≡</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="eyebrow">Конструкторская документация · ЦП РСФСР ·
+МП</span>
+      <h1>Требования безопасности</h1>
+      <p>Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 · 19.12.2024 · ЦП РСФСР</p>
+    </header>
+    <article class="doc-content">
+<h1 id="требования-информационной-безопасности">Требования
+информационной безопасности</h1>
+<h2 id="цп-рсфср-мобильное-приложение">ЦП РСФСР — мобильное
+приложение</h2>
+<p><strong>Условное обозначение:</strong> РСФСР.МП.11.ТБ</p>
+<hr />
+<h2 id="категория-и-уровень-защищённости">1. Категория и уровень
+защищённости</h2>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Категория объекта КИИ (ФЗ-187)</td>
+<td>1 (наивысшая)</td>
+</tr>
+<tr>
+<td>Уровень защищённости ИСПДн (ПП РФ №1119)</td>
+<td>УЗ-1</td>
+</tr>
+<tr>
+<td>Уровень защиты по ГОСТ Р 57580.1</td>
+<td>4 (максимальный)</td>
+</tr>
+<tr>
+<td>Класс ГИС (Приказ ФСТЭК №17)</td>
+<td>К1</td>
+</tr>
+<tr>
+<td>Соответствие OWASP MASVS</td>
+<td>L2+</td>
+</tr>
+</tbody>
+</table>
+<h2 id="применяемые-нормативные-документы">2. Применяемые нормативные
+документы</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Документ</th>
+<th>Применимость</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ФЗ-152 «О персональных данных»</td>
+<td>Защита ПДн пользователей</td>
+</tr>
+<tr>
+<td>ФЗ-187 «О безопасности КИИ»</td>
+<td>Категория 1</td>
+</tr>
+<tr>
+<td>ФЗ-149 «Об информации»</td>
+<td>Базовые требования</td>
+</tr>
+<tr>
+<td>Положение Банка России №683-П</td>
+<td>Защита информации в финансовых организациях</td>
+</tr>
+<tr>
+<td>Положение Банка России №716-П</td>
+<td>Операционный риск</td>
+</tr>
+<tr>
+<td>Указание Банка России №6635-У</td>
+<td>Инциденты ИБ</td>
+</tr>
+<tr>
+<td>Положение Банка России №499-П</td>
+<td>Идентификация клиентов</td>
+</tr>
+<tr>
+<td>Положение Банка России №482-П</td>
+<td>ЕБС</td>
+</tr>
+<tr>
+<td>ГОСТ Р 57580.1-2017</td>
+<td>8 направлений защиты</td>
+</tr>
+<tr>
+<td>ГОСТ Р 34.10-2012</td>
+<td>ЭП</td>
+</tr>
+<tr>
+<td>ГОСТ Р 34.11-2012</td>
+<td>Хеширование</td>
+</tr>
+<tr>
+<td>ГОСТ Р 34.12-2015, ГОСТ Р 34.13-2015</td>
+<td>Шифрование</td>
+</tr>
+<tr>
+<td>Приказ ФСТЭК №239</td>
+<td>КИИ 1 категории</td>
+</tr>
+<tr>
+<td>Приказ ФСТЭК №17</td>
+<td>ГИС класса К1</td>
+</tr>
+<tr>
+<td>Приказ ФСТЭК №21</td>
+<td>ПДн</td>
+</tr>
+</tbody>
+</table>
+<h2 id="защита-данных">3. Защита данных</h2>
+<h3 id="защита-данных-в-покое-at-rest">3.1. Защита данных в покое (at
+rest)</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Тип данных</th>
+<th>Хранилище</th>
+<th>Защита</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Токены доступа, refresh-токены</td>
+<td>iOS Keychain / Android Keystore / Windows Credential Locker</td>
+<td>средствами ОС с биометрической защитой</td>
+</tr>
+<tr>
+<td>Криптографические ключи</td>
+<td>Secure Enclave / TEE</td>
+<td>средствами устройства</td>
+</tr>
+<tr>
+<td>Биометрические идентификаторы (но не векторы)</td>
+<td>Защищённое хранилище</td>
+<td>AES-256</td>
+</tr>
+<tr>
+<td>Сертификаты УКЭП</td>
+<td>Защищённое хранилище</td>
+<td>средствами ОС</td>
+</tr>
+<tr>
+<td>Кеш бизнес-данных</td>
+<td>IndexedDB / SQLite</td>
+<td>AES-256 с ключом из защищённого хранилища</td>
+</tr>
+<tr>
+<td>Настройки приложения</td>
+<td>LocalStorage</td>
+<td>не шифруется (нечувствительные)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="защита-данных-в-передаче-in-transit">3.2. Защита данных в
+передаче (in transit)</h3>
+<ul>
+<li><strong>TLS 1.3</strong> с ГОСТ-сертификатами (КриптоПро TLS) для
+всех HTTPS-обменов.</li>
+<li><strong>mTLS</strong> для критичных операций (выпуск ЦФА, подписание
+смарт-контракта).</li>
+<li><strong>Certificate pinning</strong> на корневой CA уровня
+финансовой инфраструктуры РФ.</li>
+<li><strong>HSTS</strong> для веб-режима (PWA).</li>
+</ul>
+<h3 id="шифрование-на-уровне-сообщений">3.3. Шифрование на уровне
+сообщений</h3>
+<p>Для критичных операций (выпуск ЦФА, подписание) применяется
+дополнительное шифрование payload на уровне приложения: - Алгоритм: ГОСТ
+Р 34.12-2015 («Кузнечик» / «Магма»). - Режим: ГОСТ Р 34.13-2015.</p>
+<h3 id="подпись-данных">3.4. Подпись данных</h3>
+<ul>
+<li>УКЭП пользователя: ГОСТ Р 34.10-2012 с длиной ключа 256/512
+бит.</li>
+<li>Подпись хеш-функцией: ГОСТ Р 34.11-2012 (Стрибог).</li>
+<li>Сертификаты УКЭП выдаются Удостоверяющими центрами, аккредитованными
+Минцифры России.</li>
+</ul>
+<h2 id="аутентификация-и-авторизация">4. Аутентификация и
+авторизация</h2>
+<h3 id="способы-аутентификации">4.1. Способы аутентификации</h3>
+<h4 id="первичная-вход-в-приложение">Первичная (вход в приложение)</h4>
+<ul>
+<li><strong>ЕСИА</strong> — OpenID Connect 1.0 с подтверждённой учётной
+записью.</li>
+<li><strong>ЕБС</strong> — биометрическая идентификация (Положение
+№482-П).</li>
+</ul>
+<h4 id="локальная-повторный-вход">Локальная (повторный вход)</h4>
+<ul>
+<li><strong>Биометрия устройства</strong> — Face ID / Touch ID / Windows
+Hello.</li>
+<li><strong>PIN-код</strong> — 4–6 цифр, защищённое хранилище.</li>
+</ul>
+<h4 id="критичные-операции">Критичные операции</h4>
+<ul>
+<li>Двухфакторная аутентификация: SMS-код + биометрия.</li>
+<li>Подписание УКЭП.</li>
+</ul>
+<h3 id="управление-сессиями">4.2. Управление сессиями</h3>
+<ul>
+<li>Срок жизни access-токена: 15 минут.</li>
+<li>Срок жизни refresh-токена: 30 дней.</li>
+<li>При длительной неактивности (10 минут) — повторная биометрическая
+аутентификация.</li>
+<li>При смене устройства — все предыдущие сессии аннулируются.</li>
+</ul>
+<h2 id="защита-приложения">5. Защита приложения</h2>
+<h3 id="защита-от-компрометации-устройства">5.1. Защита от компрометации
+устройства</h3>
+<ul>
+<li><strong>Jailbreak/Root detection</strong> — при обнаружении
+компрометации приложение:
+<ol type="1">
+<li>Выводит предупреждение пользователю.</li>
+<li>Блокирует функции выпуска ЦФА и подписания.</li>
+<li>Сохраняет режим только-чтение для существующих ЦФА.</li>
+<li>Отправляет инцидент в SOC.</li>
+</ol></li>
+<li><strong>Emulator detection</strong> — отказ работы в эмуляторах (для
+продуктивной сборки).</li>
+</ul>
+<h3 id="защита-от-обратной-разработки">5.2. Защита от обратной
+разработки</h3>
+<ul>
+<li><strong>Code obfuscation</strong> для всех платформ:
+<ul>
+<li>ProGuard / R8 для Android;</li>
+<li>bitcode + Swift obfuscation для iOS;</li>
+<li>.NET obfuscation для Windows;</li>
+<li>JavaScript obfuscation для PWA.</li>
+</ul></li>
+<li><strong>Native code integrity</strong> — проверка контрольных сумм
+при запуске.</li>
+</ul>
+<h3 id="защита-от-mitm-атак">5.3. Защита от MITM-атак</h3>
+<ul>
+<li>Certificate pinning на двух уровнях: корневой CA и
+промежуточный.</li>
+<li>Запрет работы при подозрении на установку custom CA на
+устройстве.</li>
+</ul>
+<h3 id="защита-от-скриншотов">5.4. Защита от скриншотов</h3>
+<ul>
+<li>Включена защита от скриншотов для экранов:
+<ul>
+<li>Подписание смарт-контракта.</li>
+<li>OTP-код.</li>
+<li>Реквизиты для выплат.</li>
+<li>Карточки активов с полным адресом.</li>
+</ul></li>
+</ul>
+<h3 id="защита-runtime">5.5. Защита runtime</h3>
+<ul>
+<li><strong>Anti-debug</strong> — обнаружение отладчиков и
+frida-серверов.</li>
+<li><strong>Anti-hook</strong> — проверка целостности ключевых
+функций.</li>
+<li><strong>Memory protection</strong> — очистка секретов из памяти
+после использования.</li>
+</ul>
+<h2 id="защита-персональных-данных-152-фз">6. Защита персональных данных
+(152-ФЗ)</h2>
+<h3 id="категория-пдн">6.1. Категория ПДн</h3>
+<p>Обрабатываются следующие категории ПДн (в соответствии со статьёй 3
+152-ФЗ): - Иные категории — основная (ФИО, паспорт, ИНН, контакты,
+адрес). - Биометрические — при работе с ЕБС.</p>
+<h3 id="согласия">6.2. Согласия</h3>
+<ul>
+<li>Согласие на обработку ПДн — оформляется через ЕСИА при первом
+входе.</li>
+<li>Возможность отзыва согласия — через раздел «Профиль → Безопасность →
+Удалить аккаунт».</li>
+</ul>
+<h3 id="локализация">6.3. Локализация</h3>
+<p>Все ПДн обрабатываются и хранятся исключительно на территории
+Российской Федерации в соответствии с пунктом 5 статьи 18 152-ФЗ.</p>
+<h3 id="уровень-защищённости">6.4. Уровень защищённости</h3>
+<ul>
+<li>УЗ-1 в соответствии с ПП РФ №1119.</li>
+<li>Соответствие приказу ФСТЭК России №21.</li>
+</ul>
+<h3 id="уведомление-роскомнадзора">6.5. Уведомление Роскомнадзора</h3>
+<p>Оператор внесён в реестр операторов ПДн Роскомнадзора.</p>
+<h2 id="реагирование-на-инциденты">7. Реагирование на инциденты</h2>
+<h3 id="категории-инцидентов">7.1. Категории инцидентов</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Категория</th>
+<th>Описание</th>
+<th>Время реагирования</th>
+<th>Уведомление</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Критический</td>
+<td>Компрометация ключей УКЭП, массовая утечка ПДн</td>
+<td>≤ 1 час</td>
+<td>Банк России, ГосСОПКА, НКЦКИ</td>
+</tr>
+<tr>
+<td>Высокий</td>
+<td>Компрометация отдельного аккаунта, попытка несанкционированного
+выпуска ЦФА</td>
+<td>≤ 4 часа</td>
+<td>Банк России</td>
+</tr>
+<tr>
+<td>Средний</td>
+<td>Подозрительная активность</td>
+<td>≤ 24 часа</td>
+<td>Внутренний SOC</td>
+</tr>
+<tr>
+<td>Низкий</td>
+<td>Фоновые события</td>
+<td>По расписанию</td>
+<td>Внутренний SOC</td>
+</tr>
+</tbody>
+</table>
+<h3 id="регламент-уведомления">7.2. Регламент уведомления</h3>
+<p>В соответствии с Указанием Банка России №6635-У: - Критические
+инциденты — в течение 1 часа. - Высокие — в течение 24 часов. - Полный
+отчёт — в течение 30 дней.</p>
+<p>Уведомления через защищённый канал ВипНет в формате XML.</p>
+<h2 id="аудит-и-мониторинг">8. Аудит и мониторинг</h2>
+<h3 id="журналирование">8.1. Журналирование</h3>
+<p>Все ключевые события приложения логируются: - Авторизация
+(успех/неудача). - Подача актива. - Запуск выпуска ЦФА. - Подписание
+смарт-контракта. - Получение выплат. - Изменения профиля и настроек. -
+Изменения биометрических данных. - События безопасности (jailbreak,
+MITM, неудачная аутентификация).</p>
+<h3 id="хранение-журналов">8.2. Хранение журналов</h3>
+<ul>
+<li>Operational logs: 13 месяцев.</li>
+<li>Security audit logs: 10 лет.</li>
+<li>Хранение на серверной части, не на устройстве.</li>
+</ul>
+<h3 id="siem-интеграция">8.3. SIEM-интеграция</h3>
+<p>Все события безопасности отправляются в SIEM-систему оператора
+(KOMRAD / MaxPatrol SIEM / R-Vision SIEM) в реальном времени.</p>
+<h2 id="сертификация">9. Сертификация</h2>
+<h3 id="сертификаты-фстэк-россии">9.1. Сертификаты ФСТЭК России</h3>
+<ul>
+<li>Соответствие приказу №239 (КИИ 1 категории).</li>
+<li>Соответствие приказу №17 (К1).</li>
+<li>Соответствие приказу №21 (УЗ-1 ПДн).</li>
+</ul>
+<h3 id="сертификаты-фсб-россии">9.2. Сертификаты ФСБ России</h3>
+<ul>
+<li>Сертификация криптографических средств.</li>
+</ul>
+<h3 id="сертификаты-банка-россии">9.3. Сертификаты Банка России</h3>
+<ul>
+<li>Соответствие положению №779-П (оператор ИС).</li>
+<li>Соответствие положению №683-П.</li>
+<li>Соответствие ГОСТ Р 57580.1 уровень 4.</li>
+</ul>
+<h3 id="реестр-минцифры-россии">9.4. Реестр Минцифры России</h3>
+<ul>
+<li>Включение в Единый реестр российского ПО (ПП РФ №1236).</li>
+</ul>
+<h3 id="регистрация-в-роскомнадзоре">9.5. Регистрация в
+Роскомнадзоре</h3>
+<ul>
+<li>Уведомление об обработке ПДн.</li>
+</ul>
+<h2 id="контроль-соответствия">10. Контроль соответствия</h2>
+<ul>
+<li>Внутренний аудит ИБ — ежегодно.</li>
+<li>Внешний пентест аккредитованной лабораторией — ежегодно.</li>
+<li>Внутренний Red Team — раз в полугодие.</li>
+<li>Проверка соответствия ГОСТ Р 57580.1 — ежегодно.</li>
+<li>Регуляторные проверки — по требованию ЦБ, ФСТЭК, ФСБ,
+Роскомнадзора.</li>
+</ul>
+<hr />
+<p><em>Документ описывает требования информационной безопасности к
+мобильному приложению ЦП РСФСР и подлежит уточнению по результатам
+сертификационных испытаний.</em></p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../07_Презентации/Большая_презентация/index.html#hub">К хабу документов</a>
+      <a class="btn btn--ghost" href="../../07_Презентации/Большая_презентация/index.html">Большая презентация</a>
+    </div>
+  </div>
+</main>
+
+<button class="totop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Наверх">↑</button>
+
+<script src="../../_shared/i18n.js"></script>
+<script src="../../_shared/app.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const t = document.querySelector('.totop');
+  if (t) t.classList.toggle('show', window.scrollY > 600);
+});
+</script>
+</body>
+</html>

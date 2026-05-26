@@ -1,0 +1,1023 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../../">
+  <title>Briefing for State Authorities and the CBR · ЦПФСР.РФ</title>
+  <meta name="description" content="Briefing for State Authorities and the CBR — Presentations · State Authorities. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../../_design-system/print.css">
+
+  <script defer src="../../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../../_design-system/i18n.js"></script>
+  <script defer src="../../../../_design-system/ticker.js"></script>
+  <script defer src="../../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Presentations · State Authorities</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Presentations · State Authorities</span>
+      <h1>Briefing for State Authorities and the CBR</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="briefing-paper">Briefing Paper</h1>
+<h2
+id="digital-platform-russian-service-for-social-development-financing-cpfsr">Digital
+Platform “Russian Service for Social Development Financing” (CPFSR)</h2>
+<h3
+id="off-budget-financing-of-national-and-infrastructure-projects-on-the-basis-of-digital-financial-assets-backed-by-the-collateral-capacity-of-citizens-and-organisations-of-the-russian-federation">Off-budget
+financing of national and infrastructure projects on the basis of
+digital financial assets backed by the collateral capacity of citizens
+and organisations of the Russian Federation</h3>
+<hr />
+<p><strong>Addressees:</strong> the Central Bank of the Russian
+Federation; the Ministry of Finance of the Russian Federation; the
+Ministry of Economic Development of the Russian Federation; the Ministry
+of Digital Development, Communications and Mass Media of the Russian
+Federation; the Federal Treasury; the Office of the Government of the
+Russian Federation.</p>
+<p><strong>Author and rightsholder of the concept:</strong> Abdul-Khakim
+Akhmadovich Kagirov. Deposit certificate No. 4011265 of 19.12.2024
+(know-how, trade secret; GOST R 34.11-2012 hash:
+<code>a7d40971cbb5443e0f3d037ff054080dfb0064b59832cf1b89386078bf3de373</code>).</p>
+<hr />
+<h2 id="executive-summary">1. Executive Summary</h2>
+<blockquote>
+<p><strong>Architectural note (post-audit 24.05.2026).</strong> The
+briefing paper describes the two-stage implementation of the
+platform:</p>
+<p><strong>Stage 1 (pilot-light 2026–2028)</strong> — launch WITHOUT
+amendments to Federal Law 86-FZ. CPFSR operates as an IS DFA operator
+under existing 259-FZ in technology partnership with a licensed operator
+(including Atomyze JSC). Targeted funding is provided through the VEB.RF
+Project Finance Factory (Government Decree of the Russian Federation
+No. 158 of 15.02.2018) and the Federal Treasury within the existing
+Budget Code. The Bank of Russia is the general supervisory regulator of
+the financial market under Article 4 of 86-FZ.</p>
+<p><strong>Stage 2 (2029+ horizon)</strong> — expansion of the
+platform’s mandate and transition to the targeted secured-emission model
+of the Bank of Russia. The description below relates to this stage and
+is presented as a <strong>horizon vision</strong>. The package of four
+federal-law amendments (§ 5 below) is NOT part of the immediate roadmap.
+It is considered <strong>only after a positive wedge-pilot track record
+of ≥ 12 months of industrial operation</strong>.</p>
+</blockquote>
+<p>The Digital Platform CPFSR is an operating infrastructure that
+ensures the issuance of digital financial assets (DFA) against the
+pledge of real estate and other liquid property of citizens and
+organisations of the Russian Federation.</p>
+<p><strong>Stage 1 / pilot-light:</strong> against the pool of
+pledge-backed DFA in 2026–2028, targeted funding is organised through
+the VEB.RF Project Finance Factory and the Federal Treasury on a
+dedicated escrow account with targeted control.</p>
+<p><strong>Stage 2 / 2029+ horizon (defensible mandate expansion, not
+part of the immediate roadmap):</strong> implemented after a positive
+Stage 1 track record of ≥ 12 months of industrial operation and upon
+adoption of the package of four federal-law amendments. At this stage,
+against the aggregate portfolio of pledge-backed DFA, additional secured
+issuance by the Bank of Russia may be considered (in the longer
+perspective — in the form of the digital ruble), targetedly accumulated
+on dedicated escrow accounts under the Bank of Russia’s management and
+channelled through the Federal Treasury for the financing of national
+and infrastructure projects. Upon completion of the projects, an
+exchange of DFA takes place: the owner’s initial collateral is replaced
+by DFA on the newly built state object, the encumbrance is removed from
+the original asset, and the owner receives the agreed remuneration.</p>
+<p>The platform addresses six strategic objectives: - activates
+“dormant” private assets as a source of off-budget financing of state
+programmes; - preserves the controlled-inflation regime, since the
+financing is performed strictly against secured and appraised assets (in
+Stage 1 — through the infrastructure channel of VEB.RF + the Federal
+Treasury; in Stage 2 — potentially through secured issuance by the CBR);
+- reduces the queue of national-project financing; - accelerates the
+development of the DFA industry in the Russian Federation in line with
+Federal Law No. 259-FZ of 31.07.2020; - provides additional guaranteed
+income to owners of pledged property; - strengthens the sovereignty of
+the financial system by replacing external debt financing with domestic
+funding.</p>
+<p>The implementation period for the operator platform, according to the
+author’s concept, is <strong>from 18 months</strong>.</p>
+<hr />
+<h2 id="problem-statement">2. Problem statement</h2>
+<p>The current stage of implementation of national projects and state
+programmes of the Russian Federation faces the simultaneous impact of
+the following constraints:</p>
+<ol type="1">
+<li><strong>Budget constraints.</strong> Federal budget spending on
+investment programmes is limited by the requirements of the budget rule
+and by the priorities of social-block expenditures.</li>
+<li><strong>High cost of debt funding.</strong> Against the backdrop of
+the Bank of Russia key rate in recent years, raising commercial credit
+funding for infrastructure projects is becoming economically unjustified
+for the majority of state customers.</li>
+<li><strong>Restricted access to international capital markets.</strong>
+Under sanctions, traditional sources of external funding are closed or
+significantly more expensive.</li>
+<li><strong>Delay in the full-scale launch of the digital
+ruble.</strong> There is no mass practical basis for applying the
+digital ruble in large targeted programmes.</li>
+<li><strong>Low monetisation of private assets.</strong> The aggregate
+value of real estate in the Russian Federation is estimated at the order
+of RUB 507 tn, while the overwhelming part is not involved in the
+financial turnover.</li>
+</ol>
+<p>These constraints form the <strong>paradox of “a wealthy country with
+an investment money-mass deficit”</strong>: in the presence of a vast
+stock of national wealth, its conversion into a source of infrastructure
+development remains disproportionately low.</p>
+<hr />
+<h2 id="conceptual-solution">3. Conceptual solution</h2>
+<blockquote>
+<p><strong>Architectural principle.</strong> CPFSR operates in two
+sequential stages. Stage 1 (pilot-light 2026–2028) is launched within
+the existing legal framework without amendments to Federal Law 86-FZ.
+Stage 2 (2029+ horizon) — expansion of the mandate with transition to
+the targeted secured-emission model of the Bank of Russia — is
+implemented only after a positive Stage 1 track record of ≥ 12 months of
+industrial operation and adoption of the package of four federal-law
+amendments. Section 3.1 below describes the Stage 1 operating model; §
+3.2 — the defensible Stage 2 horizon.</p>
+</blockquote>
+<h3 id="principles-of-platform-operation-stage-1-20262028">3.1.
+Principles of platform operation — Stage 1 (2026–2028)</h3>
+<ol type="1">
+<li>The property owner (an individual, a legal entity, a state
+enterprise, an individual entrepreneur, a non-profit organisation, a
+fund) registers on the platform and undergoes identification through the
+Unified Identification and Authentication System (ESIA) and/or the
+Unified Biometric System (572-FZ).</li>
+<li>The property object (real estate, transport, intellectual property,
+securities) is appraised by an authorised appraisal and/or insurance
+organisation under Federal Law 135-FZ and by the methodologies
+established by the state.</li>
+<li>A temporary encumbrance is placed on the object in favour of the
+platform operator (Articles 334–358 of the Civil Code, Federal Law
+102-FZ); the property remains in the disposal of the owner.</li>
+<li>CPFSR, as a front-end / agent, agrees the issuance parameters with
+the technology partner — an incumbent operator of the DFA-issuance
+information system under 779-P (Atomyze JSC or another register entity —
+the 779-P licence is individual and is not transferable; the operator’s
+rules are approved by the Bank of Russia under Article 6 of Federal Law
+259-FZ).</li>
+<li>The technology partner issues the DFA on the terms of a smart
+contract (term, size, exchange conditions, insurance, force majeure,
+owner remuneration, reconciliation act, the procedure for the removal of
+the encumbrance). The parties to the smart contract are the Pledgor, the
+Operator and the DFA acquirers.</li>
+<li>The placement of the DFA is funded through the infrastructure
+channel: the VEB.RF Project Finance Factory (Government Decree of
+15.02.2018 No. 158) and the Federal Treasury within the powers granted
+by the Budget Code of the Russian Federation. Settlements — in non-cash
+ruble or in the digital ruble under 340-FZ as a settlement complement.
+<strong>No additional issuance by the Bank of Russia is envisaged in
+Stage 1.</strong></li>
+<li>The funds are directed to state customers — specific ministries and
+subordinate organisations — for the implementation of approved national
+projects and federal programmes in the procedure established by the
+Budget Code and the sub-legislative acts.</li>
+<li>Upon completion of the project, the new state-property object is
+appraised. A new DFA is issued against it, with a value exceeding the
+owner’s initial DFA. An <strong>exchange of DFA</strong> takes place
+between the parties in accordance with the operator’s rules under
+Article 6 of Federal Law 259-FZ: the owner’s initial asset is released
+from the encumbrance, and the DFA on the built object enters
+circulation.</li>
+<li>The initial encumbrance is removed. The owner receives the agreed
+remuneration. Voluntary prolongation and reinvestment of the collateral
+into new projects is possible.</li>
+<li>Upon an insured event, the partner insurance organisation issues its
+own DFA through the platform to exchange for and compensate the owner’s
+initial DFA (Law of the RF No. 4015-1 + Chapter 48 of the Civil
+Code).</li>
+</ol>
+<h3 id="stage-2-horizon-2029-t36-defensible-mandate-expansion">3.2.
+Stage 2 horizon (2029+, T+36+) — defensible mandate expansion</h3>
+<p>Following a positive Stage 1 track record of ≥ 12 months of
+industrial operation and in coordination among the Ministry of Economic
+Development / Ministry of Finance / VEB.RF / State Duma / Bank of
+Russia, a transition may be considered to the model of <strong>targeted
+secured emission by the Bank of Russia against a pool of pledge-backed
+DFA</strong>, implemented through a dedicated escrow account under the
+Bank of Russia’s management with distribution through the Federal
+Treasury. Stage 2 requires the package of four federal-law amendments
+(86-FZ, 259-FZ, the Budget Code, the Civil Code) and the sub-legislative
+acts — see § 6. <strong>Stage 2 is not part of the near-term investment
+roadmap and is not the subject of the current communication with the
+investor; it is presented as a defensible horizon, the implementation of
+which depends on the legislative work of the State Duma and the decision
+of the Board of Directors of the Bank of Russia.</strong></p>
+<h3 id="key-feature-of-stage-1-inflation-control">3.3. Key feature of
+Stage 1: inflation control</h3>
+<p>The infrastructure funding through the VEB.RF Factory and the Federal
+Treasury is performed <strong>strictly against a secured and appraised
+asset</strong> within budget procedures and <strong>exclusively for the
+purposes of approved state programmes</strong>. This eliminates the
+classic inflation risk of unsecured issuance. In Stage 1 the platform
+converts the “dormant” private capitalisation into active investment
+form without an increase in the money supply on the issuer’s side.</p>
+<h3 id="key-stage-1-principle-non-public-dfa-circulation">3.4. Key Stage
+1 principle — non-public DFA circulation</h3>
+<p>The DFA issued within CPFSR are not intended for free public
+circulation: their circulation is limited to professional
+securities-market participants and qualified acquirers in accordance
+with the operator’s rules under Article 6 of Federal Law 259-FZ. This
+reduces the risk of manipulation and speculative pressure.</p>
+<hr />
+<h2 id="collateral-capacity">4. Collateral capacity</h2>
+<table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 36%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr>
+<th>Property segment</th>
+<th style="text-align: right;">Total volume, RUB tn</th>
+<th style="text-align: right;">Conservative estimate of the engaged mass
+(10% of assets × 50% of value), RUB tn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Residential stock (4.7 bn m² × avg. RUB 85,000/m²)</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">20.0</td>
+</tr>
+<tr>
+<td>Commercial real estate (offices, retail, warehouses, hotels,
+industrial, other)</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">2.5</td>
+</tr>
+<tr>
+<td>Land plots (housing, dachas, land under enterprises and
+infrastructure)</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">3.0</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td style="text-align: right;"><strong>507</strong></td>
+<td style="text-align: right;"><strong>25.5</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Source: the author’s concept and the calculation of the
+collateral-value potential of assets of the Russian Federation
+(excluding state-owned infrastructure facilities and movable
+property).</p>
+<p>Thus, by phased involvement of even 5–10% of this conservative
+potential, the Russian Federation gains <strong>up to RUB 1.3–2.5 tn of
+off-budget investment funding</strong> at the pilot-contour horizon and
+<strong>up to RUB 25 tn</strong> at the full capacity of the industrial
+phase. This is comparable to the aggregate funding of national projects
+over a three-year horizon.</p>
+<hr />
+<h2 id="effect-for-participants">5. Effect for participants</h2>
+<h3 id="for-the-state">For the state</h3>
+<ul>
+<li>Off-budget financing of national and social projects without an
+increase in the debt burden.</li>
+<li>Reduction of the queue of global-project financing.</li>
+<li>Economic growth through accelerated implementation of infrastructure
+projects and the associated multiplier (expert estimates put the
+coefficient at 1.8–2.3 per ruble of infrastructure investment).</li>
+<li>Development of the digital economy as one of the priorities of
+national development.</li>
+<li>A higher level of state social responsibility through accelerated
+fulfilment of social obligations.</li>
+</ul>
+<h3 id="for-the-bank-of-russia">For the Bank of Russia</h3>
+<ul>
+<li>Development of the Russian Federation’s financial market in the
+format of a sovereign digital infrastructure.</li>
+<li>Steady increase in the money supply proportionate to the growth of
+the real economy and secured assets.</li>
+<li>Introduction and development of new payment instruments.</li>
+<li>Launch of the digital ruble within a large targeted contour — state
+national projects.</li>
+<li>A substantial contribution to the country’s digitalisation.</li>
+<li>Full control over construction spending and national-project
+execution through smart contracts and escrow accounts.</li>
+</ul>
+<h3 id="for-the-population-and-business">For the population and
+business</h3>
+<ul>
+<li>Additional guaranteed income from one’s own assets without
+alienating the property.</li>
+<li>Growth of employment in infrastructure projects (significant in the
+context of the return of the active population from the special military
+operation).</li>
+<li>Growth of population digital literacy.</li>
+<li>Higher quality of life through accelerated implementation of social
+projects.</li>
+<li>Ability to insure one’s own real estate without additional spending
+during the period of its pledge.</li>
+</ul>
+<hr />
+<h2 id="legal-framework">6. Legal framework</h2>
+<p>The platform operates strictly within the legal field of the Russian
+Federation. The basic federal laws and Bank of Russia regulations to
+which the solution architecture is anchored:</p>
+<ul>
+<li>Federal Law No. 259-FZ of 31.07.2020 “On Digital Financial Assets,
+the Digital Currency and on Amendments to Certain Legislative Acts of
+the Russian Federation”.</li>
+<li>Federal Law No. 86-FZ of 10.07.2002 “On the Central Bank of the
+Russian Federation (Bank of Russia)”.</li>
+<li>Federal Law No. 340-FZ of 24.07.2023 (introduction of the digital
+ruble; amendments to 86-FZ).</li>
+<li>Federal Law No. 161-FZ of 27.06.2011 “On the National Payment
+System”.</li>
+<li>Federal Law No. 39-FZ of 22.04.1996 “On the Securities Market”.</li>
+<li>Federal Law No. 115-FZ of 07.08.2001 “On Counteracting the
+Legalisation (Laundering) of Criminal Proceeds and the Financing of
+Terrorism”.</li>
+<li>Federal Law No. 152-FZ of 27.07.2006 “On Personal Data”.</li>
+<li>Federal Law No. 187-FZ of 26.07.2017 “On the Security of the
+Critical Information Infrastructure of the Russian Federation”.</li>
+<li>Federal Law No. 218-FZ of 13.07.2015 “On State Real Estate
+Registration”.</li>
+<li>Federal Law No. 135-FZ of 29.07.1998 “On Valuation Activities in the
+Russian Federation”.</li>
+<li>Law of the Russian Federation No. 4015-1 of 27.11.1992 “On the
+Organisation of the Insurance Business in the Russian Federation”.</li>
+<li>The Civil Code of the Russian Federation (chapters on pledge —
+Articles 334–358; the escrow agreement — Articles 860.7–860.10; the
+mixed contract — Article 421).</li>
+<li>The Tax Code of the Russian Federation (chapters on DFA).</li>
+<li>Bank of Russia Regulation No. 779-P “On the requirements compliance
+with which allows a person to be included in the register of operators
+of information systems in which digital financial assets are
+issued”.</li>
+<li>Bank of Russia Regulation No. 780-P “On the requirements for
+operators of exchange of digital financial assets”.</li>
+<li>Bank of Russia Regulation No. 683-P “On the establishment of
+mandatory information-protection requirements for credit
+institutions”.</li>
+<li>GOST R 57580.1 (information-protection requirements for financial
+organisations; target level — 4).</li>
+</ul>
+<h3 id="stage-1-20262028-no-regulatory-changes-required">Stage 1
+(2026–2028) — no regulatory changes required</h3>
+<p>The near contour is launched on the current base: 259-FZ + Bank of
+Russia Regulations 779-P / 780-P + CBR Directive No. 4336-U; Government
+Decree No. 158 of 15.02.2018 (VEB.RF Project Finance Factory); the
+Budget Code (Federal Treasury); the Civil Code (pledge and escrow).
+Adjustments are made at the level of the operator’s rules under Article
+6 of Federal Law 259-FZ (approved by the Bank of Russia) and the
+contractual structure with the technology partner.</p>
+<h3
+id="stage-2-2029-horizon-package-of-four-federal-law-amendments-and-sub-legislative-acts">Stage
+2 (2029+ horizon) — package of four federal-law amendments and
+sub-legislative acts</h3>
+<p><strong>Not part of the near-term roadmap.</strong> Implemented after
+a positive Stage 1 track record of ≥ 12 months and an inter-agency
+position of the Ministry of Economic Development / Ministry of Finance /
+VEB.RF / State Duma. Composition of the package:</p>
+<ol type="1">
+<li><strong>Amendments to Federal Law 86-FZ</strong> legalising targeted
+secured issuance of monetary funds (including the digital ruble) against
+a pool of pledge-backed DFA, with mandatory targeted placement on
+dedicated escrow accounts.</li>
+<li><strong>Amendments to Federal Law 259-FZ</strong> introducing the
+category of “targeted infrastructure DFA” and regulating the procedure
+for DFA exchange.</li>
+<li><strong>Amendments to the Budget Code</strong> — the procedure for
+the Federal Treasury to receive the proceeds of targeted secured
+emission and to distribute them to state customers.</li>
+<li><strong>Amendments to the Civil Code</strong> — extension of the
+escrow-account institute to dedicated Bank-of-Russia accounts for the
+placement of targeted secured emission proceeds.</li>
+<li><strong>A Government decree</strong> on the procedure for the use of
+the targeted secured emission proceeds for the financing of national and
+infrastructure projects.</li>
+<li><strong>A Bank of Russia Directive</strong> on a special licensing
+regime for the operator of targeted infrastructure DFA.</li>
+<li><strong>A Bank of Russia Regulation</strong> on the insurance of DFA
+in the system of targeted infrastructure financing.</li>
+<li><strong>A joint order of the Ministry of Finance of Russia / Bank of
+Russia / Ministry of Digital Development / Rosreestr / Federal
+Treasury</strong> on the integration of the platform with Gosuslugi, the
+State Real Estate Register, SMEV, the State Information System of State
+and Municipal Payments and the Federal Treasury.</li>
+</ol>
+<hr />
+<h2 id="technology-contour">7. Technology contour</h2>
+<p>The platform is built exclusively on domestic components from the
+register of Russian software of the Ministry of Digital Development in
+accordance with Government Decree No. 1236 of 16.11.2015 and the
+import-substitution requirements of Presidential Decree No. 166 of
+30.03.2022.</p>
+<p>Key principles: - Multiply fault-tolerant geo-distributed
+infrastructure (at least three data centres). - Compliance with the 4th
+(maximum) level of protection under GOST R 57580.1. - Categorisation of
+the information system as a critical-information-infrastructure object
+in accordance with Federal Law 187-FZ. - Cryptographic means meeting
+GOST R 34.10-2012, GOST R 34.11-2012, GOST R 34.12-2015, GOST R
+34.13-2015. - A distributed register (DLT) for DFA accounting on a
+domestic platform certified by the Bank of Russia and the Ministry of
+Digital Development. - Full integration with state information systems
+via SMEV 3.</p>
+<p>(A detailed description of the architecture is provided in the
+project’s Technical documentation.)</p>
+<h3 id="client-side-readiness">Client-side readiness</h3>
+<p>By the time of this submission, the platform’s client side has been
+developed in full and is ready for publication in app stores after
+registration of the operator legal entity and obtaining the regulatory
+clearances:</p>
+<ul>
+<li><strong>Progressive Web App mobile application</strong> — 23 user
+screens covering all 19 steps of the DFA life cycle described in the
+author’s concept. Support for iOS, Android, Windows and the web mode via
+any modern browser. Localisation into four languages (Russian, English,
+French, Arabic with right-to-left text support). Support for four
+themes, including a contrast mode for the visually impaired. Compliance
+with WCAG 2.2 Level AA.</li>
+<li><strong>GOST 19 design documentation</strong> — twelve documents
+from the Technical Assignment (GOST 19.201) to the Schedule of
+Operational Documents (GOST 19.507). The documentation is prepared for
+submission to the Unified Register of Russian Software (Government
+Decree of the Russian Federation No. 1236 of 16.11.2015) and for the
+certification of cyber-protection means with the Federal Service for
+Technical and Export Control and the Federal Security Service.</li>
+<li><strong>Platform builds</strong> — configuration and instructions
+for packaging the application into native bundles for Android (AAB for
+RuStore and Google Play), iOS (App Store), Windows (MSIX for Microsoft
+Store).</li>
+<li><strong>RuStore publication pack</strong> — the application
+description, the privacy policy under 152-FZ, the terms of use, promo
+materials, a step-by-step publication checklist.</li>
+</ul>
+<p>The readiness of the client side is confirmed by the possibility of
+its transfer for demonstration to Bank of Russia and state-authority
+specialists already at the current stage.</p>
+<hr />
+<h2 id="implementation-roadmap">8. Implementation roadmap</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Period</th>
+<th>Stage</th>
+<th>Key tasks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025–2026</td>
+<td><strong>Preparation</strong></td>
+<td>Approval of the concept with the Bank of Russia and the Ministry of
+Finance; formation of an inter-agency working group (Bank of Russia,
+Ministry of Finance, Ministry of Digital Development, Federal Treasury,
+Rosreestr, Rosfinmonitoring); preparation and approval of regulatory
+drafts; development and certification of the platform; formation of a
+pool of partners (appraisal and insurance organisations).</td>
+</tr>
+<tr>
+<td>2026–2027</td>
+<td><strong>Piloting and core phase</strong></td>
+<td>Launch of the platform in pilot mode on the pledge of real estate of
+individuals and legal entities; verification of business processes;
+scaling of infrastructure; first targeted DFA issuances for national
+projects.</td>
+</tr>
+<tr>
+<td>2027+</td>
+<td><strong>Scaling</strong></td>
+<td>Extension of the model to movable property, exchange-traded assets
+and intellectual property; integration with the international practice
+of sovereign digital finance (BRICS+, EAEU).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="risk-management">9. Risk management</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Mitigation measures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>[Stage 2, 2029+ horizon]</strong> Additional secured
+issuance by the Bank of Russia is performed against a non-standard asset
+(the pledge-backed DFA).</td>
+<td>Implemented only after a positive Stage 1 track record of ≥ 12
+months and adoption of the package of four federal-law amendments.
+Issuance only against secured and appraised DFA; targeted use through a
+Bank of Russia escrow account; a ban on the circulation of DFA outside
+the platform. In Stage 1 the risk is absent — funding flows through the
+infrastructure channel of VEB.RF + the Federal Treasury.</td>
+</tr>
+<tr>
+<td>Complex inter-agency interaction (Bank of Russia, Ministry of
+Finance, insurance companies, appraisers, state customers).</td>
+<td>An inter-agency working group with the involvement of sectoral
+specialists; a unified regulatory base; standard smart contracts.</td>
+</tr>
+<tr>
+<td>Compliance with the terms and timing of the smart contracts.</td>
+<td>An inter-agency committee on the control of DFA smart-contract
+execution; automated platform-side control.</td>
+</tr>
+<tr>
+<td>Liquidity uplift and insurance of the collateral object.</td>
+<td>Mandatory insurance of the collateral object and the DFA itself; an
+insurance DFA for the case of an insured event.</td>
+</tr>
+<tr>
+<td>Technology risk (infrastructure failure, cyber-attack).</td>
+<td>Geo-distribution, the 4th level of GOST R 57580.1, CII status,
+GosSOPKA, NSD information-protection means, an annual pentest.</td>
+</tr>
+<tr>
+<td>Legal risk (amendments to 86-FZ and 259-FZ are not adopted).</td>
+<td>A phased strategy: at the first stage the platform operates within
+the current 259-FZ legal field; the package of required regulatory acts
+is filed in parallel.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="role-of-the-bank-of-russia">10. Role of the Bank of Russia</h2>
+<h3 id="stage-1-20262028">10.1. Stage 1 (2026–2028)</h3>
+<p>Within the near contour, the Bank of Russia acts as the
+<strong>general supervisory regulator of the financial market</strong>
+under Article 4 of Federal Law 86-FZ: - maintains the register of
+operators of information systems in which DFA are issued (Regulation
+No. 779-P); - approves the operator’s information-system rules under
+Article 6 of Federal Law 259-FZ; - controls compliance with the equity
+requirements for the operator under Directive No. 4336-U; - supervises
+compliance with information-protection requirements (Regulations Nos.
+683-P and 716-P) and GOST R 57580.1; - exercises 115-FZ supervision
+jointly with Rosfinmonitoring.</p>
+<p><strong>No additional issuance by the Bank of Russia is envisaged in
+Stage 1.</strong> Issuance settlements run in non-cash ruble or in the
+digital ruble under 340-FZ as a settlement complement.</p>
+<h3 id="stage-2-2029-horizon-defensible-mandate-expansion">10.2. Stage 2
+(2029+ horizon) — defensible mandate expansion</h3>
+<p>Within the 2029+ horizon and following adoption of the package of
+four federal-law amendments, the Bank of Russia may act as the
+<strong>central trust node</strong> in the system of targeted secured
+issuance: - maintains the register of operators of targeted
+infrastructure DFA; - manages the dedicated escrow accounts of the
+targeted secured issuance (following the extension of the escrow-account
+institute in the Civil Code); - approves the methodology for the
+appraisal and insurance of collateral assets; - performs targeted
+secured issuance strictly against a pool of secured and appraised DFA in
+the manner provided for by the amendments to 86-FZ; - participates in
+the inter-agency committee on smart-contract control.</p>
+<p>Stage 2 is presented as a defensible horizon, the implementation of
+which depends on the legislative work of the State Duma and the decision
+of the Board of Directors of the Bank of Russia. <strong>Stage 2 is not
+part of the current communication with the investor and is not included
+in the near-term investment roadmap.</strong></p>
+<p>The platform does not substitute for the functions of the Bank of
+Russia and the Federal Treasury but <strong>serves</strong> them through
+the technological and operational infrastructure.</p>
+<hr />
+<h2 id="alignment-with-the-states-priorities">11. Alignment with the
+state’s priorities</h2>
+<p>The project directly addresses the following priorities:</p>
+<ul>
+<li>The national goal “Digital Transformation” (Presidential Decree of
+the Russian Federation No. 309 of 07.05.2024 “On the National
+Development Goals of the Russian Federation for the period up to 2030
+and the outlook to 2036”).</li>
+<li>The Strategy for the Development of the Russian Financial Market up
+to 2030.</li>
+<li>The Guidelines for the Development of the Russian Financial Market
+for the current and planning periods (Bank of Russia).</li>
+<li>The Scientific and Technological Development Strategy of the Russian
+Federation.</li>
+<li>The targeted programme for the development of artificial
+intelligence and the digital economy.</li>
+</ul>
+<hr />
+<h2 id="request-to-the-addressees">12. Request to the addressees</h2>
+<p>To proceed to the next stage of the project, the author and the
+initiative team request the following:</p>
+<ol type="1">
+<li><strong>Ministry of Economic Development of the Russian
+Federation</strong> — to perform an expert assessment of the wedge-pilot
+Stage 1 concept as a tool for accelerating the implementation of
+national projects; to appoint a coordinator for the preparation of the
+inter-agency position.</li>
+<li><strong>Ministry of Finance of the Russian Federation</strong> — to
+consider the compatibility of Stage 1 with the Strategy for the
+Development of the Financial Market and the Budget Code; to approve the
+funding mechanism via the VEB.RF Factory + the Federal Treasury; to
+appoint an expert to the working group.</li>
+<li><strong>VEB.RF</strong> — to consider the inclusion of CPFSR
+projects in the portfolio of the Project Finance Factory (Government
+Decree No. 158); to issue a consultative letter on the applicability of
+the Factory’s instruments.</li>
+<li><strong>Bank of Russia</strong> — to perform a consultative review
+of the draft operator’s rules under Article 6 of Federal Law 259-FZ; to
+consider the possibility of piloting in the regulatory-sandbox regime
+under 258-FZ.</li>
+<li><strong>Ministry of Digital Development, Communications and Mass
+Media of the Russian Federation</strong> — to ensure integration with
+state information systems and certification of the platform in the
+register of Russian software.</li>
+<li><strong>Office of the Government of the Russian Federation</strong>
+— to appoint a coordinator of the inter-agency working group on Stage 1
+pilot-light.</li>
+<li><strong>State Duma, Committee on the Financial Market</strong> — to
+review the draft package of four federal-law amendments for Stage 2 on
+the horizon after a positive Stage 1 track record of ≥ 12 months.</li>
+</ol>
+<hr />
+<h2 id="annex.-champion-map-and-gtm-sequencing">Annex. Champion-map and
+GTM sequencing</h2>
+<p>The wedge logic of the project is built so that the Bank of Russia is
+the final instance of Stage 1 (inclusion of the operator in the 779-P
+register) and not the first. The key approvals proceed via the Ministry
+of Economic Development → Ministry of Finance → VEB.RF → State Duma →
+region → Atomyze. The named approvals funnel (synchronised with
+<code>_Мастер/Концепт.md § 1-ter</code>):</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Person</th>
+<th>Authority</th>
+<th>Objective</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T+30</td>
+<td>Maxim Reshetnikov</td>
+<td>Ministry of Economic Development, Minister</td>
+<td>Named sponsor; wedge-pilot as a national-project tool</td>
+</tr>
+<tr>
+<td>T+30</td>
+<td>Office of the Government of the Russian Federation</td>
+<td>through the sectoral adviser on the digital economy</td>
+<td>Architectural concept; inter-agency working group</td>
+</tr>
+<tr>
+<td>T+30</td>
+<td>Atomyze JSC</td>
+<td>through a recommended representative</td>
+<td>LoI on technology partnership (779-P operator + CPFSR
+front-end)</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td>Ivan Kolychev</td>
+<td>Ministry of Finance, Deputy Minister (debt)</td>
+<td>Off-budget channel; the OFZ-pressure relief case</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td>Vladimir Sazanov</td>
+<td>Ministry of Finance, Deputy Minister (taxes)</td>
+<td>DFA tax position (Article 34.2 of the Tax Code; sub-paragraph 12.2
+of paragraph 2 of Article 149)</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td>VEB.RF Project Finance Factory</td>
+<td>through the recommended representative of the Ministry of Economic
+Development</td>
+<td>Consultative letter under Government Decree No. 158</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td>Gazprombank / PSB</td>
+<td>through the recommended representative of the Ministry of Economic
+Development</td>
+<td>MoU on the role of the pilot settlement bank</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td>Rustam Minnikhanov</td>
+<td>Republic of Tatarstan</td>
+<td>MoU on the municipal pilot: 50–100 objects, RUB 5–10 bn</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td>Anatoly Aksakov</td>
+<td>State Duma, Financial Market Committee</td>
+<td>Consultation on 259-FZ for Stage 1; horizon Stage 2</td>
+</tr>
+<tr>
+<td>T+180+</td>
+<td><strong>Bank of Russia</strong></td>
+<td>through a consolidated inter-agency position</td>
+<td>IS DFA operator register under 779-P (Stage 1); Stage 2
+dialogue</td>
+</tr>
+</tbody>
+</table>
+<p>Pre-meeting briefs for each champion have been prepared: see
+<code>02_Юридический_фундамент/Pre-meeting_briefs/</code> (four
+drafts).</p>
+<hr />
+<h2 id="contact-information">13. Contact information</h2>
+<p><strong>Author and rightsholder of the concept:</strong> Abdul-Khakim
+Akhmadovich Kagirov Deposit certificate No. 4011265 of 19.12.2024
+(ireg.pro) GOST R 34.11-2012 hash:
+<code>a7d40971cbb5443e0f3d037ff054080dfb0064b59832cf1b89386078bf3de373</code></p>
+<hr />
+<p><em>The briefing paper has been prepared on the basis of the author’s
+concept for the implementation of the digital R.S.F.S.R. operator
+platform and the accompanying project presentation. All key indicators
+and provisions correspond to the original materials of the
+author.</em></p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

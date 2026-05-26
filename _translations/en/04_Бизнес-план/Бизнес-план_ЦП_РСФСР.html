@@ -1,0 +1,1596 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../">
+  <title>Business Plan · ЦПФСР.РФ</title>
+  <meta name="description" content="Business Plan — Business Plan. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../_design-system/print.css">
+
+  <script defer src="../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../_design-system/i18n.js"></script>
+  <script defer src="../../../_design-system/ticker.js"></script>
+  <script defer src="../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Business Plan</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Business Plan</span>
+      <h1>Business Plan</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1
+id="business-plan-digital-platform-russian-service-for-social-development-financing-cpfsr">Business
+Plan — Digital Platform “Russian Service for Social Development
+Financing” (CPFSR)</h1>
+<p><strong>Operator:</strong> Digital Platform CPFSR — a front-end /
+agent platform for the issuance of DFA backed by pledged assets. Stage 1
+(pilot-light 2026–2028): placements through a technology partnership
+with an incumbent 779-P operator, funding from the VEB.RF Project
+Finance Factory (Government Decree No. 158) and the Federal Treasury.
+Stage 2 (2029+ horizon): expansion of the mandate to the model of
+targeted secured emission by the Bank of Russia — after a positive Stage
+1 track record of ≥ 12 months and adoption of the package of four
+federal-law amendments. <strong>Author of the concept and rightsholder
+of the know-how:</strong> Abdul-Khakim Akhmadovich Kagirov.
+<strong>Deposit certificate:</strong> No. 4011265 of 19.12.2024
+(ireg.pro, GOST R 34.11-2012). <strong>Document date:</strong>
+23.05.2026.</p>
+<hr />
+<h2 id="project-executive-summary">1. Project Executive Summary</h2>
+<p><strong>What.</strong> CPFSR is a full-cycle front-end / agent
+platform for the issuance and servicing of digital financial assets
+(DFA) denominated against the pledge of real estate and other assets.
+<strong>Stage 1 (2026–2028):</strong> placements run through a
+technology partnership with an incumbent operator of the IS DFA under
+779-P (Atomyze JSC or another register entity — the licence is
+non-transferable); the settlement channel and the funding — the VEB.RF
+Project Finance Factory (Government Decree No. 158 of 15.02.2018) and
+the Federal Treasury within the Budget Code. The Bank of Russia — the
+supervisory regulator under Article 4 of Federal Law 86-FZ; no
+additional issuance is envisaged in Stage 1. <strong>Stage 2 (2029+
+horizon):</strong> a defensible path to the targeted secured-emission
+model of the Bank of Russia — implemented after a positive Stage 1 track
+record of ≥ 12 months and adoption of the package of four federal-law
+amendments.</p>
+<p><strong>Why.</strong> Unlocking the “dormant” collateral base of the
+Russian Federation (conservatively RUB 25 tn) for targeted financing of
+national and infrastructure projects — without increasing the budget
+burden and with preservation of owners’ property rights. In Stage 1 the
+effect is achieved through infrastructure funding; in Stage 2 it is
+expanded through targeted secured emission.</p>
+<p><strong>For whom.</strong> - The state — an off-budget source of
+targeted funding for national projects. - Property owners (individuals
+and legal entities) — additional income while preserving the asset in
+their ownership. - Investors — a new class of reliable, secured and
+regulated instruments. - The financial sector (banks, insurers,
+appraisers) — new servicing revenues.</p>
+<p><strong>How much.</strong> - CapEx over 18 months — RUB 850M. - Total
+CapEx over 10 years — RUB 1,300M. - Peak financing need — RUB 1,302M
+(end of 2026).</p>
+<p><strong>When.</strong> - Start — 2025 (preparation, licences,
+R&amp;D). - Launch of operations — 2026 (18 months from start). - Pilot
+— 2026–2027. - Scaling — 2028–2030. - Mature stage — from 2031.</p>
+<p><strong>How we earn.</strong> - DFA issuance commission — 0.5% of
+nominal. - Servicing commission — 0.3% of the outstanding stack. -
+Platform fee (valuation/insurance) — 0.15% of nominal. - B2B2G licences
+to partners — up to 0.15% of issuance volume. - Technology integrations
+— fixed.</p>
+<p><strong>What we ask.</strong> Starter funding of RUB 1.3 bn (CapEx +
+operating buffer for 18 months). Return — Payback 2.8 years (base
+scenario).</p>
+<p><strong>Key financial KPIs (base scenario, WACC 30%):</strong></p>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NPV (with terminal value, g = 4%)</td>
+<td style="text-align: right;">RUB 51.2 bn</td>
+</tr>
+<tr>
+<td>IRR</td>
+<td style="text-align: right;">62% (project-level)</td>
+</tr>
+<tr>
+<td>Payback</td>
+<td style="text-align: right;">2.8 years</td>
+</tr>
+<tr>
+<td>Peak financing need</td>
+<td style="text-align: right;">RUB 1.3 bn</td>
+</tr>
+<tr>
+<td>Year-5 revenue (2029)</td>
+<td style="text-align: right;">RUB 37.5 bn</td>
+</tr>
+<tr>
+<td>Year-10 revenue (2034)</td>
+<td style="text-align: right;">RUB 137.9 bn</td>
+</tr>
+<tr>
+<td>Year-10 EBITDA</td>
+<td style="text-align: right;">RUB 133.6 bn</td>
+</tr>
+</tbody>
+</table>
+<p>Conservative scenario (market share ×0.5, commissions ×0.8, OpEx
+×1.15, WACC 25%): NPV ~RUB 57 bn, IRR ~150%, Payback 3.1 years, 2034
+revenue RUB 56.4 bn. NPV safety margin — more than 40× the starter
+capital.</p>
+<hr />
+<h2 id="description-of-the-operator-company">2. Description of the
+operator company</h2>
+<h3 id="legal-form">2.1. Legal form</h3>
+<p>The recommended form is a <strong>joint-stock company (JSC)</strong>:
+- It meets the CBR requirements for DFA operators (259-FZ, Article 10):
+minimum equity, corporate governance, requirements for the composition
+of shareholders. - It allows strategic investors to be attracted through
+share issuance. - It is compatible with the strategic state-asset regime
+(if such a model is approved).</p>
+<h3 id="founders-and-the-ownership-perimeter">2.2. Founders and the
+ownership perimeter</h3>
+<p>The founding package shall reflect: 1. <strong>The know-how
+rightsholder</strong> — Abdul-Khakim Akhmadovich Kagirov (Certificate
+No. 4011265 of 19.12.2024). The founder’s stake is secured by
+transferring a licence or by contributing the exclusive right to the
+charter capital based on an independent appraiser’s valuation. 2.
+<strong>Institutional shareholders</strong> — engagement of specialised
+institutional investors is recommended (development banks, state
+financial corporations, the regulator) to ensure political support and
+regulatory comfort. 3. <strong>The role of the Bank of Russia (Stage
+1).</strong> In Stage 1 (pilot-light 2026–2028) the Bank of Russia is
+the general supervisory regulator of the financial market under Article
+4 of Federal Law 86-FZ: it approves the rules of the IS operator under
+Article 6 of Federal Law 259-FZ, includes the operator in the register
+under Regulation No. 779-P, supervises compliance with
+information-protection requirements (683-P, 716-P) and GOST R 57580.1.
+No additional issuance by the Bank of Russia is envisaged in Stage 1;
+placement funding is provided through the VEB.RF Project Finance Factory
+(Government Decree No. 158) and the Federal Treasury within the Budget
+Code. Under Stage 2 (2029+ horizon), upon a positive Stage 1 track
+record of ≥ 12 months and adoption of the package of four federal-law
+amendments, mandate expansion to the targeted secured-emission model of
+the Bank of Russia may be considered.</p>
+<h3 id="jurisdiction">2.3. Jurisdiction</h3>
+<p>The Russian Federation. Registration in Moscow — aligned with the
+location of the key regulators (Bank of Russia, Ministry of Finance,
+Ministry of Economic Development, Ministry of Digital Development), the
+Federal Treasury, key banking counterparties.</p>
+<h3 id="tax-status">2.4. Tax status</h3>
+<p>Upon obtaining IT accreditation from the Ministry of Digital
+Development and maintaining ≥ 70% IT revenue, the profit-tax incentive
+applies (5% or 0% depending on the Tax Code edition at the time). The
+base scenario applies the standard 20% rate — a conservative basis. The
+incentive is a separate upside on the valuation.</p>
+<h3 id="ip-protection">2.5. IP protection</h3>
+<p>The operator’s know-how core is the author’s concept protected by
+Deposit Certificate No. 4011265 of 19.12.2024. The deposit fixes the
+priority date (24.12.2024) and the hash of the work; the legal
+protection regime — know-how (Article 1465 CC) and software (Article
+1262 CC, registration with Rospatent — in progress) from the date of
+contribution. When the operator company is created, the rightsholder
+transfers to the operator either exclusive or non-exclusive rights to
+use the know-how, with remuneration terms fixed (a licence agreement or
+a contribution to the charter capital).</p>
+<hr />
+<h2 id="description-of-the-product-service">3. Description of the
+product / service</h2>
+<h3 id="what-cpfsr-is">3.1. What CPFSR is</h3>
+<p>CPFSR is a full-cycle digital platform that: 1. Accepts an
+application from the owner for a pledge of property (real estate,
+transport, intellectual property, securities, etc.). 2. Performs an
+automated appraisal of the collateral object with the involvement of
+accredited appraisers under Federal Law 135-FZ. 3. Records a temporary
+encumbrance on the object in the relevant state registers (Rosreestr,
+traffic police, depositories). 4. Coordinates the issuance parameters
+with the technology partner — the IS DFA operator under 779-P (the
+operator’s rules under Article 6 of Federal Law 259-FZ). 5. The
+technology partner issues the DFA at a nominal value corresponding to
+the collateral appraisal (subject to the discount standard). 6.
+<strong>Stage 1.</strong> Funding of the placement is provided through
+the VEB.RF Project Finance Factory (Government Decree No. 158 of
+15.02.2018) and the Federal Treasury (Budget Code). Settlements —
+non-cash ruble or the digital ruble under 340-FZ as a settlement
+complement. 7. The funds are directed in a targeted manner to the
+financing of national and infrastructure projects in line with current
+federal laws and sub-legislative acts. 8. The DFA may be placed with
+professional securities-market participants; the proceeds from placement
+are credited to accounts under Articles 860.7–860.10 of the Civil Code.
+9. Upon the completion of the project’s term, an exchange takes place:
+the DFA is redeemed, the encumbrance is lifted from the property, the
+owner recovers the object and receives the agreed financial
+remuneration.</p>
+<blockquote>
+<p><strong>Stage 2 (2029+ horizon).</strong> As part of the mandate
+expansion, steps 6–7 may be migrated to the targeted secured-emission
+model of the Bank of Russia against a pool of pledged DFA, with the
+escrow account managed by the CBR. Stage 2 is implemented after a
+positive Stage 1 track record of ≥ 12 months and adoption of the package
+of four federal-law amendments (see Legal Framework § 8.2).</p>
+</blockquote>
+<h3 id="how-the-product-differs-from-existing-dfa">3.2. How the product
+differs from existing DFA</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Existing DFA in the RF</th>
+<th>CPFSR Stage 1</th>
+<th>CPFSR Stage 2 (horizon)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Collateral</td>
+<td>Monetary claims, equities, obligations</td>
+<td>Tangible and intangible property (pledged)</td>
+<td>Tangible and intangible property (pledged)</td>
+</tr>
+<tr>
+<td>Source of funds</td>
+<td>The DFA buyer pays in rubles</td>
+<td>VEB.RF Factory + Federal Treasury</td>
+<td>Targeted secured emission by the Bank of Russia</td>
+</tr>
+<tr>
+<td>Use of proceeds</td>
+<td>Unrestricted</td>
+<td>Targeted (national projects, infrastructure)</td>
+<td>Targeted (national projects, infrastructure)</td>
+</tr>
+<tr>
+<td>Perimeter</td>
+<td>Private operator, CBR as regulator</td>
+<td>Technology partnership with a 779-P operator + CBR as supervisory
+regulator under Article 4 of 86-FZ</td>
+<td>Technology partnership + CBR as issuer in the expanded mandate</td>
+</tr>
+<tr>
+<td>Return of property</td>
+<td>n/a</td>
+<td>Exchange and return upon project completion</td>
+<td>Exchange and return upon project completion</td>
+</tr>
+</tbody>
+</table>
+<h3 id="advantages-per-the-authors-concept">3.3. Advantages (per the
+author’s concept)</h3>
+<ol type="1">
+<li>Direct online interaction between the pledgor, financial agents and
+executors under the supervision of the CBR.</li>
+<li>Reduction in the time for appraisal and pledging of objects.</li>
+<li>An impulse for the development of the DFA industry in Russia.</li>
+<li>Mobilisation of “dormant” private assets into the economic
+turnover.</li>
+<li>Resolution of large state projects without an increase in the debt
+burden.</li>
+<li>Reduction of the queue for financing global projects.</li>
+<li>Impetus to the real sector of the economy.</li>
+<li>Off-budget financing of state projects in capital-intensive sectors
+(heavy industry, machine-building, medicine, science).</li>
+<li>Financial remuneration for the owner of the pledged property.</li>
+<li>Inflationary dynamics remain in the normal regime (issuance is
+against fully secured assets).</li>
+</ol>
+<h3 id="launch-conditions">3.4. Launch conditions</h3>
+<p><strong>Stage 1 (pilot-light 2026–2028) — without federal-law
+amendments:</strong></p>
+<ol type="1">
+<li>Incorporation of the operator JSC and inclusion of the technology
+partner in the IS DFA operators register under CBR Regulation No. 779-P
+(the critical path — CIP certification T+9…T+18 months).</li>
+<li>Approval of the rules of the information system under Article 6 of
+Federal Law 259-FZ with the Bank of Russia.</li>
+<li>A consultative letter from the VEB.RF Project Finance Factory on the
+applicability of Government Decree No. 158 to CPFSR projects.</li>
+<li>MoU with the pilot region (Republic of Tatarstan / Tyumen Region)
+for an RUB 5–10 bn pilot portfolio.</li>
+<li>MoU with a partner bank (Gazprombank / PSB) on the role of the
+settlement and escrow agent.</li>
+</ol>
+<p><strong>Stage 2 (2029+ horizon, T+36+):</strong></p>
+<ol start="6" type="1">
+<li>A positive Stage 1 track record of ≥ 12 months of industrial
+operation.</li>
+<li>An inter-agency position of the Ministry of Economic Development /
+Ministry of Finance / VEB.RF / State Duma.</li>
+<li>The package of four federal-law amendments (86-FZ, 259-FZ, Budget
+Code, Civil Code) + sub-legislative acts.</li>
+</ol>
+<hr />
+<h2 id="market-analysis">4. Market analysis</h2>
+<h3 id="dfa-market-in-the-rf">4.1. DFA market in the RF</h3>
+<p>Since 2022 Federal Law 259-FZ “On Digital Financial Assets” has been
+in force in the Russian Federation, establishing the legal framework for
+the issuance and circulation of DFA. Operators of information systems
+accredited by the Bank of Russia are operating on the market (the
+information is published in the CBR register).</p>
+<p>Based on open data, the cumulative DFA issuance volume in the RF for
+2023–2025 is measured in hundreds of billions of rubles and shows
+confident growth. The dominant classes are monetary claims, corporate
+DFA, DFA on metals. DFA backed by real-estate collateral with direct CBR
+issuance are absent from current market practice.</p>
+<h3 id="rf-collateral-capacity">4.2. RF collateral capacity</h3>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th>Segment</th>
+<th style="text-align: right;">Volume, RUB tn</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Residential stock (4.7 bn m² × RUB 85,000/m²)</td>
+<td style="text-align: right;">400</td>
+<td>Author’s concept, Rosstat</td>
+</tr>
+<tr>
+<td>Commercial real estate</td>
+<td style="text-align: right;">45</td>
+<td>Author’s concept</td>
+</tr>
+<tr>
+<td>Land plots (housing + under enterprises)</td>
+<td style="text-align: right;">62</td>
+<td>Author’s concept</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td style="text-align: right;"><strong>507</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Conservative base (10% × 50%)</strong></td>
+<td style="text-align: right;"><strong>25</strong></td>
+<td>Author’s concept</td>
+</tr>
+</tbody>
+</table>
+<p>The conservative base of RUB 25 tn is the “target capacity” to which
+the platform aspires over a 10-year horizon.</p>
+<h3 id="demand-segmentation">4.3. Demand segmentation</h3>
+<p><strong>Individuals (B2C):</strong> - Owners of residential real
+estate with stable cash flow, looking for ways to monetise the asset
+without selling. - Target group — around 30–40% of households in large
+and medium-sized cities of the RF.</p>
+<p><strong>Legal entities (B2B):</strong> - Owners of commercial real
+estate — landlords, developers, retail chains. - Industrial enterprises
+with land assets. - Holdings with non-core assets.</p>
+<p><strong>State enterprises (B2G):</strong> - Owners of infrastructure
+and socially significant assets (including through subsidiaries). -
+Regions and municipalities — for financing regional programmes via the
+pledge of municipal property.</p>
+<h3 id="competitors">4.4. Competitors</h3>
+<p>In Stage 1 (wedge-pilot 2026–2028) the existing 779-P register
+operators (Sber CFA, Alfa CFA, Atomyze JSC, Masterchain) are potential
+technology partners, not competitors at the licensing level. Indirect
+competitors: bank lending against real-estate collateral (slower, more
+expensive, with no targeted focus on national projects); crowdfunding
+and investment platforms (smaller, without the state perimeter).</p>
+<p>CPFSR’s competitive advantage is the two-stage architecture: in Stage
+1 — a specialised front-end layer over a 779-P operator linked to
+infrastructure funding through the VEB.RF Factory (Government Decree
+No. 158) + the Federal Treasury (Budget Code) and targeted placement in
+national projects, with property preserved in the owner’s hands. In
+Stage 2 (2029+ horizon) — a defensible path to the targeted
+secured-emission model of the Bank of Russia. This is not the “best”
+product in the existing category, but a new category of targeted
+infrastructure DFA.</p>
+<h3 id="regulatory-environment">4.5. Regulatory environment</h3>
+<p><strong>Current base:</strong> - 86-FZ “On the Central Bank of the
+Russian Federation (Bank of Russia)” - 259-FZ “On Digital Financial
+Assets, the Digital Currency and on Amendments to Certain Legislative
+Acts of the Russian Federation” - 39-FZ “On the Securities Market” -
+102-FZ “On Mortgage (Pledge of Real Estate)” - 218-FZ “On State Real
+Estate Registration” - Tax Code (Chapters 21, 25, 34)</p>
+<p><strong>Stage 1 (2026–2028): regulatory changes are not
+required.</strong> The near contour is launched on the current base of
+259-FZ + 779-P + Budget Code + Government Decree No. 158 + Civil Code.
+Adjustments are made at the level of the operator’s rules under Article
+6 of Federal Law 259-FZ (approved by the Bank of Russia) and the
+contract structure with the technology partner (Atomyze or another 779-P
+register entity).</p>
+<p><strong>Stage 2 (2029+ horizon): the package of four federal-law
+amendments.</strong> Entry condition — a positive Stage 1 track record
+of at least 12 months of industrial operation and an inter-agency
+position of the Ministry of Economic Development / Ministry of Finance /
+VEB.RF / State Duma. Composition: - 86-FZ — formalisation of the
+institute of targeted secured emission against a pool of pledged DFA. -
+259-FZ — the category of “targeted infrastructure DFA” and regulation of
+the exchange procedure. - Budget Code — procedure for the Federal
+Treasury to receive the proceeds of the targeted emission. - Civil Code
+— extension of the escrow institute to special accounts of the Bank of
+Russia for the placement of the targeted-emission proceeds. -
+Sub-legislative acts: government decrees, a CBR Directive, a joint order
+of the Ministry of Finance / CBR / Ministry of Digital Development /
+Rosreestr / Federal Treasury.</p>
+<p>This block is described in a separate “Legal Framework” project
+document.</p>
+<hr />
+<h2 id="marketing-and-sales">5. Marketing and sales</h2>
+<h3 id="acquisition-channels">5.1. Acquisition channels</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Target audience</th>
+<th>Expected issuance share</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Partner banks (B2B2C)</td>
+<td>Individuals and SMEs via banking apps</td>
+<td>40–50%</td>
+</tr>
+<tr>
+<td>Direct digital channel</td>
+<td>Owners of large assets</td>
+<td>15–20%</td>
+</tr>
+<tr>
+<td>Partner insurance companies</td>
+<td>Cross-sales of insurance products</td>
+<td>10–15%</td>
+</tr>
+<tr>
+<td>Partner appraisers</td>
+<td>Through the professional community</td>
+<td>5–10%</td>
+</tr>
+<tr>
+<td>State B2G channel</td>
+<td>Through regional and municipal programmes</td>
+<td>15–20%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="unit-economics">5.2. Unit economics</h3>
+<p><strong>Base calculation per average issuance.</strong> The average
+DFA issuance (per individual client) — RUB 10M (based on the average
+residential value in a large city and an average LTV of 50%).</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Average issuance, RUB</td>
+<td style="text-align: right;">10,000,000</td>
+</tr>
+<tr>
+<td>Issuance commission (0.5%), RUB</td>
+<td style="text-align: right;">50,000</td>
+</tr>
+<tr>
+<td>Servicing commission (0.3% × 5 years), RUB</td>
+<td style="text-align: right;">150,000</td>
+</tr>
+<tr>
+<td>Platform fee (0.15%), RUB</td>
+<td style="text-align: right;">15,000</td>
+</tr>
+<tr>
+<td><strong>LTV (lifetime value), RUB</strong></td>
+<td style="text-align: right;"><strong>215,000</strong></td>
+</tr>
+<tr>
+<td><strong>CAC (cost of acquisition), estimated, RUB</strong></td>
+<td style="text-align: right;"><strong>20,000–40,000</strong></td>
+</tr>
+<tr>
+<td><strong>LTV/CAC</strong></td>
+<td style="text-align: right;"><strong>5–10×</strong></td>
+</tr>
+<tr>
+<td>CAC payback</td>
+<td style="text-align: right;">4–9 months</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Unit economics are positive from the first issuance. The high LTV/CAC
+ratio is driven by servicing duration (5-year average DFA life) and
+automation of valuation processes.</p>
+</blockquote>
+<h3 id="partnership-model">5.3. Partnership model</h3>
+<p><strong>Banks.</strong> CPFSR integrates into banking apps via API. A
+partner bank acts as the acquisition channel and receives a revenue
+share (e.g., 30–50% of the issuance commission). This delivers a new
+service line to the bank without additional regulatory requirements.</p>
+<p><strong>Insurance companies.</strong> Mandatory insurance of the
+pledged property — a built-in platform module. The insurer earns the
+premium + cross-sales (motor, household). The platform takes an agency
+fee.</p>
+<p><strong>Appraisal firms.</strong> Accredited appraisers conduct the
+initial collateral valuation; the platform automates 70–80% of the
+process (mass valuation + desk review). The appraiser receives a fixed
+fee.</p>
+<p><strong>Technology integrators.</strong> Embedding the platform into
+a partner’s infrastructure — a separate service paid on a fixed-project
+basis.</p>
+<h3 id="marketing-plan">5.4. Marketing plan</h3>
+<ul>
+<li>2025 (stage 0): closed presentations to regulators, profile
+committees of the State Duma and the Government of the RF.</li>
+<li>2026 (stage 1): industry events (FinTech Forum, SPIEF, Finopolis),
+launch of the B2B site and technical documents.</li>
+<li>2027–2028 (stage 2): onboarding the first 5–10 partner banks, launch
+of pilot programmes.</li>
+<li>2029–2030 (stage 3): mass B2C campaign via banking apps, regional
+B2G programmes.</li>
+<li>2031+: international positioning (BRICS format), the model for
+replication in friendly jurisdictions.</li>
+</ul>
+<hr />
+<h2 id="operational-plan">6. Operational plan</h2>
+<h3 id="location">6.1. Location</h3>
+<p><strong>Head office</strong> — Moscow (proximity to the CBR, Ministry
+of Finance, Ministry of Economic Development, State Duma). Optimal class
+— A or A+, location in the financial district (Moscow-City,
+Zamoskvorechye, Tverskaya).</p>
+<p><strong>Data-centre sites</strong> — two independent Tier-III+ data
+centres on the territory of the RF with geo-replication (recommended:
+Moscow + a regional centre — Saint Petersburg, Yekaterinburg or
+Novosibirsk). Connection through certified telecom operators with
+redundant channels.</p>
+<h3 id="technology-partners">6.2. Technology partners</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Category</th>
+<th>Type of partner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data centres and connectivity</td>
+<td>Certified RF operators (Tier-III+, with state licences)</td>
+</tr>
+<tr>
+<td>Cryptographic modules</td>
+<td>Russian FSB-certified crypto providers</td>
+</tr>
+<tr>
+<td>Valuation systems</td>
+<td>Accredited Russian appraisers, primarily market leaders</td>
+</tr>
+<tr>
+<td>Insurance</td>
+<td>Top-20 insurance companies of the RF</td>
+</tr>
+<tr>
+<td>State authorities</td>
+<td>Rosreestr, traffic police, depositories, Federal Treasury (via
+secured SMEV channels)</td>
+</tr>
+<tr>
+<td>Audit</td>
+<td>Independent auditors from the CBR register</td>
+</tr>
+</tbody>
+</table>
+<h3 id="organisational-structure">6.3. Organisational structure</h3>
+<p><strong>Management levels:</strong> - Board of Directors (5–9
+persons, including independent directors). - Management Board (CEO + 5–7
+functional heads). - Functional areas: - Engineering and infrastructure
+(CTO). - Operations and customer service (COO). - Finance (CFO). - Legal
+and compliance (CCO). - Risk management (CRO). - BD and partnerships
+(CBO/CRO). - Marketing and PR (CMO). - HR and culture (CHRO).</p>
+<h3 id="headcount-fte-by-year">6.4. Headcount (FTE by year)</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr>
+<th>Year</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FTE</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">240</td>
+<td style="text-align: right;">270</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">330</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">370</td>
+</tr>
+</tbody>
+</table>
+<p>Structure by end of Year 2 (120 FTE): - Engineering and
+infrastructure — 50 (42%) - Operations and customer service — 20 (17%) -
+Legal and compliance — 15 (12.5%) - Risk management — 10 (8%) - BD and
+partnerships — 10 (8%) - Finance — 8 (7%) - Marketing and PR — 4 (3%) -
+HR and culture — 3 (2.5%)</p>
+<hr />
+<h2 id="technology-plan">7. Technology plan</h2>
+<p>The CPFSR technology contour is described in a separate document
+“Technical documentation with references to federal laws and CBR
+instructions” (folder <code>01_Техническая_документация</code>).</p>
+<p>Key architectural principles: 1. Microservices architecture on a
+stack of Russian technologies (Astra Linux, DBMS from the software
+register, Russian cryptographic modules). 2. Geo-replication between two
+data centres with RPO ≤ 5 min, RTO ≤ 30 min. 3. A multi-layer security
+model (compliance with 152-FZ, FSTEC requirements, GOSTs). 4. An
+integration bus to connect banks, insurers, appraisers and state
+authorities. 5. Digital identity — Gosuslugi, SBP (for individuals);
+e-signature and EDI — for legal entities. 6. A distributed register for
+DFA recording (on a certified Russian platform). 7. Full compliance with
+the CBR requirements for DFA operators (regulations, instructions,
+standards).</p>
+<h3 id="client-side-readiness-as-of-2025">Client-side readiness (as of
+2025)</h3>
+<p>By the moment of negotiations with the Bank of Russia and investors,
+the client side of the platform is <strong>fully developed</strong>:</p>
+<ul>
+<li><strong>Progressive Web App mobile application</strong> — 23
+screens, the full 19-step life cycle of the author (from registration to
+DFA exchange), 4 themes, 4 languages (Russian, English, French, Arabic
+with RTL), Service Worker for offline mode, manifest.json for device
+installation.</li>
+<li><strong>GOST 19 design documentation</strong> — 12 documents from
+the Technical Assignment (19.201) to the Schedule of Operational
+Documents (19.507), ready for submission to the Ministry of Digital
+Development register (Government Decree No. 1236) and for FSTEC / FSB
+certification.</li>
+<li><strong>Capacitor 6 platform builds</strong> — configuration and
+instructions for packaging into native Android (AAB for RuStore and
+Google Play), iOS (App Store), Windows (MSIX for Microsoft Store)
+applications.</li>
+<li><strong>RuStore publication pack</strong> — a catalogue description,
+a privacy policy (under 152-FZ), terms of use, promo materials, a
+publication checklist.</li>
+</ul>
+<p>The readiness of the client side cuts the time-to-pilot by
+approximately 3 months and reduces the technology risk of development.
+This is reflected in the updated international valuation of the project
+(Reasoned Value pre-money — USD 80M in the base zone).</p>
+<hr />
+<h2 id="roadmap">8. Roadmap</h2>
+<h3 id="preparation">2025–2026 — Preparation</h3>
+<ul>
+<li>Registration of the legal entity.</li>
+<li>Securing the starter financing (RUB 1.3 bn).</li>
+<li>Team build-up (40 → 120 FTE).</li>
+<li>Platform development (stage 1): the core, valuation modules,
+encumbrance recording, DFA issuance.</li>
+<li>Legal support of amendments to 86-FZ and 259-FZ.</li>
+<li>Obtaining the dedicated CBR licence.</li>
+<li>Accreditation in the CBR register of operators of information
+systems.</li>
+</ul>
+<h3 id="pilot">2026–2027 — Pilot</h3>
+<ul>
+<li>Launch of pilot programmes with 2–3 partner banks.</li>
+<li>First DFA issuances (volume of ~RUB 130 bn in 2026, ~RUB 540 bn in
+2027).</li>
+<li>Operational processes tested on a limited sample.</li>
+<li>Integrations with Rosreestr, depositories, the Federal
+Treasury.</li>
+<li>Onboarding of the first insurance partners and appraisal firms.</li>
+</ul>
+<h3 id="scaling">2027+ — Scaling</h3>
+<ul>
+<li>Expansion of the partner network (banks, regions, sectors).</li>
+<li>Scaling of issuances (annual volume from RUB 1.4 tn in 2028 to RUB
+7.1 tn in 2034).</li>
+<li>Connection of state financing programmes through the CBR escrow
+circuit.</li>
+<li>Launch of B2C channels via banking apps.</li>
+<li>Preparation for exporting the model to friendly jurisdictions (BRICS
+format).</li>
+</ul>
+<hr />
+<h2 id="financial-plan">9. Financial plan</h2>
+<p>Full calculations — in the documents
+<code>Финансовая_модель_ЦП_РСФСР.md</code> and
+<code>Финмодель_допущения_и_расчёты.md</code>.</p>
+<h3 id="brief-summary-of-the-base-scenario">9.1. Brief summary of the
+base scenario</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NPV @ WACC 30% (with TV, g = 4%)</td>
+<td style="text-align: right;">RUB 51.2 bn</td>
+</tr>
+<tr>
+<td>IRR</td>
+<td style="text-align: right;">62% (project-level)</td>
+</tr>
+<tr>
+<td>Payback</td>
+<td style="text-align: right;">2.8 years</td>
+</tr>
+<tr>
+<td>Peak financing need</td>
+<td style="text-align: right;">RUB 1.3 bn</td>
+</tr>
+<tr>
+<td>2029 revenue</td>
+<td style="text-align: right;">RUB 37.5 bn</td>
+</tr>
+<tr>
+<td>2034 revenue</td>
+<td style="text-align: right;">RUB 137.9 bn</td>
+</tr>
+<tr>
+<td>2034 EBITDA</td>
+<td style="text-align: right;">RUB 133.6 bn</td>
+</tr>
+<tr>
+<td>2034 EBITDA margin</td>
+<td style="text-align: right;">74.8%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scenarios">9.2. Scenarios</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scenario</th>
+<th style="text-align: right;">Full NPV (20 years + TV), RUB bn</th>
+<th style="text-align: right;">Project-level IRR, %</th>
+<th style="text-align: right;">Project-level Payback, years</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conservative</td>
+<td style="text-align: right;">22.0</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">3.8</td>
+</tr>
+<tr>
+<td>Base</td>
+<td style="text-align: right;">51.2</td>
+<td style="text-align: right;">161</td>
+<td style="text-align: right;">3.24</td>
+</tr>
+<tr>
+<td>Optimistic</td>
+<td style="text-align: right;">82.0</td>
+<td style="text-align: right;">195</td>
+<td style="text-align: right;">2.7</td>
+</tr>
+</tbody>
+</table>
+<p>Investor-level (15.8% stake, exit Y7): IRR Base = 28.6%; Payback
+(cash distribution) = 4.21 years. Project-level vs investor-level — two
+different axes: the first answers “how much is the entire project
+worth”, the second “how much will the Seed investor recover over their
+horizon”.</p>
+<h3 id="funding-requirement-and-use-of-proceeds">9.3. Funding
+requirement and use of proceeds</h3>
+<p>Starter requirement — RUB 1.3 bn for 18 months:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align: right;">RUB mn</th>
+<th style="text-align: right;">Share</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CapEx (platform, data centres, licences)</td>
+<td style="text-align: right;">850</td>
+<td style="text-align: right;">65%</td>
+</tr>
+<tr>
+<td>Year-1 OpEx</td>
+<td style="text-align: right;">380</td>
+<td style="text-align: right;">29%</td>
+</tr>
+<tr>
+<td>Liquidity cushion</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">6%</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td style="text-align: right;"><strong>1,300</strong></td>
+<td style="text-align: right;"><strong>100%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Source structure: - Equity from a strategic investor and/or a
+development state corporation — 70–100%. - Debt financing — 0–30% (after
+confirmation of the regulatory status).</p>
+<h3 id="investor-exit-strategy">9.4. Investor exit strategy</h3>
+<p>Options on a 5–10-year horizon: 1. <strong>IPO</strong> — listing on
+the Moscow Exchange after reaching sustainable profitability
+(potentially from 2030–2031). 2. <strong>Strategic sale</strong> —
+acquisition of the package by a large financial group or a state
+corporation. 3. <strong>Buy-back</strong> — the company buys back the
+investor’s stake from the dividend stream. 4. <strong>Dividend
+strategy</strong> — payment of 30–50% of net profit from 2028, with
+indefinite share retention (for strategic investors).</p>
+<hr />
+<h2 id="risk-analysis">10. Risk analysis</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Category</th>
+<th>Description</th>
+<th>Probability</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Legal Stage 1</strong></td>
+<td>Obstacles to approval of the operator’s rules under Article 6 of
+259-FZ or under CBR Directive No. 4336-U</td>
+<td>Low</td>
+<td>Material</td>
+<td>Technology partnership with an incumbent IS DFA operator under
+779-P: the licence is non-transferable, CPFSR works as a front-end /
+agent. Approvals with the CBR concern only the rules of the partner’s
+information system, not the licence perimeter</td>
+</tr>
+<tr>
+<td><strong>Legal Stage 2</strong></td>
+<td>The package of four federal-law amendments (86-FZ, 259-FZ, Budget
+Code, Civil Code) is not adopted on the 2029+ horizon</td>
+<td>Medium</td>
+<td>Material (Stage 2 only)</td>
+<td>Stage 2 is not part of the near-term investment roadmap; it is
+delivered after a positive Stage 1 track record of ≥ 12 months and an
+inter-agency position. Stage 1 is defensible without Stage 2</td>
+</tr>
+<tr>
+<td><strong>Regulatory</strong></td>
+<td>Obstacles to including the technology partner in the 779-P register
+or suspension of the partner’s licence</td>
+<td>Low</td>
+<td>Material</td>
+<td>A multi-partner pool (Atomyze, Sber CFA, Alfa CFA, Masterchain);
+filing of our own 779-P application as a parallel track after T+12
+months of the wedge-pilot</td>
+</tr>
+<tr>
+<td><strong>Market</strong></td>
+<td>Low penetration — owners do not trust the new instrument</td>
+<td>Medium</td>
+<td>Material</td>
+<td>Start with state programmes and large owners (B2B/B2G) to form
+reference cases; broad educational campaign; integration into banking
+apps to lower the entry threshold</td>
+</tr>
+<tr>
+<td><strong>Technology</strong></td>
+<td>Platform failure, data loss, cyber-attack</td>
+<td>Low</td>
+<td>Material</td>
+<td>Two active data centres with geo-replication; daily backup with
+restoration testing; FSB-certified crypto modules; continuous
+pentesting; 24/7 SOC</td>
+</tr>
+<tr>
+<td><strong>Operational</strong></td>
+<td>Collateral valuation errors, disputes with owners</td>
+<td>Medium</td>
+<td>Moderate</td>
+<td>Multi-level valuation (mass + desk + independent appraiser),
+liability insurance, transparent regulations, pre-litigation
+arbitration</td>
+</tr>
+<tr>
+<td><strong>Reputational</strong></td>
+<td>A high-profile incident (client funds loss, corruption scandal)</td>
+<td>Low</td>
+<td>Critical</td>
+<td>Strict compliance, an anti-corruption policy, transparent reporting,
+regular external audit, crisis-communications PR strategy</td>
+</tr>
+<tr>
+<td><strong>Macroeconomic</strong></td>
+<td>Sharp rise in the key rate, real-estate market crash</td>
+<td>Medium</td>
+<td>Material</td>
+<td>A flexible pricing model (key-rate-linked), conservative LTV
+standards (50% base, up to 70% maximum), quarterly stress tests</td>
+</tr>
+<tr>
+<td><strong>Competitive</strong></td>
+<td>A second operator appears in the same category</td>
+<td>Low (up to 5 years), Medium (after)</td>
+<td>Moderate</td>
+<td>Deep integration with the regulator and partners as a natural moat;
+rapid scaling in the first 3–5 years; know-how protection</td>
+</tr>
+<tr>
+<td><strong>HR</strong></td>
+<td>Shortage of qualified fintech specialists</td>
+<td>Medium</td>
+<td>Moderate</td>
+<td>An option programme, competitive compensation, a corporate R&amp;D
+programme with leading universities, remote work in the regions</td>
+</tr>
+<tr>
+<td><strong>Cannibalisation by the digital ruble (340-FZ)</strong></td>
+<td>The CBR launches a targeted digital-ruble emission programme without
+an intermediary, or integrates pledge DFA into the digital-ruble
+platform via Article 30.6 of 86-FZ</td>
+<td>Medium (15–35%)</td>
+<td>Material</td>
+<td>Three mitigation scenarios: (a) a technology partnership with the
+CBR via the 258-FZ regulatory sandbox; (b) positioning CPFSR as the
+official front-end through the consolidated inter-agency position of the
+Ministry of Economic Development / Ministry of Finance / VEB.RF; (c) a
+specialised layer for targeted infrastructure DFA against collateral — a
+category that the digital-ruble platform, as a universal settlement
+instrument, does not cover</td>
+</tr>
+<tr>
+<td><strong>Replication by the regulator</strong></td>
+<td>The state implements the same logic via Atomyze / VEB.RF / Sber
+directly, bypassing CPFSR</td>
+<td>Low–Medium</td>
+<td>Material</td>
+<td>Four defensive contours: (1) network effects — a pool of pledgors +
+a partner bank + an insurer + an appraiser + a region forms a two-sided
+Metcalfe effect; (2) IP portfolio — deposit No. 4011265 + Rospatent
+software registration (Article 1262 CC) + know-how (Article 1465 CC) + a
+trademark (Article 1477 CC) + a method patent on DFA exchange (Chapter
+72 CC, application); (3) first-mover advantage of 24–30 months in the
+targeted infrastructure DFA category with integration of the VEB.RF
+Project Finance Factory; (4) a contractual moat — an exclusive LoI / MSA
+with the incumbent 779-P operator (Atomyze) for 3 years in the “targeted
+infrastructure DFA against collateral” category</td>
+</tr>
+</tbody>
+</table>
+<p>The risk map is reviewed quarterly. <strong>Stage 1 is defensible
+without federal-law amendments.</strong> The principal regulatory Stage
+2 risk (adoption of the package of four federal laws) is analysed in
+detail in the Legal Framework document § 8.2.</p>
+<hr />
+<h2 id="team">11. Team</h2>
+<h3 id="author-of-the-concept-and-project-initiator">11.1. Author of the
+concept and project initiator</h3>
+<p><strong>Abdul-Khakim Akhmadovich Kagirov</strong> — the author and
+rightsholder of the CPFSR know-how (Deposit Certificate No. 4011265 of
+19.12.2024). The platform concept set out in this document was developed
+by him and is protected as established by law.</p>
+<h3 id="building-the-executive-team">11.2. Building the executive
+team</h3>
+<p>At the start (2025), the core team is formed: - CEO — a managing
+partner with experience in launching infrastructure fintech projects. -
+CTO — a CTO with experience in building banking platforms. - CCO — a
+compliance officer with experience in CBR supervisory units. - CFO — a
+CFO at the level of a large financial corporation. - Board of Directors
+— 5–9 persons, with mandatory presence of independent directors and key
+shareholder representatives.</p>
+<p>Specific names are not provided: team selection is a starter-stage
+task, undertaken in parallel with attracting a strategic investor. All
+appointments are subject to regulator approval (the CBR sets reputation
+and qualification requirements for managers of operators).</p>
+<h3 id="know-how-rightsholder-protection">11.3. Know-how rightsholder
+protection</h3>
+<p>After contribution of the author’s know-how to the charter capital of
+the operator JSC, the following protective mechanisms are fixed (in
+detail — <code>_Мастер/Концепт.md</code> § 1-quater):</p>
+<ol type="1">
+<li><strong>A permanent seat for author A.A.A. Kagirov on the Board of
+Directors</strong> until Series B (≥ 2031), independent of the size of
+the investor’s stake.</li>
+<li><strong>Protective covenants in the Shareholders Agreement:</strong>
+drag-along — only with the rightsholder’s participation; tag-along —
+100% protection from a forced exit; anti-dilution full ratchet until
+Series B; prohibition on assigning know-how rights without the
+rightsholder’s consent; vesting of the institutional shareholder of 4
+years with a 1-year cliff.</li>
+<li><strong>Reverter of the know-how</strong> upon liquidation /
+bankruptcy / hostile takeover: the exclusive rights revert to the author
+unconditionally.</li>
+<li><strong>A 2% royalty</strong> on the operator’s revenue payable to
+the rightsholder as licensor (alongside share dividends).</li>
+</ol>
+<h3 id="ebitda-margin-bridge-2030-2034">11.4. EBITDA margin: bridge 2030
+→ 2034</h3>
+<p><code>Wedge_pilot-light.md</code> § 5.2 provides the EBITDA margin
+trajectory: 2027 = 20%, 2028 = 40%, 2029 = 55%, 2030 = 65%. The TV
+target margin in 2034 = 74.8%. The 65% → 74.8% gap (+9.8 p.p. over 4
+years) is explained by three factors: <strong>(a)</strong> the
+outstanding DFA stack by 2034 ≈ RUB 26.6 tn yields a high share of
+servicing commission (0.3% × low marginal OpEx); <strong>(b)</strong>
+automation of compliance/KYC through integrations with ESIA/UBS/GIS GMP
+→ reduction of incremental cost-to-serve to ~3% of 2034 revenue vs 8% in
+2030; <strong>(c)</strong> OpEx add-ons for appraisers/insurers and
+legal support become fixed by volume (≈ 5% of revenue) once a mature
+partner pool is reached. Details —
+<code>_Мастер/Единые_показатели_v2.md</code> § 4 (FCF series) and the
+“EBITDA bridge 2030-2034” sheet in <code>_shared/finmodel.js</code>.</p>
+<hr />
+<h2 id="socio-economic-effect">12. Socio-economic effect</h2>
+<h3 id="impact-on-gdp">12.1. Impact on GDP</h3>
+<p>The financing volume attracted via CPFSR in the base scenario: -
+2026: RUB 130 bn of issuance → ~RUB 130 bn of infrastructure funding
+through the VEB.RF Factory + Federal Treasury (Stage 1) → reinvested
+into national projects. - 2029: RUB 2.9 tn annual issuance. On the Stage
+2 horizon (after adoption of the package of four federal-law amendments)
+— transition to the targeted secured-emission model of the Bank of
+Russia. - 2034: RUB 7.1 tn annual issuance.</p>
+<p>At an infrastructure investment multiplier of 1.8–2.3 (the standard
+range for the Russian economy; the Ministry of Economic Development uses
+1.9–2.1 for assessing national-project effects), the expected GDP
+contribution from CPFSR investments: - 2029: RUB 5.2–6.7 tn of
+additional economic activity. - 2034: RUB 12.8–16.4 tn of additional
+economic activity.</p>
+<p>This is comparable to 5–8% of the nominal GDP of the RF (for
+2034).</p>
+<h3 id="impact-on-national-projects">12.2. Impact on national
+projects</h3>
+<p>CPFSR provides targeted financing of national projects without
+increasing the budget burden. Reduction of the financing queue through
+mobilisation of the private collateral base is the key effect, directly
+stated in the 6th advantage of the author’s concept.</p>
+<p>Potential target areas (defined by sectoral federal laws and
+government decrees): - Heavy industry and machine-building. - Import
+substitution in critical sectors. - Healthcare (infrastructure
+modernisation, equipment). - Science and education. - Transport
+infrastructure (bridges, roads, logistics hubs). - Energy and
+utilities.</p>
+<h3 id="impact-on-dormant-assets">12.3. Impact on “dormant” assets</h3>
+<p>Per the 4th advantage of the concept — bringing “dormant” private
+assets into the economic turnover.</p>
+<p>At present, around 80% of residential and a significant share of
+commercial real estate in the RF are not used as collateral instruments
+for objective reasons (paperwork, procedural duration, no suitable
+product). CPFSR removes these barriers via automation and a new product
+contour. By Year 10 — up to 20% of the conservative collateral capacity
+is in circulation (RUB 5 tn), corresponding to the mobilisation of
+assets of 10–20 million households and enterprises in the RF.</p>
+<h3 id="additional-income-for-owners">12.4. Additional income for
+owners</h3>
+<p>Per the 9th point of the concept — financial remuneration for the
+owner of the pledged property.</p>
+<p>Under an owner-remuneration model of, for example, 1–2% p.a. of the
+DFA nominal (the exact rate is set by regulatory standards and the
+contract with the operator), aggregate payouts to owners by Year 10: -
+DFA stack volume: RUB 26.6 tn. - At 1% — RUB 266 bn in additional owner
+income annually. - At 2% — RUB 532 bn annually.</p>
+<p>This is comparable to the budget of several RF regions and provides a
+significant “secondary” contribution to consumer demand and the tax
+base.</p>
+<h3 id="impact-on-the-financial-system">12.5. Impact on the financial
+system</h3>
+<ul>
+<li>Expansion of the securities-market instrument base (a new class of
+reliable assets).</li>
+<li>Diversification opportunities for pension and insurance
+portfolios.</li>
+<li>Development of adjacent services (valuation, insurance, legal
+support) — additional jobs in the financial sector.</li>
+<li>Impetus to the development of Russian fintech and regulatory
+technology.</li>
+</ul>
+<h3 id="inflationary-regime">12.6. Inflationary regime</h3>
+<p>Per the 10th point of the concept — issuance is against fully secured
+assets. This is fundamentally different from “helicopter” emission:
+every ruble issued is backed by real, appraised-at-discount property.
+The inflationary effect is neutral or disinflationary (growth in goods
+and services supply through national projects offsets the increase in
+the money supply).</p>
+<hr />
+<h2 id="gtm-sequencing-and-champion-map-t0-to-t180">13. GTM sequencing
+and Champion-map (T+0 to T+180)</h2>
+<p>The wedge logic of the project requires bypassing the Bank of Russia
+at the first step: the CBR is the final instance of Stage 1 (inclusion
+of the operator in the 779-P register). The key approvals proceed via
+the Ministry of Economic Development → Ministry of Finance → VEB.RF →
+State Duma → region → Atomyze. The named Champion-map (synchronised with
+<code>_Мастер/Концепт.md § 1-ter</code>):</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Person</th>
+<th>Authority</th>
+<th>Objective</th>
+<th>Anchor document</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T+30</td>
+<td><strong>Maxim Reshetnikov</strong></td>
+<td>Ministry of Economic Development, Minister</td>
+<td>Wedge-pilot Stage 1 as an accelerant for national projects; named
+sponsor</td>
+<td>Business Plan + Pitch deck + Wedge_pilot-light</td>
+</tr>
+<tr>
+<td>T+30</td>
+<td><strong>Office of the Government of the Russian
+Federation</strong></td>
+<td>through the sectoral adviser on the digital economy</td>
+<td>Architectural concept; inter-agency working group</td>
+<td>Concept § 1-bis + Legal Framework § 8.1</td>
+</tr>
+<tr>
+<td>T+30</td>
+<td><strong>Atomyze JSC</strong></td>
+<td>through a recommended representative</td>
+<td>LoI on technology partnership: 779-P transaction operator + CPFSR
+front-end</td>
+<td>Pre-meeting_briefs/01_LoI_Атомайз.md</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td><strong>Ivan Kolychev</strong></td>
+<td>Ministry of Finance, Deputy Minister (debt)</td>
+<td>Off-budget channel; the OFZ-pressure relief case</td>
+<td>Financial Model v3 + Business Plan</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td><strong>Vladimir Sazanov</strong></td>
+<td>Ministry of Finance, Deputy Minister (taxes)</td>
+<td>DFA tax position (Article 34.2 of the Tax Code; sub-paragraph 12.2
+of paragraph 2 of Article 149)</td>
+<td>Legal Framework § 5 + request under Article 34.2</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td><strong>VEB.RF Project Finance Factory</strong></td>
+<td>through the recommended representative of the Ministry of Economic
+Development</td>
+<td>Consultative letter under Government Decree No. 158</td>
+<td>Pre-meeting_briefs/02_Consultative_letter_ВЭБ.РФ.md</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td><strong>Gazprombank / PSB</strong></td>
+<td>through the recommended representative of the Ministry of Economic
+Development</td>
+<td>MoU on the role of the pilot settlement bank</td>
+<td>Pre-meeting_briefs/04_MoU_GPB_ПСБ.md</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td><strong>Rustam Minnikhanov</strong></td>
+<td>Republic of Tatarstan</td>
+<td>MoU on the municipal pilot: 50–100 objects, RUB 5–10 bn</td>
+<td>Pre-meeting_briefs/03_MoU_Татарстан.md</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td><strong>Alexander Moor</strong></td>
+<td>Tyumen Region (reserve)</td>
+<td>same</td>
+<td>same</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td><strong>Anatoly Aksakov</strong></td>
+<td>State Duma, Financial Market Committee</td>
+<td>Consultation on 259-FZ for Stage 1; horizon Stage 2 — the package of
+four federal laws</td>
+<td>CBR Briefing + Concept</td>
+</tr>
+<tr>
+<td>T+180+</td>
+<td><strong>Bank of Russia</strong></td>
+<td>through a consolidated inter-agency position</td>
+<td>IS DFA operator register under 779-P (Stage 1)</td>
+<td>Legal Framework § 8.1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Success metrics for the Stage 1 → Stage 2
+transition:</strong> yield ≥ 18% p.a. for asset owners; ≥ 8 regions in
+the system; AUM ≥ RUB 50 bn by end-2027; no incidents in the class of
+779-P § 9 (investor-rights protection).</p>
+<p>Pre-meeting briefs for each champion — in
+<code>02_Юридический_фундамент/Pre-meeting_briefs/</code> (4 drafts
+ready).</p>
+<hr />
+<h2 id="appendices">14. Appendices</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Document</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Financial model</td>
+<td><code>03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.md</code></td>
+</tr>
+<tr>
+<td>Notes to the financial model</td>
+<td><code>03_Финансовая_модель/Финмодель_допущения_и_расчёты.md</code></td>
+</tr>
+<tr>
+<td>Author’s concept</td>
+<td><code>_Мастер/Концепт.md</code></td>
+</tr>
+<tr>
+<td>Legal framework</td>
+<td><code>02_Юридический_фундамент/</code> (separate document)</td>
+</tr>
+<tr>
+<td>Technical solution</td>
+<td><code>01_Техническая_документация/</code> (separate document)</td>
+</tr>
+<tr>
+<td>Pre-meeting briefs</td>
+<td><code>02_Юридический_фундамент/Pre-meeting_briefs/</code></td>
+</tr>
+<tr>
+<td>Deposit certificate</td>
+<td>No. 4011265 of 19.12.2024 (held by the author)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Date:</strong> 24.05.2026 (post-Horizon-II refactor: § 13 GTM
+sequencing added). <strong>Sources:</strong> the author’s concept
+(A.-Kh. A. Kagirov, Certificate No. 4011265 of 19.12.2024); 86-FZ,
+259-FZ, the Tax Code, the CBR Monetary Policy Guidelines; Rosstat data.
+No third-party materials were used.</p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

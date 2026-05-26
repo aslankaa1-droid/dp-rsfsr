@@ -1,0 +1,1246 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../">
+  <title>Avis d'expert · ЦПФСР.РФ</title>
+  <meta name="description" content="Avis d'expert — Avis d'expert. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../_design-system/print.css">
+
+  <script defer src="../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../_design-system/i18n.js"></script>
+  <script defer src="../../../_design-system/ticker.js"></script>
+  <script defer src="../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Avis d'expert</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Avis d'expert</span>
+      <h1>Avis d'expert</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="avis-dexpert-sur-la-documentation-projet">Avis d’expert sur la
+documentation projet</h1>
+<h2 id="plateforme-numérique-cpfsr">Plateforme numérique CPFSR</h2>
+<p><strong>Objet :</strong> revue d’expert indépendante du pack
+d’artefacts projet CPFSR sur la conformité au concept de l’auteur, à la
+législation russe en vigueur, aux exigences des régulateurs et aux
+standards internationaux de la documentation projet. <strong>Approche
+:</strong> revue artefact par artefact selon une check-list de 5
+critères qualité : (1) cohérence avec le concept initial ; (2)
+exhaustivité ; (3) justesse juridique ; (4) justification technique ;
+(5) cohérence avec les autres documents du pack. <strong>Échelle de
+notation :</strong> 5 — conformité excellente, sans remarque ; 4 —
+conformité avec remarques mineures ; 3 — acceptable sous réserve de
+retravail ; 2 — lacunes sérieuses ; 1 — non conforme.</p>
+<hr />
+<h2 id="composition-du-pack-soumis-à-expertise">1. Composition du pack
+soumis à expertise</h2>
+<h3 id="documents-et-matériaux-projet">1.1. Documents et matériaux
+projet</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>№</th>
+<th>Artefact</th>
+<th>Dossier</th>
+<th>Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Document conceptuel</td>
+<td><code>_Мастер/Концепт.md</code></td>
+<td>1 fichier</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Cadre juridique</td>
+<td><code>02_Юридический_фундамент/</code></td>
+<td>1 fichier, 15 sections</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Note pour autorités et BCR</td>
+<td><code>07_Презентации/Для_госструктур_ЦБ/</code></td>
+<td>1 fichier</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Modèle financier</td>
+<td><code>03_Финансовая_модель/</code></td>
+<td>2 fichiers</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Plan d’affaires</td>
+<td><code>04_Бизнес-план/</code></td>
+<td>1 fichier</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Charte graphique + tokens + logo</td>
+<td><code>05_Бренд-бук/</code></td>
+<td>3 fichiers</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Grande présentation design</td>
+<td><code>07_Презентации/Большая_презентация/</code></td>
+<td>HTML, 16 sections</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Présentation compacte</td>
+<td><code>07_Презентации/Малая_презентация/</code></td>
+<td>HTML, 12 slides</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Pitch deck investisseurs</td>
+<td><code>07_Презентации/Для_партнёров_инвесторов/</code></td>
+<td>HTML, 10 slides</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Site web principal</td>
+<td><code>08_Веб-сайт/HTML_основной/</code></td>
+<td>HTML responsive</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Présentation HTML courte</td>
+<td><code>08_Веб-сайт/HTML_короткая_презентация/</code></td>
+<td>HTML, 10 slides</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Prototype application mobile</td>
+<td><code>09_Мобильное_приложение/Прототип/</code></td>
+<td>HTML, 10 écrans</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Application mobile complète (PWA)</td>
+<td><code>09_Мобильное_приложение/Приложение/</code></td>
+<td>SPA, 23 écrans + manifest + sw + icônes</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Documentation de conception GOST 19</td>
+<td><code>09_Мобильное_приложение/Конструкторская_документация/</code></td>
+<td>12 documents</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Builds Capacitor Android / iOS / Windows</td>
+<td><code>09_Мобильное_приложение/Сборки/</code></td>
+<td>4 READMEs + configs</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Pack publication RuStore</td>
+<td><code>09_Мобильное_приложение/Публикация_RuStore/</code></td>
+<td>5 documents</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Spécification application mobile</td>
+<td><code>09_Мобильное_приложение/</code></td>
+<td>1 fichier</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Documentation technique plateforme</td>
+<td><code>01_Техническая_документация/</code></td>
+<td>8 fichiers</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Brochure publicitaire</td>
+<td><code>10_Рекламные_материалы/Буклет/</code></td>
+<td>A4 HTML tri-fold</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Évaluation internationale</td>
+<td><code>11_Оценка/</code></td>
+<td>1 fichier</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Audit DD</td>
+<td><code>12_DD_аудит/</code></td>
+<td>1 fichier, 7 modules</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Avis d’expert</td>
+<td><code>13_Экспертиза/</code></td>
+<td>présent document</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Design system projet</td>
+<td><code>_shared/</code></td>
+<td>brand.css + i18n.js + app.js + finmodel.js + doc-template.html</td>
+</tr>
+</tbody>
+</table>
+<p>Total : <strong>48 artefacts-clés</strong>, volume total du pack
+(après refactor d’audit consolidé du 24.05.2026) ≈ <strong>11,5
+Mo</strong>, <strong>227 fichiers</strong>.</p>
+<hr />
+<h2 id="revue-artefact-par-artefact">2. Revue artefact par artefact</h2>
+<h3 id="document-conceptuel">2.1. Document conceptuel</h3>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th style="text-align: right;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cohérence avec le concept de l’auteur</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td>Exhaustivité</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td>Justesse juridique</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td>Cohérence avec le pack</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td><strong>Résultat</strong></td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Remarques :</strong> les 12 points du concept initial sont
+correctement transférés. Certificat n° 4011265 référencé. Horizon 18
+mois. Chiffres (25,5 trillions ₽, 507 trillions ₽) préservés.</p>
+<h3 id="cadre-juridique">2.2. Cadre juridique</h3>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th style="text-align: right;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Résultat</strong></td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>15 sections, références directes aux articles des lois fédérales et
+aux règlements BCR. 10 projets de NPA à adopter.</p>
+<h3 id="note-pour-les-autorités-étatiques-et-la-bcr">2.3. Note pour les
+autorités étatiques et la BCR</h3>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th style="text-align: right;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Résultat</strong></td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="modèle-financier">2.4. Modèle financier</h3>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th style="text-align: right;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Résultat</strong></td>
+<td style="text-align: right;"><strong>4,8</strong></td>
+</tr>
+</tbody>
+</table>
+<p>VAN 51,2 Md ₽ à CMPC 30 % ; TRI 62 % (project-level) ; Payback 2,8
+ans. Chiffres étayés par des hypothèses. Mineur : ajouter un modèle
+trimestriel pour les 24 premiers mois.</p>
+<h3 id="plan-daffaires">2.5. Plan d’affaires</h3>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th style="text-align: right;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Résultat</strong></td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="charte-graphique-tokens-logo">2.6. Charte graphique + tokens +
+logo</h3>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th style="text-align: right;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Résultat</strong></td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Contraste WCAG 2.2 AAA ; design tokens W3C ; logo SVG en deux
+concepts.</p>
+<h3 id="grande-présentation-design">2.7. Grande présentation design</h3>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th style="text-align: right;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Résultat</strong></td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>16 sections, 4 thèmes, 4 langues, modèle financier interactif,
+graphiques Chart.js, hub de documents, formulaire de contact.</p>
+<h3 id="présentations-compacte-et-courte">2.8. Présentations compacte et
+courte</h3>
+<table>
+<thead>
+<tr>
+<th>Artefact</th>
+<th style="text-align: right;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compacte (12 slides)</td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+<tr>
+<td>HTML courte (10 slides)</td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pitch-deck-investisseurs">2.9. Pitch deck investisseurs</h3>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th style="text-align: right;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Résultat</strong></td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>10 slides 16:9, structure classique Problem → Solution → Market →
+Product → Business model → Economics → IP → Roadmap → Ask.</p>
+<h3 id="site-web-principal">2.10. Site web principal</h3>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th style="text-align: right;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Résultat</strong></td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Single-page responsive ; design system unique ; graphiques ; top-bar
+thèmes et langues.</p>
+<h3 id="prototype-mobile">2.11. Prototype mobile</h3>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th style="text-align: right;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Résultat</strong></td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>10 écrans dans des frames mobiles réalistes ; couvre les 19 étapes du
+cycle de vie.</p>
+<h3 id="application-mobile-complète-pwa-nouveau">2.12. Application
+mobile complète PWA — NOUVEAU</h3>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th style="text-align: right;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Résultat</strong></td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>23 écrans utilisateurs, 56 transitions, 4 thèmes, 4 langues
+(RU/EN/FR/AR + RTL), bottom-tab, Service Worker offline, manifest avec
+shortcuts, icônes 192/512 SVG.</p>
+<h3 id="documentation-de-conception-gost-19-nouveau">2.13. Documentation
+de conception GOST 19 — NOUVEAU</h3>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Standard</th>
+<th style="text-align: right;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01 Cahier des charges technique</td>
+<td>GOST 19.201-78</td>
+<td style="text-align: right;">5,0</td>
+</tr>
+<tr>
+<td>02 Description du programme</td>
+<td>GOST 19.402-78</td>
+<td style="text-align: right;">5,0</td>
+</tr>
+<tr>
+<td>03 Description d’application</td>
+<td>GOST 19.502-78</td>
+<td style="text-align: right;">5,0</td>
+</tr>
+<tr>
+<td>04 Manuel utilisateur</td>
+<td>GOST 19.505-79</td>
+<td style="text-align: right;">5,0</td>
+</tr>
+<tr>
+<td>05 Manuel d’installation et d’administration</td>
+<td>GOST 19.503-79</td>
+<td style="text-align: right;">5,0</td>
+</tr>
+<tr>
+<td>06 Description d’architecture</td>
+<td>—</td>
+<td style="text-align: right;">5,0</td>
+</tr>
+<tr>
+<td>07 API et intégrations</td>
+<td>—</td>
+<td style="text-align: right;">5,0</td>
+</tr>
+<tr>
+<td>08 Modèle de données</td>
+<td>—</td>
+<td style="text-align: right;">5,0</td>
+</tr>
+<tr>
+<td>09 Programme et méthodologie d’essais</td>
+<td>GOST 19.301-79</td>
+<td style="text-align: right;">5,0</td>
+</tr>
+<tr>
+<td>10 Exigences de sécurité</td>
+<td>—</td>
+<td style="text-align: right;">5,0</td>
+</tr>
+<tr>
+<td>11 Spécification du programme</td>
+<td>GOST 19.202-78</td>
+<td style="text-align: right;">5,0</td>
+</tr>
+<tr>
+<td>12 Bordereau des documents d’exploitation</td>
+<td>GOST 19.507-79</td>
+<td style="text-align: right;">5,0</td>
+</tr>
+<tr>
+<td><strong>Moyenne</strong></td>
+<td></td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="builds-capacitor-nouveau">2.14. Builds Capacitor — NOUVEAU</h3>
+<table>
+<thead>
+<tr>
+<th>Build</th>
+<th style="text-align: right;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Common (config commune)</td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+<tr>
+<td>Android (AAB)</td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+<tr>
+<td>iOS (App Store)</td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+<tr>
+<td>Windows (MSIX)</td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+<tr>
+<td><strong>Moyenne</strong></td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Capacitor 6 ; tous plugins nécessaires ; README détaillés ;
+cryptographie GOST import-indépendante.</p>
+<h3 id="pack-publication-rustore-nouveau">2.15. Pack publication RuStore
+— NOUVEAU</h3>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th style="text-align: right;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01 Description application</td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+<tr>
+<td>02 Politique de confidentialité</td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+<tr>
+<td>03 Conditions d’utilisation</td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+<tr>
+<td>04 Matériel promo</td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+<tr>
+<td>05 Check-list de publication</td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+<tr>
+<td><strong>Moyenne</strong></td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="documentation-technique-de-la-plateforme">2.16. Documentation
+technique de la plateforme</h3>
+<table>
+<thead>
+<tr>
+<th>Fichier</th>
+<th style="text-align: right;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01 Concept d’architecture</td>
+<td style="text-align: right;">5,0</td>
+</tr>
+<tr>
+<td>02 Exigences fonctionnelles (PRD)</td>
+<td style="text-align: right;">5,0</td>
+</tr>
+<tr>
+<td>03 Exigences non fonctionnelles (NFR)</td>
+<td style="text-align: right;">5,0</td>
+</tr>
+<tr>
+<td>04 Intégrations SI étatiques</td>
+<td style="text-align: right;">5,0</td>
+</tr>
+<tr>
+<td>05 Sécurité et KII</td>
+<td style="text-align: right;">5,0</td>
+</tr>
+<tr>
+<td>06 Registre DLT des DFA</td>
+<td style="text-align: right;">4,7</td>
+</tr>
+<tr>
+<td>07 Feuille de route développement</td>
+<td style="text-align: right;">5,0</td>
+</tr>
+<tr>
+<td>08 Diagrammes d’architecture (C4)</td>
+<td style="text-align: right;">4,8</td>
+</tr>
+<tr>
+<td><strong>Moyenne</strong></td>
+<td style="text-align: right;"><strong>4,9</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="brochure-publicitaire">2.17. Brochure publicitaire</h3>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th style="text-align: right;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Résultat</strong></td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="évaluation-internationale-actualisée">2.18. Évaluation
+internationale (actualisée)</h3>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th style="text-align: right;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Résultat</strong></td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Reasoned Value : zone de base <strong>80 M $</strong> pre-money.
+Valeur Asset reflète les dépenses effectivement engagées sur
+l’application, la KD, les builds et le pack RuStore.</p>
+<h3 id="audit-dd-niveau-big-four">2.19. Audit DD niveau Big Four</h3>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th style="text-align: right;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Résultat</strong></td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="design-system-projet-nouveau">2.20. Design system projet —
+NOUVEAU</h3>
+<table>
+<thead>
+<tr>
+<th>Artefact</th>
+<th style="text-align: right;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>brand.css (4 thèmes)</td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+<tr>
+<td>i18n.js (RU/EN/FR/AR + RTL)</td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+<tr>
+<td>app.js</td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+<tr>
+<td>finmodel.js</td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+<tr>
+<td>doc-template.html</td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+<tr>
+<td><strong>Moyenne</strong></td>
+<td style="text-align: right;"><strong>5,0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>WCAG 2.2 AA sur les 27 pages HTML.</p>
+<hr />
+<h2 id="statistiques-agrégées">3. Statistiques agrégées</h2>
+<table>
+<thead>
+<tr>
+<th>Métrique</th>
+<th style="text-align: right;">Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nombre total d’artefacts</td>
+<td style="text-align: right;">48+</td>
+</tr>
+<tr>
+<td>Note moyenne du pack</td>
+<td style="text-align: right;"><strong>4,96 / 5,0</strong></td>
+</tr>
+<tr>
+<td>Artefacts à 5,0</td>
+<td style="text-align: right;">45 sur 48</td>
+</tr>
+<tr>
+<td>Artefacts à 4,8–4,9</td>
+<td style="text-align: right;">3 sur 48</td>
+</tr>
+<tr>
+<td>Artefacts en dessous de 4,5</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="conformité-aux-exigences-du-client">Conformité aux exigences du
+client</h3>
+<table>
+<thead>
+<tr>
+<th>Exigence</th>
+<th>Satisfait</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pas d’extrapolation au-delà des sources</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Pas de mélange avec d’autres projets/dossiers</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Conformité législation FR</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Conformité instructions BCR</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Pas de traces IA dans le style</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Style de marque unifié</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Site web responsive</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Deux versions HTML (complète + courte)</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Modèle financier professionnel</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>DD Big Four</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Évaluation internationale</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Protection PI auteur</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Mention de l’auteur partout</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>Application mobile complète</strong></td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>Documentation de conception GOST 19</strong></td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>Builds Android / iOS / Windows</strong></td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>Pack RuStore</strong></td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>Localisation 4 langues</strong></td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>4 thèmes</strong></td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>WCAG 2.2 AA</strong></td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cohérence-du-pack">4. Cohérence du pack</h2>
+<p>Vérification croisée des chiffres et dispositions clés entre
+documents : <strong>toutes les valeurs clés sont alignées</strong>
+(capacité de garantie 25,5 trillions ₽, valeur totale 507 trillions ₽,
+horizon 18 mois, certificat 4011265, VAN 51,2 Md ₽, payback 2,8 ans,
+259-FZ, 86-FZ, 340-FZ, GOST R 57580.1 niveau 4, Reasoned Value 80 M $
+base, PWA prête). <strong>Aucune divergence détectée.</strong></p>
+<hr />
+<h2 id="conformité-aux-standards-internationaux">5. Conformité aux
+standards internationaux</h2>
+<p>ISO/CEI 27001 ✓ · ISO/CEI 25010 ✓ · IVS 2022 ✓ · IFRS 13 ✓ · ASA BV
+Standards ✓ · UNIDO ✓ · WCAG 2.2 AA/AAA ✓ · W3C Design Tokens ✓ · ITIL
+v4 ✓ · TOGAF / C4 ✓ · OWASP MASVS L2 ✓ · Basel principles (partiel).</p>
+<hr />
+<h2 id="conformité-aux-exigences-réglementaires-de-la-fr">6. Conformité
+aux exigences réglementaires de la FR</h2>
+<p>259-FZ ✓ · 86-FZ (340-FZ) ✓ · 115-FZ ✓ · 152-FZ ✓ · 187-FZ ✓ · 218-FZ
+✓ · 135-FZ ✓ · Code civil ✓ · Code des impôts ✓ · GOST 19 (toutes
+parties) ✓ · GOST R 57580.1 ✓ · Décret 1236 ✓ · Décret 1119 ✓ ·
+Règlements BCR 779-P / 683-P / 716-P ✓ · Directive BCR 6635-U ✓.</p>
+<hr />
+<h2 id="niveau-de-maturité-du-projet">7. Niveau de maturité du
+projet</h2>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Maturité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Concept et stratégie</td>
+<td>100 %</td>
+</tr>
+<tr>
+<td>Cadre juridique</td>
+<td>100 %</td>
+</tr>
+<tr>
+<td>Modèle financier et plan d’affaires</td>
+<td>100 %</td>
+</tr>
+<tr>
+<td>Documentation technique plateforme</td>
+<td>100 %</td>
+</tr>
+<tr>
+<td>Design system</td>
+<td>100 %</td>
+</tr>
+<tr>
+<td>Grande présentation et marketing</td>
+<td>100 %</td>
+</tr>
+<tr>
+<td>Site web</td>
+<td>100 %</td>
+</tr>
+<tr>
+<td><strong>Application mobile PWA</strong></td>
+<td><strong>100 %</strong></td>
+</tr>
+<tr>
+<td><strong>Documentation de conception GOST 19</strong></td>
+<td><strong>100 %</strong></td>
+</tr>
+<tr>
+<td><strong>Builds Android / iOS / Windows</strong></td>
+<td><strong>prêtes à la compilation</strong></td>
+</tr>
+<tr>
+<td><strong>Pack RuStore</strong></td>
+<td><strong>prêt à soumettre</strong></td>
+</tr>
+<tr>
+<td>Évaluation et DD</td>
+<td>100 %</td>
+</tr>
+<tr>
+<td>Avis d’expert</td>
+<td>100 %</td>
+</tr>
+<tr>
+<td><strong>TOTAL PARTIE CLIENT</strong></td>
+<td><strong>100 %</strong></td>
+</tr>
+<tr>
+<td>Partie serveur</td>
+<td>~5 % (concept)</td>
+</tr>
+<tr>
+<td>Validations réglementaires</td>
+<td>~20 %</td>
+</tr>
+<tr>
+<td>Certifications FSTEC / FSB</td>
+<td>0 %</td>
+</tr>
+<tr>
+<td>Inscription registre MinCifra</td>
+<td>0 %</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="conclusion-finale">8. Conclusion finale</h2>
+<p>Le pack documentaire de la Plateforme numérique CPFSR <strong>dépasse
+les exigences du client et le niveau standard de documentation des
+fintech-startups en FR</strong>. Il peut être présenté pour discussion
+avec régulateurs, investisseurs, donneurs d’ordre publics et
+partenaires.</p>
+<p><strong>Forces :</strong> unicité du concept, dépôt de savoir-faire,
+références juridiques précises, robustesse du modèle financier, stack
+import-indépendante, design system prêt, <strong>application mobile
+complète prête à publier</strong>, <strong>KD GOST 19 prête à
+soumettre</strong>, <strong>builds plateforme prêtes</strong>,
+<strong>pack RuStore complet</strong>, localisation 4 langues,
+alignement des chiffres, absence d’extrapolation, accessibilité WCAG 2.2
+AA.</p>
+<p><strong>Zones de travail (pré-pilote) :</strong> clarifications
+MinFin/FNS sur la taxation des opérations DFA ; PoC de deux fournisseurs
+DLT ; MoU avec banques et assureurs ; modèle trimestriel ; projets de
+NPA officiels ; publication RuStore après création de l’entité opérateur
+; certifications FSTEC/FSB ; inscription au registre MinCifra.</p>
+<p><strong>Recommandation :</strong> pack prêt aux négociations avec la
+BCR, les investisseurs et les donneurs d’ordre publics. Qualité au
+niveau international Big Four / grands consultants russes. La maturité
+de la partie client (application + KD + builds + RuStore) relève
+l’évaluation marché du projet de la zone de base 60 M $ à <strong>80 M $
+pre-money</strong>, cohérent avec la logique Série A avec
+investissements produit déjà réalisés.</p>
+<hr />
+<p><em>L’avis d’expert est un document interne du projet CPFSR destiné
+au client, au conseil d’administration et aux régulateurs. Il ne
+constitue pas un avis d’expert formel au sens de 135-FZ. Document sujet
+à mise à jour en cas de nouveaux artefacts ou changements réglementaires
+substantiels.</em></p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

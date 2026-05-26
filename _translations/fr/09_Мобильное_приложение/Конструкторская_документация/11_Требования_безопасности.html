@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../../">
+  <title>Exigences de sécurité · ЦПФСР.РФ</title>
+  <meta name="description" content="Exigences de sécurité — Exigences de sécurité. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../../_design-system/print.css">
+
+  <script defer src="../../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../../_design-system/i18n.js"></script>
+  <script defer src="../../../../_design-system/ticker.js"></script>
+  <script defer src="../../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Exigences de sécurité</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Exigences de sécurité</span>
+      <h1>Exigences de sécurité</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="exigences-de-sécurité-de-linformation">Exigences de sécurité de
+l’information</h1>
+<h2 id="cpfsr-application-mobile">CPFSR — application mobile</h2>
+<p><strong>Identifiant :</strong> РСФСР.МП.11.ТБ</p>
+<hr />
+<h2 id="catégorie-et-niveau-de-protection">1. Catégorie et niveau de
+protection</h2>
+<table>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Catégorie de l’objet IIC (FZ-187)</td>
+<td>1 (la plus élevée)</td>
+</tr>
+<tr>
+<td>Niveau de sécurité ISPDn (décret du Gouvernement N° 1119)</td>
+<td>UZ-1</td>
+</tr>
+<tr>
+<td>Niveau de protection au titre de GOST R 57580.1</td>
+<td>4 (maximum)</td>
+</tr>
+<tr>
+<td>Classe du SI d’État (arrêté FSTEC N° 17)</td>
+<td>K1</td>
+</tr>
+<tr>
+<td>Conformité OWASP MASVS</td>
+<td>L2+</td>
+</tr>
+</tbody>
+</table>
+<h2 id="documents-normatifs-applicables">2. Documents normatifs
+applicables</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Document</th>
+<th>Applicabilité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FZ-152 « Sur les données personnelles »</td>
+<td>Protection des DCP des utilisateurs</td>
+</tr>
+<tr>
+<td>FZ-187 « Sur la sécurité de l’IIC »</td>
+<td>Catégorie 1</td>
+</tr>
+<tr>
+<td>FZ-149 « Sur l’information »</td>
+<td>Exigences de base</td>
+</tr>
+<tr>
+<td>Règlement de la Banque de Russie N° 683-P</td>
+<td>Protection de l’information dans les organisations financières</td>
+</tr>
+<tr>
+<td>Règlement de la Banque de Russie N° 716-P</td>
+<td>Risque opérationnel</td>
+</tr>
+<tr>
+<td>Instruction de la Banque de Russie N° 6635-U</td>
+<td>Incidents SI</td>
+</tr>
+<tr>
+<td>Règlement de la Banque de Russie N° 499-P</td>
+<td>Identification des clients</td>
+</tr>
+<tr>
+<td>Règlement de la Banque de Russie N° 482-P</td>
+<td>EBS</td>
+</tr>
+<tr>
+<td>GOST R 57580.1-2017</td>
+<td>8 domaines de protection</td>
+</tr>
+<tr>
+<td>GOST R 34.10-2012</td>
+<td>Signature électronique</td>
+</tr>
+<tr>
+<td>GOST R 34.11-2012</td>
+<td>Hachage</td>
+</tr>
+<tr>
+<td>GOST R 34.12-2015, GOST R 34.13-2015</td>
+<td>Chiffrement</td>
+</tr>
+<tr>
+<td>Arrêté FSTEC N° 239</td>
+<td>IIC de catégorie 1</td>
+</tr>
+<tr>
+<td>Arrêté FSTEC N° 17</td>
+<td>SI d’État de classe K1</td>
+</tr>
+<tr>
+<td>Arrêté FSTEC N° 21</td>
+<td>DCP</td>
+</tr>
+</tbody>
+</table>
+<h2 id="protection-des-données">3. Protection des données</h2>
+<h3 id="protection-des-données-au-repos-at-rest">3.1. Protection des
+données au repos (at rest)</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Type de données</th>
+<th>Stockage</th>
+<th>Protection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tokens d’accès, refresh-tokens</td>
+<td>iOS Keychain / Android Keystore / Windows Credential Locker</td>
+<td>par moyens de l’OS avec protection biométrique</td>
+</tr>
+<tr>
+<td>Clés cryptographiques</td>
+<td>Secure Enclave / TEE</td>
+<td>par moyens de l’appareil</td>
+</tr>
+<tr>
+<td>Identifiants biométriques (mais pas les vecteurs)</td>
+<td>Stockage protégé</td>
+<td>AES-256</td>
+</tr>
+<tr>
+<td>Certificats UKEP</td>
+<td>Stockage protégé</td>
+<td>par moyens de l’OS</td>
+</tr>
+<tr>
+<td>Cache de données métier</td>
+<td>IndexedDB / SQLite</td>
+<td>AES-256 avec clé du stockage protégé</td>
+</tr>
+<tr>
+<td>Paramètres de l’application</td>
+<td>LocalStorage</td>
+<td>non chiffré (non sensible)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="protection-des-données-en-transit-in-transit">3.2. Protection
+des données en transit (in transit)</h3>
+<ul>
+<li><strong>TLS 1.3</strong> avec certificats GOST (KriptoPro TLS) pour
+tous les échanges HTTPS.</li>
+<li><strong>mTLS</strong> pour les opérations critiques (émission d’AFN,
+signature du contrat intelligent).</li>
+<li><strong>Certificate pinning</strong> sur le CA racine du niveau de
+l’infrastructure financière de la FR.</li>
+<li><strong>HSTS</strong> pour le mode web (PWA).</li>
+</ul>
+<h3 id="chiffrement-au-niveau-des-messages">3.3. Chiffrement au niveau
+des messages</h3>
+<p>Pour les opérations critiques (émission d’AFN, signature), un
+chiffrement supplémentaire de la charge utile est appliqué au niveau de
+l’application : - Algorithme : GOST R 34.12-2015 (« Kuznyechik » / «
+Magma »). - Mode : GOST R 34.13-2015.</p>
+<h3 id="signature-des-données">3.4. Signature des données</h3>
+<ul>
+<li>UKEP de l’utilisateur : GOST R 34.10-2012 avec longueur de clé
+256/512 bits.</li>
+<li>Signature par fonction de hachage : GOST R 34.11-2012
+(Streebog).</li>
+<li>Les certificats UKEP sont délivrés par les autorités de
+certification accréditées par le ministère du Développement numérique de
+Russie.</li>
+</ul>
+<h2 id="authentification-et-autorisation">4. Authentification et
+autorisation</h2>
+<h3 id="modes-dauthentification">4.1. Modes d’authentification</h3>
+<h4 id="primaire-entrée-dans-lapplication">Primaire (entrée dans
+l’application)</h4>
+<ul>
+<li><strong>ESIA</strong> — OpenID Connect 1.0 avec un compte
+confirmé.</li>
+<li><strong>EBS</strong> — identification biométrique (règlement N°
+482-P).</li>
+</ul>
+<h4 id="locale-connexions-répétées">Locale (connexions répétées)</h4>
+<ul>
+<li><strong>Biométrie de l’appareil</strong> — Face ID / Touch ID /
+Windows Hello.</li>
+<li><strong>Code PIN</strong> — 4–6 chiffres, stockage protégé.</li>
+</ul>
+<h4 id="opérations-critiques">Opérations critiques</h4>
+<ul>
+<li>Authentification à deux facteurs : code SMS + biométrie.</li>
+<li>Signature UKEP.</li>
+</ul>
+<h3 id="gestion-des-sessions">4.2. Gestion des sessions</h3>
+<ul>
+<li>Durée de vie de l’access-token : 15 minutes.</li>
+<li>Durée de vie du refresh-token : 30 jours.</li>
+<li>En cas d’inactivité prolongée (10 minutes) — réauthentification
+biométrique.</li>
+<li>En cas de changement d’appareil — toutes les sessions précédentes
+sont annulées.</li>
+</ul>
+<h2 id="protection-de-lapplication">5. Protection de l’application</h2>
+<h3 id="protection-contre-la-compromission-de-lappareil">5.1. Protection
+contre la compromission de l’appareil</h3>
+<ul>
+<li><strong>Détection Jailbreak/Root</strong> — en cas de détection de
+compromission, l’application :
+<ol type="1">
+<li>Affiche un avertissement à l’utilisateur.</li>
+<li>Bloque les fonctions d’émission d’AFN et de signature.</li>
+<li>Conserve le mode lecture seule pour les AFN existants.</li>
+<li>Envoie l’incident au SOC.</li>
+</ol></li>
+<li><strong>Détection d’émulateur</strong> — refus de fonctionnement
+dans les émulateurs (pour la build productive).</li>
+</ul>
+<h3 id="protection-contre-lingénierie-inverse">5.2. Protection contre
+l’ingénierie inverse</h3>
+<ul>
+<li><strong>Obfuscation de code</strong> pour toutes les plateformes :
+<ul>
+<li>ProGuard / R8 pour Android ;</li>
+<li>bitcode + obfuscation Swift pour iOS ;</li>
+<li>obfuscation .NET pour Windows ;</li>
+<li>obfuscation JavaScript pour PWA.</li>
+</ul></li>
+<li><strong>Intégrité du code natif</strong> — vérification des sommes
+de contrôle au lancement.</li>
+</ul>
+<h3 id="protection-contre-les-attaques-mitm">5.3. Protection contre les
+attaques MITM</h3>
+<ul>
+<li>Certificate pinning à deux niveaux : CA racine et
+intermédiaire.</li>
+<li>Refus de fonctionnement en cas de soupçon d’un CA personnalisé
+installé sur l’appareil.</li>
+</ul>
+<h3 id="protection-contre-les-captures-décran">5.4. Protection contre
+les captures d’écran</h3>
+<ul>
+<li>Protection contre les captures d’écran activée pour les écrans :
+<ul>
+<li>Signature du contrat intelligent.</li>
+<li>Code OTP.</li>
+<li>Coordonnées de versement.</li>
+<li>Fiches d’actifs avec l’adresse complète.</li>
+</ul></li>
+</ul>
+<h3 id="protection-runtime">5.5. Protection runtime</h3>
+<ul>
+<li><strong>Anti-debug</strong> — détection des débogueurs et serveurs
+frida.</li>
+<li><strong>Anti-hook</strong> — vérification d’intégrité des fonctions
+clés.</li>
+<li><strong>Memory protection</strong> — effacement des secrets de la
+mémoire après utilisation.</li>
+</ul>
+<h2 id="protection-des-données-personnelles-fz-152">6. Protection des
+données personnelles (FZ-152)</h2>
+<h3 id="catégorie-des-dcp">6.1. Catégorie des DCP</h3>
+<p>Les catégories suivantes de DCP sont traitées (conformément à
+l’article 3 de FZ-152) : - Autres catégories — principales (nom complet,
+passeport, INN, contacts, adresse). - Biométriques — lors du travail
+avec EBS.</p>
+<h3 id="consentements">6.2. Consentements</h3>
+<ul>
+<li>Consentement au traitement des DCP — recueilli via ESIA lors de la
+première connexion.</li>
+<li>Possibilité de retrait du consentement — via la section « Profil →
+Sécurité → Supprimer le compte ».</li>
+</ul>
+<h3 id="localisation">6.3. Localisation</h3>
+<p>Toutes les DCP sont traitées et stockées exclusivement sur le
+territoire de la Fédération de Russie conformément au point 5 de
+l’article 18 de FZ-152.</p>
+<h3 id="niveau-de-protection">6.4. Niveau de protection</h3>
+<ul>
+<li>UZ-1 conformément au décret du Gouvernement N° 1119.</li>
+<li>Conformité à l’arrêté FSTEC de Russie N° 21.</li>
+</ul>
+<h3 id="notification-de-roskomnadzor">6.5. Notification de
+Roskomnadzor</h3>
+<p>L’opérateur est inscrit au registre des opérateurs de DCP de
+Roskomnadzor.</p>
+<h2 id="réponse-aux-incidents">7. Réponse aux incidents</h2>
+<h3 id="catégories-dincidents">7.1. Catégories d’incidents</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Catégorie</th>
+<th>Description</th>
+<th>Temps de réponse</th>
+<th>Notification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Critique</td>
+<td>Compromission des clés UKEP, fuite massive de DCP</td>
+<td>≤ 1 heure</td>
+<td>Banque de Russie, GosSOPKA, NCCCI</td>
+</tr>
+<tr>
+<td>Élevé</td>
+<td>Compromission d’un compte individuel, tentative d’émission non
+autorisée d’AFN</td>
+<td>≤ 4 heures</td>
+<td>Banque de Russie</td>
+</tr>
+<tr>
+<td>Moyen</td>
+<td>Activité suspecte</td>
+<td>≤ 24 heures</td>
+<td>SOC interne</td>
+</tr>
+<tr>
+<td>Faible</td>
+<td>Événements de fond</td>
+<td>Selon calendrier</td>
+<td>SOC interne</td>
+</tr>
+</tbody>
+</table>
+<h3 id="règlement-de-notification">7.2. Règlement de notification</h3>
+<p>Conformément à l’Instruction de la Banque de Russie N° 6635-U : -
+Incidents critiques — dans l’heure. - Élevés — sous 24 heures. - Rapport
+complet — sous 30 jours.</p>
+<p>Notifications via le canal sécurisé ViPNet au format XML.</p>
+<h2 id="audit-et-surveillance">8. Audit et surveillance</h2>
+<h3 id="journalisation">8.1. Journalisation</h3>
+<p>Tous les événements clés de l’application sont consignés : -
+Autorisation (succès/échec). - Soumission d’actif. - Lancement de
+l’émission d’AFN. - Signature du contrat intelligent. - Réception de
+versements. - Modifications du profil et des paramètres. - Modifications
+des données biométriques. - Événements de sécurité (jailbreak, MITM,
+authentification échouée).</p>
+<h3 id="conservation-des-journaux">8.2. Conservation des journaux</h3>
+<ul>
+<li>Journaux opérationnels : 13 mois.</li>
+<li>Journaux d’audit de sécurité : 10 ans.</li>
+<li>Stockage côté serveur, pas sur l’appareil.</li>
+</ul>
+<h3 id="intégration-siem">8.3. Intégration SIEM</h3>
+<p>Tous les événements de sécurité sont envoyés au système SIEM de
+l’opérateur (KOMRAD / MaxPatrol SIEM / R-Vision SIEM) en temps réel.</p>
+<h2 id="certification">9. Certification</h2>
+<h3 id="certificats-du-fstec-de-russie">9.1. Certificats du FSTEC de
+Russie</h3>
+<ul>
+<li>Conformité à l’arrêté N° 239 (IIC catégorie 1).</li>
+<li>Conformité à l’arrêté N° 17 (K1).</li>
+<li>Conformité à l’arrêté N° 21 (UZ-1 DCP).</li>
+</ul>
+<h3 id="certificats-du-fsb-de-russie">9.2. Certificats du FSB de
+Russie</h3>
+<ul>
+<li>Certification des moyens cryptographiques.</li>
+</ul>
+<h3 id="certificats-de-la-banque-de-russie">9.3. Certificats de la
+Banque de Russie</h3>
+<ul>
+<li>Conformité au règlement N° 779-P (opérateur SI).</li>
+<li>Conformité au règlement N° 683-P.</li>
+<li>Conformité à GOST R 57580.1 niveau 4.</li>
+</ul>
+<h3 id="registre-du-ministère-du-développement-numérique-de-russie">9.4.
+Registre du ministère du Développement numérique de Russie</h3>
+<ul>
+<li>Inscription au Registre unique des logiciels russes (décret du
+Gouvernement N° 1236).</li>
+</ul>
+<h3 id="enregistrement-auprès-de-roskomnadzor">9.5. Enregistrement
+auprès de Roskomnadzor</h3>
+<ul>
+<li>Notification du traitement des DCP.</li>
+</ul>
+<h2 id="contrôle-de-conformité">10. Contrôle de conformité</h2>
+<ul>
+<li>Audit SI interne — annuel.</li>
+<li>Pentest externe par un laboratoire accrédité — annuel.</li>
+<li>Red Team interne — semestriel.</li>
+<li>Vérification de la conformité à GOST R 57580.1 — annuelle.</li>
+<li>Contrôles réglementaires — à la demande de la BdR, du FSTEC, du FSB,
+de Roskomnadzor.</li>
+</ul>
+<hr />
+<p><em>Le document décrit les exigences de sécurité de l’information
+pour l’application mobile CPFSR et fera l’objet de précisions selon les
+résultats des essais de certification.</em></p>
+</article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

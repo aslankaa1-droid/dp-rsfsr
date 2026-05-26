@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../">
+  <title>Governance Pack · ЦПФСР.РФ</title>
+  <meta name="description" content="Governance Pack — Gouvernance et ESG. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../_design-system/print.css">
+
+  <script defer src="../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../_design-system/i18n.js"></script>
+  <script defer src="../../../_design-system/ticker.js"></script>
+  <script defer src="../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Gouvernance et ESG</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Gouvernance et ESG</span>
+      <h1>Governance Pack</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="governance-pack-gouvernance-dentreprise-et-esg">Governance Pack
+— Gouvernance d’entreprise et ESG</h1>
+<p><strong>Projet :</strong> CPFSR · <strong>Référence engagement
+:</strong> RSFSR-GOV-2026 · <strong>Date :</strong> 24.05.2026
+<strong>Auteur / titulaire de droits :</strong> A.-Kh. A. Kaguirov
+(certificat de dépôt n° 4011265 du 19.12.2024)</p>
+<hr />
+<h2 id="conseil-dadministration-ca">1. Conseil d’administration
+(CA)</h2>
+<h3 id="composition-du-ca">1.1. Composition du CA</h3>
+<p><strong>Structure cible : 5 administrateurs, dont 3 indépendants
+(taux d’indépendance de 60 %).</strong> Standard de gouvernance tier-1
+PE / VC, requis par les investisseurs LP et par le vendor DD Big-4.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Siège</th>
+<th>Catégorie</th>
+<th>Mandat</th>
+<th>Nommé par</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Président du CA</td>
+<td>Administrateur indépendant</td>
+<td>3 ans</td>
+<td>Assemblée générale des actionnaires</td>
+</tr>
+<tr>
+<td>Administrateur représentant l’Auteur (A.-Kh. A. Kaguirov)</td>
+<td>Administrateur exécutif</td>
+<td>3 ans</td>
+<td>Droit préférentiel</td>
+</tr>
+<tr>
+<td>Administrateur représentant l’investisseur Seed</td>
+<td>Administrateur externe non exécutif</td>
+<td>3 ans</td>
+<td>Pacte d’actionnaires</td>
+</tr>
+<tr>
+<td>Administrateur indépendant n° 2 (Finance)</td>
+<td>Indépendant</td>
+<td>3 ans</td>
+<td>Jusqu’à la Série A</td>
+</tr>
+<tr>
+<td>Administrateur indépendant n° 3 (Tech / Cyber)</td>
+<td>Indépendant</td>
+<td>3 ans</td>
+<td>Jusqu’à la Série A</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pouvoirs-du-ca">1.2. Pouvoirs du CA</h3>
+<ul>
+<li>Approbation de la stratégie et du plan d’affaires annuel.</li>
+<li>Approbation des opérations majeures (&gt; 5 % de l’actif ou &gt; 100
+M ₽ par an).</li>
+<li>Nomination du Directeur général, du Directeur financier, du
+Directeur technique, du Directeur de la sécurité de l’information
+(CISO).</li>
+<li>Approbation du plan d’audit et de l’auditeur externe (sur
+proposition du Comité d’audit).</li>
+<li>Approbation du cadre d’appétit pour le risque (sur proposition du
+Comité des risques).</li>
+<li>Approbation du plan de rémunération du top-management (sur
+proposition du Comité des rémunérations et nominations).</li>
+<li>Surveillance de la conformité légale et réglementaire.</li>
+</ul>
+<h3 id="réunions-et-quorum">1.3. Réunions et quorum</h3>
+<ul>
+<li><strong>Réunions ordinaires :</strong> au moins quatre fois par an
+(trimestrielles).</li>
+<li><strong>Réunions extraordinaires :</strong> à la demande d’un membre
+du CA ou de 10 % des actionnaires.</li>
+<li><strong>Quorum :</strong> ≥ 3 membres ; pour les décisions critiques
+(M&amp;A, émission de titres, modification des Statuts) — l’ensemble des
+5 membres est présent.</li>
+<li><strong>Vote :</strong> majorité simple ; pour les décisions
+critiques — majorité qualifiée de 4 sur 5.</li>
+</ul>
+<h2 id="comités-du-ca">2. Comités du CA</h2>
+<h3 id="comité-daudit">2.1. Comité d’audit</h3>
+<ul>
+<li><strong>Composition :</strong> 3 membres, dont au moins 2
+indépendants, président indépendant.</li>
+<li><strong>Fonctions :</strong>
+<ul>
+<li>Surveillance de la fiabilité du reporting financier (IFRS + normes
+russes RAS).</li>
+<li>Nomination et interaction avec l’auditeur externe (Big-4 de
+préférence).</li>
+<li>Surveillance de l’audit interne.</li>
+<li>Surveillance du dispositif whistleblower.</li>
+<li>Approbation des prestations non-audit fournies par l’auditeur
+externe (independence safeguard).</li>
+</ul></li>
+<li><strong>Réunions :</strong> au moins quatre fois par an.</li>
+</ul>
+<h3 id="comité-des-risques">2.2. Comité des risques</h3>
+<ul>
+<li><strong>Composition :</strong> 3 membres, président
+indépendant.</li>
+<li><strong>Fonctions :</strong>
+<ul>
+<li>Approbation de la Risk Appetite Statement.</li>
+<li>Surveillance de la gestion des risques :
+<ul>
+<li>Risque réglementaire (modifications de 779-P, 259-FZ, régime
+fiscal)</li>
+<li>Risque opérationnel (incidents, BCP, DRP)</li>
+<li>Cybersécurité (SOC 2, ISO 27001, FSTEC KII-1)</li>
+<li>Risque financier (cash runway, FX, sensibilité du TRI)</li>
+<li>Risque juridique (contentieux, propriété intellectuelle)</li>
+</ul></li>
+<li>Approbation du Recovery and Resolution Plan (« testament vivant
+»).</li>
+</ul></li>
+</ul>
+<h3 id="comité-des-rémunérations-et-nominations">2.3. Comité des
+rémunérations et nominations</h3>
+<ul>
+<li><strong>Composition :</strong> 3 membres, président
+indépendant.</li>
+<li><strong>Fonctions :</strong>
+<ul>
+<li>Détermination de la structure de rémunération du top-management
+(cash + equity + LTI).</li>
+<li>Approbation du plan ESOP (Employee Stock Option Plan).</li>
+<li>Sélection des candidats au CA (succession planning).</li>
+<li>Évaluation annuelle de la performance du DG / DF / DT / CISO.</li>
+</ul></li>
+</ul>
+<h3 id="comité-it-cybersécurité">2.4. Comité IT &amp; cybersécurité</h3>
+<ul>
+<li><strong>Composition :</strong> 3 membres, au moins 1 avec profil
+technique, président : Tech Director indépendant.</li>
+<li><strong>Fonctions :</strong>
+<ul>
+<li>Surveillance de la feuille de route technologique.</li>
+<li>Approbation des investissements IT majeurs (&gt; 50 M ₽).</li>
+<li>Surveillance de la conformité FSTEC / SOC 2 / ISO 27001.</li>
+<li>Surveillance des incidents de cybersécurité (incident response
+plan).</li>
+<li>Surveillance du recours à des tests d’intrusion externes.</li>
+</ul></li>
+</ul>
+<h2 id="code-de-conduite-et-déthique">3. Code de conduite et
+d’éthique</h2>
+<p>Fondé sur le standard international (UN Global Compact + Principes
+directeurs de l’OCDE à l’intention des entreprises multinationales 2023)
+:</p>
+<h3 id="principes">3.1. Principes</h3>
+<ul>
+<li>Conformité à toutes les lois applicables (Fédération de Russie +
+juridictions amies).</li>
+<li>Protection des droits humains (DUDH de l’ONU).</li>
+<li>Honest dealing avec les clients, partenaires et régulateurs.</li>
+<li>Protection des données à caractère personnel (152-FZ + préparation
+au RGPD).</li>
+<li>Protection de la propriété intellectuelle.</li>
+<li>Responsabilité sociale d’entreprise.</li>
+</ul>
+<h3 id="pratiques-prohibées">3.2. Pratiques prohibées</h3>
+<ul>
+<li>Corruption (UK Bribery Act + 273-FZ + préparation au FCPA).</li>
+<li>Conflit d’intérêts sans disclosure complet.</li>
+<li>Insider trading.</li>
+<li>Discrimination et harcèlement.</li>
+<li>Esclavage moderne / traite des êtres humains (UK Modern Slavery Act
+2015).</li>
+</ul>
+<h2 id="politique-anti-corruption">4. Politique anti-corruption</h2>
+<ul>
+<li>Conformité à la loi 273-FZ « Sur la lutte contre la corruption
+».</li>
+<li>Conformité au UK Bribery Act 2010 (pour les LP internationaux).</li>
+<li>Conformité au FCPA 1977 (préparation ; en cas d’investisseurs
+américains).</li>
+<li>Interdictions :
+<ul>
+<li>« Facilitation payments » — sous toutes formes.</li>
+<li>Cadeaux et divertissements &gt; 5 000 ₽ pour des fonctionnaires sans
+approbation écrite.</li>
+<li>Parrainage des partis politiques.</li>
+</ul></li>
+<li>Due diligence des tiers (KYC) pour partenaires et
+contreparties.</li>
+<li>Formation anti-corruption obligatoire annuelle pour l’ensemble des
+collaborateurs.</li>
+<li>Dispositif whistleblower avec protection contre les
+représailles.</li>
+</ul>
+<h2 id="politique-esg">5. Politique ESG</h2>
+<h3 id="normes-sasb-sustainability-accounting-standards-board">5.1.
+Normes SASB (Sustainability Accounting Standards Board)</h3>
+<p>Standard applicable : <strong>Software &amp; IT Services Industry
+(TC-SI) + Financial Services / Investment Banking &amp; Brokerage
+(FN-IB)</strong>.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Catégorie SASB</th>
+<th>Indicateur</th>
+<th>Valeur cible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Empreinte environnementale de l’infrastructure matérielle</td>
+<td>Énergie consommée totale, % renouvelable</td>
+<td>≥ 30 % de renouvelable d’ici 2028</td>
+</tr>
+<tr>
+<td>Vie privée des données &amp; liberté d’expression</td>
+<td>Nombre de personnes concernées par une violation de données</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Sécurité des données</td>
+<td>Nombre d’incidents impliquant des informations personnellement
+identifiables</td>
+<td>0 ; contrôles SOC 2 Type II</td>
+</tr>
+<tr>
+<td>Recrutement et gestion d’une main-d’œuvre mondiale</td>
+<td>% représentation femmes / minorités</td>
+<td>≥ 30 % de femmes dans les rôles techniques d’ici 2028</td>
+</tr>
+<tr>
+<td>Protection de la PI et comportement concurrentiel</td>
+<td>Montant des procédures juridiques</td>
+<td>Communiqué trimestriellement</td>
+</tr>
+<tr>
+<td>Gestion des risques systémiques liés aux ruptures
+technologiques</td>
+<td>% de disponibilité, continuité d’activité</td>
+<td>SLA ≥ 99,95 % de disponibilité</td>
+</tr>
+</tbody>
+</table>
+<h3
+id="cadre-tcfd-task-force-on-climate-related-financial-disclosures">5.2.
+Cadre TCFD (Task Force on Climate-Related Financial Disclosures)</h3>
+<ul>
+<li><strong>Gouvernance :</strong> Comité ESG au niveau du CA (rattaché
+au Comité des risques).</li>
+<li><strong>Stratégie :</strong> analyse des risques climatiques
+physiques et de transition pour l’infrastructure cloud.</li>
+<li><strong>Gestion des risques :</strong> intégration des risques
+climatiques dans l’appétit pour le risque.</li>
+<li><strong>Indicateurs et objectifs :</strong>
+<ul>
+<li>Émissions Scope 1 : suivi annuel</li>
+<li>Émissions Scope 2 (cloud + bureaux) : suivi annuel</li>
+<li>Part d’énergie renouvelable pour les data centers : 30 % d’ici 2028,
+70 % d’ici 2032</li>
+<li>Alignement net-zéro : 2040</li>
+</ul></li>
+</ul>
+<h3
+id="alignement-sur-les-objectifs-de-développement-durable-odd-de-lonu">5.3.
+Alignement sur les Objectifs de développement durable (ODD) de
+l’ONU</h3>
+<p>Le projet contribue directement à : - <strong>ODD 8</strong> (Travail
+décent et croissance économique) — financement des projets nationaux,
+création d’emplois. - <strong>ODD 9</strong> (Industrie, innovation et
+infrastructure) — infrastructure financière numérique. - <strong>ODD
+11</strong> (Villes et communautés durables) — financement de la
+construction et du logement individuel. - <strong>ODD 12</strong>
+(Consommation et production responsables) — data centers éco-efficaces.
+- <strong>ODD 16</strong> (Paix, justice et institutions efficaces) —
+transparence via le registre DLT.</p>
+<h2 id="déclaration-modern-slavery">6. Déclaration Modern Slavery</h2>
+<p>Conformément à l’article 54 du UK Modern Slavery Act 2015 (en
+préparation des LP internationaux) :</p>
+<ul>
+<li>La Société n’a pas recours, et ne permet pas à des tiers d’avoir
+recours, au travail forcé, à l’esclavage ou à la traite des êtres
+humains.</li>
+<li>Tous les contractants font l’objet d’une due diligence de
+conformité.</li>
+<li>Une déclaration annuelle est publiée sur le site.</li>
+</ul>
+<h2 id="politique-whistleblower">7. Politique Whistleblower</h2>
+<ul>
+<li>Canal de signalement indépendant (fournisseur externe — Convercent /
+EthicsPoint / NAVEX Global).</li>
+<li>Signalement anonyme disponible 24/7.</li>
+<li>Protection contre les représailles (licenciement, rétrogradation,
+harcèlement).</li>
+<li>Enquête sous la supervision du Comité d’audit.</li>
+<li>Reporting annuel au CA.</li>
+</ul>
+<h2 id="gouvernance-des-données-et-vie-privée">8. Gouvernance des
+données et vie privée</h2>
+<ul>
+<li><strong>DPO (Délégué à la protection des données) :</strong>
+nomination obligatoire (art. 22.1 de 152-FZ ; art. 37 du RGPD).</li>
+<li><strong>Inventaire des données + Registre des activités de
+traitement (RoPA) :</strong> maintenu à jour, mise à jour
+trimestrielle.</li>
+<li><strong>Privacy by Design + Privacy by Default :</strong> principes
+obligatoires (art. 25 du RGPD).</li>
+<li><strong>Droits des personnes concernées :</strong> traitement des
+demandes en ≤ 30 jours.</li>
+<li><strong>Plan de réponse aux violations de données :</strong>
+notification aux régulateurs en ≤ 24 h (Roskomnadzor) / ≤ 72 h
+(RGPD).</li>
+</ul>
+<h2 id="protection-de-la-pi-actifs-incorporels-de-lauteur">9. Protection
+de la PI (actifs incorporels de l’auteur)</h2>
+<ul>
+<li><strong>Concept (savoir-faire) :</strong> déposé sous le certificat
+n° 4011265 du 19.12.2024 (ireg.pro, GOST R 34.11-2012).</li>
+<li><strong>Logiciel :</strong> enregistrement auprès de Rospatent après
+finalisation de la base de code.</li>
+<li><strong>Marque « CPFSR » :</strong> enregistrement auprès de
+Rospatent.</li>
+<li><strong>Reverse vesting</strong> sur le savoir-faire lors d’une
+sortie du founder (protection contre une fuite du concept).</li>
+<li><strong>Redevance de 2 %</strong> sur le chiffre d’affaires de
+l’opérateur au profit du titulaire après la Série B (condition
+suspensive du SHA).</li>
+<li><strong>Non-concurrence + non-sollicitation</strong> dans les
+contrats de travail (standard 2 à 3 ans).</li>
+</ul>
+<h2 id="calendrier-de-mise-en-œuvre">10. Calendrier de mise en
+œuvre</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Jalon</th>
+<th>Date</th>
+<th>Responsable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Immatriculation de la personne morale (SARL / JSC)</td>
+<td>T+0</td>
+<td>Conseil juridique</td>
+</tr>
+<tr>
+<td>Adoption des Statuts + du Pacte d’actionnaires (SHA)</td>
+<td>T+0</td>
+<td>Conseil juridique + auteur</td>
+</tr>
+<tr>
+<td>Nomination du CISO + du DPO</td>
+<td>T+1 mois</td>
+<td>DG</td>
+</tr>
+<tr>
+<td>Adoption du Code de conduite + de la Politique anti-corruption</td>
+<td>T+2 mois</td>
+<td>CA + General Counsel</td>
+</tr>
+<tr>
+<td>Mise en œuvre du canal Whistleblower</td>
+<td>T+3 mois</td>
+<td>Comité d’audit</td>
+</tr>
+<tr>
+<td>Nomination des administrateurs indépendants</td>
+<td>T+6 mois (post Seed)</td>
+<td>Comité Comp &amp; Nom</td>
+</tr>
+<tr>
+<td>Premier rapport ESG annuel (SASB + TCFD)</td>
+<td>T+12 mois</td>
+<td>Comité ESG</td>
+</tr>
+<tr>
+<td>Plan Recovery &amp; Resolution</td>
+<td>T+18 mois</td>
+<td>Comité des risques</td>
+</tr>
+<tr>
+<td>Démarrage de la première période d’observation SOC 2 Type II</td>
+<td>T+18 mois</td>
+<td>CISO</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Date :</strong> 24.05.2026 <strong>Référence engagement
+:</strong> RSFSR-GOV-2026 <strong>Center Group Company</strong></p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

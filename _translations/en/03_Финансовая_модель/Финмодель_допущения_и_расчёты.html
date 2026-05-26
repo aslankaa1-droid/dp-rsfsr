@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../">
+  <title>Financial Model — Assumptions · ЦПФСР.РФ</title>
+  <meta name="description" content="Financial Model — Assumptions — Financial Model. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../_design-system/print.css">
+
+  <script defer src="../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../_design-system/i18n.js"></script>
+  <script defer src="../../../_design-system/ticker.js"></script>
+  <script defer src="../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Financial Model</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Financial Model</span>
+      <h1>Financial Model — Assumptions</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1
+id="cpfsr-financial-model-notes-on-assumptions-and-calculations">CPFSR
+Financial Model — notes on assumptions and calculations</h1>
+<p><strong>Document:</strong> accompanying note to the financial model.
+<strong>Related file:</strong>
+<code>Финансовая_модель_ЦП_РСФСР.md</code> (horizon 2025–2034 +
+multi-stage TV to 2045+). <strong>Concept author:</strong> A.-Kh. A.
+Kagirov, deposit certificate No. 4011265 of 19.12.2024 — fixation of the
+priority date and the hash; protection regime — know-how (Article 1465
+CC) + software (Article 1262 CC). <strong>Reference date:</strong>
+24.05.2026 (refactor following the composite audit; single SoT —
+<code>_Мастер/Единые_показатели_v2.md</code>).</p>
+<p>The purpose is to disclose the source of each figure and identify
+constraints, so that any tier-1 DD auditor can walk through the model
+with full understanding of the logic.</p>
+<hr />
+<h2 id="market-and-platform-share">1. Market and platform share</h2>
+<h3 id="collateral-capacity-rub-25-tn">1.1. Collateral capacity RUB 25
+tn</h3>
+<p>Source: author’s concept (РСФСР_6.pptx, slide 9).</p>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th style="text-align: right;">Volume, RUB tn</th>
+<th style="text-align: right;">Conservative (10% × 50%), RUB tn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Residential stock (4.7 bn m² × RUB 85,000/m²)</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">20.0</td>
+</tr>
+<tr>
+<td>Commercial real estate</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">2.5</td>
+</tr>
+<tr>
+<td>Land plots</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">3.0</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td style="text-align: right;"><strong>507</strong></td>
+<td style="text-align: right;"><strong>25.5</strong> ≈ 25</td>
+</tr>
+</tbody>
+</table>
+<p>Conservatism logic: only 10% of assets are engaged in the DFA system
+over a 10-year horizon, and the appraisal value for collateral purposes
+is 50% of market value (consistent with Basel LTV practice).</p>
+<h3 id="market-indexation-of-4-p.a.">1.2. Market indexation of 4%
+p.a.</h3>
+<p>The principal directional indicator of the Bank of Russia monetary
+policy.</p>
+<h3 id="platform-share-trajectory-post-refactor">1.3. Platform share —
+trajectory (post-refactor)</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr>
+<th>Year</th>
+<th style="text-align: right;">1</th>
+<th style="text-align: right;">2</th>
+<th style="text-align: right;">3</th>
+<th style="text-align: right;">4</th>
+<th style="text-align: right;">5</th>
+<th style="text-align: right;">6</th>
+<th style="text-align: right;">7</th>
+<th style="text-align: right;">8</th>
+<th style="text-align: right;">9</th>
+<th style="text-align: right;">10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Share (Base)</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">0.4%</td>
+<td style="text-align: right;">1.8%</td>
+<td style="text-align: right;">4.4%</td>
+<td style="text-align: right;">8.8%</td>
+<td style="text-align: right;">10.8%</td>
+<td style="text-align: right;">12.6%</td>
+<td style="text-align: right;">14.4%</td>
+<td style="text-align: right;">16.2%</td>
+<td style="text-align: right;"><strong>18%</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The Year 10 target has been reduced from 20% to 18% (more
+defensible). Conservative scenario — 7%, Optimistic — 25%.</p>
+</blockquote>
+<h3 id="dfa-stack-outstanding-volume">1.4. DFA stack (outstanding
+volume)</h3>
+<p>Formula: stack(t) = sum of issuances over years (t−4)…t. Average DFA
+life = 5 years (infrastructure cycles).</p>
+<hr />
+<h2 id="operator-tariffs">2. Operator tariffs</h2>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th>Line</th>
+<th style="text-align: right;">Rate</th>
+<th>Market benchmark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Issuance commission</td>
+<td style="text-align: right;">0.50%</td>
+<td>Russian DFA operators: 0.1–1%.</td>
+</tr>
+<tr>
+<td>Servicing commission on stack</td>
+<td style="text-align: right;">0.30%</td>
+<td>Depositories 0.05–0.15%; PE funds 1–2%.</td>
+</tr>
+<tr>
+<td>Platform fee (automated valuation)</td>
+<td style="text-align: right;">0.15%</td>
+<td>Appraisal companies 0.1–0.5%; insurance premiums 0.3–0.8%.</td>
+</tr>
+<tr>
+<td>B2B2G licences (max Year 10)</td>
+<td style="text-align: right;">0.15%</td>
+<td>Linear growth from 0 to 0.15%.</td>
+</tr>
+<tr>
+<td>Appraiser / insurer services (NEW)</td>
+<td style="text-align: right;">0.80%</td>
+<td>Pass-through; 85% — offsetting costs.</td>
+</tr>
+<tr>
+<td>Technical integrations (fixed)</td>
+<td style="text-align: right;">RUB 50–1,150 mn/yr</td>
+<td>RUB 10–50 mn per partner connection.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="capex-refactor-per-audit-explicit-capex-waves">3. CapEx
+(refactor per audit: explicit CapEx waves)</h2>
+<h3 id="first-18-months-rub-720-mn">3.1. First 18 months — RUB 720
+mn</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align: right;">RUB mn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Platform (core + ABS modules)</td>
+<td style="text-align: right;">450</td>
+</tr>
+<tr>
+<td>Data centres (redundancy + geo-replication)</td>
+<td style="text-align: right;">170</td>
+</tr>
+<tr>
+<td>CBR licences + compliance</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr>
+<td><strong>TOTAL (2025+2026)</strong></td>
+<td style="text-align: right;"><strong>720</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="capex-waves-20272034">3.2. CapEx waves 2027–2034</h3>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th>Year</th>
+<th style="text-align: right;">RUB mn</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2027</td>
+<td style="text-align: right;">400</td>
+<td>Platform maturity, sandbox infrastructure</td>
+</tr>
+<tr>
+<td>2028</td>
+<td style="text-align: right;">550</td>
+<td>IS DFA register deployment (779-P)</td>
+</tr>
+<tr>
+<td><strong>2029</strong></td>
+<td style="text-align: right;"><strong>1,800</strong></td>
+<td><strong>Full-functional FSTEC/FSB certification + second data
+centre</strong></td>
+</tr>
+<tr>
+<td><strong>2030</strong></td>
+<td style="text-align: right;"><strong>2,400</strong></td>
+<td><strong>Scaling: third data centre + next-generation cryptographic
+modules</strong></td>
+</tr>
+<tr>
+<td>2031</td>
+<td style="text-align: right;">1,600</td>
+<td>Recurring modernisation</td>
+</tr>
+<tr>
+<td>2032</td>
+<td style="text-align: right;">1,800</td>
+<td>DLT vendor upgrade, smart-contract v2</td>
+</tr>
+<tr>
+<td><strong>2033</strong></td>
+<td style="text-align: right;"><strong>2,300</strong></td>
+<td><strong>Data-centre infrastructure expansion against a RUB 20 tn
+stack</strong></td>
+</tr>
+<tr>
+<td>2034</td>
+<td style="text-align: right;">2,000</td>
+<td>Recurring</td>
+</tr>
+</tbody>
+</table>
+<p>CapEx depreciation rate of 1/7 per year → platform useful life ~7
+years.</p>
+<hr />
+<h2 id="opex-refactor-per-audit-c3">4. OpEx (refactor per audit C3)</h2>
+<h3 id="starting-opex-excl.-payroll-rub-502-mn-was-380">4.1. Starting
+OpEx (excl. payroll) — RUB 502 mn (was 380)</h3>
+<p>Audit-driven increases: - <strong>+30% on the compliance
+block</strong> (growth in 779-P, AML/KYC, CFT requirements). -
+<strong>+25% on cyber-security</strong> (CII-1, 24/7 SOC, penetration
+tests, key rotation). - <strong>+40% on the legal block</strong>
+(contract pack, regulatory support, IP). - <strong>An
+“appraisers/insurers” block introduced</strong> — 0.8% of issuance
+volume (pass-through, 85% offsetting costs).</p>
+<p>Decomposition of the starting year 2025:</p>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align: right;">RUB mn</th>
+<th>Logic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Infrastructure</td>
+<td style="text-align: right;">117</td>
+<td>Hosting, connectivity, IS — for two data centres; +30% per
+audit</td>
+</tr>
+<tr>
+<td>Software licences</td>
+<td style="text-align: right;">50</td>
+<td>DBMS, monitoring</td>
+</tr>
+<tr>
+<td>Marketing</td>
+<td style="text-align: right;">60</td>
+<td>Conferences, sector activity</td>
+</tr>
+<tr>
+<td>Legal and audit</td>
+<td style="text-align: right;">70</td>
+<td>+40% per audit</td>
+</tr>
+<tr>
+<td>Cyber-security</td>
+<td style="text-align: right;">50</td>
+<td>SOC, pentests, key rotation (new item)</td>
+</tr>
+<tr>
+<td>B2B2G integrators</td>
+<td style="text-align: right;">95</td>
+<td>Contractors for the partner network</td>
+</tr>
+<tr>
+<td>Other</td>
+<td style="text-align: right;">60</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>502</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The OpEx curve in the mature phase delivers an EBITDA margin of 74.8%
+(vs 96.9% in the pre-refactor model).</p>
+<hr />
+<h2 id="payroll">5. Payroll</h2>
+<p>Headcount 40→370; average gross salary RUB 350k/month in Year 1,
+indexation 6% p.a.; social contributions 30%.</p>
+<hr />
+<h2 id="taxes">6. Taxes</h2>
+<ul>
+<li><strong>Profit tax 20%</strong> (Tax Code, Chapter 25). With IT
+accreditation + ≥ 70% IT revenue → 5% until 31.12.2030 (separate
+scenario: +25–30% to NPV).</li>
+<li><strong>VAT:</strong> DFA transactions — sub-para 12.2 of para 2 of
+Article 149 of the Tax Code (exemption); operator services — general
+rate of 20%.</li>
+<li><strong>Social contributions 30%</strong> (Tax Code, Chapter
+34).</li>
+</ul>
+<hr />
+<h2 id="wacc-refactor-per-audit-c5">7. WACC (refactor per audit C5)</h2>
+<p>Adjustment: removal of CRP double-counting in RUB-denominated RF; ERP
+raised from 6% to 9% (Damodaran May 2026); β set at 1.15.</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Risk-free rate (10Y OFZ, 24.05.2026)</td>
+<td style="text-align: right;">15.5%</td>
+</tr>
+<tr>
+<td>ERP × β (RF May 2026, β = 1.15)</td>
+<td style="text-align: right;">9% × 1.15 = 10.35%</td>
+</tr>
+<tr>
+<td>Stage premium (MVP ready)</td>
+<td style="text-align: right;">1.5%</td>
+</tr>
+<tr>
+<td>Liquidity premium</td>
+<td style="text-align: right;">2.5%</td>
+</tr>
+<tr>
+<td><strong>WACC (RUB) total</strong></td>
+<td style="text-align: right;"><strong>29.85% → 30.0%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Alternative methods: - CAPM (RUB): 15.5 + 1.15 × 9 = 25.85% — lower
+bound of the range. - Build-up: 15.5 + 6 + 2.5 + 3 = 27% — inside the
+range. - CBR rate + spread: 21% + 9 = 30% — matches.</p>
+<p>Defensible range: 27–32%. The Base case uses 30%.</p>
+<hr />
+<h2 id="multi-stage-tv-refactor-per-audit-c4">8. Multi-stage TV
+(refactor per audit C4)</h2>
+<p>Replacement of the single-stage Gordon TV with a 3-stage model with
+an explicit fade phase for growth rate and EBITDA margin:</p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Years</th>
+<th style="text-align: right;">g</th>
+<th style="text-align: right;">EBITDA margin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I — maturity</td>
+<td>2035–2039</td>
+<td style="text-align: right;">6% → 4%</td>
+<td style="text-align: right;">75% → 70%</td>
+</tr>
+<tr>
+<td>II — stability</td>
+<td>2040–2044</td>
+<td style="text-align: right;">3.5% → 2.5%</td>
+<td style="text-align: right;">70% → 65%</td>
+</tr>
+<tr>
+<td>III — perpetuity</td>
+<td>2045+</td>
+<td style="text-align: right;">2.0% (½ of CBR target)</td>
+<td style="text-align: right;">60%</td>
+</tr>
+</tbody>
+</table>
+<p>TV share in full NPV = <strong>9.0%</strong> (was 49%) — the critical
+threshold has been removed.</p>
+<hr />
+<h2 id="sensitivities-extended-set">9. Sensitivities (extended set)</h2>
+<p>Added per audit C9–C11: - WACC × Market share (5×5, existing). -
+Commissions × Inflation (3×5, existing). - <strong>OpEx curve × Launch
+timing</strong> (5×3, new). - <strong>FTE × Average salary</strong>
+(5×5, new). - <strong>TV EBITDA margin × g</strong> (3×3, new). -
+<strong>Tornado diagram</strong> top-10. - <strong>Simplified Monte
+Carlo</strong> (1,000 iterations, NPV median = RUB 91 bn, P10–P90 =
+38–162). - <strong>Break-even analysis</strong> (revenue at NPV = 0: RUB
+22.8 bn in 2030). - <strong>Cash-runway stress test</strong> (a +6-month
+delay → +RUB 0.38 bn cash gap; recommendation — USD 20M round).</p>
+<hr />
+<h2 id="working-capital">10. Working capital</h2>
+<p>5% of revenue — a standard assumption for fintech operators (Russian
+payment systems: 3–7%, depositories: 5–10%).</p>
+<hr />
+<h2 id="what-is-not-accounted-for-in-the-base-model-and-why">11. What is
+not accounted for in the base model (and why)</h2>
+<ol type="1">
+<li><strong>Government subsidies</strong> (RFRIT, Ministry of Digital
+Development) — upside, not included.</li>
+<li><strong>Debt financing</strong> — the model is equity-only; a mixed
+structure would deliver an additional tax shield.</li>
+<li><strong>FX risk</strong> — all flows are in rubles; no FX
+exposure.</li>
+<li><strong>Competition for collateral</strong> — Base assumes a unique
+category over the first 5 years; covered in the Conservative
+scenario.</li>
+<li><strong>Regulatory risk of rejection</strong> — disclosed in
+<code>04_Бизнес-план/Wedge_pilot-light.md</code>: should the legislative
+package not be adopted, the project operates in pilot-light mode under
+the existing 259-FZ (Conservative scenario — NPV RUB 41 bn).</li>
+</ol>
+<hr />
+<h2 id="consistency-with-the-interactive-finmodel.js">12. Consistency
+with the interactive finmodel.js</h2>
+<p>After audit point C9, synchronisation of
+<code>_shared/finmodel.js</code> v2 ↔︎ the MD model is achieved: payroll,
+CapEx waves, working capital, depreciation, tax shield and the
+multi-stage TV are all accounted for. The calculator in the major
+presentation produces NPV/IRR identical to the calculations in this
+document at the same slider settings.</p>
+<hr />
+<h2 id="sources">13. Sources</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Data type</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Collateral capacity</td>
+<td>Author’s concept (РСФСР_6.pptx, slide 9)</td>
+</tr>
+<tr>
+<td>Tax rates</td>
+<td>Tax Code of the Russian Federation</td>
+</tr>
+<tr>
+<td>Inflation target</td>
+<td>CBR Monetary Policy Guidelines</td>
+</tr>
+<tr>
+<td>CBR rate 21% on 24.05.2026</td>
+<td>Decision of the CBR Board of 26.04.2026</td>
+</tr>
+<tr>
+<td>FX RUB/USD 89.0</td>
+<td>Official Bank of Russia rate on 24.05.2026</td>
+</tr>
+<tr>
+<td>Russian housing stock</td>
+<td>Rosstat (form No. 1-zhilfond)</td>
+</tr>
+<tr>
+<td>Salary benchmarks</td>
+<td>HeadHunter, Habr Career 2024–2026</td>
+</tr>
+<tr>
+<td>ERP RF 9%</td>
+<td>Damodaran Online ERP May 2026</td>
+</tr>
+<tr>
+<td>Platform CapEx benchmarks</td>
+<td>Public presentations of Russian fintech projects</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Date:</strong> 24.05.2026 (refactor following the composite
+audit) <strong>Prepared:</strong> within the CPFSR project.</p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

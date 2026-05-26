@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en" data-theme="daylight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DP RSFSR — Investor Pitch (a16z canon · 10 slides)</title>
+<meta name="theme-color" content="#0B2B5C">
+<link rel="stylesheet" href="../../_shared/brand.css">
+<style>
+body{margin:0; padding:0; background:var(--bg); color:var(--fg); font-family:'Inter',sans-serif}
+.slide{aspect-ratio:16/9; padding:6vmin 7vmin; position:relative; overflow:hidden; border-bottom:1px solid var(--border-soft)}
+.slide--dark{background:linear-gradient(135deg, #0B2B5C 0%, #1a4a8c 60%, #2563b8 100%); color:#fff}
+.slide--soft{background:#f6f8fb}
+.snum{position:absolute; top:24px; right:30px; font-family:'JetBrains Mono',monospace; font-size:12px; opacity:.5; letter-spacing:.1em}
+.slide--dark .snum{color:rgba(255,255,255,.45)}
+.inner{max-width:1200px; margin:0 auto; height:100%; display:flex; flex-direction:column; justify-content:center}
+.tag{display:inline-block; padding:4px 12px; background:rgba(11,43,92,.08); color:#0B2B5C; border-radius:99px; font-size:11px; text-transform:uppercase; letter-spacing:.15em; font-weight:600; margin-bottom:14px}
+.slide--dark .tag{background:rgba(255,255,255,.12); color:#fff}
+h1{font-size:48px; font-weight:700; margin:0 0 14px; line-height:1.1; color:#0B2B5C}
+.slide--dark h1{color:#fff}
+h2{font-size:36px; font-weight:700; margin:0 0 18px; line-height:1.15; color:#0B2B5C}
+.slide--dark h2{color:#fff}
+h3{font-size:18px; font-weight:600; margin:14px 0 6px; color:#0B2B5C}
+.slide--dark h3{color:#fff}
+p.lead{font-size:18px; line-height:1.55; opacity:.85; max-width:900px}
+ul{font-size:16px; line-height:1.7}
+.grid-2{display:grid; grid-template-columns:1fr 1fr; gap:36px; margin-top:24px}
+.grid-3{display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px; margin-top:24px}
+.grid-4{display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:18px; margin-top:24px}
+.card{padding:18px 20px; border:1px solid var(--border-soft); border-radius:12px; background:#fff}
+.slide--dark .card{background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.15); color:#fff}
+.stat{padding:18px; border:1px solid var(--border-soft); border-radius:14px; background:#fff; text-align:center}
+.slide--dark .stat{background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.15)}
+.stat-val{font-size:32px; font-weight:700; color:#0B2B5C; font-family:'JetBrains Mono',monospace; display:block}
+.slide--dark .stat-val{color:#fff}
+.stat-lbl{font-size:12px; opacity:.7; text-transform:uppercase; letter-spacing:.1em}
+table{width:100%; border-collapse:collapse; font-size:14px; margin-top:14px}
+table th{padding:10px 12px; background:#0B2B5C; color:#fff; text-align:left}
+.slide--dark table th{background:rgba(255,255,255,.15)}
+table td{padding:8px 12px; border-bottom:1px solid var(--border-soft)}
+.slide--dark table td{border-bottom-color:rgba(255,255,255,.1)}
+.footer-meta{position:absolute; bottom:20px; left:7vmin; font-size:10px; opacity:.4; font-family:'JetBrains Mono',monospace; letter-spacing:.08em}
+@media print{ .slide{page-break-after:always; border:none} }
+</style>
+</head>
+<body>
+
+<!-- S1: Cover / Hook -->
+<section class="slide slide--dark">
+  <div class="snum">01 / 10</div>
+  <div class="inner">
+    <span class="tag">Series Seed · $15M Pre-money $80M</span>
+    <h1>DP RSFSR</h1>
+    <p class="lead" style="font-size:24px; max-width:700px">Digital Securities Platform unlocking <strong style="color:#FFC107">₽25 trillion</strong> of frozen real estate collateral for <strong style="color:#FFC107">non-budget infrastructure financing</strong> in the Russian Federation.</p>
+    <div style="margin-top:46px; display:flex; gap:60px; align-items:center">
+      <div><div style="font-size:14px; opacity:.6">NPV (10Y + Multi-stage TV)</div><div style="font-size:32px; font-weight:700; font-family:'JetBrains Mono',monospace">₽51.2B</div></div>
+      <div><div style="font-size:14px; opacity:.6">IRR project-level</div><div style="font-size:32px; font-weight:700; font-family:'JetBrains Mono',monospace">62%</div></div>
+      <div><div style="font-size:14px; opacity:.6">Payback</div><div style="font-size:32px; font-weight:700; font-family:'JetBrains Mono',monospace">2.8 yrs</div></div>
+    </div>
+  </div>
+  <div class="footer-meta">Kagirov A.-Kh.A. · Author copyright deposit №4011265 · 19.12.2024 · Center Group Company</div>
+</section>
+
+<!-- S2: Problem -->
+<section class="slide">
+  <div class="snum">02 / 10</div>
+  <div class="inner">
+    <span class="tag">Problem</span>
+    <h2>₽25 trillion of real estate collateral is frozen out of capital markets</h2>
+    <div class="grid-2">
+      <div>
+        <h3>The structural gap</h3>
+        <ul>
+          <li><strong>Real estate value:</strong> ₽507 trillion across residential, commercial, land in RF.</li>
+          <li><strong>Conservative collateral capacity:</strong> ₽25 trillion (5% mobilization × 50% LTV).</li>
+          <li><strong>Currently mobilized:</strong> &lt; 0.5% via traditional mortgage securitization.</li>
+          <li><strong>Result:</strong> ₽12 national projects (2026–2030 budget ₽13.2T) are financed almost exclusively from federal budget — adding pressure on OFZ.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Why current solutions fail</h3>
+        <ul>
+          <li>Traditional securitization — too slow, too expensive for retail-grade assets.</li>
+          <li>Bank loans — concentrate risk on individual balance sheets.</li>
+          <li>Existing CFA platforms (Atomyze, Sber CFA, Alfa CFA) — focus on corporate, not real estate collateral.</li>
+          <li>No regulated path for tokenizing real estate against national project financing.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S3: Solution -->
+<section class="slide slide--soft">
+  <div class="snum">03 / 10</div>
+  <div class="inner">
+    <span class="tag">Solution</span>
+    <h2>A regulated CFA operator turning real estate into liquid infrastructure capital</h2>
+    <p class="lead">Owner stakes real estate → smart contract issues CFAs → CFAs fund concrete national projects → owner receives yield from project economics.</p>
+    <div class="grid-4">
+      <div class="stat"><span class="stat-val">779-П</span><div class="stat-lbl">CB regulation</div></div>
+      <div class="stat"><span class="stat-val">259-ФЗ</span><div class="stat-lbl">CFA federal law</div></div>
+      <div class="stat"><span class="stat-val">ЕГРН</span><div class="stat-lbl">Title registry hook</div></div>
+      <div class="stat"><span class="stat-val">ВЭБ.РФ</span><div class="stat-lbl">Project finance partner</div></div>
+    </div>
+    <div style="margin-top:30px; padding:18px 24px; background:#fff; border-radius:14px; border-left:4px solid #FFC107">
+      <strong>Two-stage architecture:</strong>
+      <ul style="margin-top:8px; margin-bottom:0">
+        <li><strong>Stage 1 (2026–2028) — wedge-pilot:</strong> launches without new laws, via AO Atomyze as 779-P operator + DP RSFSR as front-end. Anchors revenue and validates demand.</li>
+        <li><strong>Stage 2 (2029+) — full mandate:</strong> after package of 4 federal laws (86-ФЗ amendments + 259-ФЗ amendments + Budget Code + tax code), platform receives independent operator status.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- S4: Market (TAM/SAM/SOM) -->
+<section class="slide slide--dark">
+  <div class="snum">04 / 10</div>
+  <div class="inner">
+    <span class="tag">Market</span>
+    <h2>Total addressable market grows to ₽35.6 trillion by 2034</h2>
+    <div class="grid-3">
+      <div class="stat"><span class="stat-val">₽507T</span><div class="stat-lbl">TAM (full real estate market RF)</div></div>
+      <div class="stat"><span class="stat-val">₽25T</span><div class="stat-lbl">SAM (conservative collateral capacity 2026)</div></div>
+      <div class="stat"><span class="stat-val">₽35.6T</span><div class="stat-lbl">SAM 2034 (after 4%/yr indexation)</div></div>
+    </div>
+    <div class="grid-2" style="margin-top:30px">
+      <div>
+        <h3>Growth drivers</h3>
+        <ul>
+          <li>Package of 4 federal laws (Stage 2) unlocks corporate real estate and movable assets</li>
+          <li>VEB.RF Project Financing Factory expansion (PP 158)</li>
+          <li>National Projects 2026–2030 budget ₽13.2T (12 projects)</li>
+          <li>CB mandate expansion under 86-FZ Art. 4</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Target capture trajectory (Base)</h3>
+        <table>
+          <tr><th>Year</th><th>Share</th><th>Issuance, ₽B</th></tr>
+          <tr><td>2026 (pilot)</td><td>0.1%</td><td>26</td></tr>
+          <tr><td>2028</td><td>3%</td><td>770</td></tr>
+          <tr><td>2030</td><td>9%</td><td>2,400</td></tr>
+          <tr><td>2034 (year 10)</td><td>18%</td><td>6,408</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S5: Product / Demo -->
+<section class="slide">
+  <div class="snum">05 / 10</div>
+  <div class="inner">
+    <span class="tag">Product</span>
+    <h2>End-to-end platform: from asset to CFA to project financing</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3 style="color:#0B2B5C">1 · Owner module</h3>
+        <ul style="margin:6px 0 0; padding-left:18px">
+          <li>Asset onboarding via Gosuslugi (eIDAS-equivalent)</li>
+          <li>Independent appraisal partnership (100+ firms)</li>
+          <li>Insurance partnership module</li>
+          <li>Smart contract issuance</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="color:#0B2B5C">2 · CFA operations</h3>
+        <ul style="margin:6px 0 0; padding-left:18px">
+          <li>DLT registry per 779-P</li>
+          <li>KYC/AML 115-FZ + Travel Rule</li>
+          <li>Trading + secondary market hooks</li>
+          <li>Custody via Atomyze (Stage 1)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="color:#0B2B5C">3 · Project financing</h3>
+        <ul style="margin:6px 0 0; padding-left:18px">
+          <li>Federal Treasury hook (UFK)</li>
+          <li>VEB.RF FPF integration (PP 158)</li>
+          <li>National Project reporting (СУНП)</li>
+          <li>Escrow per GK Art. 860.7-860.10</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:24px; font-size:14px; opacity:.7">PWA + Capacitor v6+ for iOS / Android / Windows. ФСТЭК КИИ-1 ready. SOC 2 Type II roadmap 18 months. ISO 27001:2022 roadmap 8 months.</p>
+  </div>
+</section>
+
+<!-- S6: Business model -->
+<section class="slide slide--soft">
+  <div class="snum">06 / 10</div>
+  <div class="inner">
+    <span class="tag">Business Model</span>
+    <h2>Five-stream commission architecture, 74.8% steady-state EBITDA margin</h2>
+    <table>
+      <tr><th>Revenue stream</th><th>Rate</th><th>2030, ₽B</th><th>2034, ₽B</th></tr>
+      <tr><td>Issuance fee (per CFA issuance)</td><td>0.50%</td><td>13.0</td><td>32.0</td></tr>
+      <tr><td>Service fee (stack-based, 5Y CFA lifetime)</td><td>0.30% p.a.</td><td>30.4</td><td>57.0</td></tr>
+      <tr><td>Platform fee (per issuance)</td><td>0.15%</td><td>3.9</td><td>9.6</td></tr>
+      <tr><td>B2B integration fees (mature)</td><td>0.15%</td><td>2.0</td><td>9.6</td></tr>
+      <tr><td>Appraisal & insurance pass-through</td><td>0.80%</td><td>15.7</td><td>51.3</td></tr>
+      <tr><td><strong>Total revenue</strong></td><td></td><td><strong>65.0</strong></td><td><strong>137.9</strong></td></tr>
+      <tr><td><strong>EBITDA</strong></td><td></td><td><strong>45.7</strong></td><td><strong>103.1</strong></td></tr>
+      <tr><td><strong>EBITDA margin</strong></td><td></td><td><strong>70.3%</strong></td><td><strong>74.8%</strong></td></tr>
+    </table>
+    <p style="margin-top:18px; font-size:13px; opacity:.7">Comparable benchmarks (tier-1 fintech operators): Visa 67% · Moscow Exchange 75% · Depositories 50-65%. Reasoned by ample operating leverage on stack-based service fees.</p>
+  </div>
+</section>
+
+<!-- S7: Competition -->
+<section class="slide">
+  <div class="snum">07 / 10</div>
+  <div class="inner">
+    <span class="tag">Competition</span>
+    <h2>Wedge-positioned at intersection that no competitor occupies</h2>
+    <table>
+      <tr><th>Player</th><th>Real estate collateral</th><th>National project financing</th><th>CFA wrap</th><th>Multi-region rollout</th></tr>
+      <tr><td><strong>DP RSFSR</strong></td><td style="color:#22a06b">✓</td><td style="color:#22a06b">✓</td><td style="color:#22a06b">✓</td><td style="color:#22a06b">✓</td></tr>
+      <tr><td>AO Atomyze</td><td style="color:#dc3545">×</td><td style="color:#dc3545">×</td><td style="color:#22a06b">✓</td><td style="color:#f6a623">~</td></tr>
+      <tr><td>Sber CFA</td><td style="color:#dc3545">×</td><td style="color:#dc3545">×</td><td style="color:#22a06b">✓</td><td style="color:#dc3545">×</td></tr>
+      <tr><td>Alfa CFA</td><td style="color:#dc3545">×</td><td style="color:#dc3545">×</td><td style="color:#22a06b">✓</td><td style="color:#dc3545">×</td></tr>
+      <tr><td>SPB Exchange CFA</td><td style="color:#dc3545">×</td><td style="color:#dc3545">×</td><td style="color:#22a06b">✓</td><td style="color:#dc3545">×</td></tr>
+      <tr><td>Securitize / Polymath (intl)</td><td style="color:#f6a623">~</td><td style="color:#dc3545">×</td><td style="color:#22a06b">✓</td><td style="color:#dc3545">×</td></tr>
+    </table>
+    <p style="margin-top:18px; font-size:14px; opacity:.7"><strong>Moat sources:</strong> (1) Author copyright deposit №4011265 + know-how regime (GK Art. 1465) · (2) AO Atomyze technology partnership exclusivity (3 years per LoI) · (3) Named champion network (Reshetnikov, Kolychev, Sazanov, Aksakov, Minnikhanov) · (4) ФСТЭК КИИ-1 certification barrier · (5) Two-sided network effects (owners + projects).</p>
+  </div>
+</section>
+
+<!-- S8: Team + Governance -->
+<section class="slide slide--soft">
+  <div class="snum">08 / 10</div>
+  <div class="inner">
+    <span class="tag">Team & Governance</span>
+    <h2>Author-led with planned tier-1 governance from Series A</h2>
+    <div class="grid-2">
+      <div>
+        <h3>Founder &amp; concept author</h3>
+        <p><strong>Kagirov Abdul-Khakim Akhmadovich</strong> — founder, single-author copyright holder per deposit №4011265 of 19.12.2024 (ireg.pro, GOST-R 34.11-2012 hash). Center Group Company.</p>
+        <h3 style="margin-top:18px">Planned Series A board (3 of 5 independent)</h3>
+        <ul style="margin:6px 0">
+          <li><strong>Managing Partner</strong> · Tarasov (AITUBI MSA)</li>
+          <li><strong>Managing Director</strong> · Malyutin</li>
+          <li><strong>Independent Director (3 seats)</strong> · TBD post-Series A</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Governance pack from Day 1</h3>
+        <ul style="margin:6px 0">
+          <li>Board with 3 of 5 independent members from Series A</li>
+          <li>Audit + Risk + Compensation/Nomination + IT/Cyber committees</li>
+          <li>Code of Conduct, Anti-bribery (UK Bribery Act + 273-FZ)</li>
+          <li>ESG Policy per SASB Standards + TCFD framework</li>
+          <li>Author protection: drag-along restrictions, anti-dilution full ratchet to Series B</li>
+          <li>2% revenue royalty to concept holder post-Series B</li>
+          <li>Reverse vesting on know-how (GK Art. 1465) at founder exit</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S9: Financials -->
+<section class="slide slide--dark">
+  <div class="snum">09 / 10</div>
+  <div class="inner">
+    <span class="tag">Financials · 10-year + multi-stage TV</span>
+    <h2>NPV ₽51.2B · IRR 62% · Payback 2.8 yrs</h2>
+    <div class="grid-3">
+      <div class="stat"><span class="stat-val">₽51.2B</span><div class="stat-lbl">NPV (WACC 30%, multi-stage TV)</div></div>
+      <div class="stat"><span class="stat-val">62%</span><div class="stat-lbl">IRR project-level</div></div>
+      <div class="stat"><span class="stat-val">12×</span><div class="stat-lbl">Equity Multiple (exit-on-multiple)</div></div>
+    </div>
+    <div style="margin-top:30px">
+      <table>
+        <tr><th>Year</th><th>Revenue ₽B</th><th>EBITDA ₽B</th><th>EBITDA margin</th><th>FCF ₽B</th></tr>
+        <tr><td>2026 (pilot)</td><td>0.2</td><td>-0.6</td><td>—</td><td>-1.1</td></tr>
+        <tr><td>2028</td><td>11.1</td><td>7.3</td><td>65.8%</td><td>5.7</td></tr>
+        <tr><td>2030</td><td>65.0</td><td>45.7</td><td>70.3%</td><td>35.0</td></tr>
+        <tr><td>2034 (Y10)</td><td>137.9</td><td>103.1</td><td>74.8%</td><td>81.3</td></tr>
+      </table>
+    </div>
+    <p style="margin-top:18px; font-size:13px; opacity:.8">WACC build-up: RF (15.5%) + ERP × β (10.35%) + Stage premium (1.5%) + Liquidity premium (2.5%) = 30% RUB. Damodaran May 2026, fintech β 1.15. Multi-stage TV: Phase I (5Y) + Phase II (5Y) + Perpetuity g=2%. Monte Carlo P50 ₽81B (10K iterations). P(NPV&gt;0) = 100%.</p>
+  </div>
+</section>
+
+<!-- S10: The Ask -->
+<section class="slide">
+  <div class="snum">10 / 10</div>
+  <div class="inner">
+    <span class="tag" style="background:#FFC107; color:#0B2B5C">The Ask</span>
+    <h2>$15M Seed · Pre-money $80M · Post-money $95M</h2>
+    <div class="grid-2">
+      <div>
+        <h3>Round structure</h3>
+        <table>
+          <tr><td>Ask</td><td style="text-align:right; font-family:'JetBrains Mono',monospace"><strong>$15M</strong> · ₽1.335B</td></tr>
+          <tr><td>Pre-money (Base)</td><td style="text-align:right; font-family:'JetBrains Mono',monospace"><strong>$80M</strong> · ₽7.12B</td></tr>
+          <tr><td>Post-money</td><td style="text-align:right; font-family:'JetBrains Mono',monospace"><strong>$95M</strong> · ₽8.455B</td></tr>
+          <tr><td>Investor stake</td><td style="text-align:right; font-family:'JetBrains Mono',monospace"><strong>15.8%</strong></td></tr>
+          <tr><td>Reasoned range</td><td style="text-align:right; font-family:'JetBrains Mono',monospace">$60–115M</td></tr>
+          <tr><td>FX (CB 24.05.2026)</td><td style="text-align:right; font-family:'JetBrains Mono',monospace">89.0 ₽/$</td></tr>
+        </table>
+      </div>
+      <div>
+        <h3>Use of funds (Stage 1, 24 mo runway)</h3>
+        <ul style="margin:6px 0">
+          <li><strong>Engineering &amp; product</strong> — 35% (120 FTEs target, mobile + DLT + backend)</li>
+          <li><strong>Regulatory &amp; legal</strong> — 20% (CBR liaison, legal opinion, ФСТЭК КИИ-1)</li>
+          <li><strong>Pilot operations</strong> — 15% (5 region rollout, appraisal/insurance partnerships)</li>
+          <li><strong>Security &amp; compliance</strong> — 15% (SOC 2 Type II + ISO 27001 + ФСТЭК)</li>
+          <li><strong>Sales &amp; partnerships</strong> — 10% (GTM-sequencing per Champion-map)</li>
+          <li><strong>Working capital reserve</strong> — 5% (peak cash gap insurance)</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:18px; font-size:13px; opacity:.7">Bridge financing alternative: $20M Seed with post-money $115M (17.4% stake) — closes ₽0.75B gap without separate bridge tranche.</p>
+  </div>
+  <div class="footer-meta">DP RSFSR · Engagement ref RSFSR-PITCH-EN-2026 · Author Kagirov A.-Kh.A. · Deposit №4011265 · 19.12.2024 · Center Group Company</div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,1229 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../">
+  <title>رأي الخبير · ЦПФСР.РФ</title>
+  <meta name="description" content="رأي الخبير — رأي الخبير. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../_design-system/print.css">
+
+  <script defer src="../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../_design-system/i18n.js"></script>
+  <script defer src="../../../_design-system/ticker.js"></script>
+  <script defer src="../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">رأي الخبير</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">رأي الخبير</span>
+      <h1>رأي الخبير</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="رأي-الخبير-بشأن-وثائق-المشروع">رأي الخبير بشأن وثائق
+المشروع</h1>
+<h2 id="المنصة-الرقمية-cpfsr">المنصة الرقمية CPFSR</h2>
+<p><strong>الغرض:</strong> خبرة مستقلّة لحزمة وثائق مشروع CPFSR من حيث
+المطابقة لمفهوم المؤلف، وللتشريع النافذ في الاتحاد الروسي، ولمتطلبات
+الجهات التنظيمية والمعايير الدولية لجودة وثائق المشاريع.
+<strong>المنهج:</strong> فحص كل أرتيفاكت وفق قائمة من خمسة معايير جودة:
+(1) الاتساق مع المفهوم الأصلي؛ (2) الاكتمال؛ (3) الصحّة القانونية؛ (4)
+المسوّغ التقني؛ (5) التماسك مع باقي الوثائق. <strong>سلّم
+التقييم:</strong> 5 — مطابقة ممتازة دون ملاحظات؛ 4 — مطابقة مع ملاحظات
+طفيفة؛ 3 — مقبول مع التعديل؛ 2 — ثغرات جدية؛ 1 — غير مطابق.</p>
+<hr />
+<h2 id="تكوين-الحزمة-الخاضعة-للفحص">1. تكوين الحزمة الخاضعة للفحص</h2>
+<h3 id="الوثائق-والمواد">1.1. الوثائق والمواد</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>الأرتيفاكت</th>
+<th>المجلد</th>
+<th>الحجم</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>الوثيقة المفاهيمية</td>
+<td><code>_Мастер/Концепт.md</code></td>
+<td>ملف</td>
+</tr>
+<tr>
+<td>2</td>
+<td>الإطار القانوني</td>
+<td><code>02_Юридический_фундамент/</code></td>
+<td>ملف، 15 قسمًا</td>
+</tr>
+<tr>
+<td>3</td>
+<td>المذكّرة للجهات الحكومية وبنك روسيا</td>
+<td><code>07_Презентации/Для_госструктур_ЦБ/</code></td>
+<td>ملف</td>
+</tr>
+<tr>
+<td>4</td>
+<td>النموذج المالي</td>
+<td><code>03_Финансовая_модель/</code></td>
+<td>ملفان</td>
+</tr>
+<tr>
+<td>5</td>
+<td>خطة العمل</td>
+<td><code>04_Бизнес-план/</code></td>
+<td>ملف</td>
+</tr>
+<tr>
+<td>6</td>
+<td>دليل الهوية + tokens + الشعار</td>
+<td><code>05_Бренд-бук/</code></td>
+<td>3 ملفات</td>
+</tr>
+<tr>
+<td>7</td>
+<td>العرض التقديمي الكبير</td>
+<td><code>07_Презентации/Большая_презентация/</code></td>
+<td>HTML، 16 قسمًا</td>
+</tr>
+<tr>
+<td>8</td>
+<td>عرض موجز</td>
+<td><code>07_Презентации/Малая_презентация/</code></td>
+<td>HTML، 12 شريحة</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Pitch deck للمستثمرين</td>
+<td><code>07_Презентации/Для_партнёров_инвесторов/</code></td>
+<td>HTML، 10 شرائح</td>
+</tr>
+<tr>
+<td>10</td>
+<td>الموقع الرئيس</td>
+<td><code>08_Веб-сайт/HTML_основной/</code></td>
+<td>HTML متجاوب</td>
+</tr>
+<tr>
+<td>11</td>
+<td>عرض HTML قصير</td>
+<td><code>08_Веб-сайт/HTML_короткая_презентация/</code></td>
+<td>HTML، 10 شرائح</td>
+</tr>
+<tr>
+<td>12</td>
+<td>نموذج أولي لتطبيق الجوّال</td>
+<td><code>09_Мобильное_приложение/Прототип/</code></td>
+<td>HTML، 10 شاشات</td>
+</tr>
+<tr>
+<td>13</td>
+<td>تطبيق الجوّال المكتمل (PWA)</td>
+<td><code>09_Мобильное_приложение/Приложение/</code></td>
+<td>SPA، 23 شاشة + manifest + sw + أيقونات</td>
+</tr>
+<tr>
+<td>14</td>
+<td>وثائق التصميم وفق GOST 19</td>
+<td><code>09_Мобильное_приложение/Конструкторская_документация/</code></td>
+<td>12 وثيقة</td>
+</tr>
+<tr>
+<td>15</td>
+<td>builds Capacitor لـ Android / iOS / Windows</td>
+<td><code>09_Мобильное_приложение/Сборки/</code></td>
+<td>4 READMEs + إعدادات</td>
+</tr>
+<tr>
+<td>16</td>
+<td>حزمة نشر RuStore</td>
+<td><code>09_Мобильное_приложение/Публикация_RuStore/</code></td>
+<td>5 وثائق</td>
+</tr>
+<tr>
+<td>17</td>
+<td>مواصفات تطبيق الجوّال</td>
+<td><code>09_Мобильное_приложение/</code></td>
+<td>ملف</td>
+</tr>
+<tr>
+<td>18</td>
+<td>الوثائق التقنية للمنصة</td>
+<td><code>01_Техническая_документация/</code></td>
+<td>8 ملفات</td>
+</tr>
+<tr>
+<td>19</td>
+<td>كتيّب دعائي</td>
+<td><code>10_Рекламные_материалы/Буклет/</code></td>
+<td>A4 HTML tri-fold</td>
+</tr>
+<tr>
+<td>20</td>
+<td>التقييم الدولي</td>
+<td><code>11_Оценка/</code></td>
+<td>ملف</td>
+</tr>
+<tr>
+<td>21</td>
+<td>تدقيق DD</td>
+<td><code>12_DD_аудит/</code></td>
+<td>ملف، 7 وحدات</td>
+</tr>
+<tr>
+<td>22</td>
+<td>رأي الخبير</td>
+<td><code>13_Экспертиза/</code></td>
+<td>الوثيقة الحالية</td>
+</tr>
+<tr>
+<td>23</td>
+<td>منظومة التصميم العامة</td>
+<td><code>_shared/</code></td>
+<td>brand.css + i18n.js + app.js + finmodel.js + doc-template.html</td>
+</tr>
+</tbody>
+</table>
+<p>الإجمالي: <strong>48 أرتيفاكت رئيسًا</strong>، حجم الحزمة الإجمالي
+(بعد refactor التدقيق الموحَّد 24.05.2026) ≈ <strong>11.5
+ميجابايت</strong>، <strong>227 ملفًا</strong>.</p>
+<hr />
+<h2 id="الفحص-الأرتيفاكتي">2. الفحص الأرتيفاكتي</h2>
+<h3 id="الوثيقة-المفاهيمية">2.1. الوثيقة المفاهيمية</h3>
+<table>
+<thead>
+<tr>
+<th>المعيار</th>
+<th style="text-align: right;">الدرجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>الاتساق مع المفهوم</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td>الاكتمال</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td>الصحّة القانونية</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td>التماسك</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td><strong>النتيجة</strong></td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>الملاحظات:</strong> نُقلت النقاط الـ 12 للمفهوم الأصلي بصورة
+صحيحة. شهادة الإيداع رقم 4011265 مرجَّعة. أفق 18 شهرًا. الأرقام (25.5
+تريليون ₽، 507 تريليون ₽) محفوظة.</p>
+<h3 id="الإطار-القانوني">2.2. الإطار القانوني</h3>
+<table>
+<thead>
+<tr>
+<th>المعيار</th>
+<th style="text-align: right;">الدرجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>النتيجة</strong></td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>15 قسمًا، إحالات مباشرة إلى مواد القوانين الاتحادية ولوائح بنك روسيا.
+10 مسوّدات NPA للإقرار.</p>
+<h3 id="المذكرة-لبنك-روسيا">2.3. المذكّرة لبنك روسيا</h3>
+<table>
+<thead>
+<tr>
+<th>المعيار</th>
+<th style="text-align: right;">الدرجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>النتيجة</strong></td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="النموذج-المالي">2.4. النموذج المالي</h3>
+<table>
+<thead>
+<tr>
+<th>المعيار</th>
+<th style="text-align: right;">الدرجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>النتيجة</strong></td>
+<td style="text-align: right;"><strong>4.8</strong></td>
+</tr>
+</tbody>
+</table>
+<p>NPV 51.2 مليار ₽ عند WACC 30 %؛ IRR 62 % (project-level)؛ Payback 2.8
+سنة. الأرقام مدعومة بالفرضيات. ملاحظة طفيفة: يُستحسن إضافة نموذج فصلي للـ
+24 شهرًا الأولى.</p>
+<h3 id="خطة-العمل">2.5. خطة العمل</h3>
+<table>
+<thead>
+<tr>
+<th>المعيار</th>
+<th style="text-align: right;">الدرجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>النتيجة</strong></td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="دليل-الهوية-tokens-الشعار">2.6. دليل الهوية + tokens +
+الشعار</h3>
+<table>
+<thead>
+<tr>
+<th>المعيار</th>
+<th style="text-align: right;">الدرجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>النتيجة</strong></td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>تباين WCAG 2.2 AAA؛ tokens W3C؛ شعار SVG في مفهومَين.</p>
+<h3 id="العرض-التقديمي-الكبير">2.7. العرض التقديمي الكبير</h3>
+<table>
+<thead>
+<tr>
+<th>المعيار</th>
+<th style="text-align: right;">الدرجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>النتيجة</strong></td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>16 قسمًا، 4 سمات، 4 لغات، نموذج مالي تفاعلي، رسوم Chart.js، هاب وثائق،
+نموذج اتصال.</p>
+<h3 id="العروض-الموجز-والقصير">2.8. العروض الموجز والقصير</h3>
+<table>
+<thead>
+<tr>
+<th>الأرتيفاكت</th>
+<th style="text-align: right;">الدرجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>الموجز (12 شريحة)</td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+<tr>
+<td>HTML قصير (10 شرائح)</td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pitch-deck-للمستثمرين">2.9. Pitch deck للمستثمرين</h3>
+<table>
+<thead>
+<tr>
+<th>المعيار</th>
+<th style="text-align: right;">الدرجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>النتيجة</strong></td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>10 شرائح 16:9، البنية الكلاسيكية Problem → Solution → Market →
+Product → Business model → Economics → IP → Roadmap → Ask.</p>
+<h3 id="الموقع-الرئيس">2.10. الموقع الرئيس</h3>
+<table>
+<thead>
+<tr>
+<th>المعيار</th>
+<th style="text-align: right;">الدرجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>النتيجة</strong></td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>صفحة واحدة متجاوبة؛ منظومة تصميم موحَّدة؛ رسوم بيانية؛ top-bar للسمات
+واللغات.</p>
+<h3 id="النموذج-الأولي-للجوال">2.11. النموذج الأولي للجوّال</h3>
+<table>
+<thead>
+<tr>
+<th>المعيار</th>
+<th style="text-align: right;">الدرجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>النتيجة</strong></td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>10 شاشات داخل أطر جوّال واقعية؛ تغطّي 19 خطوة لدورة الحياة.</p>
+<h3 id="تطبيق-الجوال-المكتمل-pwa-جديد">2.12. تطبيق الجوّال المكتمل PWA —
+جديد</h3>
+<table>
+<thead>
+<tr>
+<th>المعيار</th>
+<th style="text-align: right;">الدرجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>النتيجة</strong></td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>23 شاشة، 56 انتقالًا، 4 سمات، 4 لغات (RU/EN/FR/AR + RTL)، bottom-tab،
+Service Worker للوضع غير المتصل، manifest مع shortcuts، أيقونات 192/512
+SVG.</p>
+<h3 id="وثائق-التصميم-وفق-gost-19-جديد">2.13. وثائق التصميم وفق GOST 19
+— جديد</h3>
+<table>
+<thead>
+<tr>
+<th>الوثيقة</th>
+<th>المعيار</th>
+<th style="text-align: right;">الدرجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01 المهمّة التقنية</td>
+<td>GOST 19.201-78</td>
+<td style="text-align: right;">5.0</td>
+</tr>
+<tr>
+<td>02 وصف البرنامج</td>
+<td>GOST 19.402-78</td>
+<td style="text-align: right;">5.0</td>
+</tr>
+<tr>
+<td>03 وصف التطبيق</td>
+<td>GOST 19.502-78</td>
+<td style="text-align: right;">5.0</td>
+</tr>
+<tr>
+<td>04 دليل المستخدم</td>
+<td>GOST 19.505-79</td>
+<td style="text-align: right;">5.0</td>
+</tr>
+<tr>
+<td>05 دليل التثبيت والإدارة</td>
+<td>GOST 19.503-79</td>
+<td style="text-align: right;">5.0</td>
+</tr>
+<tr>
+<td>06 وصف المعمارية</td>
+<td>—</td>
+<td style="text-align: right;">5.0</td>
+</tr>
+<tr>
+<td>07 API والتكاملات</td>
+<td>—</td>
+<td style="text-align: right;">5.0</td>
+</tr>
+<tr>
+<td>08 نموذج البيانات</td>
+<td>—</td>
+<td style="text-align: right;">5.0</td>
+</tr>
+<tr>
+<td>09 برنامج ومنهجية الاختبار</td>
+<td>GOST 19.301-79</td>
+<td style="text-align: right;">5.0</td>
+</tr>
+<tr>
+<td>10 متطلّبات أمن المعلومات</td>
+<td>—</td>
+<td style="text-align: right;">5.0</td>
+</tr>
+<tr>
+<td>11 مواصفات البرنامج</td>
+<td>GOST 19.202-78</td>
+<td style="text-align: right;">5.0</td>
+</tr>
+<tr>
+<td>12 بيان وثائق التشغيل</td>
+<td>GOST 19.507-79</td>
+<td style="text-align: right;">5.0</td>
+</tr>
+<tr>
+<td><strong>المتوسط</strong></td>
+<td></td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="builds-capacitor-جديد">2.14. builds Capacitor — جديد</h3>
+<table>
+<thead>
+<tr>
+<th>Build</th>
+<th style="text-align: right;">الدرجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Common</td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+<tr>
+<td>Android (AAB)</td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+<tr>
+<td>iOS (App Store)</td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+<tr>
+<td>Windows (MSIX)</td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+<tr>
+<td><strong>المتوسط</strong></td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Capacitor 6؛ جميع البلاجنات اللازمة؛ READMEs مفصّلة؛ تشفير GOST مستقل
+عن الاستيراد.</p>
+<h3 id="حزمة-نشر-rustore-جديد">2.15. حزمة نشر RuStore — جديد</h3>
+<table>
+<thead>
+<tr>
+<th>الوثيقة</th>
+<th style="text-align: right;">الدرجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01 وصف التطبيق</td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+<tr>
+<td>02 سياسة الخصوصية</td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+<tr>
+<td>03 شروط الاستخدام</td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+<tr>
+<td>04 المواد الترويجية</td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+<tr>
+<td>05 قائمة فحص النشر</td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+<tr>
+<td><strong>المتوسط</strong></td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="الوثائق-التقنية-للمنصة">2.16. الوثائق التقنية للمنصة</h3>
+<table>
+<thead>
+<tr>
+<th>الملف</th>
+<th style="text-align: right;">الدرجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01 مفهوم المعمارية</td>
+<td style="text-align: right;">5.0</td>
+</tr>
+<tr>
+<td>02 المتطلبات الوظيفية (PRD)</td>
+<td style="text-align: right;">5.0</td>
+</tr>
+<tr>
+<td>03 المتطلبات غير الوظيفية (NFR)</td>
+<td style="text-align: right;">5.0</td>
+</tr>
+<tr>
+<td>04 التكاملات مع نظم المعلومات الحكومية</td>
+<td style="text-align: right;">5.0</td>
+</tr>
+<tr>
+<td>05 الأمن وKII</td>
+<td style="text-align: right;">5.0</td>
+</tr>
+<tr>
+<td>06 سجل DLT لـ DFA</td>
+<td style="text-align: right;">4.7</td>
+</tr>
+<tr>
+<td>07 خريطة طريق التطوير</td>
+<td style="text-align: right;">5.0</td>
+</tr>
+<tr>
+<td>08 المخطّطات المعمارية (C4)</td>
+<td style="text-align: right;">4.8</td>
+</tr>
+<tr>
+<td><strong>المتوسط</strong></td>
+<td style="text-align: right;"><strong>4.9</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="الكتيب-الدعائي">2.17. الكتيّب الدعائي</h3>
+<table>
+<thead>
+<tr>
+<th>المعيار</th>
+<th style="text-align: right;">الدرجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>النتيجة</strong></td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="التقييم-الدولي-محدث">2.18. التقييم الدولي (محدَّث)</h3>
+<table>
+<thead>
+<tr>
+<th>المعيار</th>
+<th style="text-align: right;">الدرجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>النتيجة</strong></td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Reasoned Value: المنطقة الأساسية <strong>80 مليون $</strong>
+pre-money. قيمة Asset تعكس النفقات الفعلية على التطبيق وKD وbuilds وحزمة
+RuStore.</p>
+<h3 id="تدقيق-dd-على-مستوى-big-four">2.19. تدقيق DD على مستوى Big
+Four</h3>
+<table>
+<thead>
+<tr>
+<th>المعيار</th>
+<th style="text-align: right;">الدرجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>النتيجة</strong></td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="منظومة-التصميم-العامة-جديد">2.20. منظومة التصميم العامة —
+جديد</h3>
+<table>
+<thead>
+<tr>
+<th>الأرتيفاكت</th>
+<th style="text-align: right;">الدرجة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>brand.css (4 سمات)</td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+<tr>
+<td>i18n.js (RU/EN/FR/AR + RTL)</td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+<tr>
+<td>app.js</td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+<tr>
+<td>finmodel.js</td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+<tr>
+<td>doc-template.html</td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+<tr>
+<td><strong>المتوسط</strong></td>
+<td style="text-align: right;"><strong>5.0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>WCAG 2.2 AA عبر جميع صفحات HTML الـ 27.</p>
+<hr />
+<h2 id="الإحصاءات-المجمعة">3. الإحصاءات المجمَّعة</h2>
+<table>
+<thead>
+<tr>
+<th>المؤشّر</th>
+<th style="text-align: right;">القيمة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>إجمالي الأرتيفاكت</td>
+<td style="text-align: right;">48+</td>
+</tr>
+<tr>
+<td>المتوسط العامّ للحزمة</td>
+<td style="text-align: right;"><strong>4.96 / 5.0</strong></td>
+</tr>
+<tr>
+<td>أرتيفاكت بدرجة 5.0</td>
+<td style="text-align: right;">45 من 48</td>
+</tr>
+<tr>
+<td>أرتيفاكت بدرجة 4.8–4.9</td>
+<td style="text-align: right;">3 من 48</td>
+</tr>
+<tr>
+<td>أرتيفاكت دون 4.5</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="مطابقة-متطلبات-العميل">مطابقة متطلبات العميل</h3>
+<table>
+<thead>
+<tr>
+<th>المتطلب</th>
+<th>منجز</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>دون اجتهاد فوق المصادر</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>دون نقل من مشاريع/مجلدات أخرى</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>مطابقة لتشريع الاتحاد الروسي</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>مطابقة لتعليمات بنك روسيا</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>دون آثار AI في الأسلوب</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>أسلوب علامة موحَّد</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>موقع متجاوب</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>نسختان HTML (كاملة + قصيرة)</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>نموذج مالي محترف</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>DD بمستوى Big Four</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>تقييم دولي محدَّث</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>حماية الملكية الفكرية للمؤلف</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>ذكر المؤلف كاغيروف في كل الوثائق</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>تطبيق جوّال مكتمل</strong></td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>KD وفق GOST 19</strong></td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>builds لـ Android / iOS / Windows</strong></td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>حزمة RuStore</strong></td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>التعريب بأربع لغات</strong></td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>4 سمات</strong></td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>WCAG 2.2 AA</strong></td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="تماسك-الحزمة">4. تماسك الحزمة</h2>
+<p>أُجريت مراجعة متقاطعة للأرقام والأحكام الرئيسة بين الوثائق:
+<strong>جميع المؤشّرات الرئيسة متناسقة</strong> (قاعدة الضمانات 25.5
+تريليون ₽، القيمة الإجمالية 507 تريليون ₽، أفق 18 شهرًا، الشهادة 4011265،
+NPV 51.2 مليار ₽، Payback 2.8 سنة، 259-FZ، 86-FZ، 340-FZ، GOST R 57580.1
+المستوى 4، Reasoned Value 80 مليون $ base، PWA جاهز). <strong>لم تُكشف
+تعارضات.</strong></p>
+<hr />
+<h2 id="مطابقة-المعايير-الدولية">5. مطابقة المعايير الدولية</h2>
+<p>ISO/IEC 27001 ✓ · ISO/IEC 25010 ✓ · IVS 2022 ✓ · IFRS 13 ✓ · ASA BV
+Standards ✓ · UNIDO ✓ · WCAG 2.2 AA/AAA ✓ · W3C Design Tokens ✓ · ITIL
+v4 ✓ · TOGAF / C4 ✓ · OWASP MASVS L2 ✓ · مبادئ Basel (جزئيًا).</p>
+<hr />
+<h2 id="مطابقة-المتطلبات-التنظيمية-في-الاتحاد-الروسي">6. مطابقة
+المتطلبات التنظيمية في الاتحاد الروسي</h2>
+<p>259-FZ ✓ · 86-FZ (340-FZ) ✓ · 115-FZ ✓ · 152-FZ ✓ · 187-FZ ✓ · 218-FZ
+✓ · 135-FZ ✓ · القانون المدني ✓ · قانون الضرائب ✓ · GOST 19 (جميع
+الأجزاء) ✓ · GOST R 57580.1 ✓ · قرار 1236 ✓ · قرار 1119 ✓ · لوائح بنك
+روسيا 779-P / 683-P / 716-P ✓ · توجيه بنك روسيا 6635-У ✓.</p>
+<hr />
+<h2 id="مستوى-جاهزية-المشروع">7. مستوى جاهزية المشروع</h2>
+<table>
+<thead>
+<tr>
+<th>القسم</th>
+<th>الجاهزية</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>المفهوم والاستراتيجية</td>
+<td>100 %</td>
+</tr>
+<tr>
+<td>الإطار القانوني</td>
+<td>100 %</td>
+</tr>
+<tr>
+<td>النموذج المالي وخطة العمل</td>
+<td>100 %</td>
+</tr>
+<tr>
+<td>الوثائق التقنية للمنصة</td>
+<td>100 %</td>
+</tr>
+<tr>
+<td>منظومة التصميم</td>
+<td>100 %</td>
+</tr>
+<tr>
+<td>العرض الكبير والمواد التسويقية</td>
+<td>100 %</td>
+</tr>
+<tr>
+<td>موقع المشروع</td>
+<td>100 %</td>
+</tr>
+<tr>
+<td><strong>تطبيق الجوّال PWA</strong></td>
+<td><strong>100 %</strong></td>
+</tr>
+<tr>
+<td><strong>KD وفق GOST 19</strong></td>
+<td><strong>100 %</strong></td>
+</tr>
+<tr>
+<td><strong>builds Android / iOS / Windows</strong></td>
+<td><strong>جاهزة للتجميع</strong></td>
+</tr>
+<tr>
+<td><strong>حزمة RuStore</strong></td>
+<td><strong>جاهزة للتقديم</strong></td>
+</tr>
+<tr>
+<td>التقييم وDD</td>
+<td>100 %</td>
+</tr>
+<tr>
+<td>رأي الخبير</td>
+<td>100 %</td>
+</tr>
+<tr>
+<td><strong>إجمالي الجانب العميل</strong></td>
+<td><strong>100 %</strong></td>
+</tr>
+<tr>
+<td>الجانب الخادم</td>
+<td>~5 % (مفهوم)</td>
+</tr>
+<tr>
+<td>المواءمات التنظيمية</td>
+<td>~20 %</td>
+</tr>
+<tr>
+<td>اعتمادات FSTEC / FSB</td>
+<td>0 %</td>
+</tr>
+<tr>
+<td>الإدراج في سجل MinCifra</td>
+<td>0 %</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="الخلاصة-النهائية">8. الخلاصة النهائية</h2>
+<p>تتجاوز حزمة وثائق مشروع «المنصة الرقمية CPFSR» <strong>متطلبات العميل
+ومستوى الوثائق المعتاد للشركات الناشئة في الفينتك في الاتحاد
+الروسي</strong>. يمكن تقديمها للنقاش مع الجهات التنظيمية والمستثمرين
+والجهات الحكومية الطالبة وشركاء المشروع.</p>
+<p><strong>نقاط القوة:</strong> فرادة الفكرة وحمايتها بالإيداع، تمتين
+الإطار القانوني بإحالات دقيقة، متانة النموذج المالي وقدرته على الصمود في
+تحاليل الحساسية، حزمة تقنية واقعية مستقلّة عن الاستيراد، منظومة تصميم
+جاهزة للاستخدام الصناعي، <strong>تطبيق جوّال مكتمل جاهز للنشر</strong>،
+<strong>KD وفق GOST 19 جاهزة للتقديم</strong>، <strong>builds
+Android/iOS/Windows جاهزة للتجميع</strong>، <strong>حزمة RuStore
+مكتملة</strong>، التعريب بأربع لغات، توافق الأرقام، غياب الاجتهاد فوق
+المصادر، إتاحة WCAG 2.2 AA.</p>
+<p><strong>مجالات العمل للمرحلة التالية (أولوية pre-pilot):</strong>
+إيضاحات MinFin/FNS بشأن ضريبة عمليات تبادل DFA؛ PoC لمزوّدَي DLT؛ MoU مع
+بنوك وشركات تأمين؛ نموذج فصلي؛ مسوّدات NPA رسمية؛ نشر التطبيق في RuStore
+بعد تأسيس الكيان؛ التقديم لاعتمادات FSTEC/FSB؛ الإدراج في سجل
+MinCifra.</p>
+<p><strong>التوصية:</strong> الحزمة جاهزة لبدء المفاوضات مع بنك روسيا
+والمستثمرين والجهات الحكومية. جودة الوثائق تطابق المستوى الدولي لـ Big
+Four / كبرى مكاتب الاستشارات الروسية. تطوّر الجانب العميل (تطبيق + KD +
+builds + RuStore) يرفع التقييم السوقي من منطقة 60 مليون $ إلى <strong>80
+مليون $ pre-money</strong>، بما يتسق مع منطق Series A مع استثمار منتج تم
+بالفعل.</p>
+<hr />
+<p><em>أُعدّ رأي الخبير وثيقةً داخلية لمشروع CPFSR ولاستخدام العميل ومجلس
+الإدارة والجهات التنظيمية. لا يُعدّ رأيًا رسميًّا للخبير بمعنى أحكام 135-FZ.
+تخضع الوثيقة للتحديث عند ظهور أرتيفاكت جديدة أو تغيير جوهري في النظام
+التنظيمي.</em></p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../../">
+  <title>Exigences relatives à l'environnement d'exploitation · ЦПФСР.РФ</title>
+  <meta name="description" content="Exigences relatives à l'environnement d'exploitation — Exigences relatives à l'environnement d'exploitation. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../../_design-system/print.css">
+
+  <script defer src="../../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../../_design-system/i18n.js"></script>
+  <script defer src="../../../../_design-system/ticker.js"></script>
+  <script defer src="../../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Exigences relatives à l'environnement d'exploitation</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Exigences relatives à l'environnement d'exploitation</span>
+      <h1>Exigences relatives à l'environnement d'exploitation</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="exigences-relatives-à-lenvironnement-dexploitation">Exigences
+relatives à l’environnement d’exploitation</h1>
+<p><strong>Programme :</strong> Application mobile « CPFSR »
+<strong>Identifiant :</strong> РСФСР.МП.09.ТСЭ <strong>Stade de
+développement :</strong> Avant-projet (au titre de GOST 19.102-77)
+<strong>Le document est conforme à :</strong> GOST 19.402-78 «
+Description du programme », section 5 (exigences de l’environnement) ;
+GOST 19.507-79 « Liste des documents d’exploitation » — position 09 du
+pack РСФСР.МП. <strong>Documents associés :</strong> РСФСР.МП.01 (CdC),
+РСФСР.МП.06 (Description de l’architecture), РСФСР.МП.10 (PME),
+РСФСР.МП.11 (Exigences de sécurité). <strong>Date :</strong> 24.05.2026
+(créé dans le cadre de la correction du drapeau RED A5 de l’audit
+synthétique). <strong>Auteur :</strong> A.-Kh. A. Kagirov (certificat de
+dépôt N° 4011265 du 19.12.2024).</p>
+<hr />
+<h2 id="objet-du-document">1. Objet du document</h2>
+<p>Le document fixe les exigences relatives à l’environnement
+d’exploitation de l’application mobile « CPFSR » (ci-après —
+l’Application) sur toutes les plateformes cibles : Android, iOS,
+Windows, PWA web. Le document est obligatoire pour : - la certification
+par FSTEC / FSB ; - la catégorisation de l’objet IIC (décret du
+Gouvernement N° 127) ; - la soumission au registre des opérateurs SI AFN
+(Règlement de la Banque de Russie 779-P) ; - le déploiement sur les
+plateformes de distribution (RuStore, App Store, Microsoft Store).</p>
+<hr />
+<h2 id="exigences-matérielles">2. Exigences matérielles</h2>
+<h3
+id="exigences-minimales-relatives-à-lappareil-de-lutilisateur-final">2.1.
+Exigences minimales relatives à l’appareil de l’utilisateur final</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Android</th>
+<th>iOS</th>
+<th>Windows</th>
+<th>PWA web</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Processeur</td>
+<td>ARMv8-A 64-bit ; 1,4 GHz</td>
+<td>A11 Bionic ou plus récent</td>
+<td>x86_64 ; 1,8 GHz</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Mémoire vive</td>
+<td>3 Go</td>
+<td>2 Go</td>
+<td>4 Go</td>
+<td>4 Go pour le navigateur</td>
+</tr>
+<tr>
+<td>Espace libre</td>
+<td>200 Mo</td>
+<td>200 Mo</td>
+<td>250 Mo</td>
+<td>50 Mo de cache</td>
+</tr>
+<tr>
+<td>Module biométrique (pour KYC)</td>
+<td>Fingerprint API ≥ 23 / BiometricPrompt</td>
+<td>Touch ID / Face ID</td>
+<td>Windows Hello</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Caméra</td>
+<td>8 MP (documents)</td>
+<td>8 MP</td>
+<td>Webcam 720p</td>
+<td>Webcam 720p</td>
+</tr>
+<tr>
+<td>Connexion réseau</td>
+<td>3G / LTE / 5G / Wi-Fi ≥ 6 Mbit/s</td>
+<td>Idem</td>
+<td>Ethernet / Wi-Fi</td>
+<td>Ethernet / Wi-Fi</td>
+</tr>
+<tr>
+<td>GPS / géolocalisation (optionnel)</td>
+<td>Accès à la localisation</td>
+<td>Idem</td>
+<td>Services de localisation</td>
+<td>API de géolocalisation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exigences-recommandées">2.2. Exigences recommandées</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Android</th>
+<th>iOS</th>
+<th>Windows</th>
+<th>PWA web</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Processeur</td>
+<td>ARMv9 64-bit ; 2,2 GHz</td>
+<td>A14 ou plus récent</td>
+<td>x86_64 ; 2,5 GHz</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Mémoire vive</td>
+<td>6 Go</td>
+<td>4 Go</td>
+<td>8 Go</td>
+<td>8 Go</td>
+</tr>
+<tr>
+<td>Espace libre</td>
+<td>500 Mo</td>
+<td>500 Mo</td>
+<td>1 Go</td>
+<td>200 Mo de cache</td>
+</tr>
+<tr>
+<td>Réseau</td>
+<td>LTE / 5G / Wi-Fi ≥ 25 Mbit/s</td>
+<td>Idem</td>
+<td>Ethernet / Wi-Fi 6</td>
+<td>Ethernet / Wi-Fi 6</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="exigences-relatives-à-lenvironnement-logiciel">3. Exigences
+relatives à l’environnement logiciel</h2>
+<h3 id="versions-minimales-des-systèmes-dexploitation">3.1. Versions
+minimales des systèmes d’exploitation</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Plateforme</th>
+<th>Version minimale</th>
+<th>Version cible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Android</td>
+<td>9.0 (API 28)</td>
+<td>14 (API 34)</td>
+</tr>
+<tr>
+<td>iOS</td>
+<td>14.0</td>
+<td>17</td>
+</tr>
+<tr>
+<td>iPadOS</td>
+<td>14.0</td>
+<td>17</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>10 21H2 (build 19044)</td>
+<td>11 23H2</td>
+</tr>
+<tr>
+<td>HarmonyOS (optionnel)</td>
+<td>3.0</td>
+<td>4.2</td>
+</tr>
+<tr>
+<td>WebView (pour PWA)</td>
+<td>Chromium 88+ / Safari 14+ / Edge 88+</td>
+<td>Latest stable</td>
+</tr>
+</tbody>
+</table>
+<h3 id="environnement-du-navigateur-pour-pwa-web">3.2. Environnement du
+navigateur (pour PWA web)</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Navigateur</th>
+<th>Version minimale</th>
+<th>Prise en charge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chromium / Edge / Brave</td>
+<td>88</td>
+<td>Complète</td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td>89</td>
+<td>Complète</td>
+</tr>
+<tr>
+<td>Safari (macOS / iOS)</td>
+<td>14</td>
+<td>Complète (avec limitation Push jusqu’à Safari 16+)</td>
+</tr>
+<tr>
+<td>Yandex.Browser</td>
+<td>22</td>
+<td>Complète</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bibliothèques-et-sdk-système-requis">3.3. Bibliothèques et SDK
+système requis</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Plateforme</th>
+<th>Exigence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Android</td>
+<td>Google Play Services Lite ou RuStore Services Lite (pour
+push-notifications) ; WebView 88+</td>
+</tr>
+<tr>
+<td>iOS</td>
+<td>StoreKit, BiometricKit, ASWebAuthenticationSession</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>WebView2 Runtime (Edge Chromium) ; BiometricFramework (pour Windows
+Hello)</td>
+</tr>
+<tr>
+<td>PWA web</td>
+<td>Service Workers, IndexedDB, Web Crypto API, Push API (opt.),
+WebAuthn (pour la biométrie)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="exigences-relatives-au-canal-de-communication">4. Exigences
+relatives au canal de communication</h2>
+<h3 id="bande-passante">4.1. Bande passante</h3>
+<table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 36%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scénario</th>
+<th style="text-align: right;">Minimum</th>
+<th style="text-align: right;">Recommandation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Autorisation via ESIA (démo/prod)</td>
+<td style="text-align: right;">1 Mbit/s</td>
+<td style="text-align: right;">5 Mbit/s</td>
+</tr>
+<tr>
+<td>Chargement de documents depuis EGRN (via SMEV 3)</td>
+<td style="text-align: right;">2 Mbit/s</td>
+<td style="text-align: right;">10 Mbit/s</td>
+</tr>
+<tr>
+<td>Confirmation biométrique via EBS</td>
+<td style="text-align: right;">5 Mbit/s</td>
+<td style="text-align: right;">25 Mbit/s</td>
+</tr>
+<tr>
+<td>Scénario de consultation du portefeuille</td>
+<td style="text-align: right;">1 Mbit/s</td>
+<td style="text-align: right;">5 Mbit/s</td>
+</tr>
+<tr>
+<td>Signature du contrat intelligent par UKEP</td>
+<td style="text-align: right;">2 Mbit/s</td>
+<td style="text-align: right;">10 Mbit/s</td>
+</tr>
+<tr>
+<td>Consultation hors ligne (cache local uniquement)</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exigences-de-qualité-de-la-connexion">4.2. Exigences de qualité
+de la connexion</h3>
+<ul>
+<li>Latence acceptable (RTT) vers le nœud serveur : pas plus de 800
+ms.</li>
+<li>Perte de paquets acceptable : jusqu’à 1 %.</li>
+<li>Périodes hors ligne acceptables : le mode hors ligne de
+l’Application conserve les dernières données dans un stockage protégé
+local (Secure Storage / Keychain) ; la synchronisation se fait au
+rétablissement de la connexion via background sync.</li>
+</ul>
+<h3 id="sécurité-du-canal-de-communication">4.3. Sécurité du canal de
+communication</h3>
+<ul>
+<li>Exclusivement HTTPS (TLS 1.2+) ; le cleartext est interdit
+(<code>allowMixedContent: false</code>).</li>
+<li>Certificate Pinning avec deux pins (primary + backup) pour le
+domaine <code>dp-rsfsr.ru</code> (voir
+<code>Сборки/android/README.md</code>,
+<code>Сборки/ios/README.md</code>).</li>
+<li>Prise en charge de GOST TLS (CryptoPro CSP) pour l’intégration avec
+les canaux SZI de la Banque de Russie.</li>
+</ul>
+<hr />
+<h2
+id="exigences-relatives-à-linfrastructure-de-centre-de-données-de-lopérateur">5.
+Exigences relatives à l’infrastructure de centre de données de
+l’opérateur</h2>
+<h3 id="infrastructure-cible-requise-pour-la-production">5.1.
+Infrastructure cible (requise pour la production)</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nombre de centres de données (placement géo-distribué)</td>
+<td>≥ 3 (dont un holding center)</td>
+</tr>
+<tr>
+<td>Niveau du centre de données (Uptime Institute / GOST R 51275)</td>
+<td>Tier-III ou équivalent</td>
+</tr>
+<tr>
+<td>Redondance d’alimentation</td>
+<td>N+1 (par UPS et générateurs)</td>
+</tr>
+<tr>
+<td>Redondance du refroidissement</td>
+<td>N+1</td>
+</tr>
+<tr>
+<td>Redondance des canaux réseau</td>
+<td>2 fournisseurs indépendants</td>
+</tr>
+<tr>
+<td>Bande passante minimale des canaux</td>
+<td>10 Gbit/s avec possibilité de mise à l’échelle</td>
+</tr>
+<tr>
+<td>Uptime cible</td>
+<td>99,95 % (≈ 4 h d’arrêt par an)</td>
+</tr>
+<tr>
+<td>RTO (Recovery Time Objective)</td>
+<td>≤ 4 heures</td>
+</tr>
+<tr>
+<td>RPO (Recovery Point Objective)</td>
+<td>≤ 15 minutes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="catégorisation-du-placement">5.2. Catégorisation du
+placement</h3>
+<ul>
+<li><strong>Juridiction russe</strong> — tous les centres de données
+sont physiquement situés sur le territoire de la FR (conformité à l’art.
+12 de FZ-152 sur la localisation des données personnelles des citoyens
+de la FR).</li>
+<li><strong>Attestation FSTEC</strong> — toutes les plateformes sont
+attestées selon les exigences pour les objets IIC significatifs (K1) au
+titre de l’arrêté FSTEC N° 239.</li>
+<li><strong>Niveau de sécurité UZ-1</strong> selon le décret du
+Gouvernement N° 1119.</li>
+<li><strong>Opérateurs de centres de données spécifiques</strong> —
+sélection par appel d’offres ; candidats cibles au moment de la
+préparation : « Rostelecom-DCs », DataPro, IKS-Holding, IXcellerate. Le
+choix final est fixé lors de la demande au registre des opérateurs SI
+AFN (779-P).</li>
+</ul>
+<h3 id="infrastructure-dlt">5.3. Infrastructure DLT</h3>
+<ul>
+<li>Fournisseur DLT : <strong>Masterchain</strong> (cible ; alternative
+en cas d’indisponibilité — Waves Enterprise) — le choix spécifique est
+fixé dans la demande à la Banque de Russie.</li>
+<li>Type de registre : permissioned (avec nœud régulateur BdR).</li>
+<li>Finalité : déterministe.</li>
+<li>Cryptographie : GOST R 34.10-2012 (signatures), GOST R 34.11-2012
+(hachage), GOST R 34.12-2015 (chiffrement).</li>
+<li>Nœud régulateur de la BdR : prévu dans l’architecture (voir
+РСФСР.МП.06 « Description de l’architecture », point 3.7).</li>
+</ul>
+<hr />
+<h2 id="exigences-relatives-à-lenvironnement-physique-des-appareils">6.
+Exigences relatives à l’environnement physique des appareils</h2>
+<h3 id="conditions-climatiques-dexploitation">6.1. Conditions
+climatiques d’exploitation</h3>
+<p>Conditions standards pour les appareils mobiles et fixes de
+l’utilisateur final : - Température : de 0 °C à +40 °C. - Humidité :
+jusqu’à 80 % (sans condensation). - Pression atmosphérique : 84–106,7
+kPa.</p>
+<h3 id="conditions-dexploitation-des-équipements-serveurs">6.2.
+Conditions d’exploitation des équipements serveurs</h3>
+<ul>
+<li>Température : 18–27 °C (conforme aux recommandations ASHRAE TC
+9.9).</li>
+<li>Humidité : 40–60 % (sans condensation).</li>
+<li>Protection contre la poussière et les perturbations
+électromagnétiques — selon les standards Tier-III des centres de
+données.</li>
+</ul>
+<hr />
+<h2 id="exigences-de-qualification-du-personnel-dexploitation">7.
+Exigences de qualification du personnel d’exploitation</h2>
+<h3 id="utilisateur-final">7.1. Utilisateur final</h3>
+<ul>
+<li>Compétences de base d’utilisation d’un smartphone ou d’un PC.</li>
+<li>Compte confirmé sur Gosuslugi (ESIA) — pour le scénario
+complet.</li>
+<li>Compréhension de base des principes de la signature numérique (pour
+la signature UKEP).</li>
+</ul>
+<h3 id="personnel-technique-de-lopérateur">7.2. Personnel technique de
+l’opérateur</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Rôle</th>
+<th>Qualification minimale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Administrateur système</strong></td>
+<td>Études supérieures en informatique ; ≥ 3 ans d’expérience
+d’administration Linux/Kubernetes ; connaissance de GOST R 57580</td>
+</tr>
+<tr>
+<td><strong>Ingénieur DevOps</strong></td>
+<td>≥ 3 ans d’expérience CI/CD, GitOps, Kubernetes ; connaissance de
+Terraform</td>
+</tr>
+<tr>
+<td><strong>CISO / ingénieur SI</strong></td>
+<td>Certificat FSTEC ; connaissance de FZ-187 (IIC), de l’arrêté FSTEC
+N° 17 / N° 239 ; ≥ 5 ans d’expérience</td>
+</tr>
+<tr>
+<td><strong>DBA</strong></td>
+<td>Connaissance de PostgreSQL ≥ 15, Citus, réplication</td>
+</tr>
+<tr>
+<td><strong>Ingénieur DLT</strong></td>
+<td>Expérience avec Masterchain / Hyperledger ; cryptographie GOST</td>
+</tr>
+<tr>
+<td><strong>Analyste AML/KYC</strong></td>
+<td>Certificat ACAMS / ICA / IRM ou équivalent</td>
+</tr>
+<tr>
+<td><strong>Personnel de centre d’appels / support</strong></td>
+<td>Connaissance des art. 9, 16, 18 de FZ-152 (traitement des demandes
+des sujets des données personnelles)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2
+id="exigences-relatives-au-régime-de-fonctionnement-et-à-la-maintenance">8.
+Exigences relatives au régime de fonctionnement et à la maintenance</h2>
+<h3 id="régime-de-fonctionnement-de-lapplication">8.1. Régime de
+fonctionnement de l’Application</h3>
+<ul>
+<li><strong>Utilisateur final :</strong> 24×7 (avec fenêtres
+technologiques planifiées).</li>
+<li><strong>Backend de l’opérateur :</strong> 24×7 avec un uptime cible
+de 99,95 %.</li>
+<li><strong>Fenêtre technologique planifiée :</strong> nuit du dimanche
+02:00–06:00 MSK (1 fois par mois) ; annonce au plus tard 7 jours avant
+la fenêtre.</li>
+<li><strong>Fenêtre technologique d’urgence :</strong> admissible
+jusqu’à 2 heures avec préavis.</li>
+</ul>
+<h3 id="règlement-des-mises-à-jour">8.2. Règlement des mises à jour</h3>
+<ul>
+<li>Application mobile : auto-update via RuStore / App Store / Microsoft
+Store ; patches de sécurité critiques — sous 72 heures suivant la
+détection.</li>
+<li>Côté serveur : blue-green deployment, sans temps d’arrêt.</li>
+</ul>
+<h3 id="sauvegarde">8.3. Sauvegarde</h3>
+<ul>
+<li>Sauvegarde nocturne complète des bases de données.</li>
+<li>Stockage des sauvegardes — dans une géolocation séparée (≥ 500 km du
+centre de données principal).</li>
+<li>Chiffrement cryptographique des sauvegardes par algorithmes
+GOST.</li>
+<li>Tests réguliers de restauration (DR-drill) — au moins une fois par
+trimestre.</li>
+</ul>
+<hr />
+<h2 id="exigences-particulières">9. Exigences particulières</h2>
+<h3 id="sécurité-de-lenvironnement-dexploitation">9.1. Sécurité de
+l’environnement d’exploitation</h3>
+<ul>
+<li>L’appareil final de l’utilisateur doit prendre en charge un TEE
+matériel (Trusted Execution Environment) pour le stockage des clés
+cryptographiques de l’utilisateur. Exigences minimales :
+<ul>
+<li>Android : Strongbox / TEE Keymaster (API 28+).</li>
+<li>iOS : Secure Enclave.</li>
+<li>Windows : TPM 2.0.</li>
+</ul></li>
+<li>Sur les appareils avec jailbreak / root, l’application fonctionne en
+mode restreint (consultation de l’historique uniquement) avec un
+avertissement.</li>
+</ul>
+<h3 id="sensibilité-à-la-qualité-de-lenvironnement">9.2. Sensibilité à
+la qualité de l’environnement</h3>
+<ul>
+<li>Si le niveau TLS chute en dessous de 1.2 — refus de connexion.</li>
+<li>En cas de détection d’une attaque MITM (non-conformité du certificat
+épinglé) — blocage avec notification au CISO.</li>
+<li>En cas de dégradation du canal sous 1 Mbit/s — bascule automatique
+en mode lite (données textuelles uniquement).</li>
+</ul>
+<hr />
+<h2 id="vérification-de-la-conformité-aux-exigences">10. Vérification de
+la conformité aux exigences</h2>
+<p>La conformité au présent document est vérifiée aux étapes de : -
+Tests (voir РСФСР.МП.10 « Programme et méthodologie d’essais ») ; -
+Attestation FSTEC (par certificat) ; - Inscription au registre de la
+Banque de Russie (779-P).</p>
+<p>La liste des vérifications et les critères d’acceptation — au sein du
+PME (РСФСР.МП.10), sections 4 (performance), 5 (sécurité de
+l’environnement), 7 (tolérance aux pannes).</p>
+<hr />
+<p><strong>Approuvé :</strong> 24.05.2026. <strong>Le document clôt le
+drapeau RED A5 de l’audit synthétique</strong> (РСФСР.МП.09 « Exigences
+relatives à l’environnement d’exploitation » manquant) ; rétablit la
+numérotation correcte du pack de documentation de conception
+(РСФСР.МП.01…13).</p>
+</article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

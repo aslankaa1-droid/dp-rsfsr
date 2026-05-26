@@ -1,0 +1,406 @@
+﻿<!doctype html>
+<html lang="ru" data-theme="daylight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Спецификация программы · ЦП РСФСР</title>
+<meta name="theme-color" content="#0B2B5C">
+<link rel="stylesheet" href="../../_shared/brand.css">
+<style>
+/* Document-specific styles */
+body { padding-top: 80px; }
+.doc-wrap { max-width: 880px; margin: 0 auto; padding: 48px 24px 96px; }
+.doc-header {
+  padding-bottom: 24px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.doc-header .eyebrow { margin-bottom: 12px; }
+.doc-header h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--primary); margin-bottom: 12px; }
+.doc-header p { color: var(--fg-mute); font-size: .9375rem; margin: 0; }
+.doc-content h1, .doc-content h2, .doc-content h3, .doc-content h4 { color: var(--primary); margin-top: 2em; margin-bottom: .5em; }
+.doc-content h1 { font-size: 1.875rem; }
+.doc-content h2 { font-size: 1.5rem; padding-bottom: 6px; border-bottom: 1px solid var(--border-soft); }
+.doc-content h3 { font-size: 1.25rem; }
+.doc-content h4 { font-size: 1.0625rem; color: var(--fg); }
+.doc-content p { line-height: 1.7; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content ul, .doc-content ol { line-height: 1.7; padding-left: 1.5em; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content li { margin-bottom: .35em; }
+.doc-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 12px 20px;
+  margin: 1em 0;
+  background: var(--bg-soft);
+  border-radius: 0 8px 8px 0;
+  color: var(--fg-soft);
+}
+.doc-content code {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg-soft);
+  padding: 2px 6px; border-radius: 4px;
+  font-size: .875em; color: var(--primary);
+}
+.doc-content pre {
+  background: var(--bg-soft); padding: 16px; border-radius: 10px;
+  overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: .875rem;
+  border: 1px solid var(--border-soft); margin: 1em 0;
+}
+.doc-content table {
+  width: 100%; border-collapse: collapse; margin: 1.5em 0;
+  background: var(--card-bg); border: 1px solid var(--border-soft);
+  border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-1);
+}
+.doc-content table th {
+  background: var(--primary); color: var(--primary-on);
+  text-align: left; padding: 12px 16px; font-weight: 600;
+  font-size: .8125rem; letter-spacing: .04em; text-transform: uppercase;
+}
+.doc-content table td {
+  padding: 10px 16px; border-bottom: 1px solid var(--border-soft);
+  font-size: .9375rem; color: var(--fg-soft);
+}
+.doc-content table tr:last-child td { border-bottom: none; }
+.doc-content table tr:hover td { background: var(--bg-soft); }
+.doc-content hr {
+  border: none; height: 1px; background: var(--border-soft); margin: 2.5em 0;
+}
+.doc-content a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+.doc-content a:hover { color: var(--accent); }
+.doc-content strong { color: var(--fg); font-weight: 700; }
+
+.doc-actions {
+  display: flex; gap: 10px; margin-top: 32px; flex-wrap: wrap;
+}
+
+/* Floating top button */
+.totop {
+  position: fixed; bottom: 24px; right: 24px; z-index: 50;
+  background: var(--primary); color: var(--primary-on);
+  border: none; border-radius: 50%; width: 48px; height: 48px;
+  cursor: pointer; box-shadow: var(--shadow-3);
+  display: none; font-size: 1.25rem;
+  transition: transform .2s var(--ease);
+}
+.totop:hover { transform: translateY(-2px); }
+.totop.show { display: grid; place-items: center; }
+[dir="rtl"] .totop { right: auto; left: 24px; }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div class="scroll-progress"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="../../07_Презентации/Большая_презентация/index.html"><span class="brand-mark">Р</span><span data-i18n="brand.name">ЦП РСФСР</span></a>
+    <nav class="topbar-nav">
+      <a href="../../07_Презентации/Большая_презентация/index.html#about" data-i18n="nav.about">О платформе</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#hub" data-i18n="nav.hub">Документы</a>
+      <a href="../../08_Веб-сайт/HTML_основной/index.html">Сайт</a>
+      <a href="../../07_Презентации/Малая_презентация/index.html">Презентация</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#contacts" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+    <div class="topbar-actions">
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-i18n-btn="ru">RU</button>
+        <button class="tbtn" data-i18n-btn="en">EN</button>
+        <button class="tbtn" data-i18n-btn="fr">FR</button>
+        <button class="tbtn" data-i18n-btn="ar">عر</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-theme-btn="daylight" aria-label="Дневная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+        <button class="tbtn" data-theme-btn="midnight" aria-label="Тёмная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="tbtn" data-theme-btn="sepia">◐</button>
+        <button class="tbtn" data-theme-btn="contrast">A11Y</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn" data-font-action="dec">A−</button>
+        <button class="tbtn" data-font-action="reset">A</button>
+        <button class="tbtn" data-font-action="inc">A+</button>
+      </div>
+      <button class="tbtn tbtn-burger">≡</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="eyebrow">Конструкторская документация · ЦП РСФСР ·
+МП</span>
+      <h1>Спецификация программы</h1>
+      <p>Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 · 19.12.2024 · ЦП РСФСР</p>
+    </header>
+    <article class="doc-content">
+<h1 id="спецификация-программы">Спецификация программы</h1>
+<h2 id="цп-рсфср-мобильное-приложение">ЦП РСФСР — мобильное
+приложение</h2>
+<p><strong>Условное обозначение:</strong> РСФСР.МП.12.СП
+<strong>Стандарт:</strong> ГОСТ 19.202-78</p>
+<hr />
+<h2 id="сведения-об-изделии">1. Сведения об изделии</h2>
+<table>
+<thead>
+<tr>
+<th>Наименование</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Полное наименование</td>
+<td>ЦП РСФСР — мобильное приложение залогодателя</td>
+</tr>
+<tr>
+<td>Условное обозначение</td>
+<td>РСФСР.МП</td>
+</tr>
+<tr>
+<td>Версия</td>
+<td>1.0.0</td>
+</tr>
+<tr>
+<td>Дата выпуска</td>
+<td>2025 год</td>
+</tr>
+<tr>
+<td>Правообладатель</td>
+<td>Кагиров Абдул-Хаким Ахмадович</td>
+</tr>
+<tr>
+<td>Свидетельство о депонировании</td>
+<td>№4011265 от 19.12.2024</td>
+</tr>
+<tr>
+<td>Хеш-функция</td>
+<td>ГОСТ-Р 34.11-2012</td>
+</tr>
+</tbody>
+</table>
+<h2 id="перечень-программных-средств">2. Перечень программных
+средств</h2>
+<table>
+<thead>
+<tr>
+<th>№</th>
+<th>Наименование</th>
+<th>Условное обозначение</th>
+<th>Объём, КБ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Исходный код HTML/CSS/JS</td>
+<td>РСФСР.МП.ИСХ</td>
+<td>86</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Манифест PWA</td>
+<td>РСФСР.МП.МНФ</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Service Worker</td>
+<td>РСФСР.МП.СВР</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Иконки (SVG)</td>
+<td>РСФСР.МП.ИКН</td>
+<td>2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Разделяемая CSS-библиотека</td>
+<td>РСФСР.ОБЩ.БРД</td>
+<td>17</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Разделяемая JS-библиотека i18n</td>
+<td>РСФСР.ОБЩ.ЛЦЛ</td>
+<td>19</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Разделяемая JS-библиотека UI</td>
+<td>РСФСР.ОБЩ.УИ</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="технические-характеристики">3. Технические характеристики</h2>
+<table>
+<thead>
+<tr>
+<th>Характеристика</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Объём приложения (PWA)</td>
+<td>~ 130 КБ</td>
+</tr>
+<tr>
+<td>Объём установочного пакета Android (.aab)</td>
+<td>~ 30 МБ</td>
+</tr>
+<tr>
+<td>Объём установочного пакета iOS (.ipa)</td>
+<td>~ 35 МБ</td>
+</tr>
+<tr>
+<td>Объём установочного пакета Windows (.msix)</td>
+<td>~ 40 МБ</td>
+</tr>
+<tr>
+<td>Минимальное потребление памяти</td>
+<td>80 МБ</td>
+</tr>
+<tr>
+<td>Среднее потребление памяти</td>
+<td>200 МБ</td>
+</tr>
+<tr>
+<td>Максимальное потребление памяти</td>
+<td>300 МБ</td>
+</tr>
+</tbody>
+</table>
+<h2 id="состав-комплекта-поставки">4. Состав комплекта поставки</h2>
+<h3 id="программные-компоненты">4.1. Программные компоненты</h3>
+<ul>
+<li>Исходный код приложения.</li>
+<li>Установочные пакеты для целевых платформ.</li>
+<li>Конфигурационные файлы.</li>
+<li>Сервисный работник для PWA.</li>
+<li>Иконки и манифест.</li>
+</ul>
+<h3 id="документация">4.2. Документация</h3>
+<p>Перечень и состав документации — в Ведомости эксплуатационных
+документов (РСФСР.МП.12).</p>
+<h3 id="дополнительные-материалы">4.3. Дополнительные материалы</h3>
+<ul>
+<li>Промо-материалы для магазинов приложений.</li>
+<li>Скриншоты и видеодемонстрации.</li>
+<li>Шаблоны политик конфиденциальности и условий использования.</li>
+<li>Сертификаты соответствия (после прохождения аттестации).</li>
+</ul>
+<h2 id="сведения-о-среде-эксплуатации">5. Сведения о среде
+эксплуатации</h2>
+<table>
+<thead>
+<tr>
+<th>Платформа</th>
+<th>Минимальная версия</th>
+<th>Целевая версия</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iOS</td>
+<td>15.0</td>
+<td>17.0+</td>
+</tr>
+<tr>
+<td>Android</td>
+<td>9 (API 28)</td>
+<td>14 (API 34)</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>10 (1809)</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Браузер (PWA)</td>
+<td>Chrome 70+, Safari 13+, Edge 80+, Firefox 70+</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="сертификации-и-реестры">6. Сертификации и реестры</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Сертификат</th>
+<th>Орган</th>
+<th>Статус</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Реестр операторов ИС</td>
+<td>Банк России (Положение №779-П)</td>
+<td>планируется к получению</td>
+</tr>
+<tr>
+<td>Реестр российского ПО</td>
+<td>Минцифры (ПП РФ №1236)</td>
+<td>планируется к получению</td>
+</tr>
+<tr>
+<td>Сертификат ФСТЭК России (К1, КИИ-1)</td>
+<td>ФСТЭК России</td>
+<td>планируется к получению</td>
+</tr>
+<tr>
+<td>Сертификат ФСБ России (СКЗИ)</td>
+<td>ФСБ России</td>
+<td>планируется к получению</td>
+</tr>
+<tr>
+<td>Регистрация Роскомнадзора (ПДн)</td>
+<td>Роскомнадзор</td>
+<td>планируется к получению</td>
+</tr>
+<tr>
+<td>Уведомление в каталоге RuStore</td>
+<td>RuStore</td>
+<td>планируется к публикации</td>
+</tr>
+</tbody>
+</table>
+<h2 id="сведения-о-правах">7. Сведения о правах</h2>
+<ul>
+<li><strong>Авторские права</strong> на концепцию и архитектуру: Кагиров
+А.-Х.А. (свидетельство №4011265 от 19.12.2024, ireg.pro). Срок охраны —
+фиксированная дата приоритета.</li>
+<li><strong>Лицензии на компоненты</strong>: используются только
+разрешённые лицензии (MIT, Apache 2.0, SIL Open Font License). Полный
+реестр компонентов сторонних разработчиков ведётся отдельно (BOM).</li>
+</ul>
+<hr />
+<p><em>Документ соответствует требованиям ГОСТ 19.202-78
+«Спецификация».</em></p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../07_Презентации/Большая_презентация/index.html#hub">К хабу документов</a>
+      <a class="btn btn--ghost" href="../../07_Презентации/Большая_презентация/index.html">Большая презентация</a>
+    </div>
+  </div>
+</main>
+
+<button class="totop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Наверх">↑</button>
+
+<script src="../../_shared/i18n.js"></script>
+<script src="../../_shared/app.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const t = document.querySelector('.totop');
+  if (t) t.classList.toggle('show', window.scrollY > 600);
+});
+</script>
+</body>
+</html>

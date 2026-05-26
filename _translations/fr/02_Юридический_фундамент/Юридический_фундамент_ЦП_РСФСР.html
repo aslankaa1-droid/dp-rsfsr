@@ -1,0 +1,1355 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../">
+  <title>Fondement juridique · ЦПФСР.РФ</title>
+  <meta name="description" content="Fondement juridique — Fondement juridique. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../_design-system/print.css">
+
+  <script defer src="../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../_design-system/i18n.js"></script>
+  <script defer src="../../../_design-system/ticker.js"></script>
+  <script defer src="../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Fondement juridique</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Fondement juridique</span>
+      <h1>Fondement juridique</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1
+id="fondement-juridique-du-projet-plateforme-numérique-rsfsr">Fondement
+juridique du projet « Plateforme Numérique RSFSR »</h1>
+<h2 id="service-russe-de-financement-du-développement-social">Service
+Russe de Financement du Développement Social</h2>
+<p><strong>Auteur et titulaire des droits sur le concept :</strong>
+Abdul-Khakim Akhmadovitch Kagirov <strong>Certificat de dépôt :</strong>
+n° 4011265 du 19.12.2024 (ireg.pro), empreinte GOST-R 34.11-2012.
+<strong>Objet du document :</strong> cadre juridique de la
+plateforme-opérateur d’émission d’actifs financiers numériques contre
+gage. Stage 1 (pilot-light 2026–2028) — financement infrastructurel via
+la Fabrique de financement de projets de VEB.RF (Décret du Gouvernement
+de la FR n° 158 du 15.02.2018) et le Trésor fédéral (Code budgétaire de
+la FR) ; les fonds sont affectés aux projets nationaux dans le champ
+juridique en vigueur sans amendements à la loi 86-FZ. Stage 2 (horizon
+2029+) — extension défendable du mandat vers le modèle d’émission ciblée
+garantie de la Banque de Russie après un track-record positif du Stage 1
+≥ 12 mois et l’adoption du paquet de 4 amendements FZ.</p>
+<hr />
+<h2 id="qualification-juridique-de-la-plateforme-et-de-son-opérateur">1.
+Qualification juridique de la plateforme et de son opérateur</h2>
+<h3 id="position-juridique-de-base">1.1. Position juridique de base</h3>
+<p>La Plateforme Numérique RSFSR, par sa nature juridique, correspond à
+la notion de <strong>« système d’information dans lequel est effectuée
+l’émission d’actifs financiers numériques »</strong> au sens de la loi
+fédérale n° 259-FZ du 31.07.2020 « sur les actifs financiers numériques,
+la monnaie numérique et les modifications de certains actes législatifs
+de la Fédération de Russie » (ci-après — la loi n° 259-FZ).</p>
+<p>L’opérateur de la Plateforme est qualifié comme :</p>
+<ul>
+<li><strong>Opérateur du système d’information dans lequel s’effectue
+l’émission d’AFN</strong> (paragraphe 1 de l’article 5 de la loi n°
+259-FZ). Les pouvoirs et obligations de l’opérateur sont fixés aux
+articles 5–7 de ladite loi.</li>
+<li>À la seconde étape du développement du projet — également comme
+<strong>opérateur d’échange d’actifs financiers numériques</strong>
+(article 10 de la loi n° 259-FZ), si l’architecture met en œuvre les
+fonctions de circulation secondaire des AFN entre participants
+qualifiés.</li>
+</ul>
+<p>L’inscription de l’opérateur au registre de la Banque de Russie est
+effectuée selon les règles établies par :</p>
+<ul>
+<li>les articles 5 et 6 de la loi n° 259-FZ ;</li>
+<li>la Réglementation de la Banque de Russie n° 779-P du 16.11.2021 «
+sur les exigences dont le respect par une personne ayant l’intention
+d’exercer l’activité d’opérateur d’un système d’information dans lequel
+s’effectue l’émission d’AFN entraîne son inscription par la Banque de
+Russie au registre des opérateurs de systèmes d’information » (dans la
+rédaction en vigueur) ;</li>
+<li>la Réglementation de la Banque de Russie n° 780-P du 16.11.2021 «
+sur l’activité d’opérateur d’échange d’AFN et sur les exigences à
+l’opérateur d’échange d’AFN ».</li>
+</ul>
+<h3 id="exigences-relatives-à-la-forme-juridique-de-lopérateur">1.2.
+Exigences relatives à la forme juridique de l’opérateur</h3>
+<p>Selon la partie 1 de l’article 5 de la loi n° 259-FZ, l’opérateur
+d’un système d’information peut être :</p>
+<ul>
+<li>une personne morale russe sous la forme d’une société anonyme non
+publique ou d’une société à responsabilité limitée (pour un opérateur
+non bancaire) ;</li>
+<li>un établissement de crédit ;</li>
+<li>un organisateur de marché (article 9 de la loi fédérale n° 325-FZ du
+21.11.2011 « sur les marchés organisés »).</li>
+</ul>
+<p>Aux fins de la PN RSFSR, le modèle d’une <strong>société anonyme
+spécialisée à capital d’État ou mixte</strong> est approprié, ce qui
+reflète l’importance nationale du projet et simplifie l’interaction avec
+la Banque de Russie et le Trésor fédéral.</p>
+<h3
+id="exigences-minimales-en-matière-de-fonds-propres-et-dinfrastructure">1.3.
+Exigences minimales en matière de fonds propres et d’infrastructure</h3>
+<p>Conformément aux exigences de la Réglementation de la Banque de
+Russie n° 779-P, l’opérateur doit confirmer :</p>
+<ol type="1">
+<li>Le montant des fonds propres — non inférieur au montant fixé par un
+acte normatif de la Banque de Russie à la date de dépôt (une réserve de
+fonds propres d’au moins <strong>50 millions de roubles</strong> au
+stade d’entrée au registre et <strong>d’au moins 500 millions de
+roubles</strong> au stade d’exploitation industrielle est prévue pour la
+PN RSFSR, ce qui dépasse le minimum requis).</li>
+<li>L’existence des droits sur le complexe matériel-logiciel du système
+d’information.</li>
+<li>L’existence de moyens certifiés de protection de l’information
+(FSTEC de Russie, FSB de Russie).</li>
+<li>Documents internes : règles du système d’information (article 6 de
+la loi n° 259-FZ), règles de contrôle interne sous 115-FZ, règles de
+traitement des données personnelles (152-FZ), politique de sécurité de
+l’information, règlement de gestion du risque opérationnel.</li>
+<li>La conformité aux exigences de réputation professionnelle des
+dirigeants et personnes de contrôle.</li>
+</ol>
+<hr />
+<h2 id="législation-fédérale-applicable">2. Législation fédérale
+applicable</h2>
+<p>Le contour normatif complet de la plateforme est formé par les actes
+suivants (avec indication des articles spécifiques applicables au
+projet) :</p>
+<h3 id="lois-fédérales-de-base">2.1. Lois fédérales de base</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Acte</th>
+<th>Applicabilité à la PN RSFSR</th>
+<th>Articles clés</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Loi fédérale n° 259-FZ du 31.07.2020 « sur les AFN, la monnaie
+numérique… »</td>
+<td>Régulation de base de l’émission et de la circulation des AFN.</td>
+<td>Articles 1, 2 (notions) ; 4 (types d’AFN) ; 5 (opérateur SI) ; 6
+(règles SI) ; 7 (émission d’AFN) ; 8 (tenue des droits) ; 10 (opérateur
+d’échange) ; 11 (particularités de la circulation des AFN) ; 14
+(surveillance de la Banque de Russie).</td>
+</tr>
+<tr>
+<td>Loi fédérale n° 86-FZ du 10.07.2002 « sur la Banque centrale de la
+FR (Banque de Russie) »</td>
+<td>Fonction d’émission, régulation et surveillance du marché
+financier.</td>
+<td>Article 4 (fonctions de la Banque de Russie) ; article 23 (comptes
+et opérations de la Banque de Russie) ; article 75 (surveillance et
+régulation) ; articles 76.1–76.5 (surveillance des organisations
+financières non bancaires) ; chapitre X (régulation de la circulation du
+rouble numérique — introduit par la loi n° 340-FZ).</td>
+</tr>
+<tr>
+<td>Loi fédérale n° 340-FZ du 24.07.2023 « sur les modifications de
+certains actes législatifs de la FR »</td>
+<td>Introduction de l’institut du rouble numérique et modifications à la
+loi n° 86-FZ et au Code civil de la FR.</td>
+<td>L’ensemble des dispositions relatives au rouble numérique, en
+particulier les règles de tenue et de circulation.</td>
+</tr>
+<tr>
+<td>Loi fédérale n° 161-FZ du 27.06.2011 « sur le système national de
+paiement »</td>
+<td>Interactions de paiement, mouvements d’entiercement.</td>
+<td>Chapitres 1–4 ; articles 9, 9.1 (plateforme du rouble
+numérique).</td>
+</tr>
+<tr>
+<td>Loi fédérale n° 39-FZ du 22.04.1996 « sur le marché des valeurs
+mobilières »</td>
+<td>Rapport des AFN avec les valeurs mobilières émettrices ;
+divulgation.</td>
+<td>Articles 1, 2, 30 (divulgation).</td>
+</tr>
+<tr>
+<td>Loi fédérale n° 115-FZ du 07.08.2001 « LBC/FT »</td>
+<td>Identification des clients, surveillance des opérations, contrôle
+interne obligatoire.</td>
+<td>Articles 3, 6, 7 ; alinéa 1.4-2 de l’article 7 (spécificités
+AFN).</td>
+</tr>
+<tr>
+<td>Loi fédérale n° 152-FZ du 27.07.2006 « sur les données personnelles
+»</td>
+<td>Traitement des DP des clients de la plateforme.</td>
+<td>Articles 6, 7, 9, 18.1, 19.</td>
+</tr>
+<tr>
+<td>Loi fédérale n° 149-FZ du 27.07.2006 « sur l’information, les
+technologies de l’information et la protection de l’information »</td>
+<td>Statut de l’opérateur SI, exigences d’exploitation.</td>
+<td>Articles 10, 13, 16.</td>
+</tr>
+<tr>
+<td>Loi fédérale n° 187-FZ du 26.07.2017 « sur la sécurité de l’IIC
+»</td>
+<td>Catégorisation du SI comme objet de l’IIC ; obligations du sujet de
+l’IIC.</td>
+<td>Articles 2, 7, 9.</td>
+</tr>
+<tr>
+<td>Loi fédérale n° 102-FZ du 16.07.1998 « sur l’hypothèque (gage
+immobilier) »</td>
+<td>Gage immobilier.</td>
+<td>Chapitres I–III ; articles 11, 19 (enregistrement d’État de
+l’hypothèque), 50–55 (réalisation).</td>
+</tr>
+<tr>
+<td>Loi fédérale n° 218-FZ du 13.07.2015 « sur l’enregistrement d’État
+de l’immobilier »</td>
+<td>Enregistrement des sûretés, RUNI.</td>
+<td>Articles 4, 8, 9, 14, 53.</td>
+</tr>
+<tr>
+<td>Loi fédérale n° 135-FZ du 29.07.1998 « sur l’activité d’évaluation
+dans la FR »</td>
+<td>Organisations d’évaluation partenaires.</td>
+<td>Articles 4, 8, 11, 14.</td>
+</tr>
+<tr>
+<td>Loi de la FR n° 4015-1 du 27.11.1992 « sur l’organisation de
+l’activité d’assurance dans la FR »</td>
+<td>Organisations d’assurance partenaires ; assurance obligatoire du
+gage et des AFN.</td>
+<td>Articles 4, 32, 32.9.</td>
+</tr>
+<tr>
+<td>Loi fédérale n° 44-FZ du 05.04.2013 « sur le système contractuel… »
+; loi fédérale n° 223-FZ du 18.07.2011.</td>
+<td>Interaction avec les acheteurs publics.</td>
+<td>Selon applicabilité.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="actes-codifiés">2.2. Actes codifiés</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Code</th>
+<th>Dispositions applicables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code civil de la FR, première partie</td>
+<td>Gage : art. 334–358 CC ; gage de droits patrimoniaux : art.
+358.1–358.8 ; contrat mixte : art. 421.</td>
+</tr>
+<tr>
+<td>Code civil, deuxième partie</td>
+<td>Compte d’entiercement : art. 860.7–860.10 ; dépôt conditionnel :
+art. 926.1–926.8.</td>
+</tr>
+<tr>
+<td>Code civil, quatrième partie</td>
+<td>Savoir-faire (secret de fabrique) : art. 1465–1469 ; gage des droits
+exclusifs : art. 1232.</td>
+</tr>
+<tr>
+<td>Code des impôts de la FR</td>
+<td>Imposition des opérations sur AFN : art. 214.11 (IRPP) ; art. 282.2
+; alinéa 3.2 de l’art. 251 (impôt sur les bénéfices sur les revenus liés
+aux actifs numériques) ; TVA : sous-alinéa 12.2 du paragraphe 2 de
+l’art. 149 (introduit par la loi fédérale n° 324-FZ du 31.07.2020 —
+exonération des opérations sur AFN de TVA).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="actes-normatifs-de-la-banque-de-russie">3. Actes normatifs de la
+Banque de Russie</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Acte</th>
+<th>Domaine de régulation</th>
+<th>Applicabilité à la plateforme</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Réglementation BR n° 779-P du 16.11.2021</td>
+<td>Exigences à l’opérateur d’un système d’information dans lequel
+s’effectue l’émission d’AFN.</td>
+<td>Règle principale de licence.</td>
+</tr>
+<tr>
+<td>Réglementation BR n° 780-P du 16.11.2021</td>
+<td>Exigences à l’opérateur d’échange d’AFN.</td>
+<td>Applicable lors de la mise en œuvre du contour d’échange.</td>
+</tr>
+<tr>
+<td>Réglementation BR n° 683-P du 17.04.2019</td>
+<td>Exigences pour assurer la protection de l’information dans les
+organisations financières de crédit et non bancaires.</td>
+<td>Norme de base de sécurité de l’information de la plateforme.</td>
+</tr>
+<tr>
+<td>Réglementation BR n° 716-P du 08.04.2020</td>
+<td>Gestion du risque opérationnel dans les établissements de crédit et
+applicable aux OFNB.</td>
+<td>Base de la politique de gestion du risque opérationnel de
+l’opérateur.</td>
+</tr>
+<tr>
+<td>Réglementation BR n° 242-P du 16.12.2003</td>
+<td>Contrôle interne dans les établissements de crédit.</td>
+<td>Norme de référence pour la construction du système de contrôle
+interne chez un opérateur non bancaire.</td>
+</tr>
+<tr>
+<td>Directive BR n° 3624-U du 15.04.2015</td>
+<td>Exigences pour le système de gestion des risques et du capital.</td>
+<td>Applicable s’agissant de la gestion des risques.</td>
+</tr>
+<tr>
+<td>Réglementation BR n° 499-P du 15.10.2015</td>
+<td>Identification des clients aux fins LBC/FT.</td>
+<td>Règlement KYC de la plateforme.</td>
+</tr>
+<tr>
+<td>Réglementation BR n° 482-P du 09.06.2015</td>
+<td>Système biométrique unifié.</td>
+<td>Canal alternatif d’identification des clients de la plateforme.</td>
+</tr>
+<tr>
+<td>Directive BR n° 6635-U du 05.06.2023</td>
+<td>Établissement d’exigences obligatoires aux organisations du marché
+financier relatives au traitement des incidents de sécurité de
+l’information.</td>
+<td>Intégré dans la politique IS de la plateforme.</td>
+</tr>
+<tr>
+<td>Directive BR n° 3889-U du 15.12.2015</td>
+<td>Notification à la Banque de Russie des incidents.</td>
+<td>Règlement de notification de l’opérateur.</td>
+</tr>
+<tr>
+<td>GOST R 57580.1-2017</td>
+<td>Opérations financières. Protection de l’information des
+organisations financières. Composition de base des mesures
+organisationnelles et techniques.</td>
+<td>Niveau cible — <strong>4 (maximal)</strong>.</td>
+</tr>
+<tr>
+<td>GOST R 57580.2-2018</td>
+<td>Opérations financières. Protection de l’information des
+organisations financières. Méthodologie d’évaluation de la
+conformité.</td>
+<td>Règlement d’évaluation indépendante périodique.</td>
+</tr>
+<tr>
+<td>GOST R 57580.3-2022</td>
+<td>Opérations financières. Protection de l’information des
+organisations financières. Gestion du risque de réalisation des menaces
+informationnelles.</td>
+<td>Applicable.</td>
+</tr>
+<tr>
+<td>GOST R 57580.4-2022</td>
+<td>Application de la fiabilité opérationnelle.</td>
+<td>Applicable.</td>
+</tr>
+</tbody>
+</table>
+<p>La conformité de la plateforme à chacun des actes normatifs ci-dessus
+sera confirmée par :</p>
+<ol type="1">
+<li>Une évaluation indépendante de la conformité selon la méthodologie
+GOST R 57580.2-2018 (auditeur externe parmi les licenciés de la FSTEC de
+Russie).</li>
+<li>L’approbation des règles du système d’information par la Banque de
+Russie selon la procédure établie par l’article 6 de la loi n°
+259-FZ.</li>
+<li>La certification des moyens de protection de l’information dans le
+système de certification de la FSTEC de Russie et de la FSB de
+Russie.</li>
+</ol>
+<hr />
+<h2 id="financement-de-lémission-dafn-architecture-biphasée">4.
+Financement de l’émission d’AFN : architecture biphasée</h2>
+<p><strong>Principe :</strong> la PN RSFSR fonctionne en deux étapes
+séquentielles. Le Stage 1 (pilot-light 2026–2028) est lancé dans le
+champ juridique en vigueur sans amendements à la loi 86-FZ. Le Stage 2
+(horizon 2029+) — extension du mandat uniquement après un track-record
+positif du Stage 1 ≥ 12 mois d’exploitation industrielle.</p>
+<h3
+id="stage-1-pilot-light-dans-le-champ-juridique-en-vigueur-20262028">4.1.
+Stage 1 — pilot-light dans le champ juridique en vigueur
+(2026–2028)</h3>
+<p><strong>Construction de base :</strong></p>
+<ol type="1">
+<li>L’opérateur du système d’information d’émission d’AFN (Atomyze ou un
+autre sujet du registre 779-P — partenaire technologique) émet des AFN
+dans son système d’information adossés à un actif gagé. La licence 779-P
+est personnelle et non transférable ; la PN RSFSR agit comme agent
+front-end.</li>
+<li>Le placement des AFN est financé via un canal infrastructurel : la
+Fabrique de financement de projets de VEB.RF (Décret n° 158 du
+15.02.2018) et/ou le Trésor fédéral dans le cadre des pouvoirs du Code
+budgétaire de la FR.</li>
+<li>Les règlements des émissions — via le rouble scriptural ou le rouble
+numérique 340-FZ comme complément de règlement (non comme source
+d’émission).</li>
+<li>La Banque de Russie est le régulateur de surveillance général du
+marché financier au sens de l’art. 4 de la loi n° 86-FZ ; elle approuve
+les règles de l’opérateur au sens de l’art. 6 de la loi n° 259-FZ ; elle
+inscrit l’opérateur au registre selon 779-P. <strong>Une émission
+complémentaire de la Banque de Russie n’est pas prévue en Stage
+1.</strong></li>
+</ol>
+<p><strong>Base normative applicable en Stage 1 :</strong> 259-FZ ;
+779-P / 780-P / 4336-U de la Banque de Russie ; Code budgétaire
+(procédures budgétaires) ; Décret du gouv. n° 158 (Fabrique VEB.RF) ;
+art. 334–358, 358.1–358.8, 421, 860.7–860.10, 926.1–926.8 du CC ; 340-FZ
+(le rouble numérique comme infrastructure de règlement).</p>
+<h3 id="stage-2-horizon-dextension-du-mandat-2029-t36">4.2. Stage 2 —
+horizon d’extension du mandat (2029+, T+36+)</h3>
+<p><strong>Condition d’entrée au Stage 2 :</strong> un track-record
+positif du Stage 1 d’au moins 12 mois d’exploitation industrielle ;
+position interministérielle consolidée Ministère du Développement
+économique / Ministère des Finances / VEB.RF / Douma d’État.</p>
+<p><strong>Hypothèse d’horizon</strong> (sujet d’élaboration, non modèle
+opérationnel du contour proche) :</p>
+<ul>
+<li>l’institut de l’émission ciblée garantie de la Banque de Russie
+adossée à un pool d’AFN gagés avec déblocage via un compte
+d’entiercement spécial sous la gestion de la Banque de Russie ;</li>
+<li>la catégorie « AFN d’infrastructure ciblée » avec régulation de la
+procédure d’échange ;</li>
+<li>l’intégration avec l’infrastructure du rouble numérique 340-FZ.</li>
+</ul>
+<p><strong>Condition de mise en œuvre du Stage 2 :</strong> adoption du
+paquet de 4 amendements FZ (86-FZ, 259-FZ, Code budgétaire, Code civil)
++ actes réglementaires d’application. La liste complète figure à la
+section 8.2.</p>
+<blockquote>
+<p><strong>Marquage pour le régulateur et l’investisseur :</strong> dans
+la communication actuelle (concept, présentations, plan d’affaires,
+rapport DD) le modèle opérationnel est exclusivement le Stage 1. Le
+Stage 2 est présenté comme un horizon défendable dont la mise en œuvre
+dépend du travail législatif de la Douma d’État et d’une décision du
+Conseil d’administration de la Banque de Russie et n’entre pas dans la
+feuille de route d’investissement à court terme.</p>
+</blockquote>
+<hr />
+<h2
+id="comptes-dentiercement-spéciaux-sous-gestion-de-la-banque-de-russie">5.
+Comptes d’entiercement spéciaux sous gestion de la Banque de Russie</h2>
+<h3 id="base-de-droit-civil">5.1. Base de droit civil</h3>
+<p>L’institut du compte d’entiercement est établi par les art.
+860.7–860.10 du Code civil de la FR. Parties au contrat de compte
+d’entiercement : titulaire du compte, bénéficiaire, agent d’entiercement
+(dans la PN RSFSR — la Banque de Russie).</p>
+<p>Construction de base dans le projet :</p>
+<ul>
+<li><strong>Titulaire du compte</strong> — l’opérateur de la PN RSFSR en
+tant que personne en faveur de laquelle l’émission a été effectuée.</li>
+<li><strong>Bénéficiaire</strong> — la Fédération de Russie représentée
+par le Trésor fédéral et les ordonnateurs des fonds budgétaires.</li>
+<li><strong>Agent d’entiercement</strong> — la Banque de Russie.</li>
+<li><strong>Condition de déblocage du compte</strong> — la survenance
+des événements du contrat intelligent (confirmation de l’utilisation
+ciblée pour les projets nationaux, acte de mise en service de l’ouvrage,
+échange d’AFN).</li>
+</ul>
+<h3 id="le-rouble-numérique-comme-forme-de-règlement">5.2. Le rouble
+numérique comme forme de règlement</h3>
+<p>La Banque de Russie étant l’opérateur de la plateforme du rouble
+numérique (paragraphe 1 du chapitre X de la loi n° 86-FZ dans la
+rédaction n° 340-FZ), les fonds ciblés peuvent être enregistrés sous
+forme de <strong>portefeuilles numériques spéciaux de la Banque de
+Russie</strong>, ce qui assure un contrôle technologique supplémentaire
+des mouvements de fonds.</p>
+<h3 id="interdiction-de-la-circulation-libre-des-fonds">5.3.
+Interdiction de la circulation libre des fonds</h3>
+<p>Conformément au point 10 du concept de l’auteur, <strong>les fonds
+monétaires sont utilisés à la Banque de Russie strictement conformément
+aux lois fédérales et actes d’État en vigueur pour la réalisation des
+tâches désignées</strong>. Cette interdiction doit être expressément
+inscrite au niveau :</p>
+<ul>
+<li>des conditions du contrat d’entiercement spécial ;</li>
+<li>du règlement interne de la Banque de Russie ;</li>
+<li>d’un projet de Décret du Gouvernement de la FR régissant la
+distribution des fonds de l’émission ciblée.</li>
+</ul>
+<hr />
+<h2 id="sûreté-de-gage-et-contrat-intelligent">6. Sûreté de gage et
+contrat intelligent</h2>
+<h3 id="construction-contractuelle">6.1. Construction contractuelle</h3>
+<p>Base civile des relations entre le propriétaire et la plateforme
+:</p>
+<ul>
+<li><strong>Contrat de type mixte</strong> (article 421 du CC) — combine
+des éléments de gage (chapitre 23 du CC), de contrat de services
+(chapitre 39 du CC), de contrat d’émission d’AFN (articles 4, 7 de la
+loi n° 259-FZ), de contrat de dépôt conditionnel (articles 926.1–926.8
+du CC), de contrat d’assurance (chapitre 48 du CC) et de contrat de
+compte d’entiercement (articles 860.7–860.10 du CC).</li>
+<li>Le contrat est passé en tant que <strong>contrat
+intelligent</strong> — accord logiciel exécutable par machine, dont la
+force juridique est consacrée par le point 1 de la partie 2 de l’article
+4 de la loi n° 259-FZ et renforcée par les articles 309, 310 et 421 du
+CC.</li>
+</ul>
+<h3 id="enregistrement-de-la-sûreté">6.2. Enregistrement de la
+sûreté</h3>
+<p>Pour les biens immobiliers, la sûreté sous forme de gage est
+enregistrée au Registre unifié d’État des biens immobiliers conformément
+:</p>
+<ul>
+<li>aux articles 4, 8, 9, 14 de la loi n° 218-FZ ;</li>
+<li>aux articles 11, 19 de la loi n° 102-FZ ;</li>
+<li>à l’arrêté de Rosreestr régissant l’interaction électronique.</li>
+</ul>
+<p>Pour les biens mobiliers — au registre des notifications de gage de
+biens mobiliers de la Chambre fédérale des notaires selon la procédure
+de l’article 339.1 du CC et des Fondements de la législation sur le
+notariat.</p>
+<p>Pour les droits exclusifs — enregistrement d’État du gage auprès de
+Rospatent (article 1232, article 1365 du CC).</p>
+<p>Pour les valeurs mobilières — inscription de la sûreté chez un
+dépositaire (article 7 de la loi n° 39-FZ).</p>
+<h3 id="conditions-essentielles-du-contrat-intelligent">6.3. Conditions
+essentielles du contrat intelligent</h3>
+<p>Selon le point 4 de la partie 2 de l’article 4 de la loi n° 259-FZ et
+la pratique réglementaire établie, les conditions essentielles du
+contrat intelligent de la PN RSFSR sont :</p>
+<ol type="1">
+<li>identification du propriétaire de l’actif et de l’opérateur ;</li>
+<li>caractéristiques et valeur d’évaluation de l’actif gagé ;</li>
+<li>montant et procédure d’émission des AFN ;</li>
+<li>durée de validité de l’AFN et conditions de remboursement ;</li>
+<li>procédure et montant du paiement pour l’émission et le service de
+l’AFN ;</li>
+<li>montant et procédure de la rémunération du propriétaire du gage
+;</li>
+<li>conditions d’assurance des risques et procédure de réalisation de
+l’AFN d’assurance ;</li>
+<li>conditions d’échange des AFN après la mise en service de l’ouvrage
+nouveau ;</li>
+<li>procédure de signature de l’Acte de règlements mutuels ;</li>
+<li>procédure de levée de la sûreté et de restitution du bien au
+propriétaire.</li>
+</ol>
+<hr />
+<h2 id="échange-dafn-après-la-mise-en-service-de-louvrage">7. Échange
+d’AFN après la mise en service de l’ouvrage</h2>
+<h3 id="construction-juridique">7.1. Construction juridique</h3>
+<p>L’échange d’AFN est juridiquement mis en œuvre comme :</p>
+<ul>
+<li>remplacement de l’objet du gage au sens de l’article 345 du CC (avec
+le consentement du créancier gagiste — la Banque de Russie) ;</li>
+<li>cessation simultanée de l’AFN initial du propriétaire et émission
+d’un nouveau AFN sur l’ouvrage construit (articles 4, 7 de la loi n°
+259-FZ) ;</li>
+<li>exécution automatique des conditions du contrat intelligent (article
+309 du CC).</li>
+</ul>
+<p>Condition fondamentale : <strong>la valeur du nouveau AFN dépasse
+toujours la valeur de l’AFN initial</strong>, ce qui couvre les coûts de
+la Banque de Russie pour l’attraction et le service des AFN et assure la
+stabilité économique du modèle (points 6 et 7 de la description de
+l’offre dans la présentation initiale).</p>
+<h3 id="conséquences-fiscales">7.2. Conséquences fiscales</h3>
+<ul>
+<li>Pour un propriétaire personne physique : l’opération d’échange d’AFN
+contre une sûreté à titre onéreux (y compris la perception de la
+rémunération) forme une base imposable à l’IRPP conformément à l’article
+214.11 du Code des impôts. Le taux de 13 % s’applique (15 % pour les
+revenus supérieurs à 5 M ₽ par an selon l’échelle progressive du Code
+des impôts).</li>
+<li>Pour un propriétaire personne morale : les revenus correspondants
+sont pris en compte dans le bénéfice imposable (chapitre 25 du Code des
+impôts), les dépenses d’émission et de service des AFN étant
+comptabilisées en charges selon les règles générales.</li>
+<li>La TVA ne s’applique pas aux opérations d’émission et de circulation
+d’AFN en vertu du <strong>sous-alinéa 12.2 du paragraphe 2 de l’article
+149 du Code des impôts</strong> (introduit par la loi fédérale n° 324-FZ
+du 31.07.2020, en vigueur dans la version actuelle depuis le
+01.01.2023). L’application des sous-alinéas 1 et 38 du paragraphe 2 de
+l’art. 149 du Code des impôts aux AFN est incorrecte : ces sous-alinéas
+régissent les services financiers généraux et les instruments de fonds
+propres, tandis que les AFN sont placés par le législateur dans une
+catégorie distincte d’opérations exonérées sous le sous-alinéa
+12.2.</li>
+</ul>
+<hr />
+<h2
+id="base-normative-contour-proche-pilot-light-et-horizon-extension-du-mandat">8.
+Base normative : contour proche (pilot-light) et horizon (extension du
+mandat)</h2>
+<p><strong>La structure de cette section a été modifiée à la suite de
+l’audit consolidé clarifiant du 24.05.2026.</strong> L’ancienne
+rédaction plaçait le paquet de 4 amendements FZ dans la feuille de route
+proche, ce qui contredisait la stratégie wedge « sans amendements à
+86-FZ » et créait une ligne de fracture interne du pack. La nouvelle
+rédaction sépare clairement le contour proche (utilise la législation en
+vigueur) et l’horizon T+24+ (considéré uniquement après un track-record
+positif du wedge-pilot ≥ 12 mois).</p>
+<h3
+id="contour-proche-pilot-light-20262028-lancement-sans-amendements-aux-fz">8.1.
+Contour proche (pilot-light 2026–2028) : lancement SANS amendements aux
+FZ</h3>
+<p>Le régime pilot-light fonctionne dans le cadre de la législation de
+la FR en vigueur. Des lois fédérales supplémentaires NE sont PAS
+requises. Sont utilisés :</p>
+<ul>
+<li><strong>Loi fédérale n° 259-FZ du 31.07.2020</strong> « sur les
+actifs financiers numériques… » — émission d’AFN dans le périmètre en
+vigueur selon 779-P / Directive BR 4336-U.</li>
+<li><strong>Décret du gouv. de la FR n° 158 du 15.02.2018</strong> « sur
+le programme « Fabrique de financement de projets » » — financement
+infrastructurel ciblé via VEB.RF.</li>
+<li><strong>Code budgétaire de la FR</strong> (art. 78, 78.1, 242.23) —
+utilisation ciblée des fonds par le Trésor fédéral.</li>
+<li><strong>Code civil de la FR</strong> (art. 860.7–860.10) — compte
+d’entiercement pour le ciblage.</li>
+<li><strong>Loi fédérale n° 82-FZ du 17.05.2007</strong> « sur la banque
+de développement » (Vneshekonombank/VEB.RF).</li>
+<li><strong>Loi fédérale n° 223-FZ du 13.07.2015</strong> « sur les
+organisations d’autorégulation dans la sphère du marché financier »
+(autorégulation professionnelle).</li>
+<li><strong>Loi fédérale n° 224-FZ du 27.07.2010</strong> « sur la lutte
+contre l’utilisation abusive d’informations privilégiées… » (applicable
+à un opérateur-émetteur).</li>
+</ul>
+<p>Dans ce contour, le projet est déjà entièrement défendable — des
+amendements aux FZ ne sont pas requis pour le lancement.</p>
+<h3 id="horizon-t24-paquet-de-4-amendements-fz-extension-du-mandat">8.2.
+Horizon T+24+ : paquet de 4 amendements FZ (extension du mandat)</h3>
+<p><strong>Pas un sujet de la feuille de route immédiate. Considéré
+uniquement après un track-record positif du wedge-pilot ≥ 12 mois
+d’exploitation industrielle.</strong> Objectif — extension du mandat de
+la plateforme et transition vers le modèle d’émission ciblée garantie de
+la Banque de Russie à l’horizon 2029+ :</p>
+<ol type="1">
+<li><strong>Projet de loi fédérale « sur les modifications de la loi
+fédérale ‘sur la Banque centrale de la FR (Banque de Russie)’ concernant
+la régulation de l’émission ciblée garantie adossée à un pool d’AFN
+».</strong> Objets de régulation : introduction de l’institut de
+l’émission ciblée adossée à des AFN garantis ; pouvoirs de la Banque de
+Russie en tant qu’agent d’entiercement ; régime du portefeuille
+numérique spécial d’émission ciblée ; interdiction de la circulation des
+AFN hors plateforme.</li>
+<li><strong>Projet de loi fédérale « sur les modifications de la loi
+fédérale ‘sur les actifs financiers numériques…’ concernant
+l’introduction de la catégorie d’AFN d’infrastructure ciblée et la
+régulation de la procédure d’échange d’AFN ».</strong> Objets de
+régulation : la catégorie « AFN d’infrastructure ciblée » ; restrictions
+de circulation ; procédure d’échange ; régime juridique particulier des
+AFN d’assurance.</li>
+<li><strong>Projet de loi fédérale « sur les modifications du Code
+budgétaire de la FR concernant la procédure de réception par le Trésor
+fédéral des fonds d’émission ciblée garantie ».</strong></li>
+<li><strong>Projet de loi fédérale « sur les modifications du Code civil
+de la FR » concernant l’extension de l’institut du compte d’entiercement
+aux comptes spéciaux de la Banque de Russie pour le placement des fonds
+d’émission ciblée garantie</strong>.</li>
+</ol>
+<p><strong>Dépôt en initiative législative via une position
+interministérielle consolidée (Ministère du Développement économique →
+Ministère des Finances → Banque de Russie → Douma d’État). Voir la
+champion map dans le Concept et le document Wedge.</strong></p>
+<h3
+id="niveau-des-actes-réglementaires-dapplication-horizon-stage-2">8.3.
+Niveau des actes réglementaires d’application (horizon Stage 2)</h3>
+<ol start="5" type="1">
+<li><strong>Décret du Gouvernement de la FR « sur la procédure
+d’utilisation des fonds de l’émission ciblée garantie pour le
+financement des projets nationaux et d’infrastructure ».</strong></li>
+<li><strong>Directive de la Banque de Russie « sur les exigences de
+licence à l’opérateur du système d’information dans lequel s’effectue
+l’émission d’AFN d’infrastructure ciblée (Plateforme Numérique RSFSR)
+».</strong></li>
+<li><strong>Réglementation de la Banque de Russie « sur les exigences
+d’assurance des AFN dans le système de financement infrastructurel ciblé
+».</strong></li>
+<li><strong>Arrêté conjoint du Ministère des Finances / Banque de Russie
+/ Ministère du Numérique / Rosreestr / Trésor fédéral « sur
+l’organisation de l’interaction informationnelle de la Plateforme
+Numérique RSFSR avec les systèmes d’information d’État ».</strong></li>
+<li><strong>Arrêté de la FSTEC de Russie / FSB de Russie sur les
+exigences de protection de l’information dans le SI de la PN RSFSR en
+tant qu’objet de l’infrastructure informationnelle
+critique.</strong></li>
+<li><strong>Norme de la Banque de Russie sur la méthodologie
+d’évaluation des actifs gagés aux fins de l’émission d’AFN sur la
+plateforme PN RSFSR.</strong></li>
+</ol>
+<h3 id="niveau-des-documents-internes-de-lopérateur">8.4. Niveau des
+documents internes de l’opérateur</h3>
+<ol start="11" type="1">
+<li>Règles du système d’information de la PN RSFSR (paragraphe 2 de
+l’article 6 de la loi n° 259-FZ) — document public principal de la
+plateforme.</li>
+<li>Règles de contrôle interne sous 115-FZ.</li>
+<li>Politique de traitement des données personnelles (152-FZ).</li>
+<li>Politique de sécurité de l’information et règlement de gestion des
+incidents (683-P, 6635-U).</li>
+<li>Règlement de gestion du risque opérationnel (716-P).</li>
+<li>Règlement de gestion des conflits d’intérêts.</li>
+<li>Contrat intelligent standard sur AFN (forme type pour personnes
+physiques et morales).</li>
+<li>Règlement de coopération avec les organisations d’évaluation
+partenaires.</li>
+<li>Règlement de coopération avec les organisations d’assurance
+partenaires.</li>
+<li>Règlement d’interaction avec la Banque de Russie et le Trésor
+fédéral.</li>
+</ol>
+<hr />
+<h2
+id="licence-et-procédure-dinscription-au-registre-de-la-banque-de-russie">9.
+Licence et procédure d’inscription au registre de la Banque de
+Russie</h2>
+<h3 id="étapes">9.1. Étapes</h3>
+<p>Conformément à l’article 5 de la loi n° 259-FZ et à la Réglementation
+BR n° 779-P, l’opérateur traverse les étapes suivantes :</p>
+<ol type="1">
+<li><strong>Préparation du dossier de documents</strong> (règles SI,
+documents corporatifs, politiques internes, description du complexe
+matériel-logiciel, documents de sécurité de l’information).</li>
+<li><strong>Dépôt de la demande</strong> à la Banque de Russie avec le
+dossier complet.</li>
+<li><strong>Examen de la demande</strong> dans le délai imparti (en
+règle générale, pas plus de 30 jours ouvrés à compter de la présentation
+du dossier complet).</li>
+<li><strong>Inscription au registre</strong> des opérateurs de systèmes
+d’information ou refus motivé.</li>
+<li><strong>Inscription des informations</strong> au registre public de
+la Banque de Russie.</li>
+<li><strong>Surveillance permanente</strong> selon les articles
+76.1–76.5 de la loi n° 86-FZ.</li>
+</ol>
+<h3 id="points-de-contrôle-clés-lors-de-linscription-au-registre">9.2.
+Points de contrôle clés lors de l’inscription au registre</h3>
+<ul>
+<li>présence de fonds propres suffisants ;</li>
+<li>présence de moyens certifiés de protection de l’information ;</li>
+<li>conformité des règles du SI aux exigences de l’article 6 de la loi
+n° 259-FZ ;</li>
+<li>présence de personnes répondant aux exigences de réputation
+professionnelle ;</li>
+<li>présence d’un système de contrôle interne et d’un système de gestion
+des risques ;</li>
+<li>existence d’une politique LBC/FT.</li>
+</ul>
+<hr />
+<h2 id="identification-et-lutte-contre-le-blanchiment">10.
+Identification et lutte contre le blanchiment</h2>
+<h3 id="kyc">10.1. KYC</h3>
+<p>L’identification des clients est effectuée conformément :</p>
+<ul>
+<li>à l’article 7 de la loi n° 115-FZ ;</li>
+<li>à la Réglementation BR n° 499-P du 15.10.2015 ;</li>
+<li>à l’utilisation du Système unifié d’identification et
+d’authentification (ESIA ; Décret du gouv. de la FR n° 584 du
+10.07.2013) ;</li>
+<li>à l’utilisation du Système biométrique unifié (EBS ; Réglementation
+BR n° 482-P).</li>
+</ul>
+<p>L’<strong>identification simplifiée</strong> est possible dans les
+cas expressément prévus par l’alinéa 1.4-2 de l’article 7 de la loi n°
+115-FZ pour les opérations sur AFN.</p>
+<h3 id="surveillance-des-opérations">10.2. Surveillance des
+opérations</h3>
+<p>L’opérateur est tenu de :</p>
+<ul>
+<li>procéder au contrôle obligatoire des opérations relevant de
+l’article 6 de la loi n° 115-FZ ;</li>
+<li>transmettre les informations à Rosfinmonitoring dans les formes et
+délais établis ;</li>
+<li>appliquer une approche fondée sur les risques et enregistrer les
+opérations suspectes (article 7 de la loi n° 115-FZ).</li>
+</ul>
+<h3 id="spécificités-relatives-aux-afn">10.3. Spécificités relatives aux
+AFN</h3>
+<p>L’alinéa 1.4-2 de l’article 7 de la loi n° 115-FZ contient des
+exigences spéciales d’identification pour les opérations sur AFN, qui
+sont mises en œuvre dans leur intégralité dans le module KYC de la
+plateforme.</p>
+<hr />
+<h2
+id="données-personnelles-et-infrastructure-informationnelle-critique">11.
+Données personnelles et infrastructure informationnelle critique</h2>
+<h3 id="données-personnelles-152-fz">11.1. Données personnelles
+(152-FZ)</h3>
+<p>L’opérateur de la PN RSFSR est <strong>opérateur de données
+personnelles</strong> au sens du paragraphe 2 de l’article 3 de la loi
+n° 152-FZ. Obligations :</p>
+<ul>
+<li>existence d’une politique de traitement des données personnelles
+(article 18.1) ;</li>
+<li>recueil du consentement des sujets ;</li>
+<li>garantie des exigences de protection des DP (article 19) ;</li>
+<li>inscription au registre des opérateurs de Roskomnadzor ;</li>
+<li>conformité au niveau de protection des DP non inférieur à
+<strong>UZ-1</strong> conformément au Décret du Gouvernement n° 1119 du
+01.11.2012 ;</li>
+<li>conformité à l’arrêté FSTEC n° 21 (exigences de protection des DP
+dans les SIDP).</li>
+</ul>
+<h3 id="infrastructure-informationnelle-critique-187-fz">11.2.
+Infrastructure informationnelle critique (187-FZ)</h3>
+<p>Le SI de la PN RSFSR relève de la définition d’objet IIC :</p>
+<ul>
+<li>sphère : « secteur bancaire et autres sphères du marché financier »
+(article 2 de la loi n° 187-FZ) ;</li>
+<li>catégorie de signification : <strong>la première (la plus
+élevée)</strong> — compte tenu de l’ampleur des conséquences sociales,
+politiques et économiques potentielles d’une rupture.</li>
+</ul>
+<p>Obligations du sujet IIC (articles 7, 9 de la loi n° 187-FZ) :</p>
+<ul>
+<li>catégorisation des objets IIC ;</li>
+<li>interaction avec le Système d’État de détection, prévention et
+élimination des conséquences des attaques informatiques (GosSOPKA)
+;</li>
+<li>respect des exigences de la FSTEC de Russie (arrêté n° 239) et de la
+FSB de Russie ;</li>
+<li>notification des incidents informatiques.</li>
+</ul>
+<hr />
+<h2 id="structure-corporative-de-lopérateur">12. Structure corporative
+de l’opérateur</h2>
+<h3 id="composition-minimale-des-documents-internes">12.1. Composition
+minimale des documents internes</h3>
+<ol type="1">
+<li>Statuts de la société anonyme.</li>
+<li>Règlement du Conseil d’administration et de ses comités (audit,
+risques, IT, rémunérations).</li>
+<li>Règlement du Directoire.</li>
+<li>Règlement du service d’audit interne.</li>
+<li>Règlement de l’unité de gestion des risques.</li>
+<li>Règlement de l’unité de contrôle interne.</li>
+<li>Règlement de l’unité LBC/FT (responsable spécial).</li>
+<li>Règlement de l’unité de sécurité de l’information.</li>
+<li>Code d’éthique des affaires et politique des conflits
+d’intérêts.</li>
+</ol>
+<h3 id="dirigeants-soumis-à-lapprobation-de-la-banque-de-russie">12.2.
+Dirigeants soumis à l’approbation de la Banque de Russie</h3>
+<p>Dans le cadre de l’article 14 de la loi n° 259-FZ et de la
+Réglementation n° 779-P, sont soumis à l’approbation de la Banque de
+Russie :</p>
+<ul>
+<li>l’organe exécutif unique (directeur général) ;</li>
+<li>les membres de l’organe exécutif collégial ;</li>
+<li>le chef comptable ;</li>
+<li>le responsable du service de contrôle interne ;</li>
+<li>le responsable du service d’audit interne ;</li>
+<li>le responsable spécial LBC/FT ;</li>
+<li>le responsable de l’unité de sécurité de l’information.</li>
+</ul>
+<hr />
+<h2 id="analyse-des-risques-et-obstacles-juridiques">13. Analyse des
+risques et obstacles juridiques</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>N°</th>
+<th>Risque</th>
+<th>Sévérité</th>
+<th>Mesures de mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Incomplétude de la base juridique : absence dans le droit en vigueur
+de la catégorie « AFN d’infrastructure ciblée » et du régime d’émission
+ciblée garantie.</td>
+<td>Élevée</td>
+<td>Adoption du paquet d’actes normatifs (voir section 8).</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Possible refus de la Banque de Russie d’inscrire au registre des
+opérateurs.</td>
+<td>Moyenne</td>
+<td>Implication précoce de la Banque de Russie dans un groupe de travail
+projet ; conformité totale à 779-P.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Risque réglementaire côté Rosfinmonitoring lors de grandes
+opérations.</td>
+<td>Faible–Moyenne</td>
+<td>Mise en œuvre complète de 115-FZ ; approche fondée sur les risques ;
+surveillance automatisée.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Risque fiscal : interprétations divergentes de la qualification de
+l’échange d’AFN au sens du Code des impôts.</td>
+<td>Moyenne</td>
+<td>Obtention d’explications du Ministère des Finances de Russie et du
+Service fédéral des impôts au stade pilote.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Risque que les opérations sur rouble numérique d’émission ciblée
+soient jugées non conformes au chapitre X de la loi n° 86-FZ.</td>
+<td>Moyenne</td>
+<td>Amendements à la loi n° 86-FZ ; accord avec la Banque de Russie des
+règles de mouvement des fonds.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Risque de refus d’enregistrement d’État de la sûreté au RUNI pour un
+motif non typique.</td>
+<td>Faible</td>
+<td>Préparation d’un dossier type avec Rosreestr ; demandes
+pilotes.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Risque de retrait des licences des organisations d’évaluation et
+d’assurance partenaires.</td>
+<td>Faible</td>
+<td>Diversification du réseau de partenaires ; critères de sélection ;
+surveillance permanente.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Risque d’abus de pouvoir par les dirigeants de l’opérateur.</td>
+<td>Faible</td>
+<td>Système multi-niveaux de contrôle interne ; double signature
+obligatoire des opérations critiques ; journal d’audit inaltérable
+(DLT).</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Risque de cyberattaques contre la plateforme et compromission des
+AFN.</td>
+<td>Moyenne</td>
+<td>Catégorie 1 IIC ; GOST R 57580.1 niveau 4 ; pentest externe annuel ;
+GosSOPKA.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Risque que le contrat intelligent soit déclaré nul dans sa partie
+d’exécution automatisée.</td>
+<td>Faible</td>
+<td>Article 309 du CC ; article 4 de la loi n° 259-FZ ; explications de
+la Cour suprême de la FR sur les opérations avec AFN.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="comparaison-avec-la-pratique-internationale">14. Comparaison
+avec la pratique internationale</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Juridiction</th>
+<th>Régulation de la tokenisation d’actifs</th>
+<th>Différences clés par rapport au modèle PN RSFSR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Union européenne</td>
+<td>Règlement MiCA (Markets in Crypto-Assets, Règlement (UE) 2023/1114)
+— en vigueur intégralement depuis le 30.12.2024.</td>
+<td>MiCA régit les crypto-actifs de nature générale ; la tokenisation
+immobilière reste dans le champ juridique national des États membres ;
+un financement central ciblé adossé à un pool de gages n’est pas
+prévu.</td>
+</tr>
+<tr>
+<td>Suisse</td>
+<td>Loi DLT (en vigueur depuis le 01.08.2021) — modifications du Code
+des obligations et de la Loi sur l’infrastructure des marchés
+financiers.</td>
+<td>Forte infrastructure juridique pour les tokens DLT en tant que
+titres ; le modèle n’implique pas d’émission directe de monnaie
+nationale adossée aux tokens.</td>
+</tr>
+<tr>
+<td>Singapour</td>
+<td>Payment Services Act 2019 + régime réglementaire Singapore Asset
+Tokenisation (Project Guardian — MAS).</td>
+<td>Bacs à sable réglementaires pour la tokenisation, mais sans analogue
+complet d’une émission ciblée adossée à une masse de gages.</td>
+</tr>
+<tr>
+<td>Émirats arabes unis</td>
+<td>VARA (Virtual Assets Regulatory Authority, Dubaï) et règlement de
+l’ADGM.</td>
+<td>Licences pour les opérateurs d’actifs numériques ; pilote de
+tokenisation d’actifs réels (RWA), mais sans lien d’émission avec la
+monnaie nationale.</td>
+</tr>
+<tr>
+<td>Chine</td>
+<td>E-CNY (yuan numérique) — modèle à deux niveaux : BC–banques.</td>
+<td>Émission de la monnaie numérique par décision de la Banque populaire
+de Chine ; pilotes de tokenisation d’actifs dans des zones
+technologiques ; l’adossement à des gages concrets n’est pas consacré
+par la loi.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>L’unicité de la PN RSFSR</strong> dans le contexte
+international tient à l’architecture biphasée wedge / pilot-light →
+extension du mandat : le Stage 1 est lancé sur un financement
+infrastructurel via la Fabrique de VEB.RF (Décret n° 158) + le Trésor
+fédéral (Code budgétaire) sans amendements à la loi n° 86-FZ ; le Stage
+2 (horizon 2029+) — voie défendable vers le modèle d’émission ciblée
+garantie adossé à un pool d’AFN gagés après un track-record positif du
+contour proche. Aucune construction analogue biphasée à pleine échelle
+n’a été identifiée dans le monde dans le domaine public au moment de la
+préparation du document.</p>
+<hr />
+<h2 id="conclusions-finales">15. Conclusions finales</h2>
+<ol type="1">
+<li><strong>Le Stage 1 (contour proche 2026–2028) est réalisable dans le
+champ juridique en vigueur sans amendements à la loi n° 86-FZ.</strong>
+Cadre de base — loi n° 259-FZ ; Réglementation de la Banque de Russie n°
+779-P / Directive BR n° 4336-U (licence et fonds propres de l’opérateur)
+; Décret du gouv. n° 158 du 15.02.2018 (Fabrique de financement de
+projets VEB.RF) ; Code budgétaire de la FR (règlements via le Trésor
+fédéral) ; Code civil de la FR (chapitres sur le gage et
+l’entiercement). Le wedge-pilot est lancé via un partenariat
+technologique avec un opérateur en activité d’un SI d’émission d’AFN
+(Atomyze ou un autre sujet du registre 779-P).</li>
+<li><strong>Le Stage 2 (horizon 2029+) — extension du mandat, hors
+feuille de route à court terme.</strong> Nécessite un paquet de 4
+amendements FZ (86-FZ, 259-FZ, Code budgétaire, Code civil) + actes
+d’application (voir sections 8.2 et 8.3). Condition d’entrée — un
+track-record positif du Stage 1 d’au moins 12 mois d’exploitation
+industrielle ; position interministérielle Ministère du Développement
+économique / Ministère des Finances / VEB.RF / Douma d’État.</li>
+<li><strong>Le rôle de la Banque de Russie en Stage 1</strong> est celui
+de régulateur de surveillance général du marché financier au sens de
+l’art. 4 de la loi n° 86-FZ : approbation des règles de l’opérateur au
+sens de l’art. 6 de la loi n° 259-FZ ; inscription de l’opérateur au
+registre selon 779-P ; surveillance du respect des exigences au SI
+(683-P, 716-P). Une émission complémentaire de la Banque de Russie en
+Stage 1 n’est pas prévue.</li>
+<li><strong>La gestion du risque inflationniste au Stage 1</strong> est
+assurée par l’architecture du canal infrastructurel : le financement
+Fabrique de VEB.RF + Code budgétaire est lié à des projets dotés d’un
+adossement gagé confirmé évalué selon la loi n° 135-FZ et ne crée pas
+d’expansion non garantie de la masse monétaire.</li>
+</ol>
+<hr />
+<p><em>Document préparé dans le cadre du dossier de documentation projet
+« Plateforme Numérique RSFSR ». Toutes les normes citées sont dans la
+rédaction en vigueur au moment de la préparation du document. En cas de
+modification de la base normative, le document fera l’objet d’une
+révision.</em></p>
+
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

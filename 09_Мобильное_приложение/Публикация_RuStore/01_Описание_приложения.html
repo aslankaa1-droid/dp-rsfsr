@@ -1,0 +1,335 @@
+﻿<!doctype html>
+<html lang="ru" data-theme="daylight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Описание приложения · ЦП РСФСР</title>
+<meta name="theme-color" content="#0B2B5C">
+<link rel="stylesheet" href="../../_shared/brand.css">
+<style>
+/* Document-specific styles */
+body { padding-top: 80px; }
+.doc-wrap { max-width: 880px; margin: 0 auto; padding: 48px 24px 96px; }
+.doc-header {
+  padding-bottom: 24px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.doc-header .eyebrow { margin-bottom: 12px; }
+.doc-header h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--primary); margin-bottom: 12px; }
+.doc-header p { color: var(--fg-mute); font-size: .9375rem; margin: 0; }
+.doc-content h1, .doc-content h2, .doc-content h3, .doc-content h4 { color: var(--primary); margin-top: 2em; margin-bottom: .5em; }
+.doc-content h1 { font-size: 1.875rem; }
+.doc-content h2 { font-size: 1.5rem; padding-bottom: 6px; border-bottom: 1px solid var(--border-soft); }
+.doc-content h3 { font-size: 1.25rem; }
+.doc-content h4 { font-size: 1.0625rem; color: var(--fg); }
+.doc-content p { line-height: 1.7; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content ul, .doc-content ol { line-height: 1.7; padding-left: 1.5em; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content li { margin-bottom: .35em; }
+.doc-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 12px 20px;
+  margin: 1em 0;
+  background: var(--bg-soft);
+  border-radius: 0 8px 8px 0;
+  color: var(--fg-soft);
+}
+.doc-content code {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg-soft);
+  padding: 2px 6px; border-radius: 4px;
+  font-size: .875em; color: var(--primary);
+}
+.doc-content pre {
+  background: var(--bg-soft); padding: 16px; border-radius: 10px;
+  overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: .875rem;
+  border: 1px solid var(--border-soft); margin: 1em 0;
+}
+.doc-content table {
+  width: 100%; border-collapse: collapse; margin: 1.5em 0;
+  background: var(--card-bg); border: 1px solid var(--border-soft);
+  border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-1);
+}
+.doc-content table th {
+  background: var(--primary); color: var(--primary-on);
+  text-align: left; padding: 12px 16px; font-weight: 600;
+  font-size: .8125rem; letter-spacing: .04em; text-transform: uppercase;
+}
+.doc-content table td {
+  padding: 10px 16px; border-bottom: 1px solid var(--border-soft);
+  font-size: .9375rem; color: var(--fg-soft);
+}
+.doc-content table tr:last-child td { border-bottom: none; }
+.doc-content table tr:hover td { background: var(--bg-soft); }
+.doc-content hr {
+  border: none; height: 1px; background: var(--border-soft); margin: 2.5em 0;
+}
+.doc-content a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+.doc-content a:hover { color: var(--accent); }
+.doc-content strong { color: var(--fg); font-weight: 700; }
+
+.doc-actions {
+  display: flex; gap: 10px; margin-top: 32px; flex-wrap: wrap;
+}
+
+/* Floating top button */
+.totop {
+  position: fixed; bottom: 24px; right: 24px; z-index: 50;
+  background: var(--primary); color: var(--primary-on);
+  border: none; border-radius: 50%; width: 48px; height: 48px;
+  cursor: pointer; box-shadow: var(--shadow-3);
+  display: none; font-size: 1.25rem;
+  transition: transform .2s var(--ease);
+}
+.totop:hover { transform: translateY(-2px); }
+.totop.show { display: grid; place-items: center; }
+[dir="rtl"] .totop { right: auto; left: 24px; }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div class="scroll-progress"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="../../07_Презентации/Большая_презентация/index.html"><span class="brand-mark">Р</span><span data-i18n="brand.name">ЦП РСФСР</span></a>
+    <nav class="topbar-nav">
+      <a href="../../07_Презентации/Большая_презентация/index.html#about" data-i18n="nav.about">О платформе</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#hub" data-i18n="nav.hub">Документы</a>
+      <a href="../../08_Веб-сайт/HTML_основной/index.html">Сайт</a>
+      <a href="../../07_Презентации/Малая_презентация/index.html">Презентация</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#contacts" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+    <div class="topbar-actions">
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-i18n-btn="ru">RU</button>
+        <button class="tbtn" data-i18n-btn="en">EN</button>
+        <button class="tbtn" data-i18n-btn="fr">FR</button>
+        <button class="tbtn" data-i18n-btn="ar">عر</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-theme-btn="daylight" aria-label="Дневная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+        <button class="tbtn" data-theme-btn="midnight" aria-label="Тёмная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="tbtn" data-theme-btn="sepia">◐</button>
+        <button class="tbtn" data-theme-btn="contrast">A11Y</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn" data-font-action="dec">A−</button>
+        <button class="tbtn" data-font-action="reset">A</button>
+        <button class="tbtn" data-font-action="inc">A+</button>
+      </div>
+      <button class="tbtn tbtn-burger">≡</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="eyebrow">Публикация в RuStore</span>
+      <h1>Описание приложения</h1>
+      <p>Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 · 19.12.2024 · ЦП РСФСР</p>
+    </header>
+    <article class="doc-content">
+<h1 id="описание-приложения-для-публикации-в-rustore">Описание
+приложения для публикации в RuStore</h1>
+<h2
+id="цп-рсфср-российский-сервис-финансирования-социального-развития">ЦП
+РСФСР — Российский Сервис Финансирования Социального Развития</h2>
+<hr />
+<h2 id="базовая-информация">Базовая информация</h2>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Название</td>
+<td>ЦП РСФСР</td>
+</tr>
+<tr>
+<td>Подзаголовок</td>
+<td>Российский Сервис Финансирования Социального Развития</td>
+</tr>
+<tr>
+<td>Категория</td>
+<td>Финансы</td>
+</tr>
+<tr>
+<td>Подкатегория</td>
+<td>Инвестиции</td>
+</tr>
+<tr>
+<td>Возрастная категория</td>
+<td>18+</td>
+</tr>
+<tr>
+<td>Цена</td>
+<td>Бесплатно</td>
+</tr>
+<tr>
+<td>Платная подписка</td>
+<td>Нет</td>
+</tr>
+<tr>
+<td>Реклама</td>
+<td>Нет</td>
+</tr>
+<tr>
+<td>Внутренние покупки</td>
+<td>Нет</td>
+</tr>
+<tr>
+<td>Язык интерфейса</td>
+<td>Русский, английский, французский, арабский</td>
+</tr>
+<tr>
+<td>Размер</td>
+<td>до 30 МБ</td>
+</tr>
+<tr>
+<td>Минимальная версия Android</td>
+<td>9.0 (API 28)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="краткое-описание-для-каталога-до-80-символов">Краткое описание
+(для каталога, до 80 символов)</h2>
+<blockquote>
+<p>Платформа выпуска ЦФА под залог имущества — информационно-демонстрационный сервис</p>
+</blockquote>
+<h2 id="полное-описание-до-4000-символов">Полное описание (до 4000
+символов)</h2>
+<p><strong>ЦП РСФСР</strong> — официальное мобильное приложение Цифровой
+Платформы «Российский Сервис Финансирования Социального Развития».
+Платформа предназначена для собственников имущества, которые хотят
+получить дополнительный доход от своих активов, не отчуждая их.</p>
+<h3 id="как-это-работает">Как это работает</h3>
+<p>Внесите принадлежащий вам объект (квартиру, дом, земельный участок,
+транспорт, интеллектуальную собственность, ценные бумаги) в качестве
+залога. Имущество <strong>остаётся в вашей собственности</strong> — на
+него лишь накладывается временное обременение в пользу платформы.</p>
+<p>Платформа выпускает на основании вашего актива цифровой финансовый
+актив (ЦФА). Под пул выпущенных ЦФА Банк России производит целевую
+эмиссию средств, которые через Федеральное казначейство направляются на
+финансирование национальных и инфраструктурных проектов Российской
+Федерации.</p>
+<p>Вы получаете регулярное вознаграждение за всё время использования
+вашего ЦФА в качестве залога. По истечении срока обременение снимается,
+имущество возвращается в полное распоряжение.</p>
+<h3 id="что-внутри-приложения">Что внутри приложения</h3>
+<p>— Авторизация через Госуслуги (ЕСИА). — Подтверждение биометрией
+(ЕБС). — Подача актива в несколько шагов с автоматической загрузкой
+данных из ЕГРН. — Заявка на оценку аккредитованной оценочной компанией.
+— Настройка и подписание смарт-контракта усиленной квалифицированной
+электронной подписью. — Управление портфелем ЦФА. — Регулярные выплаты
+на банковский счёт. — Прозрачная история всех операций. — Налоговые
+справки в один тап.</p>
+<h3 id="безопасность">Безопасность</h3>
+<p>Приложение разработано в соответствии с самыми строгими требованиями
+российских регуляторов: — Категория объекта критической информационной
+инфраструктуры — 1-я (наивысшая). — Уровень защиты по ГОСТ Р 57580.1 —
+4-й (максимальный). — Уровень защищённости персональных данных — УЗ-1. —
+Криптография: ГОСТ Р 34.10-2012, ГОСТ Р 34.11-2012, ГОСТ Р 34.12-2015. —
+Полное соответствие 152-ФЗ (защита персональных данных), 187-ФЗ (КИИ),
+115-ФЗ (ПОД/ФТ).</p>
+<h3 id="правовая-основа">Правовая основа</h3>
+<p>Платформа функционирует строго в правовом поле Российской Федерации в
+соответствии с: — Федеральным законом от 31.07.2020 №259-ФЗ «О цифровых
+финансовых активах». — Федеральным законом от 10.07.2002 №86-ФЗ «О
+Центральном банке Российской Федерации». — Федеральным законом от
+24.07.2023 №340-ФЗ (цифровой рубль). — Положениями Банка России №779-П,
+№683-П, №716-П.</p>
+<h3 id="поддержка-нескольких-языков">Поддержка нескольких языков</h3>
+<p>Полная локализация на русский, английский, французский и арабский (с
+поддержкой направления текста справа налево).</p>
+<h3 id="доступность">Доступность</h3>
+<p>Полное соответствие WCAG 2.2 уровня AA. Поддержка экранных читалок
+(VoiceOver, TalkBack), масштабирование шрифта, контрастная тема для
+слабовидящих.</p>
+<h3 id="авторские-права">Авторские права</h3>
+<p>Концепция и архитектура платформы защищены свидетельством о
+депонировании №4011265 от 19.12.2024 (ireg.pro). Автор и правообладатель
+— Кагиров Абдул-Хаким Ахмадович.</p>
+<hr />
+<h2 id="ключевые-слова-до-100-символов">Ключевые слова (до 100
+символов)</h2>
+<p>ЦФА, залог, недвижимость, инвестиции, цифровой рубль, Банк России,
+нацпроекты, эмиссия</p>
+<hr />
+<h2 id="что-нового-для-первого-релиза">Что нового (для первого
+релиза)</h2>
+<p>— Первый релиз приложения. — Полный жизненный цикл выпуска ЦФА: от
+подачи актива до получения дохода. — Поддержка 4 типов залогового
+имущества. — 4 темы оформления, 4 языка. — Биометрическая авторизация. —
+Оффлайн-режим для просмотра кешированных данных.</p>
+<hr />
+<h2 id="контактная-информация-разработчика">Контактная информация
+разработчика</h2>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Имя разработчика</td>
+<td>Кагиров Абдул-Хаким Ахмадович</td>
+</tr>
+<tr>
+<td>Сайт</td>
+<td>https://dp-rsfsr.ru (или временный домен проекта)</td>
+</tr>
+<tr>
+<td>Email поддержки</td>
+<td>support@dp-rsfsr.ru</td>
+</tr>
+<tr>
+<td>Email юридический</td>
+<td>legal@dp-rsfsr.ru</td>
+</tr>
+<tr>
+<td>Политика конфиденциальности</td>
+<td>https://dp-rsfsr.ru/privacy</td>
+</tr>
+<tr>
+<td>Условия использования</td>
+<td>https://dp-rsfsr.ru/terms</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ограничения-и-оговорки">Ограничения и оговорки</h2>
+<p>— Приложение требует подтверждённой учётной записи Госуслуг (ЕСИА). —
+Полный функционал доступен только пользователям, прошедшим KYC. — На
+момент первого релиза доступен пилотный режим в нескольких регионах.
+Расширение географии — по дорожной карте. — Все операции с ЦФА
+производятся только в безналичной форме. — ЦФА — не криптовалюта.
+Платформа не имеет отношения к необеспеченным цифровым валютам.</p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../07_Презентации/Большая_презентация/index.html#hub">К хабу документов</a>
+      <a class="btn btn--ghost" href="../../07_Презентации/Большая_презентация/index.html">Большая презентация</a>
+    </div>
+  </div>
+</main>
+
+<button class="totop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Наверх">↑</button>
+
+<script src="../../_shared/i18n.js"></script>
+<script src="../../_shared/app.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const t = document.querySelector('.totop');
+  if (t) t.classList.toggle('show', window.scrollY > 600);
+});
+</script>
+</body>
+</html>

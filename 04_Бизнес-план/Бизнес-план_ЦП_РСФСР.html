@@ -1,0 +1,1579 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../">
+  <title>Бизнес-план ЦП РСФСР · ЦПФСР.РФ</title>
+  <meta name="description" content="Бизнес-план ЦП РСФСР — Бизнес-план. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../_design-system/tokens.css">
+  <link rel="stylesheet" href="../_design-system/global.css">
+  <link rel="stylesheet" href="../_design-system/components.css">
+  <link rel="stylesheet" href="../_design-system/rtl.css">
+  <link rel="stylesheet" href="../_design-system/print.css">
+
+  <script defer src="../_design-system/theme-switcher.js"></script>
+  <script defer src="../_design-system/i18n-data.js"></script>
+  <script defer src="../_design-system/i18n.js"></script>
+  <script defer src="../_design-system/ticker.js"></script>
+  <script defer src="../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Бизнес-план</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Бизнес-план</span>
+      <h1>Бизнес-план ЦП РСФСР</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1
+id="бизнес-план-цифровой-платформы-российский-сервис-финансирования-социального-развития-цп-рсфср">Бизнес-план
+Цифровой Платформы «Российский Сервис Финансирования Социального
+Развития» (ЦП РСФСР)</h1>
+<p><strong>Оператор:</strong> Цифровая Платформа РСФСР — front-end /
+агентская платформа выпуска ЦФА под залог имущества. Stage 1
+(pilot-light 2026–2028): размещения через технологическое партнёрство с
+действующим оператором 779-П, фондирование Фабрики проектного
+финансирования ВЭБ.РФ (ПП РФ № 158) и Федерального казначейства. Stage 2
+(горизонт 2029+): расширение мандата к модели целевой обеспеченной
+эмиссии Банка России — после положительного track-record Stage 1 ≥ 12
+мес. и принятия пакета 4 ФЗ-поправок. <strong>Автор концепта и
+правообладатель ноу-хау:</strong> Кагиров Абдул-Хаким Ахмадович.
+<strong>Свидетельство о депонировании:</strong> №4011265 от 19.12.2024
+(ireg.pro, ГОСТ-Р 34.11-2012). <strong>Дата документа:</strong>
+23.05.2026.</p>
+<hr />
+<h2 id="резюме-проекта">1. Резюме проекта</h2>
+<p><strong>Что.</strong> ЦП РСФСР — front-end / агентская платформа
+полного цикла выпуска и обслуживания цифровых финансовых активов (ЦФА),
+номинированных под залог недвижимого и иного имущества. <strong>Stage 1
+(2026–2028):</strong> размещения через технологическое партнёрство с
+действующим оператором информационной системы выпуска ЦФА по 779-П (АО
+«Атомайз» или иной субъект реестра — лицензия не передаётся); расчётный
+канал и фондирование — Фабрика проектного финансирования ВЭБ.РФ (ПП РФ
+от 15.02.2018 № 158) и Федеральное казначейство в рамках Бюджетного
+кодекса. Банк России — общий надзорный регулятор по ст. 4 ФЗ № 86-ФЗ;
+дополнительная эмиссия в Stage 1 не предусмотрена. <strong>Stage 2
+(горизонт 2029+):</strong> defensible путь к модели целевой обеспеченной
+эмиссии Банка России — реализуется после положительного track-record
+Stage 1 ≥ 12 мес. и принятия пакета 4 ФЗ-поправок.</p>
+<p><strong>Зачем.</strong> Высвобождение «спящей» залоговой массы РФ
+(консервативно — 25 трлн ₽) под целевое финансирование национальных и
+инфраструктурных проектов — без увеличения нагрузки на бюджет и при
+сохранении прав собственников. В Stage 1 эффект достигается за счёт
+инфраструктурного фондирования; в Stage 2 — расширяется через целевую
+обеспеченную эмиссию.</p>
+<p><strong>Кому.</strong> - Государство — внебюджетный источник целевых
+средств на нацпроекты. - Собственники имущества (физические и
+юридические лица) — дополнительный доход при сохранении объекта в
+собственности. - Инвесторы — новый класс надёжных, обеспеченных,
+регулируемых инструментов. - Финансовый сектор (банки, страховые,
+оценщики) — новые сервисные доходы.</p>
+<p><strong>Сколько.</strong> - CapEx за 18 месяцев — 850 млн ₽. -
+Совокупный CapEx за 10 лет — 1 300 млн ₽. - Пиковая потребность в
+финансировании — 1 302 млн ₽ (конец 2026 года).</p>
+<p><strong>Когда.</strong> - Старт — 2025 год (подготовка, лицензии,
+R&amp;D). - Запуск операционной деятельности — 2026 год (через 18 мес.
+от старта). - Пилот — 2026-2027 годы. - Масштабирование — 2028-2030
+годы. - Зрелая стадия — с 2031 года.</p>
+<p><strong>На чём заработаем.</strong> - Комиссия за выпуск ЦФА — 0,5%
+от номинала. - Сервисная комиссия — 0,3% от обращаемого стека. -
+Платформенный сбор (оценка/страхование) — 0,15% от номинала. - Лицензии
+партнёрам B2B2G — до 0,15% от объёма выпуска. - Технологические
+интеграции — фикс.</p>
+<p><strong>Что просим.</strong> Стартовое финансирование 1,3 млрд ₽
+(CapEx + операционный буфер на 18 месяцев). Возврат — Payback 2,8 года
+(базовый сценарий).</p>
+<p><strong>Ключевые финансовые показатели (базовый сценарий, WACC
+30%):</strong></p>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th style="text-align: right;">Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NPV (с терминальной стоимостью, g=4%)</td>
+<td style="text-align: right;">51,2 млрд ₽</td>
+</tr>
+<tr>
+<td>IRR</td>
+<td style="text-align: right;">62% (project-level)</td>
+</tr>
+<tr>
+<td>Payback</td>
+<td style="text-align: right;">2,8 года</td>
+</tr>
+<tr>
+<td>Пиковая потребность в финансировании</td>
+<td style="text-align: right;">1,3 млрд ₽</td>
+</tr>
+<tr>
+<td>Выручка год 5 (2029)</td>
+<td style="text-align: right;">37,5 млрд ₽</td>
+</tr>
+<tr>
+<td>Выручка год 10 (2034)</td>
+<td style="text-align: right;">137,9 млрд ₽</td>
+</tr>
+<tr>
+<td>EBITDA год 10</td>
+<td style="text-align: right;">133,6 млрд ₽</td>
+</tr>
+</tbody>
+</table>
+<p>Консервативный сценарий (доля рынка ×0,5, комиссии ×0,8, OpEx ×1,15,
+WACC 25%): NPV ~57 млрд ₽, IRR ~150%, Payback 3,1 года, выручка 2034 —
+56,4 млрд ₽. Запас прочности по NPV — более чем 40-кратный к стартовому
+капиталу.</p>
+<hr />
+<h2 id="описание-компании-оператора">2. Описание компании-оператора</h2>
+<h3 id="организационно-правовая-форма">2.1. Организационно-правовая
+форма</h3>
+<p>Рекомендуемая форма — <strong>акционерное общество (АО)</strong>: -
+Соответствует требованиям ЦБ РФ к операторам ЦФА (259-ФЗ, ст. 10):
+минимальный собственный капитал, корпоративное управление, требования к
+составу акционеров. - Позволяет привлекать стратегических инвесторов
+через выпуск акций. - Совместимо с режимом стратегического
+государственного актива (если такая модель будет согласована).</p>
+<h3 id="учредители-и-контур-владения">2.2. Учредители и контур
+владения</h3>
+<p>Учредительный пакет должен учитывать: 1. <strong>Правообладатель
+ноу-хау</strong> — Кагиров Абдул-Хаким Ахмадович (свид. №4011265 от
+19.12.2024). Доля учредителя обеспечивается передачей лицензии или
+внесением исключительного права в уставный капитал по оценке
+независимого оценщика. 2. <strong>Институциональные акционеры</strong> —
+рекомендуется привлечение профильных институциональных инвесторов (банки
+развития, государственные финансовые корпорации, регулятор) для
+обеспечения политической поддержки и регуляторного комфорта. 3.
+<strong>Роль Банка России (Stage 1).</strong> В Stage 1 (pilot-light
+2026–2028) Банк России — общий надзорный регулятор финансового рынка по
+ст. 4 ФЗ № 86-ФЗ: согласовывает правила оператора информационной системы
+по ст. 6 ФЗ № 259-ФЗ, включает оператора в реестр по Положению № 779-П,
+надзирает за соблюдением требований к защите информации (683-П, 716-П) и
+ГОСТ Р 57580.1. Дополнительная эмиссия Банка России в Stage 1 не
+предусмотрена; финансирование размещения проводится через Фабрику
+проектного финансирования ВЭБ.РФ (ПП РФ № 158) и Федеральное
+казначейство в рамках Бюджетного кодекса. В рамках Stage 2 (горизонт
+2029+) при положительном track-record Stage 1 ≥ 12 мес. и принятии
+пакета 4 ФЗ-поправок может быть рассмотрено расширение мандата к модели
+целевой обеспеченной эмиссии Банка России.</p>
+<h3 id="юрисдикция">2.3. Юрисдикция</h3>
+<p>Российская Федерация. Регистрация в Москве — соответствует размещению
+ключевых регуляторов (ЦБ РФ, Минфин, Минэк, Минцифры), Федерального
+казначейства, ключевых банковских контрагентов.</p>
+<h3 id="налоговый-статус">2.4. Налоговый статус</h3>
+<p>При получении ИТ-аккредитации Минцифры и сохранении ≥70% ИТ-выручки
+применима льгота по налогу на прибыль (5% или 0% в зависимости от
+редакции НК РФ на дату). При построении базового сценария налог 20% —
+консервативная база. Льгота — отдельный upside на оценку.</p>
+<h3 id="защита-интеллектуальной-собственности">2.5. Защита
+интеллектуальной собственности</h3>
+<p>Ядро ноу-хау оператора — концепция автора, защищённая свидетельством
+о депонировании №4011265 от 19.12.2024. Депонирование фиксирует дату
+приоритета (24.12.2024) и хеш произведения; правовой режим охраны —
+ноу-хау (ст. 1465 ГК) и программа для ЭВМ (ст. 1262 ГК, регистрация в
+Роспатенте — в работе) с даты внесения. На этапе создания
+компании-оператора правообладатель передаёт оператору исключительные
+либо неисключительные права на использование ноу-хау с фиксацией условий
+вознаграждения (лицензионное соглашение либо вклад в уставный
+капитал).</p>
+<hr />
+<h2 id="описание-продуктауслуги">3. Описание продукта/услуги</h2>
+<h3 id="что-такое-цп-рсфср">3.1. Что такое ЦП РСФСР</h3>
+<p>ЦП РСФСР — цифровая платформа полного цикла, которая: 1. Принимает от
+собственника заявку на залог имущества (недвижимости, транспорта,
+интеллектуальной собственности, ценных бумаг и пр.). 2. Производит
+автоматизированную оценку залогового объекта с привлечением
+аккредитованных оценщиков по ФЗ № 135-ФЗ. 3. Регистрирует временное
+обременение на объект в соответствующих государственных реестрах
+(Росреестр, ГИБДД, депозитарии). 4. Согласовывает параметры выпуска с
+технологическим партнёром — оператором информационной системы выпуска
+ЦФА по 779-П (правила оператора по ст. 6 ФЗ № 259-ФЗ). 5.
+Технологический партнёр выпускает ЦФА в номинальной стоимости,
+соответствующей залоговой оценке (с учётом норматива дисконта). 6.
+<strong>Stage 1.</strong> Финансирование размещения проводится через
+Фабрику проектного финансирования ВЭБ.РФ (ПП РФ от 15.02.2018 № 158) и
+Федеральное казначейство (БК РФ). Расчёты — безналичный рубль или
+цифровой рубль 340-ФЗ как расчётный комплемент. 7. Средства целевым
+образом направляются на финансирование национальных и инфраструктурных
+проектов в соответствии с действующими ФЗ и подзаконными актами. 8. ЦФА
+могут быть реализованы профессиональным участникам рынка ценных бумаг;
+средства от реализации зачисляются на счета по ст. 860.7–860.10 ГК. 9.
+По завершении срока проекта производится мена: ЦФА погашается,
+обременение с имущества снимается, собственник получает обратно свой
+объект и заранее согласованное финансовое вознаграждение.</p>
+<blockquote>
+<p><strong>Stage 2 (горизонт 2029+).</strong> В рамках расширения
+мандата шаги 6–7 могут быть переведены на модель целевой обеспеченной
+эмиссии Банка России под пул залоговых ЦФА с эскроу-счётом под
+управлением ЦБ. Stage 2 реализуется после положительного track-record
+Stage 1 ≥ 12 мес. и принятия пакета 4 ФЗ-поправок (см. Юридический
+фундамент § 8.2).</p>
+</blockquote>
+<h3 id="чем-продукт-отличается-от-существующих-цфа">3.2. Чем продукт
+отличается от существующих ЦФА</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Существующие ЦФА в РФ</th>
+<th>ЦП РСФСР Stage 1</th>
+<th>ЦП РСФСР Stage 2 (горизонт)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Обеспечение</td>
+<td>Денежные требования, акции, обязательства</td>
+<td>Физическое и нематериальное имущество (под залог)</td>
+<td>Физическое и нематериальное имущество (под залог)</td>
+</tr>
+<tr>
+<td>Источник средств</td>
+<td>Покупатель ЦФА оплачивает рублями</td>
+<td>Фабрика ВЭБ.РФ + Федеральное казначейство</td>
+<td>Целевая обеспеченная эмиссия Банка России</td>
+</tr>
+<tr>
+<td>Назначение</td>
+<td>Свободное</td>
+<td>Целевое (нацпроекты, инфраструктура)</td>
+<td>Целевое (нацпроекты, инфраструктура)</td>
+</tr>
+<tr>
+<td>Контур</td>
+<td>Частный оператор, ЦБ — регулятор</td>
+<td>Технологическое партнёрство с оператором 779-П + ЦБ как надзорный
+регулятор по ст. 4 86-ФЗ</td>
+<td>Технологическое партнёрство + ЦБ как эмитент в расширенном
+мандате</td>
+</tr>
+<tr>
+<td>Возврат имущества</td>
+<td>n/a</td>
+<td>После завершения проекта — мена и возврат</td>
+<td>После завершения проекта — мена и возврат</td>
+</tr>
+</tbody>
+</table>
+<h3 id="преимущества-по-концепту-автора">3.3. Преимущества (по концепту
+автора)</h3>
+<ol type="1">
+<li>Прямое онлайн-взаимодействие залогодателя, финансовых агентов и
+исполнителей под контролем ЦБ РФ.</li>
+<li>Сокращение сроков оценки и оформления залога.</li>
+<li>Толчок развитию индустрии ЦФА в России.</li>
+<li>Привлечение «спящих» частных активов в экономический оборот.</li>
+<li>Решение объёмных государственных проектов без увеличения долговой
+нагрузки.</li>
+<li>Сокращение очерёдности финансирования глобальных проектов.</li>
+<li>Импульс реальному сектору экономики.</li>
+<li>Внебюджетное финансирование госпроектов в денежноёмких отраслях
+(тяжёлая промышленность, машиностроение, медицина, наука).</li>
+<li>Финансовое вознаграждение собственнику залогового имущества.</li>
+<li>Инфляционные процессы остаются в обычном режиме (эмиссия идёт под
+полностью обеспеченные активы).</li>
+</ol>
+<h3 id="условия-запуска">3.4. Условия запуска</h3>
+<p><strong>Stage 1 (pilot-light 2026–2028) — без поправок в
+ФЗ:</strong></p>
+<ol type="1">
+<li>Учреждение АО-оператора и включение технологического партнёра в
+реестр операторов ИС ЦФА по Положению Банка России № 779-П (критический
+путь — СКЗИ-сертификация T+9…T+18 мес.).</li>
+<li>Согласование правил информационной системы по ст. 6 ФЗ № 259-ФЗ с
+Банком России.</li>
+<li>Consultative letter ВЭБ.РФ ФПФ по применимости ПП РФ № 158 к
+проектам ЦП РСФСР.</li>
+<li>MoU с регионом-пилотом (Республика Татарстан / Тюменская обл.) на
+5–10 млрд ₽ пилотного портфеля.</li>
+<li>MoU с банком-партнёром (Газпромбанк / ПСБ) на роль расчётного и
+эскроу-агента.</li>
+</ol>
+<p><strong>Stage 2 (горизонт 2029+, T+36+):</strong></p>
+<ol start="6" type="1">
+<li>Положительный track-record Stage 1 ≥ 12 мес. промышленной
+эксплуатации.</li>
+<li>Межведомственная позиция Минэк / Минфин / ВЭБ.РФ / Госдума.</li>
+<li>Пакет 4 ФЗ-поправок (86-ФЗ, 259-ФЗ, БК РФ, ГК РФ) + подзаконные
+акты.</li>
+</ol>
+<hr />
+<h2 id="анализ-рынка">4. Анализ рынка</h2>
+<h3 id="рынок-цфа-в-рф">4.1. Рынок ЦФА в РФ</h3>
+<p>В Российской Федерации с 2022 года действует Федеральный закон
+№259-ФЗ «О цифровых финансовых активах», который установил правовую
+рамку для эмиссии и обращения ЦФА. На рынке функционируют операторы
+информационных систем, прошедшие аккредитацию Банка России (информация
+публикуется в реестре ЦБ РФ).</p>
+<p>По открытым данным, суммарный объём выпусков ЦФА в РФ за 2023-2025
+годы исчисляется сотнями миллиардов рублей и демонстрирует уверенный
+рост. Доминирующие классы — денежные требования, корпоративные ЦФА, ЦФА
+на металлы. ЦФА под залог недвижимого имущества с прямой эмиссией
+средств ЦБ РФ в текущей рыночной практике отсутствуют.</p>
+<h3 id="объём-залоговой-массы-рф">4.2. Объём залоговой массы РФ</h3>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th>Сегмент</th>
+<th style="text-align: right;">Объём, трлн ₽</th>
+<th>Источник</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Жилой фонд (4,7 млрд м² × 85 000 ₽/м²)</td>
+<td style="text-align: right;">400</td>
+<td>Концепт автора, Росстат</td>
+</tr>
+<tr>
+<td>Коммерческая недвижимость</td>
+<td style="text-align: right;">45</td>
+<td>Концепт автора</td>
+</tr>
+<tr>
+<td>Земельные участки (ИЖС + под предприятиями)</td>
+<td style="text-align: right;">62</td>
+<td>Концепт автора</td>
+</tr>
+<tr>
+<td><strong>ИТОГО</strong></td>
+<td style="text-align: right;"><strong>507</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Консервативная база (10% × 50%)</strong></td>
+<td style="text-align: right;"><strong>25</strong></td>
+<td>Концепт автора</td>
+</tr>
+</tbody>
+</table>
+<p>Консервативная база 25 трлн ₽ — это «целевая ёмкость», к которой
+платформа стремится за горизонт 10 лет.</p>
+<h3 id="сегментация-спроса">4.3. Сегментация спроса</h3>
+<p><strong>Физические лица (B2C):</strong> - Собственники жилой
+недвижимости со стабильным денежным потоком, ищущие способы монетизации
+актива без продажи. - Целевая группа — около 30-40% домохозяйств в
+крупных и средних городах РФ.</p>
+<p><strong>Юридические лица (B2B):</strong> - Собственники коммерческой
+недвижимости — арендодатели, девелоперы, торговые сети. - Промышленные
+предприятия с земельными активами. - Холдинги с непрофильными
+активами.</p>
+<p><strong>Государственные предприятия (B2G):</strong> - Владельцы
+инфраструктурных и социально значимых активов (включая через дочерние
+структуры). - Регионы и муниципалитеты — для финансирования региональных
+программ через залог муниципального имущества.</p>
+<h3 id="конкуренты">4.4. Конкуренты</h3>
+<p>В Stage 1 (wedge-pilot 2026–2028) действующие операторы реестра 779-П
+(Сбер ЦФА, Альфа ЦФА, АО «Атомайз», Мастерчейн) — потенциальные
+технологические партнёры, не конкуренты на лицензионном уровне.
+Косвенные конкуренты: банковское кредитование под залог недвижимости
+(медленнее, дороже, без целевой ориентации на нацпроекты);
+краудфандинговые и инвестплатформы (мельче, без госконтура).</p>
+<p>Конкурентное преимущество ЦП РСФСР — двухстадийная архитектура: в
+Stage 1 — специализированная front-end-надстройка над оператором 779-П с
+привязкой к инфраструктурному фондированию через Фабрику ВЭБ.РФ (ПП РФ №
+158) + Федеральное казначейство (БК РФ) и целевым размещением в
+нацпроекты при сохранении имущества за собственником. В Stage 2
+(горизонт 2029+) — defensible путь к модели целевой обеспеченной эмиссии
+Банка России. Это не «лучший» продукт в существующей категории, а новая
+категория целевого инфраструктурного ЦФА.</p>
+<h3 id="регуляторная-среда">4.5. Регуляторная среда</h3>
+<p><strong>Текущая база:</strong> - 86-ФЗ «О Центральном банке
+Российской Федерации (Банке России)» - 259-ФЗ «О цифровых финансовых
+активах, цифровой валюте и о внесении изменений в отдельные
+законодательные акты Российской Федерации» - 39-ФЗ «О рынке ценных
+бумаг» - 102-ФЗ «Об ипотеке (залоге недвижимости)» - 218-ФЗ «О
+государственной регистрации недвижимости» - НК РФ (главы 21, 25, 34)</p>
+<p><strong>Stage 1 (2026–2028): нормативные изменения не
+требуются.</strong> Ближний контур запускается на действующей базе
+259-ФЗ + 779-П + БК РФ + ПП РФ № 158 + ГК РФ. Корректировки оформляются
+на уровне правил оператора по ст. 6 ФЗ № 259-ФЗ (согласование с Банком
+России) и договорной структуры с технологическим партнёром (Атомайз либо
+иной субъект реестра 779-П).</p>
+<p><strong>Stage 2 (горизонт 2029+): пакет 4 ФЗ-поправок.</strong>
+Условие входа — положительный track-record Stage 1 не менее 12 мес.
+промышленной эксплуатации и межведомственная позиция Минэк / Минфин /
+ВЭБ.РФ / Госдума. Состав: - 86-ФЗ — формализация института целевой
+обеспеченной эмиссии под пул залоговых ЦФА. - 259-ФЗ — категория
+«целевого инфраструктурного ЦФА» и регулирование процедуры мены. - БК РФ
+— порядок приёма Федеральным казначейством средств целевой эмиссии. - ГК
+РФ — расширение института эскроу на специальные счета Банка России для
+размещения средств целевой эмиссии. - Подзаконные акты: ПП РФ, Указание
+Банка России, совместный приказ Минфина / ЦБ / Минцифры / Росреестра /
+ФК.</p>
+<p>Этот блок описан в отдельном документе «Юридический фундамент»
+проекта.</p>
+<hr />
+<h2 id="маркетинг-и-продажи">5. Маркетинг и продажи</h2>
+<h3 id="каналы-привлечения">5.1. Каналы привлечения</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Канал</th>
+<th>Целевая аудитория</th>
+<th>Ожидаемая доля выпуска</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Партнёрские банки (B2B2C)</td>
+<td>Физлица и МСП через банковские приложения</td>
+<td>40-50%</td>
+</tr>
+<tr>
+<td>Прямой digital-канал</td>
+<td>Собственники крупных активов</td>
+<td>15-20%</td>
+</tr>
+<tr>
+<td>Партнёрские страховые</td>
+<td>Через кросс-продажи страховых продуктов</td>
+<td>10-15%</td>
+</tr>
+<tr>
+<td>Партнёрские оценщики</td>
+<td>Через профессиональное сообщество</td>
+<td>5-10%</td>
+</tr>
+<tr>
+<td>Государственный B2G-канал</td>
+<td>Через региональные и муниципальные программы</td>
+<td>15-20%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="юнит-экономика">5.2. Юнит-экономика</h3>
+<p><strong>Базовый расчёт по среднему выпуску.</strong> Средний выпуск
+ЦФА (на одного клиента физлица) — 10 млн ₽ (исходя из средней стоимости
+жилой недвижимости в крупном городе и среднего LTV 50%).</p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th style="text-align: right;">Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Средний выпуск, ₽</td>
+<td style="text-align: right;">10 000 000</td>
+</tr>
+<tr>
+<td>Комиссия за выпуск (0,5%), ₽</td>
+<td style="text-align: right;">50 000</td>
+</tr>
+<tr>
+<td>Сервисная комиссия (0,3% × 5 лет), ₽</td>
+<td style="text-align: right;">150 000</td>
+</tr>
+<tr>
+<td>Платформенный сбор (0,15%), ₽</td>
+<td style="text-align: right;">15 000</td>
+</tr>
+<tr>
+<td><strong>LTV (lifetime value), ₽</strong></td>
+<td style="text-align: right;"><strong>215 000</strong></td>
+</tr>
+<tr>
+<td><strong>CAC (cost of acquisition), оценочный, ₽</strong></td>
+<td style="text-align: right;"><strong>20 000-40 000</strong></td>
+</tr>
+<tr>
+<td><strong>LTV/CAC</strong></td>
+<td style="text-align: right;"><strong>5-10x</strong></td>
+</tr>
+<tr>
+<td>Payback CAC</td>
+<td style="text-align: right;">4-9 мес.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Юнит-экономика положительна с первого выпуска. Высокий LTV/CAC
+обусловлен длительностью обслуживания (5 лет средний срок жизни ЦФА) и
+автоматизацией процессов оценки.</p>
+</blockquote>
+<h3 id="партнёрская-модель">5.3. Партнёрская модель</h3>
+<p><strong>Банки.</strong> ЦП РСФСР интегрируется в банковские
+приложения через API. Партнёрский банк выступает каналом привлечения и
+получает revenue share (например, 30-50% от комиссии за выпуск). Это
+обеспечивает банку новую линейку сервисов без дополнительных
+регуляторных требований.</p>
+<p><strong>Страховые компании.</strong> Обязательное страхование
+заложенного имущества — встроенный модуль платформы. Страховщик получает
+премию + кросс-продажи (КАСКО, ИФЛ). Платформа берёт agency fee.</p>
+<p><strong>Оценочные компании.</strong> Аккредитованные оценщики
+проводят первичную оценку залога; платформа автоматизирует 70-80%
+процесса (массовая оценка + камеральная экспертиза). Оценщик получает
+фиксированный фи.</p>
+<p><strong>Технологические интеграторы.</strong> Внедрение платформы в
+инфраструктуру партнёра — отдельный сервис, оплачиваемый по
+фикс-проектной модели.</p>
+<h3 id="маркетинговый-план">5.4. Маркетинговый план</h3>
+<ul>
+<li>2025 (этап 0): закрытые презентации регуляторам, профильным
+комитетам Госдумы и Правительства РФ.</li>
+<li>2026 (этап 1): отраслевые мероприятия (ФинТех Форум, ПМЭФ,
+Финополис), запуск B2B-сайта, технических документов.</li>
+<li>2027-2028 (этап 2): подключение первых 5-10 банков-партнёров, запуск
+пилотных программ.</li>
+<li>2029-2030 (этап 3): массовая B2C-кампания через приложения банков,
+региональные программы B2G.</li>
+<li>2031+: международное позиционирование (БРИКС-формат), модель для
+тиражирования в дружественных юрисдикциях.</li>
+</ul>
+<hr />
+<h2 id="операционный-план">6. Операционный план</h2>
+<h3 id="расположение">6.1. Расположение</h3>
+<p><strong>Головной офис</strong> — Москва (близость к ЦБ РФ, Минфину,
+Минэку, Госдуме). Оптимальный класс — A или A+, расположение в
+финансовом квартале (Москва-Сити, Замоскворечье, Тверская).</p>
+<p><strong>ЦОД-площадки</strong> — два независимых ЦОД на территории РФ
+уровня Tier-III или выше, с географической репликацией (рекомендуется
+Москва + один из региональных центров — Санкт-Петербург, Екатеринбург
+или Новосибирск). Подключение через сертифицированных операторов связи с
+резервированными каналами.</p>
+<h3 id="технологические-партнёры">6.2. Технологические партнёры</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Категория</th>
+<th>Тип партнёра</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ЦОД и связь</td>
+<td>Сертифицированные операторы РФ (Tier-III+, с гос. лицензиями)</td>
+</tr>
+<tr>
+<td>Криптографические модули</td>
+<td>Российские сертифицированные ФСБ криптопровайдеры</td>
+</tr>
+<tr>
+<td>Системы оценки</td>
+<td>Аккредитованные оценщики РФ, в первую очередь — лидеры рынка</td>
+</tr>
+<tr>
+<td>Страхование</td>
+<td>Топ-20 страховых компаний РФ</td>
+</tr>
+<tr>
+<td>Госорганы</td>
+<td>Росреестр, ГИБДД, депозитарии, Федеральное казначейство (через
+защищённые каналы СМЭВ)</td>
+</tr>
+<tr>
+<td>Аудит</td>
+<td>Независимые аудиторы из реестра ЦБ РФ</td>
+</tr>
+</tbody>
+</table>
+<h3 id="организационная-структура">6.3. Организационная структура</h3>
+<p><strong>Уровни управления:</strong> - Совет директоров (5-9 чел.,
+включая независимых директоров). - Правление (CEO + 5-7 функциональных
+руководителей). - Функциональные направления: - Разработка и
+инфраструктура (CTO). - Операции и клиентский сервис (COO). - Финансы
+(CFO). - Юридический и комплаенс (CCO). - Управление рисками (CRO). - BD
+и партнёрства (CBO/CRO). - Маркетинг и PR (CMO). - HR и культура
+(CHRO).</p>
+<h3 id="штатное-расписание-fte-по-годам">6.4. Штатное расписание (FTE по
+годам)</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr>
+<th>Год</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FTE</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">240</td>
+<td style="text-align: right;">270</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">330</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">370</td>
+</tr>
+</tbody>
+</table>
+<p>Структура к концу года 2 (120 FTE): - Разработка и инфраструктура —
+50 чел. (42%) - Операции и клиентский сервис — 20 чел. (17%) -
+Юридический и комплаенс — 15 чел. (12,5%) - Управление рисками — 10 чел.
+(8%) - BD и партнёрства — 10 чел. (8%) - Финансы — 8 чел. (7%) -
+Маркетинг и PR — 4 чел. (3%) - HR и культура — 3 чел. (2,5%)</p>
+<hr />
+<h2 id="технологический-план">7. Технологический план</h2>
+<p>Технологический контур ЦП РСФСР описан в отдельном документе
+«Техническая документация со ссылками на ФЗ и инструкции ЦБ РФ» (папка
+<code>01_Техническая_документация</code>).</p>
+<p>Ключевые архитектурные принципы: 1. Микросервисная архитектура на
+стеке российских технологий (Astra Linux, СУБД из реестра ПО, российские
+криптомодули). 2. Гео-репликация между двумя ЦОД с RPO ≤ 5 мин, RTO ≤ 30
+мин. 3. Многоуровневая модель безопасности (соответствие 152-ФЗ,
+требованиям ФСТЭК, ГОСТ). 4. Интеграционная шина для подключения банков,
+страховых, оценщиков, госорганов. 5. Цифровая идентификация — Госуслуги,
+СБП (для физлиц); ЭП и ЭДО — для юрлиц. 6. Распределённый реестр для
+регистрации ЦФА (на сертифицированной российской платформе). 7. Полное
+соответствие требованиям ЦБ РФ к операторам ЦФА (положения, инструкции,
+нормативы).</p>
+<h3 id="готовность-клиентской-части-по-состоянию-на-2025-г.">Готовность
+клиентской части (по состоянию на 2025 г.)</h3>
+<p>К моменту начала переговоров с Банком России и инвесторами клиентская
+часть платформы <strong>полностью разработана</strong>:</p>
+<ul>
+<li><strong>Мобильное приложение в формате Progressive Web App</strong>
+— 23 экрана, полный жизненный цикл из 19 шагов автора (от регистрации до
+мены ЦФА), 4 темы оформления, 4 языка (русский, английский, французский,
+арабский с RTL), Service Worker для оффлайн-режима, manifest.json для
+установки на устройство.</li>
+<li><strong>Конструкторская документация по ГОСТ 19</strong> — 12
+документов от ТЗ (19.201) до ведомости эксплуатационных документов
+(19.507), готовы к подаче в реестр Минцифры (ПП РФ №1236) и для
+сертификации ФСТЭК / ФСБ.</li>
+<li><strong>Платформенные сборки через Capacitor 6</strong> —
+конфигурация и инструкции для упаковки в нативные приложения Android
+(AAB для RuStore и Google Play), iOS (App Store), Windows (MSIX для
+Microsoft Store).</li>
+<li><strong>Публикационный пакет RuStore</strong> — описание для
+каталога, политика конфиденциальности (по 152-ФЗ), условия
+использования, промо-материалы, чек-лист публикации.</li>
+</ul>
+<p>Готовность клиентской части сокращает срок выхода на пилотный контур
+ориентировочно на 3 месяца и снижает технологический риск разработки.
+Это учтено в обновлённой международной оценке проекта (Reasoned Value
+pre-money — $80 млн в базовой зоне).</p>
+<hr />
+<h2 id="дорожная-карта">8. Дорожная карта</h2>
+<h3 id="подготовка">2025-2026 — Подготовка</h3>
+<ul>
+<li>Регистрация юридического лица.</li>
+<li>Привлечение стартового финансирования (1,3 млрд ₽).</li>
+<li>Формирование команды (40→120 FTE).</li>
+<li>Разработка платформы (этап 1): ядро, модули оценки, регистрации
+обременения, выпуска ЦФА.</li>
+<li>Юридическое сопровождение поправок в 86-ФЗ и 259-ФЗ.</li>
+<li>Получение профильной лицензии ЦБ РФ.</li>
+<li>Аккредитация в реестре операторов информационных систем ЦБ РФ.</li>
+</ul>
+<h3 id="пилот">2026-2027 — Пилот</h3>
+<ul>
+<li>Запуск пилотных программ с 2-3 банками-партнёрами.</li>
+<li>Первые выпуски ЦФА (объём ~130 млрд ₽ в 2026, ~540 млрд ₽ в
+2027).</li>
+<li>Отработка операционных процессов на ограниченной выборке.</li>
+<li>Интеграция с Росреестром, депозитариями, Федеральным
+казначейством.</li>
+<li>Подключение первых страховых партнёров и оценочных компаний.</li>
+</ul>
+<h3 id="тиражирование">2027+ — Тиражирование</h3>
+<ul>
+<li>Расширение партнёрской сети (банки, регионы, отрасли).</li>
+<li>Масштабирование выпусков (ежегодный объём от 1,4 трлн ₽ в 2028 до
+7,1 трлн ₽ в 2034).</li>
+<li>Подключение государственных программ финансирования через
+эскроу-контур ЦБ РФ.</li>
+<li>Запуск B2C-каналов через банковские приложения.</li>
+<li>Подготовка к экспорту модели в дружественные юрисдикции
+(БРИКС-формат).</li>
+</ul>
+<hr />
+<h2 id="финансовый-план">9. Финансовый план</h2>
+<p>Полный расчёт — в документе
+<code>Финансовая_модель_ЦП_РСФСР.md</code> и сопроводительной записке
+<code>Финмодель_допущения_и_расчёты.md</code>.</p>
+<h3 id="краткий-резюме-базового-сценария">9.1. Краткий резюме базового
+сценария</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th style="text-align: right;">Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NPV @ WACC 30% (с TV, g=4%)</td>
+<td style="text-align: right;">51,2 млрд ₽</td>
+</tr>
+<tr>
+<td>IRR</td>
+<td style="text-align: right;">62% (project-level)</td>
+</tr>
+<tr>
+<td>Payback</td>
+<td style="text-align: right;">2,8 года</td>
+</tr>
+<tr>
+<td>Пиковая потребность в финансировании</td>
+<td style="text-align: right;">1,3 млрд ₽</td>
+</tr>
+<tr>
+<td>Выручка 2029</td>
+<td style="text-align: right;">37,5 млрд ₽</td>
+</tr>
+<tr>
+<td>Выручка 2034</td>
+<td style="text-align: right;">137,9 млрд ₽</td>
+</tr>
+<tr>
+<td>EBITDA 2034</td>
+<td style="text-align: right;">133,6 млрд ₽</td>
+</tr>
+<tr>
+<td>Маржа EBITDA 2034</td>
+<td style="text-align: right;">74,8%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="сценарии">9.2. Сценарии</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr>
+<th>Сценарий</th>
+<th style="text-align: right;">NPV полная (20 лет + TV), млрд ₽</th>
+<th style="text-align: right;">IRR project-level, %</th>
+<th style="text-align: right;">Payback project-level, лет</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Консервативный</td>
+<td style="text-align: right;">22,0</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">3,8</td>
+</tr>
+<tr>
+<td>Базовый</td>
+<td style="text-align: right;">51,2</td>
+<td style="text-align: right;">161</td>
+<td style="text-align: right;">3,24</td>
+</tr>
+<tr>
+<td>Оптимистичный</td>
+<td style="text-align: right;">82,0</td>
+<td style="text-align: right;">195</td>
+<td style="text-align: right;">2,7</td>
+</tr>
+</tbody>
+</table>
+<p>Investor-level (доля 15,8 %, exit Y7): IRR Base = 28,6 %; Payback
+(cash distribution) = 4,21 года. Project-level vs investor-level — две
+разные оси: первая отвечает на «сколько стоит проект целиком», вторая —
+«сколько вернёт seed-инвестор за свой horizon».</p>
+<h3 id="потребность-в-финансировании-и-использование-средств">9.3.
+Потребность в финансировании и использование средств</h3>
+<p>Стартовая потребность — 1,3 млрд ₽ на 18 месяцев:</p>
+<table>
+<thead>
+<tr>
+<th>Направление</th>
+<th style="text-align: right;">млн ₽</th>
+<th style="text-align: right;">Доля</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CapEx (платформа, ЦОДы, лицензии)</td>
+<td style="text-align: right;">850</td>
+<td style="text-align: right;">65%</td>
+</tr>
+<tr>
+<td>OpEx первого года</td>
+<td style="text-align: right;">380</td>
+<td style="text-align: right;">29%</td>
+</tr>
+<tr>
+<td>Подушка ликвидности</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">6%</td>
+</tr>
+<tr>
+<td><strong>ИТОГО</strong></td>
+<td style="text-align: right;"><strong>1 300</strong></td>
+<td style="text-align: right;"><strong>100%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Структура источников: - Равити от стратегического инвестора и/или
+госкорпорации развития — 70-100%. - Долговое финансирование — 0-30%
+(после подтверждения регуляторного статуса).</p>
+<h3 id="exit-стратегия-для-инвесторов">9.4. Exit-стратегия для
+инвесторов</h3>
+<p>Варианты на горизонте 5-10 лет: 1. <strong>IPO</strong> — листинг на
+Московской бирже после выхода на устойчивую прибыль (потенциально с
+2030-2031 года). 2. <strong>Стратегическая продажа</strong> —
+приобретение пакета крупной финансовой группой или госкорпорацией. 3.
+<strong>Buy-back</strong> — выкуп доли инвестора компанией из
+дивидендного потока. 4. <strong>Дивидендная стратегия</strong> — выплата
+30-50% чистой прибыли с 2028 года, бессрочное удержание акций (для
+стратегических инвесторов).</p>
+<hr />
+<h2 id="анализ-рисков">10. Анализ рисков</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Категория</th>
+<th>Описание</th>
+<th>Probability</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Правовой Stage 1</strong></td>
+<td>Препятствия согласования правил оператора по ст. 6 ФЗ № 259-ФЗ или
+критерия Указания ЦБ № 4336-У</td>
+<td>Низкая</td>
+<td>Существенный</td>
+<td>Технологическое партнёрство с действующим оператором информационной
+системы выпуска ЦФА по 779-П: лицензия не передаётся, ЦП РСФСР работает
+как front-end / агент. Согласования с ЦБ касаются только правил
+информационной системы партнёра, не лицензионного перечня</td>
+</tr>
+<tr>
+<td><strong>Правовой Stage 2</strong></td>
+<td>Пакет 4 ФЗ-поправок (86-ФЗ, 259-ФЗ, БК РФ, ГК РФ) не принимается на
+горизонте 2029+</td>
+<td>Средняя</td>
+<td>Существенный (только для Stage 2)</td>
+<td>Stage 2 не входит в ближний инвестиционный roadmap; реализуется
+после положительного track-record Stage 1 ≥ 12 мес. и межведомственной
+позиции Минэк / Минфин / ВЭБ.РФ / Госдума. Stage 1 защитим без Stage
+2</td>
+</tr>
+<tr>
+<td><strong>Регуляторный</strong></td>
+<td>Препятствия включения технологического партнёра в реестр операторов
+779-П или приостановление лицензии партнёра</td>
+<td>Низкая</td>
+<td>Существенный</td>
+<td>Множественный пул потенциальных партнёров (Атомайз, Сбер ЦФА, Альфа
+ЦФА, Мастерчейн); подача собственной заявки в реестр 779-П как
+параллельный трек после T+12 мес. wedge-pilot</td>
+</tr>
+<tr>
+<td><strong>Рыночный</strong></td>
+<td>Низкое проникновение — собственники не доверяют новому
+инструменту</td>
+<td>Средняя</td>
+<td>Существенный</td>
+<td>Старт с госпрограмм и крупных собственников (B2B/B2G) для
+формирования референсных кейсов; широкая образовательная кампания;
+интеграция в банковские приложения для снижения порога входа</td>
+</tr>
+<tr>
+<td><strong>Технологический</strong></td>
+<td>Сбой платформы, потеря данных, кибератака</td>
+<td>Низкая</td>
+<td>Существенный</td>
+<td>Two-active ЦОД с гео-репликацией; ежедневный бэкап с тестированием
+восстановления; сертифицированные ФСБ криптомодули; постоянный пентест;
+SOC 24/7</td>
+</tr>
+<tr>
+<td><strong>Операционный</strong></td>
+<td>Ошибки оценки залога, споры с собственниками</td>
+<td>Средняя</td>
+<td>Умеренный</td>
+<td>Многоуровневая оценка (массовая + камеральная + независимый
+оценщик), страхование ответственности, прозрачные регламенты, досудебный
+арбитраж</td>
+</tr>
+<tr>
+<td><strong>Репутационный</strong></td>
+<td>Громкий инцидент (потеря средств клиента, корруп. скандал)</td>
+<td>Низкая</td>
+<td>Критический</td>
+<td>Жёсткие комплаенс-процедуры, антикоррупционная политика, прозрачная
+отчётность, регулярный внешний аудит, PR-стратегия кризисных
+коммуникаций</td>
+</tr>
+<tr>
+<td><strong>Макроэкономический</strong></td>
+<td>Резкий рост ключевой ставки, обвал рынка недвижимости</td>
+<td>Средняя</td>
+<td>Существенный</td>
+<td>Гибкая модель тарификации (привязка к КС), консервативные
+LTV-нормативы (50% базовый, до 70% максимум), стресс-тесты
+квартально</td>
+</tr>
+<tr>
+<td><strong>Конкурентный</strong></td>
+<td>Появление второго оператора в той же категории</td>
+<td>Низкая (до 5 лет), Средняя (после)</td>
+<td>Умеренный</td>
+<td>Глубокая интеграция с регулятором и партнёрами как естественный
+moat; быстрое масштабирование в первые 3-5 лет; защита ноу-хау</td>
+</tr>
+<tr>
+<td><strong>Кадровый</strong></td>
+<td>Дефицит квалифицированных специалистов в финтехе</td>
+<td>Средняя</td>
+<td>Умеренный</td>
+<td>Опционная программа, конкурентная компенсация, корпоративная
+R&amp;D-программа с ведущими вузами, удалённая работа с регионами</td>
+</tr>
+<tr>
+<td><strong>Каннибализация цифровым рублём (340-ФЗ)</strong></td>
+<td>ЦБ запускает целевую программу эмиссии цифрового рубля без
+посредника, либо интегрирует залоговый-ЦФА в платформу цифрового рубля
+через ст. 30.6 86-ФЗ</td>
+<td>Средняя (15–35%)</td>
+<td>Существенный</td>
+<td>Три сценария mitigation: (а) техпартнёрство с ЦБ через регуляторную
+песочницу 258-ФЗ; (б) позиционирование ЦП РСФСР как official front-end
+через консолидированную межведомственную позицию Минэк/Минфин/ВЭБ.РФ;
+(в) специализированная надстройка для целевых инфраструктурных ЦФА под
+залог — категория, которую платформа цифрового рубля как универсальный
+расчётный инструмент не покрывает</td>
+</tr>
+<tr>
+<td><strong>Копирование регулятором</strong></td>
+<td>Государство реализует ту же логику через Атомайз / ВЭБ.РФ / Сбер
+напрямую, без посредника ЦП РСФСР</td>
+<td>Низкая-средняя</td>
+<td>Существенный</td>
+<td>Четыре защитных контура: (1) network effects — пул залогодателей +
+банк-партнёр + страховщик + оценщик + регион формирует двусторонний
+эффект Метcalfe; (2) IP-portfolio — депонирование №4011265 +
+Роспатент-регистрация программы для ЭВМ (ст. 1262 ГК) + ноу-хау (ст.
+1465 ГК) + товарный знак (ст. 1477 ГК) + патент на способ мены ЦФА (гл.
+72 ГК, заявка); (3) first-mover advantage 24–30 мес. в категории
+целевого инфраструктурного ЦФА с интеграцией ВЭБ.РФ ФПФ; (4) договорный
+moat — эксклюзивный LoI / MSA с действующим оператором 779-П (Атомайз)
+на 3 года в категории «целевые инфраструктурные ЦФА под залог»</td>
+</tr>
+</tbody>
+</table>
+<p>Карта рисков пересматривается ежеквартально. <strong>Stage 1 защитим
+без поправок ФЗ.</strong> Главный регуляторный риск Stage 2 (принятие
+пакета 4 ФЗ) — детально разобран в документе «Юридический фундамент» §
+8.2.</p>
+<hr />
+<h2 id="команда">11. Команда</h2>
+<h3 id="автор-концепта-и-инициатор-проекта">11.1. Автор концепта и
+инициатор проекта</h3>
+<p><strong>Кагиров Абдул-Хаким Ахмадович</strong> — автор и
+правообладатель ноу-хау ЦП РСФСР (свидетельство о депонировании №4011265
+от 19.12.2024). Концепция платформы, описанная в настоящем документе,
+разработана им и защищена в установленном порядке.</p>
+<h3 id="формирование-исполнительной-команды">11.2. Формирование
+исполнительной команды</h3>
+<p>На этапе старта (2025) формируется ядро команды: - CEO — управляющий
+партнёр с опытом запуска инфраструктурных финтех-проектов. - CTO —
+технический директор с опытом построения банковских платформ. - CCO —
+комплаенс-офицер с опытом работы в надзорных подразделениях ЦБ РФ. - CFO
+— финансовый директор уровня крупной финкорпорации. - Совет директоров —
+5-9 чел., с обязательным присутствием независимых директоров и
+представителей ключевых акционеров.</p>
+<p>Конкретные фамилии не приводятся: подбор команды — задача стартового
+этапа, формируется параллельно с привлечением стратегического инвестора.
+Все назначения проходят согласование с регулятором (ЦБ РФ предъявляет
+требования к деловой репутации и квалификации руководителей
+операторов).</p>
+<h3 id="защита-правообладателя-ноу-хау">11.3. Защита правообладателя
+ноу-хау</h3>
+<p>После внесения ноу-хау автора в уставный капитал АО-оператора
+фиксируются защитные механизмы (детально —
+<code>_Мастер/Концепт.md</code> § 1-quater):</p>
+<ol type="1">
+<li><strong>Неотъемлемая позиция автора Кагирова А.А.А. в Совете
+директоров</strong> до Series B (≥ 2031), независимо от размера доли
+инвестора.</li>
+<li><strong>Защитные ковенанты в Shareholders Agreement:</strong>
+drag-along — только с участием правообладателя; tag-along — 100% защита
+от forced exit; anti-dilution full ratchet до Series B; запрет на
+отчуждение прав на ноу-хау без согласия правообладателя; vesting
+институционального акционера 4 года с cliff 1 год.</li>
+<li><strong>Реверс ноу-хау</strong> при ликвидации / банкротстве /
+враждебном выкупе: исключительные права возвращаются автору
+безусловно.</li>
+<li><strong>Royalty-стрим</strong> — 2% от выручки оператора в адрес
+правообладателя как лицензиара (наряду с дивидендами по акциям).</li>
+</ol>
+<h3 id="ebitda-маржа-bridge-2030-2034">11.4. EBITDA-маржа: bridge 2030 →
+2034</h3>
+<p><code>Wedge_pilot-light.md</code> § 5.2 даёт траекторию EBITDA-маржи:
+2027 = 20%, 2028 = 40%, 2029 = 55%, 2030 = 65%. Целевая TV-маржа 2034 =
+74,8%. Разрыв 65% → 74,8% (+9,8 п.п. за 4 года) объясняется тремя
+факторами: <strong>(а)</strong> обращаемый стек ЦФА к 2034 ≈ ₽ 26,6 трлн
+даёт высокую долю сервисной комиссии (0,3% × низкая marginal OpEx);
+<strong>(б)</strong> автоматизация compliance/KYC через интеграции с
+ЕСИА/ЕБС/ГИС ГМП → снижение incremental cost-to-serve до ~3% от выручки
+2034 vs 8% в 2030; <strong>(в)</strong> OpEx-добавки на
+оценщиков/страховщиков и юр.сопровождение становятся фиксированными по
+объёму (≈ 5% от выручки) после достижения зрелого пула партнёров.
+Подробности — <code>_Мастер/Единые_показатели_v2.md</code> § 4
+(FCF-серия) и sheet «EBITDA bridge 2030-2034» в
+<code>_shared/finmodel.js</code>.</p>
+<hr />
+<h2 id="социально-экономический-эффект">12. Социально-экономический
+эффект</h2>
+<h3 id="влияние-на-ввп">12.1. Влияние на ВВП</h3>
+<p>Объём финансирования, привлечённого через ЦП РСФСР, в базовом
+сценарии: - 2026: 130 млрд ₽ выпуска → ~130 млрд ₽ инфраструктурного
+фондирования через Фабрику ВЭБ.РФ + Федеральное казначейство (Stage 1) →
+реинвестируется в нацпроекты. - 2029: 2,9 трлн ₽ годового выпуска. На
+горизонте Stage 2 (после принятия пакета 4 ФЗ-поправок) — переход на
+модель целевой обеспеченной эмиссии Банка России. - 2034: 7,1 трлн ₽
+годового выпуска.</p>
+<p>При мультипликаторе инфраструктурных инвестиций 1,8-2,3 (стандартный
+диапазон для российской экономики; Минэк РФ применяет 1,9-2,1 для оценки
+эффектов нацпроектов) ожидаемый вклад в ВВП от инвестиций ЦП РСФСР: -
+2029: 5,2-6,7 трлн ₽ дополнительной экономической активности. - 2034:
+12,8-16,4 трлн ₽ дополнительной экономической активности.</p>
+<p>Это сопоставимо с долей 5-8% от номинального ВВП РФ (для 2034
+года).</p>
+<h3 id="влияние-на-нацпроекты">12.2. Влияние на нацпроекты</h3>
+<p>ЦП РСФСР обеспечивает целевое финансирование национальных проектов
+без увеличения бюджетной нагрузки. Сокращение очерёдности финансирования
+за счёт мобилизации частной залоговой массы — ключевой эффект, прямо
+указанный в 6-м преимуществе концепта автора.</p>
+<p>Потенциальные целевые направления (определяются профильными ФЗ и
+постановлениями Правительства): - Тяжёлая промышленность и
+машиностроение. - Импортозамещение в критических отраслях. -
+Здравоохранение (модернизация инфраструктуры, оборудование). - Наука и
+образование. - Транспортная инфраструктура (мосты, дороги, логистические
+хабы). - Энергетика и ЖКХ.</p>
+<h3 id="влияние-на-спящие-активы">12.3. Влияние на «спящие» активы</h3>
+<p>По 4-му преимуществу концепта — привлечение «спящих» частных активов
+в экономический оборот.</p>
+<p>Сейчас порядка 80% жилой и значительная доля коммерческой
+недвижимости в РФ не используется как залоговый инструмент по
+объективным причинам (бюрократия оформления, длительность процедур,
+отсутствие подходящего продукта). ЦП РСФСР снимает эти барьеры за счёт
+автоматизации и нового продуктового контура. К году 10 — до 20% от
+консервативной залоговой ёмкости в обращении (5 трлн ₽), что
+соответствует мобилизации активов порядка 10-20 млн домохозяйств и
+предприятий РФ.</p>
+<h3 id="дополнительный-доход-собственников">12.4. Дополнительный доход
+собственников</h3>
+<p>По 9-му пункту концепта — финансовое вознаграждение собственнику
+залогового имущества.</p>
+<p>При модели вознаграждения собственника, например, 1-2% годовых от
+номинала ЦФА (точная ставка определяется регуляторными нормативами и
+условиями договора с оператором), совокупная выплата собственникам к
+году 10: - Объём стека ЦФА: 26,6 трлн ₽. - При ставке 1% — 266 млрд ₽
+дополнительных доходов собственников ежегодно. - При ставке 2% — 532
+млрд ₽ ежегодно.</p>
+<p>Это сопоставимо с бюджетом нескольких регионов РФ и обеспечивает
+значимый «вторичный» вклад в потребительский спрос и налоговую базу.</p>
+<h3 id="влияние-на-финансовую-систему">12.5. Влияние на финансовую
+систему</h3>
+<ul>
+<li>Расширение базы инструментов рынка ценных бумаг (новый класс
+надёжных активов).</li>
+<li>Возможности диверсификации портфелей пенсионных и страховых
+резервов.</li>
+<li>Развитие смежных сервисов (оценка, страхование, юр. сопровождение) —
+дополнительные рабочие места в финансовом секторе.</li>
+<li>Импульс к развитию российского финтеха и регуляторных
+технологий.</li>
+</ul>
+<h3 id="инфляционный-режим">12.6. Инфляционный режим</h3>
+<p>По 10-му пункту концепта — эмиссия идёт под полностью обеспеченные
+активы. Это принципиально отличается от «вертолётной» эмиссии: каждый
+выпущенный рубль обеспечен реальным имуществом, оценённым с дисконтом.
+Инфляционный эффект — нейтральный или дезинфляционный (рост предложения
+товаров и услуг через нацпроекты компенсирует увеличение денежной
+массы).</p>
+<hr />
+<h2 id="gtm-sequencing-и-champion-map-t0t180">13. GTM-sequencing и
+Champion-map (T+0…T+180)</h2>
+<p>Wedge-логика проекта требует обхода Банка России на первом шаге: ЦБ —
+последняя инстанция Stage 1 (включение оператора в реестр 779-П).
+Ключевые согласования проводятся через Минэк → Минфин → ВЭБ.РФ → Госдума
+→ регион → Атомайз. Поимённый Champion-map (синхронизирован с
+<code>_Мастер/Концепт.md § 1-ter</code>):</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Этап</th>
+<th>Лицо</th>
+<th>Орган</th>
+<th>Цель</th>
+<th>Артефакт-обёртка</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T+30</td>
+<td><strong>Максим Решетников</strong></td>
+<td>Минэк, министр</td>
+<td>Wedge-pilot Stage 1 как инструмент ускорения нацпроектов; named
+sponsor</td>
+<td>Бизнес-план + Pitch_deck + Wedge_pilot-light</td>
+</tr>
+<tr>
+<td>T+30</td>
+<td><strong>Аппарат Правительства РФ</strong></td>
+<td>через профильного советника по цифровой экономике</td>
+<td>Архитектурный концепт; межведомственная рабочая группа</td>
+<td>Концепт § 1-bis + Юр.фундамент § 8.1</td>
+</tr>
+<tr>
+<td>T+30</td>
+<td><strong>АО «Атомайз»</strong></td>
+<td>через рекомендованного представителя</td>
+<td>LoI о технологическом партнёрстве: оператор сделки 779-П + ЦП РСФСР
+front-end</td>
+<td>Pre-meeting_briefs/01_LoI_Атомайз.md</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td><strong>Иван Колычев</strong></td>
+<td>Минфин, замминистра (долг)</td>
+<td>Внебюджетный канал; кейс снижения давления на ОФЗ</td>
+<td>Финмодель v3 + Бизнес-план</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td><strong>Владимир Сазанов</strong></td>
+<td>Минфин, замминистра (налоги)</td>
+<td>Налоговая позиция по ЦФА (ст. 34.2 НК; пп. 12.2 п. 2 ст. 149
+НК)</td>
+<td>Юр.фундамент § 5 + запрос ст. 34.2 НК</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td><strong>ВЭБ.РФ ФПФ</strong></td>
+<td>через рекомендованного представителя Минэка</td>
+<td>Consultative letter по ПП РФ № 158</td>
+<td>Pre-meeting_briefs/02_Consultative_letter_ВЭБ.РФ.md</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td><strong>Газпромбанк / ПСБ</strong></td>
+<td>через рекомендованного представителя Минэка</td>
+<td>MoU о роли расчётного банка пилота</td>
+<td>Pre-meeting_briefs/04_MoU_GPB_ПСБ.md</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td><strong>Рустам Минниханов</strong></td>
+<td>Республика Татарстан</td>
+<td>MoU о муниципальном пилоте: 50–100 объектов, ₽ 5–10 млрд</td>
+<td>Pre-meeting_briefs/03_MoU_Татарстан.md</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td><strong>Александр Моор</strong></td>
+<td>Тюменская обл. (резерв)</td>
+<td>то же</td>
+<td>то же</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td><strong>Анатолий Аксаков</strong></td>
+<td>Госдума, Комитет по фин. рынку</td>
+<td>Консультация по 259-ФЗ для Stage 1; horizon Stage 2 — пакет 4
+ФЗ</td>
+<td>Доклад для ЦБ + Концепт</td>
+</tr>
+<tr>
+<td>T+180+</td>
+<td><strong>Банк России</strong></td>
+<td>через консолидированную межведомственную позицию</td>
+<td>Реестр операторов ИС ЦФА по 779-П (Stage 1)</td>
+<td>Юр.фундамент § 8.1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Success metrics для перехода Stage 1 → Stage 2:</strong>
+доходность ≥ 18% годовых для собственников активов; ≥ 8 регионов в
+системе; AUM ≥ ₽ 50 млрд к концу 2027; нет инцидентов класса 779-П § 9
+(защита прав инвесторов).</p>
+<p>Pre-meeting brief’ы по каждому champion’у — в
+<code>02_Юридический_фундамент/Pre-meeting_briefs/</code> (4 драфта
+готовы).</p>
+<hr />
+<h2 id="приложения">14. Приложения</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Документ</th>
+<th>Размещение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Финансовая модель</td>
+<td><code>03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.md</code></td>
+</tr>
+<tr>
+<td>Пояснения к финмодели</td>
+<td><code>03_Финансовая_модель/Финмодель_допущения_и_расчёты.md</code></td>
+</tr>
+<tr>
+<td>Концепт автора</td>
+<td><code>_Мастер/Концепт.md</code></td>
+</tr>
+<tr>
+<td>Юридический фундамент</td>
+<td><code>02_Юридический_фундамент/</code> (отдельный документ)</td>
+</tr>
+<tr>
+<td>Техническое решение</td>
+<td><code>01_Техническая_документация/</code> (отдельный документ)</td>
+</tr>
+<tr>
+<td>Pre-meeting brief’ы</td>
+<td><code>02_Юридический_фундамент/Pre-meeting_briefs/</code></td>
+</tr>
+<tr>
+<td>Свидетельство о депонировании</td>
+<td>№4011265 от 19.12.2024 (хранится у автора)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Дата:</strong> 24.05.2026 (refactor пост-Горизонт-II:
+добавлен § 13 GTM-sequencing). <strong>Источники:</strong> концепция
+автора (Кагиров А.-Х.А., свид. №4011265 от 19.12.2024); 86-ФЗ, 259-ФЗ,
+НК РФ, основные направления ДКП Банка России; данные Росстата. Сторонние
+материалы не использовались.</p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

@@ -1,0 +1,354 @@
+﻿<!doctype html>
+<html lang="ru" data-theme="daylight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Руководство по установке · ЦП РСФСР</title>
+<meta name="theme-color" content="#0B2B5C">
+<link rel="stylesheet" href="../../_shared/brand.css">
+<style>
+/* Document-specific styles */
+body { padding-top: 80px; }
+.doc-wrap { max-width: 880px; margin: 0 auto; padding: 48px 24px 96px; }
+.doc-header {
+  padding-bottom: 24px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.doc-header .eyebrow { margin-bottom: 12px; }
+.doc-header h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--primary); margin-bottom: 12px; }
+.doc-header p { color: var(--fg-mute); font-size: .9375rem; margin: 0; }
+.doc-content h1, .doc-content h2, .doc-content h3, .doc-content h4 { color: var(--primary); margin-top: 2em; margin-bottom: .5em; }
+.doc-content h1 { font-size: 1.875rem; }
+.doc-content h2 { font-size: 1.5rem; padding-bottom: 6px; border-bottom: 1px solid var(--border-soft); }
+.doc-content h3 { font-size: 1.25rem; }
+.doc-content h4 { font-size: 1.0625rem; color: var(--fg); }
+.doc-content p { line-height: 1.7; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content ul, .doc-content ol { line-height: 1.7; padding-left: 1.5em; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content li { margin-bottom: .35em; }
+.doc-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 12px 20px;
+  margin: 1em 0;
+  background: var(--bg-soft);
+  border-radius: 0 8px 8px 0;
+  color: var(--fg-soft);
+}
+.doc-content code {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg-soft);
+  padding: 2px 6px; border-radius: 4px;
+  font-size: .875em; color: var(--primary);
+}
+.doc-content pre {
+  background: var(--bg-soft); padding: 16px; border-radius: 10px;
+  overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: .875rem;
+  border: 1px solid var(--border-soft); margin: 1em 0;
+}
+.doc-content table {
+  width: 100%; border-collapse: collapse; margin: 1.5em 0;
+  background: var(--card-bg); border: 1px solid var(--border-soft);
+  border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-1);
+}
+.doc-content table th {
+  background: var(--primary); color: var(--primary-on);
+  text-align: left; padding: 12px 16px; font-weight: 600;
+  font-size: .8125rem; letter-spacing: .04em; text-transform: uppercase;
+}
+.doc-content table td {
+  padding: 10px 16px; border-bottom: 1px solid var(--border-soft);
+  font-size: .9375rem; color: var(--fg-soft);
+}
+.doc-content table tr:last-child td { border-bottom: none; }
+.doc-content table tr:hover td { background: var(--bg-soft); }
+.doc-content hr {
+  border: none; height: 1px; background: var(--border-soft); margin: 2.5em 0;
+}
+.doc-content a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+.doc-content a:hover { color: var(--accent); }
+.doc-content strong { color: var(--fg); font-weight: 700; }
+
+.doc-actions {
+  display: flex; gap: 10px; margin-top: 32px; flex-wrap: wrap;
+}
+
+/* Floating top button */
+.totop {
+  position: fixed; bottom: 24px; right: 24px; z-index: 50;
+  background: var(--primary); color: var(--primary-on);
+  border: none; border-radius: 50%; width: 48px; height: 48px;
+  cursor: pointer; box-shadow: var(--shadow-3);
+  display: none; font-size: 1.25rem;
+  transition: transform .2s var(--ease);
+}
+.totop:hover { transform: translateY(-2px); }
+.totop.show { display: grid; place-items: center; }
+[dir="rtl"] .totop { right: auto; left: 24px; }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div class="scroll-progress"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="../../07_Презентации/Большая_презентация/index.html"><span class="brand-mark">Р</span><span data-i18n="brand.name">ЦП РСФСР</span></a>
+    <nav class="topbar-nav">
+      <a href="../../07_Презентации/Большая_презентация/index.html#about" data-i18n="nav.about">О платформе</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#hub" data-i18n="nav.hub">Документы</a>
+      <a href="../../08_Веб-сайт/HTML_основной/index.html">Сайт</a>
+      <a href="../../07_Презентации/Малая_презентация/index.html">Презентация</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#contacts" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+    <div class="topbar-actions">
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-i18n-btn="ru">RU</button>
+        <button class="tbtn" data-i18n-btn="en">EN</button>
+        <button class="tbtn" data-i18n-btn="fr">FR</button>
+        <button class="tbtn" data-i18n-btn="ar">عر</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-theme-btn="daylight" aria-label="Дневная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+        <button class="tbtn" data-theme-btn="midnight" aria-label="Тёмная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="tbtn" data-theme-btn="sepia">◐</button>
+        <button class="tbtn" data-theme-btn="contrast">A11Y</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn" data-font-action="dec">A−</button>
+        <button class="tbtn" data-font-action="reset">A</button>
+        <button class="tbtn" data-font-action="inc">A+</button>
+      </div>
+      <button class="tbtn tbtn-burger">≡</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="eyebrow">Конструкторская документация · ЦП РСФСР ·
+МП</span>
+      <h1>Руководство по установке</h1>
+      <p>Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 · 19.12.2024 · ЦП РСФСР</p>
+    </header>
+    <article class="doc-content">
+<h1 id="руководство-по-установке-и-администрированию">Руководство по
+установке и администрированию</h1>
+<h2 id="цп-рсфср-мобильное-приложение">ЦП РСФСР — мобильное
+приложение</h2>
+<p><strong>Условное обозначение:</strong> РСФСР.МП.05.РУ
+<strong>Стандарт:</strong> ГОСТ 19.503-79</p>
+<hr />
+<h2 id="общие-сведения-о-программе">1. Общие сведения о программе</h2>
+<p>Приложение поставляется в формате установочных пакетов под каждую
+целевую платформу. Дополнительно доступно в режиме PWA — установка из
+браузера без посредничества стора.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Платформа</th>
+<th>Пакет</th>
+<th>Размер</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Android</td>
+<td><code>.apk</code> / <code>.aab</code></td>
+<td>до 30 МБ</td>
+</tr>
+<tr>
+<td>iOS</td>
+<td><code>.ipa</code></td>
+<td>до 35 МБ</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td><code>.msix</code> / <code>.appx</code></td>
+<td>до 40 МБ</td>
+</tr>
+<tr>
+<td>PWA</td>
+<td><code>manifest.json</code> + <code>index.html</code> +
+<code>sw.js</code></td>
+<td>до 1 МБ initial download</td>
+</tr>
+</tbody>
+</table>
+<h2 id="установка-программы">2. Установка программы</h2>
+<h3 id="установка-из-rustore-android-рекомендуемо-для-рф">2.1. Установка
+из RuStore (Android, рекомендуемо для РФ)</h3>
+<ol type="1">
+<li>Откройте RuStore на устройстве.</li>
+<li>В поиске введите «ЦП РСФСР» или «Российский Сервис
+Финансирования».</li>
+<li>Нажмите «Установить».</li>
+<li>Дождитесь загрузки и установки (~30 МБ).</li>
+<li>Откройте приложение по иконке на рабочем столе.</li>
+</ol>
+<h4 id="минимальные-требования">Минимальные требования</h4>
+<ul>
+<li>Android 9 (API 28) и выше.</li>
+<li>200 МБ свободной памяти.</li>
+</ul>
+<h3 id="установка-из-app-store-ios">2.2. Установка из App Store
+(iOS)</h3>
+<ol type="1">
+<li>Откройте App Store.</li>
+<li>В поиске введите «ЦП РСФСР».</li>
+<li>Нажмите «Загрузить».</li>
+<li>Подтвердите Touch ID / Face ID / паролем Apple ID.</li>
+<li>Дождитесь установки.</li>
+</ol>
+<h4 id="минимальные-требования-1">Минимальные требования</h4>
+<ul>
+<li>iOS 15 и выше.</li>
+<li>200 МБ свободной памяти.</li>
+</ul>
+<h3 id="установка-из-google-play-android">2.3. Установка из Google Play
+(Android)</h3>
+<p>Аналогично RuStore. Доступно при наличии региональных регуляторных
+одобрений.</p>
+<h3 id="установка-из-microsoft-store-windows">2.4. Установка из
+Microsoft Store (Windows)</h3>
+<ol type="1">
+<li>Откройте Microsoft Store.</li>
+<li>В поиске введите «ЦП РСФСР».</li>
+<li>Нажмите «Получить».</li>
+<li>Дождитесь установки.</li>
+</ol>
+<h4 id="минимальные-требования-2">Минимальные требования</h4>
+<ul>
+<li>Windows 10 (1809) или Windows 11.</li>
+<li>500 МБ свободной памяти.</li>
+<li>Архитектура: x64, ARM64.</li>
+</ul>
+<h3 id="установка-как-pwa-любая-платформа">2.5. Установка как PWA (любая
+платформа)</h3>
+<p>PWA-режим работает из любого современного браузера без посредничества
+стора.</p>
+<h4 id="установка-на-android-chrome-edge">Установка на Android (Chrome,
+Edge):</h4>
+<ol type="1">
+<li>Откройте сайт приложения в браузере.</li>
+<li>В меню браузера выберите «Установить приложение» или появится баннер
+установки.</li>
+<li>Подтвердите установку.</li>
+<li>Иконка добавится на главный экран.</li>
+</ol>
+<h4 id="установка-на-ios-safari">Установка на iOS (Safari):</h4>
+<ol type="1">
+<li>Откройте сайт приложения в Safari.</li>
+<li>Нажмите «Поделиться».</li>
+<li>Выберите «На экран Домой».</li>
+<li>Подтвердите.</li>
+</ol>
+<h4 id="установка-на-windows-edge-chrome">Установка на Windows (Edge,
+Chrome):</h4>
+<ol type="1">
+<li>Откройте сайт приложения в браузере.</li>
+<li>В адресной строке появится иконка установки.</li>
+<li>Нажмите её и подтвердите.</li>
+</ol>
+<h2 id="настройка-программы">3. Настройка программы</h2>
+<h3 id="первый-запуск">3.1. Первый запуск</h3>
+<p>При первом запуске приложение запрашивает: - разрешение на
+push-уведомления; - разрешение на использование биометрии (опционально);
+- авторизацию через Госуслуги.</p>
+<h3 id="параметры-конфигурации">3.2. Параметры конфигурации</h3>
+<p>Большинство параметров конфигурации настраивается автоматически из
+манифеста приложения. Пользовательские настройки доступны в разделе
+«Профиль → Настройки»: - Язык интерфейса. - Тема оформления. - Размер
+шрифта. - Биометрия. - PIN-код. - Двухфакторная аутентификация. -
+Push-уведомления.</p>
+<h3 id="хранение-данных">3.3. Хранение данных</h3>
+<p>Чувствительные данные хранятся исключительно в защищённых хранилищах
+операционной системы: - iOS Keychain. - Android Keystore. - Windows
+Credential Locker.</p>
+<p>Кеш данных приложения хранится в зашифрованном виде в директории
+приложения. Размер кеша ограничен 200 МБ; при превышении старые данные
+автоматически удаляются.</p>
+<h2 id="обновление-программы">4. Обновление программы</h2>
+<h3 id="автоматические-обновления">4.1. Автоматические обновления</h3>
+<p>Через стандартный механизм магазина приложений (RuStore, App Store,
+Google Play, Microsoft Store) с уведомлением пользователя.</p>
+<h3 id="принудительные-обновления">4.2. Принудительные обновления</h3>
+<p>Для критичных уязвимостей применяется механизм in-app force-update:
+при запуске приложения проверяется минимально допустимая версия; при её
+несоответствии приложение блокирует работу до обновления.</p>
+<h3 id="pwa-обновления">4.3. PWA-обновления</h3>
+<p>Service Worker автоматически проверяет обновления в фоне и при
+следующем запуске активирует новую версию. Пользователь может
+принудительно обновить через «Профиль → Настройки → Обновить
+приложение».</p>
+<h2 id="удаление-программы">5. Удаление программы</h2>
+<h3 id="с-устройства">5.1. С устройства</h3>
+<p>Стандартное удаление через интерфейс операционной системы: - Android:
+долгий тап на иконке → «Удалить». - iOS: долгий тап на иконке → «Удалить
+приложение». - Windows: Параметры → Приложения → ЦП РСФСР → Удалить. -
+PWA: правый клик на иконке → «Удалить».</p>
+<h3 id="удаление-данных">5.2. Удаление данных</h3>
+<p>При удалении приложения автоматически удаляются: - кеш на устройстве;
+- сохранённые секреты в защищённом хранилище; - настройки
+приложения.</p>
+<p>Серверные данные пользователя удаляются только по официальному
+запросу через раздел «Профиль → Безопасность → Удалить аккаунт» либо
+через службу поддержки в соответствии с требованиями 152-ФЗ.</p>
+<h2 id="администрирование">6. Администрирование</h2>
+<h3 id="распространение-в-корпоративной-среде">6.1. Распространение в
+корпоративной среде</h3>
+<p>Для государственных и корпоративных пользователей доступны: -
+MDM-распространение через корпоративный портал. - Apple Business Manager
+/ Google Workspace Endpoint Management. - Intune (для Windows).</p>
+<h3 id="мониторинг">6.2. Мониторинг</h3>
+<p>Серверная часть платформы фиксирует все обращения приложения. Метрики
+доступны через регуляторную отчётность.</p>
+<h3 id="обращения-в-поддержку">6.3. Обращения в поддержку</h3>
+<ul>
+<li>Через раздел «Профиль → Помощь и поддержка» в приложении.</li>
+<li>По телефону горячей линии (указывается в приложении).</li>
+<li>Через форму обратной связи в большой презентации проекта.</li>
+</ul>
+<h2 id="обеспечение-безопасности">7. Обеспечение безопасности</h2>
+<h3 id="защита-от-компрометации-устройства">7.1. Защита от компрометации
+устройства</h3>
+<p>При обнаружении jailbreak/root приложение: 1. Выводит предупреждение
+о небезопасной среде. 2. Блокирует функции выпуска ЦФА и подписания
+смарт-контрактов. 3. Сохраняет только чтение для уже выпущенных ЦФА.</p>
+<h3 id="защита-от-потери-устройства">7.2. Защита от потери
+устройства</h3>
+<p>При потере устройства пользователь должен: 1. Войти в личный кабинет
+с другого устройства через PWA или веб-сайт. 2. Перейти в «Профиль →
+Настройки → Безопасность». 3. Нажать «Заблокировать все сессии».</p>
+<h3 id="восстановление-доступа">7.3. Восстановление доступа</h3>
+<p>Восстановление пароля и доступа осуществляется через Госуслуги по
+стандартной процедуре восстановления учётной записи ЕСИА.</p>
+<hr />
+<p><em>Документ соответствует требованиям ГОСТ 19.503-79 «Руководство
+системного программиста».</em></p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../07_Презентации/Большая_презентация/index.html#hub">К хабу документов</a>
+      <a class="btn btn--ghost" href="../../07_Презентации/Большая_презентация/index.html">Большая презентация</a>
+    </div>
+  </div>
+</main>
+
+<button class="totop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Наверх">↑</button>
+
+<script src="../../_shared/i18n.js"></script>
+<script src="../../_shared/app.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const t = document.querySelector('.totop');
+  if (t) t.classList.toggle('show', window.scrollY > 600);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+﻿<!doctype html>
+<html lang="ru" data-theme="daylight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сборка android · ЦП РСФСР</title>
+<meta name="theme-color" content="#0B2B5C">
+<link rel="stylesheet" href="../../../_shared/brand.css">
+<style>
+/* Document-specific styles */
+body { padding-top: 80px; }
+.doc-wrap { max-width: 880px; margin: 0 auto; padding: 48px 24px 96px; }
+.doc-header {
+  padding-bottom: 24px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.doc-header .eyebrow { margin-bottom: 12px; }
+.doc-header h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--primary); margin-bottom: 12px; }
+.doc-header p { color: var(--fg-mute); font-size: .9375rem; margin: 0; }
+.doc-content h1, .doc-content h2, .doc-content h3, .doc-content h4 { color: var(--primary); margin-top: 2em; margin-bottom: .5em; }
+.doc-content h1 { font-size: 1.875rem; }
+.doc-content h2 { font-size: 1.5rem; padding-bottom: 6px; border-bottom: 1px solid var(--border-soft); }
+.doc-content h3 { font-size: 1.25rem; }
+.doc-content h4 { font-size: 1.0625rem; color: var(--fg); }
+.doc-content p { line-height: 1.7; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content ul, .doc-content ol { line-height: 1.7; padding-left: 1.5em; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content li { margin-bottom: .35em; }
+.doc-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 12px 20px;
+  margin: 1em 0;
+  background: var(--bg-soft);
+  border-radius: 0 8px 8px 0;
+  color: var(--fg-soft);
+}
+.doc-content code {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg-soft);
+  padding: 2px 6px; border-radius: 4px;
+  font-size: .875em; color: var(--primary);
+}
+.doc-content pre {
+  background: var(--bg-soft); padding: 16px; border-radius: 10px;
+  overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: .875rem;
+  border: 1px solid var(--border-soft); margin: 1em 0;
+}
+.doc-content table {
+  width: 100%; border-collapse: collapse; margin: 1.5em 0;
+  background: var(--card-bg); border: 1px solid var(--border-soft);
+  border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-1);
+}
+.doc-content table th {
+  background: var(--primary); color: var(--primary-on);
+  text-align: left; padding: 12px 16px; font-weight: 600;
+  font-size: .8125rem; letter-spacing: .04em; text-transform: uppercase;
+}
+.doc-content table td {
+  padding: 10px 16px; border-bottom: 1px solid var(--border-soft);
+  font-size: .9375rem; color: var(--fg-soft);
+}
+.doc-content table tr:last-child td { border-bottom: none; }
+.doc-content table tr:hover td { background: var(--bg-soft); }
+.doc-content hr {
+  border: none; height: 1px; background: var(--border-soft); margin: 2.5em 0;
+}
+.doc-content a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+.doc-content a:hover { color: var(--accent); }
+.doc-content strong { color: var(--fg); font-weight: 700; }
+
+.doc-actions {
+  display: flex; gap: 10px; margin-top: 32px; flex-wrap: wrap;
+}
+
+/* Floating top button */
+.totop {
+  position: fixed; bottom: 24px; right: 24px; z-index: 50;
+  background: var(--primary); color: var(--primary-on);
+  border: none; border-radius: 50%; width: 48px; height: 48px;
+  cursor: pointer; box-shadow: var(--shadow-3);
+  display: none; font-size: 1.25rem;
+  transition: transform .2s var(--ease);
+}
+.totop:hover { transform: translateY(-2px); }
+.totop.show { display: grid; place-items: center; }
+[dir="rtl"] .totop { right: auto; left: 24px; }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div class="scroll-progress"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="../../../07_Презентации/Большая_презентация/index.html"><span class="brand-mark">Р</span><span data-i18n="brand.name">ЦП РСФСР</span></a>
+    <nav class="topbar-nav">
+      <a href="../../../07_Презентации/Большая_презентация/index.html#about" data-i18n="nav.about">О платформе</a>
+      <a href="../../../07_Презентации/Большая_презентация/index.html#hub" data-i18n="nav.hub">Документы</a>
+      <a href="../../../08_Веб-сайт/HTML_основной/index.html">Сайт</a>
+      <a href="../../../07_Презентации/Малая_презентация/index.html">Презентация</a>
+      <a href="../../../07_Презентации/Большая_презентация/index.html#contacts" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+    <div class="topbar-actions">
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-i18n-btn="ru">RU</button>
+        <button class="tbtn" data-i18n-btn="en">EN</button>
+        <button class="tbtn" data-i18n-btn="fr">FR</button>
+        <button class="tbtn" data-i18n-btn="ar">عر</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-theme-btn="daylight" aria-label="Дневная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+        <button class="tbtn" data-theme-btn="midnight" aria-label="Тёмная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="tbtn" data-theme-btn="sepia">◐</button>
+        <button class="tbtn" data-theme-btn="contrast">A11Y</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn" data-font-action="dec">A−</button>
+        <button class="tbtn" data-font-action="reset">A</button>
+        <button class="tbtn" data-font-action="inc">A+</button>
+      </div>
+      <button class="tbtn tbtn-burger">≡</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="eyebrow">Платформенные сборки</span>
+      <h1>Сборка android</h1>
+      <p>Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 · 19.12.2024 · ЦП РСФСР</p>
+    </header>
+    <article class="doc-content">
+<h1 id="android-сборка-цп-рсфср">Android-сборка ЦП РСФСР</h1>
+<p>Полная инструкция сборки нативного приложения Android из PWA через
+Capacitor.</p>
+<hr />
+<h2 id="подготовка-окружения">1. Подготовка окружения</h2>
+<pre class="bash"><code># Установить Android Studio Hedgehog (2023.1.1) или новее
+# https://developer.android.com/studio
+
+# Проверить установку SDK
+sdkmanager &quot;platforms;android-34&quot; &quot;build-tools;34.0.0&quot; &quot;platform-tools&quot;</code></pre>
+<p>Установите переменные среды:</p>
+<pre class="bash"><code>export ANDROID_HOME=$HOME/Android/Sdk          # Linux/macOS
+# или
+setx ANDROID_HOME &quot;C:\Users\%USERNAME%\AppData\Local\Android\Sdk&quot;  # Windows</code></pre>
+<h2 id="инициализация-android-проекта">2. Инициализация
+Android-проекта</h2>
+<p>Из папки <code>Сборки/common</code>:</p>
+<pre class="bash"><code>npm install
+npx cap add android
+npx cap sync android</code></pre>
+<p>Это создаст папку <code>Сборки/android/</code> с Gradle-проектом и
+подтянет веб-ресурсы из <code>Приложение/</code>.</p>
+<h2 id="конфигурация-android">3. Конфигурация Android</h2>
+<h3 id="androidmanifest.xml">3.1. AndroidManifest.xml</h3>
+<p>После генерации проверьте/отредактируйте
+<code>android/app/src/main/AndroidManifest.xml</code>:</p>
+<pre class="xml"><code>&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    package=&quot;ru.rsfsr.app&quot;&gt;
+
+    &lt;!-- Сетевые разрешения --&gt;
+    &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
+    &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;
+
+    &lt;!-- Биометрия --&gt;
+    &lt;uses-permission android:name=&quot;android.permission.USE_BIOMETRIC&quot; /&gt;
+    &lt;uses-permission android:name=&quot;android.permission.USE_FINGERPRINT&quot; /&gt;
+
+    &lt;!-- Камера для документов --&gt;
+    &lt;uses-permission android:name=&quot;android.permission.CAMERA&quot; /&gt;
+    &lt;uses-feature android:name=&quot;android.hardware.camera&quot; android:required=&quot;false&quot; /&gt;
+
+    &lt;!-- Push --&gt;
+    &lt;uses-permission android:name=&quot;android.permission.POST_NOTIFICATIONS&quot; /&gt;
+    &lt;uses-permission android:name=&quot;android.permission.RECEIVE_BOOT_COMPLETED&quot; /&gt;
+
+    &lt;!-- Системные --&gt;
+    &lt;uses-permission android:name=&quot;android.permission.VIBRATE&quot; /&gt;
+    &lt;uses-permission android:name=&quot;android.permission.WAKE_LOCK&quot; /&gt;
+
+    &lt;application
+        android:label=&quot;ЦП РСФСР&quot;
+        android:icon=&quot;@mipmap/ic_launcher&quot;
+        android:roundIcon=&quot;@mipmap/ic_launcher_round&quot;
+        android:theme=&quot;@style/AppTheme&quot;
+        android:requestLegacyExternalStorage=&quot;false&quot;
+        android:usesCleartextTraffic=&quot;false&quot;
+        android:networkSecurityConfig=&quot;@xml/network_security_config&quot;&gt;
+
+        &lt;activity
+            android:name=&quot;.MainActivity&quot;
+            android:configChanges=&quot;orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode&quot;
+            android:launchMode=&quot;singleTask&quot;
+            android:theme=&quot;@style/AppTheme.NoActionBarLaunch&quot;
+            android:exported=&quot;true&quot;&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;
+                &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;
+            &lt;/intent-filter&gt;
+            &lt;!-- Deep links --&gt;
+            &lt;intent-filter android:autoVerify=&quot;true&quot;&gt;
+                &lt;action android:name=&quot;android.intent.action.VIEW&quot; /&gt;
+                &lt;category android:name=&quot;android.intent.category.DEFAULT&quot; /&gt;
+                &lt;category android:name=&quot;android.intent.category.BROWSABLE&quot; /&gt;
+                &lt;data android:scheme=&quot;https&quot;
+                      android:host=&quot;app.dp-rsfsr.ru&quot; /&gt;
+                &lt;data android:scheme=&quot;ru.rsfsr.app&quot; /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+    &lt;/application&gt;
+&lt;/manifest&gt;</code></pre>
+<h3 id="build.gradle-app">3.2. build.gradle (app)</h3>
+<p><code>android/app/build.gradle</code>:</p>
+<pre class="gradle"><code>android {
+    compileSdkVersion 34
+    defaultConfig {
+        applicationId &quot;ru.rsfsr.app&quot;
+        minSdkVersion 28           // Android 9
+        targetSdkVersion 34         // Android 14
+        versionCode 1
+        versionName &quot;1.0.0&quot;
+    }
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties[&#39;keyAlias&#39;]
+            keyPassword keystoreProperties[&#39;keyPassword&#39;]
+            storeFile file(keystoreProperties[&#39;storeFile&#39;])
+            storePassword keystoreProperties[&#39;storePassword&#39;]
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile(&#39;proguard-android-optimize.txt&#39;), &#39;proguard-rules.pro&#39;
+            signingConfig signingConfigs.release
+        }
+    }
+}</code></pre>
+<h3 id="network-security-config">3.3. Network Security Config</h3>
+<p><code>android/app/src/main/res/xml/network_security_config.xml</code>:</p>
+<pre class="xml"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;network-security-config&gt;
+    &lt;base-config cleartextTrafficPermitted=&quot;false&quot;&gt;
+        &lt;trust-anchors&gt;
+            &lt;certificates src=&quot;system&quot; /&gt;
+        &lt;/trust-anchors&gt;
+    &lt;/base-config&gt;
+    &lt;domain-config&gt;
+        &lt;domain includeSubdomains=&quot;true&quot;&gt;dp-rsfsr.ru&lt;/domain&gt;
+        &lt;pin-set expiration=&quot;2027-12-31&quot;&gt;
+            &lt;!-- Pins публичного ключа TLS — подставляются из CI (RSFSR_PIN_PRIMARY/BACKUP). --&gt;
+            &lt;pin digest=&quot;SHA-256&quot;&gt;${RSFSR_PIN_PRIMARY}&lt;/pin&gt;
+            &lt;pin digest=&quot;SHA-256&quot;&gt;${RSFSR_PIN_BACKUP}&lt;/pin&gt;
+        &lt;/pin-set&gt;
+    &lt;/domain-config&gt;
+&lt;/network-security-config&gt;</code></pre>
+<h3 id="proguard">3.4. ProGuard</h3>
+<p><code>android/app/proguard-rules.pro</code>:</p>
+<pre><code># Capacitor
+-keep public class com.getcapacitor.** { *; }
+-keep public class * extends com.getcapacitor.Plugin
+
+# WebView JavaScript bridge
+-keepattributes JavascriptInterface
+-keepclassmembers class * {
+    @android.webkit.JavascriptInterface &lt;methods&gt;;
+}</code></pre>
+<h2 id="иконки">4. Иконки</h2>
+<p>Сгенерировать иконки и splash-screen из исходников:</p>
+<pre class="bash"><code># Из папки common
+npm run resources                  # требует @capacitor/assets
+# или вручную:
+# - mipmap-mdpi/ic_launcher.png      48×48
+# - mipmap-hdpi/ic_launcher.png      72×72
+# - mipmap-xhdpi/ic_launcher.png     96×96
+# - mipmap-xxhdpi/ic_launcher.png    144×144
+# - mipmap-xxxhdpi/ic_launcher.png   192×192
+# - drawable/splash.png              2732×2732</code></pre>
+<p>Используйте <code>Приложение/icons/icon-512.svg</code> как
+исходник.</p>
+<h2 id="подпись-приложения">5. Подпись приложения</h2>
+<p>Сгенерируйте release-keystore (один раз):</p>
+<pre class="bash"><code>keytool -genkey -v -keystore release.keystore \
+        -alias rsfsr_release -keyalg RSA -keysize 2048 -validity 10000</code></pre>
+<p><strong>Никогда не коммитьте keystore-файл и пароли в git.</strong>
+Используйте секреты CI/CD.</p>
+<p>Создайте <code>android/keystore.properties</code> (в .gitignore):</p>
+<pre class="properties"><code>storeFile=../../release.keystore
+storePassword=YOUR_PASSWORD
+keyAlias=rsfsr_release
+keyPassword=YOUR_PASSWORD</code></pre>
+<h2 id="сборка">6. Сборка</h2>
+<h3 id="aab-для-rustore-google-play">AAB для RuStore / Google Play</h3>
+<pre class="bash"><code>cd android
+./gradlew bundleRelease</code></pre>
+<p>Результат:
+<code>android/app/build/outputs/bundle/release/app-release.aab</code>.</p>
+<h3 id="apk-для-прямого-распространения">APK для прямого
+распространения</h3>
+<pre class="bash"><code>cd android
+./gradlew assembleRelease</code></pre>
+<p>Результат:
+<code>android/app/build/outputs/apk/release/app-release.apk</code>.</p>
+<h2 id="тестирование">7. Тестирование</h2>
+<h3 id="на-эмуляторе">На эмуляторе</h3>
+<pre class="bash"><code>npx cap run android</code></pre>
+<h3 id="на-физическом-устройстве">На физическом устройстве</h3>
+<ol type="1">
+<li>Включите режим разработчика и USB-отладку.</li>
+<li>Подключите устройство.</li>
+<li><code>adb devices</code> — убедитесь, что устройство видно.</li>
+<li><code>./gradlew installRelease</code> — установить релизную
+сборку.</li>
+</ol>
+<h2 id="публикация">8. Публикация</h2>
+<h3 id="rustore-рекомендуемо-для-рф">8.1. RuStore (рекомендуемо для
+РФ)</h3>
+<ol type="1">
+<li>Зарегистрируйтесь как разработчик в RuStore Console:
+https://console.rustore.ru</li>
+<li>Подготовьте материалы (см.
+<code>../../Публикация_RuStore/</code>).</li>
+<li>Загрузите AAB-файл.</li>
+<li>Заполните метаданные:
+<ul>
+<li>Название: «ЦП РСФСР»</li>
+<li>Краткое описание (до 80 символов).</li>
+<li>Полное описание (до 4000 символов).</li>
+<li>Категория: Финансы.</li>
+<li>Возрастная категория: 18+.</li>
+<li>Скриншоты (5–8 штук).</li>
+<li>Иконка 512×512.</li>
+</ul></li>
+<li>Отправьте на модерацию (срок: 1–3 рабочих дня).</li>
+</ol>
+<h3 id="google-play">8.2. Google Play</h3>
+<ol type="1">
+<li>Google Play Console: https://play.google.com/console</li>
+<li>Аналогично RuStore.</li>
+<li>Дополнительно: содержание контента, целевая аудитория,
+конфиденциальность данных.</li>
+</ol>
+<h2 id="дополнительно">9. Дополнительно</h2>
+<h3 id="app-links-deep-links">App Links / Deep Links</h3>
+<p>Файл <code>assetlinks.json</code> должен быть размещён на
+<code>https://app.dp-rsfsr.ru/.well-known/assetlinks.json</code>:</p>
+<pre class="json"><code>[{
+  &quot;relation&quot;: [&quot;delegate_permission/common.handle_all_urls&quot;],
+  &quot;target&quot;: {
+    &quot;namespace&quot;: &quot;android_app&quot;,
+    &quot;package_name&quot;: &quot;ru.rsfsr.app&quot;,
+    &quot;sha256_cert_fingerprints&quot;: [&quot;SHA256_OF_YOUR_KEYSTORE&quot;]
+  }
+}]</code></pre>
+<h3 id="crash-reporting">Crash reporting</h3>
+<p>Рекомендуется интегрировать отечественный сервис мониторинга
+(например, AppMetrica / Tracker by VK).</p>
+<hr />
+<h2 id="чек-лист-готовности-к-публикации">10. Чек-лист готовности к
+публикации</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />AndroidManifest.xml
+настроен.</label></li>
+<li><label><input type="checkbox" />build.gradle с правильным
+versionCode/versionName.</label></li>
+<li><label><input type="checkbox" />Keystore сгенерирован и
+защищён.</label></li>
+<li><label><input type="checkbox" />ProGuard правила
+настроены.</label></li>
+<li><label><input type="checkbox" />Иконки всех плотностей.</label></li>
+<li><label><input type="checkbox" />Splash-screen.</label></li>
+<li><label><input type="checkbox" />Network Security Config с
+pinning.</label></li>
+<li><label><input type="checkbox" />Внутреннее тестирование
+пройдено.</label></li>
+<li><label><input type="checkbox" />Промо-материалы готовы (см.
+../../Публикация_RuStore/).</label></li>
+<li><label><input type="checkbox" />Политика конфиденциальности
+опубликована на сайте.</label></li>
+<li><label><input type="checkbox" />Возрастная маркировка
+установлена.</label></li>
+<li><label><input type="checkbox" />Аккаунт разработчика в RuStore
+Console подтверждён.</label></li>
+</ul>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../07_Презентации/Большая_презентация/index.html#hub">К хабу документов</a>
+      <a class="btn btn--ghost" href="../../../07_Презентации/Большая_презентация/index.html">Большая презентация</a>
+    </div>
+  </div>
+</main>
+
+<button class="totop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Наверх">↑</button>
+
+<script src="../../../_shared/i18n.js"></script>
+<script src="../../../_shared/app.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const t = document.querySelector('.totop');
+  if (t) t.classList.toggle('show', window.scrollY > 600);
+});
+</script>
+</body>
+</html>

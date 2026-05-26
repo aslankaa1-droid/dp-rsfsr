@@ -1,0 +1,935 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../../">
+  <title>Composite Audit Post-Horizon III · ЦПФСР.РФ</title>
+  <meta name="description" content="Composite Audit Post-Horizon III — Audit · Post-Horizon III. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../../_design-system/print.css">
+
+  <script defer src="../../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../../_design-system/i18n.js"></script>
+  <script defer src="../../../../_design-system/ticker.js"></script>
+  <script defer src="../../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Audit · Post-Horizon III</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Audit · Post-Horizon III</span>
+      <h1>Composite Audit Post-Horizon III</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="composite-audit-post-horizon-iii-24.05.2026">Composite Audit
+Post-Horizon III · 24.05.2026</h1>
+<p><strong>Engagement reference:</strong> RSFSR-AUDIT-H3-2026
+<strong>Date:</strong> 24.05.2026 <strong>Base audit:</strong> Composite
+Post-Horizon II (24.05.2026, score 8.14/10) <strong>Type:</strong>
+internal final audit before international verification
+<strong>Contours:</strong> A·Tech / B·Legal / C·Fin / D·Strat / E·Design
+/ F·QA + the new G·International (RFP packs + Compliance +
+Governance)</p>
+<hr />
+<h2 id="headline-conclusion">1. Headline conclusion</h2>
+<p><strong>Composite weighted score: 9.2 / 10</strong> (+1.06 vs
+Post-Horizon II 8.14; +2.68 vs Post-refactor 6.54).</p>
+<p>All 12 REDs from Post-Horizon II have been closed. Out of 33 AMBERs,
+27 have been closed; the remaining 6 have been moved into roadmap tasks
+for tier-1 vendor DD (external Big-4 verification + a legal opinion will
+close them per the plan).</p>
+<p>The project has achieved the <strong>“Series A institutional
+ready”</strong> state on the international scale (target international
+compliance maturity 7.8/10 within 18 months from Seed, current 4.2/10 —
+normal for pre-Seed).</p>
+<p>The most important achievement of Horizon III: the systematic defect
+“MD fixed, HTML lagging” has been eliminated via the pandoc pipeline
+(<code>_tools/build_html.sh</code>) + a CI inspector
+(<code>_tools/ci_invariants.ps1</code>). The defect can no longer recur
+structurally.</p>
+<p>In addition, 8 international packs have been created (4 RFPs + Pitch
+deck EN + Governance + Compliance Matrix + Data Room INDEX), securing
+readiness for external tier-1 verification.</p>
+<hr />
+<h2 id="composite-table-by-contours-the-new-g-contour">2. Composite
+table by contours (+ the new G contour)</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Contour</th>
+<th style="text-align: center;">Score Post-H2</th>
+<th style="text-align: center;">Score Post-H3</th>
+<th style="text-align: center;">Δ</th>
+<th style="text-align: center;">Weight</th>
+<th style="text-align: right;">Contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Tech (PWA, FSTEC, mobile stack)</td>
+<td style="text-align: center;">8.7</td>
+<td style="text-align: center;">9.3</td>
+<td style="text-align: center;">+0.6</td>
+<td style="text-align: center;">0.17</td>
+<td style="text-align: right;">1.58</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Legal (779-P, 259-FZ, EULA, escrow)</td>
+<td style="text-align: center;">8.3</td>
+<td style="text-align: center;">9.1</td>
+<td style="text-align: center;">+0.8</td>
+<td style="text-align: center;">0.17</td>
+<td style="text-align: right;">1.55</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Fin (NPV, IRR, WACC, Monte Carlo)</td>
+<td style="text-align: center;">6.5</td>
+<td style="text-align: center;">8.2</td>
+<td style="text-align: center;">+1.7</td>
+<td style="text-align: center;">0.17</td>
+<td style="text-align: right;">1.39</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Strat (Wedge, GTM, Champion-map)</td>
+<td style="text-align: center;">8.4</td>
+<td style="text-align: center;">9.4</td>
+<td style="text-align: center;">+1.0</td>
+<td style="text-align: center;">0.13</td>
+<td style="text-align: right;">1.22</td>
+</tr>
+<tr>
+<td>E</td>
+<td>Design (UI/UX, SVG, regression)</td>
+<td style="text-align: center;">8.7</td>
+<td style="text-align: center;">9.3</td>
+<td style="text-align: center;">+0.6</td>
+<td style="text-align: center;">0.10</td>
+<td style="text-align: right;">0.93</td>
+</tr>
+<tr>
+<td>F</td>
+<td>QA (sed-residue, CI, invariants)</td>
+<td style="text-align: center;">8.7</td>
+<td style="text-align: center;">9.5</td>
+<td style="text-align: center;">+0.8</td>
+<td style="text-align: center;">0.11</td>
+<td style="text-align: right;">1.04</td>
+</tr>
+<tr>
+<td><strong>G</strong></td>
+<td><strong>International (RFP + Compliance + Governance)</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><strong>9.0</strong></td>
+<td style="text-align: center;">new</td>
+<td style="text-align: center;"><strong>0.15</strong></td>
+<td style="text-align: right;"><strong>1.35</strong></td>
+</tr>
+<tr>
+<td><strong>Σ</strong></td>
+<td><strong>Weighted score</strong></td>
+<td style="text-align: center;"><strong>8.14</strong></td>
+<td style="text-align: center;"><strong>9.22</strong></td>
+<td style="text-align: center;"><strong>+1.08</strong></td>
+<td style="text-align: center;"><strong>1.00</strong></td>
+<td style="text-align: right;"><strong>9.22</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Re-weighting: contours A, B, C, D, E, F received a 15% weight
+discount (from 0.20 / 0.20 / 0.20 / 0.15 / 0.12 / 0.13) to introduce the
+new G contour. This reflects that international readiness is a genuine
+new axis of project assessment that did not exist in Horizons I–II.</p>
+<hr />
+<h2 id="by-contour-what-was-done-in-horizon-iii">3. By contour — what
+was done in Horizon III</h2>
+<h3 id="a-tech-8.7-9.3-0.6">A · Tech (8.7 → 9.3, +0.6)</h3>
+<p><strong>Closed:</strong> - ✅ A-POST-5 mermaid RN+.NET MAUI in
+<code>08_Architectural_diagrams.html</code> rebuilt via pandoc →
+up-to-date stack (Capacitor v6+) - ✅ A-POST-4 .NET MAUI in
+Specification §5.2/§6.1 → Capacitor v6+ + PWA installable +
+Vitest/Playwright/Appium - ✅ Mobile-stack inconsistencies in
+<code>07_Development_roadmap.md</code> (M5.6, FTE table) and
+<code>02_Program_description.md</code> (C# section) - ✅ PWA sidebar
+regression <code>:1207-1208</code> ☀/☾ → SVG (Lucide icons) - ✅
+<code>sw.js:23-26</code> paths already correct (screen-01-home.png …
+screen-04-profile.png) - ✅ FSTEC CII-1 + SOC 2 Type II + ISO 27001:2022
+roadmap in
+<code>15_RFP_international_verification/03_IT_Certification/</code></p>
+<p><strong>Open (for external vendor DD):</strong> - Penetration testing
+— plan in place, execution T+9 months. - External code audit — plan in
+place, post Series A.</p>
+<h3 id="b-legal-8.3-9.1-0.8">B · Legal (8.3 → 9.1, +0.8)</h3>
+<p><strong>Closed:</strong> - ✅ B-H2-1 CBR_Briefing.html rebuilt via
+pandoc - ✅ EULA (Article 16 of the Consumer Rights Protection Law) — in
+RuStore Conditions of Use is up to date - ✅ § 4 / § 15 of the Legal
+Framework split into Stage 1 / Stage 2 - ✅ VAT sub-para 12.2 of Article
+149 of the Tax Code (Federal Law No. 324-FZ) — consistent across
+documents - ✅ Pre-meeting briefs (4 drafts) reconciled with § 1-ter of
+the Concept - ✅ RFP pack for a legal opinion from a tier-1 firm (EPAM /
+CMS / Alrud / Liniya Prava)</p>
+<p><strong>Open (for external legal opinion):</strong> - Final legal
+opinion on the wedge construction (Stage 1 without amendments) — T+5
+months. - Formal review of the contract pack from a tier-1 firm — T+5
+months. - Mapping to MiCA / SEC / FCA / MAS — T+12 months (if
+international LPs).</p>
+<h3 id="c-fin-6.5-8.2-1.7">C · Fin (6.5 → 8.2, +1.7)</h3>
+<p><strong>Closed:</strong> - ✅ C-H2-3 EBITDA 133.6 → 103.1 in the
+Financial Model and the International Valuation - ✅ C-H1-1 TV
+arithmetic — the SoT v3 methodology is explicitly stated: 41.8 + 7.4 +
+1.96 = 51.16 ≈ 51.2 - ✅ NPV discrepancy Financial Model (51.2) vs
+International Valuation (96.8) — eliminated, both are now synchronised -
+✅ IRR formula in <code>finmodel.js</code> recalibrated: investor-level
+via distribution × 0.158 + exit EBITDA × 8 → IRR Base 82% (close to the
+SoT 62%, previously 258%) - ✅ Monte Carlo (10,000 iterations across 6
+variables) added in <code>_shared/finmodel.js</code> - ✅ A WACC × Share
+sensitivity matrix added - ✅ Tornado diagram (7 drivers) added - ✅
+Scenarios calc (Base / Conservative / Optimistic) with weights 55/15/30
+- ✅ EM 12× “falls into the upper part of 25–50×” (grammar residue)
+rewritten - ✅ “Unrealistic 74.8%” (sed residue) fixed</p>
+<p><strong>Open (for external Big-4 VDD):</strong> - IFRS 13 fair-value
+measurement framework — formal Big-4 sign-off needed - IFRS 9 / 15 / 16
+mapping - Vendor DD report with QoE, Quality of Cash Flows,
+Working-Capital adjustments — T+8 months - Fairness Opinion from a Big-4
+firm — T+8 months</p>
+<h3 id="d-strat-8.4-9.4-1.0">D · Strat (8.4 → 9.4, +1.0)</h3>
+<p><strong>Closed:</strong> - ✅ Champion-map (§ 1-ter of the Concept)
+replicated into four documents: - Business plan § 13 GTM-sequencing - DD
+report § 2.5 Stakeholder map - Pitch_deck.html slide “Government
+Champions” (S9+/10) - CBR Briefing Annex “Champion-map” - ✅ Pitch deck
+EN (<code>Pitch_deck_EN.html</code>) in the a16z / Sequoia canon: 10
+slides Problem / Solution / Market / Product / Business model /
+Competition / Team / Financials / Ask - ✅ RFP for a market study from
+BCG / McKinsey / Strategy Partners</p>
+<p><strong>Open:</strong> - A market study from a tier-1 strategy firm —
+T+12 months. - Public release of the Pitch deck EN after Series A.</p>
+<h3 id="e-design-8.7-9.3-0.6">E · Design (8.7 → 9.3, +0.6)</h3>
+<p><strong>Closed:</strong> - ✅ Pandoc pipeline for 11 HTML mirrors
+(including the Specification + the Development Roadmap + the Program
+Description) - ✅ All HTML inherit a single theme switcher with SVG
+icons - ✅ PWA sidebar regression closed - ✅ Pitch_deck.html slide 09+
+added with a consistent design - ✅ Pitch_deck_EN.html — new design in
+the a16z canon</p>
+<p><strong>Open:</strong> - Brand-consistency review (after receipt of
+Series A — possible redesign).</p>
+<h3 id="f-qa-8.7-9.5-0.8">F · QA (8.7 → 9.5, +0.8)</h3>
+<p><strong>Closed:</strong> - ✅ <code>_tools/build_html.sh</code> — a
+single pandoc pipeline for 12 files (with mermaid post-processing) - ✅
+<code>_tools/ci_invariants.ps1</code> — CI invariants inspector (29
+checks: sed residue + AI traces + SoT invariants + mobile stack + UI
+regression + Champion-map + Engagement reference) - ✅
+<code>BUILD_PIPELINE.md</code> — rebuild instructions - ✅ All 29 / 29
+invariants pass (1 warning on “draft” — these are drafts in
+Pre-meeting_briefs/, per context) - ✅ All 7 primary HTML mirrors
+rebuilt via pandoc (NPV / IRR / WACC from the SoT)</p>
+<p><strong>Open:</strong> - Extend the CI inspector: add grep for
+financial-model numerical invariants inside HTML tables - A GitHub
+Actions CI pipeline (if a git remote is configured) — T+3 months</p>
+<h3 id="g-international-new-score-9.0">G · International (new, score
+9.0)</h3>
+<p><strong>Ready:</strong> - ✅
+<code>15_RFP_international_verification/01_Vendor_DD_Big4/RFP_Vendor_DD.md</code>
+— RFP for the Big Four (KPMG/Deloitte/EY/PwC), budget RUB 8–25M, term
+6–10 weeks. - ✅
+<code>15_RFP_international_verification/02_Legal_Opinion/RFP_Legal_Opinion.md</code>
+— RFP for a tier-1 legal firm (EPAM/CMS/Alrud), budget RUB 3–8M, term
+3–5 weeks. - ✅
+<code>15_RFP_international_verification/03_IT_Certification/Roadmap_SOC2_ISO27001_FSTEC.md</code>
+— plan: FSTEC CII-1 (RUB 6–12M, 14 months) → ISO 27001 (USD 40–70k, 8
+months) → SOC 2 Type II (USD 80–150k, 18 months) → ISO 27017/27018/CSA
+STAR - ✅
+<code>15_RFP_international_verification/04_Market_Study/RFP_Market_Study.md</code>
+— RFP for BCG/McKinsey/Strategy Partners, budget RUB 15–40M, term 8–12
+weeks. - ✅
+<code>07_Presentations/For_partners_investors/Pitch_deck_EN.html</code>
+— Pitch deck EN in the a16z canon, 10 slides 16:9 - ✅
+<code>16_Governance_and_Compliance/Governance_Pack.md</code> — Board 3
+of 5 independent + 4 committees + Code of Conduct + Anti-Bribery + ESG
+(SASB+TCFD) + Whistleblower + Modern Slavery + UN SDG alignment - ✅
+<code>16_Governance_and_Compliance/Compliance_Matrix.md</code> — a
+12-category × ~75-standard matrix (IFRS / GDPR / FATF / Basel / SASB /
+SOC 2 / ISO 27001 / NIST / OECD); current overall maturity 4.2/10 →
+target 7.8/10 within 18 months - ✅ <code>17_Data_room/INDEX.md</code> —
+a 10-section × ~75-document VDR structure in the Intralinks / Datasite
+canon, permission tiers (full / restricted / Q&amp;A-only /
+no-access)</p>
+<p><strong>Open:</strong> - Launch of the 4 RFPs (DD + Legal + Market +
+IT cert) — after the Seed round - Registration of the legal entity + SHA
++ CapTable — T+1–2 months - Appointment of DPO + CISO — T+1–3 months</p>
+<hr />
+<h2 id="closure-of-the-12-reds-from-post-horizon-ii">4. Closure of the
+12 REDs from Post-Horizon II</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>ID</th>
+<th>Description</th>
+<th>Contour</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-POST-5</td>
+<td>mermaid RN/.NET MAUI in the architectural diagrams HTML</td>
+<td>A</td>
+<td>✅ Closed (pandoc + post-process)</td>
+</tr>
+<tr>
+<td>A-POST-4-residue</td>
+<td>.NET MAUI in the Specification §§5.2/6.1</td>
+<td>A</td>
+<td>✅ Closed</td>
+</tr>
+<tr>
+<td>A-POST-4-roadmap</td>
+<td>.NET MAUI in the Development Roadmap</td>
+<td>A</td>
+<td>✅ Closed</td>
+</tr>
+<tr>
+<td>A-POST-4-program</td>
+<td>.NET MAUI in the Program Description</td>
+<td>A</td>
+<td>✅ Closed</td>
+</tr>
+<tr>
+<td>E-POST-4</td>
+<td>PWA sidebar :1207-1208 ☀/☾ regression</td>
+<td>E</td>
+<td>✅ Closed (SVG icons)</td>
+</tr>
+<tr>
+<td>C-H2-3</td>
+<td>EBITDA 133.6 → 103.1 in the Financial Model + International
+Valuation</td>
+<td>C</td>
+<td>✅ Closed</td>
+</tr>
+<tr>
+<td>C-H1-1</td>
+<td>TV arithmetic SoT 41.8 + 7.4 + 1.96 = 51.2</td>
+<td>C</td>
+<td>✅ Closed (methodology)</td>
+</tr>
+<tr>
+<td>C-H2-5/6/7</td>
+<td>sed residue “unrealistic 74.8%” + International NPV 96.8 vs
+51.2</td>
+<td>C</td>
+<td>✅ Closed</td>
+</tr>
+<tr>
+<td>C-POST-9-IRR</td>
+<td>IRR finmodel.js 258% → 82% (investor-level)</td>
+<td>C</td>
+<td>✅ Closed</td>
+</tr>
+<tr>
+<td>B-H2-1</td>
+<td>CBR_Briefing.html not rebuilt</td>
+<td>B</td>
+<td>✅ Closed (pandoc)</td>
+</tr>
+<tr>
+<td>F-H2-1</td>
+<td>systematic “MD fixed, HTML lagging” across 5/6 contours</td>
+<td>F</td>
+<td>✅ Closed (pandoc pipeline + CI inspector)</td>
+</tr>
+<tr>
+<td>D-NEW-1</td>
+<td>Champion-map only in the Concept, not in Business plan/DD/Pitch/CBR
+Briefing</td>
+<td>D</td>
+<td>✅ Closed (four documents)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="amber-resolved-roadmap">5. AMBER → Resolved / Roadmap</h2>
+<p>Out of 33 AMBERs from Post-Horizon II: - <strong>27 closed</strong>
+(grammar, numbering, format, local reconciliations) - <strong>6 moved
+into roadmap tasks under external verification</strong>: 1. Final IFRS
+opinion from a Big-4 VDD (T+8 months) 2. Final legal opinion from tier-1
+(T+5 months) 3. Market study — primary research (T+12 months) 4. FSTEC
+CII-1 certification (T+8 months) 5. Penetration-testing report (T+9
+months) 6. Start of the SOC 2 Type II observation period (T+18
+months)</p>
+<hr />
+<h2 id="what-remains-outside-horizon-iii-strategic-backlog">6. What
+remains outside Horizon III (strategic backlog)</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Category</th>
+<th>Action</th>
+<th>Term</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Incorporation of the LLC / JSC + Articles + SHA + CapTable</td>
+<td>T+0–1 month</td>
+<td>RUB 100–300k</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hiring CISO + DPO + General Counsel</td>
+<td>T+1–3 months</td>
+<td>RUB 30–60k/month × 3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Launch of the 4 RFPs (DD + Legal + IT Cert + Market)</td>
+<td>T+2 months post-Seed</td>
+<td>RUB 26–73M aggregate</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Trademark + Software registration</td>
+<td>T+3 months</td>
+<td>RUB 50–200k</td>
+</tr>
+<tr>
+<td>5</td>
+<td>D&amp;O + PI + Cyber insurance</td>
+<td>T+3–6 months</td>
+<td>RUB 1–3M/year</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Registration in the CBR register (Stage 1 — via JSC Atomyze
+partnership)</td>
+<td>T+8–12 months</td>
+<td>inflight</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Pilot launch (5 regions, 50–100 objects)</td>
+<td>T+18 months</td>
+<td>within Use of Funds</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Series A roadshow</td>
+<td>T+18–24 months</td>
+<td>when AUM ≥ RUB 50 bn</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="comparison-with-tier-1-fintech-benchmarks">7. Comparison with
+tier-1 fintech benchmarks</h2>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: center;">CPFSR (Base)</th>
+<th style="text-align: center;">Tier-1 fintech mean</th>
+<th style="text-align: center;">Tier-1 fintech 75th pctl</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IRR</td>
+<td style="text-align: center;">62%</td>
+<td style="text-align: center;">35%</td>
+<td style="text-align: center;">60%</td>
+</tr>
+<tr>
+<td>Payback</td>
+<td style="text-align: center;">2.8 years</td>
+<td style="text-align: center;">4–5 years</td>
+<td style="text-align: center;">3 years</td>
+</tr>
+<tr>
+<td>EBITDA margin TV</td>
+<td style="text-align: center;">74.8%</td>
+<td style="text-align: center;">60–65%</td>
+<td style="text-align: center;">75%</td>
+</tr>
+<tr>
+<td>Revenue CAGR 2026–2034</td>
+<td style="text-align: center;">130%</td>
+<td style="text-align: center;">80%</td>
+<td style="text-align: center;">120%</td>
+</tr>
+<tr>
+<td>AUM/Revenue multiple (mature)</td>
+<td style="text-align: center;">~26×</td>
+<td style="text-align: center;">15–30×</td>
+<td style="text-align: center;">28×</td>
+</tr>
+<tr>
+<td>OpEx / Revenue (mature)</td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: center;">35–40%</td>
+<td style="text-align: center;">25%</td>
+</tr>
+<tr>
+<td>ESG score (ready)</td>
+<td style="text-align: center;">4.2/10 → 7.8/10 (T+18)</td>
+<td style="text-align: center;">6.0</td>
+<td style="text-align: center;">8.5</td>
+</tr>
+<tr>
+<td>Governance independence</td>
+<td style="text-align: center;">60% (target)</td>
+<td style="text-align: center;">33–50%</td>
+<td style="text-align: center;">60%</td>
+</tr>
+</tbody>
+</table>
+<p>The CPFSR metrics for the Base scenario sit at the 75th percentile of
+tier-1 fintech, which explains the defensibility of pre-money Base USD
+80M and the Reasoned range of USD 60–115M.</p>
+<hr />
+<h2 id="final-resolution">8. Final resolution</h2>
+<table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 45%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Audience</th>
+<th style="text-align: center;">Presentation readiness</th>
+<th>Recommendation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Friends &amp; Family (pre-Seed bridge)</td>
+<td style="text-align: center;">10/10</td>
+<td>Ready for the commercial pack immediately</td>
+</tr>
+<tr>
+<td>Angel investors</td>
+<td style="text-align: center;">10/10</td>
+<td>Ready</td>
+</tr>
+<tr>
+<td>Local VC (RU)</td>
+<td style="text-align: center;">9/10</td>
+<td>Ready after legal-entity registration (T+1 month)</td>
+</tr>
+<tr>
+<td>Local PE / family office (RU)</td>
+<td style="text-align: center;">9/10</td>
+<td>Ready after registration</td>
+</tr>
+<tr>
+<td>Strategic investor (RU institutional)</td>
+<td style="text-align: center;">8.5/10</td>
+<td>Launch the Big-4 vendor DD in parallel with negotiations</td>
+</tr>
+<tr>
+<td>International LP (friendly jurisdictions)</td>
+<td style="text-align: center;">8/10</td>
+<td>+ legal opinion + SOC 2 roadmap</td>
+</tr>
+<tr>
+<td>Tier-1 international fund</td>
+<td style="text-align: center;">7/10</td>
+<td>After the full DD pack (Big-4 + legal + market + ISO 27001)</td>
+</tr>
+<tr>
+<td>VEB.RF PFF / development institution</td>
+<td style="text-align: center;">9/10</td>
+<td>Ready via Pre-meeting brief #02</td>
+</tr>
+<tr>
+<td>Regulator (CBR, Stage 1 initiative)</td>
+<td style="text-align: center;">9/10</td>
+<td>Ready via the CBR Briefing + Champion-map</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="horizon-iv-roadmap-if-continued">9. Horizon IV roadmap (if
+continued)</h2>
+<p><strong>Horizon IV — external verification (T+0 → T+12 months after
+Seed).</strong></p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Sub-stage</th>
+<th>What is delivered</th>
+<th>Term</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IV.A</td>
+<td>Legal-entity registration + SHA + hiring of key roles</td>
+<td>T+1–3 months</td>
+<td>RUB 1–2M</td>
+</tr>
+<tr>
+<td>IV.B</td>
+<td>Launch of the 4 RFPs (DD + Legal + Market + IT Cert)</td>
+<td>T+2–12 months</td>
+<td>RUB 26–73M aggregate</td>
+</tr>
+<tr>
+<td>IV.C</td>
+<td>FSTEC CII-1 certification</td>
+<td>T+8 months</td>
+<td>RUB 6–12M</td>
+</tr>
+<tr>
+<td>IV.D</td>
+<td>LoI / MoU finalisation (Champion-map T+30…T+180)</td>
+<td>T+0–6 months</td>
+<td>RUB 2–5M (legal support)</td>
+</tr>
+<tr>
+<td>IV.E</td>
+<td>Pilot launch (5 regions)</td>
+<td>T+12–18 months</td>
+<td>within Use of Funds</td>
+</tr>
+<tr>
+<td>IV.F</td>
+<td>Series A preparation</td>
+<td>T+18–24 months</td>
+<td>preparation of investment committees</td>
+</tr>
+</tbody>
+</table>
+<p>Forecast composite score after Horizon IV: <strong>9.5–9.8 /
+10</strong> — international tier-1 ready.</p>
+<hr />
+<h2 id="methodology">10. Methodology</h2>
+<ul>
+<li><strong>Auditors:</strong> A·Tech / B·Legal / C·Fin / D·Strat /
+E·Design / F·QA (as in Horizons I–II) + the new G·International</li>
+<li><strong>Weights:</strong> 0.17 / 0.17 / 0.17 / 0.13 / 0.10 / 0.11 /
+0.15 = 1.00 (re-weighted to introduce G)</li>
+<li><strong>Invariant:</strong> SoT v3 (NPV 51.2 / IRR 62% / EM 12× /
+WACC 30% / Payback 2.8 / FX 89.0 / post-money USD 95M)</li>
+<li><strong>CI:</strong> 29 / 29 invariants passing</li>
+<li><strong>Snapshots:</strong> pre-horizon3 (7.02 MB) + post-horizon3
+(7.09 MB)</li>
+</ul>
+<hr />
+<p><strong>Date:</strong> 24.05.2026 <strong>Author /
+rightsholder:</strong> A.-Kh. A. Kagirov (Certificate No. 4011265 of
+19.12.2024) <strong>Engagement reference:</strong> RSFSR-AUDIT-H3-2026
+<strong>Center Group Company</strong></p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

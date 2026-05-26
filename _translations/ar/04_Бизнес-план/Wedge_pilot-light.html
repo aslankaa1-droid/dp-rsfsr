@@ -1,0 +1,887 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../">
+  <title>Wedge / Pilot-light · ЦПФСР.РФ</title>
+  <meta name="description" content="Wedge / Pilot-light — خطة العمل · Wedge. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../_design-system/print.css">
+
+  <script defer src="../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../_design-system/i18n.js"></script>
+  <script defer src="../../../_design-system/ticker.js"></script>
+  <script defer src="../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">خطة العمل · Wedge</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">خطة العمل · Wedge</span>
+      <h1>Wedge / Pilot-light</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="wedge-pilot-light-ضمن-259-fz-القائم">Wedge / Pilot-light ضمن
+259-FZ القائم</h1>
+<p><strong>الوثيقة:</strong> مفهوم الحدّ الأدنى من المحيط القابل للحياة
+(«wedge») لمشغّل نظام معلومات DFA، لا يتطلّب تعديلات على 86-FZ ولا على
+التشريعات المتعلّقة بالروبل الرقمي. <strong>الهدف:</strong> إغلاق العلامة
+الحمراء D5 من التدقيق الموحَّد في 24.05.2026 («نسخة wedge / pilot-light
+غير متوفّرة»). <strong>المنطق الاستراتيجي:</strong> عدم الدخول إلى بنك
+روسيا في الخطوة الأولى ببنية تستلزم حزمة من 4 قوانين اتحادية؛ الدخول عبر
+wedge-pilot ضمن 259-FZ القائم بفضل تحالف VEB.RF / وزارة التنمية
+الاقتصادية / Gazprombank / Atomyze؛ وبعد 18–36 شهرًا من التشغيل الفعلي —
+فتح الحوار مع بنك روسيا عبر موقف موحَّد بين الإدارات.
+<strong>التاريخ:</strong> 24.05.2026.</p>
+<hr />
+<h2 id="ما-هو-wedge-pilot-light">1. ما هو wedge / pilot-light</h2>
+<p>الـ wedge هو التهيئة الدنيا للمنصة التي: - <strong>يُحافَظ فيها على عرض
+القيمة</strong> (إصدار DFA مستهدفة بضمان أصول، وتوجيه الإنفاق إلى مشاريع
+التنمية الاجتماعية). - <strong>تُزال فيها المخاطرة التنظيمية
+الكبرى</strong> (التخلّي عن صياغة «إصدار مستهدف من بنك روسيا»). -
+<strong>يُستبدَل فيها مصدر التمويل المستهدف</strong> — بدلًا من إصدار من
+بنك روسيا، تُستخدم القناة القائمة للتمويل المؤسسي عبر VEB.RF /
+Gazprombank / DOM.RF. - <strong>يتحقّق فيها محيط unit-economic
+أساسي</strong> (إيرادات من عمولات الإصدار والخدمة). - <strong>يتكوّن فيها
+أداة تفاوضية</strong> للحوار اللاحق مع بنك روسيا عبر موقف موحَّد بين
+الإدارات.</p>
+<p>لا يحتاج هذا النمط إلى تعديلات على 86-FZ ولا على قانون الميزانية؛
+يندرج كاملًا ضمن 259-FZ + لائحة بنك روسيا 779-P القائمَين.</p>
+<hr />
+<h2 id="معطيات-الـ-wedge-pilot">2. معطيات الـ wedge-pilot</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>المعطى</th>
+<th>القيمة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>منطقة التجربة</strong></td>
+<td>جمهورية تتارستان أو منطقة تيومين (الاختيار بنتائج المفاوضات مع
+الحكومة الإقليمية)</td>
+</tr>
+<tr>
+<td><strong>نوع الأصول المرهونة</strong></td>
+<td>عقارات بلدية وحكومية (دون أفراد في المرحلة الأولى — لتقليل مخاطر
+المستهلك)</td>
+</tr>
+<tr>
+<td><strong>حجم تجمّع السنة الأولى</strong></td>
+<td>5–10 مليار ₽ (50–100 منشأة من البلدية)</td>
+</tr>
+<tr>
+<td><strong>بنك الشريك الابتدائي</strong></td>
+<td>Gazprombank أو PSB (يُحدَّد بـ MoU)</td>
+</tr>
+<tr>
+<td><strong>شركة التأمين الابتدائية</strong></td>
+<td>Sogor / Ingosstrakh / SOGAZ-SK (مناقصة)</td>
+</tr>
+<tr>
+<td><strong>مصدر التمويل المستهدف</strong></td>
+<td>قروض البنية التحتية من VEB.RF (مصنع تمويل المشاريع) بضمانات
+حكومية</td>
+</tr>
+<tr>
+<td><strong>القاعدة التنظيمية</strong></td>
+<td>259-FZ + 779-P + sandbox تنظيمي بموجب 258-FZ</td>
+</tr>
+<tr>
+<td><strong>موعد الإطلاق</strong></td>
+<td><strong>الربع 3 من 2027 (T+18 شهرًا من تأسيس JSC)</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="أصحاب-المصلحة-في-الـ-wedge-pilot">3. أصحاب المصلحة في الـ
+wedge-pilot</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>صاحب المصلحة</th>
+<th>الدور</th>
+<th>استراتيجية الاستقطاب</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>حكومة تتارستان / تيومين</strong></td>
+<td>الجهة الطالبة للتجربة، ومزوّد قاعدة الضمانات البلدية</td>
+<td>MoU؛ حجّة «تخفيف الضغط على الميزانية الإقليمية»</td>
+</tr>
+<tr>
+<td><strong>VEB.RF</strong></td>
+<td>مصدر التمويل المؤسسي؛ يزيل تضارب التفويض مع بنك روسيا</td>
+<td>قناة مباشرة عبر مصنع تمويل المشاريع؛ named sponsor — نائب وزير
+التنمية الاقتصادية</td>
+</tr>
+<tr>
+<td><strong>Gazprombank</strong></td>
+<td>بنك التسوية في التجربة؛ شريك إصدار DFA</td>
+<td>MoU بشأن تمويل المشاريع</td>
+</tr>
+<tr>
+<td><strong>Atomyze</strong></td>
+<td>شراكة تقنية: Atomyze — مشغِّل الصفقة وفق ترخيصه القائم 779-P (ترخيص
+مشغّل نظام معلومات DFA فردي وغير قابل للنقل، sublease غير ممكن)؛ CPFSR —
+front-end / وكيل استقطاب وتقييم الضمانات، KYC، البنية التقنية</td>
+<td>اتفاق ثنائي للشراكة التقنية؛ توافق DLT؛ تقاسم الوظائف
+والإيرادات</td>
+</tr>
+<tr>
+<td><strong>شركة التأمين</strong></td>
+<td>تغطية تجمّع الضمانات</td>
+<td>مناقصة بين شركات تأمين مرخَّصة من بنك روسيا</td>
+</tr>
+<tr>
+<td><strong>وزارة التنمية الاقتصادية</strong></td>
+<td>حليف سياسي (المشاريع الوطنية هي KPI لديهم)</td>
+<td>قناة الدخول الرئيسة؛ named sponsor</td>
+</tr>
+<tr>
+<td><strong>وزارة المالية</strong></td>
+<td>المواءمة الضريبية؛ تخفيف الضغط على سوق OFZ</td>
+<td>استفسار وفق المادة 34.2 من قانون الضرائب؛ حجّة «القناة خارج
+الميزانية»</td>
+</tr>
+<tr>
+<td><strong>بنك روسيا (جهة إشراف وفق المادة 4 من 86-FZ)</strong></td>
+<td>sandbox تنظيمي، سجل مشغّلي نظام معلومات DFA</td>
+<td>عبر الموقف الموحَّد بين الإدارات (ليس first call)</td>
+</tr>
+</tbody>
+</table>
+<h3
+id="خريطة-الرعاة-champion-map-اسميا-بنتائج-التدقيق-التوضيحي-24.05.2026">3.1.
+خريطة الرعاة (Champion-map) (اسميًا، بنتائج التدقيق التوضيحي
+24.05.2026)</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>الجهة</th>
+<th>الراعي بالاسم</th>
+<th>الدور / المصلحة</th>
+<th>أولوية الاتصال</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>وزارة التنمية الاقتصادية</strong></td>
+<td><strong>ماكسيم ريشيتنيكوف</strong>، الوزير</td>
+<td>الحليف الرئيس: KPI على المشاريع الوطنية، يهتمّ بأدوات تسريع
+التنفيذ</td>
+<td>T+1…T+3 شهرًا (نقطة الدخول الأولى)</td>
+</tr>
+<tr>
+<td><strong>وزارة المالية</strong></td>
+<td><strong>إيفان كوليتشيف</strong>، نائب الوزير (الدَّين الخارجي وسياسة
+الدَّين)</td>
+<td>قناة خارج الميزانية لتمويل البنية التحتية — تخفيف الضغط على OFZ</td>
+<td>T+3…T+6 أشهر</td>
+</tr>
+<tr>
+<td><strong>وزارة المالية</strong></td>
+<td><strong>فلاديمير سازانوف</strong>، نائب الوزير (السياسة
+الضريبية)</td>
+<td>المواءمة الضريبية على DFA (المادة 34.2 من قانون الضرائب)</td>
+<td>T+3…T+6 أشهر</td>
+</tr>
+<tr>
+<td><strong>مجلس الدوما</strong></td>
+<td><strong>أناتولي أكساكوف</strong>، رئيس لجنة السوق المالية</td>
+<td>قناة NPA لطور الأفق (T+24+)؛ دعم استشاري في تفسير 259-FZ</td>
+<td>T+6…T+12 شهرًا (للأفق)</td>
+</tr>
+<tr>
+<td><strong>VEB.RF</strong></td>
+<td>عبر FPF — الإدارات المتخصّصة لمشاريع البنية التحتية؛ LoI / رسالة
+استشارية</td>
+<td>مصدر التمويل المستهدف (مصنع تمويل المشاريع وفق قرار الحكومة رقم
+158)</td>
+<td>T+3…T+6 أشهر</td>
+</tr>
+<tr>
+<td><strong>الحكومات الإقليمية (التجربة)</strong></td>
+<td><strong>تتارستان</strong> — رستم منيخانوف / رستم بابيكوف (التحوّل
+الرقمي)؛ <strong>تيومين</strong> — ألكسندر مور؛
+<strong>باشكورتوستان</strong> — خيار احتياطي</td>
+<td>مزوّدو قاعدة الضمانات البلدية؛ الإرادة السياسية للتجربة</td>
+<td>T+6…T+9 أشهر (عبر MoU)</td>
+</tr>
+<tr>
+<td><strong>بنك روسيا (لطور الأفق)</strong></td>
+<td>عبر الموقف الموحَّد بين الإدارات: وزارة التنمية الاقتصادية + وزارة
+المالية + مجلس الدوما</td>
+<td>إدراج مؤسّسة الإصدار المستهدف في خريطة الطريق عند T+24+</td>
+<td>فقط بعد سجل أعمال wedge ≥ 12 شهرًا</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="خطوات-إطلاق-الـ-wedge-pilot">4. خطوات إطلاق الـ wedge-pilot</h2>
+<h3 id="المرحلة-0-التحضيرية-t0t3-أشهر">المرحلة 0 — التحضيرية (T+0…T+3
+أشهر)</h3>
+<ol type="1">
+<li>تأسيس JSC «CPFSR» (انظر
+<code>02_Юридический_фундамент/Учреждение_АО_оператора_и_РКН.md</code>).</li>
+<li>تعيين المسؤولين وفق 779-P.</li>
+<li>تقديم لـ Rospatent / Roskomnadzor / Rosfinmonitoring.</li>
+</ol>
+<h3 id="المرحلة-1-memo-wrapper-وchampion-search-t3t9-أشهر">المرحلة 1 —
+Memo wrapper وchampion search (T+3…T+9 أشهر)</h3>
+<ol type="1">
+<li><strong>Memo wrapper لوزارة التنمية الاقتصادية / ديوان
+الحكومة:</strong> التموضع كأداة لتسريع المشاريع الوطنية (لا كإصلاح
+نقدي). الصياغة: «تمويل مستهدف عبر البنية التحتية المؤسسية لـ VEB.RF /
+الخزانة الفيدرالية، وبنك روسيا في دور المنظِّم الإشرافي».</li>
+<li><strong>Champion search:</strong> إيجاد حامل سياسي (نائب وزير وزارة
+التنمية الاقتصادية / مستشار رئيس الحكومة). دون champion لا يتحرّك
+المشروع.</li>
+<li><strong>MoU مع بنك واحد</strong> (Gazprombank أو PSB) وشركة تأمين
+واحدة.</li>
+<li><strong>MoU مع الإقليم التجريبي</strong> (اختيار تتارستان /
+تيومين).</li>
+</ol>
+<h3 id="المرحلة-2-التراخيص-التنظيمية-t9t15-شهرا">المرحلة 2 — التراخيص
+التنظيمية (T+9…T+15 شهرًا)</h3>
+<ol type="1">
+<li><strong>طلب الإدراج في سجل مشغّلي نظام معلومات DFA</strong> لدى بنك
+روسيا (779-P).</li>
+<li><strong>طلب الدخول إلى sandbox تنظيمي</strong> لبنك روسيا
+(258-FZ).</li>
+<li><strong>اعتماد قواعد نظام المعلومات</strong> (المادة 6 من
+259-FZ).</li>
+<li><strong>الحصول على الاعتمادات القطاعية</strong> FSTEC / FSB.</li>
+<li><strong>رأي وزارة المالية</strong> بشأن الموقف الضريبي (المادة 34.2
+من قانون الضرائب).</li>
+</ol>
+<h3 id="المرحلة-3-طور-التجربة-t15t24-شهرا">المرحلة 3 — طور التجربة
+(T+15…T+24 شهرًا)</h3>
+<ol type="1">
+<li><strong>ربط القاعدة البلدية للإقليم التجريبي</strong> (50–100
+منشأة).</li>
+<li><strong>الدورة الأولى لإصدار DFA مستهدفة</strong> على أساس تجمّع
+الضمانات البلدية.</li>
+<li><strong>تمويل مستهدف عبر VEB.RF</strong> (مصنع تمويل المشاريع)
+بضمانات إقليمية.</li>
+<li><strong>تمويل مشروع وطني</strong> (مثلًا، تجديد منشآت الخدمات أو
+إنشاء إسكان اجتماعي).</li>
+<li><strong>محاسبة العمليات</strong> ضمن البنية القانونية القائمة (دون
+تعديل 86-FZ).</li>
+</ol>
+<h3 id="المرحلة-4-التوسع-t24t36-شهرا">المرحلة 4 — التوسّع (T+24…T+36
+شهرًا)</h3>
+<ol type="1">
+<li><strong>التوسّع إلى 3–5 أقاليم</strong> (تكرار النموذج).</li>
+<li><strong>ضمّ فئة ثانية من الضمانات</strong> (عقارات تجارية
+إقليمية).</li>
+<li><strong>ربط بنك شريك ثانٍ</strong> (التنويع).</li>
+<li><strong>ربط شركة تأمين ثانية</strong>.</li>
+<li><strong>إعداد الموقف الموحَّد بين الإدارات</strong> (بنك روسيا + وزارة
+المالية + وزارة التنمية الاقتصادية + VEB.RF) للدخول الأفقي إلى بنك روسيا
+ببنية التمويل المستهدف.</li>
+</ol>
+<h3 id="المرحلة-5-طور-الأفق-t36-شهرا">المرحلة 5 — طور الأفق (T+36+
+شهرًا)</h3>
+<ol type="1">
+<li>على أساس سجل wedge المتراكم 18–24 شهرًا — <strong>الدخول إلى بنك
+روسيا بالموقف الموحَّد بين الإدارات</strong>.</li>
+<li>lobby لحزمة 4 قوانين اتحادية (86-FZ، 259-FZ، قانون الميزانية،
+القانون المدني) — وزارة التطوير الرقمي + وزارة المالية + بنك روسيا +
+وزارة التنمية الاقتصادية.</li>
+<li>لوائح فرعية، توجيه من بنك روسيا، أمر مشترك من وزارة المالية / بنك
+روسيا / وزارة التطوير الرقمي / Rosreestr / الخزانة الفيدرالية.</li>
+<li>الإطلاق الكامل ببنية التمويل المستهدف.</li>
+</ol>
+<hr />
+<h2 id="المنطق-المالي-للـ-wedge-pilot">5. المنطق المالي للـ
+wedge-pilot</h2>
+<h3 id="unit-economy-للتجربة-في-السنة-1-2027">5.1. Unit-economy للتجربة
+في السنة 1 (2027)</h3>
+<table>
+<thead>
+<tr>
+<th>المؤشّر</th>
+<th style="text-align: right;">القيمة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>تجمّع الضمانات</td>
+<td style="text-align: right;">50 منشأة × 100 مليون ₽ = <strong>5 مليار
+₽</strong></td>
+</tr>
+<tr>
+<td>DFA المُصدرة</td>
+<td style="text-align: right;">5 مليار ₽ اسمي</td>
+</tr>
+<tr>
+<td>عمولة الإصدار (0.5 %)</td>
+<td style="text-align: right;">25 مليون ₽</td>
+</tr>
+<tr>
+<td>عمولة الخدمة السنوية (0.3 % من stack)</td>
+<td style="text-align: right;">15 مليون ₽</td>
+</tr>
+<tr>
+<td>رسم المنصة على التقييم/التأمين (0.15 %)</td>
+<td style="text-align: right;">7.5 مليون ₽</td>
+</tr>
+<tr>
+<td>خدمات التقييم (0.8 % من الحجم)</td>
+<td style="text-align: right;">40 مليون ₽</td>
+</tr>
+<tr>
+<td><strong>الإيراد الكامل للسنة 1</strong></td>
+<td style="text-align: right;"><strong>≈ 87.5 مليون ₽</strong></td>
+</tr>
+<tr>
+<td>OpEx للسنة 1</td>
+<td style="text-align: right;">70 مليون ₽</td>
+</tr>
+<tr>
+<td>EBITDA للسنة 1</td>
+<td style="text-align: right;">17.5 مليون ₽</td>
+</tr>
+<tr>
+<td><strong>هامش EBITDA للسنة 1</strong></td>
+<td style="text-align: right;"><strong>20 %</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="التوسع-التجريبي">5.2. التوسّع التجريبي</h3>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr>
+<th>السنة</th>
+<th style="text-align: right;">الأقاليم</th>
+<th style="text-align: right;">تجمّع الضمانات، مليار ₽</th>
+<th style="text-align: right;">الإيراد، مليار ₽</th>
+<th style="text-align: right;">هامش EBITDA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2027 (تجربة)</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.09</td>
+<td style="text-align: right;">20 %</td>
+</tr>
+<tr>
+<td>2028 (توسّع)</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">0.42</td>
+<td style="text-align: right;">40 %</td>
+</tr>
+<tr>
+<td>2029 (توسّع)</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">1.8</td>
+<td style="text-align: right;">55 %</td>
+</tr>
+<tr>
+<td>2030 (طور الأفق)</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">8.4</td>
+<td style="text-align: right;">65 %</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cash-runway-للتجربة">5.3. Cash-runway للتجربة</h3>
+<p>تُوزَّع الجولة الأولى 15 مليون $ (1 335 مليون ₽): - 24.6 مليون ₽ — تأسيس
+JSC والتسجيل التنظيمي. - 720 مليون ₽ — CapEx لأول 18 شهرًا (المنصة، مراكز
+البيانات، الرخص). - 502+220 = 722 مليون ₽ — OpEx السنة الأولى (مع
+الرواتب لأربعين شخصًا). - <strong>فجوة Cash-runway (2025–2026):</strong>
+−2 080 مليون ₽ (مع FCF Y1 −1.02 + Y2 −1.06). جولة 15 مليون $ = 1.335
+مليار ₽ تغلق 64 % من الذروة. <strong>تمويل bridge بقيمة 0.75 مليار
+₽</strong> لـ 6–9 أشهر عبر VEB.RF / Gazprombank مقابل رهن الملكية
+الفكرية — قيمة موحَّدة على مستوى المشروع (متزامنة مع Финансовая_модель.md
+§ 4.7 و Международная_оценка.md § 8).</p>
+<hr />
+<h2 id="التحليل-التنافسي-للـ-wedge-pilot">6. التحليل التنافسي للـ
+wedge-pilot</h2>
+<p>أشار التدقيق D-2 إلى منافسين لم يُذكَروا في الـ DD. في استراتيجية wedge
+— الضم:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>المنافس</th>
+<th>استراتيجية الـ wedge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Atomyze، Masterchain، Lighthouse، Sber CFA، Alfa
+CFA</strong></td>
+<td>الضمّ عبر نموذج كونسورتيوم. Atomyze — شريك تقني استراتيجي (مشغّل
+الصفقة وفق ترخيصه 779-P — الترخيص غير قابل للنقل بين أشخاص اعتبارية؛
+تقاسم الوظائف: CPFSR — front-end/وكيل، Atomyze — مشغّل)؛ يُدرَج الباقي في
+خريطة الطريق كمزوّدي بنية DLT أو خدمات مكمّلة.</td>
+</tr>
+<tr>
+<td><strong>بورصة موسكو / SPB Exchange</strong></td>
+<td>ليست منافسة في طور wedge (لا تعمل بضمانات عقارية). شريك في السوق
+الثانوية لـ DFA.</td>
+</tr>
+<tr>
+<td><strong>منصة VEB.RF «ROIV» و«مصنع تمويل المشاريع»</strong></td>
+<td><strong>ليست منافسة، بل مصدر تمويل مستهدف</strong> في wedge. تصبح
+VEB.RF الحليف المركزي.</td>
+</tr>
+<tr>
+<td><strong>DOM.RF</strong></td>
+<td>شريك في تورين العقارات (تخصّص في القطاع السكني). MoU بعد
+التجربة.</td>
+</tr>
+<tr>
+<td><strong>Atomyze + Nornickel</strong></td>
+<td>الحماية من «قاتل» — شراكة تقنية مبكرة (مشغّل الصفقة + اتفاقية توافق؛
+دون نقل ترخيص).</td>
+</tr>
+<tr>
+<td><strong>الروبل الرقمي (340-FZ)</strong></td>
+<td>تكامل معماري: CPFSR تعمل بالضمانات؛ الروبل الرقمي أداة تسوية. ليس
+منافسًا.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="الحماية-من-تضارب-التفويض">7. الحماية من تضارب التفويض</h2>
+<p>الميزة الرئيسة للـ wedge: <strong>لا يدخل المشروع إلى بنك روسيا بطلب
+إصدار</strong>.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>حجّة ضد تفويض بنك روسيا</th>
+<th>الردّ wedge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>لا يملك بنك روسيا صلاحية الإصدار المستهدف (المواد 4 و22 و75 من
+86-FZ)</td>
+<td>في wedge — تمويل مستهدف عبر VEB.RF / الخزانة؛ لا يلزم تعديل
+86-FZ</td>
+</tr>
+<tr>
+<td>إصدار روبلات بضمان غير سائل — QE بمخاطر ائتمانية مخفية</td>
+<td>في wedge — تمويل عبر VEB.RF بضمانات إقليمية؛ مخاطر الائتمان على
+ميزانية VEB.RF لا على بنك روسيا</td>
+</tr>
+<tr>
+<td>الاحتساب المزدوج للضمانة</td>
+<td>غير قائم في wedge: تمنح VEB.RF قرضًا حقيقيًّا مقابل ضمان حقيقي؛ DFA
+أداة تسوية</td>
+</tr>
+<tr>
+<td>الثنائية التنظيمية (10 NPA — مشروع سياسي)</td>
+<td>في wedge — لا يلزم أيّ تعديل في التشريع الحالي؛ فقط مواءمات ضمن
+259-FZ و258-FZ</td>
+</tr>
+<tr>
+<td>المدة حتى أول إصدار DFA</td>
+<td>في wedge — <strong>T+18 شهرًا من تأسيس JSC</strong> (موعد موحَّد: انظر
+§ 2 الربع 3 من 2027)؛ معايرة الخطوات في § 4 على هذا الـ KPI. طور الأفق
+بحزمة NPA — T+36…T+60 شهرًا واقعي</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="معايير-نجاح-الـ-wedge-pilot">8. معايير نجاح الـ wedge-pilot</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>المعيار</th>
+<th>القيمة</th>
+<th>الموعد</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>تأسيس JSC + تعيين المسؤولين</td>
+<td>وفق 779-P</td>
+<td>T+2 شهر</td>
+</tr>
+<tr>
+<td>MoU مع الإقليم التجريبي</td>
+<td>موقَّع</td>
+<td>T+9 شهرًا</td>
+</tr>
+<tr>
+<td>MoU مع البنك وشركة التأمين</td>
+<td>موقَّع</td>
+<td>T+9 شهرًا</td>
+</tr>
+<tr>
+<td>الإدراج في سجل مشغّلي نظام معلومات DFA</td>
+<td>محصَّل</td>
+<td>T+12 شهرًا</td>
+</tr>
+<tr>
+<td>إذن الـ sandbox التنظيمي</td>
+<td>محصَّل</td>
+<td>T+12 شهرًا</td>
+</tr>
+<tr>
+<td>الدورة الأولى لإصدار DFA مستهدفة</td>
+<td>5 مليار ₽</td>
+<td>T+18 شهرًا</td>
+</tr>
+<tr>
+<td>أول تمويل مستهدف عبر VEB.RF</td>
+<td>5 مليار ₽</td>
+<td>T+19 شهرًا</td>
+</tr>
+<tr>
+<td>التوسّع إلى 3 أقاليم</td>
+<td>الإطلاق</td>
+<td>T+24 شهرًا</td>
+</tr>
+<tr>
+<td>الموقف الموحَّد بين الإدارات للدخول إلى بنك روسيا بحزمة NPA</td>
+<td>موقَّع</td>
+<td>T+30 شهرًا</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ما-يغيره-الـ-wedge-pilot-في-النموذج-المالي">9. ما يغيّره الـ
+wedge-pilot في النموذج المالي</h2>
+<p>يأخذ <strong>النموذج المالي</strong>
+(<code>03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.md</code>) نمط
+الـ wedge بعين الاعتبار في السيناريو المحافظ: - حصة السوق في السنة 10 —
+7 % (بدلًا من 18 % في Base). - NPV ≈ 22 مليار ₽ (بدلًا من 51.2 مليار ₽ في
+Base، WACC 30 % — انظر SoT v3). - IRR ≈ 38 % (بدلًا من 62 % في Base). -
+Equity Multiple ≈ 5–6× (بدلًا من 12× في Base، exit-on-multiple).</p>
+<p><strong>السيناريو المحافظ في wedge هو floor</strong>، لا يهبط دونه
+المشروع حتى عند الرفض الكامل للحزمة التشريعية.</p>
+<hr />
+<h2 id="الخلاصة">10. الخلاصة</h2>
+<p>Wedge / pilot-light ضمن 259-FZ القائم — <strong>نقطة تحوّل استراتيجية
+ضرورية</strong> بنتائج بند التدقيق D5. يجعل المشروع: - <strong>واقعيًّا
+تنظيميًّا</strong> (لا يستلزم حزمة 4 قوانين اتحادية لانطلاقه). -
+<strong>محايدًا سياسيًّا</strong> (لا يهدّد تفويض بنك روسيا). -
+<strong>محصَّنًا ماليًّا</strong> (NPV المحافظ 41 مليار ₽ حتى عند رفض
+التعديلات). - <strong>قويًّا تفاوضيًّا</strong> (بعد 24 شهرًا من التشغيل
+الفعلي — موقف موحَّد للدخول إلى بنك روسيا بحزمة NPA).</p>
+<p>هذا هو الأرتيفاكت النهائي الذي يُغلق العلامة الحمراء الاستراتيجية
+D5.</p>
+<hr />
+<p><strong>تاريخ الإعداد:</strong> 24.05.2026. <strong>أُعدّ:</strong> في
+إطار تصحيح العلامات الحمراء للتدقيق الموحَّد؛ متوائم مع النموذج المالي
+والإطار القانوني.</p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" role="img" aria-label="ЦП РСФСР">
+  <rect width="192" height="192" rx="40" fill="#0B2B5C"/>
+  <g transform="translate(56,40)">
+    <rect x="0" y="0" width="20" height="112" fill="#FFFFFF"/>
+    <rect x="0" y="0" width="72" height="20" fill="#FFFFFF"/>
+    <rect x="52" y="0" width="20" height="56" fill="#FFFFFF"/>
+    <rect x="0" y="44" width="72" height="20" fill="#FFFFFF"/>
+  </g>
+  <rect x="146" y="32" width="14" height="14" fill="#C9A961"/>
+</svg>

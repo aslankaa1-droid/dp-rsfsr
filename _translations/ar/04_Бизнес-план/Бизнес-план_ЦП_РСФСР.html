@@ -1,0 +1,1449 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../">
+  <title>خطة العمل · ЦПФСР.РФ</title>
+  <meta name="description" content="خطة العمل — خطة العمل. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../_design-system/print.css">
+
+  <script defer src="../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../_design-system/i18n.js"></script>
+  <script defer src="../../../_design-system/ticker.js"></script>
+  <script defer src="../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">خطة العمل</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">خطة العمل</span>
+      <h1>خطة العمل</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1
+id="خطة-العمل-المنصة-الرقمية-الخدمة-الروسية-لتمويل-التنمية-الاجتماعية-cpfsr">خطة
+العمل — المنصة الرقمية «الخدمة الروسية لتمويل التنمية الاجتماعية»
+(CPFSR)</h1>
+<p><strong>المشغّل:</strong> المنصة الرقمية CPFSR — منصة front-end / وكيل
+لإصدار DFA بضمان أصول مرهونة. المرحلة 1 (pilot-light 2026–2028):
+الطروحات عبر شراكة تقنية مع مشغّل قائم 779-P، التمويل من مصنع تمويل
+المشاريع VEB.RF (قرار الحكومة رقم 158) ومن الخزانة الفيدرالية. المرحلة 2
+(أفق 2029+): توسيع التفويض نحو نموذج الإصدار المضمون المستهدف لبنك روسيا
+— بعد سجل أعمال إيجابي للمرحلة 1 ≥ 12 شهرًا وإقرار حزمة 4 تعديلات
+للقوانين الاتحادية. <strong>مؤلف المفهوم وصاحب حقوق المعرفة
+الفنية:</strong> عبد الحكيم أحمدوفيتش كاغيروف. <strong>شهادة
+الإيداع:</strong> رقم 4011265 بتاريخ 19.12.2024 (ireg.pro، GOST R
+34.11-2012). <strong>تاريخ الوثيقة:</strong> 23.05.2026.</p>
+<hr />
+<h2 id="ملخص-المشروع">1. ملخّص المشروع</h2>
+<p><strong>ماذا.</strong> CPFSR منصة front-end / وكيل لدورة كاملة لإصدار
+وخدمة الأصول المالية الرقمية (DFA) المُسماة على رهن العقارات وأصول أخرى.
+<strong>المرحلة 1 (2026–2028):</strong> الطروحات عبر شراكة تقنية مع مشغّل
+قائم لنظام معلومات إصدار DFA وفق 779-P (JSC «Atomyze» أو كيان آخر مدرَج —
+الترخيص غير قابل للنقل)؛ قناة التسوية والتمويل — مصنع تمويل المشاريع
+VEB.RF (قرار الحكومة رقم 158 بتاريخ 15.02.2018) والخزانة الفيدرالية في
+إطار قانون الميزانية. بنك روسيا — الجهة التنظيمية الإشرافية وفق المادة 4
+من القانون 86-FZ؛ لا إصدار إضافي في المرحلة 1. <strong>المرحلة 2 (أفق
+2029+):</strong> مسار قابل للدفاع نحو نموذج الإصدار المضمون المستهدف
+لبنك روسيا — يُنفَّذ بعد سجل أعمال إيجابي للمرحلة 1 ≥ 12 شهرًا وإقرار حزمة 4
+تعديلات.</p>
+<p><strong>لماذا.</strong> تحرير قاعدة الضمانات «النائمة» في الاتحاد
+الروسي (محافظًا 25 تريليون ₽) للتمويل المستهدف للمشاريع الوطنية والبنى
+التحتية — دون زيادة العبء على الميزانية ومع الحفاظ على حقوق المالكين. في
+المرحلة 1 يتحقّق الأثر عبر التمويل البنى-التحتي؛ في المرحلة 2 يتوسّع عبر
+الإصدار المضمون المستهدف.</p>
+<p><strong>لمن.</strong> - الدولة — مصدر خارج الميزانية للتمويل المستهدف
+للمشاريع الوطنية. - مالكو الأصول (أشخاص طبيعيون واعتباريون) — دخل إضافي
+مع الحفاظ على الأصل في الملكية. - المستثمرون — فئة جديدة من الأدوات
+الموثوقة والمضمونة والمنظَّمة. - القطاع المالي (البنوك، التأمين، المقيّمون)
+— إيرادات خدمة جديدة.</p>
+<p><strong>كم.</strong> - CapEx خلال 18 شهرًا — 850 مليون ₽. - إجمالي
+CapEx على 10 سنوات — 1 300 مليون ₽. - ذروة الحاجة للتمويل — 1 302 مليون
+₽ (نهاية 2026).</p>
+<p><strong>متى.</strong> - الانطلاق — 2025 (التحضير، الترخيص، R&amp;D).
+- إطلاق العمليات — 2026 (بعد 18 شهرًا من الانطلاق). - التجربة —
+2026–2027. - التوسّع — 2028–2030. - الطور الناضج — من 2031.</p>
+<p><strong>مصادر الدخل.</strong> - عمولة إصدار DFA — 0.5 % من الاسمي. -
+عمولة الخدمة — 0.3 % من stack المتداول. - رسم المنصة (تقييم/تأمين) —
+0.15 % من الاسمي. - رخص B2B2G للشركاء — حتى 0.15 % من حجم الإصدار. -
+التكاملات التقنية — مقطوع.</p>
+<p><strong>ما المطلوب.</strong> تمويل أولي 1.3 مليار ₽ (CapEx + buffer
+تشغيلي لـ 18 شهرًا). العائد — Payback 2.8 سنة (السيناريو الأساسي).</p>
+<p><strong>KPI المالية الرئيسة (السيناريو الأساسي، WACC 30
+%):</strong></p>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th style="text-align: right;">القيمة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NPV (مع القيمة النهائية، g = 4 %)</td>
+<td style="text-align: right;">51.2 مليار ₽</td>
+</tr>
+<tr>
+<td>IRR</td>
+<td style="text-align: right;">62 % (project-level)</td>
+</tr>
+<tr>
+<td>Payback</td>
+<td style="text-align: right;">2.8 سنة</td>
+</tr>
+<tr>
+<td>ذروة الحاجة للتمويل</td>
+<td style="text-align: right;">1.3 مليار ₽</td>
+</tr>
+<tr>
+<td>إيراد السنة 5 (2029)</td>
+<td style="text-align: right;">37.5 مليار ₽</td>
+</tr>
+<tr>
+<td>إيراد السنة 10 (2034)</td>
+<td style="text-align: right;">137.9 مليار ₽</td>
+</tr>
+<tr>
+<td>EBITDA السنة 10</td>
+<td style="text-align: right;">133.6 مليار ₽</td>
+</tr>
+</tbody>
+</table>
+<p>السيناريو المحافظ (حصة السوق ×0.5، العمولات ×0.8، OpEx ×1.15، WACC 25
+%): NPV ~57 مليار ₽، IRR ~150 %، Payback 3.1 سنة، إيراد 2034 — 56.4
+مليار ₽. هامش أمان NPV أكثر من 40× رأس المال الأولي.</p>
+<hr />
+<h2 id="وصف-الشركة-المشغل">2. وصف الشركة-المشغّل</h2>
+<h3 id="الصيغة-القانونية">2.1. الصيغة القانونية</h3>
+<p>الصيغة الموصى بها — <strong>شركة مساهمة (JSC)</strong>: - مطابقة
+لمتطلبات بنك روسيا لمشغّلي DFA (259-FZ المادة 10): حدّ أدنى لرأس المال
+الخاص، حوكمة الشركات، متطلبات تكوين المساهمين. - تتيح استقطاب مستثمرين
+استراتيجيين عبر إصدار الأسهم. - متوافقة مع نظام الأصول الاستراتيجية
+الحكومية (إن اعتُمد).</p>
+<h3 id="المؤسسون-ومحيط-الملكية">2.2. المؤسّسون ومحيط الملكية</h3>
+<p>الحزمة التأسيسية تشمل: 1. <strong>صاحب حقوق المعرفة الفنية</strong> —
+عبد الحكيم أحمدوفيتش كاغيروف (شهادة رقم 4011265 بتاريخ 19.12.2024). تُؤمَّن
+حصة المؤسّس عبر منح الترخيص أو إدراج الحق الحصري في رأس المال النظامي
+بتقييم مقيّم مستقل. 2. <strong>المساهمون المؤسسيون</strong> — يوصى
+باستقطاب مستثمرين مؤسسيين متخصّصين (بنوك التنمية، الشركات المالية
+الحكومية، المنظِّم) لضمان الدعم السياسي والراحة التنظيمية. 3. <strong>دور
+بنك روسيا (المرحلة 1).</strong> في المرحلة 1 (pilot-light 2026–2028) بنك
+روسيا هو المنظِّم الإشرافي العام للسوق المالية وفق المادة 4 من 86-FZ:
+يوافق على قواعد المشغّل وفق المادة 6 من 259-FZ، يُدرج المشغّل في السجل وفق
+اللائحة 779-P، يشرف على الامتثال لمتطلبات حماية المعلومات (683-P، 716-P)
+وGOST R 57580.1. لا يُتوقّع إصدار إضافي من بنك روسيا في المرحلة 1؛ يجري
+تمويل الطرح عبر مصنع VEB.RF (قرار الحكومة رقم 158) والخزانة الفيدرالية
+في إطار قانون الميزانية. ضمن المرحلة 2 (أفق 2029+) ومع سجل أعمال إيجابي
+≥ 12 شهرًا وإقرار حزمة 4 تعديلات يمكن النظر في توسيع التفويض إلى نموذج
+الإصدار المضمون المستهدف.</p>
+<h3 id="الولاية-القضائية">2.3. الولاية القضائية</h3>
+<p>الاتحاد الروسي. التسجيل في موسكو — موائم لموقع الجهات التنظيمية
+الرئيسة (بنك روسيا، وزارة المالية، وزارة التنمية الاقتصادية، وزارة
+التطوير الرقمي)، الخزانة الفيدرالية، والأطراف المصرفية الأساسية.</p>
+<h3 id="الوضع-الضريبي">2.4. الوضع الضريبي</h3>
+<p>عند الحصول على اعتماد IT من وزارة التطوير الرقمي والحفاظ على ≥ 70 %
+من إيرادات IT، ينطبق التخفيف الضريبي لضريبة الأرباح (5 % أو 0 % حسب
+صياغة قانون الضرائب). يستخدم السيناريو الأساسي معدل 20 % — قاعدة محافظة.
+التخفيف upside منفصل على التقييم.</p>
+<h3 id="حماية-الملكية-الفكرية">2.5. حماية الملكية الفكرية</h3>
+<p>نواة المعرفة الفنية للمشغّل هي مفهوم المؤلف المحميّ بشهادة الإيداع رقم
+4011265 بتاريخ 19.12.2024. يُثبت الإيداع تاريخ الأسبقية (24.12.2024)
+وتجزئة العمل؛ نظام الحماية القانونية — المعرفة الفنية (المادة 1465 من
+القانون المدني) والبرنامج (المادة 1262 من القانون المدني، تسجيل لدى
+Rospatent قيد الإنجاز) من تاريخ الإيداع. عند إنشاء الشركة-المشغّل يمنح
+صاحب الحقوق المشغّل حقوقًا حصرية أو غير حصرية لاستخدام المعرفة الفنية مع
+تثبيت شروط المكافأة (اتفاقية ترخيص أو إدراج في رأس المال النظامي).</p>
+<hr />
+<h2 id="وصف-المنتج-الخدمة">3. وصف المنتج / الخدمة</h2>
+<h3 id="ما-هي-cpfsr">3.1. ما هي CPFSR</h3>
+<p>CPFSR منصة رقمية لدورة كاملة: 1. تستقبل طلب رهن من المالك (عقار، نقل،
+ملكية فكرية، أوراق مالية، إلخ). 2. تجري تقييمًا آليًّا للأصل المرهون
+بمشاركة مقيّمين معتمدين بموجب القانون 135-FZ. 3. تُسجّل رهنًا مؤقتًا على
+الأصل في السجلات الحكومية المعنية (Rosreestr، شرطة المرور، جهات
+الإيداع). 4. تنسّق مع الشريك التقني — مشغّل نظام معلومات إصدار DFA وفق
+779-P — معطيات الإصدار (قواعد المشغّل، المادة 6 من 259-FZ). 5. يُصدر
+الشريك التقني DFA بقيمة اسمية مطابقة لتقييم الرهن (مع معيار الخصم). 6.
+<strong>المرحلة 1.</strong> يجري تمويل الطرح عبر مصنع VEB.RF (قرار رقم
+158 بتاريخ 15.02.2018) والخزانة الفيدرالية (قانون الميزانية). التسويات —
+الروبل غير النقدي أو الروبل الرقمي 340-FZ كمكمّل تسوية. 7. تُوجَّه الأموال
+بصورة مستهدفة إلى تمويل المشاريع الوطنية والبنى التحتية وفق القوانين
+الاتحادية واللوائح النافذة. 8. يجوز طرح DFA على المشاركين المهنيين في
+سوق الأوراق المالية؛ تُقيَّد عوائد الطرح في حسابات بموجب المواد
+860.7–860.10 من القانون المدني. 9. عند انتهاء أجل المشروع تجري عملية
+مَيناء: يُسترَدّ DFA، يُرفع الرهن عن الأصل، يستردّ المالك أصله ويتلقّى المكافأة
+المالية المتفق عليها مسبقًا.</p>
+<blockquote>
+<p><strong>المرحلة 2 (أفق 2029+).</strong> في إطار توسيع التفويض يمكن
+نقل الخطوتين 6–7 إلى نموذج الإصدار المضمون المستهدف من بنك روسيا مقابل
+pool من DFA المرهونة، مع حساب escrow تحت إدارة بنك روسيا. تُنفَّذ المرحلة 2
+بعد سجل أعمال إيجابي للمرحلة 1 ≥ 12 شهرًا وإقرار حزمة 4 تعديلات (انظر
+الإطار القانوني § 8.2).</p>
+</blockquote>
+<h3 id="الفروقات-عن-dfa-القائمة">3.2. الفروقات عن DFA القائمة</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>المعطى</th>
+<th>DFA القائمة في الاتحاد الروسي</th>
+<th>CPFSR المرحلة 1</th>
+<th>CPFSR المرحلة 2 (أفق)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>الضمان</td>
+<td>مطالبات نقدية، أسهم، التزامات</td>
+<td>أصول مادية وغير مادية (مرهونة)</td>
+<td>أصول مادية وغير مادية (مرهونة)</td>
+</tr>
+<tr>
+<td>مصدر الأموال</td>
+<td>مشتري DFA يدفع بالروبل</td>
+<td>مصنع VEB.RF + الخزانة الفيدرالية</td>
+<td>الإصدار المضمون المستهدف من بنك روسيا</td>
+</tr>
+<tr>
+<td>الغرض</td>
+<td>حرّ</td>
+<td>مستهدف (مشاريع وطنية، بنى تحتية)</td>
+<td>مستهدف (مشاريع وطنية، بنى تحتية)</td>
+</tr>
+<tr>
+<td>المحيط</td>
+<td>مشغّل خاص، بنك روسيا منظِّم</td>
+<td>شراكة تقنية مع مشغّل 779-P + بنك روسيا منظِّمًا إشرافيًّا وفق المادة 4 من
+86-FZ</td>
+<td>شراكة تقنية + بنك روسيا مُصدِرًا في التفويض الموسَّع</td>
+</tr>
+<tr>
+<td>إعادة الأصل</td>
+<td>غير منطبق</td>
+<td>بعد انتهاء المشروع — مَيناء وإعادة</td>
+<td>بعد انتهاء المشروع — مَيناء وإعادة</td>
+</tr>
+</tbody>
+</table>
+<h3 id="المزايا-وفق-مفهوم-المؤلف">3.3. المزايا (وفق مفهوم المؤلف)</h3>
+<ol type="1">
+<li>تفاعل مباشر عبر الإنترنت بين الراهن والوكلاء الماليين والمنفذين تحت
+إشراف بنك روسيا.</li>
+<li>تقليص مدد التقييم وتسجيل الرهن.</li>
+<li>دفعة لتطوير قطاع DFA في روسيا.</li>
+<li>تعبئة الأصول الخاصة «النائمة» في الدورة الاقتصادية.</li>
+<li>إيجاد حلول لمشاريع الدولة الكبرى دون زيادة عبء الدَّين.</li>
+<li>تقليص قوائم الانتظار لتمويل المشاريع الكبرى.</li>
+<li>دفعة للقطاع الاقتصادي الحقيقي.</li>
+<li>تمويل خارج الميزانية لمشاريع الدولة في الصناعات كثيفة رأس المال
+(الصناعة الثقيلة، صناعة الآلات، الطب، العلوم).</li>
+<li>مكافأة مالية لمالك المال المرهون.</li>
+<li>الإبقاء على ديناميكيات التضخّم في نطاقها الاعتيادي (الإصدار مقابل
+أصول مضمونة بالكامل).</li>
+</ol>
+<h3 id="شروط-الإطلاق">3.4. شروط الإطلاق</h3>
+<p><strong>المرحلة 1 (pilot-light 2026–2028) — دون تعديلات على القوانين
+الاتحادية:</strong></p>
+<ol type="1">
+<li>تأسيس JSC المشغّل وإدراج الشريك التقني في سجل مشغّلي نظام معلومات DFA
+وفق اللائحة 779-P (المسار الحرج — اعتماد SKZI T+9…T+18 شهرًا).</li>
+<li>الموافقة على قواعد نظام المعلومات وفق المادة 6 من 259-FZ مع بنك
+روسيا.</li>
+<li>خطاب استشاري من FPF VEB.RF بشأن انطباق قرار الحكومة رقم 158 على
+مشاريع CPFSR.</li>
+<li>MoU مع الإقليم التجريبي (تتارستان / تيومين) لمحفظة تجريبية 5–10
+مليار ₽.</li>
+<li>MoU مع بنك شريك (Gazprombank / PSB) في دور بنك التسوية ووكيل
+escrow.</li>
+</ol>
+<p><strong>المرحلة 2 (أفق 2029+، T+36+):</strong></p>
+<ol start="6" type="1">
+<li>سجل أعمال إيجابي للمرحلة 1 ≥ 12 شهرًا من التشغيل الصناعي.</li>
+<li>موقف بين الإدارات (وزارة التنمية الاقتصادية / وزارة المالية / VEB.RF
+/ الدوما).</li>
+<li>حزمة 4 تعديلات (86-FZ، 259-FZ، قانون الميزانية، القانون المدني) +
+لوائح فرعية.</li>
+</ol>
+<hr />
+<h2 id="تحليل-السوق">4. تحليل السوق</h2>
+<h3 id="سوق-dfa-في-الاتحاد-الروسي">4.1. سوق DFA في الاتحاد الروسي</h3>
+<p>منذ 2022 يسري في الاتحاد الروسي القانون الاتحادي 259-FZ «بشأن الأصول
+المالية الرقمية» الذي أرسى الإطار القانوني لإصدار DFA وتداولها. يعمل في
+السوق مشغّلو أنظمة معلومات معتمدون من بنك روسيا (تُنشر المعلومات في سجل
+بنك روسيا).</p>
+<p>وفق البيانات المفتوحة، يبلغ إجمالي حجم إصدارات DFA في الاتحاد الروسي
+للفترة 2023–2025 مئات مليارات الروبلات ويُظهر نموًّا واثقًا. الفئات السائدة
+— المطالبات النقدية، DFA المؤسسية، DFA على المعادن. لا توجد DFA بضمان
+عقاري مع إصدار مباشر لأموال بنك روسيا في الممارسة السوقية الحالية.</p>
+<h3 id="حجم-قاعدة-الضمانات-في-الاتحاد-الروسي">4.2. حجم قاعدة الضمانات في
+الاتحاد الروسي</h3>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th>القطاع</th>
+<th style="text-align: right;">الحجم، تريليون ₽</th>
+<th>المصدر</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>المخزون السكني (4.7 مليار م² × 85 000 ₽/م²)</td>
+<td style="text-align: right;">400</td>
+<td>مفهوم المؤلف، Rosstat</td>
+</tr>
+<tr>
+<td>العقارات التجارية</td>
+<td style="text-align: right;">45</td>
+<td>مفهوم المؤلف</td>
+</tr>
+<tr>
+<td>قطع الأراضي (سكن فردي + تحت المؤسسات)</td>
+<td style="text-align: right;">62</td>
+<td>مفهوم المؤلف</td>
+</tr>
+<tr>
+<td><strong>المجموع</strong></td>
+<td style="text-align: right;"><strong>507</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>القاعدة المحافظة (10 % × 50 %)</strong></td>
+<td style="text-align: right;"><strong>25</strong></td>
+<td>مفهوم المؤلف</td>
+</tr>
+</tbody>
+</table>
+<p>القاعدة المحافظة 25 تريليون ₽ هي «السعة المستهدفة» التي تسعى المنصة
+إليها على أفق 10 سنوات.</p>
+<h3 id="تقسيم-الطلب">4.3. تقسيم الطلب</h3>
+<p><strong>الأفراد (B2C):</strong> مالكو العقارات السكنية ذوو التدفق
+النقدي المستقر، الباحثون عن طرق لتحقيق دخل من الأصل دون بيعه. الفئة
+المستهدفة — نحو 30–40 % من الأسر في المدن الكبرى والمتوسطة.</p>
+<p><strong>الأشخاص الاعتبارية (B2B):</strong> مالكو العقارات التجارية —
+المؤجّرون، المطوّرون، السلاسل التجارية. المؤسسات الصناعية ذات الأصول
+العقارية. الشركات القابضة بأصول غير أساسية.</p>
+<p><strong>المؤسسات الحكومية (B2G):</strong> مالكو أصول البنية التحتية
+والأصول ذات الأهمية الاجتماعية (بما في ذلك عبر الشركات التابعة).
+الأقاليم والبلديات — لتمويل البرامج الإقليمية برهن ممتلكات بلدية.</p>
+<h3 id="المنافسون">4.4. المنافسون</h3>
+<p>في المرحلة 1 (wedge-pilot 2026–2028) يُعدّ المشغّلون القائمون في سجل
+779-P (Sber CFA، Alfa CFA، JSC «Atomyze»، Masterchain) شركاء تقنيين
+محتملين، لا منافسين على مستوى الترخيص. المنافسون غير المباشرون: الإقراض
+المصرفي بضمان عقاري (أبطأ، أغلى، دون توجّه نحو المشاريع الوطنية)؛ منصات
+التمويل الجماعي والاستثماري (أصغر، دون محيط حكومي).</p>
+<p>ميزة CPFSR التنافسية — البنية ذات المرحلتين: المرحلة 1 — طبقة
+front-end متخصّصة فوق مشغّل 779-P مع ربط بتمويل البنى التحتية عبر مصنع
+VEB.RF (قرار رقم 158) + الخزانة الفيدرالية (قانون الميزانية) والطرح
+المستهدف في المشاريع الوطنية مع الإبقاء على ملكية الأصل لدى صاحبه.
+المرحلة 2 (أفق 2029+) — مسار قابل للدفاع نحو نموذج الإصدار المضمون
+المستهدف من بنك روسيا. ليست «المنتج الأفضل» في الفئة القائمة، بل فئة
+جديدة من DFA البنى التحتية المستهدف.</p>
+<h3 id="البيئة-التنظيمية">4.5. البيئة التنظيمية</h3>
+<p><strong>القاعدة الراهنة:</strong> 86-FZ (بنك روسيا)، 259-FZ (DFA)،
+39-FZ (سوق الأوراق المالية)، 102-FZ (الرهن العقاري)، 218-FZ (سجل
+العقارات الحكومي)، قانون الضرائب (الفصول 21، 25، 34).</p>
+<p><strong>المرحلة 1 (2026–2028): لا تغييرات تنظيمية مطلوبة.</strong>
+يطلق المحيط القريب على القاعدة الحالية 259-FZ + 779-P + قانون الميزانية
++ قرار رقم 158 + القانون المدني. التعديلات على مستوى قواعد المشغّل
+(المادة 6 من 259-FZ، الموافقة من بنك روسيا) وهيكل التعاقد مع الشريك
+التقني (Atomyze أو كيان آخر من سجل 779-P).</p>
+<p><strong>المرحلة 2 (أفق 2029+): حزمة 4 تعديلات.</strong> شرط الدخول —
+سجل أعمال إيجابي للمرحلة 1 لمدة 12 شهرًا على الأقل من التشغيل الصناعي
+وموقف بين الإدارات. التكوين: 86-FZ (إضفاء الطابع الرسمي على مؤسّسة
+الإصدار المضمون المستهدف)، 259-FZ (فئة «DFA البنى التحتية المستهدف»)،
+قانون الميزانية (استلام الخزانة الفيدرالية)، القانون المدني (توسيع
+escrow إلى حسابات بنك روسيا الخاصة)، لوائح فرعية.</p>
+<p>تُوصف هذه الكتلة في وثيقة منفصلة «الإطار القانوني».</p>
+<hr />
+<h2 id="التسويق-والمبيعات">5. التسويق والمبيعات</h2>
+<h3 id="قنوات-الاستقطاب">5.1. قنوات الاستقطاب</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>القناة</th>
+<th>الجمهور المستهدف</th>
+<th>الحصة المتوقعة من الإصدار</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>البنوك الشريكة (B2B2C)</td>
+<td>الأفراد والـ MSE عبر تطبيقات البنوك</td>
+<td>40–50 %</td>
+</tr>
+<tr>
+<td>القناة الرقمية المباشرة</td>
+<td>مالكو الأصول الكبيرة</td>
+<td>15–20 %</td>
+</tr>
+<tr>
+<td>شركات التأمين الشريكة</td>
+<td>عبر بيع متقاطع لمنتجات التأمين</td>
+<td>10–15 %</td>
+</tr>
+<tr>
+<td>المقيّمون الشركاء</td>
+<td>عبر المجتمع المهني</td>
+<td>5–10 %</td>
+</tr>
+<tr>
+<td>قناة B2G الحكومية</td>
+<td>عبر البرامج الإقليمية والبلدية</td>
+<td>15–20 %</td>
+</tr>
+</tbody>
+</table>
+<h3 id="unit-economy">5.2. Unit-economy</h3>
+<p><strong>الحساب الأساسي على إصدار متوسط.</strong> متوسط إصدار DFA
+(للعميل الفرد) — 10 مليون ₽ (بناءً على متوسط قيمة العقار السكني في مدينة
+كبرى وLTV متوسط 50 %).</p>
+<table>
+<thead>
+<tr>
+<th>المعطى</th>
+<th style="text-align: right;">القيمة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>الإصدار المتوسط، ₽</td>
+<td style="text-align: right;">10 000 000</td>
+</tr>
+<tr>
+<td>عمولة الإصدار (0.5 %)، ₽</td>
+<td style="text-align: right;">50 000</td>
+</tr>
+<tr>
+<td>عمولة الخدمة (0.3 % × 5 سنوات)، ₽</td>
+<td style="text-align: right;">150 000</td>
+</tr>
+<tr>
+<td>رسم المنصة (0.15 %)، ₽</td>
+<td style="text-align: right;">15 000</td>
+</tr>
+<tr>
+<td><strong>LTV (lifetime value)، ₽</strong></td>
+<td style="text-align: right;"><strong>215 000</strong></td>
+</tr>
+<tr>
+<td><strong>CAC المقدَّر، ₽</strong></td>
+<td style="text-align: right;"><strong>20 000–40 000</strong></td>
+</tr>
+<tr>
+<td><strong>LTV/CAC</strong></td>
+<td style="text-align: right;"><strong>5–10×</strong></td>
+</tr>
+<tr>
+<td>Payback CAC</td>
+<td style="text-align: right;">4–9 أشهر</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Unit-economy موجبة من أول إصدار. ارتفاع LTV/CAC نتيجة طول الخدمة (5
+سنوات متوسط عمر DFA) وأتمتة عمليات التقييم.</p>
+</blockquote>
+<h3 id="النموذج-التشاركي">5.3. النموذج التشاركي</h3>
+<p><strong>البنوك.</strong> تتكامل CPFSR في تطبيقات البنوك عبر API.
+البنك الشريك قناة استقطاب ويتلقّى revenue share (مثلًا 30–50 % من عمولة
+الإصدار). يمنح ذلك البنك خطّ خدمات جديدًا دون متطلبات تنظيمية إضافية.</p>
+<p><strong>شركات التأمين.</strong> التأمين الإلزامي للأصل المرهون — وحدة
+مُدمَجة. يحصل المؤمِّن على القسط + بيع متقاطع (تأمين السيارات، الممتلكات).
+تأخذ المنصة agency fee.</p>
+<p><strong>شركات التقييم.</strong> يجري المقيّمون المعتمدون التقييم
+الأولي للضمان؛ تؤتمت المنصة 70–80 % من العملية (تقييم جماعي + مراجعة
+مكتبية). يحصل المقيّم على رسم ثابت.</p>
+<p><strong>المكاملون التقنيون.</strong> إدماج المنصة في بنية الشريك —
+خدمة منفصلة بنموذج رسوم ثابتة للمشروع.</p>
+<h3 id="الخطة-التسويقية">5.4. الخطة التسويقية</h3>
+<ul>
+<li>2025 (المرحلة 0): عروض مغلقة للجهات التنظيمية ولجان متخصّصة في الدوما
+وديوان الحكومة.</li>
+<li>2026 (المرحلة 1): فعاليات قطاعية (FinTech Forum، SPIEF، Finopolis)،
+إطلاق موقع B2B والوثائق التقنية.</li>
+<li>2027–2028 (المرحلة 2): ضمّ أول 5–10 بنوك شريكة، إطلاق البرامج
+التجريبية.</li>
+<li>2029–2030 (المرحلة 3): حملة B2C واسعة عبر تطبيقات البنوك، برامج
+إقليمية B2G.</li>
+<li>2031+: تموضع دولي (تنسيق BRICS)، نموذج للنسخ في الولايات القضائية
+الصديقة.</li>
+</ul>
+<hr />
+<h2 id="الخطة-التشغيلية">6. الخطة التشغيلية</h2>
+<h3 id="الموقع">6.1. الموقع</h3>
+<p><strong>المقرّ الرئيس</strong> — موسكو (قرب بنك روسيا، وزارة المالية،
+وزارة التنمية الاقتصادية، الدوما). الفئة المثلى A أو A+، الموقع في الحي
+المالي (Moscow-City، Zamoskvorechye، Tverskaya).</p>
+<p><strong>مواقع مراكز البيانات</strong> — مركزا بيانات مستقلّان على
+أراضي الاتحاد الروسي بمستوى Tier-III+، مع تكرار جغرافي (يُوصى بـ موسكو +
+مركز إقليمي — سانت بطرسبرغ، يكاترينبورغ أو نوفوسيبيرسك). الاتصال عبر
+مشغّلي اتصالات معتمدين بقنوات مكرَّرة.</p>
+<h3 id="الشركاء-التقنيون">6.2. الشركاء التقنيون</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>الفئة</th>
+<th>نوع الشريك</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>مراكز البيانات والاتصال</td>
+<td>مشغّلون روس معتمدون (Tier-III+، برخص حكومية)</td>
+</tr>
+<tr>
+<td>الوحدات التشفيرية</td>
+<td>مزوّدو تشفير روس معتمدون من FSB</td>
+</tr>
+<tr>
+<td>منظومات التقييم</td>
+<td>مقيّمون روس معتمدون، قادة السوق أولًا</td>
+</tr>
+<tr>
+<td>التأمين</td>
+<td>أعلى 20 شركة تأمين في الاتحاد الروسي</td>
+</tr>
+<tr>
+<td>الجهات الحكومية</td>
+<td>Rosreestr، شرطة المرور، جهات الإيداع، الخزانة الفيدرالية (عبر قنوات
+SMEV الآمنة)</td>
+</tr>
+<tr>
+<td>التدقيق</td>
+<td>مدقّقون مستقلّون من سجل بنك روسيا</td>
+</tr>
+</tbody>
+</table>
+<h3 id="الهيكل-التنظيمي">6.3. الهيكل التنظيمي</h3>
+<p><strong>مستويات الإدارة:</strong> مجلس الإدارة (5–9 أشخاص بمن فيهم
+مستقلّون)، المجلس التنفيذي (CEO + 5–7 رؤساء وظائف). الوظائف: التطوير
+والبنية التحتية (CTO)، العمليات وخدمة العملاء (COO)، المالية (CFO)،
+القانون والامتثال (CCO)، إدارة المخاطر (CRO)، BD والشراكات (CBO/CRO)،
+التسويق وPR (CMO)، الموارد البشرية والثقافة (CHRO).</p>
+<h3 id="الكوادر-fte-حسب-السنوات">6.4. الكوادر (FTE حسب السنوات)</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr>
+<th>السنة</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FTE</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">240</td>
+<td style="text-align: right;">270</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">330</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">370</td>
+</tr>
+</tbody>
+</table>
+<p>الهيكل بنهاية السنة 2 (120 FTE): التطوير والبنية التحتية 50 (42 %)،
+العمليات وخدمة العملاء 20 (17 %)، القانون والامتثال 15 (12.5 %)، إدارة
+المخاطر 10 (8 %)، BD والشراكات 10 (8 %)، المالية 8 (7 %)، التسويق وPR 4
+(3 %)، الموارد البشرية والثقافة 3 (2.5 %).</p>
+<hr />
+<h2 id="الخطة-التقنية">7. الخطة التقنية</h2>
+<p>محيط CPFSR التقني موصوف في وثيقة منفصلة «الوثائق التقنية» (المجلد
+<code>01_Техническая_документация</code>).</p>
+<p>المبادئ المعمارية الرئيسة: 1. معمارية microservices على حزمة تقنيات
+روسية (Astra Linux، SUBD من سجل البرمجيات، وحدات التشفير الروسية). 2.
+تكرار جغرافي بين مركزَي بيانات بـ RPO ≤ 5 د، RTO ≤ 30 د. 3. نموذج أمن
+متعدّد الطبقات (مطابقة 152-FZ، متطلبات FSTEC، GOST). 4. ناقل تكامل لربط
+البنوك، التأمين، المقيّمين، الجهات الحكومية. 5. الهوية الرقمية —
+Gosuslugi، SBP (للأفراد)؛ EP وEDO — للأشخاص الاعتبارية. 6. سجل موزَّع
+لتسجيل DFA (على منصّة روسية معتمدة). 7. مطابقة كاملة لمتطلبات بنك روسيا
+لمشغّلي DFA.</p>
+<h3 id="جاهزية-الجانب-العميل-حالة-2025">جاهزية الجانب العميل (حالة
+2025)</h3>
+<p>عند بدء المفاوضات مع بنك روسيا والمستثمرين، الجانب العميل من المنصة
+<strong>مطوَّر بالكامل</strong>:</p>
+<ul>
+<li><strong>تطبيق الجوّال بصيغة Progressive Web App</strong> — 23 شاشة،
+الدورة الكاملة لـ 19 خطوة للمؤلف (من التسجيل إلى مَيناء DFA)، 4 سمات، 4
+لغات (الروسية، الإنجليزية، الفرنسية، العربية مع RTL)، Service Worker
+للوضع غير المتصل، manifest.json للتثبيت على الجهاز.</li>
+<li><strong>وثائق التصميم وفق GOST 19</strong> — 12 وثيقة من TZ (19.201)
+إلى بيان وثائق التشغيل (19.507)، جاهزة للتقديم في سجل MinCifra (قرار رقم
+1236) ولاعتمادات FSTEC / FSB.</li>
+<li><strong>builds Capacitor 6 للمنصات</strong> — إعدادات وتعليمات تغليف
+في تطبيقات Android (AAB لـ RuStore وGoogle Play)، iOS (App Store)،
+Windows (MSIX لـ Microsoft Store).</li>
+<li><strong>حزمة نشر RuStore</strong> — وصف للكاتالوغ، سياسة خصوصية (وفق
+152-FZ)، شروط الاستخدام، مواد ترويجية، قائمة فحص النشر.</li>
+</ul>
+<p>جاهزية الجانب العميل تقلّص أفق الوصول للتجربة بنحو 3 أشهر وتخفّض مخاطرة
+التطوير التقنية. منعكسة في التقييم الدولي المحدَّث (Reasoned Value
+pre-money — 80 مليون $ في المنطقة الأساسية).</p>
+<hr />
+<h2 id="خريطة-الطريق">8. خريطة الطريق</h2>
+<h3 id="التحضير">2025–2026 — التحضير</h3>
+<p>تسجيل الشخص الاعتباري؛ استقطاب التمويل الأولي (1.3 مليار ₽)؛ تشكيل
+الفريق (40 → 120 FTE)؛ تطوير المنصة (المرحلة 1: النواة، وحدات التقييم،
+تسجيل الرهن، إصدار DFA)؛ مرافقة قانونية للتعديلات في 86-FZ و259-FZ؛
+الحصول على ترخيص بنك روسيا المتخصّص؛ الإدراج في سجل مشغّلي نظم المعلومات
+لبنك روسيا.</p>
+<h3 id="التجربة">2026–2027 — التجربة</h3>
+<p>إطلاق برامج تجريبية مع 2–3 بنوك شريكة؛ أول إصدارات DFA (حجم ~130
+مليار ₽ في 2026، ~540 مليار ₽ في 2027)؛ تطوير العمليات على عيّنة محدودة؛
+التكامل مع Rosreestr وجهات الإيداع والخزانة الفيدرالية؛ ضمّ أول شركاء
+التأمين والتقييم.</p>
+<h3 id="التوسع">2027+ — التوسّع</h3>
+<p>توسيع شبكة الشركاء؛ توسيع الإصدارات (حجم سنوي من 1.4 تريليون ₽ في
+2028 إلى 7.1 تريليون ₽ في 2034)؛ ربط البرامج الحكومية للتمويل عبر محيط
+escrow لبنك روسيا؛ إطلاق قنوات B2C عبر تطبيقات البنوك؛ التحضير لتصدير
+النموذج إلى الولايات القضائية الصديقة (تنسيق BRICS).</p>
+<hr />
+<h2 id="الخطة-المالية">9. الخطة المالية</h2>
+<p>الحسابات الكاملة — في <code>Финансовая_модель_ЦП_РСФСР.md</code>
+ومذكّرة <code>Финмодель_допущения_и_расчёты.md</code>.</p>
+<h3 id="ملخص-مختصر-للسيناريو-الأساسي">9.1. ملخّص مختصر للسيناريو
+الأساسي</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th style="text-align: right;">القيمة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NPV @ WACC 30 % (مع TV، g = 4 %)</td>
+<td style="text-align: right;">51.2 مليار ₽</td>
+</tr>
+<tr>
+<td>IRR</td>
+<td style="text-align: right;">62 % (project-level)</td>
+</tr>
+<tr>
+<td>Payback</td>
+<td style="text-align: right;">2.8 سنة</td>
+</tr>
+<tr>
+<td>ذروة الحاجة للتمويل</td>
+<td style="text-align: right;">1.3 مليار ₽</td>
+</tr>
+<tr>
+<td>إيراد 2029</td>
+<td style="text-align: right;">37.5 مليار ₽</td>
+</tr>
+<tr>
+<td>إيراد 2034</td>
+<td style="text-align: right;">137.9 مليار ₽</td>
+</tr>
+<tr>
+<td>EBITDA 2034</td>
+<td style="text-align: right;">133.6 مليار ₽</td>
+</tr>
+<tr>
+<td>هامش EBITDA 2034</td>
+<td style="text-align: right;">74.8 %</td>
+</tr>
+</tbody>
+</table>
+<h3 id="السيناريوهات">9.2. السيناريوهات</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr>
+<th>السيناريو</th>
+<th style="text-align: right;">NPV الكلي (20 سنة + TV)، مليار ₽</th>
+<th style="text-align: right;">IRR project-level، %</th>
+<th style="text-align: right;">Payback project-level، سنة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>المحافظ</td>
+<td style="text-align: right;">22.0</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">3.8</td>
+</tr>
+<tr>
+<td>الأساسي</td>
+<td style="text-align: right;">51.2</td>
+<td style="text-align: right;">161</td>
+<td style="text-align: right;">3.24</td>
+</tr>
+<tr>
+<td>المتفائل</td>
+<td style="text-align: right;">82.0</td>
+<td style="text-align: right;">195</td>
+<td style="text-align: right;">2.7</td>
+</tr>
+</tbody>
+</table>
+<p>investor-level (حصة 15.8 %، خروج Y7): IRR Base = 28.6 %؛ Payback
+(cash distribution) = 4.21 سنة. project-level مقابل investor-level —
+محوران مختلفان: الأول يجيب «كم يساوي المشروع كاملًا»، والثاني «كم يستردّ
+مستثمر Seed على أفقه».</p>
+<h3 id="الحاجة-للتمويل-واستخدام-الأموال">9.3. الحاجة للتمويل واستخدام
+الأموال</h3>
+<p>الحاجة الأولية — 1.3 مليار ₽ لـ 18 شهرًا:</p>
+<table>
+<thead>
+<tr>
+<th>الاتجاه</th>
+<th style="text-align: right;">مليون ₽</th>
+<th style="text-align: right;">الحصة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CapEx (المنصة، مراكز البيانات، الرخص)</td>
+<td style="text-align: right;">850</td>
+<td style="text-align: right;">65 %</td>
+</tr>
+<tr>
+<td>OpEx السنة الأولى</td>
+<td style="text-align: right;">380</td>
+<td style="text-align: right;">29 %</td>
+</tr>
+<tr>
+<td>وسادة السيولة</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">6 %</td>
+</tr>
+<tr>
+<td><strong>المجموع</strong></td>
+<td style="text-align: right;"><strong>1 300</strong></td>
+<td style="text-align: right;"><strong>100 %</strong></td>
+</tr>
+</tbody>
+</table>
+<p>هيكل المصادر: equity من مستثمر استراتيجي و/أو مؤسسة تنمية حكومية —
+70–100 %؛ تمويل بالدَّين — 0–30 % (بعد تأكيد الوضع التنظيمي).</p>
+<h3 id="استراتيجية-الخروج-للمستثمرين">9.4. استراتيجية الخروج
+للمستثمرين</h3>
+<p>خيارات على أفق 5–10 سنوات: (1) IPO — إدراج في بورصة موسكو بعد بلوغ
+ربحية مستدامة (بدءًا من 2030–2031 احتمالًا). (2) بيع استراتيجي — استحواذ
+المجموعة المالية الكبرى أو مؤسسة حكومية على الحصة. (3) Buy-back — إعادة
+شراء حصة المستثمر من تدفّق الأرباح. (4) استراتيجية أرباح — صرف 30–50 % من
+صافي الربح من 2028، احتفاظ مفتوح بالأسهم (للمستثمرين الاستراتيجيين).</p>
+<hr />
+<h2 id="تحليل-المخاطر">10. تحليل المخاطر</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>الفئة</th>
+<th>الوصف</th>
+<th>الاحتمال</th>
+<th>الأثر</th>
+<th>التخفيف</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>قانوني المرحلة 1</strong></td>
+<td>عقبات في الموافقة على قواعد المشغّل (المادة 6 من 259-FZ) أو معايير
+توجيه بنك روسيا 4336-U</td>
+<td>منخفض</td>
+<td>جوهري</td>
+<td>شراكة تقنية مع مشغّل قائم 779-P: الترخيص غير قابل للنقل، تعمل CPFSR
+كـ front-end / وكيل. الموافقات مع بنك روسيا تخصّ قواعد نظام معلومات
+الشريك فحسب، لا قائمة الترخيص</td>
+</tr>
+<tr>
+<td><strong>قانوني المرحلة 2</strong></td>
+<td>عدم إقرار حزمة 4 تعديلات على أفق 2029+</td>
+<td>متوسط</td>
+<td>جوهري (للمرحلة 2 فقط)</td>
+<td>المرحلة 2 خارج خريطة الطريق الاستثمارية القريبة؛ تُنفَّذ بعد سجل ≥ 12
+شهرًا وموقف بين الإدارات. المرحلة 1 قابلة للدفاع دون المرحلة 2</td>
+</tr>
+<tr>
+<td><strong>تنظيمي</strong></td>
+<td>عقبات إدراج الشريك التقني في سجل 779-P أو تعليق ترخيصه</td>
+<td>منخفض</td>
+<td>جوهري</td>
+<td>pool متعدّد للشركاء المحتملين (Atomyze، Sber CFA، Alfa CFA،
+Masterchain)؛ تقديم طلبنا الخاص إلى سجل 779-P كمسار موازٍ بعد T+12
+شهرًا</td>
+</tr>
+<tr>
+<td><strong>سوقي</strong></td>
+<td>اختراق منخفض — المالكون لا يثقون بالأداة الجديدة</td>
+<td>متوسط</td>
+<td>جوهري</td>
+<td>البدء ببرامج حكومية ومالكين كبار (B2B/B2G) لتشكيل حالات مرجعية؛ حملة
+تثقيفية واسعة؛ التكامل في تطبيقات البنوك لخفض عتبة الدخول</td>
+</tr>
+<tr>
+<td><strong>تقني</strong></td>
+<td>عطل في المنصة، فقد بيانات، هجوم سيبراني</td>
+<td>منخفض</td>
+<td>جوهري</td>
+<td>مركزا بيانات نشطان مع تكرار جغرافي؛ نسخ احتياطي يومي مع اختبار
+الاستعادة؛ وحدات تشفير معتمدة من FSB؛ pentest مستمر؛ SOC على مدار
+الساعة</td>
+</tr>
+<tr>
+<td><strong>تشغيلي</strong></td>
+<td>أخطاء تقييم الضمان، نزاعات مع المالكين</td>
+<td>متوسط</td>
+<td>معتدل</td>
+<td>تقييم متعدّد المستويات (جماعي + مكتبي + مقيّم مستقل)، تأمين المسؤولية،
+لوائح شفّافة، تحكيم قبل القضاء</td>
+</tr>
+<tr>
+<td><strong>سمعة</strong></td>
+<td>حادث صاخب (فقد أموال عميل، فضيحة فساد)</td>
+<td>منخفض</td>
+<td>حرج</td>
+<td>إجراءات امتثال صارمة، سياسة مكافحة الفساد، إبلاغ شفّاف، تدقيق خارجي
+منتظم، استراتيجية PR للأزمات</td>
+</tr>
+<tr>
+<td><strong>اقتصاد كلّي</strong></td>
+<td>ارتفاع حاد في السعر الأساسي، انهيار سوق العقارات</td>
+<td>متوسط</td>
+<td>جوهري</td>
+<td>نموذج تسعير مرن (مرتبط بالسعر الأساسي)، معايير LTV محافظة (50 %
+أساسي، حتى 70 % كحدّ أقصى)، اختبارات إجهاد فصلية</td>
+</tr>
+<tr>
+<td><strong>تنافسي</strong></td>
+<td>ظهور مشغّل ثانٍ في الفئة نفسها</td>
+<td>منخفض (حتى 5 سنوات)، متوسط (بعدها)</td>
+<td>معتدل</td>
+<td>تكامل عميق مع الجهة التنظيمية والشركاء كـ moat طبيعي؛ توسّع سريع في
+3–5 سنوات الأولى؛ حماية المعرفة الفنية</td>
+</tr>
+<tr>
+<td><strong>بشري</strong></td>
+<td>نقص في كوادر الفينتك المؤهَّلة</td>
+<td>متوسط</td>
+<td>معتدل</td>
+<td>برنامج خيارات، تعويض تنافسي، برنامج R&amp;D مع الجامعات الرائدة، عمل
+عن بُعد مع الأقاليم</td>
+</tr>
+<tr>
+<td><strong>تنافس الروبل الرقمي (340-FZ)</strong></td>
+<td>يطلق بنك روسيا برنامج إصدار مستهدف للروبل الرقمي دون وسيط أو يدمج
+DFA المرهونة في منصّة الروبل الرقمي عبر المادة 30.6 من 86-FZ</td>
+<td>متوسط (15–35 %)</td>
+<td>جوهري</td>
+<td>ثلاثة سيناريوهات تخفيف: (أ) شراكة تقنية مع بنك روسيا عبر sandbox
+258-FZ؛ (ب) تموضع CPFSR كـ front-end رسمي عبر الموقف الموحَّد؛ (ج) طبقة
+متخصّصة لـ DFA البنى التحتية المستهدف بضمان — فئة لا تغطّيها منصة الروبل
+الرقمي كأداة تسوية عامّة</td>
+</tr>
+<tr>
+<td><strong>نسخ من قِبَل المنظِّم</strong></td>
+<td>تنفّذ الدولة المنطق نفسه عبر Atomyze / VEB.RF / Sber مباشرة، دون
+CPFSR</td>
+<td>منخفض–متوسط</td>
+<td>جوهري</td>
+<td>أربعة محيطات دفاعية: (1) آثار الشبكة — pool للراهنين + بنك شريك +
+مؤمِّن + مقيّم + إقليم يكوّن تأثير Metcalfe ثنائي الجانب؛ (2) محفظة الملكية
+الفكرية — إيداع رقم 4011265 + تسجيل البرنامج في Rospatent (المادة 1262
+من القانون المدني) + المعرفة الفنية (المادة 1465 من القانون المدني) +
+علامة تجارية (المادة 1477 من القانون المدني) + براءة عن طريقة المَيناء
+(الفصل 72 من القانون المدني، طلب)؛ (3) first-mover advantage 24–30 شهرًا
+في فئة DFA البنى التحتية المستهدف مع تكامل FPF VEB.RF؛ (4) moat تعاقدي —
+LoI / MSA حصري مع مشغّل 779-P (Atomyze) لمدة 3 سنوات في فئة «DFA البنى
+التحتية المستهدف بضمان»</td>
+</tr>
+</tbody>
+</table>
+<p>تُراجع خريطة المخاطر فصليًّا. <strong>المرحلة 1 قابلة للدفاع دون تعديلات
+FZ.</strong> المخاطرة التنظيمية الرئيسة للمرحلة 2 (إقرار حزمة 4 قوانين)
+مفصَّلة في وثيقة «الإطار القانوني» § 8.2.</p>
+<hr />
+<h2 id="الفريق">11. الفريق</h2>
+<h3 id="مؤلف-المفهوم-وبادئ-المشروع">11.1. مؤلف المفهوم وبادئ
+المشروع</h3>
+<p><strong>عبد الحكيم أحمدوفيتش كاغيروف</strong> — مؤلف وصاحب حقوق
+المعرفة الفنية لـ CPFSR (شهادة الإيداع رقم 4011265 بتاريخ 19.12.2024).
+طوّر المفهوم المعروض في هذه الوثيقة، وحُمي بالإجراءات المحدَّدة.</p>
+<h3 id="تكوين-الفريق-التنفيذي">11.2. تكوين الفريق التنفيذي</h3>
+<p>في مرحلة الانطلاق (2025) يتشكّل نواة الفريق: CEO (شريك إداري بخبرة
+إطلاق مشاريع فينتك بنى تحتية)، CTO (مدير تقني بخبرة بناء منصّات مصرفية)،
+CCO (مسؤول امتثال بخبرة في الإدارات الإشرافية لبنك روسيا)، CFO (مدير
+مالي بمستوى مؤسسة مالية كبرى)، مجلس إدارة (5–9 أشخاص بحضور إلزامي
+لمستقلّين وممثّلي المساهمين الرئيسيين).</p>
+<p>لا تُذكر أسماء محدَّدة: اختيار الفريق مهمّة مرحلة الانطلاق، يجري بالتوازي
+مع استقطاب مستثمر استراتيجي. جميع التعيينات تخضع للموافقة من الجهة
+التنظيمية (يضع بنك روسيا متطلبات للسمعة والمؤهّلات لمديري المشغّلين).</p>
+<h3 id="حماية-صاحب-حقوق-المعرفة-الفنية">11.3. حماية صاحب حقوق المعرفة
+الفنية</h3>
+<p>بعد إدراج المعرفة الفنية للمؤلف في رأس المال النظامي لـ JSC-المشغّل
+تُثبَّت الآليات الحمائية التالية (تفصيلًا في <code>_Мастер/Концепт.md</code>
+§ 1-quater):</p>
+<ol type="1">
+<li><strong>مقعد دائم للمؤلف كاغيروف أ.أ.أ. في مجلس الإدارة</strong> حتى
+Series B (≥ 2031)، بصرف النظر عن حجم حصة المستثمر.</li>
+<li><strong>تعهّدات حمائية في اتفاقية المساهمين:</strong> drag-along — مع
+مشاركة صاحب الحقوق حصرًا؛ tag-along — حماية 100 % من خروج قسري؛
+anti-dilution full ratchet حتى Series B؛ حظر التصرّف في حقوق المعرفة
+الفنية دون موافقة صاحب الحقوق؛ vesting المساهم المؤسسي 4 سنوات مع cliff
+سنة.</li>
+<li><strong>إعادة المعرفة الفنية</strong> عند التصفية / الإفلاس /
+استحواذ عدائي: الحقوق الحصرية تعود للمؤلف دون قيد.</li>
+<li><strong>تدفّق إتاوة</strong> — 2 % من إيرادات المشغّل لصاحب الحقوق
+كمرخِّص (إلى جانب توزيعات الأسهم).</li>
+</ol>
+<h3 id="هامش-ebitda-bridge-2030-2034">11.4. هامش EBITDA: bridge 2030 →
+2034</h3>
+<p><code>Wedge_pilot-light.md</code> § 5.2 يعطي مسار هامش EBITDA: 2027 =
+20 %، 2028 = 40 %، 2029 = 55 %، 2030 = 65 %. هامش TV المستهدف 2034 =
+74.8 %. الفجوة 65 % → 74.8 % (+9.8 نقطة مئوية في 4 سنوات) تُفسَّر بثلاثة
+عوامل: <strong>(أ)</strong> stack DFA المتداول بحلول 2034 ≈ 26.6 تريليون
+₽ يعطي حصة مرتفعة من عمولة الخدمة (0.3 % × OpEx هامشي منخفض)؛
+<strong>(ب)</strong> أتمتة compliance/KYC عبر تكاملات ESIA/UBS/GIS GMP →
+خفض incremental cost-to-serve إلى ~3 % من إيراد 2034 مقابل 8 % في 2030؛
+<strong>(ج)</strong> إضافات OpEx للمقيّمين/التأمين والمرافقة القانونية
+تصبح ثابتة بالحجم (≈ 5 % من الإيراد) بعد بلوغ pool ناضج للشركاء.
+التفاصيل — <code>_Мастер/Единые_показатели_v2.md</code> § 4 (سلسلة FCF)
+وورقة «EBITDA bridge 2030-2034» في <code>_shared/finmodel.js</code>.</p>
+<hr />
+<h2 id="الأثر-الاجتماعي-الاقتصادي">12. الأثر الاجتماعي-الاقتصادي</h2>
+<h3 id="الأثر-على-الناتج-المحلي">12.1. الأثر على الناتج المحلي</h3>
+<p>حجم التمويل المستقطَب عبر CPFSR في السيناريو الأساسي: 2026 — 130 مليار
+₽ من الإصدار → ~130 مليار ₽ من التمويل البنى-التحتي عبر مصنع VEB.RF +
+الخزانة الفيدرالية (المرحلة 1) → يُعاد استثمارها في المشاريع الوطنية.
+2029 — 2.9 تريليون ₽ إصدارًا سنويًّا. على أفق المرحلة 2 — الانتقال إلى
+نموذج الإصدار المضمون المستهدف لبنك روسيا. 2034 — 7.1 تريليون ₽ إصدارًا
+سنويًّا.</p>
+<p>بمضاعف استثمار بنى-تحتي 1.8–2.3 (النطاق المعياري للاقتصاد الروسي؛
+تطبّق وزارة التنمية الاقتصادية 1.9–2.1 لتقييم آثار المشاريع الوطنية)،
+يُتوقّع إسهام في الناتج المحلي: 2029 — 5.2–6.7 تريليون ₽ من النشاط
+الاقتصادي الإضافي. 2034 — 12.8–16.4 تريليون ₽ من النشاط الإضافي. يقارَن
+ذلك بـ 5–8 % من الناتج المحلي الاسمي للاتحاد الروسي (لـ 2034).</p>
+<h3 id="الأثر-على-المشاريع-الوطنية">12.2. الأثر على المشاريع
+الوطنية</h3>
+<p>تكفل CPFSR التمويل المستهدف للمشاريع الوطنية دون زيادة العبء على
+الميزانية. تقليص قائمة الانتظار في التمويل عبر تعبئة قاعدة الضمانات
+الخاصّة هو الأثر الرئيس المُشار إليه في الميزة السادسة من مفهوم
+المؤلف.</p>
+<p>الاتجاهات المستهدفة المحتملة (تُحدِّدها قوانين اتحادية وقرارات حكومية
+متخصّصة): الصناعة الثقيلة وصناعة الآلات؛ استبدال الواردات في القطاعات
+الحرجة؛ الرعاية الصحية (تحديث البنية التحتية والمعدّات)؛ العلوم والتعليم؛
+البنية التحتية للنقل (الجسور، الطرق، مراكز اللوجستيات)؛ الطاقة
+والخدمات.</p>
+<h3 id="الأثر-على-الأصول-النائمة">12.3. الأثر على الأصول «النائمة»</h3>
+<p>وفق النقطة 4 من المفهوم — تعبئة الأصول الخاصة «النائمة» في الدورة
+الاقتصادية. حاليًّا نحو 80 % من المخزون السكني وحصة كبيرة من العقارات
+التجارية في الاتحاد الروسي لا تُستخدم كأداة رهن لأسباب موضوعية
+(بيروقراطية، طول الإجراءات، غياب المنتج الملائم). تزيل CPFSR هذه الحواجز
+عبر الأتمتة ومحيط منتج جديد. حتى السنة 10 — حتى 20 % من قاعدة الضمانات
+المحافظة في التداول (5 تريليون ₽)، أيّ ما يقابل تعبئة أصول 10–20 مليون
+أسرة ومؤسسة في الاتحاد الروسي.</p>
+<h3 id="دخل-إضافي-للمالكين">12.4. دخل إضافي للمالكين</h3>
+<p>وفق النقطة 9 من المفهوم — مكافأة مالية لمالك الأصل المرهون. بنموذج
+مكافأة المالك، مثلًا 1–2 % سنويًّا من اسمي DFA (المعدل الدقيق يحدّد بمعايير
+تنظيمية وشروط العقد مع المشغّل)، مجموع المدفوعات للمالكين حتى السنة 10:
+حجم stack DFA 26.6 تريليون ₽. عند 1 % — 266 مليار ₽ سنويًّا. عند 2 % — 532
+مليار ₽ سنويًّا. يقارَن ذلك بميزانية عدة أقاليم ويوفّر إسهامًا «ثانويًّا» مهمًّا
+في الطلب الاستهلاكي والقاعدة الضريبية.</p>
+<h3 id="الأثر-على-المنظومة-المالية">12.5. الأثر على المنظومة
+المالية</h3>
+<ul>
+<li>توسيع قاعدة أدوات سوق الأوراق المالية (فئة جديدة من الأصول
+الموثوقة).</li>
+<li>إمكانيات تنويع محافظ المعاشات والتأمين.</li>
+<li>تطوير الخدمات المرافقة (التقييم، التأمين، الدعم القانوني) — وظائف
+إضافية في القطاع المالي.</li>
+<li>دفعة لتطوير الفينتك الروسي والتقنيات التنظيمية.</li>
+</ul>
+<h3 id="النظام-التضخمي">12.6. النظام التضخّمي</h3>
+<p>وفق النقطة 10 من المفهوم — الإصدار يجري مقابل أصول مضمونة بالكامل.
+هذا يختلف جوهريًّا عن الإصدار «المروحي»: كلّ روبل مُصدَر مضمون بمال حقيقي
+مُقيَّم بخصم. الأثر التضخّمي محايد أو مكافح للتضخّم (نموّ عرض السلع والخدمات
+عبر المشاريع الوطنية يُعوِّض الزيادة في الكتلة النقدية).</p>
+<hr />
+<h2 id="gtm-sequencing-وchampion-map-t0t180">13. GTM-sequencing
+وChampion-map (T+0…T+180)</h2>
+<p>تستلزم منطقة الـ wedge تجنّب بنك روسيا في الخطوة الأولى: بنك روسيا هو
+الجهة الأخيرة للمرحلة 1 (إدراج المشغّل في سجل 779-P). تتمّ الموافقات
+الرئيسة عبر وزارة التنمية الاقتصادية → وزارة المالية → VEB.RF → الدوما →
+الإقليم → Atomyze. خريطة Champion اسمية (متزامنة مع
+<code>_Мастер/Концепт.md § 1-ter</code>):</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>المرحلة</th>
+<th>الشخص</th>
+<th>الجهة</th>
+<th>الهدف</th>
+<th>الوثيقة الداعمة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T+30</td>
+<td><strong>ماكسيم ريشيتنيكوف</strong></td>
+<td>وزارة التنمية الاقتصادية، الوزير</td>
+<td>Wedge-pilot المرحلة 1 كأداة لتسريع المشاريع الوطنية؛ named
+sponsor</td>
+<td>خطة العمل + Pitch_deck + Wedge_pilot-light</td>
+</tr>
+<tr>
+<td>T+30</td>
+<td><strong>ديوان حكومة الاتحاد الروسي</strong></td>
+<td>عبر مستشار قطاع الاقتصاد الرقمي</td>
+<td>المفهوم المعماري؛ فريق العمل المشترك بين الإدارات</td>
+<td>المفهوم § 1-bis + الإطار القانوني § 8.1</td>
+</tr>
+<tr>
+<td>T+30</td>
+<td><strong>JSC «Atomyze»</strong></td>
+<td>عبر ممثّل موصى به</td>
+<td>LoI شراكة تقنية: مشغّل الصفقة 779-P + CPFSR front-end</td>
+<td>Pre-meeting_briefs/01_LoI_Атомайз.md</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td><strong>إيفان كوليتشيف</strong></td>
+<td>وزارة المالية، نائب الوزير (الدَّين)</td>
+<td>قناة خارج الميزانية؛ حجّة تخفيف الضغط على OFZ</td>
+<td>النموذج المالي v3 + خطة العمل</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td><strong>فلاديمير سازانوف</strong></td>
+<td>وزارة المالية، نائب الوزير (الضرائب)</td>
+<td>الموقف الضريبي من DFA (المادة 34.2؛ الفقرة 12.2 من البند 2 من المادة
+149)</td>
+<td>الإطار القانوني § 5 + استفسار بموجب المادة 34.2</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td><strong>VEB.RF FPF</strong></td>
+<td>عبر ممثّل موصى به من وزارة التنمية الاقتصادية</td>
+<td>رسالة استشارية بموجب قرار رقم 158</td>
+<td>Pre-meeting_briefs/02_Consultative_letter_ВЭБ.РФ.md</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td><strong>Gazprombank / PSB</strong></td>
+<td>عبر ممثّل موصى به من وزارة التنمية الاقتصادية</td>
+<td>MoU في دور بنك تسوية التجربة</td>
+<td>Pre-meeting_briefs/04_MoU_GPB_ПСБ.md</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td><strong>رستم منيخانوف</strong></td>
+<td>جمهورية تتارستان</td>
+<td>MoU التجربة البلدية: 50–100 منشأة، 5–10 مليار ₽</td>
+<td>Pre-meeting_briefs/03_MoU_Татарстан.md</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td><strong>ألكسندر مور</strong></td>
+<td>إقليم تيومين (احتياطي)</td>
+<td>كما سبق</td>
+<td>كما سبق</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td><strong>أناتولي أكساكوف</strong></td>
+<td>الدوما، لجنة السوق المالية</td>
+<td>مشاورات بشأن 259-FZ للمرحلة 1؛ أفق المرحلة 2 — حزمة 4 قوانين</td>
+<td>مذكّرة لبنك روسيا + المفهوم</td>
+</tr>
+<tr>
+<td>T+180+</td>
+<td><strong>بنك روسيا</strong></td>
+<td>عبر موقف موحَّد بين الإدارات</td>
+<td>سجل مشغّلي نظم معلومات DFA وفق 779-P (المرحلة 1)</td>
+<td>الإطار القانوني § 8.1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>مؤشّرات النجاح للانتقال من المرحلة 1 إلى المرحلة 2:</strong>
+عائد ≥ 18 % سنويًّا لمالكي الأصول؛ ≥ 8 أقاليم في المنظومة؛ AUM ≥ 50 مليار
+₽ بنهاية 2027؛ لا حوادث من فئة 779-P § 9 (حماية حقوق المستثمرين).</p>
+<p>Pre-meeting briefs لكل champion — في
+<code>02_Юридический_фундамент/Pre-meeting_briefs/</code> (4 drafts
+جاهزة).</p>
+<hr />
+<h2 id="الملاحق">14. الملاحق</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>الوثيقة</th>
+<th>الموقع</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>النموذج المالي</td>
+<td><code>03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.md</code></td>
+</tr>
+<tr>
+<td>ملاحظات النموذج المالي</td>
+<td><code>03_Финансовая_модель/Финмодель_допущения_и_расчёты.md</code></td>
+</tr>
+<tr>
+<td>مفهوم المؤلف</td>
+<td><code>_Мастер/Концепт.md</code></td>
+</tr>
+<tr>
+<td>الإطار القانوني</td>
+<td><code>02_Юридический_фундамент/</code> (وثيقة منفصلة)</td>
+</tr>
+<tr>
+<td>الحلّ التقني</td>
+<td><code>01_Техническая_документация/</code> (وثيقة منفصلة)</td>
+</tr>
+<tr>
+<td>Pre-meeting briefs</td>
+<td><code>02_Юридический_фундамент/Pre-meeting_briefs/</code></td>
+</tr>
+<tr>
+<td>شهادة الإيداع</td>
+<td>رقم 4011265 بتاريخ 19.12.2024 (محفوظة لدى المؤلف)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>التاريخ:</strong> 24.05.2026 (refactor بعد Horizon-II: أُضيف §
+13 GTM-sequencing). <strong>المصادر:</strong> مفهوم المؤلف (كاغيروف
+أ.-خ. أ.، شهادة رقم 4011265 بتاريخ 19.12.2024)؛ 86-FZ، 259-FZ، قانون
+الضرائب، التوجّهات الرئيسة لسياسة بنك روسيا النقدية؛ بيانات Rosstat. لم
+تُستخدم مواد من جهات أخرى.</p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

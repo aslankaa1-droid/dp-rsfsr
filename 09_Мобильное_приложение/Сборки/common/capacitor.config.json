@@ -1,0 +1,94 @@
+{
+  "appId": "ru.rsfsr.app",
+  "appName": "ЦП РСФСР",
+  "webDir": "../../Приложение",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https",
+    "iosScheme": "https",
+    "hostname": "app.dp-rsfsr.ru",
+    "allowNavigation": [
+      "dp-rsfsr.ru",
+      "*.dp-rsfsr.ru",
+      "esia.gosuslugi.ru",
+      "*.gosuslugi.ru",
+      "ebs.cbr.ru"
+    ],
+    "cleartext": false
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1500,
+      "launchAutoHide": true,
+      "backgroundColor": "#0B2B5C",
+      "androidSplashResourceName": "splash",
+      "androidScaleType": "CENTER_CROP",
+      "showSpinner": false,
+      "androidSpinnerStyle": "large",
+      "iosSpinnerStyle": "small",
+      "spinnerColor": "#C9A961",
+      "splashFullScreen": true,
+      "splashImmersive": true,
+      "layoutName": "launch_screen",
+      "useDialog": false
+    },
+    "StatusBar": {
+      "style": "DARK",
+      "backgroundColor": "#0B2B5C",
+      "overlaysWebView": false
+    },
+    "Keyboard": {
+      "resize": "body",
+      "style": "DARK",
+      "resizeOnFullScreen": true
+    },
+    "App": {
+      "iosScheme": "ru.rsfsr.app"
+    },
+    "Preferences": {
+      "group": "ru.rsfsr.app.shared"
+    },
+    "PushNotifications": {
+      "presentationOptions": ["badge", "sound", "alert"]
+    },
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_icon_notif",
+      "iconColor": "#0B2B5C",
+      "sound": "default"
+    },
+    "BiometricAuth": {
+      "promptTitle": "Подтверждение операции ЦП РСФСР",
+      "promptSubtitle": "Используйте биометрию для безопасного входа",
+      "promptDescription": "Touch ID / Face ID / Windows Hello",
+      "promptCancel": "Отмена"
+    },
+    "SecureStorage": {
+      "group": "ru.rsfsr.app.secure"
+    },
+    "CapacitorHttp": {
+      "enabled": true
+    }
+  },
+  "ios": {
+    "scheme": "RSFSR",
+    "contentInset": "automatic",
+    "limitsNavigationsToAppBoundDomains": true,
+    "preferredContentMode": "mobile",
+    "scrollEnabled": true,
+    "backgroundColor": "#0B2B5C"
+  },
+  "android": {
+    "minWebViewVersion": 88,
+    "buildOptions": {
+      "keystorePath": "release.keystore",
+      "keystoreAlias": "rsfsr_release",
+      "keystorePasswordEnv": "RSFSR_KEYSTORE_PASSWORD",
+      "keystoreAliasPasswordEnv": "RSFSR_KEYSTORE_ALIAS_PASSWORD",
+      "releaseType": "AAB"
+    },
+    "backgroundColor": "#0B2B5C",
+    "allowMixedContent": false,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": false
+  }
+}

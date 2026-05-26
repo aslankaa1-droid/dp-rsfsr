@@ -1,0 +1,463 @@
+﻿<!doctype html>
+<html lang="ru" data-theme="daylight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Программа и методика испытаний · ЦП РСФСР</title>
+<meta name="theme-color" content="#0B2B5C">
+<link rel="stylesheet" href="../../_shared/brand.css">
+<style>
+/* Document-specific styles */
+body { padding-top: 80px; }
+.doc-wrap { max-width: 880px; margin: 0 auto; padding: 48px 24px 96px; }
+.doc-header {
+  padding-bottom: 24px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.doc-header .eyebrow { margin-bottom: 12px; }
+.doc-header h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--primary); margin-bottom: 12px; }
+.doc-header p { color: var(--fg-mute); font-size: .9375rem; margin: 0; }
+.doc-content h1, .doc-content h2, .doc-content h3, .doc-content h4 { color: var(--primary); margin-top: 2em; margin-bottom: .5em; }
+.doc-content h1 { font-size: 1.875rem; }
+.doc-content h2 { font-size: 1.5rem; padding-bottom: 6px; border-bottom: 1px solid var(--border-soft); }
+.doc-content h3 { font-size: 1.25rem; }
+.doc-content h4 { font-size: 1.0625rem; color: var(--fg); }
+.doc-content p { line-height: 1.7; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content ul, .doc-content ol { line-height: 1.7; padding-left: 1.5em; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content li { margin-bottom: .35em; }
+.doc-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 12px 20px;
+  margin: 1em 0;
+  background: var(--bg-soft);
+  border-radius: 0 8px 8px 0;
+  color: var(--fg-soft);
+}
+.doc-content code {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg-soft);
+  padding: 2px 6px; border-radius: 4px;
+  font-size: .875em; color: var(--primary);
+}
+.doc-content pre {
+  background: var(--bg-soft); padding: 16px; border-radius: 10px;
+  overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: .875rem;
+  border: 1px solid var(--border-soft); margin: 1em 0;
+}
+.doc-content table {
+  width: 100%; border-collapse: collapse; margin: 1.5em 0;
+  background: var(--card-bg); border: 1px solid var(--border-soft);
+  border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-1);
+}
+.doc-content table th {
+  background: var(--primary); color: var(--primary-on);
+  text-align: left; padding: 12px 16px; font-weight: 600;
+  font-size: .8125rem; letter-spacing: .04em; text-transform: uppercase;
+}
+.doc-content table td {
+  padding: 10px 16px; border-bottom: 1px solid var(--border-soft);
+  font-size: .9375rem; color: var(--fg-soft);
+}
+.doc-content table tr:last-child td { border-bottom: none; }
+.doc-content table tr:hover td { background: var(--bg-soft); }
+.doc-content hr {
+  border: none; height: 1px; background: var(--border-soft); margin: 2.5em 0;
+}
+.doc-content a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+.doc-content a:hover { color: var(--accent); }
+.doc-content strong { color: var(--fg); font-weight: 700; }
+
+.doc-actions {
+  display: flex; gap: 10px; margin-top: 32px; flex-wrap: wrap;
+}
+
+/* Floating top button */
+.totop {
+  position: fixed; bottom: 24px; right: 24px; z-index: 50;
+  background: var(--primary); color: var(--primary-on);
+  border: none; border-radius: 50%; width: 48px; height: 48px;
+  cursor: pointer; box-shadow: var(--shadow-3);
+  display: none; font-size: 1.25rem;
+  transition: transform .2s var(--ease);
+}
+.totop:hover { transform: translateY(-2px); }
+.totop.show { display: grid; place-items: center; }
+[dir="rtl"] .totop { right: auto; left: 24px; }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div class="scroll-progress"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="../../07_Презентации/Большая_презентация/index.html"><span class="brand-mark">Р</span><span data-i18n="brand.name">ЦП РСФСР</span></a>
+    <nav class="topbar-nav">
+      <a href="../../07_Презентации/Большая_презентация/index.html#about" data-i18n="nav.about">О платформе</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#hub" data-i18n="nav.hub">Документы</a>
+      <a href="../../08_Веб-сайт/HTML_основной/index.html">Сайт</a>
+      <a href="../../07_Презентации/Малая_презентация/index.html">Презентация</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#contacts" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+    <div class="topbar-actions">
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-i18n-btn="ru">RU</button>
+        <button class="tbtn" data-i18n-btn="en">EN</button>
+        <button class="tbtn" data-i18n-btn="fr">FR</button>
+        <button class="tbtn" data-i18n-btn="ar">عر</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-theme-btn="daylight" aria-label="Дневная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+        <button class="tbtn" data-theme-btn="midnight" aria-label="Тёмная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="tbtn" data-theme-btn="sepia">◐</button>
+        <button class="tbtn" data-theme-btn="contrast">A11Y</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn" data-font-action="dec">A−</button>
+        <button class="tbtn" data-font-action="reset">A</button>
+        <button class="tbtn" data-font-action="inc">A+</button>
+      </div>
+      <button class="tbtn tbtn-burger">≡</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="eyebrow">Конструкторская документация · ЦП РСФСР ·
+МП</span>
+      <h1>Программа и методика испытаний</h1>
+      <p>Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 · 19.12.2024 · ЦП РСФСР</p>
+    </header>
+    <article class="doc-content">
+<h1 id="программа-и-методика-испытаний">Программа и методика
+испытаний</h1>
+<h2 id="цп-рсфср-мобильное-приложение">ЦП РСФСР — мобильное
+приложение</h2>
+<p><strong>Условное обозначение:</strong> РСФСР.МП.10.ПМИ
+<strong>Стандарт:</strong> ГОСТ 19.301-79</p>
+<hr />
+<h2 id="объект-испытаний">1. Объект испытаний</h2>
+<h3 id="наименование">1.1. Наименование</h3>
+<p>Мобильное приложение «ЦП РСФСР — мобильное приложение залогодателя»
+во всех целевых сборках: - Android (RuStore, Google Play); - iOS (App
+Store); - Windows (Microsoft Store); - PWA (любой современный
+браузер).</p>
+<h3 id="цель-испытаний">1.2. Цель испытаний</h3>
+<p>Подтверждение соответствия программы требованиям технического задания
+(РСФСР.МП.01.ТЗ), нормативным требованиям регуляторов и стандартам
+качества программных продуктов.</p>
+<h2 id="виды-испытаний">2. Виды испытаний</h2>
+<h3 id="функциональные-испытания">2.1. Функциональные испытания</h3>
+<p>Проверка соответствия функциональным требованиям ТЗ. Объект — все 23
+экрана и все переходы.</p>
+<h3 id="нагрузочные-испытания">2.2. Нагрузочные испытания</h3>
+<p>Проверка производительности при пиковых нагрузках.</p>
+<h3 id="испытания-безопасности">2.3. Испытания безопасности</h3>
+<p>Сертификационные испытания по требованиям ФСТЭК России, ФСБ
+России.</p>
+<h3 id="испытания-доступности">2.4. Испытания доступности</h3>
+<p>Проверка соответствия WCAG 2.2 уровня AA.</p>
+<h3 id="испытания-совместимости">2.5. Испытания совместимости</h3>
+<p>Проверка работы на различных моделях устройств и версиях ОС.</p>
+<h3 id="регрессионные-испытания">2.6. Регрессионные испытания</h3>
+<p>Автоматические тесты на каждом релизе.</p>
+<h2 id="программа-испытаний">3. Программа испытаний</h2>
+<h3 id="этап-1.-альфа-тестирование-внутреннее">3.1. Этап 1.
+Альфа-тестирование (внутреннее)</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Тест</th>
+<th>Сценарий</th>
+<th>Ожидаемый результат</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FT-001</td>
+<td>Запуск приложения</td>
+<td>Splash через 1,5 сек → Login</td>
+</tr>
+<tr>
+<td>FT-002</td>
+<td>Авторизация через ЕСИА</td>
+<td>Переход к KYC</td>
+</tr>
+<tr>
+<td>FT-003</td>
+<td>Прохождение KYC (3 шага)</td>
+<td>Переход к Onboarding</td>
+</tr>
+<tr>
+<td>FT-004</td>
+<td>Прохождение Onboarding</td>
+<td>Переход на Home</td>
+</tr>
+<tr>
+<td>FT-005</td>
+<td>Подача нового актива (полный wizard)</td>
+<td>Получение оценки</td>
+</tr>
+<tr>
+<td>FT-006</td>
+<td>Настройка и подписание смарт-контракта</td>
+<td>Экран «ЦФА выпущен»</td>
+</tr>
+<tr>
+<td>FT-007</td>
+<td>Просмотр выпущенного ЦФА</td>
+<td>Карточка ЦФА с условиями</td>
+</tr>
+<tr>
+<td>FT-008</td>
+<td>Просмотр доходов и графика</td>
+<td>График и список выплат</td>
+</tr>
+<tr>
+<td>FT-009</td>
+<td>История операций с фильтрами</td>
+<td>Список операций</td>
+</tr>
+<tr>
+<td>FT-010</td>
+<td>Уведомления центр</td>
+<td>Список 4 уведомлений</td>
+</tr>
+<tr>
+<td>FT-011</td>
+<td>Профиль и его действия</td>
+<td>Меню профиля</td>
+</tr>
+<tr>
+<td>FT-012</td>
+<td>Переключение тем (×4)</td>
+<td>Тема меняется без перезагрузки</td>
+</tr>
+<tr>
+<td>FT-013</td>
+<td>Переключение языков (×4)</td>
+<td>Все строки переводятся; AR → RTL</td>
+</tr>
+<tr>
+<td>FT-014</td>
+<td>Изменение размера шрифта</td>
+<td>Шрифт масштабируется</td>
+</tr>
+<tr>
+<td>FT-015</td>
+<td>Документы → внешняя ссылка</td>
+<td>Открытие документа в новой вкладке</td>
+</tr>
+<tr>
+<td>FT-016</td>
+<td>Биометрия (имитация)</td>
+<td>Успешное подтверждение</td>
+</tr>
+<tr>
+<td>FT-017</td>
+<td>OTP-код подтверждение</td>
+<td>Заполнение по одной цифре</td>
+</tr>
+<tr>
+<td>FT-018</td>
+<td>Выход из аккаунта</td>
+<td>Возврат на Login</td>
+</tr>
+<tr>
+<td>FT-019</td>
+<td>Возврат на главную с любого экрана</td>
+<td>Один тап на логотипе</td>
+</tr>
+<tr>
+<td>FT-020</td>
+<td>Bottom-nav между 5 вкладками</td>
+<td>Корректная подсветка активной</td>
+</tr>
+</tbody>
+</table>
+<h3 id="этап-2.-бета-тестирование-закрытое">3.2. Этап 2.
+Бета-тестирование (закрытое)</h3>
+<p>Закрытый круг пользователей до 1 000 человек, в течение 30 дней.
+Метрики: - Количество завершённых пользовательских сценариев. - Среднее
+время прохождения каждого сценария. - Количество ошибок на 100 операций.
+- Crash-free sessions (целевое: ≥ 99,8%).</p>
+<h3 id="этап-3.-приёмочные-испытания">3.3. Этап 3. Приёмочные
+испытания</h3>
+<p>С участием заказчика, регулятора (Банк России), представителей
+профильных министерств. Проверка соответствия всем требованиям ТЗ.</p>
+<h3 id="этап-4.-сертификационные-испытания">3.4. Этап 4.
+Сертификационные испытания</h3>
+<h4 id="сертификация-сзи">Сертификация СЗИ</h4>
+<ul>
+<li>Аттестация по требованиям приказа ФСТЭК России №239 (КИИ).</li>
+<li>Аттестация по требованиям приказа ФСТЭК России №21 (ПДн, УЗ-1).</li>
+<li>Соответствие ГОСТ Р 57580.1 уровня 4.</li>
+<li>Сертификация криптографических средств ФСБ России.</li>
+</ul>
+<h4 id="сертификация-по">Сертификация ПО</h4>
+<ul>
+<li>Включение в Единый реестр российского ПО (ПП РФ №1236).</li>
+</ul>
+<h2 id="методика-испытаний">4. Методика испытаний</h2>
+<h3 id="функциональные-испытания-1">4.1. Функциональные испытания</h3>
+<h4 id="подготовка">Подготовка</h4>
+<ol type="1">
+<li>Создаётся тестовое окружение с моками внешних систем (ЕСИА, ЕБС,
+ЕГРН, ЦБ).</li>
+<li>Подготавливается набор тестовых пользователей с разными
+KYC-статусами.</li>
+<li>Подготавливаются тестовые активы и ЦФА в различных состояниях.</li>
+</ol>
+<h4 id="проведение">Проведение</h4>
+<ul>
+<li>Автоматические тесты через Cypress / Playwright для PWA-режима.</li>
+<li>Capacitor Test Kit (Appium-обвязка над нативным wrapper'ом) для
+iOS/Android-сборок.</li>
+<li>WebView2 Test Harness для Windows-сборки.</li>
+<li>XCUITest для iOS native-расширений (биометрия, Secure Enclave,
+ГОСТ-канал).</li>
+<li>Espresso для Android native-расширений (Strongbox, BiometricPrompt,
+СКЗИ).</li>
+</ul>
+<h4 id="критерии-успеха">Критерии успеха</h4>
+<ul>
+<li>100% покрытие сценариев FT-001 — FT-020.</li>
+<li>0 критических ошибок.</li>
+<li>Не более 5 косметических замечаний.</li>
+</ul>
+<h3 id="нагрузочные-испытания-1">4.2. Нагрузочные испытания</h3>
+<h4 id="подготовка-1">Подготовка</h4>
+<ul>
+<li>Тестовая среда, аналогичная продакшну.</li>
+<li>JMeter / Yandex Tank для серверной нагрузки.</li>
+<li>Lighthouse / WebPageTest для клиентских метрик.</li>
+</ul>
+<h4 id="сценарии">Сценарии</h4>
+<ul>
+<li>5 000 RPS на API-шлюзе в течение 30 минут.</li>
+<li>50 000 одновременных пользователей.</li>
+<li>Регистрация 1 000 новых пользователей за 5 минут.</li>
+<li>Выпуск 100 ЦФА за час.</li>
+</ul>
+<h4 id="критерии-успеха-1">Критерии успеха</h4>
+<ul>
+<li>Время отклика P95 ≤ 200 мс.</li>
+<li>Error rate ≤ 0,1%.</li>
+<li>Cold start ≤ 2 секунды на 4G.</li>
+<li>Memory peak ≤ 300 МБ.</li>
+</ul>
+<h3 id="испытания-безопасности-1">4.3. Испытания безопасности</h3>
+<h4 id="виды-проверок">Виды проверок</h4>
+<ul>
+<li>Статический анализ кода (SAST): PT Application Inspector,
+PVS-Studio.</li>
+<li>Динамический анализ (DAST): PT BlackBox.</li>
+<li>Анализ компонентов (SCA): обнаружение уязвимых библиотек.</li>
+<li>Внешний пентест аккредитованной лабораторией.</li>
+<li>Внутренний Red Team.</li>
+<li>Проверка на соответствие OWASP MASVS L2+.</li>
+</ul>
+<h4 id="критерии-успеха-2">Критерии успеха</h4>
+<ul>
+<li>0 уязвимостей категорий Critical и High.</li>
+<li>Не более 5 уязвимостей Medium с принятым риском.</li>
+<li>Подтверждение соответствия ГОСТ Р 57580.1 уровня 4.</li>
+</ul>
+<h3 id="испытания-доступности-1">4.4. Испытания доступности</h3>
+<h4 id="виды-проверок-1">Виды проверок</h4>
+<ul>
+<li>Автоматическая проверка через axe-core / WAVE.</li>
+<li>Тестирование с экранными читалками (VoiceOver, TalkBack,
+Narrator).</li>
+<li>Тестирование с увеличенным шрифтом.</li>
+<li>Проверка контрастности (≥ 4,5:1 для основного текста).</li>
+</ul>
+<h4 id="критерии-успеха-3">Критерии успеха</h4>
+<ul>
+<li>Соответствие WCAG 2.2 уровня AA на 100%.</li>
+<li>Все интерактивные элементы доступны с клавиатуры.</li>
+<li>Все изображения имеют alt-атрибуты.</li>
+</ul>
+<h3 id="испытания-совместимости-1">4.5. Испытания совместимости</h3>
+<h4 id="парк-устройств">Парк устройств</h4>
+<p><strong>Android:</strong> - Samsung Galaxy S22, S23, S24. - Xiaomi
+Redmi Note 12, 13. - Realme C55, C65. - Honor 90, X9. - Pixel 7, 8.</p>
+<p><strong>iOS:</strong> - iPhone SE (3-го поколения). - iPhone 13, 14,
+15, 16. - iPad 9-го поколения, iPad Pro.</p>
+<p><strong>Windows:</strong> - Surface Pro 9, 10. - Типовые рабочие
+станции с Windows 10/11. - Surface Go (ARM64).</p>
+<h4 id="критерии-успеха-4">Критерии успеха</h4>
+<ul>
+<li>Корректная работа на каждом устройстве.</li>
+<li>Адаптивная вёрстка от 360 × 640 до 2560 × 1600.</li>
+</ul>
+<h2 id="отчётность-по-испытаниям">5. Отчётность по испытаниям</h2>
+<h3 id="состав-отчёта">5.1. Состав отчёта</h3>
+<ul>
+<li>Протокол функциональных испытаний.</li>
+<li>Протокол нагрузочных испытаний.</li>
+<li>Отчёт о пентесте.</li>
+<li>Сертификаты соответствия.</li>
+<li>Реестр найденных и устранённых дефектов.</li>
+</ul>
+<h3 id="хранение">5.2. Хранение</h3>
+<p>Все артефакты испытаний хранятся в системе управления качеством
+оператора платформы не менее 10 лет (соответствует требованиям 152-ФЗ и
+регуляторов).</p>
+<h2 id="приёмка">6. Приёмка</h2>
+<h3 id="состав-комиссии">6.1. Состав комиссии</h3>
+<ul>
+<li>Представитель заказчика (Кагиров А.-Х. А.).</li>
+<li>Представитель оператора платформы.</li>
+<li>Представитель Банка России.</li>
+<li>Представитель Минфин / Минцифры (приглашённые).</li>
+<li>Главный архитектор проекта.</li>
+<li>Руководитель ИБ-команды.</li>
+</ul>
+<h3 id="критерии-приёмки">6.2. Критерии приёмки</h3>
+<ol type="1">
+<li>Все функциональные требования выполнены.</li>
+<li>Все нагрузочные требования выполнены.</li>
+<li>Сертификация СЗИ пройдена.</li>
+<li>Сертификация в реестре российского ПО пройдена.</li>
+<li>Публикация в RuStore одобрена.</li>
+<li>Бета-тестирование завершено успешно (crash-free ≥ 99,8%).</li>
+</ol>
+<h3 id="документы-приёмки">6.3. Документы приёмки</h3>
+<ul>
+<li>Акт приёмочных испытаний.</li>
+<li>Акт ввода в опытную эксплуатацию.</li>
+<li>Акт ввода в промышленную эксплуатацию.</li>
+</ul>
+<hr />
+<p><em>Документ соответствует требованиям ГОСТ 19.301-79 «Программа и
+методика испытаний».</em></p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../07_Презентации/Большая_презентация/index.html#hub">К хабу документов</a>
+      <a class="btn btn--ghost" href="../../07_Презентации/Большая_презентация/index.html">Большая презентация</a>
+    </div>
+  </div>
+</main>
+
+<button class="totop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Наверх">↑</button>
+
+<script src="../../_shared/i18n.js"></script>
+<script src="../../_shared/app.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const t = document.querySelector('.totop');
+  if (t) t.classList.toggle('show', window.scrollY > 600);
+});
+</script>
+</body>
+</html>

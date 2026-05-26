@@ -1,0 +1,47 @@
+{
+  "name": "Цифровая Платформа РСФСР",
+  "short_name": "ЦП РСФСР",
+  "description": "Российский Сервис Финансирования Социального Развития — информационная платформа выпуска целевых ЦФА (демо-режим до получения лицензии оператора ИС ЦФА по 779-П)",
+  "id": "/rsfsr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "browser"],
+  "orientation": "portrait",
+  "theme_color": "#0B2B5C",
+  "background_color": "#0B2B5C",
+  "lang": "ru",
+  "dir": "ltr",
+  "categories": ["finance", "business", "productivity"],
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-1024.png", "sizes": "1024x1024", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-192-maskable.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "./icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "./icons/icon-192-mono.png", "sizes": "192x192", "type": "image/png", "purpose": "monochrome" },
+    { "src": "./icons/icon-512-mono.png", "sizes": "512x512", "type": "image/png", "purpose": "monochrome" },
+    { "src": "./icons/icon-192.svg", "sizes": "192x192", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "./icons/icon-512.svg", "sizes": "512x512", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "Добавить актив", "short_name": "Актив", "url": "./index.html#new-asset" },
+    { "name": "Мои ЦФА",        "short_name": "ЦФА",   "url": "./index.html#cfa" },
+    { "name": "Доходы",          "short_name": "Доход", "url": "./index.html#income" }
+  ],
+  "screenshots": [
+    { "src": "./screenshots/screen-01-home.png",    "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Главный экран" },
+    { "src": "./screenshots/screen-02-assets.png",  "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Мои активы" },
+    { "src": "./screenshots/screen-03-cfa.png",     "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Каталог ЦФА" },
+    { "src": "./screenshots/screen-04-profile.png", "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Профиль и KYC" }
+  ],
+  "prefer_related_applications": false,
+  "edge_side_panel": { "preferred_width": 420 },
+  "launch_handler": { "client_mode": "navigate-existing" },
+  "protocol_handlers": [],
+  "share_target": {
+    "action": "./index.html#share",
+    "method": "GET",
+    "params": { "title": "title", "text": "text", "url": "url" }
+  }
+}

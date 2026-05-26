@@ -1,0 +1,713 @@
+﻿<!doctype html>
+<html lang="ru" data-theme="daylight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Требования к среде эксплуатации · ЦП РСФСР</title>
+<meta name="theme-color" content="#0B2B5C">
+<link rel="stylesheet" href="../../_shared/brand.css">
+<style>
+/* Document-specific styles */
+body { padding-top: 80px; }
+.doc-wrap { max-width: 880px; margin: 0 auto; padding: 48px 24px 96px; }
+.doc-header {
+  padding-bottom: 24px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.doc-header .eyebrow { margin-bottom: 12px; }
+.doc-header h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--primary); margin-bottom: 12px; }
+.doc-header p { color: var(--fg-mute); font-size: .9375rem; margin: 0; }
+.doc-content h1, .doc-content h2, .doc-content h3, .doc-content h4 { color: var(--primary); margin-top: 2em; margin-bottom: .5em; }
+.doc-content h1 { font-size: 1.875rem; }
+.doc-content h2 { font-size: 1.5rem; padding-bottom: 6px; border-bottom: 1px solid var(--border-soft); }
+.doc-content h3 { font-size: 1.25rem; }
+.doc-content h4 { font-size: 1.0625rem; color: var(--fg); }
+.doc-content p { line-height: 1.7; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content ul, .doc-content ol { line-height: 1.7; padding-left: 1.5em; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content li { margin-bottom: .35em; }
+.doc-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 12px 20px;
+  margin: 1em 0;
+  background: var(--bg-soft);
+  border-radius: 0 8px 8px 0;
+  color: var(--fg-soft);
+}
+.doc-content code {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg-soft);
+  padding: 2px 6px; border-radius: 4px;
+  font-size: .875em; color: var(--primary);
+}
+.doc-content pre {
+  background: var(--bg-soft); padding: 16px; border-radius: 10px;
+  overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: .875rem;
+  border: 1px solid var(--border-soft); margin: 1em 0;
+}
+.doc-content table {
+  width: 100%; border-collapse: collapse; margin: 1.5em 0;
+  background: var(--card-bg); border: 1px solid var(--border-soft);
+  border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-1);
+}
+.doc-content table th {
+  background: var(--primary); color: var(--primary-on);
+  text-align: left; padding: 12px 16px; font-weight: 600;
+  font-size: .8125rem; letter-spacing: .04em; text-transform: uppercase;
+}
+.doc-content table td {
+  padding: 10px 16px; border-bottom: 1px solid var(--border-soft);
+  font-size: .9375rem; color: var(--fg-soft);
+}
+.doc-content table tr:last-child td { border-bottom: none; }
+.doc-content table tr:hover td { background: var(--bg-soft); }
+.doc-content hr {
+  border: none; height: 1px; background: var(--border-soft); margin: 2.5em 0;
+}
+.doc-content a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+.doc-content a:hover { color: var(--accent); }
+.doc-content strong { color: var(--fg); font-weight: 700; }
+
+.doc-actions {
+  display: flex; gap: 10px; margin-top: 32px; flex-wrap: wrap;
+}
+
+/* Floating top button */
+.totop {
+  position: fixed; bottom: 24px; right: 24px; z-index: 50;
+  background: var(--primary); color: var(--primary-on);
+  border: none; border-radius: 50%; width: 48px; height: 48px;
+  cursor: pointer; box-shadow: var(--shadow-3);
+  display: none; font-size: 1.25rem;
+  transition: transform .2s var(--ease);
+}
+.totop:hover { transform: translateY(-2px); }
+.totop.show { display: grid; place-items: center; }
+[dir="rtl"] .totop { right: auto; left: 24px; }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div class="scroll-progress"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="../../07_Презентации/Большая_презентация/index.html"><span class="brand-mark">Р</span><span data-i18n="brand.name">ЦП РСФСР</span></a>
+    <nav class="topbar-nav">
+      <a href="../../07_Презентации/Большая_презентация/index.html#about" data-i18n="nav.about">О платформе</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#hub" data-i18n="nav.hub">Документы</a>
+      <a href="../../08_Веб-сайт/HTML_основной/index.html">Сайт</a>
+      <a href="../../07_Презентации/Малая_презентация/index.html">Презентация</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#contacts" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+    <div class="topbar-actions">
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-i18n-btn="ru">RU</button>
+        <button class="tbtn" data-i18n-btn="en">EN</button>
+        <button class="tbtn" data-i18n-btn="fr">FR</button>
+        <button class="tbtn" data-i18n-btn="ar">عر</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-theme-btn="daylight" aria-label="Дневная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+        <button class="tbtn" data-theme-btn="midnight" aria-label="Тёмная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="tbtn" data-theme-btn="sepia">◐</button>
+        <button class="tbtn" data-theme-btn="contrast">A11Y</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn" data-font-action="dec">A−</button>
+        <button class="tbtn" data-font-action="reset">A</button>
+        <button class="tbtn" data-font-action="inc">A+</button>
+      </div>
+      <button class="tbtn tbtn-burger">≡</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="eyebrow">Конструкторская документация · ЦП РСФСР ·
+МП</span>
+      <h1>Требования к среде эксплуатации</h1>
+      <p>Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 · 19.12.2024 · ЦП РСФСР</p>
+    </header>
+    <article class="doc-content">
+<h1 id="требования-к-среде-эксплуатации">Требования к среде
+эксплуатации</h1>
+<p><strong>Программа:</strong> Мобильное приложение «ЦП РСФСР»
+<strong>Условное обозначение:</strong> РСФСР.МП.09.ТСЭ <strong>Стадия
+разработки:</strong> Эскизный проект (по ГОСТ 19.102-77)
+<strong>Документ соответствует:</strong> ГОСТ 19.402-78 «Описание
+программы», раздел 5 (требования к среде); ГОСТ 19.507-79 «Ведомость
+эксплуатационных документов» — позиция 09 пакета РСФСР.МП.
+<strong>Связанные документы:</strong> РСФСР.МП.01 (ТЗ), РСФСР.МП.06
+(Описание архитектуры), РСФСР.МП.10 (ПМИ), РСФСР.МП.11 (Требования
+безопасности). <strong>Дата:</strong> 24.05.2026 (создан в рамках
+исправления RED-флага A5 сводного аудита). <strong>Автор:</strong>
+Кагиров А.-Х.А. (свидетельство о депонировании №4011265 от
+19.12.2024).</p>
+<hr />
+<h2 id="назначение-документа">1. Назначение документа</h2>
+<p>Документ устанавливает требования к среде эксплуатации мобильного
+приложения «ЦП РСФСР» (далее — Приложение) на всех целевых платформах:
+Android, iOS, Windows, веб-PWA. Документ обязателен для: - сертификации
+по ФСТЭК / ФСБ; - категорирования объекта КИИ (ПП РФ №127); - подачи в
+реестр операторов ИС ЦФА (Положение Банка России 779-П); - развёртывания
+на платформах распространения (RuStore, App Store, Microsoft Store).</p>
+<hr />
+<h2 id="требования-к-аппаратной-части">2. Требования к аппаратной
+части</h2>
+<h3 id="минимальные-требования-к-устройству-конечного-пользователя">2.1.
+Минимальные требования к устройству конечного пользователя</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Android</th>
+<th>iOS</th>
+<th>Windows</th>
+<th>Веб-PWA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Процессор</td>
+<td>ARMv8-A 64-bit; 1,4 ГГц</td>
+<td>A11 Bionic или новее</td>
+<td>x86_64; 1,8 ГГц</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Оперативная память</td>
+<td>3 ГБ</td>
+<td>2 ГБ</td>
+<td>4 ГБ</td>
+<td>4 ГБ для браузера</td>
+</tr>
+<tr>
+<td>Свободное место в памяти</td>
+<td>200 МБ</td>
+<td>200 МБ</td>
+<td>250 МБ</td>
+<td>50 МБ кэш</td>
+</tr>
+<tr>
+<td>Биометрический модуль (для KYC)</td>
+<td>Fingerprint API ≥ 23 / BiometricPrompt</td>
+<td>Touch ID / Face ID</td>
+<td>Windows Hello</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Камера</td>
+<td>8 МП (документы)</td>
+<td>8 МП</td>
+<td>Веб-камера 720p</td>
+<td>Веб-камера 720p</td>
+</tr>
+<tr>
+<td>Подключение к сети</td>
+<td>3G / LTE / 5G / Wi-Fi ≥ 6 Мбит/с</td>
+<td>То же</td>
+<td>Ethernet / Wi-Fi</td>
+<td>Ethernet / Wi-Fi</td>
+</tr>
+<tr>
+<td>GPS / геолокация (опционально)</td>
+<td>Доступ к местоположению</td>
+<td>То же</td>
+<td>Сервисы локации</td>
+<td>API геолокации</td>
+</tr>
+</tbody>
+</table>
+<h3 id="рекомендуемые-требования">2.2. Рекомендуемые требования</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Android</th>
+<th>iOS</th>
+<th>Windows</th>
+<th>Веб-PWA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Процессор</td>
+<td>ARMv9 64-bit; 2,2 ГГц</td>
+<td>A14 или новее</td>
+<td>x86_64; 2,5 ГГц</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Оперативная память</td>
+<td>6 ГБ</td>
+<td>4 ГБ</td>
+<td>8 ГБ</td>
+<td>8 ГБ</td>
+</tr>
+<tr>
+<td>Свободное место</td>
+<td>500 МБ</td>
+<td>500 МБ</td>
+<td>1 ГБ</td>
+<td>200 МБ кэш</td>
+</tr>
+<tr>
+<td>Сеть</td>
+<td>LTE / 5G / Wi-Fi ≥ 25 Мбит/с</td>
+<td>То же</td>
+<td>Ethernet / Wi-Fi 6</td>
+<td>Ethernet / Wi-Fi 6</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="требования-к-программной-среде">3. Требования к программной
+среде</h2>
+<h3 id="минимальные-версии-операционных-систем">3.1. Минимальные версии
+операционных систем</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Платформа</th>
+<th>Минимальная версия</th>
+<th>Целевая версия</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Android</td>
+<td>9.0 (API 28)</td>
+<td>14 (API 34)</td>
+</tr>
+<tr>
+<td>iOS</td>
+<td>14.0</td>
+<td>17</td>
+</tr>
+<tr>
+<td>iPadOS</td>
+<td>14.0</td>
+<td>17</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>10 21H2 (build 19044)</td>
+<td>11 23H2</td>
+</tr>
+<tr>
+<td>HarmonyOS (опционально)</td>
+<td>3.0</td>
+<td>4.2</td>
+</tr>
+<tr>
+<td>WebView (для PWA)</td>
+<td>Chromium 88+ / Safari 14+ / Edge 88+</td>
+<td>Latest stable</td>
+</tr>
+</tbody>
+</table>
+<h3 id="браузерная-среда-для-веб-pwa">3.2. Браузерная среда (для
+веб-PWA)</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Браузер</th>
+<th>Минимальная версия</th>
+<th>Поддержка</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chromium / Edge / Brave</td>
+<td>88</td>
+<td>Полная</td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td>89</td>
+<td>Полная</td>
+</tr>
+<tr>
+<td>Safari (macOS / iOS)</td>
+<td>14</td>
+<td>Полная (с ограничением Push до Safari 16+)</td>
+</tr>
+<tr>
+<td>Яндекс.Браузер</td>
+<td>22</td>
+<td>Полная</td>
+</tr>
+</tbody>
+</table>
+<h3 id="требуемые-системные-библиотеки-и-sdk">3.3. Требуемые системные
+библиотеки и SDK</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Платформа</th>
+<th>Требование</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Android</td>
+<td>Google Play Services Lite или RuStore Services Lite (для
+push-уведомлений); WebView 88+</td>
+</tr>
+<tr>
+<td>iOS</td>
+<td>StoreKit, BiometricKit, ASWebAuthenticationSession</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>WebView2 Runtime (Edge Chromium); BiometricFramework (для Windows
+Hello)</td>
+</tr>
+<tr>
+<td>Веб-PWA</td>
+<td>Service Workers, IndexedDB, Web Crypto API, Push API (опц.),
+WebAuthn (для биометрии)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="требования-к-каналу-связи">4. Требования к каналу связи</h2>
+<h3 id="пропускная-способность">4.1. Пропускная способность</h3>
+<table>
+<thead>
+<tr>
+<th>Сценарий</th>
+<th style="text-align: right;">Минимум</th>
+<th style="text-align: right;">Рекомендация</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Авторизация через ЕСИА (демо/прод)</td>
+<td style="text-align: right;">1 Мбит/с</td>
+<td style="text-align: right;">5 Мбит/с</td>
+</tr>
+<tr>
+<td>Загрузка документов из ЕГРН (через СМЭВ 3)</td>
+<td style="text-align: right;">2 Мбит/с</td>
+<td style="text-align: right;">10 Мбит/с</td>
+</tr>
+<tr>
+<td>Биометрическое подтверждение через ЕБС</td>
+<td style="text-align: right;">5 Мбит/с</td>
+<td style="text-align: right;">25 Мбит/с</td>
+</tr>
+<tr>
+<td>Сценарий с просмотром портфеля</td>
+<td style="text-align: right;">1 Мбит/с</td>
+<td style="text-align: right;">5 Мбит/с</td>
+</tr>
+<tr>
+<td>Подписание смарт-контракта УКЭП</td>
+<td style="text-align: right;">2 Мбит/с</td>
+<td style="text-align: right;">10 Мбит/с</td>
+</tr>
+<tr>
+<td>Оффлайн-просмотр (только из локального кэша)</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="требования-к-качеству-соединения">4.2. Требования к качеству
+соединения</h3>
+<ul>
+<li>Допустимая задержка (RTT) до серверного узла: не более 800 мс.</li>
+<li>Допустимая потеря пакетов: до 1%.</li>
+<li>Допустимые периоды без связи: оффлайн-режим Приложения сохраняет
+последние данные в локальном защищённом хранилище (Secure Storage /
+Keychain); синхронизация — при восстановлении связи через background
+sync.</li>
+</ul>
+<h3 id="безопасность-канала-связи">4.3. Безопасность канала связи</h3>
+<ul>
+<li>Исключительно HTTPS (TLS 1.2+); cleartext запрещён
+(<code>allowMixedContent: false</code>).</li>
+<li>Certificate Pinning с двумя пинами (primary + backup) для домена
+<code>dp-rsfsr.ru</code> (см. <code>Сборки/android/README.md</code>,
+<code>Сборки/ios/README.md</code>).</li>
+<li>Поддержка ГОСТ TLS (CryptoPro CSP) для интеграции с СКЗИ-каналами
+Банка России.</li>
+</ul>
+<hr />
+<h2 id="требования-к-цод-инфраструктуре-оператора">5. Требования к
+ЦОД-инфраструктуре оператора</h2>
+<h3 id="целевая-инфраструктура-требуется-для-production">5.1. Целевая
+инфраструктура (требуется для production)</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Количество ЦОД (геораспределённое размещение)</td>
+<td>≥ 3 (включая один holding center)</td>
+</tr>
+<tr>
+<td>Уровень ЦОД (Uptime Institute / ГОСТ Р 51275)</td>
+<td>Tier-III или эквивалент</td>
+</tr>
+<tr>
+<td>Резервирование питания</td>
+<td>N+1 (по UPS и генераторам)</td>
+</tr>
+<tr>
+<td>Резервирование охлаждения</td>
+<td>N+1</td>
+</tr>
+<tr>
+<td>Резервирование сетевых каналов</td>
+<td>2 независимых провайдера</td>
+</tr>
+<tr>
+<td>Минимальная пропускная способность каналов</td>
+<td>10 Гбит/с с возможностью масштабирования</td>
+</tr>
+<tr>
+<td>Целевой uptime</td>
+<td>99,95% (≈ 4 ч простоя в год)</td>
+</tr>
+<tr>
+<td>RTO (Recovery Time Objective)</td>
+<td>≤ 4 часа</td>
+</tr>
+<tr>
+<td>RPO (Recovery Point Objective)</td>
+<td>≤ 15 минут</td>
+</tr>
+</tbody>
+</table>
+<h3 id="категорирование-размещения">5.2. Категорирование размещения</h3>
+<ul>
+<li><strong>Российская юрисдикция</strong> — все ЦОД физически размещены
+на территории РФ (соответствие ст. 12 152-ФЗ о локализации ПДн граждан
+РФ).</li>
+<li><strong>Аттестация ФСТЭК</strong> — все площадки аттестованы по
+требованиям к значимым объектам КИИ (К1) согласно Приказу ФСТЭК
+№239.</li>
+<li><strong>Уровень защищённости УЗ-1</strong> по ПП РФ №1119.</li>
+<li><strong>Конкретные операторы ЦОД</strong> — выбор по тендеру;
+целевые кандидаты на момент подготовки: «Ростелеком-ЦОДы», DataPro,
+ИКС-Холдинг, IXcellerate. Финальный выбор фиксируется при заявке в
+реестр операторов ИС ЦФА (779-П).</li>
+</ul>
+<h3 id="dlt-инфраструктура">5.3. DLT-инфраструктура</h3>
+<ul>
+<li>DLT-вендор: <strong>Мастерчейн</strong> (целевой; альтернатива при
+недоступности — Waves Enterprise) — конкретный выбор фиксируется в
+заявке Банку России.</li>
+<li>Тип реестра: permissioned (с регулятор-узлом ЦБ).</li>
+<li>Финальность: детерминированная.</li>
+<li>Криптография: ГОСТ Р 34.10-2012 (подписи), ГОСТ Р 34.11-2012 (хеш),
+ГОСТ Р 34.12-2015 (шифр).</li>
+<li>Регулятор-узел ЦБ: предусмотрен в архитектуре (см. РСФСР.МП.06
+«Описание архитектуры», п. 3.7).</li>
+</ul>
+<hr />
+<h2 id="требования-к-окружающей-среде-физических-устройств">6.
+Требования к окружающей среде физических устройств</h2>
+<h3 id="климатические-условия-эксплуатации">6.1. Климатические условия
+эксплуатации</h3>
+<p>Стандартные условия для мобильных и стационарных устройств конечного
+пользователя: - Температура: от 0 °C до +40 °C. - Влажность: до 80% (без
+конденсации). - Атмосферное давление: 84–106,7 кПа.</p>
+<h3 id="условия-эксплуатации-серверного-оборудования">6.2. Условия
+эксплуатации серверного оборудования</h3>
+<ul>
+<li>Температура: 18–27 °C (соответствует ASHRAE TC 9.9
+рекомендациям).</li>
+<li>Влажность: 40–60% (без конденсации).</li>
+<li>Защита от пыли и электромагнитных помех — по нормативам Tier-III
+ЦОД.</li>
+</ul>
+<hr />
+<h2 id="требования-к-квалификации-обслуживающего-персонала">7.
+Требования к квалификации обслуживающего персонала</h2>
+<h3 id="конечный-пользователь">7.1. Конечный пользователь</h3>
+<ul>
+<li>Базовые навыки работы со смартфоном или ПК.</li>
+<li>Наличие подтверждённой учётной записи на Госуслугах (ЕСИА) — для
+full-сценария.</li>
+<li>Базовое понимание принципов цифровой подписи (для подписания
+УКЭП).</li>
+</ul>
+<h3 id="технический-персонал-оператора">7.2. Технический персонал
+оператора</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Роль</th>
+<th>Минимальная квалификация</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Системный администратор</strong></td>
+<td>Высшее ИТ-образование; ≥ 3 лет опыта администрирования
+Linux/Kubernetes; знание ГОСТ Р 57580</td>
+</tr>
+<tr>
+<td><strong>DevOps-инженер</strong></td>
+<td>≥ 3 лет опыта CI/CD, GitOps, Kubernetes; знание Terraform</td>
+</tr>
+<tr>
+<td><strong>CISO / инженер ИБ</strong></td>
+<td>ФСТЭК-сертификат; знание ФЗ-187 (КИИ), Приказа ФСТЭК №17 / №239; ≥ 5
+лет опыта</td>
+</tr>
+<tr>
+<td><strong>DBA</strong></td>
+<td>Knowledge of PostgreSQL ≥ 15, Citus, репликация</td>
+</tr>
+<tr>
+<td><strong>DLT-инженер</strong></td>
+<td>Опыт работы с Мастерчейн / Hyperledger; криптография ГОСТ</td>
+</tr>
+<tr>
+<td><strong>Аналитик AML/KYC</strong></td>
+<td>Сертификат ACAMS / ICA / IRM или эквивалент</td>
+</tr>
+<tr>
+<td><strong>Сотрудник колл-центра / поддержки</strong></td>
+<td>Знание ст. 9, 16, 18 152-ФЗ (обработка обращений субъектов ПДн)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="требования-к-режиму-работы-и-обслуживанию">8. Требования к
+режиму работы и обслуживанию</h2>
+<h3 id="режим-работы-приложения">8.1. Режим работы Приложения</h3>
+<ul>
+<li><strong>Конечный пользователь:</strong> 24×7 (с плановыми
+технологическими окнами).</li>
+<li><strong>Бэкенд оператора:</strong> 24×7 с целевым uptime
+99,95%.</li>
+<li><strong>Плановое технологическое окно:</strong> ночь воскресенья
+02:00–06:00 МСК (1 раз в месяц); анонс не позднее 7 дней до окна.</li>
+<li><strong>Аварийное технологическое окно:</strong> допустимо до 2
+часов с предварительным уведомлением.</li>
+</ul>
+<h3 id="регламент-обновлений">8.2. Регламент обновлений</h3>
+<ul>
+<li>Мобильное приложение: автообновление через RuStore / App Store /
+Microsoft Store; критические security-патчи — в течение 72 часов после
+обнаружения.</li>
+<li>Серверная часть: blue-green deployment, без простоя.</li>
+</ul>
+<h3 id="резервное-копирование">8.3. Резервное копирование</h3>
+<ul>
+<li>Полное еженощное резервирование баз данных.</li>
+<li>Хранение бэкапов — в отдельной геолокации (≥ 500 км от основного
+ЦОД).</li>
+<li>Криптографическое шифрование бэкапов ГОСТ-алгоритмами.</li>
+<li>Регулярное тестирование восстановления (DR-drill) — не реже 1 раза в
+квартал.</li>
+</ul>
+<hr />
+<h2 id="особые-требования">9. Особые требования</h2>
+<h3 id="безопасность-среды-эксплуатации">9.1. Безопасность среды
+эксплуатации</h3>
+<ul>
+<li>Конечное устройство пользователя должно поддерживать аппаратный TEE
+(Trusted Execution Environment) для хранения криптографических ключей
+пользователя. Минимальные требования:
+<ul>
+<li>Android: Strongbox / TEE Keymaster (API 28+).</li>
+<li>iOS: Secure Enclave.</li>
+<li>Windows: TPM 2.0.</li>
+</ul></li>
+<li>На устройствах с jailbreak / root приложение работает в ограниченном
+режиме (только просмотр истории) с предупреждением.</li>
+</ul>
+<h3 id="чувствительность-к-качеству-среды">9.2. Чувствительность к
+качеству среды</h3>
+<ul>
+<li>При снижении уровня TLS ниже 1.2 — отказ от соединения.</li>
+<li>При обнаружении MITM-атаки (несоответствие pinned сертификата) —
+блокировка с уведомлением CISO.</li>
+<li>При деградации канала ниже 1 Мбит/с — автоматическое переключение в
+lite-режим (только текстовые данные).</li>
+</ul>
+<hr />
+<h2 id="проверка-соответствия-требованиям">10. Проверка соответствия
+требованиям</h2>
+<p>Соответствие настоящему документу проверяется на этапе: -
+Тестирования (см. РСФСР.МП.10 «Программа и методика испытаний»); -
+Аттестации ФСТЭК (по сертификату); - Включения в реестр Банка России
+(779-П).</p>
+<p>Перечень проверок и критерии приёмки — в составе ПМИ (РСФСР.МП.10),
+разделы 4 (производительность), 5 (безопасность среды), 7
+(отказоустойчивость).</p>
+<hr />
+<p><strong>Утверждено:</strong> 24.05.2026. <strong>Документ закрывает
+RED-флаг A5 сводного аудита</strong> (отсутствующий РСФСР.МП.09
+«Требования к среде эксплуатации»); восстанавливает корректную нумерацию
+пакета конструкторской документации (РСФСР.МП.01…13).</p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../07_Презентации/Большая_презентация/index.html#hub">К хабу документов</a>
+      <a class="btn btn--ghost" href="./13_Ведомость_эксплуатационных_документов.html">К ведомости</a>
+    </div>
+  </div>
+</main>
+
+<button class="totop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Наверх">↑</button>
+
+<script src="../../_shared/i18n.js"></script>
+<script src="../../_shared/app.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const t = document.querySelector('.totop');
+  if (t) t.classList.toggle('show', window.scrollY > 600);
+});
+</script>
+</body>
+</html>

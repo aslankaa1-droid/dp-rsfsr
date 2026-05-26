@@ -1,0 +1,1128 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../">
+  <title>Data Room — INDEX · ЦПФСР.РФ</title>
+  <meta name="description" content="Data Room — INDEX — غرفة البيانات. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../_design-system/print.css">
+
+  <script defer src="../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../_design-system/i18n.js"></script>
+  <script defer src="../../../_design-system/ticker.js"></script>
+  <script defer src="../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">غرفة البيانات</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">غرفة البيانات</span>
+      <h1>Data Room — INDEX</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="data-room-index-cpfsr">Data Room — INDEX — CPFSR</h1>
+<p><strong>مرجع التكليف:</strong> RSFSR-DR-2026
+<strong>التاريخ:</strong> 24.05.2026 <strong>البنية:</strong> وفق نمط
+Intralinks / Datasite / Firmex <strong>مستويات الصلاحية:</strong>
+<code>full</code> / <code>restricted</code> / <code>Q&amp;A-only</code>
+/ <code>no-access</code></p>
+<hr />
+<h2 id="corporate-الوثائق-التأسيسية">01_Corporate — الوثائق
+التأسيسية</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>المعرّف</th>
+<th>الوثيقة</th>
+<th>المصدر</th>
+<th>المستوى</th>
+<th>الجاهزية</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01.01</td>
+<td>شهادة التسجيل الحكومي للشخص الاعتباري</td>
+<td>بعد التأسيس</td>
+<td>full</td>
+<td>T+0</td>
+</tr>
+<tr>
+<td>01.02</td>
+<td>النظام الأساسي</td>
+<td>بعد التأسيس</td>
+<td>full</td>
+<td>T+0</td>
+</tr>
+<tr>
+<td>01.03</td>
+<td>اتفاقية المساهمين (SHA)</td>
+<td>جديد</td>
+<td>full</td>
+<td>T+1 شهر</td>
+</tr>
+<tr>
+<td>01.04</td>
+<td>سجل المساهمين (CapTable)</td>
+<td>حي</td>
+<td>full</td>
+<td>حي</td>
+</tr>
+<tr>
+<td>01.05</td>
+<td>محاضر مجلس الإدارة والجمعيات العمومية</td>
+<td>حي</td>
+<td>restricted</td>
+<td>حي</td>
+</tr>
+<tr>
+<td>01.06</td>
+<td>السيرة الذاتية للمؤلف (أ.-خ. أ. كاغيروف)</td>
+<td>مصدر خارجي</td>
+<td>full</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>01.07</td>
+<td>شهادة إيداع التأليف رقم 4011265 بتاريخ 19.12.2024</td>
+<td>ireg.pro</td>
+<td>full</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>01.08</td>
+<td>تجزئة الوثيقة المفاهيمية وفق GOST R 34.11-2012</td>
+<td>داخلي</td>
+<td>full</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>01.09</td>
+<td>حزمة الحوكمة</td>
+<td><code>16_Governance_и_Compliance/Governance_Pack.md</code></td>
+<td>full</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>01.10</td>
+<td>مصفوفة الامتثال</td>
+<td><code>16_Governance_и_Compliance/Compliance_Matrix.md</code></td>
+<td>full</td>
+<td>جاهز</td>
+</tr>
+</tbody>
+</table>
+<h2 id="financials-المالية">02_Financials — المالية</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>المعرّف</th>
+<th>الوثيقة</th>
+<th>المصدر</th>
+<th>المستوى</th>
+<th>الجاهزية</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>02.01</td>
+<td>النموذج المالي (10 سنوات + قيمة نهائية متعددة المراحل)</td>
+<td><code>03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.md</code></td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>02.02</td>
+<td>الفرضيات والحسابات</td>
+<td><code>03_Финансовая_модель/Финмодель_допущения_и_расчёты.md</code></td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>02.03</td>
+<td>المؤشرات الموحَّدة (مصدر الحقيقة v3)</td>
+<td><code>_Мастер/Единые_показатели_v2.md</code></td>
+<td>full</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>02.04</td>
+<td>حاسبة تفاعلية للنموذج المالي (HTML)</td>
+<td><code>_shared/finmodel.js</code></td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>02.05</td>
+<td>التقييم الدولي</td>
+<td><code>11_Оценка/Международная_оценка_проекта.md</code></td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>02.06</td>
+<td>السيناريوهات وتحليل مونتي كارلو</td>
+<td><code>03_Финансовая_модель/</code> (قسم الحساسية)</td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>02.07</td>
+<td>اختبار الإجهاد للسيولة</td>
+<td><code>03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.md</code> §
+السيولة</td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>02.08</td>
+<td>استخدامات الأموال للمرحلة 1</td>
+<td><code>07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html</code>
+الشريحة 10</td>
+<td>full</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>02.09</td>
+<td>جدولة التمويل الانتقالي</td>
+<td>جديد</td>
+<td>restricted</td>
+<td>خريطة طريق T+3 أشهر</td>
+</tr>
+<tr>
+<td>02.10</td>
+<td>تدقيق Vendor DD للنموذج المالي (بعد Big-4)</td>
+<td>خريطة طريق</td>
+<td>full</td>
+<td>T+8 أشهر</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tax-الضرائب">03_Tax — الضرائب</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>المعرّف</th>
+<th>الوثيقة</th>
+<th>المصدر</th>
+<th>المستوى</th>
+<th>الجاهزية</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>03.01</td>
+<td>أحكام قانون الضرائب (الفقرة 12.2 من المادة 149؛ المادة 34.2؛ التخفيف
+الضريبي لتكنولوجيا المعلومات)</td>
+<td>خارجي</td>
+<td>full</td>
+<td>خريطة طريق</td>
+</tr>
+<tr>
+<td>03.02</td>
+<td>تدقيق ضريبي من مكتب Big-4</td>
+<td>خريطة طريق</td>
+<td>full</td>
+<td>T+8 أشهر</td>
+</tr>
+<tr>
+<td>03.03</td>
+<td>الهيكلة الضريبية للمرحلة 1 / المرحلة 2</td>
+<td><code>_Мастер/Концепт.md</code> § 1-bis</td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>03.04</td>
+<td>الامتثال FATCA / CRS (في حال LP دوليين)</td>
+<td>جديد</td>
+<td>restricted</td>
+<td>T+12 شهرًا</td>
+</tr>
+<tr>
+<td>03.05</td>
+<td>الإقرار الضريبي (بعد الإطلاق)</td>
+<td>حي</td>
+<td>restricted</td>
+<td>T+24 شهرًا</td>
+</tr>
+</tbody>
+</table>
+<h2 id="legal-الشؤون-القانونية">04_Legal — الشؤون القانونية</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>المعرّف</th>
+<th>الوثيقة</th>
+<th>المصدر</th>
+<th>المستوى</th>
+<th>الجاهزية</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>04.01</td>
+<td>الإطار القانوني</td>
+<td><code>02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.md</code></td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>04.02</td>
+<td>الحزمة التعاقدية (5 عقود)</td>
+<td><code>02_Юридический_фундамент/Договорный_пакет/</code></td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>04.03</td>
+<td>تمهيدات الاجتماعات (4 مسوّدات LoI/MoU)</td>
+<td><code>02_Юридический_фундамент/Pre-meeting_briefs/</code></td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>04.04</td>
+<td>رأي قانوني من مكتب tier-1</td>
+<td>خريطة طريق</td>
+<td>full</td>
+<td>T+5 أشهر</td>
+</tr>
+<tr>
+<td>04.05</td>
+<td>EULA / سياسة الخصوصية / شروط الاستخدام</td>
+<td><code>09_Мобильное_приложение/Публикация_RuStore/</code></td>
+<td>full</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>04.06</td>
+<td>طلبات تسجيل العلامة التجارية «CPFSR»</td>
+<td>خريطة طريق</td>
+<td>full</td>
+<td>T+3 أشهر</td>
+</tr>
+<tr>
+<td>04.07</td>
+<td>تسجيل البرنامج (المادة 1262 من القانون المدني)</td>
+<td>خريطة طريق</td>
+<td>restricted</td>
+<td>T+12 شهرًا</td>
+</tr>
+<tr>
+<td>04.08</td>
+<td>وثائق نظام المعرفة الفنية</td>
+<td>داخلي</td>
+<td>restricted (high)</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>04.09</td>
+<td>نماذج اتفاقيات السرية (متبادلة + أحادية)</td>
+<td>داخلي</td>
+<td>full</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>04.10</td>
+<td>سجل النزاعات القضائية</td>
+<td>حي</td>
+<td>restricted</td>
+<td>حي</td>
+</tr>
+</tbody>
+</table>
+<h2 id="commercial-التجاري">05_Commercial — التجاري</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>المعرّف</th>
+<th>الوثيقة</th>
+<th>المصدر</th>
+<th>المستوى</th>
+<th>الجاهزية</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>05.01</td>
+<td>خطة العمل</td>
+<td><code>04_Бизнес-план/Бизнес-план_ЦП_РСФСР.md</code></td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>05.02</td>
+<td>تقرير العناية الواجبة</td>
+<td><code>12_DD_аудит/DD_отчёт.md</code></td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>05.03</td>
+<td>خريطة الرعاة (Government Champions)</td>
+<td><code>_Мастер/Концепт.md</code> § 1-ter</td>
+<td>restricted (high)</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>05.04</td>
+<td>دراسة سوق من مكتب tier-1</td>
+<td>خريطة طريق</td>
+<td>full</td>
+<td>T+12 شهرًا</td>
+</tr>
+<tr>
+<td>05.05</td>
+<td>سجل LoI/MoU مع الشركاء</td>
+<td><code>02_Юридический_фундамент/Pre-meeting_briefs/</code></td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>05.06</td>
+<td>خط أنابيب العملاء (بعد الإطلاق)</td>
+<td>حي</td>
+<td>restricted</td>
+<td>T+18 شهرًا</td>
+</tr>
+<tr>
+<td>05.07</td>
+<td>استراتيجية التسعير</td>
+<td><code>03_Финансовая_модель/Финмодель_допущения_и_расчёты.md</code> §
+4</td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+</tbody>
+</table>
+<h2 id="operations-العمليات">06_Operations — العمليات</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>المعرّف</th>
+<th>الوثيقة</th>
+<th>المصدر</th>
+<th>المستوى</th>
+<th>الجاهزية</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>06.01</td>
+<td>خريطة طريق التطوير</td>
+<td><code>01_Техническая_документация/07_Дорожная_карта_разработки.md</code></td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>06.02</td>
+<td>المخططات المعمارية C4</td>
+<td><code>01_Техническая_документация/08_Архитектурные_диаграммы.md</code></td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>06.03</td>
+<td>الأمن والبنية التحتية المعلوماتية الحرجة</td>
+<td><code>01_Техническая_документация/05_Безопасность_и_КИИ.md</code></td>
+<td>restricted (high)</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>06.04</td>
+<td>سجل DLT لـ DFA</td>
+<td><code>01_Техническая_документация/06_DLT_реестр_ЦФА.md</code></td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>06.05</td>
+<td>التكامل مع نظم المعلومات الحكومية</td>
+<td><code>01_Техническая_документация/04_Интеграции_с_ГИС.md</code></td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>06.06</td>
+<td>مواصفات تطبيق الجوال</td>
+<td><code>09_Мобильное_приложение/Спецификация_мобильного_приложения.md</code></td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>06.07</td>
+<td>وثائق التصميم وفق GOST 19</td>
+<td><code>09_Мобильное_приложение/Конструкторская_документация/</code></td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>06.08</td>
+<td>خطة الاستجابة للحوادث</td>
+<td>خريطة طريق</td>
+<td>restricted</td>
+<td>T+6 أشهر</td>
+</tr>
+<tr>
+<td>06.09</td>
+<td>BCP / DRP</td>
+<td>خريطة طريق</td>
+<td>restricted</td>
+<td>T+12 شهرًا</td>
+</tr>
+</tbody>
+</table>
+<h2 id="it_ip-البنية-التحتية-الرقمية-والملكية-الفكرية">07_IT_IP — البنية
+التحتية الرقمية والملكية الفكرية</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>المعرّف</th>
+<th>الوثيقة</th>
+<th>المصدر</th>
+<th>المستوى</th>
+<th>الجاهزية</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>07.01</td>
+<td>معمارية البرنامج</td>
+<td><code>01_Техническая_документация/01_Концепция_архитектуры.md</code></td>
+<td>restricted</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>07.02</td>
+<td>جرد منظومة التقنيات</td>
+<td>جديد</td>
+<td>restricted</td>
+<td>T+1 شهر</td>
+</tr>
+<tr>
+<td>07.03</td>
+<td>سجل تراخيص المصادر المفتوحة</td>
+<td>جديد</td>
+<td>restricted</td>
+<td>T+3 أشهر</td>
+</tr>
+<tr>
+<td>07.04</td>
+<td>وصول قراءة فقط لمستودع الشيفرة</td>
+<td>حي</td>
+<td>restricted (high)</td>
+<td>بعد الجولة A</td>
+</tr>
+<tr>
+<td>07.05</td>
+<td>شهادة FSTEC KII-1</td>
+<td>خريطة طريق</td>
+<td>full</td>
+<td>T+8 أشهر</td>
+</tr>
+<tr>
+<td>07.06</td>
+<td>تقرير SOC 2 Type II (بعد فترة الرصد)</td>
+<td>خريطة طريق</td>
+<td>full</td>
+<td>T+24 شهرًا</td>
+</tr>
+<tr>
+<td>07.07</td>
+<td>شهادة ISO 27001:2022</td>
+<td>خريطة طريق</td>
+<td>full</td>
+<td>T+14 شهرًا</td>
+</tr>
+<tr>
+<td>07.08</td>
+<td>تقرير اختبار الاختراق</td>
+<td>خريطة طريق</td>
+<td>restricted (high)</td>
+<td>T+9 أشهر</td>
+</tr>
+<tr>
+<td>07.09</td>
+<td>محفظة الملكية الفكرية (علامات تجارية، تسجيلات برمجية، إيداعات معرفة
+فنية)</td>
+<td>حي</td>
+<td>full</td>
+<td>جاهز (جزئيًا)</td>
+</tr>
+<tr>
+<td>07.10</td>
+<td>اتفاقيات الموردين (سحابة / SaaS / استشارات)</td>
+<td>خريطة طريق</td>
+<td>restricted</td>
+<td>T+6 أشهر</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hr-الموارد-البشرية">08_HR — الموارد البشرية</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>المعرّف</th>
+<th>الوثيقة</th>
+<th>المصدر</th>
+<th>المستوى</th>
+<th>الجاهزية</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>08.01</td>
+<td>نموذج عقد العمل</td>
+<td>خريطة طريق</td>
+<td>restricted</td>
+<td>T+3 أشهر</td>
+</tr>
+<tr>
+<td>08.02</td>
+<td>شروط عدم المنافسة / عدم استمالة العاملين</td>
+<td>خريطة طريق</td>
+<td>restricted</td>
+<td>T+3 أشهر</td>
+</tr>
+<tr>
+<td>08.03</td>
+<td>الهيكل التنظيمي للفريق</td>
+<td>حي</td>
+<td>restricted</td>
+<td>T+1 شهر</td>
+</tr>
+<tr>
+<td>08.04</td>
+<td>خطة خيارات الأسهم للموظفين (ESOP)</td>
+<td>خريطة طريق</td>
+<td>restricted (high)</td>
+<td>T+6 أشهر</td>
+</tr>
+<tr>
+<td>08.05</td>
+<td>مرجعيات التعويضات</td>
+<td>جديد</td>
+<td>restricted</td>
+<td>T+6 أشهر</td>
+</tr>
+<tr>
+<td>08.06</td>
+<td>التحقق من الخلفية للتعيينات الجوهرية</td>
+<td>حي</td>
+<td>restricted (high)</td>
+<td>T+3 أشهر</td>
+</tr>
+<tr>
+<td>08.07</td>
+<td>سياسة التنوّع والإنصاف والإدماج (DEI)</td>
+<td>خريطة طريق</td>
+<td>full</td>
+<td>T+12 شهرًا</td>
+</tr>
+</tbody>
+</table>
+<h2 id="esg-الحوكمة-البيئية-والاجتماعية">09_ESG — الحوكمة البيئية
+والاجتماعية</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>المعرّف</th>
+<th>الوثيقة</th>
+<th>المصدر</th>
+<th>المستوى</th>
+<th>الجاهزية</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>09.01</td>
+<td>سياسة ESG</td>
+<td><code>16_Governance_и_Compliance/Governance_Pack.md</code> § 5</td>
+<td>full</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>09.02</td>
+<td>جرد البصمة الكربونية (النطاق 1 + 2)</td>
+<td>خريطة طريق</td>
+<td>full</td>
+<td>T+18 شهرًا</td>
+</tr>
+<tr>
+<td>09.03</td>
+<td>إفصاح SASB (السنة الأولى)</td>
+<td>خريطة طريق</td>
+<td>full</td>
+<td>T+12 شهرًا</td>
+</tr>
+<tr>
+<td>09.04</td>
+<td>إفصاح TCFD (السنة الأولى)</td>
+<td>خريطة طريق</td>
+<td>full</td>
+<td>T+12 شهرًا</td>
+</tr>
+<tr>
+<td>09.05</td>
+<td>بيان مكافحة العبودية الحديثة</td>
+<td>خريطة طريق</td>
+<td>full</td>
+<td>T+12 شهرًا</td>
+</tr>
+<tr>
+<td>09.06</td>
+<td>سياسة مكافحة الفساد</td>
+<td>حزمة الحوكمة § 4</td>
+<td>full</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>09.07</td>
+<td>بيانات قناة المبلِّغين</td>
+<td>حي (بعد الإطلاق)</td>
+<td>restricted</td>
+<td>T+6 أشهر</td>
+</tr>
+<tr>
+<td>09.08</td>
+<td>بيان المواءمة مع أهداف التنمية المستدامة</td>
+<td>حزمة الحوكمة § 5.3</td>
+<td>full</td>
+<td>جاهز</td>
+</tr>
+</tbody>
+</table>
+<h2 id="insurance-التأمين">10_Insurance — التأمين</h2>
+<table>
+<thead>
+<tr>
+<th>المعرّف</th>
+<th>الوثيقة</th>
+<th>المصدر</th>
+<th>المستوى</th>
+<th>الجاهزية</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10.01</td>
+<td>وثيقة تأمين D&amp;O</td>
+<td>خريطة طريق</td>
+<td>full</td>
+<td>T+3 أشهر</td>
+</tr>
+<tr>
+<td>10.02</td>
+<td>تأمين المسؤولية المهنية</td>
+<td>خريطة طريق</td>
+<td>full</td>
+<td>T+6 أشهر</td>
+</tr>
+<tr>
+<td>10.03</td>
+<td>تأمين الأمن السيبراني</td>
+<td>خريطة طريق</td>
+<td>full</td>
+<td>T+6 أشهر</td>
+</tr>
+<tr>
+<td>10.04</td>
+<td>تأمين الأخطاء والإغفال (E&amp;O)</td>
+<td>خريطة طريق</td>
+<td>full</td>
+<td>T+6 أشهر</td>
+</tr>
+<tr>
+<td>10.05</td>
+<td>تأمين توقّف الأعمال</td>
+<td>خريطة طريق</td>
+<td>full</td>
+<td>T+12 شهرًا</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="التحكم-في-الوصول-والصلاحيات">التحكم في الوصول والصلاحيات</h2>
+<p><strong>مستويات الصلاحية:</strong></p>
+<ul>
+<li><strong><code>full</code></strong> — جميع المستثمرين المحتملين بعد
+توقيع NDA</li>
+<li><strong><code>restricted</code></strong> — فقط المستثمرون المؤهَّلون
+(LP / GP) بعد خطاب التكليف</li>
+<li><strong><code>restricted (high)</code></strong> — فقط فريق vendor DD
+من Big-4 + مكتب tier-1 لإصدار الرأي القانوني + قائد جولة Series A</li>
+<li><strong><code>Q&amp;A-only</code></strong> — لا تُسلَّم الوثيقة؛ تُقدَّم
+الإجابات عبر قناة Q&amp;A الرسمية</li>
+<li><strong><code>no-access</code></strong> — للاستخدام الداخلي فقط</li>
+</ul>
+<h2 id="نموذج-خطاب-الإفصاح-disclosure-letter">نموذج خطاب الإفصاح
+(Disclosure Letter)</h2>
+<p>يُسلَّم خطاب الإفصاح مع مشروع SPA / SHA، ويُفصح صراحةً عن جميع الاستثناءات
+الجوهرية من الضمانات المعيارية. يقع النموذج في
+<code>01_Corporate/Disclosure_Letter_template.md</code> (سيُعَدّ عند T+1
+شهر إلى جانب SHA).</p>
+<h2 id="اختيار-أداة-vdr-للإنتاج">اختيار أداة VDR (للإنتاج)</h2>
+<p>للجولة الحالية نوصي بإحدى الأدوات التالية: -
+<strong>Intralinks</strong> (المعيار الصناعي، يُستخدم لدى Big Four) -
+<strong>Datasite</strong> (سابقًا Merrill Datasite) -
+<strong>Firmex</strong> (السوق المتوسط، تجربة مستخدم جيدة) -
+<strong>iDeals</strong> (مجدٍ من حيث التكلفة)</p>
+<p>بدائل ذاتية الاستضافة للجولات اللاحقة لـ Series A: <strong>Cylynx
+VDR</strong>، <strong>Onehub</strong>، <strong>SecureDocs</strong>.</p>
+<h2 id="عملية-الأسئلة-والأجوبة-qa">عملية الأسئلة والأجوبة (Q&amp;A)</h2>
+<ul>
+<li>تُجرى الأسئلة والأجوبة فقط عبر أداة Q&amp;A داخل VDR (لا قناة بريد
+إلكتروني).</li>
+<li>تُسجَّل جميع الأسئلة.</li>
+<li>تُقدَّم الإجابات خلال ≤ 48 ساعة من استلام السؤال.</li>
+<li>تتولّى إدارة Q&amp;A: مسؤول الامتثال + المستشار العام + الخبير
+القطاعي المختصّ.</li>
+<li>يُرسَل ملخّص Q&amp;A اليومي إلى جميع الأطراف المعنية النشطة.</li>
+</ul>
+<h2 id="مسار-التدقيق">مسار التدقيق</h2>
+<p>تسجّل أداة VDR تلقائيًا: - مَن فتح الوثيقة - مدّة الاطّلاع - ما إذا جرى
+التنزيل (مُعطَّل للمستوى <code>restricted (high)</code>) - لقطات الشاشة
+(بعلامة مائية)</p>
+<p>تُجرى مراجعة مسار التدقيق فصليًّا داخل لجنة التدقيق.</p>
+<hr />
+<p><strong>التاريخ:</strong> 24.05.2026 <strong>مرجع التكليف:</strong>
+RSFSR-DR-2026 <strong>Center Group Company</strong></p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

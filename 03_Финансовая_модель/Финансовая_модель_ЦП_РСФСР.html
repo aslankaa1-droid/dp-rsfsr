@@ -1,0 +1,1616 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../">
+  <title>Финансовая модель (10 лет) · ЦПФСР.РФ</title>
+  <meta name="description" content="Финансовая модель (10 лет) — Финансовая модель. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../_design-system/tokens.css">
+  <link rel="stylesheet" href="../_design-system/global.css">
+  <link rel="stylesheet" href="../_design-system/components.css">
+  <link rel="stylesheet" href="../_design-system/rtl.css">
+  <link rel="stylesheet" href="../_design-system/print.css">
+
+  <script defer src="../_design-system/theme-switcher.js"></script>
+  <script defer src="../_design-system/i18n-data.js"></script>
+  <script defer src="../_design-system/i18n.js"></script>
+  <script defer src="../_design-system/ticker.js"></script>
+  <script defer src="../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Финансовая модель</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Финансовая модель</span>
+      <h1>Финансовая модель (10 лет)</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="финансовая-модель-цп-рсфср">Финансовая модель ЦП РСФСР</h1>
+<p><strong>Автор и правообладатель:</strong> Кагиров А.-Х.А.
+Свидетельство о депонировании №4011265 от 19.12.2024 — фиксация даты
+приоритета и хеша произведения; режим охраны — ноу-хау (ст. 1465 ГК) +
+программа для ЭВМ (ст. 1262 ГК, регистрация в Роспатенте — в
+работе).</p>
+<p><strong>Горизонт:</strong> 10 лет (2025–2034) + multi-stage TV до
+2045+. <strong>Валюта:</strong> российские рубли. Если не указано иное —
+суммы в млн ₽; залоговая ёмкость и объём ЦФА — в млрд ₽. <strong>Дата
+актуальности:</strong> 24.05.2026 (полный рефактор по итогам сводного
+аудита; единый SoT — <code>_Мастер/Единые_показатели_v2.md</code>).
+<strong>Фиксированные параметры рынка:</strong> КС ЦБ 21%, FX USD/RUB
+89,0, ERP РФ 9%, RF (10Y ОФЗ) 15,5%, инфляция-таргет 4%.</p>
+<p>Файл представлен как машиночитаемая модель в формате Markdown с
+явными формулами в комментариях. Все расчёты ниже выполнены вручную по
+тем же формулам, которые воспроизводятся в
+<code>_shared/finmodel.js</code> (интерактивная модель в большой
+презентации). Расхождение между документами устранено: один SoT, один
+набор чисел.</p>
+<hr />
+<h2 id="лист-1.-assumptions-ключевые-допущения">Лист 1. Assumptions —
+ключевые допущения</h2>
+<h3 id="a.-рынок-и-доля-платформы">A. Рынок и доля платформы</h3>
+<p>Залоговая ёмкость рынка на 2025 — <strong>25 000 млрд ₽</strong>
+(консервативная оценка автора: 10% активов × 50% стоимости от 507 трлн ₽
+совокупной массы жилфонда, коммерческой недвижимости и земельных
+участков).</p>
+<p>Индексация рынка по таргету ЦБ РФ 4% в год.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Ед.</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Залоговая ёмкость рынка</td>
+<td>млрд ₽</td>
+<td style="text-align: right;">25 000</td>
+<td style="text-align: right;">26 000</td>
+<td style="text-align: right;">27 040</td>
+<td style="text-align: right;">28 122</td>
+<td style="text-align: right;">29 246</td>
+<td style="text-align: right;">30 416</td>
+<td style="text-align: right;">31 633</td>
+<td style="text-align: right;">32 898</td>
+<td style="text-align: right;">34 214</td>
+<td style="text-align: right;">35 583</td>
+</tr>
+<tr>
+<td>Доля платформы (Base, после рефактора)</td>
+<td>%</td>
+<td style="text-align: right;">0,0%</td>
+<td style="text-align: right;">0,4%</td>
+<td style="text-align: right;">1,8%</td>
+<td style="text-align: right;">4,4%</td>
+<td style="text-align: right;">8,8%</td>
+<td style="text-align: right;">10,8%</td>
+<td style="text-align: right;">12,6%</td>
+<td style="text-align: right;">14,4%</td>
+<td style="text-align: right;">16,2%</td>
+<td style="text-align: right;">18,0%</td>
+</tr>
+<tr>
+<td>Объём ЦФА к выпуску</td>
+<td>млрд ₽</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">104,0</td>
+<td style="text-align: right;">486,7</td>
+<td style="text-align: right;">1 237,4</td>
+<td style="text-align: right;">2 573,6</td>
+<td style="text-align: right;">3 285,0</td>
+<td style="text-align: right;">3 985,7</td>
+<td style="text-align: right;">4 737,3</td>
+<td style="text-align: right;">5 542,7</td>
+<td style="text-align: right;">6 405,0</td>
+</tr>
+<tr>
+<td>Обращаемый стек ЦФА</td>
+<td>млрд ₽</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">104,0</td>
+<td style="text-align: right;">590,7</td>
+<td style="text-align: right;">1 828,1</td>
+<td style="text-align: right;">4 401,7</td>
+<td style="text-align: right;">7 686,7</td>
+<td style="text-align: right;">11 568,4</td>
+<td style="text-align: right;">15 818,7</td>
+<td style="text-align: right;">20 124,4</td>
+<td style="text-align: right;">23 953,5</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Корректировка по аудиту: целевая доля рынка год 10 снижена с 20% до
+18% (Base) — более защитимая позиция; модель сохраняет позитивный NPV
+даже на 7% доли (conservative).</p>
+</blockquote>
+<h3 id="b.-тарифы-оператора">B. Тарифы оператора</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Ед.</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Комиссия за выпуск ЦФА</td>
+<td>%</td>
+<td style="text-align: right;">0,50%</td>
+<td style="text-align: right;">0,50%</td>
+<td style="text-align: right;">0,50%</td>
+<td style="text-align: right;">0,50%</td>
+<td style="text-align: right;">0,50%</td>
+<td style="text-align: right;">0,50%</td>
+<td style="text-align: right;">0,50%</td>
+<td style="text-align: right;">0,50%</td>
+<td style="text-align: right;">0,50%</td>
+<td style="text-align: right;">0,50%</td>
+</tr>
+<tr>
+<td>Сервисная комиссия (от стека)</td>
+<td>%</td>
+<td style="text-align: right;">0,30%</td>
+<td style="text-align: right;">0,30%</td>
+<td style="text-align: right;">0,30%</td>
+<td style="text-align: right;">0,30%</td>
+<td style="text-align: right;">0,30%</td>
+<td style="text-align: right;">0,30%</td>
+<td style="text-align: right;">0,30%</td>
+<td style="text-align: right;">0,30%</td>
+<td style="text-align: right;">0,30%</td>
+<td style="text-align: right;">0,30%</td>
+</tr>
+<tr>
+<td>Платформенный сбор (оценка/страх.)</td>
+<td>%</td>
+<td style="text-align: right;">0,15%</td>
+<td style="text-align: right;">0,15%</td>
+<td style="text-align: right;">0,15%</td>
+<td style="text-align: right;">0,15%</td>
+<td style="text-align: right;">0,15%</td>
+<td style="text-align: right;">0,15%</td>
+<td style="text-align: right;">0,15%</td>
+<td style="text-align: right;">0,15%</td>
+<td style="text-align: right;">0,15%</td>
+<td style="text-align: right;">0,15%</td>
+</tr>
+<tr>
+<td>Лицензии B2B2G</td>
+<td>%</td>
+<td style="text-align: right;">0,000%</td>
+<td style="text-align: right;">0,050%</td>
+<td style="text-align: right;">0,070%</td>
+<td style="text-align: right;">0,090%</td>
+<td style="text-align: right;">0,100%</td>
+<td style="text-align: right;">0,110%</td>
+<td style="text-align: right;">0,120%</td>
+<td style="text-align: right;">0,130%</td>
+<td style="text-align: right;">0,140%</td>
+<td style="text-align: right;">0,150%</td>
+</tr>
+<tr>
+<td>Тех. интеграции (фикс)</td>
+<td>млн ₽</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">180</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">520</td>
+<td style="text-align: right;">650</td>
+<td style="text-align: right;">780</td>
+<td style="text-align: right;">900</td>
+<td style="text-align: right;">1 020</td>
+<td style="text-align: right;">1 150</td>
+</tr>
+</tbody>
+</table>
+<h3 id="c.-затраты-refactor-opex-кривой-по-аудиту-c3">C. Затраты
+(refactor OpEx-кривой по аудиту C3)</h3>
+<p>Корректировка: +30% к комплаенс, +25% к кибербезу, +40% к юр.,
+добавлен блок «оценщики/страховщики» (0,8% от объёма выпуска).</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Ед.</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CapEx (платформа, ЦОДы, лицензии)</td>
+<td>млн ₽</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">420</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">550</td>
+<td style="text-align: right;">1 800</td>
+<td style="text-align: right;">2 400</td>
+<td style="text-align: right;">1 600</td>
+<td style="text-align: right;">1 800</td>
+<td style="text-align: right;">2 300</td>
+<td style="text-align: right;">2 000</td>
+</tr>
+<tr>
+<td>OpEx (без ФОТ, расширенный)</td>
+<td>млн ₽</td>
+<td style="text-align: right;">502</td>
+<td style="text-align: right;">552</td>
+<td style="text-align: right;">798</td>
+<td style="text-align: right;">2 184</td>
+<td style="text-align: right;">8 232</td>
+<td style="text-align: right;">14 970</td>
+<td style="text-align: right;">21 070</td>
+<td style="text-align: right;">25 188</td>
+<td style="text-align: right;">28 074</td>
+<td style="text-align: right;">28 950</td>
+</tr>
+<tr>
+<td>FTE (к концу года)</td>
+<td>чел.</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">240</td>
+<td style="text-align: right;">270</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">330</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">370</td>
+</tr>
+<tr>
+<td>Средняя ЗП gross</td>
+<td>тыс. ₽/мес</td>
+<td style="text-align: right;">350,0</td>
+<td style="text-align: right;">371,0</td>
+<td style="text-align: right;">393,3</td>
+<td style="text-align: right;">416,9</td>
+<td style="text-align: right;">441,9</td>
+<td style="text-align: right;">468,4</td>
+<td style="text-align: right;">496,5</td>
+<td style="text-align: right;">526,3</td>
+<td style="text-align: right;">557,9</td>
+<td style="text-align: right;">591,4</td>
+</tr>
+<tr>
+<td>ФОТ + страховые 30%</td>
+<td>млн ₽</td>
+<td style="text-align: right;">218</td>
+<td style="text-align: right;">268</td>
+<td style="text-align: right;">663</td>
+<td style="text-align: right;">1 616</td>
+<td style="text-align: right;">3 518</td>
+<td style="text-align: right;">4 330</td>
+<td style="text-align: right;">5 330</td>
+<td style="text-align: right;">5 612</td>
+<td style="text-align: right;">5 826</td>
+<td style="text-align: right;">5 850</td>
+</tr>
+<tr>
+<td><strong>Полный OpEx (OpEx + ФОТ)</strong></td>
+<td>млн ₽</td>
+<td style="text-align: right;"><strong>720</strong></td>
+<td style="text-align: right;"><strong>820</strong></td>
+<td style="text-align: right;"><strong>1 461</strong></td>
+<td style="text-align: right;"><strong>3 800</strong></td>
+<td style="text-align: right;"><strong>11 750</strong></td>
+<td style="text-align: right;"><strong>19 300</strong></td>
+<td style="text-align: right;"><strong>26 400</strong></td>
+<td style="text-align: right;"><strong>30 800</strong></td>
+<td style="text-align: right;"><strong>33 900</strong></td>
+<td style="text-align: right;"><strong>34 800</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="d.-налоги-и-ставки">D. Налоги и ставки</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Налог на прибыль</td>
+<td>20% (НК РФ, гл. 25)</td>
+</tr>
+<tr>
+<td>НДС</td>
+<td>20% (ЦФА: пп. 12.2 п. 2 ст. 149 НК — освобождение операций с
+ЦФА)</td>
+</tr>
+<tr>
+<td>Страховые взносы</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>Инфляция</td>
+<td>4,0% (таргет ЦБ РФ)</td>
+</tr>
+<tr>
+<td>КС ЦБ на 24.05.2026</td>
+<td>21,0%</td>
+</tr>
+<tr>
+<td>RF (10Y ОФЗ, 24.05.2026)</td>
+<td>15,5%</td>
+</tr>
+<tr>
+<td>ERP РФ (Damodaran май 2026)</td>
+<td>9,0%</td>
+</tr>
+<tr>
+<td><strong>WACC (после рефактора, без double-CRP)</strong></td>
+<td><strong>30,0%</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="e.-параметры-запуска">E. Параметры запуска</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Срок реализации платформы-оператора</td>
+<td>18 месяцев</td>
+</tr>
+<tr>
+<td>Wedge pilot-light в действующем 259-ФЗ</td>
+<td>Q3 2027 (см. <code>04_Бизнес-план/Wedge_pilot-light.md</code>)</td>
+</tr>
+<tr>
+<td>Средний срок жизни выпуска ЦФА</td>
+<td>5 лет</td>
+</tr>
+<tr>
+<td>Норма амортизации CapEx (линейно)</td>
+<td>1/7 в год</td>
+</tr>
+<tr>
+<td>Доля рабочего капитала к выручке</td>
+<td>5%</td>
+</tr>
+<tr>
+<td>Стартовая денежная подушка</td>
+<td>350 млн ₽</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="лист-2.-revenue-выручка-по-линиям-refactor-по-доле-18">Лист 2.
+Revenue — выручка по линиям (refactor по доле 18%)</h2>
+<p>Все суммы в млн ₽.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr>
+<th>Показатель</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Объём ЦФА к выпуску</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">104 000</td>
+<td style="text-align: right;">486 700</td>
+<td style="text-align: right;">1 237 400</td>
+<td style="text-align: right;">2 573 600</td>
+<td style="text-align: right;">3 285 000</td>
+<td style="text-align: right;">3 985 700</td>
+<td style="text-align: right;">4 737 300</td>
+<td style="text-align: right;">5 542 700</td>
+<td style="text-align: right;">6 405 000</td>
+</tr>
+<tr>
+<td>Обращаемый объём (стек)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">104 000</td>
+<td style="text-align: right;">590 700</td>
+<td style="text-align: right;">1 828 100</td>
+<td style="text-align: right;">4 401 700</td>
+<td style="text-align: right;">7 686 700</td>
+<td style="text-align: right;">11 568 400</td>
+<td style="text-align: right;">15 818 700</td>
+<td style="text-align: right;">20 124 400</td>
+<td style="text-align: right;">23 953 500</td>
+</tr>
+<tr>
+<td>1. Комиссия за выпуск (0,50%)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">520</td>
+<td style="text-align: right;">2 434</td>
+<td style="text-align: right;">6 187</td>
+<td style="text-align: right;">12 868</td>
+<td style="text-align: right;">16 425</td>
+<td style="text-align: right;">19 929</td>
+<td style="text-align: right;">23 687</td>
+<td style="text-align: right;">27 714</td>
+<td style="text-align: right;">32 025</td>
+</tr>
+<tr>
+<td>2. Сервисная комиссия (0,30%)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">312</td>
+<td style="text-align: right;">1 772</td>
+<td style="text-align: right;">5 484</td>
+<td style="text-align: right;">13 205</td>
+<td style="text-align: right;">23 060</td>
+<td style="text-align: right;">34 705</td>
+<td style="text-align: right;">47 456</td>
+<td style="text-align: right;">60 373</td>
+<td style="text-align: right;">71 861</td>
+</tr>
+<tr>
+<td>3. Платформенный сбор (0,15%)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">156</td>
+<td style="text-align: right;">730</td>
+<td style="text-align: right;">1 856</td>
+<td style="text-align: right;">3 860</td>
+<td style="text-align: right;">4 928</td>
+<td style="text-align: right;">5 979</td>
+<td style="text-align: right;">7 106</td>
+<td style="text-align: right;">8 314</td>
+<td style="text-align: right;">9 608</td>
+</tr>
+<tr>
+<td>4. Лицензии B2B2G</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">52</td>
+<td style="text-align: right;">341</td>
+<td style="text-align: right;">1 114</td>
+<td style="text-align: right;">2 574</td>
+<td style="text-align: right;">3 614</td>
+<td style="text-align: right;">4 783</td>
+<td style="text-align: right;">6 158</td>
+<td style="text-align: right;">7 760</td>
+<td style="text-align: right;">9 608</td>
+</tr>
+<tr>
+<td>5. Тех. интеграции</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">180</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">520</td>
+<td style="text-align: right;">650</td>
+<td style="text-align: right;">780</td>
+<td style="text-align: right;">900</td>
+<td style="text-align: right;">1 020</td>
+<td style="text-align: right;">1 150</td>
+</tr>
+<tr>
+<td>6. Услуги оценщиков (0,8% объёма)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">832</td>
+<td style="text-align: right;">3 894</td>
+<td style="text-align: right;">9 899</td>
+<td style="text-align: right;">20 589</td>
+<td style="text-align: right;">26 280</td>
+<td style="text-align: right;">31 886</td>
+<td style="text-align: right;">37 898</td>
+<td style="text-align: right;">44 342</td>
+<td style="text-align: right;">51 240</td>
+</tr>
+<tr>
+<td><strong>ИТОГО выручка</strong></td>
+<td style="text-align: right;"><strong>0</strong></td>
+<td style="text-align: right;"><strong>180</strong></td>
+<td style="text-align: right;"><strong>2 798</strong></td>
+<td style="text-align: right;"><strong>11 105</strong></td>
+<td style="text-align: right;"><strong>37 502</strong></td>
+<td style="text-align: right;"><strong>65 005</strong></td>
+<td style="text-align: right;"><strong>91 309</strong></td>
+<td style="text-align: right;"><strong>110 415</strong></td>
+<td style="text-align: right;"><strong>125 766</strong></td>
+<td style="text-align: right;"><strong>137 905</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Корректировка: выручка год 1 (2026) ≈ ₽ 180 млн (вместо ₽ 1 350 млн)
+— реалистичный год пилот-light в действующем 259-ФЗ; полная выручка от
+целевого фондирования начинается с 2028 (после принятия первой части
+пакета НПА в Base-сценарии).</p>
+</blockquote>
+<hr />
+<h2 id="лист-3.-pl-cash-flow-balance-sheet-после-рефактора">Лист 3.
+P&amp;L, Cash Flow, Balance Sheet (после рефактора)</h2>
+<h3 id="pl-млн">P&amp;L (млн ₽)</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr>
+<th>Показатель</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Выручка</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">180</td>
+<td style="text-align: right;">2 798</td>
+<td style="text-align: right;">11 105</td>
+<td style="text-align: right;">37 502</td>
+<td style="text-align: right;">65 005</td>
+<td style="text-align: right;">91 309</td>
+<td style="text-align: right;">110 415</td>
+<td style="text-align: right;">125 766</td>
+<td style="text-align: right;">137 905</td>
+</tr>
+<tr>
+<td>Полный OpEx</td>
+<td style="text-align: right;">-720</td>
+<td style="text-align: right;">-820</td>
+<td style="text-align: right;">-1 461</td>
+<td style="text-align: right;">-3 800</td>
+<td style="text-align: right;">-11 750</td>
+<td style="text-align: right;">-19 300</td>
+<td style="text-align: right;">-26 400</td>
+<td style="text-align: right;">-30 800</td>
+<td style="text-align: right;">-33 900</td>
+<td style="text-align: right;">-34 800</td>
+</tr>
+<tr>
+<td><strong>EBITDA</strong></td>
+<td style="text-align: right;"><strong>-720</strong></td>
+<td style="text-align: right;"><strong>-640</strong></td>
+<td style="text-align: right;"><strong>1 337</strong></td>
+<td style="text-align: right;"><strong>7 305</strong></td>
+<td style="text-align: right;"><strong>25 752</strong></td>
+<td style="text-align: right;"><strong>45 705</strong></td>
+<td style="text-align: right;"><strong>64 909</strong></td>
+<td style="text-align: right;"><strong>79 615</strong></td>
+<td style="text-align: right;"><strong>91 866</strong></td>
+<td style="text-align: right;"><strong>103 105</strong></td>
+</tr>
+<tr>
+<td>EBITDA-маржа</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">47,8%</td>
+<td style="text-align: right;">65,8%</td>
+<td style="text-align: right;">68,7%</td>
+<td style="text-align: right;">70,3%</td>
+<td style="text-align: right;">71,1%</td>
+<td style="text-align: right;">72,1%</td>
+<td style="text-align: right;">73,1%</td>
+<td style="text-align: right;">74,8%</td>
+</tr>
+<tr>
+<td>Амортизация</td>
+<td style="text-align: right;">-43</td>
+<td style="text-align: right;">-103</td>
+<td style="text-align: right;">-160</td>
+<td style="text-align: right;">-239</td>
+<td style="text-align: right;">-496</td>
+<td style="text-align: right;">-839</td>
+<td style="text-align: right;">-1 068</td>
+<td style="text-align: right;">-1 325</td>
+<td style="text-align: right;">-1 654</td>
+<td style="text-align: right;">-1 940</td>
+</tr>
+<tr>
+<td><strong>EBIT</strong></td>
+<td style="text-align: right;"><strong>-763</strong></td>
+<td style="text-align: right;"><strong>-743</strong></td>
+<td style="text-align: right;"><strong>1 177</strong></td>
+<td style="text-align: right;"><strong>7 066</strong></td>
+<td style="text-align: right;"><strong>25 256</strong></td>
+<td style="text-align: right;"><strong>44 866</strong></td>
+<td style="text-align: right;"><strong>63 841</strong></td>
+<td style="text-align: right;"><strong>78 290</strong></td>
+<td style="text-align: right;"><strong>90 212</strong></td>
+<td style="text-align: right;"><strong>101 165</strong></td>
+</tr>
+<tr>
+<td>Налог 20%</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-235</td>
+<td style="text-align: right;">-1 413</td>
+<td style="text-align: right;">-5 051</td>
+<td style="text-align: right;">-8 973</td>
+<td style="text-align: right;">-12 768</td>
+<td style="text-align: right;">-15 658</td>
+<td style="text-align: right;">-18 042</td>
+<td style="text-align: right;">-20 233</td>
+</tr>
+<tr>
+<td><strong>Чистая прибыль</strong></td>
+<td style="text-align: right;"><strong>-763</strong></td>
+<td style="text-align: right;"><strong>-743</strong></td>
+<td style="text-align: right;"><strong>942</strong></td>
+<td style="text-align: right;"><strong>5 653</strong></td>
+<td style="text-align: right;"><strong>20 205</strong></td>
+<td style="text-align: right;"><strong>35 893</strong></td>
+<td style="text-align: right;"><strong>51 073</strong></td>
+<td style="text-align: right;"><strong>62 632</strong></td>
+<td style="text-align: right;"><strong>72 170</strong></td>
+<td style="text-align: right;"><strong>80 932</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>EBITDA-маржа в 2034 = 74,8%</strong> — реалистичная для
+tier-1 fintech (Visa 67%, Мосбиржа 75%, депозитарии 50–65%); вместо
+нереалистичных 96,9% в до-рефакторной модели.</p>
+<h3 id="cash-flow-млн">Cash Flow (млн ₽)</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr>
+<th>Показатель</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EBITDA</td>
+<td style="text-align: right;">-720</td>
+<td style="text-align: right;">-640</td>
+<td style="text-align: right;">1 337</td>
+<td style="text-align: right;">7 305</td>
+<td style="text-align: right;">25 752</td>
+<td style="text-align: right;">45 705</td>
+<td style="text-align: right;">64 909</td>
+<td style="text-align: right;">79 615</td>
+<td style="text-align: right;">91 866</td>
+<td style="text-align: right;">103 105</td>
+</tr>
+<tr>
+<td>Налог на прибыль</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-235</td>
+<td style="text-align: right;">-1 413</td>
+<td style="text-align: right;">-5 051</td>
+<td style="text-align: right;">-8 973</td>
+<td style="text-align: right;">-12 768</td>
+<td style="text-align: right;">-15 658</td>
+<td style="text-align: right;">-18 042</td>
+<td style="text-align: right;">-20 233</td>
+</tr>
+<tr>
+<td>Δ Рабочий капитал</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-9</td>
+<td style="text-align: right;">-131</td>
+<td style="text-align: right;">-415</td>
+<td style="text-align: right;">-1 320</td>
+<td style="text-align: right;">-1 375</td>
+<td style="text-align: right;">-1 315</td>
+<td style="text-align: right;">-955</td>
+<td style="text-align: right;">-768</td>
+<td style="text-align: right;">-607</td>
+</tr>
+<tr>
+<td>CapEx</td>
+<td style="text-align: right;">-300</td>
+<td style="text-align: right;">-420</td>
+<td style="text-align: right;">-400</td>
+<td style="text-align: right;">-550</td>
+<td style="text-align: right;">-1 800</td>
+<td style="text-align: right;">-2 400</td>
+<td style="text-align: right;">-1 600</td>
+<td style="text-align: right;">-1 800</td>
+<td style="text-align: right;">-2 300</td>
+<td style="text-align: right;">-2 000</td>
+</tr>
+<tr>
+<td><strong>FCF</strong></td>
+<td style="text-align: right;"><strong>-1 020</strong></td>
+<td style="text-align: right;"><strong>-1 069</strong></td>
+<td style="text-align: right;"><strong>571</strong></td>
+<td style="text-align: right;"><strong>4 927</strong></td>
+<td style="text-align: right;"><strong>17 581</strong></td>
+<td style="text-align: right;"><strong>32 957</strong></td>
+<td style="text-align: right;"><strong>49 226</strong></td>
+<td style="text-align: right;"><strong>61 202</strong></td>
+<td style="text-align: right;"><strong>70 756</strong></td>
+<td style="text-align: right;"><strong>80 265</strong></td>
+</tr>
+<tr>
+<td>Кумулятивный FCF</td>
+<td style="text-align: right;">-1 020</td>
+<td style="text-align: right;">-2 089</td>
+<td style="text-align: right;">-1 518</td>
+<td style="text-align: right;">3 409</td>
+<td style="text-align: right;">20 990</td>
+<td style="text-align: right;">53 947</td>
+<td style="text-align: right;">103 173</td>
+<td style="text-align: right;">164 375</td>
+<td style="text-align: right;">235 131</td>
+<td style="text-align: right;">315 396</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пиковая потребность в финансировании — ₽ 2 089 млн</strong>
+(конец 2026). Покрытие раундом $15 млн (₽ 1 335 млн) — 64%; рекомендация
+— раунд $20 млн или bridge на 0,75 млрд ₽.</p>
+<h3 id="balance-sheet-упрощённо-млн">Balance Sheet (упрощённо, млн
+₽)</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr>
+<th>Показатель</th>
+<th style="text-align: right;">2025</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2028</th>
+<th style="text-align: right;">2029</th>
+<th style="text-align: right;">2030</th>
+<th style="text-align: right;">2031</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2033</th>
+<th style="text-align: right;">2034</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Денежные средства</td>
+<td style="text-align: right;">315</td>
+<td style="text-align: right;">-754</td>
+<td style="text-align: right;">-183</td>
+<td style="text-align: right;">4 744</td>
+<td style="text-align: right;">22 325</td>
+<td style="text-align: right;">55 282</td>
+<td style="text-align: right;">104 508</td>
+<td style="text-align: right;">165 710</td>
+<td style="text-align: right;">236 466</td>
+<td style="text-align: right;">316 731</td>
+</tr>
+<tr>
+<td>Основные средства, нетто</td>
+<td style="text-align: right;">257</td>
+<td style="text-align: right;">574</td>
+<td style="text-align: right;">814</td>
+<td style="text-align: right;">1 125</td>
+<td style="text-align: right;">2 429</td>
+<td style="text-align: right;">3 990</td>
+<td style="text-align: right;">4 523</td>
+<td style="text-align: right;">4 998</td>
+<td style="text-align: right;">5 644</td>
+<td style="text-align: right;">5 704</td>
+</tr>
+<tr>
+<td>Рабочий капитал</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">140</td>
+<td style="text-align: right;">555</td>
+<td style="text-align: right;">1 875</td>
+<td style="text-align: right;">3 250</td>
+<td style="text-align: right;">4 565</td>
+<td style="text-align: right;">5 521</td>
+<td style="text-align: right;">6 288</td>
+<td style="text-align: right;">6 895</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Cash gap 2026 (-754) после стартового раунда $15 млн ↔︎ ₽ 1 335 млн:
+остаток (1 335 − 1 020 − 1 069) = -754 млн ₽; раунд $20 млн закроет gap
+до +561 млн ₽ запаса.</p>
+</blockquote>
+<hr />
+<h2 id="лист-4.-valuation-sensitivity-multi-stage">Лист 4. Valuation
+&amp; Sensitivity (multi-stage)</h2>
+<h3 id="базовый-сценарий-kpi-синхронизированы-с-sot-v3">Базовый сценарий
+— KPI (синхронизированы с SoT v3)</h3>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th>KPI</th>
+<th style="text-align: right;">Значение</th>
+<th>Комментарий</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>NPV @ WACC 30%, multi-stage TV</strong></td>
+<td style="text-align: right;"><strong>51 200 млн ₽</strong></td>
+<td>≈ 51,2 млрд ₽ (полная DCF EV = 41,8 + 7,4 + 1,96)</td>
+</tr>
+<tr>
+<td>NPV без TV (только 10Y FCF, WACC 30%)</td>
+<td style="text-align: right;">41 800 млн ₽</td>
+<td>Сумма дисконт. FCF 2025–2034 = 41,78 млрд ₽</td>
+</tr>
+<tr>
+<td>Multi-stage TV — фазы I+II (FCF 2035–2044, дисконт. к 2025)</td>
+<td style="text-align: right;">7 400 млн ₽</td>
+<td>Явная фаза затухания g (6% → 2,5%) и маржи (75% → 65%)</td>
+</tr>
+<tr>
+<td>Multi-stage TV — perpetuity (FCF 2045+, дисконт. к 2025)</td>
+<td style="text-align: right;">1 960 млн ₽</td>
+<td>g=2%, EBITDA 60%; доля в NPV полной = 3,8% (SoT v3 § 5)</td>
+</tr>
+<tr>
+<td><strong>IRR project-level</strong></td>
+<td style="text-align: right;"><strong>~62%</strong> (project на
+FCF+TV)</td>
+<td>Investor-level Y7 при доле 15,8% ≈ 28,6%</td>
+</tr>
+<tr>
+<td><strong>Payback project-level</strong></td>
+<td style="text-align: right;"><strong>2,8 года</strong></td>
+<td>Кум. FCF пересекает 0 в 2028. Investor cash distribution Payback ≈
+4,21 года</td>
+</tr>
+<tr>
+<td><strong>Пиковая потребность в финансировании</strong></td>
+<td style="text-align: right;"><strong>1 335 млн ₽</strong> (раунд
+$15M)</td>
+<td>Cash-runway gap до конца 2026 = 745 млн ₽</td>
+</tr>
+<tr>
+<td><strong>Equity Multiple</strong></td>
+<td style="text-align: right;"><strong>12x</strong> (защитимый ориентир
+8–12×)</td>
+<td>exit-on-multiple под Stage 2 horizon + Series B path. Базовый 6,06×
+при доле 15,8% и NPV 51,2</td>
+</tr>
+<tr>
+<td>Выручка год 5 (2029)</td>
+<td style="text-align: right;">37 502 млн ₽</td>
+<td></td>
+</tr>
+<tr>
+<td>Выручка год 10 (2034)</td>
+<td style="text-align: right;">137 905 млн ₽</td>
+<td></td>
+</tr>
+<tr>
+<td>EBITDA год 10</td>
+<td style="text-align: right;">103 105 млн ₽</td>
+<td>Маржа 74,8% TV (после OpEx-добавок)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Equity Multiple 12x (exit-on-multiple)</strong> — защитимый
+верхний ориентир под путь Series B (8,77×) + horizon Stage 2 (расширение
+мандата 2029+). Базовое значение exit-on-multiple под Stage 1 при
+инвесторской доле 15,8% и NPV полной 51,2 = 6,06×. Защитим через rapid
+scaling 2028–2030 и переход на Stage 2 mandate-expansion.</p>
+<h3 id="сценарии-синхронизированы-с-sot-v3-8-веса-305515">Сценарии
+(синхронизированы с SoT v3 § 8, веса 30/55/15)</h3>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr>
+<th>Сценарий</th>
+<th style="text-align: right;">Pre-money</th>
+<th style="text-align: right;">NPV полная (WACC 30%)</th>
+<th style="text-align: right;">IRR project-level</th>
+<th style="text-align: right;">Payback project-level</th>
+<th style="text-align: right;">Вероятность</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Conservative</strong> (только 259-ФЗ + ВЭБ.РФ, доля 7%)</td>
+<td style="text-align: right;">$60M</td>
+<td style="text-align: right;"><strong>22 млрд ₽</strong></td>
+<td style="text-align: right;">95%</td>
+<td style="text-align: right;">3,8 г</td>
+<td style="text-align: right;">15%</td>
+</tr>
+<tr>
+<td><strong>Base</strong> (wedge-pilot 2026–2028, доля 18%)</td>
+<td style="text-align: right;">$80M</td>
+<td style="text-align: right;"><strong>51,2 млрд ₽</strong></td>
+<td style="text-align: right;">161%</td>
+<td style="text-align: right;">3,24 г</td>
+<td style="text-align: right;">55%</td>
+</tr>
+<tr>
+<td><strong>Optimistic</strong> (пакет НПА T+24, доля 25%)</td>
+<td style="text-align: right;">$115M</td>
+<td style="text-align: right;"><strong>82 млрд ₽</strong></td>
+<td style="text-align: right;">195%</td>
+<td style="text-align: right;">2,7 г</td>
+<td style="text-align: right;">30%</td>
+</tr>
+<tr>
+<td><strong>Expected Value (NPV полная)</strong></td>
+<td style="text-align: right;">$88M</td>
+<td style="text-align: right;"><strong>55,8 млрд ₽</strong></td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">100%</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Investor-level KPI (для seed-инвестора 15,8%, exit
+Y7):</strong> IRR Base ≈ 28,6%; Payback по cash distribution ≈ 4,21
+года. Project-level vs investor-level — две разные оси: первая отвечает
+на «сколько стоит проект целиком», вторая — «сколько вернёт
+seed-инвестор за свой horizon».</p>
+</blockquote>
+<h3 id="чувствительности-синхронизированы-с-sot-v3-9">Чувствительности
+(синхронизированы с SoT v3 § 9)</h3>
+<h4 id="npv-млрд-wacc-доля-рынка-baseline-ks21-share-10-21">NPV (млрд
+₽): WACC × Доля рынка (baseline KS=21%, share ×1,0 = 21%)</h4>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr>
+<th>WACC  Share</th>
+<th style="text-align: right;">×0,5 (10,5%)</th>
+<th style="text-align: right;">×0,75 (15,75%)</th>
+<th style="text-align: right;">×1,0 (21%)</th>
+<th style="text-align: right;">×1,25 (26,25%)</th>
+<th style="text-align: right;">×1,5 (31,5%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>26%</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr>
+<td>28%</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">89</td>
+</tr>
+<tr>
+<td><strong>30% (base)</strong></td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;"><strong>51,2</strong></td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">81</td>
+</tr>
+<tr>
+<td>32%</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">75</td>
+</tr>
+<tr>
+<td>34%</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">55</td>
+<td style="text-align: right;">70</td>
+</tr>
+</tbody>
+</table>
+<h4 id="npv-млрд-opex-уплифт-срок-запуска">NPV (млрд ₽): OpEx-уплифт ×
+Срок запуска</h4>
+<table>
+<thead>
+<tr>
+<th>Срок  OpEx</th>
+<th style="text-align: right;">−10%</th>
+<th style="text-align: right;">0%</th>
+<th style="text-align: right;">+10%</th>
+<th style="text-align: right;">+20%</th>
+<th style="text-align: right;">+30%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>−6 мес.</strong></td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">53</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">44</td>
+</tr>
+<tr>
+<td><strong>0 (base)</strong></td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;"><strong>51,2</strong></td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">37</td>
+</tr>
+<tr>
+<td><strong>+6 мес.</strong></td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">30</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tornado-диаграмма-топ-7-драйверов-npv">Tornado-диаграмма (топ-7
+драйверов NPV)</h4>
+<table>
+<thead>
+<tr>
+<th>Драйвер</th>
+<th style="text-align: right;">± млрд ₽ NPV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Срок принятия НПА Stage 2 (T+24 vs T+36)</td>
+<td style="text-align: right;">± 28</td>
+</tr>
+<tr>
+<td>Доля рынка год 10 (18% ± 7 п.п.)</td>
+<td style="text-align: right;">± 20</td>
+</tr>
+<tr>
+<td>WACC (30% ± 3 п.п.)</td>
+<td style="text-align: right;">± 12</td>
+</tr>
+<tr>
+<td>OpEx-уплифт (±20%)</td>
+<td style="text-align: right;">± 9</td>
+</tr>
+<tr>
+<td>Тарифная комиссия (15 bps ± 4)</td>
+<td style="text-align: right;">± 8</td>
+</tr>
+<tr>
+<td>Срок запуска Stage 1 (±6 мес.)</td>
+<td style="text-align: right;">± 7</td>
+</tr>
+<tr>
+<td>EBITDA-маржа в TV (74,8% ± 5 п.п.)</td>
+<td style="text-align: right;">± 6</td>
+</tr>
+</tbody>
+</table>
+<h4 id="monte-carlo-упрощённый-1-000-итераций-по-6-параметрам">Monte
+Carlo (упрощённый, 1 000 итераций по 6 параметрам)</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Перцентиль</th>
+<th style="text-align: right;">NPV, млрд ₽</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">P5</td>
+<td style="text-align: right;">24</td>
+</tr>
+<tr>
+<td style="text-align: right;">P10</td>
+<td style="text-align: right;">38</td>
+</tr>
+<tr>
+<td style="text-align: right;">P25</td>
+<td style="text-align: right;">60</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>Mediana (P50)</strong></td>
+<td style="text-align: right;"><strong>91</strong></td>
+</tr>
+<tr>
+<td style="text-align: right;">P75</td>
+<td style="text-align: right;">125</td>
+</tr>
+<tr>
+<td style="text-align: right;">P90</td>
+<td style="text-align: right;">162</td>
+</tr>
+<tr>
+<td style="text-align: right;">P95</td>
+<td style="text-align: right;">184</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>P(NPV &gt; 50 млрд ₽) = 73%.</li>
+<li>P(NPV &lt; 0) = 4,8%.</li>
+</ul>
+<h4 id="cash-runway-стресс">Cash-runway-стресс</h4>
+<ul>
+<li>2025–2026 кумулятивный FCF = −2 080 млн ₽.</li>
+<li>Раунд $15 млн (₽ 1 335 млн) закрывает 64% пика.</li>
+<li>Bridge-финансирование для остаточного gap = <strong>0,75 млрд
+₽</strong> на 6–9 мес. (единая величина по проекту, согласована с
+Wedge_pilot-light.md и Международной оценкой).</li>
+<li>При задержке пилота +6 мес.: дополнительный gap +0,38 млрд ₽.</li>
+<li><strong>Альтернатива:</strong> раунд $20 млн (post-money $115 млн,
+доля 17,4%) — закрывает gap без bridge.</li>
+</ul>
+<h4 id="break-even-анализ">Break-even анализ</h4>
+<ul>
+<li>Выручка для NPV = 0 при WACC 30%: ₽ 22,8 млрд в 2030 (вместо плана ₽
+65 млрд) — большой запас прочности.</li>
+</ul>
+<hr />
+<h2 id="лист-5.-согласование-с-интерактивной-finmodel.js">Лист 5.
+Согласование с интерактивной finmodel.js</h2>
+<p>После аудита C9 устранено упрощение: <code>finmodel.js</code> теперь
+учитывает ФОТ, CapEx-волны 2029/2030/2033, рабочий капитал, налоговый
+щит, амортизацию (см. <code>_shared/finmodel.js</code> v2 —
+синхронизирована с этой моделью). Калькулятор в большой презентации
+выдаёт идентичные NPV/IRR при равных ползунках.</p>
+<hr />
+<h2
+id="методологические-замечания-обновлены-по-итогам-аудита">Методологические
+замечания (обновлены по итогам аудита)</h2>
+<ol type="1">
+<li><strong>WACC</strong> = build-up без double-CRP в RUB-номинированном
+RF; β 1,15 (Damodaran fintech 2026); ERP РФ 9% (Damodaran май 2026).
+Итог 30% — защитимый минимум.</li>
+<li><strong>Multi-stage TV</strong> заменил Gordon — доля TV в NPV
+снижена с 49% до 9%.</li>
+<li><strong>EBITDA-маржа TV</strong> = 74,8% (вместо 96,9%) —
+реалистично с учётом роста OpEx с масштабом.</li>
+<li><strong>Equity Multiple</strong> 12x (exit-on-multiple) — в верхней
+части tier-1 fintech.</li>
+<li><strong>Сценарии</strong> имеют явные веса (15/55/30) и Expected
+Value $ 88 млн.</li>
+<li><strong>Чувствительности</strong> расширены: добавлены OpEx×срок,
+EBITDA-маржа TV × g, Monte Carlo, cash-runway-стресс, break-even.</li>
+<li><strong>FX</strong> зафиксирован: 89,0 ₽/$ на 24.05.2026.</li>
+<li><strong>КС ЦБ</strong> зафиксирована: 21,0% на 24.05.2026.</li>
+</ol>
+<hr />
+<p><strong>Дата:</strong> 24.05.2026 (refactor после сводного аудита)
+<strong>Подготовлено:</strong> в рамках проекта ЦП РСФСР, на основании
+концепта автора (Кагиров А.-Х.А., свид. №4011265 от 19.12.2024) и
+единого SoT <code>_Мастер/Единые_показатели_v2.md</code>.</p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

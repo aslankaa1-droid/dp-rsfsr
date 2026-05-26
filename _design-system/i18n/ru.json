@@ -1,0 +1,79 @@
+{
+  "_meta": { "lang": "ru", "dir": "ltr", "name": "Русский", "flag": "🇷🇺" },
+  "brand": {
+    "short": "ЦПФСР.РФ",
+    "name": "Цифровая Платформа Финансирования Социального Развития",
+    "tagline": "Институциональный контур для социальных инвестиций уровня pre-Seed → Series A"
+  },
+  "nav": {
+    "home": "Главная",
+    "concept": "Концепция",
+    "tech": "Технология",
+    "legal": "Правовой контур",
+    "finance": "Финансовая модель",
+    "valuation": "Оценка",
+    "business": "Бизнес-план",
+    "dd": "DD-аудит",
+    "expertise": "Экспертиза",
+    "audit": "Аудит",
+    "presentations": "Презентации",
+    "design": "Дизайн",
+    "brand": "Бренд-бук",
+    "mobile": "Мобильное приложение",
+    "dataroom": "Data room",
+    "governance": "Governance",
+    "rfp": "RFP",
+    "sitemap": "Карта сайта"
+  },
+  "actions": {
+    "open": "Открыть",
+    "download": "Скачать",
+    "back_to_top": "Наверх",
+    "back_to_home": "На главную",
+    "more": "Подробнее",
+    "menu": "Меню",
+    "close": "Закрыть",
+    "search": "Поиск",
+    "language": "Язык",
+    "theme": "Тема"
+  },
+  "themes": {
+    "light": "Светлая",
+    "dark": "Тёмная",
+    "sepia": "Сепия"
+  },
+  "hero": {
+    "eyebrow": "Цифровая Платформа · pre-Seed → Series A",
+    "title_p1": "Институциональный контур",
+    "title_em": "финансирования социального развития",
+    "title_p2": " на базе СЗПК и 259-ФЗ",
+    "lead": "Wedge через альянс ВЭБ.РФ / Газпромбанк / Минэк / Атомайз. Базовая оценка post-money $95M, IRR 62 %, NPV 51,2 млрд ₽. Двухстадийная архитектура: Pilot Light в действующем 259-ФЗ → целевой контур.",
+    "cta_main": "Презентация для инвесторов",
+    "cta_secondary": "Доклад для ЦБ РФ"
+  },
+  "kpi": {
+    "npv": "NPV (Base)",
+    "irr": "IRR investor-level",
+    "wacc": "WACC дисконт",
+    "payback": "Окупаемость",
+    "postmoney": "Post-money (Base)",
+    "stake": "Доля раунда"
+  },
+  "sections": {
+    "blocks": { "eyebrow": "Структура проекта", "title": "Семнадцать тематических блоков", "lead": "Полный документальный пакет — от технической документации до Governance Pack и Compliance Matrix" },
+    "champion": { "eyebrow": "Government Champions", "title": "Champion-map Stage 1", "lead": "Шесть институциональных партнёров для wedge-старта через действующий 259-ФЗ" },
+    "audit": { "eyebrow": "Сводный аудит", "title": "Пост-Горизонт-III · 9,22 / 10", "lead": "Series A institutional ready. 12 / 12 RED закрыто, 27 / 33 AMBER закрыто. Tier-1 fintech benchmarks подтверждены." }
+  },
+  "ticker": {
+    "live": "Live"
+  },
+  "footer": {
+    "tagline": "ЦПФСР.РФ — государственный по природе, частный по эффективности.",
+    "contact": "Контакты",
+    "documents": "Документы",
+    "verification": "Внешняя верификация",
+    "language_region": "Язык и регион",
+    "rights": "© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024",
+    "engagement": "Engagement reference: CPFSR-RF-DESIGN-2026"
+  }
+}

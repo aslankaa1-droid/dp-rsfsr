@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../../">
+  <title>Cahier des charges (CdC) · ЦПФСР.РФ</title>
+  <meta name="description" content="Cahier des charges (CdC) — Cahier des charges (CdC). ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../../_design-system/print.css">
+
+  <script defer src="../../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../../_design-system/i18n.js"></script>
+  <script defer src="../../../../_design-system/ticker.js"></script>
+  <script defer src="../../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Cahier des charges (CdC)</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Cahier des charges (CdC)</span>
+      <h1>Cahier des charges (CdC)</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1
+id="cahier-des-charges-pour-le-développement-de-lapplication-mobile">Cahier
+des charges pour le développement de l’application mobile</h1>
+<h2
+id="cpfsr-service-russe-de-financement-du-développement-social">CPFSR —
+Service Russe de Financement du Développement Social</h2>
+<p><strong>Identifiant :</strong> РСФСР.МП.01.ТЗ <strong>Norme
+:</strong> GOST 19.201-78 <strong>Date :</strong> 2025 <strong>Titulaire
+des droits :</strong> Abdul-Khakim Akhmadovitch Kagirov (Certificat de
+dépôt N° 4011265 du 19.12.2024)</p>
+<hr />
+<h2 id="introduction">1. Introduction</h2>
+<h3 id="nom-du-programme">1.1. Nom du programme</h3>
+<p>Complet : « Plateforme numérique CPFSR — application mobile du
+débiteur sur gage ». Identifiant : РСФСР.МП.</p>
+<h3 id="domaine-dapplication">1.2. Domaine d’application</h3>
+<p>L’application mobile est le logiciel client de la Plateforme
+numérique CPFSR — opérateur de l’émission d’actifs financiers numériques
+(AFN) garantis par les biens des personnes physiques et morales. En
+régime pilote-light de 2026–2028, le financement ciblé des projets
+nationaux et d’infrastructure contre un pool d’AFN est organisé via
+l’Usine de financement de projets de VEB.RF et le Trésor fédéral ; la
+Banque de Russie agit en tant que régulateur de supervision général du
+marché financier au titre de l’art. 4 de FZ-86. À l’horizon 2029+ —
+élargissement du mandat sous réserve de l’adoption du paquet d’actes
+normatifs.</p>
+<h3 id="le-programme-est-destiné-à">1.3. Le programme est destiné à</h3>
+<ul>
+<li>l’inscription et l’identification des débiteurs sur gage via ESIA et
+EBS ;</li>
+<li>la soumission de biens en garantie (immobilier, transport, propriété
+intellectuelle, valeurs mobilières) ;</li>
+<li>la signature de contrats intelligents d’émission d’AFN au moyen
+d’une signature électronique qualifiée renforcée ;</li>
+<li>la gestion du portefeuille d’AFN et la perception des revenus du
+placement ;</li>
+<li>la réception des notifications sur les événements clés du contrat
+intelligent (échange d’AFN, paiements, sinistres).</li>
+</ul>
+<h2 id="base-de-développement">2. Base de développement</h2>
+<ul>
+<li>Concept de l’auteur, déposé sous le N° 4011265 du 19.12.2024.</li>
+<li>Loi fédérale N° 259-FZ du 31.07.2020 « Sur les actifs financiers
+numériques ».</li>
+<li>Règlement de la Banque de Russie N° 779-P du 16.11.2021.</li>
+<li>Décret du Président de la Fédération de Russie N° 166 du 30.03.2022
+(substitution aux importations).</li>
+</ul>
+<h2 id="objet-du-développement">3. Objet du développement</h2>
+<h3 id="objet-fonctionnel">3.1. Objet fonctionnel</h3>
+<p>Fournir au propriétaire d’actif un accès mobile à toutes les
+fonctions de la plateforme CPFSR avec un niveau de disponibilité de
+99,99 % et un temps de réponse des opérations métier de 200 ms au
+maximum (P95).</p>
+<h3 id="objet-opérationnel">3.2. Objet opérationnel</h3>
+<p>Exploité sur les appareils sous : - iOS 15 et supérieur ; - Android 9
+(API 28) et supérieur ; - Windows 10 (1809) et supérieur ; - navigateurs
+web avec prise en charge des Service Workers et de WebAssembly (mode
+PWA).</p>
+<h2 id="exigences-relatives-au-programme">4. Exigences relatives au
+programme</h2>
+<h3 id="exigences-fonctionnelles">4.1. Exigences fonctionnelles</h3>
+<h4 id="identification-et-authentification">4.1.1. Identification et
+authentification</h4>
+<ul>
+<li>Autorisation via le Système unifié d’identification et
+d’authentification (ESIA) selon le protocole OpenID Connect.</li>
+<li>Autorisation via le Système biométrique unifié (Règlement de la
+Banque de Russie N° 482-P) — visage et/ou voix.</li>
+<li>Authentification locale par biométrie de l’appareil (Face ID, Touch
+ID, Windows Hello) ou code PIN.</li>
+<li>Authentification à deux facteurs pour les opérations critiques (code
+SMS + biométrie).</li>
+</ul>
+<h4 id="inscription-du-débiteur-sur-gage-kyc">4.1.2. Inscription du
+débiteur sur gage (KYC)</h4>
+<ul>
+<li>Chargement des données personnelles depuis un compte Gosuslugi
+confirmé.</li>
+<li>Vérification dans les registres LAB/CFT (Loi fédérale N°
+115-FZ).</li>
+<li>Confirmation du téléphone et de l’e-mail.</li>
+<li>Liaison de la biométrie pour la signature des opérations.</li>
+</ul>
+<h4 id="gestion-des-actifs">4.1.3. Gestion des actifs</h4>
+<ul>
+<li>Soumission de l’actif en garantie (assistant en 4 étapes : type →
+caractéristiques → documents → envoi pour évaluation).</li>
+<li>Chargement automatique des caractéristiques depuis EGRN (Rosreestr),
+le registre de Rospatent, les systèmes dépositaires.</li>
+<li>Consultation de la liste des actifs propres avec filtrage.</li>
+<li>Fiche de l’actif avec historique des opérations, statut de la
+charge, assurance.</li>
+</ul>
+<h4 id="émission-et-service-des-afn">4.1.4. Émission et service des
+AFN</h4>
+<ul>
+<li>Concepteur de contrat intelligent (durée, finalité ciblée, taux de
+rémunération).</li>
+<li>Signature par signature électronique qualifiée renforcée (GOST R
+34.10-2012).</li>
+<li>Confirmation de l’opération via un code SMS ou la biométrie
+EBS.</li>
+<li>Consultation des AFN actifs, des versements entrants, de
+l’historique.</li>
+</ul>
+<h4 id="revenus-et-historique">4.1.5. Revenus et historique</h4>
+<ul>
+<li>Graphique des recettes mensuelles sur la période.</li>
+<li>Historique de toutes les opérations (émission, versements, échange,
+sinistres).</li>
+<li>Attestations fiscales (2-NDFL) — auto-génération et
+téléchargement.</li>
+<li>Export de l’historique en PDF et Excel.</li>
+</ul>
+<h4 id="notifications">4.1.6. Notifications</h4>
+<ul>
+<li>Push-notifications pour les événements clés.</li>
+<li>Centre de notifications dans l’application.</li>
+<li>Intégration avec Gosuslugi pour la réception des notifications
+officielles.</li>
+</ul>
+<h4 id="profil-et-paramètres">4.1.7. Profil et paramètres</h4>
+<ul>
+<li>Gestion des coordonnées.</li>
+<li>Gestion de la sécurité (biométrie, PIN, authentification à deux
+facteurs).</li>
+<li>Gestion des abonnements aux notifications.</li>
+<li>Coordonnées de versement.</li>
+</ul>
+<h4 id="documents-et-support">4.1.8. Documents et support</h4>
+<ul>
+<li>Accès aux Règles du système d’information (article 6 de
+FZ-259).</li>
+<li>Accès à la documentation projet de la plateforme.</li>
+<li>Chat avec l’opérateur de support.</li>
+<li>FAQ.</li>
+</ul>
+<h3 id="exigences-de-fiabilité">4.2. Exigences de fiabilité</h3>
+<table>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disponibilité de l’application (en ligne)</td>
+<td>99,9 %</td>
+</tr>
+<tr>
+<td>Mode hors ligne (consultation du cache)</td>
+<td>oui</td>
+</tr>
+<tr>
+<td>Temps de récupération après défaillance</td>
+<td>≤ 5 secondes</td>
+</tr>
+<tr>
+<td>Intégrité des données</td>
+<td>sommes de contrôle GOST R 34.11-2012</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exigences-de-sécurité-de-linformation">4.3. Exigences de
+sécurité de l’information</h3>
+<ul>
+<li>Stockage local des données sensibles uniquement dans des stockages
+protégés : iOS Keychain, Android Keystore, Windows Credential
+Locker.</li>
+<li>Interaction réseau exclusivement par TLS avec emploi de certificats
+GOST (KriptoPro TLS).</li>
+<li>Protection contre la compromission : jailbreak/root detection,
+anti-debug, certificate pinning.</li>
+<li>Pas de stockage des vecteurs biométriques sur l’appareil —
+uniquement les identifiants pour la vérification via EBS.</li>
+<li>Conformité à la norme OWASP MASVS niveau L2 et supérieur.</li>
+<li>Conformité aux exigences du règlement de la Banque de Russie N°
+683-P, de l’Instruction N° 6635-U.</li>
+<li>Catégorie IIC — 1ʳᵉ (la plus élevée).</li>
+</ul>
+<h3 id="exigences-de-performance">4.4. Exigences de performance</h3>
+<table>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Temps de cold start</td>
+<td>≤ 2 secondes en 4G</td>
+</tr>
+<tr>
+<td>Temps de réponse de l’interface</td>
+<td>≤ 100 ms</td>
+</tr>
+<tr>
+<td>Taille de la distribution</td>
+<td>≤ 80 Mo</td>
+</tr>
+<tr>
+<td>Consommation mémoire vive</td>
+<td>≤ 300 Mo</td>
+</tr>
+<tr>
+<td>Consommation d’énergie en arrière-plan</td>
+<td>minimale</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exigences-relatives-à-linterface">4.5. Exigences relatives à
+l’interface</h3>
+<ul>
+<li>Conformité aux exigences WCAG 2.2 niveau AA (accessibilité).</li>
+<li>Prise en charge des thèmes : clair, sombre, doux pour consultation
+prolongée, contrasté pour les malvoyants.</li>
+<li>Prise en charge de quatre langues : russe (principal), anglais,
+français, arabe (avec balisage RTL).</li>
+<li>Prise en charge de la mise à l’échelle de la police.</li>
+<li>Prise en charge des technologies d’assistance vocale (VoiceOver,
+TalkBack, Narrator).</li>
+<li>Taille minimale de la zone tactile — 44 × 44 pixels.</li>
+</ul>
+<h3
+id="exigences-relatives-à-la-composition-et-aux-paramètres-des-moyens-techniques">4.6.
+Exigences relatives à la composition et aux paramètres des moyens
+techniques</h3>
+<h4 id="appareils-client">Appareils client</h4>
+<ul>
+<li>iOS : iPhone 8 et plus récents ; iPad 5ᵉ génération et plus
+récents.</li>
+<li>Android : appareils avec résolution d’écran à partir de 360 × 640
+pixels, mémoire vive à partir de 3 Go.</li>
+<li>Windows : appareils de bureau et tablettes avec résolution à partir
+de 1280 × 720 pixels.</li>
+<li>PWA : tout appareil prenant en charge le Service Worker (Chrome 70+,
+Safari 13+, Edge 80+, Firefox 70+).</li>
+</ul>
+<h4 id="exigences-réseau">Exigences réseau</h4>
+<ul>
+<li>Minimum : 4G LTE ou Wi-Fi 80 Mbit/s.</li>
+<li>Recommandé : 5G ou Wi-Fi 6.</li>
+</ul>
+<h3 id="exigences-de-compatibilité-informationnelle-et-logicielle">4.7.
+Exigences de compatibilité informationnelle et logicielle</h3>
+<ul>
+<li>Registre des logiciels russes (décret du Gouvernement N° 1236) —
+l’application est soumise à inscription.</li>
+<li>Inscription au catalogue d’applications RuStore.</li>
+<li>Possibilité d’installation via App Store / Google Play / Microsoft
+Store sous réserve d’approbations réglementaires.</li>
+<li>Intégration avec ESIA (décret du Gouvernement N° 584).</li>
+<li>Intégration avec le Système biométrique unifié (Règlement de la
+Banque de Russie N° 482-P).</li>
+</ul>
+<h3 id="exigences-de-marquage-et-demballage">4.8. Exigences de marquage
+et d’emballage</h3>
+<p>Sans objet (logiciel).</p>
+<h3 id="exigences-de-transport-et-de-stockage">4.9. Exigences de
+transport et de stockage</h3>
+<p>Sans objet.</p>
+<h2 id="exigences-relatives-à-la-documentation-logicielle">5. Exigences
+relatives à la documentation logicielle</h2>
+<p>La documentation comprend les documents suivants : - Cahier des
+charges (le présent document) ; - Description du programme (РСФСР.МП.02)
+; - Description de l’application (РСФСР.МП.03) ; - Manuel de
+l’utilisateur (РСФСР.МП.04) ; - Manuel d’installation et
+d’administration (РСФСР.МП.05) ; - Description de l’architecture
+(РСФСР.МП.06) ; - Description de l’API et des intégrations (РСФСР.МП.07)
+; - Modèle de données (РСФСР.МП.08) ; - Exigences relatives à
+l’environnement d’exploitation (РСФСР.МП.09) ; - Programme et
+méthodologie d’essais (РСФСР.МП.10) ; - Exigences de sécurité
+(РСФСР.МП.11) ; - Spécification du programme (РСФСР.МП.12) ; - Liste des
+documents d’exploitation (РСФСР.МП.13).</p>
+<h2 id="indicateurs-technico-économiques">6. Indicateurs
+technico-économiques</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Indicateur</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Délai de développement du MVP</td>
+<td>12 mois</td>
+</tr>
+<tr>
+<td>Délai de la release industrielle</td>
+<td>18 mois (en synchronie avec la plateforme)</td>
+</tr>
+<tr>
+<td>Coût de développement du client (3 plateformes)</td>
+<td>dans le CapEx de la plateforme de 850 M RUB</td>
+</tr>
+<tr>
+<td>Public cible</td>
+<td>personnes physiques et morales — propriétaires d’actifs</td>
+</tr>
+<tr>
+<td>Nombre attendu d’utilisateurs actifs à la 5ᵉ année</td>
+<td>jusqu’à 5 millions de personnes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="stades-et-étapes-de-développement">7. Stades et étapes de
+développement</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Étape</th>
+<th>Délai</th>
+<th>Résultats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Analyse et conception</td>
+<td>mois 1–3</td>
+<td>pack KD, prototypes</td>
+</tr>
+<tr>
+<td>Développement du noyau</td>
+<td>mois 4–9</td>
+<td>MVP iOS + Android (PWA déjà disponible)</td>
+</tr>
+<tr>
+<td>Développement du client Windows</td>
+<td>mois 7–12</td>
+<td>build de release</td>
+</tr>
+<tr>
+<td>Tests internes</td>
+<td>mois 10–14</td>
+<td>PV de mise en service interne</td>
+</tr>
+<tr>
+<td>Certification SZI par le FSTEC</td>
+<td>mois 12–16</td>
+<td>certificat</td>
+</tr>
+<tr>
+<td>Tests bêta</td>
+<td>mois 14–17</td>
+<td>PV de mise en service bêta</td>
+</tr>
+<tr>
+<td>Release</td>
+<td>mois 18</td>
+<td>publication dans RuStore, App Store, Google Play, Microsoft
+Store</td>
+</tr>
+</tbody>
+</table>
+<h2 id="procédure-de-contrôle-et-de-réception">8. Procédure de contrôle
+et de réception</h2>
+<p>La réception s’effectue conformément à GOST 19.301 « Programme et
+méthodologie d’essais ». Contrôle aux étapes : - tests alpha (internes)
+; - tests bêta (fermés, pool d’utilisateurs pilotes) ; - essais de
+réception (avec la participation du régulateur et du client) ; -
+exploitation industrielle.</p>
+<hr />
+<p><em>Le document est conforme aux exigences de GOST 19.201-78 « Cahier
+des charges pour le développement de logiciel. Contenu et ordre
+d’établissement ».</em></p>
+</article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

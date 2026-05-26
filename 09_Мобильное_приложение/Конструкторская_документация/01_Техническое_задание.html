@@ -1,0 +1,514 @@
+﻿<!doctype html>
+<html lang="ru" data-theme="daylight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Техническое задание · ЦП РСФСР</title>
+<meta name="theme-color" content="#0B2B5C">
+<link rel="stylesheet" href="../../_shared/brand.css">
+<style>
+/* Document-specific styles */
+body { padding-top: 80px; }
+.doc-wrap { max-width: 880px; margin: 0 auto; padding: 48px 24px 96px; }
+.doc-header {
+  padding-bottom: 24px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.doc-header .eyebrow { margin-bottom: 12px; }
+.doc-header h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--primary); margin-bottom: 12px; }
+.doc-header p { color: var(--fg-mute); font-size: .9375rem; margin: 0; }
+.doc-content h1, .doc-content h2, .doc-content h3, .doc-content h4 { color: var(--primary); margin-top: 2em; margin-bottom: .5em; }
+.doc-content h1 { font-size: 1.875rem; }
+.doc-content h2 { font-size: 1.5rem; padding-bottom: 6px; border-bottom: 1px solid var(--border-soft); }
+.doc-content h3 { font-size: 1.25rem; }
+.doc-content h4 { font-size: 1.0625rem; color: var(--fg); }
+.doc-content p { line-height: 1.7; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content ul, .doc-content ol { line-height: 1.7; padding-left: 1.5em; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content li { margin-bottom: .35em; }
+.doc-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 12px 20px;
+  margin: 1em 0;
+  background: var(--bg-soft);
+  border-radius: 0 8px 8px 0;
+  color: var(--fg-soft);
+}
+.doc-content code {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg-soft);
+  padding: 2px 6px; border-radius: 4px;
+  font-size: .875em; color: var(--primary);
+}
+.doc-content pre {
+  background: var(--bg-soft); padding: 16px; border-radius: 10px;
+  overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: .875rem;
+  border: 1px solid var(--border-soft); margin: 1em 0;
+}
+.doc-content table {
+  width: 100%; border-collapse: collapse; margin: 1.5em 0;
+  background: var(--card-bg); border: 1px solid var(--border-soft);
+  border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-1);
+}
+.doc-content table th {
+  background: var(--primary); color: var(--primary-on);
+  text-align: left; padding: 12px 16px; font-weight: 600;
+  font-size: .8125rem; letter-spacing: .04em; text-transform: uppercase;
+}
+.doc-content table td {
+  padding: 10px 16px; border-bottom: 1px solid var(--border-soft);
+  font-size: .9375rem; color: var(--fg-soft);
+}
+.doc-content table tr:last-child td { border-bottom: none; }
+.doc-content table tr:hover td { background: var(--bg-soft); }
+.doc-content hr {
+  border: none; height: 1px; background: var(--border-soft); margin: 2.5em 0;
+}
+.doc-content a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+.doc-content a:hover { color: var(--accent); }
+.doc-content strong { color: var(--fg); font-weight: 700; }
+
+.doc-actions {
+  display: flex; gap: 10px; margin-top: 32px; flex-wrap: wrap;
+}
+
+/* Floating top button */
+.totop {
+  position: fixed; bottom: 24px; right: 24px; z-index: 50;
+  background: var(--primary); color: var(--primary-on);
+  border: none; border-radius: 50%; width: 48px; height: 48px;
+  cursor: pointer; box-shadow: var(--shadow-3);
+  display: none; font-size: 1.25rem;
+  transition: transform .2s var(--ease);
+}
+.totop:hover { transform: translateY(-2px); }
+.totop.show { display: grid; place-items: center; }
+[dir="rtl"] .totop { right: auto; left: 24px; }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div class="scroll-progress"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="../../07_Презентации/Большая_презентация/index.html"><span class="brand-mark">Р</span><span data-i18n="brand.name">ЦП РСФСР</span></a>
+    <nav class="topbar-nav">
+      <a href="../../07_Презентации/Большая_презентация/index.html#about" data-i18n="nav.about">О платформе</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#hub" data-i18n="nav.hub">Документы</a>
+      <a href="../../08_Веб-сайт/HTML_основной/index.html">Сайт</a>
+      <a href="../../07_Презентации/Малая_презентация/index.html">Презентация</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#contacts" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+    <div class="topbar-actions">
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-i18n-btn="ru">RU</button>
+        <button class="tbtn" data-i18n-btn="en">EN</button>
+        <button class="tbtn" data-i18n-btn="fr">FR</button>
+        <button class="tbtn" data-i18n-btn="ar">عر</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-theme-btn="daylight" aria-label="Дневная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+        <button class="tbtn" data-theme-btn="midnight" aria-label="Тёмная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="tbtn" data-theme-btn="sepia">◐</button>
+        <button class="tbtn" data-theme-btn="contrast">A11Y</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn" data-font-action="dec">A−</button>
+        <button class="tbtn" data-font-action="reset">A</button>
+        <button class="tbtn" data-font-action="inc">A+</button>
+      </div>
+      <button class="tbtn tbtn-burger">≡</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="eyebrow">Конструкторская документация · ЦП РСФСР ·
+МП</span>
+      <h1>Техническое задание</h1>
+      <p>Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 · 19.12.2024 · ЦП РСФСР</p>
+    </header>
+    <article class="doc-content">
+<h1
+id="техническое-задание-на-разработку-мобильного-приложения">Техническое
+задание на разработку мобильного приложения</h1>
+<h2
+id="цп-рсфср-российский-сервис-финансирования-социального-развития">ЦП
+РСФСР — Российский Сервис Финансирования Социального Развития</h2>
+<p><strong>Условное обозначение:</strong> РСФСР.МП.01.ТЗ
+<strong>Стандарт:</strong> ГОСТ 19.201-78 <strong>Дата:</strong> 2025
+год <strong>Правообладатель:</strong> Кагиров Абдул-Хаким Ахмадович
+(Свидетельство о депонировании №4011265 от 19.12.2024)</p>
+<hr />
+<h2 id="введение">1. Введение</h2>
+<h3 id="наименование-программы">1.1. Наименование программы</h3>
+<p>Полное: «Цифровая Платформа РСФСР — мобильное приложение
+залогодателя». Условное обозначение: РСФСР.МП.</p>
+<h3 id="область-применения">1.2. Область применения</h3>
+<p>Мобильное приложение является клиентским ПО Цифровой Платформы РСФСР
+— front-end / агентской платформы выпуска цифровых финансовых активов
+(ЦФА) под залог имущества физических и юридических лиц через
+технологическое партнёрство с действующим оператором информационной
+системы по 779-П. В Stage 1 (pilot-light 2026–2028) финансирование
+размещения проводится через Фабрику проектного финансирования ВЭБ.РФ
+(ПП РФ № 158) и Федеральное казначейство (БК РФ) на национальные и
+инфраструктурные проекты Российской Федерации.</p>
+<h3 id="программа-предназначена-для">1.3. Программа предназначена
+для</h3>
+<ul>
+<li>регистрации и идентификации залогодателей через ЕСИА и ЕБС;</li>
+<li>подачи на залог имущества (недвижимости, транспорта, ИС, ценных
+бумаг);</li>
+<li>подписания смарт-контрактов выпуска ЦФА с использованием усиленной
+квалифицированной электронной подписи;</li>
+<li>управления портфелем ЦФА и получения дохода от размещения;</li>
+<li>получения уведомлений о ключевых событиях смарт-контракта (мена ЦФА,
+выплаты, страховые случаи).</li>
+</ul>
+<h2 id="основание-для-разработки">2. Основание для разработки</h2>
+<ul>
+<li>Концепция автора, депонированная под №4011265 от 19.12.2024.</li>
+<li>Федеральный закон №259-ФЗ от 31.07.2020 «О цифровых финансовых
+активах».</li>
+<li>Положение Банка России №779-П от 16.11.2021.</li>
+<li>Указ Президента Российской Федерации №166 от 30.03.2022
+(импортозамещение).</li>
+</ul>
+<h2 id="назначение-разработки">3. Назначение разработки</h2>
+<h3 id="функциональное-назначение">3.1. Функциональное назначение</h3>
+<p>Обеспечить мобильный доступ собственника актива ко всем функциям
+платформы ЦП РСФСР с уровнем доступности 99,99% и временем отклика
+бизнес-операций не более 200 мс (P95).</p>
+<h3 id="эксплуатационное-назначение">3.2. Эксплуатационное
+назначение</h3>
+<p>Эксплуатируется на устройствах под управлением: - iOS 15 и выше; -
+Android 9 (API 28) и выше; - Windows 10 (1809) и выше; - веб-браузерах с
+поддержкой Service Workers и WebAssembly (PWA-режим).</p>
+<h2 id="требования-к-программе">4. Требования к программе</h2>
+<h3 id="функциональные-требования">4.1. Функциональные требования</h3>
+<h4 id="идентификация-и-аутентификация">4.1.1. Идентификация и
+аутентификация</h4>
+<ul>
+<li>Авторизация через Единую систему идентификации и аутентификации
+(ЕСИА) по протоколу OpenID Connect.</li>
+<li>Авторизация через Единую биометрическую систему (Положение Банка
+России №482-П) — лицо и/или голос.</li>
+<li>Локальная аутентификация по биометрии устройства (Face ID, Touch ID,
+Windows Hello) или PIN-коду.</li>
+<li>Двухфакторная аутентификация для критичных операций (SMS-код +
+биометрия).</li>
+</ul>
+<h4 id="регистрация-залогодателя-kyc">4.1.2. Регистрация залогодателя
+(KYC)</h4>
+<ul>
+<li>Подгрузка персональных данных из подтверждённой учётной записи
+Госуслуг.</li>
+<li>Проверка по реестрам ПОД/ФТ (Федеральный закон №115-ФЗ).</li>
+<li>Подтверждение телефона и email.</li>
+<li>Привязка биометрии для подписания операций.</li>
+</ul>
+<h4 id="управление-активами">4.1.3. Управление активами</h4>
+<ul>
+<li>Подача актива на залог (4-шаговый wizard: тип → характеристики →
+документы → отправка на оценку).</li>
+<li>Автоматическая подгрузка характеристик из ЕГРН (Росреестр), реестра
+Роспатента, депозитарных систем.</li>
+<li>Просмотр списка собственных активов с фильтрацией.</li>
+<li>Карточка актива с историей операций, статусом обременения,
+страхованием.</li>
+</ul>
+<h4 id="выпуск-и-обслуживание-цфа">4.1.4. Выпуск и обслуживание ЦФА</h4>
+<ul>
+<li>Конструктор смарт-контракта (срок, целевое назначение, ставка
+вознаграждения).</li>
+<li>Подписание усиленной квалифицированной электронной подписью (ГОСТ Р
+34.10-2012).</li>
+<li>Подтверждение операции через SMS-код или биометрию ЕБС.</li>
+<li>Просмотр активных ЦФА, поступающих выплат, истории.</li>
+</ul>
+<h4 id="доходы-и-история">4.1.5. Доходы и история</h4>
+<ul>
+<li>График помесячных поступлений за период.</li>
+<li>История всех операций (выпуск, выплаты, мена, страховые
+события).</li>
+<li>Налоговые справки (2-НДФЛ) — автогенерация и скачивание.</li>
+<li>Экспорт истории в PDF и Excel.</li>
+</ul>
+<h4 id="уведомления">4.1.6. Уведомления</h4>
+<ul>
+<li>Push-уведомления о ключевых событиях.</li>
+<li>Центр уведомлений в приложении.</li>
+<li>Интеграция с Госуслугами для получения официальных уведомлений.</li>
+</ul>
+<h4 id="профиль-и-настройки">4.1.7. Профиль и настройки</h4>
+<ul>
+<li>Управление контактными данными.</li>
+<li>Управление безопасностью (биометрия, PIN, двухфакторная
+аутентификация).</li>
+<li>Управление подписками на уведомления.</li>
+<li>Реквизиты для выплат.</li>
+</ul>
+<h4 id="документы-и-поддержка">4.1.8. Документы и поддержка</h4>
+<ul>
+<li>Доступ к Правилам информационной системы (статья 6 №259-ФЗ).</li>
+<li>Доступ к проектной документации платформы.</li>
+<li>Чат с оператором поддержки.</li>
+<li>FAQ.</li>
+</ul>
+<h3 id="требования-к-надёжности">4.2. Требования к надёжности</h3>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Доступность приложения (онлайн)</td>
+<td>99,9%</td>
+</tr>
+<tr>
+<td>Оффлайн-режим (просмотр кеша)</td>
+<td>да</td>
+</tr>
+<tr>
+<td>Время восстановления после сбоя</td>
+<td>≤ 5 секунд</td>
+</tr>
+<tr>
+<td>Целостность данных</td>
+<td>контрольные суммы ГОСТ Р 34.11-2012</td>
+</tr>
+</tbody>
+</table>
+<h3 id="требования-к-информационной-безопасности">4.3. Требования к
+информационной безопасности</h3>
+<ul>
+<li>Локальное хранение чувствительных данных только в защищённых
+хранилищах: iOS Keychain, Android Keystore, Windows Credential
+Locker.</li>
+<li>Сетевое взаимодействие исключительно по TLS с применением
+сертификатов ГОСТ (КриптоПро TLS).</li>
+<li>Защита от компрометации: jailbreak/root detection, anti-debug,
+certificate pinning.</li>
+<li>Отсутствие хранения биометрических векторов на устройстве — только
+идентификаторы для верификации через ЕБС.</li>
+<li>Соответствие стандарту OWASP MASVS уровня L2 и выше.</li>
+<li>Соответствие требованиям Положения Банка России №683-П, Указания
+№6635-У.</li>
+<li>Категория КИИ — 1-я (наивысшая).</li>
+</ul>
+<h3 id="требования-к-производительности">4.4. Требования к
+производительности</h3>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Время холодного запуска (cold start)</td>
+<td>≤ 2 секунды на 4G</td>
+</tr>
+<tr>
+<td>Время отклика интерфейса</td>
+<td>≤ 100 мс</td>
+</tr>
+<tr>
+<td>Размер дистрибутива</td>
+<td>≤ 80 МБ</td>
+</tr>
+<tr>
+<td>Потребление оперативной памяти</td>
+<td>≤ 300 МБ</td>
+</tr>
+<tr>
+<td>Потребление энергии в фоновом режиме</td>
+<td>минимальное</td>
+</tr>
+</tbody>
+</table>
+<h3 id="требования-к-интерфейсу">4.5. Требования к интерфейсу</h3>
+<ul>
+<li>Соответствие требованиям WCAG 2.2 уровня AA (доступность).</li>
+<li>Поддержка темы оформления: светлая, тёмная, мягкая для длительного
+просмотра, контрастная для слабовидящих.</li>
+<li>Поддержка четырёх языков: русский (основной), английский,
+французский, арабский (с RTL-разметкой).</li>
+<li>Поддержка масштабирования шрифта.</li>
+<li>Поддержка голосовых вспомогательных технологий (VoiceOver, TalkBack,
+Narrator).</li>
+<li>Минимальный размер сенсорной зоны — 44 × 44 пикселя.</li>
+</ul>
+<h3 id="требования-к-составу-и-параметрам-технических-средств">4.6.
+Требования к составу и параметрам технических средств</h3>
+<h4 id="клиентские-устройства">Клиентские устройства</h4>
+<ul>
+<li>iOS: iPhone 8 и новее; iPad 5-го поколения и новее.</li>
+<li>Android: устройства с разрешением экрана от 360 × 640 пикселей,
+оперативной памятью от 3 ГБ.</li>
+<li>Windows: настольные и планшетные устройства с разрешением от 1280 ×
+720 пикселей.</li>
+<li>PWA: любые устройства с поддержкой Service Worker (Chrome 70+,
+Safari 13+, Edge 80+, Firefox 70+).</li>
+</ul>
+<h4 id="сетевые-требования">Сетевые требования</h4>
+<ul>
+<li>Минимально: 4G LTE или Wi-Fi 80 МБит/с.</li>
+<li>Рекомендуемо: 5G или Wi-Fi 6.</li>
+</ul>
+<h3 id="требования-к-информационной-и-программной-совместимости">4.7.
+Требования к информационной и программной совместимости</h3>
+<ul>
+<li>Реестр российского ПО (ПП РФ №1236) — приложение подлежит
+включению.</li>
+<li>Включение в каталог приложений RuStore.</li>
+<li>Возможность установки через App Store / Google Play / Microsoft
+Store при наличии регуляторных одобрений.</li>
+<li>Интеграция с ЕСИА (Постановление Правительства РФ №584).</li>
+<li>Интеграция с Единой биометрической системой (Положение Банка России
+№482-П).</li>
+</ul>
+<h3 id="требования-к-маркировке-и-упаковке">4.8. Требования к маркировке
+и упаковке</h3>
+<p>Не применимо (программное обеспечение).</p>
+<h3 id="требования-к-транспортированию-и-хранению">4.9. Требования к
+транспортированию и хранению</h3>
+<p>Не применимо.</p>
+<h2 id="требования-к-программной-документации">5. Требования к
+программной документации</h2>
+<p>В состав документации входят следующие документы: - ТЗ на разработку
+(настоящий документ); - Описание программы (РСФСР.МП.02); - Описание
+применения (РСФСР.МП.03); - Руководство пользователя (РСФСР.МП.04); -
+Руководство по установке и администрированию (РСФСР.МП.05); - Описание
+архитектуры (РСФСР.МП.06); - Описание API и интеграций (РСФСР.МП.07); -
+Модель данных (РСФСР.МП.08); - Требования к среде эксплуатации
+(РСФСР.МП.09); - Программа и методика испытаний (РСФСР.МП.10); -
+Требования безопасности (РСФСР.МП.11); - Спецификация программы
+(РСФСР.МП.12); - Ведомость эксплуатационных документов
+(РСФСР.МП.13).</p>
+<h2 id="технико-экономические-показатели">6. Технико-экономические
+показатели</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Показатель</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Срок разработки MVP</td>
+<td>12 месяцев</td>
+</tr>
+<tr>
+<td>Срок промышленного релиза</td>
+<td>18 месяцев (синхронно с платформой)</td>
+</tr>
+<tr>
+<td>Стоимость разработки клиента (3 платформы)</td>
+<td>в составе CapEx платформы 850 млн ₽</td>
+</tr>
+<tr>
+<td>Целевая аудитория</td>
+<td>физические и юридические лица — собственники активов</td>
+</tr>
+<tr>
+<td>Ожидаемое количество активных пользователей к году 5</td>
+<td>до 5 млн человек</td>
+</tr>
+</tbody>
+</table>
+<h2 id="стадии-и-этапы-разработки">7. Стадии и этапы разработки</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Этап</th>
+<th>Срок</th>
+<th>Результаты</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Аналитика и проектирование</td>
+<td>мес. 1–3</td>
+<td>пакет КД, прототипы</td>
+</tr>
+<tr>
+<td>Разработка ядра</td>
+<td>мес. 4–9</td>
+<td>MVP iOS + Android (PWA уже доступна)</td>
+</tr>
+<tr>
+<td>Разработка Windows-клиента</td>
+<td>мес. 7–12</td>
+<td>релизная сборка</td>
+</tr>
+<tr>
+<td>Внутреннее тестирование</td>
+<td>мес. 10–14</td>
+<td>акт ВВ</td>
+</tr>
+<tr>
+<td>Сертификация СЗИ ФСТЭК</td>
+<td>мес. 12–16</td>
+<td>сертификат</td>
+</tr>
+<tr>
+<td>Бета-тестирование</td>
+<td>мес. 14–17</td>
+<td>акт БВ</td>
+</tr>
+<tr>
+<td>Релиз</td>
+<td>мес. 18</td>
+<td>публикация в RuStore, App Store, Google Play, Microsoft Store</td>
+</tr>
+</tbody>
+</table>
+<h2 id="порядок-контроля-и-приёмки">8. Порядок контроля и приёмки</h2>
+<p>Приёмка осуществляется в соответствии с ГОСТ 19.301 «Программа и
+методика испытаний». Контроль на этапах: - альфа-тестирование
+(внутреннее); - бета-тестирование (закрытое, пул пилотных
+пользователей); - приёмочные испытания (с участием регулятора и
+заказчика); - промышленная эксплуатация.</p>
+<hr />
+<p><em>Документ соответствует требованиям ГОСТ 19.201-78 «Техническое
+задание на разработку программного обеспечения. Содержание и порядок
+составления».</em></p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../07_Презентации/Большая_презентация/index.html#hub">К хабу документов</a>
+      <a class="btn btn--ghost" href="../../07_Презентации/Большая_презентация/index.html">Большая презентация</a>
+    </div>
+  </div>
+</main>
+
+<button class="totop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Наверх">↑</button>
+
+<script src="../../_shared/i18n.js"></script>
+<script src="../../_shared/app.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const t = document.querySelector('.totop');
+  if (t) t.classList.toggle('show', window.scrollY > 600);
+});
+</script>
+</body>
+</html>

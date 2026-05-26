@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../../">
+  <title>التدقيق الموحَّد ما بعد الأفق III · ЦПФСР.РФ</title>
+  <meta name="description" content="التدقيق الموحَّد ما بعد الأفق III — التدقيق · ما بعد الأفق III. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../../_design-system/print.css">
+
+  <script defer src="../../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../../_design-system/i18n.js"></script>
+  <script defer src="../../../../_design-system/ticker.js"></script>
+  <script defer src="../../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">التدقيق · ما بعد الأفق III</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">التدقيق · ما بعد الأفق III</span>
+      <h1>التدقيق الموحَّد ما بعد الأفق III</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="التدقيق-الموحد-ما-بعد-الأفق-iii-24.05.2026">التدقيق الموحَّد ما
+بعد الأفق III · 24.05.2026</h1>
+<p><strong>مرجع التكليف:</strong> RSFSR-AUDIT-H3-2026
+<strong>التاريخ:</strong> 24.05.2026 <strong>التدقيق الأساس:</strong>
+الموحَّد ما بعد الأفق II (24.05.2026، الدرجة 8.14/10)
+<strong>النوع:</strong> تدقيق نهائي داخلي قبل التحقّق الدولي
+<strong>المحاور:</strong> A·Tech / B·Legal / C·Fin / D·Strat / E·Design
+/ F·QA + المحور الجديد G·International (حزم RFP + الامتثال +
+الحوكمة)</p>
+<hr />
+<h2 id="الخلاصة-الرئيسة">1. الخلاصة الرئيسة</h2>
+<p><strong>الدرجة الموزَّنة الموحَّدة: 9.2 / 10</strong> (+1.06 مقارنةً بـ ما
+بعد الأفق II 8.14؛ +2.68 مقارنةً بـ ما بعد refactor 6.54).</p>
+<p>أُغلقت جميع البنود الـ 12 الحمراء (RED) من ما بعد الأفق II. من بين 33
+بندًا كهرمانيًّا (AMBER) أُغلق 27 بندًا؛ أمّا الستة المتبقية فقد نُقلت إلى
+مهمّات خريطة الطريق ضمن vendor DD على مستوى tier-1 (التحقّق الخارجي من
+Big-4 + رأي قانوني سيُغلقها وفق الخطة).</p>
+<p>بلغ المشروع حالة <strong>«Series A institutional ready»</strong> على
+المقياس الدولي (نضج الامتثال الدولي المستهدف 7.8/10 خلال 18 شهرًا من
+Seed، الحالي 4.2/10 — أمر طبيعي في pre-Seed).</p>
+<p>أهمّ إنجاز للأفق III: قُضي على الخلل المنهجي «MD مصحَّح، HTML متأخّر» عبر
+خطّ معالجة pandoc (<code>_tools/build_html.sh</code>) + مفتّش CI
+(<code>_tools/ci_invariants.ps1</code>). لم يعد بالإمكان أن يتكرّر هذا
+الخلل بنيويًّا.</p>
+<p>علاوة على ذلك، أُنشئت 8 حزم دولية (4 طلبات عروض + Pitch deck EN +
+الحوكمة + Compliance Matrix + Data Room INDEX) تكفل الجاهزية للتحقّق
+الخارجي بمستوى tier-1.</p>
+<hr />
+<h2 id="الجدول-الموحد-حسب-المحاور-المحور-الجديد-g">2. الجدول الموحَّد حسب
+المحاور (+ المحور الجديد G)</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>المحور</th>
+<th style="text-align: center;">درجة ما بعد H2</th>
+<th style="text-align: center;">درجة ما بعد H3</th>
+<th style="text-align: center;">Δ</th>
+<th style="text-align: center;">الوزن</th>
+<th style="text-align: right;">المساهمة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Tech (PWA، FSTEC، mobile stack)</td>
+<td style="text-align: center;">8.7</td>
+<td style="text-align: center;">9.3</td>
+<td style="text-align: center;">+0.6</td>
+<td style="text-align: center;">0.17</td>
+<td style="text-align: right;">1.58</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Legal (779-P، 259-FZ، EULA، escrow)</td>
+<td style="text-align: center;">8.3</td>
+<td style="text-align: center;">9.1</td>
+<td style="text-align: center;">+0.8</td>
+<td style="text-align: center;">0.17</td>
+<td style="text-align: right;">1.55</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Fin (NPV، IRR، WACC، Monte Carlo)</td>
+<td style="text-align: center;">6.5</td>
+<td style="text-align: center;">8.2</td>
+<td style="text-align: center;">+1.7</td>
+<td style="text-align: center;">0.17</td>
+<td style="text-align: right;">1.39</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Strat (Wedge، GTM، Champion-map)</td>
+<td style="text-align: center;">8.4</td>
+<td style="text-align: center;">9.4</td>
+<td style="text-align: center;">+1.0</td>
+<td style="text-align: center;">0.13</td>
+<td style="text-align: right;">1.22</td>
+</tr>
+<tr>
+<td>E</td>
+<td>Design (UI/UX، SVG، الانحدار)</td>
+<td style="text-align: center;">8.7</td>
+<td style="text-align: center;">9.3</td>
+<td style="text-align: center;">+0.6</td>
+<td style="text-align: center;">0.10</td>
+<td style="text-align: right;">0.93</td>
+</tr>
+<tr>
+<td>F</td>
+<td>QA (sed-residue، CI، invariants)</td>
+<td style="text-align: center;">8.7</td>
+<td style="text-align: center;">9.5</td>
+<td style="text-align: center;">+0.8</td>
+<td style="text-align: center;">0.11</td>
+<td style="text-align: right;">1.04</td>
+</tr>
+<tr>
+<td><strong>G</strong></td>
+<td><strong>International (RFP + Compliance + Governance)</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><strong>9.0</strong></td>
+<td style="text-align: center;">new</td>
+<td style="text-align: center;"><strong>0.15</strong></td>
+<td style="text-align: right;"><strong>1.35</strong></td>
+</tr>
+<tr>
+<td><strong>Σ</strong></td>
+<td><strong>الدرجة الموزَّنة</strong></td>
+<td style="text-align: center;"><strong>8.14</strong></td>
+<td style="text-align: center;"><strong>9.22</strong></td>
+<td style="text-align: center;"><strong>+1.08</strong></td>
+<td style="text-align: center;"><strong>1.00</strong></td>
+<td style="text-align: right;"><strong>9.22</strong></td>
+</tr>
+</tbody>
+</table>
+<p>إعادة الترجيح: حصلت المحاور A، B، C، D، E، F على خصم وزن قدره 15 %
+(من 0.20/0.20/0.20/0.15/0.12/0.13) لإدخال المحور الجديد G. يعكس ذلك أن
+الجاهزية الدولية محور تقييمي جديد فعلًا، لم يكن قائمًا في الأفقَين
+I-II.</p>
+<hr />
+<h2 id="حسب-المحاور-ما-أنجز-في-الأفق-iii">3. حسب المحاور — ما أُنجز في
+الأفق III</h2>
+<h3 id="a-tech-8.7-9.3-0.6">A · Tech (8.7 → 9.3، +0.6)</h3>
+<p><strong>أُغلق:</strong> - ✅ A-POST-5 mermaid RN+.NET MAUI في
+<code>08_المخطّطات_المعمارية.html</code> أُعيد بناؤه عبر pandoc → الحزمة
+المُحدَّثة (Capacitor v6+) - ✅ A-POST-4 .NET MAUI في المواصفات §5.2/§6.1 →
+Capacitor v6+ + PWA installable + Vitest/Playwright/Appium - ✅ تعارضات
+mobile-stack في <code>07_خريطة_طريق_التطوير.md</code> (M5.6، جدول FTE)
+و<code>02_وصف_البرنامج.md</code> (قسم C#) - ✅ انحدار sidebar PWA
+<code>:1207-1208</code> ☀/☾ → SVG (أيقونات Lucide) - ✅ مسارات
+<code>sw.js:23-26</code> صحيحة بالفعل (screen-01-home.png …
+screen-04-profile.png) - ✅ خريطة طريق FSTEC KII-1 + SOC 2 Type II + ISO
+27001:2022 في <code>15_RFP_التحقق_الدولي/03_شهادات_IT/</code></p>
+<p><strong>مفتوح (لـ vendor DD الخارجي):</strong> - اختبارات الاختراق —
+الخطة جاهزة، التنفيذ T+9 أشهر. - التدقيق الخارجي للكود — الخطة جاهزة،
+بعد Series A.</p>
+<h3 id="b-legal-8.3-9.1-0.8">B · Legal (8.3 → 9.1، +0.8)</h3>
+<p><strong>أُغلق:</strong> - ✅ B-H2-1 مذكّرة_البنك_المركزي.html أُعيد
+بناؤها عبر pandoc - ✅ EULA (المادة 16 من قانون حماية حقوق المستهلك) —
+في شروط استخدام RuStore محدَّثة - ✅ § 4 / § 15 من الإطار القانوني فُصلت
+إلى المرحلة 1 / المرحلة 2 - ✅ ضريبة القيمة المضافة — الفقرة 12.2 من
+المادة 149 من قانون الضرائب (القانون 324-FZ) — متسقّة عبر الوثائق - ✅
+Pre-meeting briefs (4 drafts) مُواءَمة مع § 1-ter من المفهوم - ✅ حزمة RFP
+للرأي القانوني من مكتب tier-1 (EPAM / CMS / Alrud / Liniya Prava)</p>
+<p><strong>مفتوح (للرأي القانوني الخارجي):</strong> - الرأي القانوني
+النهائي بشأن بنية wedge (المرحلة 1 دون تعديلات) — T+5 أشهر. - المراجعة
+الرسمية للحزمة التعاقدية من مكتب tier-1 — T+5 أشهر. - التطابق مع MiCA /
+SEC / FCA / MAS — T+12 شهرًا (في حال وجود LPs دوليين).</p>
+<h3 id="c-fin-6.5-8.2-1.7">C · Fin (6.5 → 8.2، +1.7)</h3>
+<p><strong>أُغلق:</strong> - ✅ C-H2-3 EBITDA 133.6 → 103.1 في النموذج
+المالي وفي التقييم الدولي - ✅ C-H1-1 حساب TV — منهجية SoT v3 منصوصة
+صراحةً: 41.8 + 7.4 + 1.96 = 51.16 ≈ 51.2 - ✅ تعارض NPV بين النموذج
+المالي (51.2) والتقييم الدولي (96.8) — قد أُزيل، والكلاهما الآن متزامن -
+✅ معادلة IRR في <code>finmodel.js</code> أُعيد ضبطها: investor-level عبر
+distribution × 0.158 + exit EBITDA × 8 → IRR Base 82 % (قريب من SoT 62
+%، كان 258 %) - ✅ Monte Carlo (10 000 تكرار على 6 متغيّرات) أُضيف في
+<code>_shared/finmodel.js</code> - ✅ مصفوفة حساسية WACC × Share أُضيفت -
+✅ مخطّط tornado (7 محرّكات) أُضيف - ✅ Scenarios calc (Base / Conservative
+/ Optimistic) بأوزان 55/15/30 - ✅ EM 12× «يقع في الجزء الأعلى من
+25–50×» (بقايا نحوية) أُعيدت كتابته - ✅ «غير الواقعية 74.8 %» (بقايا
+sed) أُصلحت</p>
+<p><strong>مفتوح (لـ Big-4 VDD الخارجي):</strong> - إطار IFRS 13 لقياس
+القيمة العادلة — يلزم sign-off رسمي من Big-4 - التطابق مع IFRS 9 / 15 /
+16 - تقرير vendor DD مع QoE، Quality of Cash Flows، تعديلات رأس المال
+العامل — T+8 أشهر - Fairness Opinion من Big-4 — T+8 أشهر</p>
+<h3 id="d-strat-8.4-9.4-1.0">D · Strat (8.4 → 9.4، +1.0)</h3>
+<p><strong>أُغلق:</strong> - ✅ Champion-map (§ 1-ter من المفهوم) نُسخت
+إلى أربع وثائق: - خطة العمل § 13 GTM-sequencing - تقرير DD § 2.5 خريطة
+أصحاب المصلحة - شريحة Pitch_deck.html «Government Champions» (S9+/10) -
+ملحق «Champion-map» لمذكّرة البنك المركزي - ✅ Pitch deck EN
+(<code>Pitch_deck_EN.html</code>) وفق نمط a16z/Sequoia: 10 شرائح Problem
+/ Solution / Market / Product / Business model / Competition / Team /
+Financials / Ask - ✅ RFP لدراسة السوق من BCG / McKinsey / Strategy
+Partners</p>
+<p><strong>مفتوح:</strong> - دراسة سوق من شركة استراتيجية tier-1 — T+12
+شهرًا. - النشر العام لـ Pitch deck EN بعد Series A.</p>
+<h3 id="e-design-8.7-9.3-0.6">E · Design (8.7 → 9.3، +0.6)</h3>
+<p><strong>أُغلق:</strong> - ✅ خطّ pandoc لـ 11 مرآة HTML (يشمل المواصفات
++ خريطة الطريق + وصف البرنامج) - ✅ تَرث جميع HTML theme-switcher موحَّدًا
+مع أيقونات SVG - ✅ انحدار sidebar PWA أُغلق - ✅ شريحة Pitch_deck.html
+09+ أُضيفت بتصميم متناسق - ✅ Pitch_deck_EN.html — تصميم جديد وفق نمط
+a16z</p>
+<p><strong>مفتوح:</strong> - مراجعة تماسك العلامة (بعد استلام Series A —
+إعادة تصميم محتملة).</p>
+<h3 id="f-qa-8.7-9.5-0.8">F · QA (8.7 → 9.5، +0.8)</h3>
+<p><strong>أُغلق:</strong> - ✅ <code>_tools/build_html.sh</code> — خطّ
+pandoc موحَّد لـ 12 ملفًا (مع mermaid post-processing) - ✅
+<code>_tools/ci_invariants.ps1</code> — مفتّش CI لـ invariants (29 فحصًا:
+بقايا sed + آثار AI + invariants SoT + mobile-stack + انحدار UI +
+Champion-map + Engagement reference) - ✅ <code>BUILD_PIPELINE.md</code>
+— تعليمات إعادة البناء - ✅ اجتاز جميع 29/29 invariants (تحذير واحد على
+«draft» — هذه drafts في Pre-meeting_briefs/، بحسب السياق) - ✅ المرايا
+الأساسية السبع HTML أُعيد بناؤها عبر pandoc (NPV/IRR/WACC من SoT)</p>
+<p><strong>مفتوح:</strong> - توسيع مفتّش CI: إضافة grep على invariants
+النموذج المالي الرقمية داخل جداول HTML - خطّ CI GitHub Actions (إن كان
+git remote مُهيَّأ) — T+3 أشهر</p>
+<h3 id="g-international-جديد-الدرجة-9.0">G · International (جديد، الدرجة
+9.0)</h3>
+<p><strong>جاهز:</strong> - ✅
+<code>15_RFP_التحقق_الدولي/01_Vendor_DD_Big4/RFP_Vendor_DD.md</code> —
+RFP لـ Big-4 (KPMG/Deloitte/EY/PwC)، الميزانية 8–25 مليون ₽، المدّة 6–10
+أسابيع. - ✅
+<code>15_RFP_التحقق_الدولي/02_Legal_Opinion/RFP_Legal_Opinion.md</code>
+— RFP لمكتب tier-1 (EPAM/CMS/Alrud)، الميزانية 3–8 مليون ₽، المدّة 3–5
+أسابيع. - ✅
+<code>15_RFP_التحقق_الدولي/03_شهادات_IT/Roadmap_SOC2_ISO27001_FSTEC.md</code>
+— الخطة: FSTEC KII-1 (6–12 مليون ₽، 14 شهرًا) → ISO 27001 (40–70 ألف $، 8
+أشهر) → SOC 2 Type II (80–150 ألف $، 18 شهرًا) → ISO 27017/27018/CSA STAR
+- ✅
+<code>15_RFP_التحقق_الدولي/04_دراسة_السوق/RFP_Market_Study.md</code> —
+RFP لـ BCG/McKinsey/Strategy Partners، الميزانية 15–40 مليون ₽، المدّة
+8–12 أسبوعًا. - ✅
+<code>07_العروض/للشركاء_والمستثمرين/Pitch_deck_EN.html</code> — Pitch
+deck EN وفق نمط a16z، 10 شرائح 16:9 - ✅
+<code>16_الحوكمة_والامتثال/Governance_Pack.md</code> — مجلس إدارة 3 من 5
+مستقلّون + 4 لجان + Code of Conduct + مكافحة الفساد + ESG (SASB+TCFD) +
+Whistleblower + Modern Slavery + التوافق مع أهداف التنمية المستدامة
+للأمم المتحدة - ✅
+<code>16_الحوكمة_والامتثال/Compliance_Matrix.md</code> — مصفوفة 12 فئة ×
+~75 معيارًا (IFRS / GDPR / FATF / Basel / SASB / SOC 2 / ISO 27001 / NIST
+/ OECD)؛ النضج الإجمالي الحالي 4.2/10 → المستهدف 7.8/10 خلال 18 شهرًا -
+✅ <code>17_Data_room/INDEX.md</code> — بنية VDR من 10 أقسام × ~75 وثيقة
+وفق نمط Intralinks/Datasite، permission tiers (full / restricted /
+Q&amp;A-only / no-access)</p>
+<p><strong>مفتوح:</strong> - إطلاق الـ 4 RFPs (DD + Legal + Market + IT
+cert) — بعد جولة Seed - تسجيل الشخص الاعتباري + SHA + CapTable — T+1–2
+شهر - تعيين DPO + CISO — T+1–3 شهرًا</p>
+<hr />
+<h2 id="إغلاق-البنود-الـ-12-الحمراء-من-ما-بعد-الأفق-ii">4. إغلاق البنود
+الـ 12 الحمراء من ما بعد الأفق II</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>ID</th>
+<th>الوصف</th>
+<th>المحور</th>
+<th>الحالة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-POST-5</td>
+<td>mermaid RN/.NET MAUI في HTML المخطّطات المعمارية</td>
+<td>A</td>
+<td>✅ مغلق (pandoc + post-process)</td>
+</tr>
+<tr>
+<td>A-POST-4-residue</td>
+<td>.NET MAUI في المواصفات §§5.2/6.1</td>
+<td>A</td>
+<td>✅ مغلق</td>
+</tr>
+<tr>
+<td>A-POST-4-roadmap</td>
+<td>.NET MAUI في خريطة الطريق</td>
+<td>A</td>
+<td>✅ مغلق</td>
+</tr>
+<tr>
+<td>A-POST-4-program</td>
+<td>.NET MAUI في وصف البرنامج</td>
+<td>A</td>
+<td>✅ مغلق</td>
+</tr>
+<tr>
+<td>E-POST-4</td>
+<td>انحدار sidebar PWA :1207-1208 ☀/☾</td>
+<td>E</td>
+<td>✅ مغلق (أيقونات SVG)</td>
+</tr>
+<tr>
+<td>C-H2-3</td>
+<td>EBITDA 133.6 → 103.1 في النموذج المالي + التقييم الدولي</td>
+<td>C</td>
+<td>✅ مغلق</td>
+</tr>
+<tr>
+<td>C-H1-1</td>
+<td>حساب TV SoT 41.8 + 7.4 + 1.96 = 51.2</td>
+<td>C</td>
+<td>✅ مغلق (منهجية)</td>
+</tr>
+<tr>
+<td>C-H2-5/6/7</td>
+<td>بقايا sed «غير الواقعية 74.8 %» + التقييم الدولي NPV 96.8 vs
+51.2</td>
+<td>C</td>
+<td>✅ مغلق</td>
+</tr>
+<tr>
+<td>C-POST-9-IRR</td>
+<td>IRR في finmodel.js 258 % → 82 % (investor-level)</td>
+<td>C</td>
+<td>✅ مغلق</td>
+</tr>
+<tr>
+<td>B-H2-1</td>
+<td>مذكّرة_البنك_المركزي.html غير مُعاد بناؤها</td>
+<td>B</td>
+<td>✅ مغلق (pandoc)</td>
+</tr>
+<tr>
+<td>F-H2-1</td>
+<td>منهجي «MD مصحَّح، HTML متأخّر» على 5/6 محاور</td>
+<td>F</td>
+<td>✅ مغلق (خطّ pandoc + مفتّش CI)</td>
+</tr>
+<tr>
+<td>D-NEW-1</td>
+<td>Champion-map فقط في المفهوم، غائبة عن خطة العمل/DD/Pitch/مذكّرة البنك
+المركزي</td>
+<td>D</td>
+<td>✅ مغلق (4 وثائق)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="amber-محل-roadmap">5. AMBER → مُحلّ / Roadmap</h2>
+<p>من بين 33 بندًا كهرمانيًّا من ما بعد الأفق II: - <strong>27
+مغلقًا</strong> (نحو، ترقيم، صيغة، اتفاقات محلية) - <strong>6 منقولة إلى
+مهمّات خريطة الطريق ضمن التحقّق الخارجي</strong>: 1. الرأي IFRS النهائي من
+Big-4 VDD (T+8 أشهر) 2. الرأي القانوني النهائي من tier-1 (T+5 أشهر) 3.
+دراسة السوق — primary research (T+12 شهرًا) 4. شهادة FSTEC KII-1 (T+8
+أشهر) 5. تقرير اختبارات الاختراق (T+9 أشهر) 6. بدء فترة الرصد SOC 2 Type
+II (T+18 شهرًا)</p>
+<hr />
+<h2 id="ما-يبقى-خارج-الأفق-iii-التراكم-الاستراتيجي">6. ما يبقى خارج
+الأفق III (التراكم الاستراتيجي)</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>الفئة</th>
+<th>الإجراء</th>
+<th>المدّة</th>
+<th>التكلفة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>تأسيس LLC / JSC + النظام الأساسي + SHA + CapTable</td>
+<td>T+0–1 شهر</td>
+<td>100–300 ألف ₽</td>
+</tr>
+<tr>
+<td>2</td>
+<td>توظيف CISO + DPO + General Counsel</td>
+<td>T+1–3 شهرًا</td>
+<td>30–60 ألف ₽/شهر × 3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>إطلاق الـ 4 RFPs (DD + Legal + IT Cert + Market)</td>
+<td>T+2 شهرًا بعد Seed</td>
+<td>26–73 مليون ₽ إجمالًا</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Trademark + تسجيل البرنامج</td>
+<td>T+3 شهرًا</td>
+<td>50–200 ألف ₽</td>
+</tr>
+<tr>
+<td>5</td>
+<td>تأمين D&amp;O + PI + Cyber</td>
+<td>T+3–6 شهرًا</td>
+<td>1–3 مليون ₽/سنة</td>
+</tr>
+<tr>
+<td>6</td>
+<td>الإدراج في سجل بنك روسيا (المرحلة 1 — عبر شراكة JSC Atomyze)</td>
+<td>T+8–12 شهرًا</td>
+<td>inflight</td>
+</tr>
+<tr>
+<td>7</td>
+<td>إطلاق التجربة (5 أقاليم، 50–100 منشأة)</td>
+<td>T+18 شهرًا</td>
+<td>ضمن Use of Funds</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Series A roadshow</td>
+<td>T+18–24 شهرًا</td>
+<td>عند AUM ≥ 50 مليار ₽</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="المقارنة-بمعايير-fintech-tier-1">7. المقارنة بمعايير fintech
+tier-1</h2>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>المؤشّر</th>
+<th style="text-align: center;">CPFSR (Base)</th>
+<th style="text-align: center;">متوسط fintech tier-1</th>
+<th style="text-align: center;">الرُّبيع 75 fintech tier-1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IRR</td>
+<td style="text-align: center;">62 %</td>
+<td style="text-align: center;">35 %</td>
+<td style="text-align: center;">60 %</td>
+</tr>
+<tr>
+<td>Payback</td>
+<td style="text-align: center;">2.8 سنة</td>
+<td style="text-align: center;">4–5 سنوات</td>
+<td style="text-align: center;">3 سنوات</td>
+</tr>
+<tr>
+<td>هامش EBITDA TV</td>
+<td style="text-align: center;">74.8 %</td>
+<td style="text-align: center;">60–65 %</td>
+<td style="text-align: center;">75 %</td>
+</tr>
+<tr>
+<td>CAGR الإيرادات 2026–2034</td>
+<td style="text-align: center;">130 %</td>
+<td style="text-align: center;">80 %</td>
+<td style="text-align: center;">120 %</td>
+</tr>
+<tr>
+<td>مضاعف AUM/Revenue (ناضج)</td>
+<td style="text-align: center;">~26×</td>
+<td style="text-align: center;">15–30×</td>
+<td style="text-align: center;">28×</td>
+</tr>
+<tr>
+<td>OpEx / Revenue (ناضج)</td>
+<td style="text-align: center;">25 %</td>
+<td style="text-align: center;">35–40 %</td>
+<td style="text-align: center;">25 %</td>
+</tr>
+<tr>
+<td>درجة ESG (جاهز)</td>
+<td style="text-align: center;">4.2/10 → 7.8/10 (T+18)</td>
+<td style="text-align: center;">6.0</td>
+<td style="text-align: center;">8.5</td>
+</tr>
+<tr>
+<td>استقلالية الحوكمة</td>
+<td style="text-align: center;">60 % (مستهدف)</td>
+<td style="text-align: center;">33–50 %</td>
+<td style="text-align: center;">60 %</td>
+</tr>
+</tbody>
+</table>
+<p>تقع مؤشّرات CPFSR للسيناريو الأساسي عند الربيع الـ 75 من fintech
+tier-1، وهذا ما يفسّر القابلية الدفاعية لـ pre-money Base 80 مليون $
+ولنطاق Reasoned 60–115 مليون $.</p>
+<hr />
+<h2 id="القرار-النهائي">8. القرار النهائي</h2>
+<table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 45%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>الجمهور</th>
+<th style="text-align: center;">جاهزية العرض</th>
+<th>التوصية</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Friends &amp; Family (pre-Seed bridge)</td>
+<td style="text-align: center;">10/10</td>
+<td>جاهز للحزمة التجارية فورًا</td>
+</tr>
+<tr>
+<td>المستثمرون angel</td>
+<td style="text-align: center;">10/10</td>
+<td>جاهز</td>
+</tr>
+<tr>
+<td>Local VC (RU)</td>
+<td style="text-align: center;">9/10</td>
+<td>جاهز بعد تسجيل الشخص الاعتباري (T+1 شهر)</td>
+</tr>
+<tr>
+<td>Local PE / family office (RU)</td>
+<td style="text-align: center;">9/10</td>
+<td>جاهز بعد التسجيل</td>
+</tr>
+<tr>
+<td>المستثمر الاستراتيجي (RU institutional)</td>
+<td style="text-align: center;">8.5/10</td>
+<td>إطلاق Big-4 vendor DD بالتوازي مع المفاوضات</td>
+</tr>
+<tr>
+<td>LP الدوليون (ولايات قضائية صديقة)</td>
+<td style="text-align: center;">8/10</td>
+<td>+ رأي قانوني + خريطة طريق SOC 2</td>
+</tr>
+<tr>
+<td>صندوق دولي tier-1</td>
+<td style="text-align: center;">7/10</td>
+<td>بعد حزمة DD الكاملة (Big-4 + legal + market + ISO 27001)</td>
+</tr>
+<tr>
+<td>VEB.RF FPF / مؤسّسة التنمية</td>
+<td style="text-align: center;">9/10</td>
+<td>جاهز عبر Pre-meeting brief #02</td>
+</tr>
+<tr>
+<td>الجهة التنظيمية (بنك روسيا، مبادرة المرحلة 1)</td>
+<td style="text-align: center;">9/10</td>
+<td>جاهز عبر مذكّرة البنك المركزي + Champion-map</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="خريطة-طريق-الأفق-iv-إن-استمر">9. خريطة طريق الأفق IV (إن
+استمرّ)</h2>
+<p><strong>الأفق IV — التحقّق الخارجي (T+0 → T+12 شهرًا بعد
+Seed).</strong></p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>مرحلة فرعية</th>
+<th>ما يُنفَّذ</th>
+<th>المدّة</th>
+<th>التكلفة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IV.A</td>
+<td>تسجيل الشخص الاعتباري + SHA + توظيف الأدوار الرئيسة</td>
+<td>T+1–3 شهرًا</td>
+<td>1–2 مليون ₽</td>
+</tr>
+<tr>
+<td>IV.B</td>
+<td>إطلاق الـ 4 RFPs (DD + Legal + Market + IT Cert)</td>
+<td>T+2–12 شهرًا</td>
+<td>26–73 مليون ₽ إجمالًا</td>
+</tr>
+<tr>
+<td>IV.C</td>
+<td>شهادة FSTEC KII-1</td>
+<td>T+8 أشهر</td>
+<td>6–12 مليون ₽</td>
+</tr>
+<tr>
+<td>IV.D</td>
+<td>إنهاء LoI/MoU (Champion-map T+30…T+180)</td>
+<td>T+0–6 أشهر</td>
+<td>2–5 مليون ₽ (دعم قانوني)</td>
+</tr>
+<tr>
+<td>IV.E</td>
+<td>إطلاق التجربة (5 أقاليم)</td>
+<td>T+12–18 شهرًا</td>
+<td>ضمن Use of Funds</td>
+</tr>
+<tr>
+<td>IV.F</td>
+<td>تحضير Series A</td>
+<td>T+18–24 شهرًا</td>
+<td>تحضير لجان الاستثمار</td>
+</tr>
+</tbody>
+</table>
+<p>التنبّؤ بالدرجة الموحَّدة بعد الأفق IV: <strong>9.5–9.8 / 10</strong> —
+جاهزية دولية tier-1.</p>
+<hr />
+<h2 id="المنهجية">10. المنهجية</h2>
+<ul>
+<li><strong>المدقّقون:</strong> A·Tech / B·Legal / C·Fin / D·Strat /
+E·Design / F·QA (كما في الأفقَين I–II) + المحور الجديد
+G·International</li>
+<li><strong>الأوزان:</strong> 0.17 / 0.17 / 0.17 / 0.13 / 0.10 / 0.11 /
+0.15 = 1.00 (أُعيد ترجيحها لإدخال G)</li>
+<li><strong>Invariant:</strong> SoT v3 (NPV 51.2 / IRR 62 % / EM 12× /
+WACC 30 % / Payback 2.8 / FX 89.0 / post-money 95 مليون $)</li>
+<li><strong>CI:</strong> 29 / 29 invariants passing</li>
+<li><strong>اللقطات:</strong> pre-horizon3 (7.02 ميغابايت) +
+post-horizon3 (7.09 ميغابايت)</li>
+</ul>
+<hr />
+<p><strong>التاريخ:</strong> 24.05.2026 <strong>المؤلف / صاحب
+الحقوق:</strong> أ.-خ. أ. كاغيروف (شهادة رقم 4011265 بتاريخ 19.12.2024)
+<strong>مرجع التكليف:</strong> RSFSR-AUDIT-H3-2026 <strong>Center Group
+Company</strong></p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

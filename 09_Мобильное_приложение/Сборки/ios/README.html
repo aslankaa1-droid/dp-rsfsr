@@ -1,0 +1,404 @@
+﻿<!doctype html>
+<html lang="ru" data-theme="daylight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сборка ios · ЦП РСФСР</title>
+<meta name="theme-color" content="#0B2B5C">
+<link rel="stylesheet" href="../../../_shared/brand.css">
+<style>
+/* Document-specific styles */
+body { padding-top: 80px; }
+.doc-wrap { max-width: 880px; margin: 0 auto; padding: 48px 24px 96px; }
+.doc-header {
+  padding-bottom: 24px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.doc-header .eyebrow { margin-bottom: 12px; }
+.doc-header h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--primary); margin-bottom: 12px; }
+.doc-header p { color: var(--fg-mute); font-size: .9375rem; margin: 0; }
+.doc-content h1, .doc-content h2, .doc-content h3, .doc-content h4 { color: var(--primary); margin-top: 2em; margin-bottom: .5em; }
+.doc-content h1 { font-size: 1.875rem; }
+.doc-content h2 { font-size: 1.5rem; padding-bottom: 6px; border-bottom: 1px solid var(--border-soft); }
+.doc-content h3 { font-size: 1.25rem; }
+.doc-content h4 { font-size: 1.0625rem; color: var(--fg); }
+.doc-content p { line-height: 1.7; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content ul, .doc-content ol { line-height: 1.7; padding-left: 1.5em; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content li { margin-bottom: .35em; }
+.doc-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 12px 20px;
+  margin: 1em 0;
+  background: var(--bg-soft);
+  border-radius: 0 8px 8px 0;
+  color: var(--fg-soft);
+}
+.doc-content code {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg-soft);
+  padding: 2px 6px; border-radius: 4px;
+  font-size: .875em; color: var(--primary);
+}
+.doc-content pre {
+  background: var(--bg-soft); padding: 16px; border-radius: 10px;
+  overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: .875rem;
+  border: 1px solid var(--border-soft); margin: 1em 0;
+}
+.doc-content table {
+  width: 100%; border-collapse: collapse; margin: 1.5em 0;
+  background: var(--card-bg); border: 1px solid var(--border-soft);
+  border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-1);
+}
+.doc-content table th {
+  background: var(--primary); color: var(--primary-on);
+  text-align: left; padding: 12px 16px; font-weight: 600;
+  font-size: .8125rem; letter-spacing: .04em; text-transform: uppercase;
+}
+.doc-content table td {
+  padding: 10px 16px; border-bottom: 1px solid var(--border-soft);
+  font-size: .9375rem; color: var(--fg-soft);
+}
+.doc-content table tr:last-child td { border-bottom: none; }
+.doc-content table tr:hover td { background: var(--bg-soft); }
+.doc-content hr {
+  border: none; height: 1px; background: var(--border-soft); margin: 2.5em 0;
+}
+.doc-content a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+.doc-content a:hover { color: var(--accent); }
+.doc-content strong { color: var(--fg); font-weight: 700; }
+
+.doc-actions {
+  display: flex; gap: 10px; margin-top: 32px; flex-wrap: wrap;
+}
+
+/* Floating top button */
+.totop {
+  position: fixed; bottom: 24px; right: 24px; z-index: 50;
+  background: var(--primary); color: var(--primary-on);
+  border: none; border-radius: 50%; width: 48px; height: 48px;
+  cursor: pointer; box-shadow: var(--shadow-3);
+  display: none; font-size: 1.25rem;
+  transition: transform .2s var(--ease);
+}
+.totop:hover { transform: translateY(-2px); }
+.totop.show { display: grid; place-items: center; }
+[dir="rtl"] .totop { right: auto; left: 24px; }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div class="scroll-progress"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="../../../07_Презентации/Большая_презентация/index.html"><span class="brand-mark">Р</span><span data-i18n="brand.name">ЦП РСФСР</span></a>
+    <nav class="topbar-nav">
+      <a href="../../../07_Презентации/Большая_презентация/index.html#about" data-i18n="nav.about">О платформе</a>
+      <a href="../../../07_Презентации/Большая_презентация/index.html#hub" data-i18n="nav.hub">Документы</a>
+      <a href="../../../08_Веб-сайт/HTML_основной/index.html">Сайт</a>
+      <a href="../../../07_Презентации/Малая_презентация/index.html">Презентация</a>
+      <a href="../../../07_Презентации/Большая_презентация/index.html#contacts" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+    <div class="topbar-actions">
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-i18n-btn="ru">RU</button>
+        <button class="tbtn" data-i18n-btn="en">EN</button>
+        <button class="tbtn" data-i18n-btn="fr">FR</button>
+        <button class="tbtn" data-i18n-btn="ar">عر</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-theme-btn="daylight" aria-label="Дневная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+        <button class="tbtn" data-theme-btn="midnight" aria-label="Тёмная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="tbtn" data-theme-btn="sepia">◐</button>
+        <button class="tbtn" data-theme-btn="contrast">A11Y</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn" data-font-action="dec">A−</button>
+        <button class="tbtn" data-font-action="reset">A</button>
+        <button class="tbtn" data-font-action="inc">A+</button>
+      </div>
+      <button class="tbtn tbtn-burger">≡</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="eyebrow">Платформенные сборки</span>
+      <h1>Сборка ios</h1>
+      <p>Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 · 19.12.2024 · ЦП РСФСР</p>
+    </header>
+    <article class="doc-content">
+<h1 id="ios-сборка-цп-рсфср">iOS-сборка ЦП РСФСР</h1>
+<p>Инструкция сборки и публикации iOS-приложения через Capacitor.</p>
+<hr />
+<h2 id="требования">1. Требования</h2>
+<ul>
+<li><strong>macOS</strong> 13 (Ventura) или новее.</li>
+<li><strong>Xcode</strong> 15.x или новее.</li>
+<li><strong>CocoaPods</strong> 1.14+.</li>
+<li><strong>Apple Developer Program</strong> ($99/год).</li>
+<li><strong>Apple ID</strong> с двухфакторной аутентификацией.</li>
+</ul>
+<pre class="bash"><code># Установить Xcode из App Store
+# Установить CocoaPods
+sudo gem install cocoapods
+
+# Установить Capacitor CLI (если не установлен)
+npm install -g @capacitor/cli</code></pre>
+<h2 id="инициализация-ios-проекта">2. Инициализация iOS-проекта</h2>
+<p>Из папки <code>Сборки/common</code> (на macOS):</p>
+<pre class="bash"><code>npm install
+npx cap add ios
+npx cap sync ios
+npx cap open ios</code></pre>
+<p>Это создаст папку <code>Сборки/ios/</code> с Xcode-проектом.</p>
+<h2 id="конфигурация-ios">3. Конфигурация iOS</h2>
+<h3 id="info.plist">3.1. Info.plist</h3>
+<p><code>ios/App/App/Info.plist</code> — добавьте:</p>
+<pre class="xml"><code>&lt;key&gt;CFBundleDisplayName&lt;/key&gt;
+&lt;string&gt;ЦП РСФСР&lt;/string&gt;
+
+&lt;key&gt;CFBundleShortVersionString&lt;/key&gt;
+&lt;string&gt;1.0.0&lt;/string&gt;
+&lt;key&gt;CFBundleVersion&lt;/key&gt;
+&lt;string&gt;1&lt;/string&gt;
+
+&lt;key&gt;CFBundleIdentifier&lt;/key&gt;
+&lt;string&gt;ru.rsfsr.app&lt;/string&gt;
+
+&lt;key&gt;UISupportedInterfaceOrientations&lt;/key&gt;
+&lt;array&gt;
+    &lt;string&gt;UIInterfaceOrientationPortrait&lt;/string&gt;
+    &lt;string&gt;UIInterfaceOrientationPortraitUpsideDown&lt;/string&gt;
+&lt;/array&gt;
+
+&lt;key&gt;UIRequiresFullScreen&lt;/key&gt;
+&lt;false/&gt;
+
+&lt;!-- Локализация --&gt;
+&lt;key&gt;CFBundleLocalizations&lt;/key&gt;
+&lt;array&gt;
+    &lt;string&gt;ru&lt;/string&gt;
+    &lt;string&gt;en&lt;/string&gt;
+    &lt;string&gt;fr&lt;/string&gt;
+    &lt;string&gt;ar&lt;/string&gt;
+&lt;/array&gt;
+&lt;key&gt;CFBundleDevelopmentRegion&lt;/key&gt;
+&lt;string&gt;ru&lt;/string&gt;
+
+&lt;!-- Разрешения --&gt;
+&lt;key&gt;NSFaceIDUsageDescription&lt;/key&gt;
+&lt;string&gt;Используется для безопасного подтверждения операций ЦП РСФСР&lt;/string&gt;
+
+&lt;key&gt;NSCameraUsageDescription&lt;/key&gt;
+&lt;string&gt;Используется для фотографирования документов&lt;/string&gt;
+
+&lt;key&gt;NSPhotoLibraryUsageDescription&lt;/key&gt;
+&lt;string&gt;Используется для прикрепления документов к заявкам&lt;/string&gt;
+
+&lt;!-- Deep links --&gt;
+&lt;key&gt;CFBundleURLTypes&lt;/key&gt;
+&lt;array&gt;
+    &lt;dict&gt;
+        &lt;key&gt;CFBundleURLName&lt;/key&gt;
+        &lt;string&gt;ru.rsfsr.app&lt;/string&gt;
+        &lt;key&gt;CFBundleURLSchemes&lt;/key&gt;
+        &lt;array&gt;
+            &lt;string&gt;ru.rsfsr.app&lt;/string&gt;
+        &lt;/array&gt;
+    &lt;/dict&gt;
+&lt;/array&gt;
+
+&lt;!-- Universal Links --&gt;
+&lt;key&gt;com.apple.developer.associated-domains&lt;/key&gt;
+&lt;array&gt;
+    &lt;string&gt;applinks:app.dp-rsfsr.ru&lt;/string&gt;
+    &lt;string&gt;applinks:dp-rsfsr.ru&lt;/string&gt;
+&lt;/array&gt;
+
+&lt;!-- App Transport Security --&gt;
+&lt;key&gt;NSAppTransportSecurity&lt;/key&gt;
+&lt;dict&gt;
+    &lt;key&gt;NSAllowsArbitraryLoads&lt;/key&gt;
+    &lt;false/&gt;
+    &lt;key&gt;NSExceptionDomains&lt;/key&gt;
+    &lt;dict&gt;
+        &lt;key&gt;dp-rsfsr.ru&lt;/key&gt;
+        &lt;dict&gt;
+            &lt;key&gt;NSIncludesSubdomains&lt;/key&gt;
+            &lt;true/&gt;
+            &lt;key&gt;NSTemporaryExceptionMinimumTLSVersion&lt;/key&gt;
+            &lt;string&gt;TLSv1.3&lt;/string&gt;
+        &lt;/dict&gt;
+    &lt;/dict&gt;
+&lt;/dict&gt;
+
+&lt;!-- Минимальная версия iOS --&gt;
+&lt;key&gt;MinimumOSVersion&lt;/key&gt;
+&lt;string&gt;15.0&lt;/string&gt;</code></pre>
+<h3 id="capabilities">3.2. Capabilities</h3>
+<p>В Xcode → Project → Target → Signing &amp; Capabilities добавьте: -
+<strong>Associated Domains</strong>: для universal links. - <strong>Push
+Notifications</strong>: для push. - <strong>Background Modes</strong>:
+Remote notifications, Background processing. - <strong>Sign in with
+Apple</strong>: опционально. - <strong>Keychain Sharing</strong>: для
+общего keychain между расширениями.</p>
+<h3 id="подпись">3.3. Подпись</h3>
+<ol type="1">
+<li>Apple Developer Portal → Identifiers → создайте App ID
+<code>ru.rsfsr.app</code> с нужными capabilities.</li>
+<li>Создайте Provisioning Profile (Distribution → App Store).</li>
+<li>Создайте Apple Distribution Certificate.</li>
+<li>В Xcode выберите Team и Provisioning Profile.</li>
+</ol>
+<h3 id="иконки">3.4. Иконки</h3>
+<p><code>ios/App/App/Assets.xcassets/AppIcon.appiconset/</code> —
+заполните набор иконок: - 20pt: 40×40, 60×60 - 29pt: 58×58, 87×87 -
+40pt: 80×80, 120×120 - 60pt: 120×120, 180×180 - 76pt: 152×152 - 83.5pt:
+167×167 - 1024×1024 — для App Store</p>
+<p>Используйте <code>Приложение/icons/icon-512.svg</code> как исходник;
+масштабируйте через <code>@capacitor/assets</code>.</p>
+<h3 id="launch-screen">3.5. Launch Screen</h3>
+<p>Storyboard <code>LaunchScreen.storyboard</code> — добавьте иконку и
+фон #0B2B5C.</p>
+<h2 id="сборка">4. Сборка</h2>
+<h3 id="archive">Archive</h3>
+<p>В Xcode: Product → Archive (Cmd+Shift+B → Archive).</p>
+<p>Или из CLI:</p>
+<pre class="bash"><code>cd ios/App
+xcodebuild -workspace App.xcworkspace \
+           -scheme App \
+           -configuration Release \
+           archive \
+           -archivePath build/App.xcarchive</code></pre>
+<h3 id="export-ipa">Export IPA</h3>
+<p>Создайте <code>ExportOptions.plist</code>:</p>
+<pre class="xml"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
+&lt;plist version=&quot;1.0&quot;&gt;
+&lt;dict&gt;
+    &lt;key&gt;method&lt;/key&gt;
+    &lt;string&gt;app-store&lt;/string&gt;
+    &lt;key&gt;teamID&lt;/key&gt;
+    &lt;string&gt;YOUR_TEAM_ID&lt;/string&gt;
+    &lt;key&gt;uploadBitcode&lt;/key&gt;
+    &lt;false/&gt;
+    &lt;key&gt;uploadSymbols&lt;/key&gt;
+    &lt;true/&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;</code></pre>
+<p>Затем:</p>
+<pre class="bash"><code>xcodebuild -exportArchive \
+           -archivePath build/App.xcarchive \
+           -exportPath build \
+           -exportOptionsPlist ExportOptions.plist</code></pre>
+<p>Результат: <code>ios/App/build/App.ipa</code>.</p>
+<h2 id="testflight">5. TestFlight</h2>
+<ol type="1">
+<li>App Store Connect → My Apps → создайте новое приложение
+<code>ru.rsfsr.app</code>.</li>
+<li>Загрузите IPA через Xcode (Window → Organizer → Distribute App) или
+Transporter (отдельное приложение Apple).</li>
+<li>В TestFlight: добавьте внутренних и внешних тестировщиков.</li>
+<li>Дождитесь одобрения для External Testing (24–48 часов).</li>
+</ol>
+<h2 id="публикация-в-app-store">6. Публикация в App Store</h2>
+<ol type="1">
+<li>App Store Connect → App Information:
+<ul>
+<li>Название: «ЦП РСФСР»</li>
+<li>Подзаголовок: «Российский Сервис Финансирования»</li>
+<li>Категория: Finance / Productivity</li>
+</ul></li>
+<li>Pricing: Free.</li>
+<li>App Privacy: укажите все собираемые данные.</li>
+<li>App Review Information: контакты для ревьюера, демо-аккаунт.</li>
+<li>Version Information:
+<ul>
+<li>Promotional text (до 170 символов).</li>
+<li>Описание (до 4000 символов).</li>
+<li>Ключевые слова (до 100 символов).</li>
+<li>Скриншоты (для всех размеров экранов).</li>
+</ul></li>
+<li>Отправьте на ревью (срок: 1–3 дня).</li>
+</ol>
+<h3 id="apple-review-checklist">Apple Review checklist</h3>
+<ul>
+<li>Дайте демо-доступ ревьюеру (можно мок-режим без ЕСИА).</li>
+<li>Приведите политику конфиденциальности с URL на сайте.</li>
+<li>Приведите Terms of Service.</li>
+<li>Подтвердите, что у вас есть необходимые лицензии (ЦБ РФ).</li>
+</ul>
+<h3 id="возможные-сложности">Возможные сложности</h3>
+<ul>
+<li>Криптовалютная классификация: ЦФА <strong>не являются
+криптовалютой</strong>. Подготовьте обоснование.</li>
+<li>Региональная блокировка: при необходимости можно ограничить
+распространение только территорией РФ.</li>
+</ul>
+<h2 id="дополнительно">7. Дополнительно</h2>
+<h3 id="universal-links">Universal Links</h3>
+<p>Файл <code>apple-app-site-association</code> (без расширения, JSON)
+на
+<code>https://app.dp-rsfsr.ru/.well-known/apple-app-site-association</code>:</p>
+<pre class="json"><code>{
+  &quot;applinks&quot;: {
+    &quot;apps&quot;: [],
+    &quot;details&quot;: [
+      {
+        &quot;appID&quot;: &quot;YOUR_TEAM_ID.ru.rsfsr.app&quot;,
+        &quot;paths&quot;: [&quot;*&quot;]
+      }
+    ]
+  }
+}</code></pre>
+<h3 id="crash-reporting">Crash reporting</h3>
+<p>Рекомендуется AppMetrica или Crashlytics-альтернатива.</p>
+<hr />
+<h2 id="чек-лист-готовности-к-публикации">8. Чек-лист готовности к
+публикации</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />Info.plist настроен.</label></li>
+<li><label><input type="checkbox" />Все capabilities
+добавлены.</label></li>
+<li><label><input type="checkbox" />Apple Distribution Certificate и
+Provisioning Profile в порядке.</label></li>
+<li><label><input type="checkbox" />Иконки всех размеров.</label></li>
+<li><label><input type="checkbox" />LaunchScreen.</label></li>
+<li><label><input type="checkbox" />Universal Links
+настроены.</label></li>
+<li><label><input type="checkbox" />Внутреннее тестирование через
+TestFlight.</label></li>
+<li><label><input type="checkbox" />Промо-материалы (скриншоты для всех
+устройств).</label></li>
+<li><label><input type="checkbox" />Политика
+конфиденциальности.</label></li>
+<li><label><input type="checkbox" />Демо-аккаунт для
+ревьюера.</label></li>
+<li><label><input type="checkbox" />App Store Connect
+заполнен.</label></li>
+</ul>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../07_Презентации/Большая_презентация/index.html#hub">К хабу документов</a>
+      <a class="btn btn--ghost" href="../../../07_Презентации/Большая_презентация/index.html">Большая презентация</a>
+    </div>
+  </div>
+</main>
+
+<button class="totop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Наверх">↑</button>
+
+<script src="../../../_shared/i18n.js"></script>
+<script src="../../../_shared/app.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const t = document.querySelector('.totop');
+  if (t) t.classList.toggle('show', window.scrollY > 600);
+});
+</script>
+</body>
+</html>

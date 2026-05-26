@@ -1,0 +1,421 @@
+﻿<!doctype html>
+<html lang="ru" data-theme="daylight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Чек лист публикации · ЦП РСФСР</title>
+<meta name="theme-color" content="#0B2B5C">
+<link rel="stylesheet" href="../../_shared/brand.css">
+<style>
+/* Document-specific styles */
+body { padding-top: 80px; }
+.doc-wrap { max-width: 880px; margin: 0 auto; padding: 48px 24px 96px; }
+.doc-header {
+  padding-bottom: 24px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.doc-header .eyebrow { margin-bottom: 12px; }
+.doc-header h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--primary); margin-bottom: 12px; }
+.doc-header p { color: var(--fg-mute); font-size: .9375rem; margin: 0; }
+.doc-content h1, .doc-content h2, .doc-content h3, .doc-content h4 { color: var(--primary); margin-top: 2em; margin-bottom: .5em; }
+.doc-content h1 { font-size: 1.875rem; }
+.doc-content h2 { font-size: 1.5rem; padding-bottom: 6px; border-bottom: 1px solid var(--border-soft); }
+.doc-content h3 { font-size: 1.25rem; }
+.doc-content h4 { font-size: 1.0625rem; color: var(--fg); }
+.doc-content p { line-height: 1.7; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content ul, .doc-content ol { line-height: 1.7; padding-left: 1.5em; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content li { margin-bottom: .35em; }
+.doc-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 12px 20px;
+  margin: 1em 0;
+  background: var(--bg-soft);
+  border-radius: 0 8px 8px 0;
+  color: var(--fg-soft);
+}
+.doc-content code {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg-soft);
+  padding: 2px 6px; border-radius: 4px;
+  font-size: .875em; color: var(--primary);
+}
+.doc-content pre {
+  background: var(--bg-soft); padding: 16px; border-radius: 10px;
+  overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: .875rem;
+  border: 1px solid var(--border-soft); margin: 1em 0;
+}
+.doc-content table {
+  width: 100%; border-collapse: collapse; margin: 1.5em 0;
+  background: var(--card-bg); border: 1px solid var(--border-soft);
+  border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-1);
+}
+.doc-content table th {
+  background: var(--primary); color: var(--primary-on);
+  text-align: left; padding: 12px 16px; font-weight: 600;
+  font-size: .8125rem; letter-spacing: .04em; text-transform: uppercase;
+}
+.doc-content table td {
+  padding: 10px 16px; border-bottom: 1px solid var(--border-soft);
+  font-size: .9375rem; color: var(--fg-soft);
+}
+.doc-content table tr:last-child td { border-bottom: none; }
+.doc-content table tr:hover td { background: var(--bg-soft); }
+.doc-content hr {
+  border: none; height: 1px; background: var(--border-soft); margin: 2.5em 0;
+}
+.doc-content a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+.doc-content a:hover { color: var(--accent); }
+.doc-content strong { color: var(--fg); font-weight: 700; }
+
+.doc-actions {
+  display: flex; gap: 10px; margin-top: 32px; flex-wrap: wrap;
+}
+
+/* Floating top button */
+.totop {
+  position: fixed; bottom: 24px; right: 24px; z-index: 50;
+  background: var(--primary); color: var(--primary-on);
+  border: none; border-radius: 50%; width: 48px; height: 48px;
+  cursor: pointer; box-shadow: var(--shadow-3);
+  display: none; font-size: 1.25rem;
+  transition: transform .2s var(--ease);
+}
+.totop:hover { transform: translateY(-2px); }
+.totop.show { display: grid; place-items: center; }
+[dir="rtl"] .totop { right: auto; left: 24px; }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div class="scroll-progress"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="../../07_Презентации/Большая_презентация/index.html"><span class="brand-mark">Р</span><span data-i18n="brand.name">ЦП РСФСР</span></a>
+    <nav class="topbar-nav">
+      <a href="../../07_Презентации/Большая_презентация/index.html#about" data-i18n="nav.about">О платформе</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#hub" data-i18n="nav.hub">Документы</a>
+      <a href="../../08_Веб-сайт/HTML_основной/index.html">Сайт</a>
+      <a href="../../07_Презентации/Малая_презентация/index.html">Презентация</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#contacts" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+    <div class="topbar-actions">
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-i18n-btn="ru">RU</button>
+        <button class="tbtn" data-i18n-btn="en">EN</button>
+        <button class="tbtn" data-i18n-btn="fr">FR</button>
+        <button class="tbtn" data-i18n-btn="ar">عر</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-theme-btn="daylight" aria-label="Дневная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+        <button class="tbtn" data-theme-btn="midnight" aria-label="Тёмная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="tbtn" data-theme-btn="sepia">◐</button>
+        <button class="tbtn" data-theme-btn="contrast">A11Y</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn" data-font-action="dec">A−</button>
+        <button class="tbtn" data-font-action="reset">A</button>
+        <button class="tbtn" data-font-action="inc">A+</button>
+      </div>
+      <button class="tbtn tbtn-burger">≡</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="eyebrow">Публикация в RuStore</span>
+      <h1>Чек лист публикации</h1>
+      <p>Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 · 19.12.2024 · ЦП РСФСР</p>
+    </header>
+    <article class="doc-content">
+<h1 id="чек-лист-публикации-в-rustore">Чек-лист публикации в
+RuStore</h1>
+<h2 id="цп-рсфср-мобильное-приложение">ЦП РСФСР — мобильное
+приложение</h2>
+<hr />
+<h2 id="этап-1.-подготовка-разработчика">Этап 1. Подготовка
+разработчика</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />Зарегистрирован аккаунт в RuStore
+Console: https://console.rustore.ru</label></li>
+<li><label><input type="checkbox" />Подтверждена учётная запись через
+Госуслуги (для российских разработчиков).</label></li>
+<li><label><input type="checkbox" />Загружены документы:</label>
+<ul class="task-list">
+<li><label><input type="checkbox" />паспорт или иной документ для
+физического лица;</label></li>
+<li><label><input type="checkbox" />учредительные документы для
+юридического лица;</label></li>
+<li><label><input type="checkbox" />свидетельство ИНН.</label></li>
+</ul></li>
+<li><label><input type="checkbox" />Подписано соглашение разработчика
+RuStore.</label></li>
+</ul>
+<h2 id="этап-2.-подготовка-приложения">Этап 2. Подготовка
+приложения</h2>
+<h3 id="технические-артефакты">Технические артефакты</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />AAB-файл собран
+(<code>app-release.aab</code>).</label></li>
+<li><label><input type="checkbox" />Размер AAB ≤ 150 МБ (лимит
+RuStore).</label></li>
+<li><label><input type="checkbox" />AAB подписан release-keystore (не
+debug-keystore).</label></li>
+<li><label><input type="checkbox" />versionCode и versionName
+согласованы.</label></li>
+<li><label><input type="checkbox" />minSdkVersion = 28 (Android
+9).</label></li>
+<li><label><input type="checkbox" />targetSdkVersion = 34 (Android
+14).</label></li>
+<li><label><input type="checkbox" />applicationId =
+<code>ru.rsfsr.app</code>.</label></li>
+</ul>
+<h3 id="соответствие">Соответствие</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Приложение работает на минимальной
+целевой версии Android (Android 9).</label></li>
+<li><label><input type="checkbox" />Приложение тестировалось минимум на
+5 разных устройствах.</label></li>
+<li><label><input type="checkbox" />Crash-rate &lt; 0,5% по данным
+внутренних тестов.</label></li>
+</ul>
+<h3 id="контент">Контент</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Иконка 512 × 512 PNG.</label></li>
+<li><label><input type="checkbox" />Feature graphic 1024 × 500
+PNG.</label></li>
+<li><label><input type="checkbox" />Минимум 5 скриншотов (1080 × 1920
+рекомендуется).</label></li>
+<li><label><input type="checkbox" />Промо-видео (опционально, но
+рекомендуется).</label></li>
+<li><label><input type="checkbox" />Краткое описание (до 80
+символов).</label></li>
+<li><label><input type="checkbox" />Полное описание (до 4000
+символов).</label></li>
+<li><label><input type="checkbox" />Текст «Что нового» (до 500
+символов).</label></li>
+<li><label><input type="checkbox" />Ключевые слова.</label></li>
+</ul>
+<h3 id="правовые-документы">Правовые документы</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Политика конфиденциальности
+опубликована по адресу <code>https://dp-rsfsr.ru/privacy</code> (или
+временный домен).</label></li>
+<li><label><input type="checkbox" />Условия использования опубликованы
+по адресу <code>https://dp-rsfsr.ru/terms</code>.</label></li>
+<li><label><input type="checkbox" />Адрес сайта разработчика
+подтверждён.</label></li>
+<li><label><input type="checkbox" />Контактный email поддержки
+активен.</label></li>
+</ul>
+<h2 id="этап-3.-заполнение-карточки-в-rustore-console">Этап 3.
+Заполнение карточки в RuStore Console</h2>
+<h3 id="основные-сведения">Основные сведения</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Название: «ЦП РСФСР».</label></li>
+<li><label><input type="checkbox" />Подзаголовок: «Российский Сервис
+Финансирования Социального Развития».</label></li>
+<li><label><input type="checkbox" />Категория: Финансы.</label></li>
+<li><label><input type="checkbox" />Подкатегория:
+Инвестиции.</label></li>
+<li><label><input type="checkbox" />Возрастная категория:
+18+.</label></li>
+<li><label><input type="checkbox" />Цена: Бесплатно.</label></li>
+</ul>
+<h3 id="описание">Описание</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Краткое описание
+заполнено.</label></li>
+<li><label><input type="checkbox" />Полное описание
+заполнено.</label></li>
+<li><label><input type="checkbox" />Ключевые слова указаны.</label></li>
+<li><label><input type="checkbox" />«Что нового» заполнено.</label></li>
+</ul>
+<h3 id="графика">Графика</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Иконка загружена.</label></li>
+<li><label><input type="checkbox" />Feature graphic
+загружен.</label></li>
+<li><label><input type="checkbox" />5–8 скриншотов
+загружены.</label></li>
+<li><label><input type="checkbox" />Промо-видео загружено (если
+есть).</label></li>
+</ul>
+<h3 id="технические-сведения">Технические сведения</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />AAB файл загружен.</label></li>
+<li><label><input type="checkbox" />Маппинг (mapping.txt для ProGuard)
+загружен.</label></li>
+<li><label><input type="checkbox" />Подписи в порядке (не используется
+debug-keystore).</label></li>
+</ul>
+<h3 id="контент-рейтинг">Контент-рейтинг</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Заполнена анкета IARC / российская
+система маркировки.</label></li>
+<li><label><input type="checkbox" />Установлена возрастная категория
+18+.</label></li>
+</ul>
+<h3 id="локализация">Локализация</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Русский язык — основной, заполнен
+полностью.</label></li>
+<li><label><input type="checkbox" />Английский язык —
+заполнен.</label></li>
+<li><label><input type="checkbox" />Французский язык — заполнен
+(опционально).</label></li>
+<li><label><input type="checkbox" />Арабский язык — заполнен
+(опционально).</label></li>
+</ul>
+<h3 id="правовая-информация">Правовая информация</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Ссылка на Политику
+конфиденциальности.</label></li>
+<li><label><input type="checkbox" />Ссылка на Условия
+использования.</label></li>
+<li><label><input type="checkbox" />Контактные данные
+разработчика.</label></li>
+<li><label><input type="checkbox" />Указано, что приложение не
+использует рекламу.</label></li>
+<li><label><input type="checkbox" />Указано, что приложение не имеет
+внутренних покупок.</label></li>
+</ul>
+<h3 id="финансовая-информация-если-применимо">Финансовая информация
+(если применимо)</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Указан тип финансовой
+деятельности.</label></li>
+<li><label><input type="checkbox" />Загружены копии лицензий (Банк
+России — после получения).</label></li>
+<li><label><input type="checkbox" />Указана связь с государственными
+системами (Госуслуги, ЕГРН).</label></li>
+</ul>
+<h2 id="этап-4.-безопасность-и-регуляторика">Этап 4. Безопасность и
+регуляторика</h2>
+<h3 id="перед-публикацией-production">Перед публикацией production</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Получен сертификат ФСТЭК России (К1
+/ КИИ-1).</label></li>
+<li><label><input type="checkbox" />Получен сертификат ФСБ России
+(СКЗИ).</label></li>
+<li><label><input type="checkbox" />Получено уведомление Роскомнадзора о
+включении в реестр операторов ПДн.</label></li>
+<li><label><input type="checkbox" />Приложение включено в Единый реестр
+российского ПО (ПП РФ №1236).</label></li>
+<li><label><input type="checkbox" />Оператор включён в реестр операторов
+ИС Банка России (Положение №779-П).</label></li>
+</ul>
+<h3 id="альтернативно-для-пилотного-режима">Альтернативно: для пилотного
+режима</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Получено разрешение Банка России на
+пилотную эксплуатацию.</label></li>
+<li><label><input type="checkbox" />В приложении явно указан статус
+«Пилотный режим» (в About-разделе).</label></li>
+<li><label><input type="checkbox" />Доступ ограничен пилотным пулом
+пользователей через серверную часть.</label></li>
+</ul>
+<h2 id="этап-5.-тестирование">Этап 5. Тестирование</h2>
+<h3 id="внутреннее-тестирование">Внутреннее тестирование</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Альфа-тестирование пройдено (≥ 50
+пользователей).</label></li>
+<li><label><input type="checkbox" />Все критические сценарии (20 тестов)
+пройдены.</label></li>
+<li><label><input type="checkbox" />Найденные ошибки
+устранены.</label></li>
+</ul>
+<h3 id="бета-тестирование">Бета-тестирование</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Бета-сборка распространена через
+RuStore Beta или внутренний канал.</label></li>
+<li><label><input type="checkbox" />Получены отзывы (≥ 100
+пользователей).</label></li>
+<li><label><input type="checkbox" />Crash-free sessions ≥
+99,8%.</label></li>
+<li><label><input type="checkbox" />Найденные ошибки
+устранены.</label></li>
+</ul>
+<h2 id="этап-6.-подача-на-модерацию">Этап 6. Подача на модерацию</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />Все поля заполнены.</label></li>
+<li><label><input type="checkbox" />Все артефакты
+загружены.</label></li>
+<li><label><input type="checkbox" />Запрос на проверку отправлен в
+RuStore Console.</label></li>
+</ul>
+<h3 id="срок-рассмотрения">Срок рассмотрения</h3>
+<p><strong>1–3 рабочих дня</strong> (стандартный).</p>
+<h3 id="возможные-итоги">Возможные итоги</h3>
+<ul>
+<li>✓ Одобрено — публикация в каталоге.</li>
+<li>⚠ Доработать — комментарии модератора → внесите исправления →
+повторная подача.</li>
+<li>✗ Отклонено — критическое нарушение → анализ → переработка →
+повторная подача.</li>
+</ul>
+<h2 id="этап-7.-после-публикации">Этап 7. После публикации</h2>
+<h3 id="мониторинг">Мониторинг</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Мониторинг загрузок в RuStore
+Console.</label></li>
+<li><label><input type="checkbox" />Мониторинг отзывов
+пользователей.</label></li>
+<li><label><input type="checkbox" />Crash reporting подключен
+(AppMetrica / отечественная альтернатива).</label></li>
+<li><label><input type="checkbox" />Мониторинг основных KPI (DAU, MAU,
+retention).</label></li>
+</ul>
+<h3 id="поддержка">Поддержка</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Команда поддержки готова отвечать на
+обращения.</label></li>
+<li><label><input type="checkbox" />Email support@dp-rsfsr.ru
+мониторится 7×24.</label></li>
+<li><label><input type="checkbox" />Чат-бот в приложении
+работает.</label></li>
+</ul>
+<h3 id="обновления">Обновления</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Расписание регулярных обновлений
+(1–2 раза в месяц).</label></li>
+<li><label><input type="checkbox" />Hot-fix процедура для критических
+уязвимостей.</label></li>
+<li><label><input type="checkbox" />Обратная совместимость API ≥ 12
+месяцев.</label></li>
+</ul>
+<hr />
+<h2 id="полезные-ссылки">Полезные ссылки</h2>
+<ul>
+<li>RuStore Console: https://console.rustore.ru</li>
+<li>Документация RuStore: https://www.rustore.ru/help/developers</li>
+<li>Требования к контенту:
+https://www.rustore.ru/help/developers/publishing/content-requirements</li>
+<li>API RuStore SDK: https://www.rustore.ru/help/sdk</li>
+<li>Технические требования:
+https://www.rustore.ru/help/developers/publishing/technical-requirements</li>
+</ul>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../07_Презентации/Большая_презентация/index.html#hub">К хабу документов</a>
+      <a class="btn btn--ghost" href="../../07_Презентации/Большая_презентация/index.html">Большая презентация</a>
+    </div>
+  </div>
+</main>
+
+<button class="totop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Наверх">↑</button>
+
+<script src="../../_shared/i18n.js"></script>
+<script src="../../_shared/app.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const t = document.querySelector('.totop');
+  if (t) t.classList.toggle('show', window.scrollY > 600);
+});
+</script>
+</body>
+</html>

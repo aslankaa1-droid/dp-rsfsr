@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../">
+  <title>التكاملات مع نظم المعلومات الحكومية · ЦПФСР.РФ</title>
+  <meta name="description" content="التكاملات مع نظم المعلومات الحكومية — التكاملات مع نظم المعلومات الحكومية. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../_design-system/print.css">
+
+  <script defer src="../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../_design-system/i18n.js"></script>
+  <script defer src="../../../_design-system/ticker.js"></script>
+  <script defer src="../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">التكاملات مع نظم المعلومات الحكومية</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">التكاملات مع نظم المعلومات الحكومية</span>
+      <h1>التكاملات مع نظم المعلومات الحكومية</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="التكاملات-مع-نظم-المعلومات-الحكومية">التكاملات مع نظم المعلومات
+الحكومية</h1>
+<p>يصف المستند تكاملات منصة CPFSR مع نظم المعلومات الحكومية للاتحاد
+الروسي وفقاً لمتطلبات FZ-149، SMEV 3، FZ-152، FZ-187 ولوائح الجهات
+المالكة.</p>
+<hr />
+<h2 id="الجدول-المجمع-للتكاملات">1. الجدول المجمَّع للتكاملات</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>المعرّف</th>
+<th>الطرف</th>
+<th>الغرض</th>
+<th>القناة</th>
+<th>البروتوكول</th>
+<th>التواتر</th>
+<th>الأمن</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INT-01</td>
+<td>Gosuslugi (ESIA)</td>
+<td>تعريف الأشخاص الطبيعيين والاعتباريين</td>
+<td>SMEV 3 + REST</td>
+<td>OpenID Connect / SAML 2.0</td>
+<td>لحظي</td>
+<td>GOST TLS، UKEP</td>
+</tr>
+<tr>
+<td>INT-02</td>
+<td>النظام البيومتري الموحَّد (EBS)</td>
+<td>التعرّف البيومتري</td>
+<td>SMEV 3</td>
+<td>REST</td>
+<td>عند الطلب</td>
+<td>KriptoPro TLS</td>
+</tr>
+<tr>
+<td>INT-03</td>
+<td>EGRN (Rosreestr)</td>
+<td>الحصول على معلومات العقارات، تسجيل التقييدات</td>
+<td>SMEV 3 + SOAP</td>
+<td>SOAP / REST</td>
+<td>عند الطلب</td>
+<td>GOST TLS، UKEP</td>
+</tr>
+<tr>
+<td>INT-04</td>
+<td>SMEV 3</td>
+<td>تبادل الوثائق الإلكترونية بين الجهات</td>
+<td>SOAP</td>
+<td>SOAP 1.2</td>
+<td>عند الطلب</td>
+<td>KriptoPro TLS</td>
+</tr>
+<tr>
+<td>INT-05</td>
+<td>GIS GMP</td>
+<td>المدفوعات والتسويات المتبادلة</td>
+<td>REST</td>
+<td>HTTPS</td>
+<td>دفعة يومية</td>
+<td>GOST TLS</td>
+</tr>
+<tr>
+<td>INT-06</td>
+<td>بنك روسيا — سجل مشغّلي نظم المعلومات</td>
+<td>تسجيل المشغِّل، التقارير</td>
+<td>قناة ViPNet مؤمَّنة</td>
+<td>XML / REST</td>
+<td>لائحي</td>
+<td>ViPNet، UKEP</td>
+</tr>
+<tr>
+<td>INT-07</td>
+<td>بنك روسيا — منصة الروبل الرقمي</td>
+<td>إصدار وتحويل الروبل الرقمي</td>
+<td>قناة مؤمَّنة</td>
+<td>بروتوكول داخلي لبنك روسيا</td>
+<td>لحظي</td>
+<td>ViPNet، GOST</td>
+</tr>
+<tr>
+<td>INT-08</td>
+<td>SPFS (بنك روسيا)</td>
+<td>الرسائل المالية</td>
+<td>بوابة SPFS</td>
+<td>تنسيق SPFS</td>
+<td>حسب الجدول</td>
+<td>ViPNet</td>
+</tr>
+<tr>
+<td>INT-09</td>
+<td>الخزانة الفيدرالية</td>
+<td>تحويل الأموال المستهدفة، التقارير</td>
+<td>SMEV 3</td>
+<td>REST</td>
+<td>حسب الجدول</td>
+<td>GOST TLS، UKEP</td>
+</tr>
+<tr>
+<td>INT-10</td>
+<td>Rosfinmonitoring</td>
+<td>تقارير FZ-115</td>
+<td>SMEV 3</td>
+<td>XML / REST</td>
+<td>حسب الجدول</td>
+<td>GOST TLS، UKEP</td>
+</tr>
+<tr>
+<td>INT-11</td>
+<td>FNS الروسي</td>
+<td>التقارير الضريبية، التحقق من INN</td>
+<td>SMEV 3</td>
+<td>REST</td>
+<td>يومي / عند الطلب</td>
+<td>GOST TLS</td>
+</tr>
+<tr>
+<td>INT-12</td>
+<td>FSTEC / FSB — اعتماد وسائل حماية المعلومات</td>
+<td>تفاعل لائحي</td>
+<td>تبادل وثائقي</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>INT-13</td>
+<td>NSPK (Mir)</td>
+<td>المدفوعات ببطاقة «Mir»</td>
+<td>قناة مؤمَّنة</td>
+<td>بروتوكول NSPK</td>
+<td>لحظي</td>
+<td>GOST TLS</td>
+</tr>
+<tr>
+<td>INT-14</td>
+<td>Mos.ru / Mos.reg</td>
+<td>التعريف الإقليمي (اختياري)</td>
+<td>SMEV 3</td>
+<td>REST</td>
+<td>عند الطلب</td>
+<td>GOST TLS</td>
+</tr>
+<tr>
+<td>INT-15</td>
+<td>Rospatent</td>
+<td>تأكيد حقوق الملكية الفكرية</td>
+<td>SMEV 3</td>
+<td>SOAP</td>
+<td>عند الطلب</td>
+<td>GOST TLS</td>
+</tr>
+<tr>
+<td>INT-16</td>
+<td>FNP (التوثيق)</td>
+<td>تسجيل رهن الممتلكات المنقولة</td>
+<td>API FNP</td>
+<td>REST</td>
+<td>عند الطلب</td>
+<td>GOST TLS، UKEP</td>
+</tr>
+<tr>
+<td>INT-17</td>
+<td>GIS ZhKKh</td>
+<td>معلومات عن العقارات (اختياري)</td>
+<td>SMEV 3</td>
+<td>REST</td>
+<td>عند الطلب</td>
+<td>GOST TLS</td>
+</tr>
+</tbody>
+</table>
+<h2 id="اللوائح-التفصيلية-للتكاملات-الرئيسية">2. اللوائح التفصيلية
+للتكاملات الرئيسية</h2>
+<h3 id="esia-gosuslugi">2.1. ESIA (Gosuslugi)</h3>
+<ul>
+<li><strong>المعيار:</strong> التوصيات المنهجية لتطبيق ESIA (وزارة
+التطوير الرقمي).</li>
+<li><strong>المصادقة:</strong> OpenID Connect 1.0.</li>
+<li><strong>مستوى الحساب:</strong> مؤكَّد (UZ-3).</li>
+<li><strong>السيناريوهات:</strong> التسجيل، الترخيص، الحصول على البيانات
+الشخصية بموافقة المستخدم، التحقق بين الجهات.</li>
+<li><strong>الخصوصيات:</strong> يلزم الاتصال عبر قناة مؤمَّنة؛ تُستوفى
+موافقة المستخدم على صفحة ESIA.</li>
+</ul>
+<h3 id="ebs-النظام-البيومتري-الموحد">2.2. EBS (النظام البيومتري
+الموحَّد)</h3>
+<ul>
+<li><strong>المعيار:</strong> نظام بنك روسيا رقم 482-P.</li>
+<li><strong>الغرض:</strong> التعرّف البيومتري لتقديم الأصول وتوقيع العقود
+عن بُعد.</li>
+<li><strong>نوع القياس البيومتري:</strong> الصوت + الوجه (متعدد
+الأنماط).</li>
+<li><strong>الخصوصيات:</strong> تعمل المنصة بوصفها مستهلكاً لـ EBS؛ يُحظَر
+نقل المتجهات البيومترية، يُسمَح فقط بالتحقق عبر المعرّف.</li>
+</ul>
+<h3 id="egrn-rosreestr">2.3. EGRN (Rosreestr)</h3>
+<ul>
+<li><strong>المعيار:</strong> لائحة التفاعل الإلكتروني مع
+Rosreestr.</li>
+<li><strong>السيناريوهات:</strong>
+<ul>
+<li>الحصول على معلومات عن العقار حسب الرقم المساحي (للتقييم)؛</li>
+<li>تقديم طلب التسجيل الحكومي للتقييد (الرهن)؛</li>
+<li>تقديم طلب رفع التقييد بعد التبادل / انتهاء المدة.</li>
+</ul></li>
+<li><strong>الخصوصيات:</strong> جميع الطلبات تُوقَّع بـ UKEP لمشغِّل
+المنصة.</li>
+</ul>
+<h3 id="بنك-روسيا-سجل-مشغلي-نظم-المعلومات">2.4. بنك روسيا — سجل مشغّلي
+نظم المعلومات</h3>
+<ul>
+<li><strong>اللائحة:</strong> اللائحة رقم 779-P.</li>
+<li><strong>التقارير المنتظمة:</strong>
+<ul>
+<li>حجم DFA المُصدَرة (شهرياً)؛</li>
+<li>سجل DFA النشطة (ربع سنوي)؛</li>
+<li>المؤشرات المالية للمشغِّل (ربع سنوي)؛</li>
+<li>حوادث أمن المعلومات (في غضون 24 ساعة من الاكتشاف).</li>
+</ul></li>
+</ul>
+<h3 id="بنك-روسيا-منصة-الروبل-الرقمي">2.5. بنك روسيا — منصة الروبل
+الرقمي</h3>
+<ul>
+<li><strong>اللائحة:</strong> الفصل العاشر من FZ-86 (بعد رقم
+340-FZ).</li>
+<li><strong>سيناريوهات المرحلة 1 (التشغيل التجريبي المخفّف
+2026–2028):</strong> الروبل الرقمي مكمِّل تسوية (أحد خيارات الدفع غير
+النقدي لإصدار DFA)، دون ربط إصداري من بنك روسيا.</li>
+<li><strong>سيناريوهات المرحلة 2 (أفق 2029+، بعد اعتماد حزمة 4 تعديلات
+قانونية فيدرالية):</strong>
+<ul>
+<li>طلب إصدار الروبل الرقمي مقابل مجموعة DFA المرهونة؛</li>
+<li>الحصول على تأكيد القيد على محفظة رقمية خاصة؛</li>
+<li>بدء التحويل إلى محفظة الخزانة الفيدرالية الرقمية.</li>
+</ul></li>
+</ul>
+<h3 id="الخزانة-الفيدرالية">2.6. الخزانة الفيدرالية</h3>
+<ul>
+<li><strong>الغرض:</strong> في المرحلة 1 — استلام أموال التمويل البِنيوي
+عبر مصنع VEB.RF (قرار الحكومة رقم 158) وقانون الميزانية؛ تأكيد الإنفاق
+المستهدف؛ تقرير تنفيذ المشروع. في المرحلة 2 (أفق 2029+) — استلام أموال
+الإصدار المضمون المستهدف من بنك روسيا في إطار التعديلات على قانون
+ميزانية الاتحاد الروسي.</li>
+<li><strong>البروتوكول:</strong> SMEV 3 + تقارير مؤمَّنة بالنماذج
+المعيارية للخزانة الفيدرالية.</li>
+<li><strong>الإشعارات:</strong> في كل مرحلة — إشعارات تلقائية في سجل DLT
+وسجل التدقيق.</li>
+</ul>
+<h3 id="rosfinmonitoring">2.7. Rosfinmonitoring</h3>
+<ul>
+<li><strong>اللائحة:</strong> FZ-115، أمر Rosfinmonitoring رقم 366.</li>
+<li><strong>التقارير:</strong>
+<ul>
+<li>الرقابة الإلزامية على العمليات؛</li>
+<li>العمليات المشبوهة (وفق نهج مستند إلى المخاطر)؛</li>
+<li>معلومات المستفيدين الحقيقيين.</li>
+</ul></li>
+<li><strong>الخصوصيات:</strong> ترسل المنصة التقارير بصيغ XML المعتمدة
+للخدمة الإلكترونية الفيدرالية.</li>
+</ul>
+<h2 id="أمن-التكاملات">3. أمن التكاملات</h2>
+<ul>
+<li>جميع القنوات مُشفَّرة باستخدام GOST TLS / ViPNet.</li>
+<li>جميع الطلبات — بمصادقة متبادلة mTLS.</li>
+<li>جميع المعاملات الصادرة موقَّعة بـ UKEP للمشغِّل.</li>
+<li>جميع الطلبات تُسجَّل في سجل التدقيق غير القابل للتعديل مع التتبّع.</li>
+<li>جميع بوابات التكامل تقع في قطاع DMZ بـ WAF مخصَّص.</li>
+</ul>
+<h2 id="إدارة-القاعدة-التعاقدية-للتكاملات">4. إدارة القاعدة التعاقدية
+للتكاملات</h2>
+<table>
+<thead>
+<tr>
+<th>الطرف</th>
+<th>نوع العقد</th>
+<th>المدة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>بنك روسيا</td>
+<td>اتفاقية تفاعل معلوماتي</td>
+<td>غير محدد، مع مراجعة سنوية</td>
+</tr>
+<tr>
+<td>الخزانة الفيدرالية</td>
+<td>اتفاقية تفاعل معلوماتي</td>
+<td>غير محدد</td>
+</tr>
+<tr>
+<td>وزارة التطوير الرقمي (SMEV 3، ESIA، EBS)</td>
+<td>لائحة الاتصال</td>
+<td>5 سنوات</td>
+</tr>
+<tr>
+<td>Rosreestr</td>
+<td>اتفاقية الاتصال</td>
+<td>5 سنوات</td>
+</tr>
+<tr>
+<td>Rosfinmonitoring</td>
+<td>لائحة الاتصال</td>
+<td>5 سنوات</td>
+</tr>
+<tr>
+<td>FNS</td>
+<td>اتفاقية SMEV</td>
+<td>5 سنوات</td>
+</tr>
+<tr>
+<td>NSPK</td>
+<td>اتفاقية تقنية</td>
+<td>3 سنوات</td>
+</tr>
+</tbody>
+</table>
+<h2 id="تطور-التكاملات">5. تطوّر التكاملات</h2>
+<ul>
+<li><strong>المرحلة 1 (2025–2026):</strong> المجموعة الأساسية
+INT-01–INT-11.</li>
+<li><strong>المرحلة 2 (2026–2027):</strong> إضافة INT-12–INT-17
+وسيناريوهات موسَّعة للروبل الرقمي.</li>
+<li><strong>المرحلة 3 (2027+):</strong> تكاملات بين الدول (BRICS+،
+الاتحاد الاقتصادي الأوراسي).</li>
+</ul>
+<h2 id="إدارة-حوادث-التكاملات">6. إدارة حوادث التكاملات</h2>
+<ul>
+<li>رصد توافر كل تكامل على مدار الساعة.</li>
+<li>تنبيهات عند تجاوز العتبات (الكُمون، معدل الأخطاء).</li>
+<li>مراجعات منتظمة مع فِرَق الجهات المالكة.</li>
+<li>قنوات احتياطية للتكاملات الحرجة (بنك روسيا، الخزانة
+الفيدرالية).</li>
+</ul>
+</article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

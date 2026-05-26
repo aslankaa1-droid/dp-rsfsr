@@ -1,0 +1,544 @@
+﻿<!doctype html>
+<html lang="ru" data-theme="daylight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ЦП РСФСР · Прототип мобильного приложения</title>
+<meta name="theme-color" content="#0B2B5C">
+<link rel="stylesheet" href="../../_shared/brand.css">
+<style>
+:root{
+  --primary:#0B2B5C; --primary-dark:#061A3A; --primary-light:#1F4A8F;
+  --accent:#C9A961; --accent-soft:#E8D8A8;
+  --n900:#1A1D24; --n700:#3B414C; --n500:#6C7280; --n300:#D0D4DB; --n100:#F4F6FA; --w:#FFFFFF;
+  --success:#1E8E5C; --warning:#C58A1C; --error:#B33A3A;
+}
+*{box-sizing:border-box; margin:0; padding:0}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  min-height:100vh; padding:24px; color:var(--n900);
+}
+.lab{max-width:1400px; margin:0 auto; color:var(--w)}
+.lab-head{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-start; gap:24px; margin-bottom:32px}
+.lab-title{font-family:'Onest',sans-serif; font-weight:700; font-size:28px; line-height:1.2; margin-bottom:8px}
+.lab-sub{color:rgba(255,255,255,.7); font-size:14px; max-width:50ch; line-height:1.5}
+.lab-meta{font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); text-align:right}
+.lab-meta div{margin-bottom:4px}
+
+.screens-row{display:flex; flex-wrap:wrap; gap:32px 24px; justify-content:flex-start; padding-bottom:32px}
+
+/* Phone frame */
+.phone{
+  width:320px; flex-shrink:0;
+  border-radius:36px;
+  background:#000; padding:10px;
+  box-shadow:0 20px 60px rgba(0,0,0,.35), 0 8px 16px rgba(0,0,0,.25);
+}
+.phone-screen{
+  background:var(--w); border-radius:28px;
+  height:660px; overflow:hidden; position:relative;
+  display:flex; flex-direction:column;
+}
+.phone-notch{
+  position:absolute; top:8px; left:50%; transform:translateX(-50%);
+  width:90px; height:22px; background:#000; border-radius:14px; z-index:5;
+}
+.phone-cap{
+  text-align:center; margin-top:12px; font-family:'JetBrains Mono',monospace;
+  font-size:11px; color:var(--accent); letter-spacing:.1em;
+}
+.phone-cap b{display:block; color:var(--w); font-size:13px; margin-bottom:2px; font-family:'Onest',sans-serif; font-weight:600}
+
+/* Status bar */
+.statusbar{
+  height:36px; display:flex; justify-content:space-between; align-items:center;
+  padding:0 22px; font-size:13px; font-weight:600; color:var(--n900); flex-shrink:0;
+}
+.statusbar.dark{color:var(--w)}
+.icons-rt{display:flex; gap:6px; font-size:11px}
+
+/* Common app chrome */
+.appbar{display:flex; align-items:center; justify-content:space-between; padding:8px 20px 12px; flex-shrink:0; border-bottom:1px solid var(--n100); background:var(--w)}
+.appbar.dark{background:transparent; border-bottom:none; color:var(--w)}
+.appbar h3{font-family:'Onest',sans-serif; font-size:18px; font-weight:600; color:var(--primary)}
+.appbar.dark h3{color:var(--w)}
+.appbar-back{width:32px; height:32px; display:grid; place-items:center; border-radius:8px; background:var(--n100); color:var(--primary); font-size:18px; cursor:pointer}
+.appbar.dark .appbar-back{background:rgba(255,255,255,.12); color:var(--w)}
+.appbar-action{width:32px; height:32px; display:grid; place-items:center; color:var(--primary); cursor:pointer}
+
+/* Body scroll */
+.body{flex:1; overflow-y:auto; padding:16px 20px; background:var(--n100)}
+.body.white{background:var(--w)}
+.body.dark{background:linear-gradient(180deg, var(--primary-dark) 0%, var(--primary) 100%); color:var(--w)}
+
+/* Bottom nav */
+.bottom-nav{height:60px; background:var(--w); border-top:1px solid var(--n100); display:flex; flex-shrink:0}
+.nav-item{flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; font-size:10px; color:var(--n500); gap:2px; cursor:pointer}
+.nav-item.active{color:var(--primary)}
+.nav-item i{font-style:normal; font-size:18px}
+
+/* Helpers */
+.h-center{display:flex; align-items:center; justify-content:center; height:100%}
+.brand-big{width:80px; height:80px; background:var(--accent); border-radius:18px; display:grid; place-items:center; color:var(--primary-dark); font-family:'Onest',sans-serif; font-weight:700; font-size:36px; position:relative; margin:0 auto 24px}
+.brand-big::after{content:""; position:absolute; top:10px; right:10px; width:12px; height:12px; background:var(--primary-dark)}
+
+.tagline{text-align:center; max-width:240px; margin:0 auto}
+.tagline h1{font-family:'Onest',sans-serif; font-size:24px; color:var(--w); margin-bottom:8px; line-height:1.2}
+.tagline p{font-size:13px; color:rgba(255,255,255,.75); line-height:1.5; margin-bottom:32px}
+
+.btn{display:block; width:100%; padding:14px 16px; border-radius:12px; border:none; font-family:inherit; font-size:14px; font-weight:600; cursor:pointer; text-align:center}
+.btn-primary{background:var(--accent); color:var(--primary-dark)}
+.btn-secondary{background:rgba(255,255,255,.1); color:var(--w); border:1px solid rgba(255,255,255,.2); margin-top:10px}
+.btn-primary-light{background:var(--primary); color:var(--w); margin-top:16px}
+.btn-ghost{background:transparent; color:var(--primary); border:1px solid var(--primary); margin-top:10px}
+
+/* Field */
+.field{margin-bottom:14px}
+.field label{display:block; font-size:11px; color:var(--n500); font-weight:600; text-transform:uppercase; letter-spacing:.08em; margin-bottom:6px}
+.field input, .field select{width:100%; padding:13px 14px; border:1px solid var(--n300); border-radius:10px; font-size:14px; font-family:inherit; background:var(--w); color:var(--n900)}
+.field input:focus, .field select:focus{outline:none; border-color:var(--primary)}
+.field-row{display:flex; gap:10px}
+.field-row .field{flex:1}
+
+/* Cards inside app */
+.acard{background:var(--w); border:1px solid var(--n100); border-radius:14px; padding:14px 16px; margin-bottom:10px; box-shadow:0 1px 2px rgba(11,43,92,.04)}
+.acard h4{font-family:'Onest',sans-serif; font-size:14px; font-weight:600; color:var(--primary); margin-bottom:4px}
+.acard p{font-size:12px; color:var(--n500); line-height:1.4}
+.acard-row{display:flex; justify-content:space-between; align-items:center; gap:10px}
+.acard-val{font-family:'Onest',sans-serif; font-size:18px; font-weight:700; color:var(--primary)}
+.acard-val em{color:var(--accent); font-style:normal; font-size:12px; margin-left:3px}
+.tag{display:inline-block; padding:3px 8px; border-radius:6px; font-size:10px; font-weight:600; letter-spacing:.04em; text-transform:uppercase}
+.tag-active{background:rgba(30,142,92,.12); color:var(--success)}
+.tag-process{background:rgba(197,138,28,.12); color:var(--warning)}
+.tag-new{background:rgba(59,130,196,.12); color:var(--info, #3B82C4)}
+
+.balance-card{background:linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color:var(--w); border-radius:18px; padding:20px; margin-bottom:14px; position:relative; overflow:hidden}
+.balance-card::after{content:""; position:absolute; top:-30%; right:-20%; width:200px; height:200px; background:radial-gradient(circle, rgba(201,169,97,.2), transparent 70%)}
+.bal-lbl{font-size:11px; opacity:.7; letter-spacing:.08em; text-transform:uppercase; font-weight:600; margin-bottom:6px}
+.bal-val{font-family:'Onest',sans-serif; font-size:30px; font-weight:700; margin-bottom:14px}
+.bal-val em{font-size:14px; color:var(--accent); font-style:normal; margin-left:4px}
+.bal-row{display:flex; justify-content:space-between; font-size:12px}
+.bal-row span:first-child{opacity:.7}
+
+/* Quick actions */
+.qa-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:14px}
+.qa{background:var(--w); border-radius:12px; padding:10px 6px; text-align:center; cursor:pointer; border:1px solid var(--n100)}
+.qa i{font-style:normal; font-size:20px; display:block; margin-bottom:4px}
+.qa span{font-size:10px; color:var(--n700); display:block; line-height:1.2}
+
+/* Sectioned list */
+.list-section{margin-bottom:14px}
+.list-header{font-size:11px; font-weight:600; color:var(--n500); text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; padding:0 4px; display:flex; justify-content:space-between}
+.list-header a{color:var(--primary); text-decoration:none; font-weight:600; font-size:11px}
+
+/* Step progress */
+.steps{display:flex; gap:6px; margin-bottom:20px}
+.steps i{flex:1; height:4px; background:var(--n300); border-radius:2px; font-style:normal}
+.steps i.done{background:var(--accent)}
+.steps i.cur{background:var(--primary)}
+
+.section-title{font-family:'Onest',sans-serif; font-size:18px; color:var(--primary); font-weight:600; margin-bottom:12px}
+
+/* Smart contract */
+.sc{background:var(--w); border:1px solid var(--n100); border-radius:14px; padding:16px}
+.sc-row{display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid var(--n100); font-size:12px}
+.sc-row:last-child{border-bottom:none}
+.sc-row span:first-child{color:var(--n500)}
+.sc-row span:last-child{color:var(--n900); font-weight:600; font-family:'JetBrains Mono',monospace}
+.sc-doc{background:var(--n100); padding:12px; border-radius:10px; margin-top:14px; font-size:11px; line-height:1.5; color:var(--n700); max-height:120px; overflow-y:auto}
+
+/* Success screen */
+.success-icon{width:80px; height:80px; background:var(--success); border-radius:50%; display:grid; place-items:center; color:var(--w); font-size:40px; margin:32px auto 20px}
+.success-text{text-align:center; padding:0 16px}
+.success-text h2{font-family:'Onest',sans-serif; font-size:22px; color:var(--primary); margin-bottom:8px}
+.success-text p{font-size:13px; color:var(--n700); line-height:1.5; margin-bottom:20px}
+.cfa-id{background:var(--n100); padding:14px; border-radius:10px; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--primary); margin:0 16px; word-break:break-all; line-height:1.4; text-align:center}
+
+/* Profile */
+.profile-head{text-align:center; padding:20px 0}
+.avatar{width:72px; height:72px; background:linear-gradient(135deg, var(--primary), var(--accent)); border-radius:50%; margin:0 auto 12px; display:grid; place-items:center; color:var(--w); font-family:'Onest',sans-serif; font-size:24px; font-weight:700}
+.profile-name{font-family:'Onest',sans-serif; font-size:18px; font-weight:600; color:var(--primary); margin-bottom:4px}
+.profile-id{font-size:12px; color:var(--n500); font-family:'JetBrains Mono',monospace}
+.menu-row{display:flex; align-items:center; padding:14px; background:var(--w); border-radius:10px; margin-bottom:6px; cursor:pointer; border:1px solid var(--n100)}
+.menu-row i{font-style:normal; width:32px; font-size:16px; color:var(--primary)}
+.menu-row span{flex:1; font-size:14px; color:var(--n900); font-weight:500}
+.menu-row::after{content:"›"; color:var(--n500); font-size:18px}
+
+/* Footer */
+.lab-foot{margin-top:24px; padding-top:16px; border-top:1px solid rgba(255,255,255,.1); font-size:11px; color:rgba(255,255,255,.5); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap}
+</style>
+</head>
+<body style="padding-top:64px">
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="../../07_Презентации/Большая_презентация/index.html"><span class="brand-mark">Р</span><span data-i18n="brand.name">ЦП РСФСР</span></a>
+    <nav class="topbar-nav">
+      <a href="../../07_Презентации/Большая_презентация/index.html">Большая презентация</a>
+      <a href="../Спецификация_мобильного_приложения.html">Спецификация</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#hub">Документы</a>
+      <a href="../../08_Веб-сайт/HTML_основной/index.html">Сайт</a>
+    </nav>
+    <div class="topbar-actions">
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-i18n-btn="ru">RU</button>
+        <button class="tbtn" data-i18n-btn="en">EN</button>
+        <button class="tbtn" data-i18n-btn="fr">FR</button>
+        <button class="tbtn" data-i18n-btn="ar">عر</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-theme-btn="daylight" aria-label="Дневная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+        <button class="tbtn" data-theme-btn="midnight" aria-label="Тёмная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="tbtn" data-theme-btn="sepia">◐</button>
+        <button class="tbtn" data-theme-btn="contrast">A11Y</button>
+      </div>
+      <button class="tbtn tbtn-burger">≡</button>
+    </div>
+  </div>
+</header>
+
+<div class="lab">
+  <header class="lab-head">
+    <div>
+      <h1 class="lab-title">Прототип мобильного приложения ЦП РСФСР</h1>
+      <p class="lab-sub">Кликабельный демонстрационный прототип основного пользовательского флоу: от регистрации залогодателя до получения вознаграждения по реализованному ЦФА. Десять ключевых экранов.</p>
+    </div>
+    <div class="lab-meta">
+      <div>Кагиров А.-Х. А.</div>
+      <div>Свид. №4011265 · 19.12.2024</div>
+      <div>iOS / Android / Windows</div>
+    </div>
+  </header>
+
+  <div class="screens-row">
+
+    <!-- 1. Splash / Welcome -->
+    <div>
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="phone-notch"></div>
+          <div class="statusbar dark"><span style="color:#fff">09:41</span><span class="icons-rt" style="color:#fff">5G · ▮▮▮</span></div>
+          <div class="body dark h-center" style="padding:32px 24px">
+            <div>
+              <div class="brand-big">Р</div>
+              <div class="tagline">
+                <h1>Цифровая Платформа РСФСР</h1>
+                <p>Российский Сервис Финансирования Социального Развития</p>
+                <button class="btn btn-primary">Войти через Госуслуги</button>
+                <button class="btn btn-secondary">Биометрия</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-cap"><b>01 · Вход</b>Авторизация через ЕСИА / ЕБС</div>
+    </div>
+
+    <!-- 2. KYC Step -->
+    <div>
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="phone-notch"></div>
+          <div class="statusbar"><span>09:42</span><span class="icons-rt">5G · ▮▮▮</span></div>
+          <div class="appbar"><div class="appbar-back">‹</div><h3>Регистрация</h3><div class="appbar-action">···</div></div>
+          <div class="body">
+            <div class="steps"><i class="done"></i><i class="cur"></i><i></i><i></i></div>
+            <div class="section-title">Подтверждение личности</div>
+            <div class="field"><label>Фамилия</label><input value="Иванов"></div>
+            <div class="field"><label>Имя</label><input value="Иван"></div>
+            <div class="field"><label>Отчество</label><input value="Иванович"></div>
+            <div class="field-row">
+              <div class="field"><label>Серия</label><input value="4520"></div>
+              <div class="field"><label>Номер</label><input value="123456"></div>
+            </div>
+            <div class="field"><label>ИНН</label><input value="770100000000"></div>
+            <button class="btn btn-primary-light">Продолжить</button>
+          </div>
+        </div>
+      </div>
+      <div class="phone-cap"><b>02 · Идентификация</b>KYC по 115-ФЗ</div>
+    </div>
+
+    <!-- 3. Home / Dashboard -->
+    <div>
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="phone-notch"></div>
+          <div class="statusbar"><span>09:43</span><span class="icons-rt">5G · ▮▮▮</span></div>
+          <div class="appbar"><h3 style="font-size:16px; color:var(--n500); font-weight:500">Добрый день,</h3><div class="appbar-action">⚙</div></div>
+          <div style="padding:0 20px 8px; background:var(--w)"><h2 style="font-family:'Onest'; font-size:22px; color:var(--primary); font-weight:700">Иван Иванович</h2></div>
+          <div class="body">
+            <div class="balance-card">
+              <div class="bal-lbl">Активы в работе</div>
+              <div class="bal-val">12 850 000<em>₽</em></div>
+              <div class="bal-row"><span>В залоге</span><span>2 объекта</span></div>
+              <div class="bal-row"><span>Доход за месяц</span><span style="color:var(--accent)">+ 28 400 ₽</span></div>
+            </div>
+            <div class="qa-grid">
+              <div class="qa"><i>＋</i><span>Подать актив</span></div>
+              <div class="qa"><i>◷</i><span>Оценка</span></div>
+              <div class="qa"><i>₽</i><span>Доходы</span></div>
+              <div class="qa"><i>⚐</i><span>История</span></div>
+            </div>
+            <div class="list-section">
+              <div class="list-header"><span>Мои активы</span><a href="#">Все</a></div>
+              <div class="acard">
+                <div class="acard-row">
+                  <div>
+                    <h4>Квартира · ул. Тверская, 12</h4>
+                    <p>97 м² · оценка 16.05.2025</p>
+                  </div>
+                  <span class="tag tag-active">Активно</span>
+                </div>
+                <div class="acard-row" style="margin-top:8px"><span style="font-size:11px; color:var(--n500)">Текущий ЦФА</span><span class="acard-val">8 200 000<em>₽</em></span></div>
+              </div>
+              <div class="acard">
+                <div class="acard-row">
+                  <div>
+                    <h4>Земельный участок · Истринский р-н</h4>
+                    <p>12 соток · ИЖС</p>
+                  </div>
+                  <span class="tag tag-process">Оценка</span>
+                </div>
+                <div class="acard-row" style="margin-top:8px"><span style="font-size:11px; color:var(--n500)">Прогноз ЦФА</span><span class="acard-val">4 650 000<em>₽</em></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="bottom-nav">
+            <div class="nav-item active"><i>⌂</i><span>Главная</span></div>
+            <div class="nav-item"><i>◧</i><span>Активы</span></div>
+            <div class="nav-item"><i>⚙</i><span>ЦФА</span></div>
+            <div class="nav-item"><i>◴</i><span>Доходы</span></div>
+            <div class="nav-item"><i>○</i><span>Профиль</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-cap"><b>03 · Главный экран</b>Портфель залогодателя</div>
+    </div>
+
+    <!-- 4. Add asset -->
+    <div>
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="phone-notch"></div>
+          <div class="statusbar"><span>09:44</span><span class="icons-rt">5G · ▮▮▮</span></div>
+          <div class="appbar"><div class="appbar-back">‹</div><h3>Новый актив</h3><div class="appbar-action">⌕</div></div>
+          <div class="body">
+            <div class="steps"><i class="done"></i><i class="done"></i><i class="cur"></i><i></i></div>
+            <div class="section-title">Параметры объекта</div>
+            <div class="field"><label>Тип имущества</label><select><option>Недвижимость · Квартира</option><option>Недвижимость · Дом</option><option>Земельный участок</option><option>Транспорт</option><option>Интеллектуальная собственность</option><option>Ценные бумаги</option></select></div>
+            <div class="field"><label>Кадастровый номер</label><input value="77:01:0001000:1234"></div>
+            <div class="field"><label>Адрес</label><input value="г. Москва, ул. Тверская, д. 12, кв. 45"></div>
+            <div class="field-row">
+              <div class="field"><label>Площадь, м²</label><input value="97"></div>
+              <div class="field"><label>Год постройки</label><input value="2015"></div>
+            </div>
+            <div class="acard" style="background:rgba(59,130,196,.06); border-color:rgba(59,130,196,.2)"><p style="color:var(--info, #3B82C4); font-size:12px">Данные ЕГРН подгрузятся автоматически через интеграцию с Росреестром.</p></div>
+            <button class="btn btn-primary-light">Запросить оценку</button>
+          </div>
+        </div>
+      </div>
+      <div class="phone-cap"><b>04 · Подача актива</b>Интеграция с ЕГРН</div>
+    </div>
+
+    <!-- 5. Valuation result -->
+    <div>
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="phone-notch"></div>
+          <div class="statusbar"><span>09:48</span><span class="icons-rt">5G · ▮▮▮</span></div>
+          <div class="appbar"><div class="appbar-back">‹</div><h3>Результат оценки</h3><div class="appbar-action">⤓</div></div>
+          <div class="body">
+            <div class="balance-card" style="background:linear-gradient(135deg,var(--success),#16A06A)">
+              <div class="bal-lbl">Оценочная стоимость</div>
+              <div class="bal-val">16 400 000<em>₽</em></div>
+              <div class="bal-row"><span>Залоговый ЦФА (50%)</span><span style="font-weight:600">8 200 000 ₽</span></div>
+            </div>
+            <div class="sc">
+              <div class="sc-row"><span>Оценщик</span><span>Партнёр платформы</span></div>
+              <div class="sc-row"><span>Метод</span><span>Сравнительный</span></div>
+              <div class="sc-row"><span>Страхование</span><span style="color:var(--success)">Включено</span></div>
+              <div class="sc-row"><span>Действительна до</span><span>15.11.2025</span></div>
+              <div class="sc-row"><span>Стандарт</span><span>135-ФЗ</span></div>
+            </div>
+            <button class="btn btn-primary-light">Перейти к смарт-контракту</button>
+            <button class="btn btn-ghost">Запросить переоценку</button>
+          </div>
+        </div>
+      </div>
+      <div class="phone-cap"><b>05 · Оценка</b>135-ФЗ, страховое покрытие</div>
+    </div>
+
+    <!-- 6. Smart contract -->
+    <div>
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="phone-notch"></div>
+          <div class="statusbar"><span>09:50</span><span class="icons-rt">5G · ▮▮▮</span></div>
+          <div class="appbar"><div class="appbar-back">‹</div><h3>Смарт-контракт</h3><div class="appbar-action">?</div></div>
+          <div class="body">
+            <div class="steps"><i class="done"></i><i class="done"></i><i class="done"></i><i class="cur"></i></div>
+            <div class="section-title">Условия выпуска ЦФА</div>
+            <div class="sc">
+              <div class="sc-row"><span>Номинал ЦФА</span><span>8 200 000 ₽</span></div>
+              <div class="sc-row"><span>Срок</span><span>36 месяцев</span></div>
+              <div class="sc-row"><span>Ставка вознаграждения</span><span style="color:var(--accent)">4,2% годовых</span></div>
+              <div class="sc-row"><span>Целевое использование</span><span>Нацпроект</span></div>
+              <div class="sc-row"><span>Условия мены</span><span>Авто</span></div>
+              <div class="sc-row"><span>Страхование</span><span>Партнёр платформы</span></div>
+              <div class="sc-row"><span>Эскроу-агент</span><span>Банк России</span></div>
+            </div>
+            <div class="sc-doc">Условия исполняются автоматически согласно ст. 4 №259-ФЗ, ст. 309–310 ГК РФ. По истечении срока обременение снимается. Доход выплачивается ежеквартально на ваш счёт в банке-партнёре.</div>
+            <button class="btn btn-primary-light">Подписать (ЭП ЕСИА)</button>
+            <button class="btn btn-ghost">Скачать договор</button>
+          </div>
+        </div>
+      </div>
+      <div class="phone-cap"><b>06 · Контракт</b>Существенные условия</div>
+    </div>
+
+    <!-- 7. Signing -->
+    <div>
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="phone-notch"></div>
+          <div class="statusbar"><span>09:51</span><span class="icons-rt">5G · ▮▮▮</span></div>
+          <div class="appbar"><h3>Подтверждение</h3></div>
+          <div class="body white h-center" style="padding:24px">
+            <div style="text-align:center">
+              <div style="width:120px; height:120px; border:4px solid var(--accent); border-radius:50%; margin:0 auto 24px; display:grid; place-items:center; color:var(--primary); font-family:'Onest'; font-size:48px; font-weight:700; position:relative">
+                ЭП
+                <div style="position:absolute; bottom:-6px; right:-6px; width:30px; height:30px; background:var(--success); border-radius:50%; display:grid; place-items:center; color:#fff; font-size:14px">✓</div>
+              </div>
+              <h2 style="font-family:'Onest'; font-size:20px; color:var(--primary); margin-bottom:8px">Электронная подпись</h2>
+              <p style="font-size:13px; color:var(--n700); line-height:1.5; margin-bottom:24px">Введите код из SMS на ваш номер<br><b>+7 (***) ***-12-34</b></p>
+              <div style="display:flex; gap:8px; justify-content:center; margin-bottom:24px">
+                <div style="width:42px; height:48px; border:2px solid var(--primary); border-radius:8px; display:grid; place-items:center; font-family:'Onest'; font-size:20px; font-weight:700; color:var(--primary)">7</div>
+                <div style="width:42px; height:48px; border:2px solid var(--primary); border-radius:8px; display:grid; place-items:center; font-family:'Onest'; font-size:20px; font-weight:700; color:var(--primary)">4</div>
+                <div style="width:42px; height:48px; border:2px solid var(--primary); border-radius:8px; display:grid; place-items:center; font-family:'Onest'; font-size:20px; font-weight:700; color:var(--primary)">2</div>
+                <div style="width:42px; height:48px; border:2px solid var(--n300); border-radius:8px; display:grid; place-items:center; color:var(--n300)">_</div>
+                <div style="width:42px; height:48px; border:2px solid var(--n300); border-radius:8px; display:grid; place-items:center; color:var(--n300)">_</div>
+                <div style="width:42px; height:48px; border:2px solid var(--n300); border-radius:8px; display:grid; place-items:center; color:var(--n300)">_</div>
+              </div>
+              <p style="font-size:11px; color:var(--n500); margin-bottom:8px">ГОСТ Р 34.10-2012 / ГОСТ Р 34.11-2012</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-cap"><b>07 · Подпись</b>Усиленная квалифицированная ЭП</div>
+    </div>
+
+    <!-- 8. Success / CFA issued -->
+    <div>
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="phone-notch"></div>
+          <div class="statusbar"><span>09:52</span><span class="icons-rt">5G · ▮▮▮</span></div>
+          <div class="appbar"><h3>ЦФА выпущен</h3></div>
+          <div class="body white">
+            <div class="success-icon">✓</div>
+            <div class="success-text">
+              <h2>ЦФА успешно выпущен</h2>
+              <p>Передан в Банк России. Эмиссия средств зафиксирована на специальном эскроу-счёте.</p>
+            </div>
+            <div class="cfa-id">ID ЦФА:<br>cfa-7b3a-rsfsr-2025-0000018</div>
+            <div style="padding:16px 16px 0">
+              <div class="sc" style="margin-top:16px">
+                <div class="sc-row"><span>Номинал</span><span>8 200 000 ₽</span></div>
+                <div class="sc-row"><span>Статус</span><span style="color:var(--success)">Передан в ЦБ РФ</span></div>
+                <div class="sc-row"><span>Обременение в ЕГРН</span><span style="color:var(--success)">Зарегистрировано</span></div>
+                <div class="sc-row"><span>Следующая выплата</span><span>15.08.2025</span></div>
+              </div>
+              <button class="btn btn-primary-light" style="margin-top:16px">На главную</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-cap"><b>08 · Выпуск ЦФА</b>Эскроу-счёт Банка России</div>
+    </div>
+
+    <!-- 9. Income history -->
+    <div>
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="phone-notch"></div>
+          <div class="statusbar"><span>10:05</span><span class="icons-rt">5G · ▮▮▮</span></div>
+          <div class="appbar"><div class="appbar-back">‹</div><h3>Доходы и история</h3><div class="appbar-action">⤓</div></div>
+          <div class="body">
+            <div class="balance-card">
+              <div class="bal-lbl">Доход с начала года</div>
+              <div class="bal-val">142 800<em>₽</em></div>
+              <div class="bal-row"><span>За месяц</span><span style="color:var(--accent)">+ 28 400 ₽</span></div>
+            </div>
+            <div class="list-header"><span>Поступления</span><a href="#">Фильтр</a></div>
+            <div class="acard"><div class="acard-row">
+              <div><h4>Квартальное вознаграждение</h4><p>ЦФА · Квартира Тверская</p></div>
+              <span class="acard-val">+ 86 100<em>₽</em></span>
+            </div><p style="margin-top:6px; font-size:11px; color:var(--n500)">15.05.2025 · Зачислено на счёт в Сбер</p></div>
+            <div class="acard"><div class="acard-row">
+              <div><h4>Квартальное вознаграждение</h4><p>ЦФА · Квартира Тверская</p></div>
+              <span class="acard-val">+ 56 700<em>₽</em></span>
+            </div><p style="margin-top:6px; font-size:11px; color:var(--n500)">15.02.2025 · Зачислено на счёт в Сбер</p></div>
+            <div class="acard" style="background:rgba(11,43,92,.04); border-color:rgba(11,43,92,.1)"><div class="acard-row">
+              <div><h4>Выпуск ЦФА</h4><p>Квартира Тверская</p></div>
+              <span class="tag tag-active">Активно</span>
+            </div><p style="margin-top:6px; font-size:11px; color:var(--n500)">15.11.2024</p></div>
+          </div>
+          <div class="bottom-nav">
+            <div class="nav-item"><i>⌂</i><span>Главная</span></div>
+            <div class="nav-item"><i>◧</i><span>Активы</span></div>
+            <div class="nav-item"><i>⚙</i><span>ЦФА</span></div>
+            <div class="nav-item active"><i>◴</i><span>Доходы</span></div>
+            <div class="nav-item"><i>○</i><span>Профиль</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-cap"><b>09 · Доходы</b>История вознаграждений</div>
+    </div>
+
+    <!-- 10. Profile -->
+    <div>
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="phone-notch"></div>
+          <div class="statusbar"><span>10:08</span><span class="icons-rt">5G · ▮▮▮</span></div>
+          <div class="appbar"><h3>Профиль</h3><div class="appbar-action">⚙</div></div>
+          <div class="body">
+            <div class="profile-head">
+              <div class="avatar">ИИ</div>
+              <div class="profile-name">Иван Иванович Иванов</div>
+              <div class="profile-id">ID · usr-rsfsr-104221</div>
+            </div>
+            <div class="menu-row"><i>✓</i><span>Идентификация · ЕСИА</span></div>
+            <div class="menu-row"><i>◐</i><span>Биометрия (ЕБС)</span></div>
+            <div class="menu-row"><i>$</i><span>Реквизиты для выплат</span></div>
+            <div class="menu-row"><i>≡</i><span>Документы</span></div>
+            <div class="menu-row"><i>⚐</i><span>Уведомления</span></div>
+            <div class="menu-row"><i>?</i><span>Помощь и поддержка</span></div>
+            <div class="menu-row"><i>⌂</i><span>Безопасность</span></div>
+            <p style="text-align:center; margin-top:24px; font-size:10px; color:var(--n500)">ЦП РСФСР · v.прототип<br>Свидетельство №4011265 · 19.12.2024</p>
+          </div>
+          <div class="bottom-nav">
+            <div class="nav-item"><i>⌂</i><span>Главная</span></div>
+            <div class="nav-item"><i>◧</i><span>Активы</span></div>
+            <div class="nav-item"><i>⚙</i><span>ЦФА</span></div>
+            <div class="nav-item"><i>◴</i><span>Доходы</span></div>
+            <div class="nav-item active"><i>○</i><span>Профиль</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-cap"><b>10 · Профиль</b>Идентификация и безопасность</div>
+    </div>
+
+  </div>
+
+  <footer class="lab-foot">
+    <span>© Цифровая Платформа РСФСР · Кагиров А.-Х. А.</span>
+    <span style="font-family:'JetBrains Mono',monospace">Прототип · iOS / Android / Windows · PWA + Capacitor v6+</span>
+  </footer>
+</div>
+<script src="../../_shared/i18n.js"></script>
+<script src="../../_shared/app.js"></script>
+</body>
+</html>

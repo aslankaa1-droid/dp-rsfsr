@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../../../">
+  <title>Windows Build (README) · ЦПФСР.РФ</title>
+  <meta name="description" content="Windows Build (README) — Windows Build (README). ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../../../_design-system/print.css">
+
+  <script defer src="../../../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../../../_design-system/i18n.js"></script>
+  <script defer src="../../../../../_design-system/ticker.js"></script>
+  <script defer src="../../../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Windows Build (README)</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Windows Build (README)</span>
+      <h1>Windows Build (README)</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="cpfsr-windows-build">CPFSR Windows build</h1>
+<p>Instruction for building the Windows application (MSIX) for
+distribution via the Microsoft Store and the Enterprise channel.</p>
+<hr />
+<h2 id="approaches-to-the-windows-build">1. Approaches to the Windows
+build</h2>
+<p>Two approaches are supported:</p>
+<h3 id="a.-pwa-msix-recommended">A. PWA + MSIX (recommended)</h3>
+<p>The fastest path: packaging the existing PWA into an MSIX package via
+<strong>PWA Builder</strong> or directly through <strong>Microsoft Edge
+WebView2</strong>.</p>
+<h3 id="b.-.net-maui-webview2">B. .NET MAUI + WebView2</h3>
+<p>A full-fledged native Windows application with PWA integration via
+the WebView2 control. Provides more capabilities (native Windows Hello
+biometrics, protected storage), but requires more work.</p>
+<p>Both approaches are described below.</p>
+<hr />
+<h2 id="approach-a-pwa-builder">2. Approach A: PWA Builder</h2>
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li>Windows 10/11.</li>
+<li>Edge or Chrome with PWA support.</li>
+<li>Microsoft Partner Center account (for publication).</li>
+</ul>
+<h3 id="installing-pwa-builder-cli">Installing PWA Builder CLI</h3>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> @pwabuilder/cli</span></code></pre></div>
+<h3 id="generation-of-the-msix-package">Generation of the MSIX
+package</h3>
+<ol type="1">
+<li>Publish the PWA on a temporary domain (a local HTTPS server can be
+used for testing):</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># In the CPFSR root</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> http-server <span class="at">-S</span> <span class="at">-p</span> 8443    <span class="co"># requires a self-signed certificate</span></span></code></pre></div>
+<ol start="2" type="1">
+<li>Generate the MSIX:</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pwa-builder</span> https://app.dp-rsfsr.ru <span class="dt">\</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">--package</span> windows <span class="dt">\</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">--output</span> ./windows-build</span></code></pre></div>
+<p>Result: <code>windows-build/RU.RSFSR.App.msix</code>.</p>
+<h3 id="msix-signing">MSIX signing</h3>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create self-signed for tests</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">makecert</span> <span class="at">-r</span> <span class="at">-h</span> 0 <span class="at">-n</span> <span class="st">&quot;CN=RU.RSFSR.App&quot;</span> <span class="at">-eku</span> 1.3.6.1.5.5.7.3.3 <span class="dt">\</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">-pe</span> <span class="at">-sv</span> rsfsr.pvk rsfsr.cer</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pvk2pfx</span> <span class="at">-pvk</span> rsfsr.pvk <span class="at">-spc</span> rsfsr.cer <span class="at">-pfx</span> rsfsr.pfx <span class="at">-po</span> PASSWORD</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Sign</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="ex">signtool</span> sign /f rsfsr.pfx /p PASSWORD <span class="dt">\</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>              /fd SHA256 /tr http://timestamp.digicert.com /td SHA256 <span class="dt">\</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>              ./windows-build/RU.RSFSR.App.msix</span></code></pre></div>
+<p>For a production build, an EV Code Signing Certificate is used
+(domestic CAs: SkyDNS, RU-CENTER).</p>
+<hr />
+<h2 id="approach-b-.net-maui-webview2">3. Approach B: .NET MAUI +
+WebView2</h2>
+<h3 id="requirements-1">Requirements</h3>
+<ul>
+<li>Visual Studio 2022 with the “Mobile development with .NET”
+workload.</li>
+<li>.NET 8 SDK.</li>
+<li>Windows 10/11 SDK.</li>
+</ul>
+<h3 id="project-creation">Project creation</h3>
+<ol type="1">
+<li>Visual Studio → New Project → .NET MAUI App.</li>
+<li>Name: <code>RU.RSFSR.App</code>.</li>
+<li>Location: <code>Сборки/windows/</code>.</li>
+<li>Framework: .NET 8.</li>
+</ol>
+<h3 id="structure">Structure</h3>
+<pre><code>windows/
+  App/
+    Platforms/
+      Windows/
+        Package.appxmanifest
+        App.xaml
+    Resources/
+      AppIcon/
+      Splash/
+    MauiProgram.cs
+    MainPage.xaml          ← WebView2 with PWA
+    App.csproj
+  AppPackages/
+  build/</code></pre>
+<h3 id="mainpage.xaml">MainPage.xaml</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode xml"><code class="sourceCode xml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;utf-8&quot;</span> <span class="fu">?&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">ContentPage</span> <span class="ot">xmlns=</span><span class="st">&quot;http://schemas.microsoft.com/dotnet/2021/maui&quot;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>             <span class="ot">xmlns:x=</span><span class="st">&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>             <span class="ot">x:Class=</span><span class="st">&quot;RU.RSFSR.App.MainPage&quot;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>             <span class="ot">BackgroundColor=</span><span class="st">&quot;#0B2B5C&quot;</span>&gt;</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">WebView</span> <span class="ot">x:Name=</span><span class="st">&quot;webView&quot;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>             <span class="ot">Source=</span><span class="st">&quot;https://app.dp-rsfsr.ru&quot;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>             <span class="ot">HorizontalOptions=</span><span class="st">&quot;Fill&quot;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>             <span class="ot">VerticalOptions=</span><span class="st">&quot;Fill&quot;</span> /&gt;</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">ContentPage</span>&gt;</span></code></pre></div>
+<h3 id="package.appxmanifest">Package.appxmanifest</h3>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode xml"><code class="sourceCode xml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;utf-8&quot;</span><span class="fu">?&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">Package</span> <span class="ot">xmlns=</span><span class="st">&quot;http://schemas.microsoft.com/appx/manifest/foundation/windows10&quot;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>         <span class="ot">xmlns:uap=</span><span class="st">&quot;http://schemas.microsoft.com/appx/manifest/uap/windows10&quot;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>         <span class="ot">xmlns:rescap=</span><span class="st">&quot;http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities&quot;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>         <span class="ot">IgnorableNamespaces=</span><span class="st">&quot;uap rescap&quot;</span>&gt;</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">Identity</span> <span class="ot">Name=</span><span class="st">&quot;RU.RSFSR.App&quot;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>            <span class="ot">Publisher=</span><span class="st">&quot;CN=Kagirov Abdul-Khakim Akhmadovich&quot;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>            <span class="ot">Version=</span><span class="st">&quot;1.0.0.0&quot;</span> /&gt;</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">Properties</span>&gt;</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">DisplayName</span>&gt;CPFSR&lt;/<span class="kw">DisplayName</span>&gt;</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">PublisherDisplayName</span>&gt;A.-Kh. A. Kagirov&lt;/<span class="kw">PublisherDisplayName</span>&gt;</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">Logo</span>&gt;Resources\StoreLogo.png&lt;/<span class="kw">Logo</span>&gt;</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">Properties</span>&gt;</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">Dependencies</span>&gt;</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">TargetDeviceFamily</span> <span class="ot">Name=</span><span class="st">&quot;Windows.Desktop&quot;</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>                       <span class="ot">MinVersion=</span><span class="st">&quot;10.0.17763.0&quot;</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>                       <span class="ot">MaxVersionTested=</span><span class="st">&quot;10.0.22621.0&quot;</span> /&gt;</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">Dependencies</span>&gt;</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">Resources</span>&gt;</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">Resource</span> <span class="ot">Language=</span><span class="st">&quot;ru-RU&quot;</span>/&gt;</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">Resource</span> <span class="ot">Language=</span><span class="st">&quot;en-US&quot;</span>/&gt;</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">Resource</span> <span class="ot">Language=</span><span class="st">&quot;fr-FR&quot;</span>/&gt;</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">Resource</span> <span class="ot">Language=</span><span class="st">&quot;ar-SA&quot;</span>/&gt;</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">Resources</span>&gt;</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">Applications</span>&gt;</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">Application</span> <span class="ot">Id=</span><span class="st">&quot;App&quot;</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>                 <span class="ot">Executable=</span><span class="st">&quot;App.exe&quot;</span></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>                 <span class="ot">EntryPoint=</span><span class="st">&quot;RU.RSFSR.App.App&quot;</span>&gt;</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>      &lt;<span class="kw">uap:VisualElements</span> <span class="ot">DisplayName=</span><span class="st">&quot;CPFSR&quot;</span></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>                          <span class="ot">Description=</span><span class="st">&quot;Russian Service for Social Development Financing&quot;</span></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>                          <span class="ot">BackgroundColor=</span><span class="st">&quot;#0B2B5C&quot;</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>                          <span class="ot">Square150x150Logo=</span><span class="st">&quot;Resources\Square150x150Logo.png&quot;</span></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>                          <span class="ot">Square44x44Logo=</span><span class="st">&quot;Resources\Square44x44Logo.png&quot;</span>&gt;</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">uap:DefaultTile</span> <span class="ot">Wide310x150Logo=</span><span class="st">&quot;Resources\Wide310x150Logo.png&quot;</span></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>                         <span class="ot">Square71x71Logo=</span><span class="st">&quot;Resources\Square71x71Logo.png&quot;</span></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>                         <span class="ot">Square310x310Logo=</span><span class="st">&quot;Resources\Square310x310Logo.png&quot;</span> /&gt;</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">uap:SplashScreen</span> <span class="ot">Image=</span><span class="st">&quot;Resources\SplashScreen.png&quot;</span></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>                          <span class="ot">BackgroundColor=</span><span class="st">&quot;#0B2B5C&quot;</span> /&gt;</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>      &lt;/<span class="kw">uap:VisualElements</span>&gt;</span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>    &lt;/<span class="kw">Application</span>&gt;</span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">Applications</span>&gt;</span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">Capabilities</span>&gt;</span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">Capability</span> <span class="ot">Name=</span><span class="st">&quot;internetClient&quot;</span> /&gt;</span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">Capability</span> <span class="ot">Name=</span><span class="st">&quot;privateNetworkClientServer&quot;</span> /&gt;</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">uap:Capability</span> <span class="ot">Name=</span><span class="st">&quot;userAccountInformation&quot;</span> /&gt;</span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">Capabilities</span>&gt;</span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">Package</span>&gt;</span></code></pre></div>
+<h3 id="icons">Icons</h3>
+<p>Required sizes (Windows 11): - <code>Square44x44Logo.png</code> —
+44×44 (taskbar, jumplist) - <code>Square71x71Logo.png</code> — 71×71
+(small tile) - <code>Square150x150Logo.png</code> — 150×150 (medium
+tile) - <code>Wide310x150Logo.png</code> — 310×150 (wide tile) -
+<code>Square310x310Logo.png</code> — 310×310 (large tile) -
+<code>StoreLogo.png</code> — 50×50 (Store listing) -
+<code>SplashScreen.png</code> — 620×300</p>
+<p>Generate from <code>Приложение/icons/icon-512.svg</code>.</p>
+<h3 id="build">Build</h3>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From the windows folder</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">msbuild</span> App.sln /p:Configuration=Release /p:Platform=x64</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># MSIX bundle</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ex">msbuild</span> App.sln /t:Publish /p:Configuration=Release /p:Platform=x64 <span class="dt">\</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>       /p:AppxBundlePlatforms=<span class="st">&quot;x64|arm64&quot;</span> <span class="dt">\</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>       /p:AppxBundle=Always <span class="dt">\</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>       /p:UapAppxPackageBuildMode=StoreUpload</span></code></pre></div>
+<p>Result:
+<code>windows/AppPackages/App_1.0.0.0_x64_arm64_bundle.msixbundle</code>.</p>
+<h2 id="publication-in-the-microsoft-store">4. Publication in the
+Microsoft Store</h2>
+<ol type="1">
+<li>Microsoft Partner Center: https://partner.microsoft.com</li>
+<li>Create a Microsoft Store App.</li>
+<li>Reserve the name: “CPFSR”.</li>
+<li>Fill in the metadata:
+<ul>
+<li>Description (4 languages).</li>
+<li>Screenshots (for various sizes).</li>
+<li>512×512 icon.</li>
+<li>Age category.</li>
+<li>Category: Finance.</li>
+</ul></li>
+<li>Upload the MSIX bundle.</li>
+<li>Submit for certification (period: 24–48 hours).</li>
+</ol>
+<h2 id="distribution-outside-the-store">5. Distribution outside the
+Store</h2>
+<p>For corporate distribution: - <strong>Microsoft Intune</strong> —
+MDM. - <strong>PowerShell installation</strong>:
+<code>Add-AppxPackage -Path App.msixbundle</code>. - <strong>Web
+installer</strong>: an AppInstaller file on a host.</p>
+<hr />
+<h2 id="publication-readiness-checklist">6. Publication readiness
+checklist</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />Package.appxmanifest
+configured.</label></li>
+<li><label><input type="checkbox" />Icons of all sizes.</label></li>
+<li><label><input type="checkbox" />Splash screen.</label></li>
+<li><label><input type="checkbox" />Code signing certificate
+signature.</label></li>
+<li><label><input type="checkbox" />Tested on Windows 10 and Windows
+11.</label></li>
+<li><label><input type="checkbox" />Tested on x64 and
+ARM64.</label></li>
+<li><label><input type="checkbox" />WebView2 Runtime
+installed/verified.</label></li>
+<li><label><input type="checkbox" />Promotional materials for the
+Store.</label></li>
+<li><label><input type="checkbox" />Privacy Policy.</label></li>
+<li><label><input type="checkbox" />Microsoft Partner Center
+account.</label></li>
+</ul>
+</article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

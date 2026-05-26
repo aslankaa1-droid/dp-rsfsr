@@ -1,0 +1,393 @@
+﻿<!doctype html>
+<html lang="ru" data-theme="daylight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Модель данных · ЦП РСФСР</title>
+<meta name="theme-color" content="#0B2B5C">
+<link rel="stylesheet" href="../../_shared/brand.css">
+<style>
+/* Document-specific styles */
+body { padding-top: 80px; }
+.doc-wrap { max-width: 880px; margin: 0 auto; padding: 48px 24px 96px; }
+.doc-header {
+  padding-bottom: 24px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.doc-header .eyebrow { margin-bottom: 12px; }
+.doc-header h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--primary); margin-bottom: 12px; }
+.doc-header p { color: var(--fg-mute); font-size: .9375rem; margin: 0; }
+.doc-content h1, .doc-content h2, .doc-content h3, .doc-content h4 { color: var(--primary); margin-top: 2em; margin-bottom: .5em; }
+.doc-content h1 { font-size: 1.875rem; }
+.doc-content h2 { font-size: 1.5rem; padding-bottom: 6px; border-bottom: 1px solid var(--border-soft); }
+.doc-content h3 { font-size: 1.25rem; }
+.doc-content h4 { font-size: 1.0625rem; color: var(--fg); }
+.doc-content p { line-height: 1.7; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content ul, .doc-content ol { line-height: 1.7; padding-left: 1.5em; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content li { margin-bottom: .35em; }
+.doc-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 12px 20px;
+  margin: 1em 0;
+  background: var(--bg-soft);
+  border-radius: 0 8px 8px 0;
+  color: var(--fg-soft);
+}
+.doc-content code {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg-soft);
+  padding: 2px 6px; border-radius: 4px;
+  font-size: .875em; color: var(--primary);
+}
+.doc-content pre {
+  background: var(--bg-soft); padding: 16px; border-radius: 10px;
+  overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: .875rem;
+  border: 1px solid var(--border-soft); margin: 1em 0;
+}
+.doc-content table {
+  width: 100%; border-collapse: collapse; margin: 1.5em 0;
+  background: var(--card-bg); border: 1px solid var(--border-soft);
+  border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-1);
+}
+.doc-content table th {
+  background: var(--primary); color: var(--primary-on);
+  text-align: left; padding: 12px 16px; font-weight: 600;
+  font-size: .8125rem; letter-spacing: .04em; text-transform: uppercase;
+}
+.doc-content table td {
+  padding: 10px 16px; border-bottom: 1px solid var(--border-soft);
+  font-size: .9375rem; color: var(--fg-soft);
+}
+.doc-content table tr:last-child td { border-bottom: none; }
+.doc-content table tr:hover td { background: var(--bg-soft); }
+.doc-content hr {
+  border: none; height: 1px; background: var(--border-soft); margin: 2.5em 0;
+}
+.doc-content a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+.doc-content a:hover { color: var(--accent); }
+.doc-content strong { color: var(--fg); font-weight: 700; }
+
+.doc-actions {
+  display: flex; gap: 10px; margin-top: 32px; flex-wrap: wrap;
+}
+
+/* Floating top button */
+.totop {
+  position: fixed; bottom: 24px; right: 24px; z-index: 50;
+  background: var(--primary); color: var(--primary-on);
+  border: none; border-radius: 50%; width: 48px; height: 48px;
+  cursor: pointer; box-shadow: var(--shadow-3);
+  display: none; font-size: 1.25rem;
+  transition: transform .2s var(--ease);
+}
+.totop:hover { transform: translateY(-2px); }
+.totop.show { display: grid; place-items: center; }
+[dir="rtl"] .totop { right: auto; left: 24px; }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div class="scroll-progress"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="../../07_Презентации/Большая_презентация/index.html"><span class="brand-mark">Р</span><span data-i18n="brand.name">ЦП РСФСР</span></a>
+    <nav class="topbar-nav">
+      <a href="../../07_Презентации/Большая_презентация/index.html#about" data-i18n="nav.about">О платформе</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#hub" data-i18n="nav.hub">Документы</a>
+      <a href="../../08_Веб-сайт/HTML_основной/index.html">Сайт</a>
+      <a href="../../07_Презентации/Малая_презентация/index.html">Презентация</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#contacts" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+    <div class="topbar-actions">
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-i18n-btn="ru">RU</button>
+        <button class="tbtn" data-i18n-btn="en">EN</button>
+        <button class="tbtn" data-i18n-btn="fr">FR</button>
+        <button class="tbtn" data-i18n-btn="ar">عر</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-theme-btn="daylight" aria-label="Дневная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+        <button class="tbtn" data-theme-btn="midnight" aria-label="Тёмная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="tbtn" data-theme-btn="sepia">◐</button>
+        <button class="tbtn" data-theme-btn="contrast">A11Y</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn" data-font-action="dec">A−</button>
+        <button class="tbtn" data-font-action="reset">A</button>
+        <button class="tbtn" data-font-action="inc">A+</button>
+      </div>
+      <button class="tbtn tbtn-burger">≡</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="eyebrow">Конструкторская документация · ЦП РСФСР ·
+МП</span>
+      <h1>Модель данных</h1>
+      <p>Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 · 19.12.2024 · ЦП РСФСР</p>
+    </header>
+    <article class="doc-content">
+<h1 id="модель-данных-мобильного-приложения">Модель данных мобильного
+приложения</h1>
+<h2 id="цп-рсфср">ЦП РСФСР</h2>
+<p><strong>Условное обозначение:</strong> РСФСР.МП.08.МД</p>
+<hr />
+<h2 id="локальная-модель-данных-на-устройстве">1. Локальная модель
+данных (на устройстве)</h2>
+<h3 id="хранение">1.1. Хранение</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Тип данных</th>
+<th>Хранилище</th>
+<th>Шифрование</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Токены, ключи, биометрические идентификаторы</td>
+<td>iOS Keychain / Android Keystore / Windows Credential Locker</td>
+<td>средствами ОС</td>
+</tr>
+<tr>
+<td>Настройки приложения</td>
+<td>LocalStorage</td>
+<td>нет (нечувствительные)</td>
+</tr>
+<tr>
+<td>Кеш данных</td>
+<td>IndexedDB / SQLite</td>
+<td>AES-256 локальным ключом</td>
+</tr>
+<tr>
+<td>Временные файлы</td>
+<td>App Sandbox</td>
+<td>средствами ОС</td>
+</tr>
+</tbody>
+</table>
+<h3 id="сущности">1.2. Сущности</h3>
+<h4 id="user">User</h4>
+<pre class="json"><code>{
+  &quot;id&quot;: &quot;usr-rsfsr-104221&quot;,
+  &quot;fio&quot;: &quot;Иван Иванович Иванов&quot;,
+  &quot;initials&quot;: &quot;ИИ&quot;,
+  &quot;kyc_status&quot;: &quot;verified&quot;,
+  &quot;esia_id&quot;: &quot;1234567890&quot;,
+  &quot;biometric_ebs&quot;: true,
+  &quot;phone_masked&quot;: &quot;+7 *** *** 45 67&quot;,
+  &quot;email_masked&quot;: &quot;i***@example.ru&quot;,
+  &quot;region&quot;: &quot;Москва&quot;,
+  &quot;joined_at&quot;: &quot;2024-11-01T12:00:00Z&quot;
+}</code></pre>
+<h4 id="asset">Asset</h4>
+<pre class="json"><code>{
+  &quot;id&quot;: &quot;ast-r-7a3b&quot;,
+  &quot;type&quot;: &quot;real&quot;,
+  &quot;subtype&quot;: &quot;apartment&quot;,
+  &quot;title&quot;: &quot;Квартира&quot;,
+  &quot;address&quot;: &quot;г. Москва, ул. Тверская, д. 12, кв. 45&quot;,
+  &quot;kadastr&quot;: &quot;77:01:0001000:1234&quot;,
+  &quot;area_m2&quot;: 97,
+  &quot;year_built&quot;: 2015,
+  &quot;valuation&quot;: {
+    &quot;amount_rub&quot;: 16400000,
+    &quot;method&quot;: &quot;comparative&quot;,
+    &quot;partner&quot;: &quot;...&quot;,
+    &quot;insurance_included&quot;: true,
+    &quot;valid_until&quot;: &quot;2025-11-15&quot;
+  },
+  &quot;cfa_active_nominal_rub&quot;: 8200000,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;encumbrance&quot;: {
+    &quot;type&quot;: &quot;temporary&quot;,
+    &quot;egrn_record_id&quot;: &quot;...&quot;
+  },
+  &quot;documents&quot;: [&quot;doc-001&quot;, &quot;doc-002&quot;]
+}</code></pre>
+<h4 id="smartcontract">SmartContract</h4>
+<pre class="json"><code>{
+  &quot;id&quot;: &quot;sc-7a3b&quot;,
+  &quot;asset_id&quot;: &quot;ast-r-7a3b&quot;,
+  &quot;nominal_rub&quot;: 8200000,
+  &quot;term_months&quot;: 36,
+  &quot;target_programme&quot;: &quot;Жильё и городская среда&quot;,
+  &quot;rate_pct&quot;: 4.2,
+  &quot;total_income_rub&quot;: 1033200,
+  &quot;escrow_agent&quot;: &quot;ЦБ РФ&quot;,
+  &quot;insurance_partner&quot;: &quot;...&quot;,
+  &quot;encumbrance_registrar&quot;: &quot;Росреестр&quot;,
+  &quot;issue_date&quot;: &quot;2024-11-15&quot;,
+  &quot;maturity_date&quot;: &quot;2027-11-15&quot;,
+  &quot;signed_at&quot;: &quot;2024-11-15T10:23:45Z&quot;,
+  &quot;signature_uke&quot;: &quot;...&quot;,
+  &quot;status&quot;: &quot;active&quot;
+}</code></pre>
+<h4 id="cfa">CFA</h4>
+<pre class="json"><code>{
+  &quot;id&quot;: &quot;cfa-7a3b-rsfsr-2025-00018&quot;,
+  &quot;smart_contract_id&quot;: &quot;sc-7a3b&quot;,
+  &quot;asset_id&quot;: &quot;ast-r-7a3b&quot;,
+  &quot;asset_title&quot;: &quot;Квартира Тверская&quot;,
+  &quot;nominal_rub&quot;: 8200000,
+  &quot;term_months&quot;: 36,
+  &quot;rate_pct&quot;: 4.2,
+  &quot;programme&quot;: &quot;Жильё и городская среда&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;issued_at&quot;: &quot;2024-11-15T11:00:00Z&quot;,
+  &quot;next_payout_date&quot;: &quot;2025-08-15&quot;,
+  &quot;cb_record_id&quot;: &quot;cb-...&quot;,
+  &quot;events_count&quot;: 3,
+  &quot;payouts_total_rub&quot;: 142800
+}</code></pre>
+<h4 id="transaction">Transaction</h4>
+<pre class="json"><code>{
+  &quot;id&quot;: &quot;tx-001&quot;,
+  &quot;type&quot;: &quot;income&quot;,
+  &quot;subtype&quot;: &quot;quarterly_payout&quot;,
+  &quot;cfa_id&quot;: &quot;cfa-7a3b-rsfsr-2025-00018&quot;,
+  &quot;amount_rub&quot;: 86100,
+  &quot;date&quot;: &quot;2025-05-15&quot;,
+  &quot;description&quot;: &quot;Квартальное вознаграждение&quot;,
+  &quot;status&quot;: &quot;completed&quot;
+}</code></pre>
+<h4 id="notification">Notification</h4>
+<pre class="json"><code>{
+  &quot;id&quot;: &quot;ntf-001&quot;,
+  &quot;icon&quot;: &quot;check&quot;,
+  &quot;title&quot;: &quot;Выплата зачислена&quot;,
+  &quot;text&quot;: &quot;Квартальное вознаграждение 86 100 ₽ зачислено на ваш счёт.&quot;,
+  &quot;category&quot;: &quot;income&quot;,
+  &quot;action_url&quot;: &quot;/cfa-detail/cfa-7a3b-rsfsr-2025-00018&quot;,
+  &quot;unread&quot;: true,
+  &quot;created_at&quot;: &quot;2025-05-15T10:00:00Z&quot;
+}</code></pre>
+<h2 id="серверная-модель-данных">2. Серверная модель данных</h2>
+<p>Полная модель данных описана в технической документации платформы
+(<code>01_Техническая_документация/06_DLT_реестр_ЦФА.md</code>). Клиент
+использует REST-проекции серверной модели.</p>
+<h3 id="ключевые-сущности">Ключевые сущности</h3>
+<ul>
+<li><strong>Identity</strong> (пользователь) — связь с ЕСИА.</li>
+<li><strong>KycRecord</strong> — записи KYC-проверки.</li>
+<li><strong>Asset</strong> — актив с привязкой к
+ЕГРН/Роспатенту/депозитарию.</li>
+<li><strong>Valuation</strong> — оценка с партнёром, методом,
+страхованием.</li>
+<li><strong>SmartContract</strong> — смарт-контракт с подписями всех
+сторон.</li>
+<li><strong>CFAToken</strong> — токен в DLT-реестре с полной
+историей.</li>
+<li><strong>Escrow</strong> — эскроу-запись Банка России.</li>
+<li><strong>Treasury</strong> — записи Федерального казначейства.</li>
+<li><strong>NationalProgramme</strong> — программа национального
+проекта.</li>
+<li><strong>InsurancePolicy</strong> — страховой полис.</li>
+<li><strong>EgrnRecord</strong> — запись обременения.</li>
+<li><strong>Notification</strong> — уведомление пользователя.</li>
+<li><strong>AuditLog</strong> — неизменяемый журнал всех операций.</li>
+</ul>
+<h2 id="связи-между-сущностями">3. Связи между сущностями</h2>
+<pre><code>User ─&lt; Asset ─&lt; Valuation
+        │
+        └─&lt; SmartContract ──&gt; CFAToken ──&gt; Escrow ──&gt; Treasury
+                                  │
+                                  ├─&gt; InsurancePolicy
+                                  ├─&gt; EgrnRecord
+                                  └─&lt; Transaction (выплаты)
+
+User ─&lt; Notification
+User ─&lt; AuditLog (read-only)</code></pre>
+<h2 id="жизненный-цикл-данных">4. Жизненный цикл данных</h2>
+<h3 id="asset-1">4.1. Asset</h3>
+<pre><code>DRAFT → PENDING_VALUATION → VALUED → CONTRACT_PENDING →
+  ACTIVE → [RETURNED | REINVESTED | EXCHANGED]</code></pre>
+<h3 id="cfa-1">4.2. CFA</h3>
+<pre><code>PENDING_ISSUE → ISSUED → IN_CB_PORTFOLIO → ACTIVE →
+  [MATURED → RETURNED | EXCHANGED_MENA | INSURED_CASE | REINVESTED]</code></pre>
+<h2 id="объём-данных">5. Объём данных</h2>
+<table>
+<thead>
+<tr>
+<th>Сущность</th>
+<th>Среднее количество на пользователя</th>
+<th>Пиковое</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asset</td>
+<td>2</td>
+<td>50</td>
+</tr>
+<tr>
+<td>SmartContract</td>
+<td>3</td>
+<td>100</td>
+</tr>
+<tr>
+<td>CFA</td>
+<td>3</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Transaction</td>
+<td>50 в год</td>
+<td>1 000</td>
+</tr>
+<tr>
+<td>Notification</td>
+<td>100 в год</td>
+<td>5 000</td>
+</tr>
+</tbody>
+</table>
+<p>Совокупный объём локального кеша — до 200 МБ.</p>
+<h2 id="резервное-копирование">6. Резервное копирование</h2>
+<p>Данные пользователя автоматически реплицируются в серверной части. На
+устройстве хранится только кеш для оффлайн-режима. При смене устройства
+все данные восстанавливаются после первой авторизации в новом
+устройстве.</p>
+<h2 id="удаление-данных-пользователя">7. Удаление данных
+пользователя</h2>
+<p>При удалении аккаунта пользователя в соответствии с 152-ФЗ: 1. Данные
+на устройстве — удаляются сразу. 2. Данные в эксплуатационной БД —
+удаляются за 30 дней. 3. Данные в DLT-реестре (для активных ЦФА) —
+обременение должно быть снято; после этого реестр-запись остаётся в
+архивном виде с пометкой об удалении ПДн собственника, но с сохранением
+хронологии (требование надзорной отчётности). 4. Резервные копии —
+удаляются по графику ротации (до 7 лет хранения по требованию ЦБ).</p>
+<hr />
+<p><em>Подробное описание серверной модели данных — в технической
+документации платформы.</em></p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../07_Презентации/Большая_презентация/index.html#hub">К хабу документов</a>
+      <a class="btn btn--ghost" href="../../07_Презентации/Большая_презентация/index.html">Большая презентация</a>
+    </div>
+  </div>
+</main>
+
+<button class="totop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Наверх">↑</button>
+
+<script src="../../_shared/i18n.js"></script>
+<script src="../../_shared/app.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const t = document.querySelector('.totop');
+  if (t) t.classList.toggle('show', window.scrollY > 600);
+});
+</script>
+</body>
+</html>

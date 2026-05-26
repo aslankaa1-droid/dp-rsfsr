@@ -1,0 +1,79 @@
+{
+  "_meta": { "lang": "en", "dir": "ltr", "name": "English", "flag": "🇬🇧" },
+  "brand": {
+    "short": "CPFSR.RF",
+    "name": "Digital Platform for Social Development Financing",
+    "tagline": "Institutional rail for social investment, pre-Seed → Series A ready"
+  },
+  "nav": {
+    "home": "Home",
+    "concept": "Concept",
+    "tech": "Technology",
+    "legal": "Legal framework",
+    "finance": "Financial model",
+    "valuation": "Valuation",
+    "business": "Business plan",
+    "dd": "DD report",
+    "expertise": "Expertise",
+    "audit": "Audit",
+    "presentations": "Presentations",
+    "design": "Design",
+    "brand": "Brand book",
+    "mobile": "Mobile app",
+    "dataroom": "Data room",
+    "governance": "Governance",
+    "rfp": "RFPs",
+    "sitemap": "Site map"
+  },
+  "actions": {
+    "open": "Open",
+    "download": "Download",
+    "back_to_top": "Back to top",
+    "back_to_home": "Back to home",
+    "more": "More",
+    "menu": "Menu",
+    "close": "Close",
+    "search": "Search",
+    "language": "Language",
+    "theme": "Theme"
+  },
+  "themes": {
+    "light": "Light",
+    "dark": "Dark",
+    "sepia": "Sepia"
+  },
+  "hero": {
+    "eyebrow": "Digital platform · pre-Seed → Series A",
+    "title_p1": "Institutional rail for",
+    "title_em": "social development financing",
+    "title_p2": " under SZPK and Federal Law 259-FZ",
+    "lead": "Wedge via the VEB.RF / Gazprombank / Ministry of Economic Development / Atomyze alliance. Base post-money valuation $95M, IRR 62%, NPV ₽51.2 bn. Two-stage architecture: Pilot Light within the existing 259-FZ → target perimeter.",
+    "cta_main": "Investor pitch deck",
+    "cta_secondary": "CBR briefing report"
+  },
+  "kpi": {
+    "npv": "NPV (Base)",
+    "irr": "Investor-level IRR",
+    "wacc": "WACC discount",
+    "payback": "Payback",
+    "postmoney": "Post-money (Base)",
+    "stake": "Round stake"
+  },
+  "sections": {
+    "blocks": { "eyebrow": "Project structure", "title": "Seventeen thematic blocks", "lead": "Complete documentation pack — from technical specs to Governance Pack and Compliance Matrix" },
+    "champion": { "eyebrow": "Government Champions", "title": "Stage 1 Champion-map", "lead": "Six institutional partners for the wedge launch through existing 259-FZ" },
+    "audit": { "eyebrow": "Composite audit", "title": "Post-Horizon-III · 9.22 / 10", "lead": "Series A institutional ready. 12 / 12 RED closed, 27 / 33 AMBER closed. Tier-1 fintech benchmarks confirmed." }
+  },
+  "ticker": {
+    "live": "Live"
+  },
+  "footer": {
+    "tagline": "CPFSR.RF — sovereign by nature, private by execution.",
+    "contact": "Contact",
+    "documents": "Documents",
+    "verification": "External verification",
+    "language_region": "Language & region",
+    "rights": "© 2026 Kagirov A.-Kh.A. · Center Group Company · certificate No. 4011265 (19.12.2024)",
+    "engagement": "Engagement reference: CPFSR-RF-DESIGN-2026"
+  }
+}

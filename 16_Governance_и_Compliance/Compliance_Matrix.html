@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../">
+  <title>Compliance Matrix (12×75) · ЦПФСР.РФ</title>
+  <meta name="description" content="Compliance Matrix (12×75) — Compliance. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../_design-system/tokens.css">
+  <link rel="stylesheet" href="../_design-system/global.css">
+  <link rel="stylesheet" href="../_design-system/components.css">
+  <link rel="stylesheet" href="../_design-system/rtl.css">
+  <link rel="stylesheet" href="../_design-system/print.css">
+
+  <script defer src="../_design-system/theme-switcher.js"></script>
+  <script defer src="../_design-system/i18n-data.js"></script>
+  <script defer src="../_design-system/i18n.js"></script>
+  <script defer src="../_design-system/ticker.js"></script>
+  <script defer src="../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Compliance</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Compliance</span>
+      <h1>Compliance Matrix (12×75)</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="international-compliance-matrix">International Compliance
+Matrix</h1>
+<p><strong>Project:</strong> ЦП РСФСР · <strong>Engagement
+reference:</strong> RSFSR-COMP-2026 · <strong>Дата:</strong> 24.05.2026
+<strong>Автор:</strong> Кагиров А.-Х.А. (свид. №4011265 от
+19.12.2024)</p>
+<p>Матрица соответствия проекта ЦП РСФСР к международным регуляторным и
+индустриальным фреймворкам. Используется в data-room для tier-1 vendor
+DD и в investor memorandum.</p>
+<hr />
+<h2 id="финансовая-отчётность">1. Финансовая отчётность</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Стандарт</th>
+<th>Статус</th>
+<th>Gap</th>
+<th>Roadmap</th>
+<th>Ответственный</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>РСБУ</strong> (обязательно для РФ)</td>
+<td>Будет внедрён с момента регистрации юр.лица</td>
+<td>n/a</td>
+<td>T+0 (вместе с регистрацией)</td>
+<td>CFO</td>
+</tr>
+<tr>
+<td><strong>IFRS 9</strong> (Financial Instruments)</td>
+<td>Не внедрён</td>
+<td>DRAFT-стадия методологии классификации ЦФА</td>
+<td>T+6 мес.</td>
+<td>CFO + аудитор</td>
+</tr>
+<tr>
+<td><strong>IFRS 13</strong> (Fair Value Measurement)</td>
+<td>Не внедрён</td>
+<td>Требуется для оценки ЦФА Level 3</td>
+<td>T+6 мес. (вместе с VDD)</td>
+<td>CFO + Big-4 VDD</td>
+</tr>
+<tr>
+<td><strong>IFRS 15</strong> (Revenue Recognition)</td>
+<td>Не внедрён</td>
+<td>5-stream revenue model нуждается в IFRS 15 sequencing</td>
+<td>T+6 мес.</td>
+<td>CFO</td>
+</tr>
+<tr>
+<td><strong>IFRS 16</strong> (Leases)</td>
+<td>Не внедрён</td>
+<td>ЦОДы + офисы — operating vs finance lease</td>
+<td>T+6 мес.</td>
+<td>CFO</td>
+</tr>
+<tr>
+<td><strong>IFRS 7</strong> (FI Disclosures)</td>
+<td>Не внедрён</td>
+<td>Risk management framework + sensitivity</td>
+<td>T+12 мес.</td>
+<td>CFO + Risk Committee</td>
+</tr>
+</tbody>
+</table>
+<h2 id="privacy-data-protection">2. Privacy &amp; Data Protection</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Стандарт</th>
+<th>Применимость</th>
+<th>Статус</th>
+<th>Gap</th>
+<th>Roadmap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>152-ФЗ «О персональных данных»</strong> (РФ)</td>
+<td>Обязательно</td>
+<td>Согласно policy
+<code>09_Мобильное_приложение/Публикация_RuStore/02_Политика_конфиденциальности.md</code></td>
+<td>Готово</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td><strong>GDPR (EU Regulation 2016/679)</strong></td>
+<td>Если нерезиденты ЕС</td>
+<td>Готовность через Privacy by Design</td>
+<td>Назначение DPO; формальный DPIA</td>
+<td>T+6 мес.</td>
+</tr>
+<tr>
+<td><strong>UK Data Protection Act 2018</strong></td>
+<td>Если UK LP</td>
+<td>Аналогично GDPR (UK-GDPR)</td>
+<td>То же</td>
+<td>T+6 мес.</td>
+</tr>
+<tr>
+<td><strong>California CCPA / CPRA</strong></td>
+<td>Если US LP</td>
+<td>Не критично</td>
+<td>Disclosures по запросу</td>
+<td>T+12 мес.</td>
+</tr>
+<tr>
+<td><strong>Brazilian LGPD</strong></td>
+<td>Не применимо</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td><strong>PDPA (Singapore)</strong></td>
+<td>Если SG LP</td>
+<td>Не критично</td>
+<td>Mapping privacy framework</td>
+<td>T+12 мес.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="information-security">3. Information Security</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Стандарт</th>
+<th>Применимость</th>
+<th>Статус</th>
+<th>Roadmap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ФСТЭК КИИ-1</strong> (РФ)</td>
+<td><strong>Обязательно</strong> для финансовой инфраструктуры</td>
+<td>В процессе</td>
+<td>T+8 мес. (см.
+<code>15_RFP_международная_верификация/03_IT_Сертификация/Roadmap_SOC2_ISO27001_ФСТЭК.md</code>)</td>
+</tr>
+<tr>
+<td><strong>ISO/IEC 27001:2022</strong></td>
+<td>Желательно для LP</td>
+<td>Не начато</td>
+<td>T+14 мес.</td>
+</tr>
+<tr>
+<td><strong>ISO/IEC 27017:2015</strong> (cloud)</td>
+<td>Опционально</td>
+<td>Не начато</td>
+<td>T+16 мес.</td>
+</tr>
+<tr>
+<td><strong>ISO/IEC 27018:2019</strong> (PII in cloud)</td>
+<td>Опционально</td>
+<td>Не начато</td>
+<td>T+16 мес.</td>
+</tr>
+<tr>
+<td><strong>SOC 2 Type II</strong> (AICPA)</td>
+<td>Желательно для international LP</td>
+<td>Не начато</td>
+<td>T+18 мес.</td>
+</tr>
+<tr>
+<td><strong>CSA STAR Level 2</strong></td>
+<td>Опционально</td>
+<td>Не начато</td>
+<td>T+18 мес.</td>
+</tr>
+<tr>
+<td><strong>PCI-DSS Level 1</strong></td>
+<td>Если card payments</td>
+<td>Не применимо в Stage 1</td>
+<td>T+24 мес. (если потребуется)</td>
+</tr>
+<tr>
+<td><strong>NIST Cybersecurity Framework</strong></td>
+<td>Reference</td>
+<td>Будет применён как guideline</td>
+<td>Cross-mapped к ФСТЭК + ISO 27001</td>
+</tr>
+</tbody>
+</table>
+<h2 id="aml-cft-counter-terrorism">4. AML / CFT / Counter-Terrorism</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Стандарт</th>
+<th>Применимость</th>
+<th>Статус</th>
+<th>Gap</th>
+<th>Roadmap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>115-ФЗ «О противодействии легализации»</strong></td>
+<td>Обязательно</td>
+<td>Часть legal foundation</td>
+<td>Внедрение KYC через ЕБС / ЕСИА (Положение ЦБ 375-П)</td>
+<td>T+6 мес.</td>
+</tr>
+<tr>
+<td><strong>FATF Recommendations (40)</strong></td>
+<td>Reference</td>
+<td>Готовность через 115-ФЗ + ст. 859 ГК</td>
+<td>Полный mapping к FATF Rec.</td>
+<td>T+12 мес.</td>
+</tr>
+<tr>
+<td><strong>EU AMLD5 + AMLD6</strong></td>
+<td>Если EU LP</td>
+<td>Не критично для Stage 1</td>
+<td>Mapping в DD-материалы</td>
+<td>T+18 мес.</td>
+</tr>
+<tr>
+<td><strong>FATF Travel Rule (Rec. 16) для ЦФА</strong></td>
+<td>Применимо для cross-jurisdictional transfers</td>
+<td>Не применимо в Stage 1</td>
+<td>Внедрение в Stage 2 horizon</td>
+<td>T+30 мес.</td>
+</tr>
+<tr>
+<td><strong>OFAC SDN List screening</strong></td>
+<td>Если international counterparties</td>
+<td>Готовность через KYC + sanctions screening tool</td>
+<td>Bridger Insight / WorldCheck integration</td>
+<td>T+12 мес.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tax-tax-transparency">5. Tax &amp; Tax Transparency</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Стандарт</th>
+<th>Применимость</th>
+<th>Статус</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>НК РФ ст. 149 пп. 12.2</strong> (НДС-освобождение ЦФА)</td>
+<td>Применяется</td>
+<td>Включено в финмодель</td>
+</tr>
+<tr>
+<td><strong>НК РФ ст. 34.2</strong> (особенности налогообложения
+ЦП)</td>
+<td>Применяется</td>
+<td>Включено</td>
+</tr>
+<tr>
+<td><strong>НК РФ ИТ-льгота 5% до 31.12.2030</strong></td>
+<td>При ИТ-аккредитации + ≥70% ИТ-выручки</td>
+<td>Roadmap-стадия</td>
+</tr>
+<tr>
+<td><strong>FATCA (US tax)</strong></td>
+<td>Если US LP</td>
+<td>Compliance через KYC; reporting к IRS если применимо</td>
+</tr>
+<tr>
+<td><strong>CRS (OECD Common Reporting Standard)</strong></td>
+<td>Если international LP из participating jurisdictions</td>
+<td>Compliance через ЦБ</td>
+</tr>
+<tr>
+<td><strong>OECD BEPS</strong> (Base Erosion and Profit Shifting)</td>
+<td>Reference</td>
+<td>Прозрачная структура без BEPS-злоупотреблений</td>
+</tr>
+<tr>
+<td><strong>Pillar 2 (Global Minimum Tax 15%)</strong></td>
+<td>Не применимо в Stage 1 (revenue &lt; €750M)</td>
+<td>Мониторинг для Stage 2 horizon</td>
+</tr>
+</tbody>
+</table>
+<h2 id="investment-securities-regulation">6. Investment / Securities
+Regulation</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Стандарт</th>
+<th>Применимость</th>
+<th>Статус</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>259-ФЗ «О ЦФА»</strong> (РФ)</td>
+<td>Базовый</td>
+<td>Foundation проекта</td>
+</tr>
+<tr>
+<td><strong>39-ФЗ «О рынке ЦБ»</strong> (отграничение от ЦФА)</td>
+<td>Применимо</td>
+<td>Legal opinion требуется</td>
+</tr>
+<tr>
+<td><strong>MiFID II</strong> (EU)</td>
+<td>Если EU LP</td>
+<td>Не применимо в Stage 1; mapping для Stage 2</td>
+</tr>
+<tr>
+<td><strong>SEC Rule 506(c)</strong> (US, accredited investors)</td>
+<td>Если US LP</td>
+<td>Не применимо в Stage 1</td>
+</tr>
+<tr>
+<td><strong>SEC Reg D</strong> (US private placements)</td>
+<td>Если US LP</td>
+<td>Не применимо в Stage 1</td>
+</tr>
+<tr>
+<td><strong>Singapore Securities and Futures Act</strong></td>
+<td>Если SG LP</td>
+<td>Не применимо в Stage 1</td>
+</tr>
+<tr>
+<td><strong>MAS Payment Services Act (Singapore)</strong></td>
+<td>Если SG operations</td>
+<td>Не применимо</td>
+</tr>
+<tr>
+<td><strong>MiCA (EU Markets in Crypto-Assets Regulation)</strong></td>
+<td>Reference (international benchmark)</td>
+<td>Mapping для Stage 2 horizon</td>
+</tr>
+</tbody>
+</table>
+<h2 id="banking-custody">7. Banking / Custody</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Стандарт</th>
+<th>Применимость</th>
+<th>Статус</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basel III</strong> (BCBS)</td>
+<td>Если ЦП РСФСР станет банком (Stage 2 horizon)</td>
+<td>Не применимо в Stage 1</td>
+</tr>
+<tr>
+<td><strong>Положение ЦБ 779-П</strong></td>
+<td>Базовое (оператор ИС ЦФА)</td>
+<td>Foundation; через АО Атомайз в Stage 1</td>
+</tr>
+<tr>
+<td><strong>Указание ЦБ 4336-У</strong></td>
+<td>Базовое (учёт ЦФА)</td>
+<td>Foundation</td>
+</tr>
+<tr>
+<td><strong>ГК РФ ст. 860.7-860.10</strong> (эскроу)</td>
+<td>Применимо</td>
+<td>Foundation</td>
+</tr>
+<tr>
+<td><strong>161-ФЗ «О НПС»</strong></td>
+<td>Если payment rail</td>
+<td>Roadmap-стадия</td>
+</tr>
+</tbody>
+</table>
+<h2 id="anti-corruption">8. Anti-Corruption</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Стандарт</th>
+<th>Применимость</th>
+<th>Статус</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>273-ФЗ «О противодействии коррупции»</strong> (РФ)</td>
+<td>Обязательно</td>
+<td>Включено в Governance Pack</td>
+</tr>
+<tr>
+<td><strong>UK Bribery Act 2010</strong></td>
+<td>Если UK LP</td>
+<td>Включено в Governance Pack</td>
+</tr>
+<tr>
+<td><strong>FCPA (US Foreign Corrupt Practices Act)</strong></td>
+<td>Если US LP</td>
+<td>Включено в Governance Pack</td>
+</tr>
+<tr>
+<td><strong>OECD Anti-Bribery Convention</strong></td>
+<td>Reference</td>
+<td>Соблюдение</td>
+</tr>
+<tr>
+<td><strong>UN Convention against Corruption</strong></td>
+<td>Reference</td>
+<td>Соблюдение</td>
+</tr>
+</tbody>
+</table>
+<h2 id="labor-human-rights">9. Labor &amp; Human Rights</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Стандарт</th>
+<th>Применимость</th>
+<th>Статус</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ТК РФ</strong></td>
+<td>Обязательно</td>
+<td>Foundation</td>
+</tr>
+<tr>
+<td><strong>UK Modern Slavery Act 2015</strong></td>
+<td>Если UK LP</td>
+<td>Annual statement в Governance Pack</td>
+</tr>
+<tr>
+<td><strong>California Transparency in Supply Chains Act</strong></td>
+<td>Если US LP</td>
+<td>Готовность</td>
+</tr>
+<tr>
+<td><strong>UN Guiding Principles on Business and Human
+Rights</strong></td>
+<td>Reference</td>
+<td>Соблюдение</td>
+</tr>
+<tr>
+<td><strong>ILO Core Labour Standards</strong></td>
+<td>Reference</td>
+<td>Соблюдение</td>
+</tr>
+</tbody>
+</table>
+<h2 id="esg-climate">10. ESG &amp; Climate</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Стандарт</th>
+<th>Применимость</th>
+<th>Статус</th>
+<th>Roadmap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SASB Standards (Software &amp; IT Services +
+FS)</strong></td>
+<td>Применимо</td>
+<td>Adopted в Governance Pack</td>
+<td>T+12 мес. — first reporting</td>
+</tr>
+<tr>
+<td><strong>TCFD Framework</strong></td>
+<td>Адаптировано</td>
+<td>Adopted</td>
+<td>T+12 мес. — first disclosure</td>
+</tr>
+<tr>
+<td><strong>GRI Standards (Global Reporting Initiative)</strong></td>
+<td>Опционально</td>
+<td>Mapping подготовлен</td>
+<td>T+18 мес. — first GRI report</td>
+</tr>
+<tr>
+<td><strong>ESRS (European Sustainability Reporting Standards /
+CSRD)</strong></td>
+<td>Если EU LP с size threshold</td>
+<td>Roadmap-стадия</td>
+<td>T+24 мес.</td>
+</tr>
+<tr>
+<td><strong>PRI (Principles for Responsible Investment)</strong></td>
+<td>Reference (для LP отбора)</td>
+<td>Adopted policy</td>
+<td>T+12 мес.</td>
+</tr>
+<tr>
+<td><strong>SBTi (Science Based Targets initiative)</strong></td>
+<td>Reference</td>
+<td>Опциональное participation</td>
+<td>T+24 мес.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="operational-resilience">11. Operational Resilience</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Стандарт</th>
+<th>Применимость</th>
+<th>Статус</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ISO 22301 (BCM)</strong></td>
+<td>Рекомендуется</td>
+<td>Roadmap-стадия</td>
+</tr>
+<tr>
+<td><strong>NIST CSF for Critical Infrastructure</strong></td>
+<td>Reference</td>
+<td>Cross-mapping к ФСТЭК</td>
+</tr>
+<tr>
+<td><strong>Banking Operations Resilience (PRA / FCA)</strong></td>
+<td>Если UK LP / cross-border</td>
+<td>Не применимо в Stage 1</td>
+</tr>
+<tr>
+<td><strong>ECB SREP</strong></td>
+<td>Не применимо в Stage 1</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<h2 id="compliance-officer-reporting">12. Compliance Officer &amp;
+Reporting</h2>
+<ul>
+<li><strong>Compliance Officer:</strong> обязательное назначение
+(отдельная роль от General Counsel).</li>
+<li><strong>Подчинение:</strong> напрямую СД через Risk Committee.</li>
+<li><strong>Ежеквартальная отчётность</strong> в СД о статусе compliance
+по всем 12 категориям выше.</li>
+<li><strong>Annual Compliance Audit</strong> независимым аудитором
+(предпочтительно Big-4 или специализированный compliance auditor).</li>
+<li><strong>Compliance training</strong> обязательно для всех
+сотрудников ежегодно.</li>
+</ul>
+<h2 id="compliance-calendar">13. Compliance Calendar</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Месяц</th>
+<th>Активность</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1</td>
+<td>Annual Compliance Review · Audit Committee meeting · ESG annual
+report (SASB + TCFD)</td>
+</tr>
+<tr>
+<td>Q2</td>
+<td>KYC/AML refresh · Sanctions screening update · Privacy review</td>
+</tr>
+<tr>
+<td>Q3</td>
+<td>ISO 27001 surveillance audit (после первой сертификации) · SOC 2
+Type II audit (continuous)</td>
+</tr>
+<tr>
+<td>Q4</td>
+<td>Tax year-end · Regulatory filing review · Modern Slavery Statement
+update</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="bottom-line">Bottom line</h2>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Зрелость по категориям</th>
+<th style="text-align: center;">Сейчас (Stage 1 start)</th>
+<th style="text-align: center;">Цель (T+18 мес.)</th>
+<th style="text-align: center;">Цель (Stage 2, T+36 мес.)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Финансовая отчётность</td>
+<td style="text-align: center;">2/10</td>
+<td style="text-align: center;">7/10</td>
+<td style="text-align: center;">9/10</td>
+</tr>
+<tr>
+<td>Privacy</td>
+<td style="text-align: center;">5/10</td>
+<td style="text-align: center;">8/10</td>
+<td style="text-align: center;">9/10</td>
+</tr>
+<tr>
+<td>Information Security</td>
+<td style="text-align: center;">3/10</td>
+<td style="text-align: center;">8/10</td>
+<td style="text-align: center;">9/10</td>
+</tr>
+<tr>
+<td>AML/CFT</td>
+<td style="text-align: center;">5/10</td>
+<td style="text-align: center;">8/10</td>
+<td style="text-align: center;">9/10</td>
+</tr>
+<tr>
+<td>Tax</td>
+<td style="text-align: center;">7/10</td>
+<td style="text-align: center;">8/10</td>
+<td style="text-align: center;">9/10</td>
+</tr>
+<tr>
+<td>Securities</td>
+<td style="text-align: center;">6/10</td>
+<td style="text-align: center;">8/10</td>
+<td style="text-align: center;">9/10</td>
+</tr>
+<tr>
+<td>Anti-Corruption</td>
+<td style="text-align: center;">5/10</td>
+<td style="text-align: center;">9/10</td>
+<td style="text-align: center;">9/10</td>
+</tr>
+<tr>
+<td>ESG</td>
+<td style="text-align: center;">2/10</td>
+<td style="text-align: center;">7/10</td>
+<td style="text-align: center;">9/10</td>
+</tr>
+<tr>
+<td>Operational Resilience</td>
+<td style="text-align: center;">3/10</td>
+<td style="text-align: center;">7/10</td>
+<td style="text-align: center;">9/10</td>
+</tr>
+<tr>
+<td><strong>Общая зрелость</strong></td>
+<td style="text-align: center;"><strong>4.2/10</strong></td>
+<td style="text-align: center;"><strong>7.8/10</strong></td>
+<td style="text-align: center;"><strong>9.0/10</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Текущее состояние (4.2/10) соответствует pre-Seed startup в
+международной шкале; целевое (7.8/10 через 18 мес.) — Series A
+institutional ready; финальное (9.0/10 через 36 мес.) — Series B+
+international ready.</p>
+<hr />
+<p><strong>Дата:</strong> 24.05.2026 <strong>Engagement
+reference:</strong> RSFSR-COMP-2026 <strong>Center Group
+Company</strong></p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

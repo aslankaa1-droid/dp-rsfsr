@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../">
+  <title>DLT Register of DFAs · ЦПФСР.РФ</title>
+  <meta name="description" content="DLT Register of DFAs — DLT Register of DFAs. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../_design-system/print.css">
+
+  <script defer src="../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../_design-system/i18n.js"></script>
+  <script defer src="../../../_design-system/ticker.js"></script>
+  <script defer src="../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">DLT Register of DFAs</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">DLT Register of DFAs</span>
+      <h1>DLT Register of DFAs</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="dlt-register-of-dfas-in-cpfsr">DLT register of DFAs in
+CPFSR</h1>
+<p>The document describes the architecture of the distributed register
+of issue and circulation of digital financial assets based on a domestic
+DLT platform in compliance with the requirements of FZ-259, Bank of
+Russia Regulations No. 779-P and No. 780-P.</p>
+<hr />
+<h2 id="technological-basis">1. Technological basis</h2>
+<ul>
+<li>The underlying DLT platform — a Russian certified system of the
+“Masterchain” class or equivalent (the specific vendor is agreed with
+the Bank of Russia at the pilot stage).</li>
+<li>Register architecture — <strong>permissioned DLT</strong> (a closed,
+trusted register with a known node composition).</li>
+<li>Consensus algorithm — Practical Byzantine Fault Tolerance (PBFT) or
+its domestic analogue (RAFT with finality guarantee).</li>
+<li>Cryptography: GOST R 34.10-2012 (signature), GOST R 34.11-2012
+(hash).</li>
+<li>Transaction finality — deterministic (not probabilistic), which
+distinguishes it from public blockchains.</li>
+</ul>
+<h2 id="composition-of-register-nodes">2. Composition of register
+nodes</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Node type</th>
+<th>Number (minimum)</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operator node (with write right)</td>
+<td>3 (geo-distribution across 3 data centres)</td>
+<td>CPFSR operator</td>
+</tr>
+<tr>
+<td>Regulator node (read-only + oversight)</td>
+<td>1</td>
+<td>Bank of Russia</td>
+</tr>
+<tr>
+<td>Treasury node (read + confirmation of targeted operations)</td>
+<td>1</td>
+<td>Federal Treasury</td>
+</tr>
+<tr>
+<td>Partner node (valuers, insurers)</td>
+<td>2+ (per number of accredited partners)</td>
+<td>Partners</td>
+</tr>
+</tbody>
+</table>
+<p>All nodes are connected by secured channels (ViPNet). The composition
+of nodes is approved by the Bank of Russia.</p>
+<h2 id="dfa-token-structure">3. DFA token structure</h2>
+<p>Each DFA token is a record with the attributes:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cfa_id</code></td>
+<td>string</td>
+<td>Unique identifier <code>cfa-{hash6}-rsfsr-{year}-{seq}</code>.</td>
+</tr>
+<tr>
+<td><code>owner_id</code></td>
+<td>string</td>
+<td>Mortgagor identifier (linked to ESIA).</td>
+</tr>
+<tr>
+<td><code>operator_id</code></td>
+<td>string</td>
+<td>Identifier of the issuing operator.</td>
+</tr>
+<tr>
+<td><code>cb_holder</code></td>
+<td>string</td>
+<td>Confirmation of receipt by the Bank of Russia.</td>
+</tr>
+<tr>
+<td><code>treasury_recipient</code></td>
+<td>string</td>
+<td>Identifier of the recipient of funds in the Federal Treasury.</td>
+</tr>
+<tr>
+<td><code>asset_type</code></td>
+<td>enum</td>
+<td>Property type (REAL_ESTATE, VEHICLE, IP, SECURITIES).</td>
+</tr>
+<tr>
+<td><code>asset_ref</code></td>
+<td>object</td>
+<td>External reference to the asset (cadastral number, VIN, Rospatent
+ID, ISIN).</td>
+</tr>
+<tr>
+<td><code>valuation</code></td>
+<td>money</td>
+<td>Appraisal value, RUB.</td>
+</tr>
+<tr>
+<td><code>nominal</code></td>
+<td>money</td>
+<td>DFA par value, RUB (by default ≤ 50% of the appraisal).</td>
+</tr>
+<tr>
+<td><code>currency</code></td>
+<td>string</td>
+<td>RUB (including the digital rouble).</td>
+</tr>
+<tr>
+<td><code>term_months</code></td>
+<td>int</td>
+<td>Validity term in months.</td>
+</tr>
+<tr>
+<td><code>issue_date</code></td>
+<td>date</td>
+<td>Issue date.</td>
+</tr>
+<tr>
+<td><code>maturity_date</code></td>
+<td>date</td>
+<td>Maturity date.</td>
+</tr>
+<tr>
+<td><code>reward_rate</code></td>
+<td>decimal</td>
+<td>Reward rate for the owner, % per annum.</td>
+</tr>
+<tr>
+<td><code>target_program</code></td>
+<td>string</td>
+<td>Identifier of the national project / federal programme.</td>
+</tr>
+<tr>
+<td><code>insurance</code></td>
+<td>object</td>
+<td>Insurance details (IC, policy, sum).</td>
+</tr>
+<tr>
+<td><code>obremenenie_egrn</code></td>
+<td>string</td>
+<td>Identifier of the encumbrance record in EGRN.</td>
+</tr>
+<tr>
+<td><code>smart_contract_hash</code></td>
+<td>string</td>
+<td>GOST R 34.11-2012 hash of the smart contract text.</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>enum</td>
+<td>DFA state (see the states table below).</td>
+</tr>
+<tr>
+<td><code>events</code></td>
+<td>array</td>
+<td>Event log (with UKEP signatures).</td>
+</tr>
+<tr>
+<td><code>mena_history</code></td>
+<td>array</td>
+<td>History of exchanges with previous and new objects.</td>
+</tr>
+<tr>
+<td><code>audit_signature</code></td>
+<td>string</td>
+<td>Operator’s UKEP (GOST 34.10).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dfa-states">4. DFA states</h2>
+<pre><code>DRAFT
+  ↓ (after valuation and insurance)
+VALUED
+  ↓ (after signing of the smart contract by the owner)
+CONTRACT_SIGNED
+  ↓ (after registration of the encumbrance in EGRN)
+ISSUED
+  ↓ (after transfer to the Bank of Russia)
+TRANSFERRED_TO_CB
+  ↓ (after confirmation of the emission)
+ACTIVE
+  ↓ ↓ ↓ ↓
+  REINVESTED  — the owner has extended and re-issued the DFA.
+  RETURNED    — the term has expired, the encumbrance has been removed, the property has been returned.
+  INSURED_CASE — an insurance event has occurred, an insurance DFA has been issued.
+  MENA_DONE   — an exchange has been performed for a DFA of a constructed object.</code></pre>
+<p>Each transition is an event in the register, immutable, with the
+signatures of operators and regulators.</p>
+<h2 id="dfa-smart-contract">5. DFA smart contract</h2>
+<h3 id="essential-conditions-based-on-art.-4-of-fz-259">5.1. Essential
+conditions (based on Art. 4 of FZ-259)</h3>
+<ol type="1">
+<li>Parties.</li>
+<li>Asset identifier and its valuation.</li>
+<li>Par value and term of the DFA.</li>
+<li>Conditions of use: targeted purpose (national project).</li>
+<li>Amount and procedure for the payment of fees to the operator.</li>
+<li>Amount and procedure of the reward for the owner.</li>
+<li>Risk insurance conditions.</li>
+<li>Conditions of the exchange for the DFA of the constructed
+object.</li>
+<li>Procedure for signing the Mutual Settlement Act.</li>
+<li>Procedure for the removal of the encumbrance.</li>
+</ol>
+<h3 id="smart-contract-events">5.2. Smart contract events</h3>
+<ul>
+<li><code>ON_ISSUE</code> — issue.</li>
+<li><code>ON_CB_RECEIPT</code> — receipt by the Bank of Russia.</li>
+<li><code>ON_EMISSION_CONFIRMED</code> — confirmation of emission
+against the DFA.</li>
+<li><code>ON_QUARTERLY_REWARD</code> — quarterly reward payment.</li>
+<li><code>ON_INSURANCE_CASE</code> — insurance event.</li>
+<li><code>ON_MENA_REQUEST</code> — exchange request.</li>
+<li><code>ON_MENA_DONE</code> — exchange completed.</li>
+<li><code>ON_RETURN</code> — return of property to the owner.</li>
+<li><code>ON_REINVESTMENT</code> — reinvestment.</li>
+</ul>
+<h3 id="legal-nature">5.3. Legal nature</h3>
+<ul>
+<li>The smart contract is a <strong>legally binding contract</strong>
+within the meaning of Arts. 309–310 of the Civil Code and Art. 4 of
+FZ-259.</li>
+<li>Signature — UKEP under GOST R 34.10-2012 of the owner of the asset
+(via ESIA), the operator, the Bank of Russia and the insurance
+company.</li>
+<li>Technological execution — automatic (event-driven).</li>
+</ul>
+<h2
+id="prohibition-of-free-dfa-circulation-a-key-requirement-of-the-concept">6.
+Prohibition of free DFA circulation (a key requirement of the
+concept)</h2>
+<p>Software prohibitions are implemented in the smart contract:</p>
+<ol type="1">
+<li><strong>Transfer of the DFA</strong> — only from the operator to the
+Bank of Russia and from the Bank of Russia to the operator (for an
+exchange / return).</li>
+<li><strong>Realisation of the DFA</strong> — the Bank of Russia is not
+entitled to realise the DFA to participants of the securities or digital
+asset markets.</li>
+<li><strong>Use of the DFA outside its purpose</strong> —
+programmatically impossible; <code>ON_DISPOSAL_OUT_OF_SCOPE</code>
+events are rejected by consensus.</li>
+</ol>
+<p>These prohibitions are technically embedded in the smart contract and
+controlled by the Bank of Russia regulator node.</p>
+<h2 id="link-to-the-bank-of-russia-emission-circuit">7. Link to the Bank
+of Russia emission circuit</h2>
+<ul>
+<li>After the <code>ON_CB_RECEIPT</code> event the platform sends a
+request to the Bank of Russia digital rouble platform for the emission
+of funds against the DFA par value.</li>
+<li>Confirmation of the emission (event
+<code>ON_EMISSION_CONFIRMED</code>) is recorded in the register.</li>
+<li>The funds are credited to a special escrow account / digital wallet
+of the Bank of Russia with a targeted designation.</li>
+<li>The transfer to the Federal Treasury is a separate event
+<code>ON_TREASURY_FUNDING</code>.</li>
+</ul>
+<h2 id="audit-and-immutability">8. Audit and immutability</h2>
+<ul>
+<li>All events are signed with UKEP.</li>
+<li>Each block of the register contains the hash of the previous one
+(chain of trust).</li>
+<li>The full history of each DFA is available to the Bank of Russia in
+real time.</li>
+<li>External audit of the register is conducted annually by an
+accredited audit organisation.</li>
+</ul>
+<h2 id="performance">9. Performance</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Throughput</td>
+<td>≥ 200 transactions/sec</td>
+</tr>
+<tr>
+<td>Finality</td>
+<td>≤ 3 sec (deterministic)</td>
+</tr>
+<tr>
+<td>Latency for read operations</td>
+<td>≤ 100 ms</td>
+</tr>
+<tr>
+<td>Register size</td>
+<td>Up to 100 GB in the first year, then +200–400 GB/year</td>
+</tr>
+</tbody>
+</table>
+<h2 id="redundancy-and-dr">10. Redundancy and DR</h2>
+<ul>
+<li>The register is synchronously replicated across 3 operator data
+centres.</li>
+<li>Full backup — daily, stored for 10 years.</li>
+<li>Restore testing — quarterly.</li>
+</ul>
+<h2 id="regulatory-reporting-on-the-register">11. Regulatory reporting
+on the register</h2>
+<ul>
+<li>Regular snapshots of the register are transmitted to the Bank of
+Russia.</li>
+<li>On a regulator’s request — full export of the history of a specific
+DFA in the established format.</li>
+<li>Reports to Rosfinmonitoring on suspicious operations —
+automatically.</li>
+</ul>
+<h2 id="node-management">12. Node management</h2>
+<ul>
+<li>Full replacement of a node’s key pair — once every 3 years.</li>
+<li>Addition of new partner nodes — by decision of the operators’ board
+with confirmation by the Bank of Russia.</li>
+<li>Removal of a node (in case of revocation of a partner’s licence) —
+under regulation, with archiving of its historical records.</li>
+</ul>
+</article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

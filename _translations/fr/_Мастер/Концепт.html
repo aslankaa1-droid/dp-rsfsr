@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../">
+  <title>Concept CPFSR · ЦПФСР.РФ</title>
+  <meta name="description" content="Concept CPFSR — Maître · Document conceptuel. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../_design-system/print.css">
+
+  <script defer src="../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../_design-system/i18n.js"></script>
+  <script defer src="../../../_design-system/ticker.js"></script>
+  <script defer src="../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Maître · Document conceptuel</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Maître · Document conceptuel</span>
+      <h1>Concept CPFSR</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1
+id="plateforme-numérique-service-russe-de-financement-du-développement-social">Plateforme
+numérique « Service russe de financement du développement social »</h1>
+<h2 id="cpfsr-document-conceptuel-unifié-du-projet">CPFSR — Document
+conceptuel unifié du projet</h2>
+<p><strong>Auteur et titulaire de droits :</strong> Abdoul-Khakim
+Akhmadovitch Kaguirov <strong>Protection de la propriété intellectuelle
+:</strong> Certificat de dépôt n° 4011265 du 19.12.2024, ireg.pro,
+hachage GOST R 34.11-2012 <strong>Type de protection :</strong>
+Savoir-faire (secret commercial) / Droit d’auteur <strong>Nature
+juridique du certificat :</strong> le dépôt sur ireg.pro fixe la date
+d’antériorité et le hachage de l’œuvre (articles 1259, 1262 du Code
+civil de la Fédération de Russie). Le concept et la méthodologie sont
+protégés sous les régimes : logiciel pour ordinateurs (article 1262 CC —
+enregistrement auprès de Rospatent, en cours), savoir-faire / secret
+commercial (articles 1465–1469 CC, loi fédérale n° 98-FZ — régime
+instauré par décision interne).</p>
+<hr />
+<h2 id="essence-conceptuelle-douze-points-de-lauteur">1. Essence
+conceptuelle (douze points de l’auteur)</h2>
+<p>CPFSR est une plateforme numérique-opérateur, connectée aux services
+publics et bancaires, assurant la mobilisation d’une assiette de
+garanties pour l’émission et la gestion d’Actifs Financiers Numériques
+(DFA — Digital Financial Assets).</p>
+<ol type="1">
+<li>L’application se connecte aux services publics et bancaires.</li>
+<li>Elle assure la mobilisation d’une assiette de garanties pour
+l’émission et la gestion des DFA.</li>
+<li>L’assiette de garanties comprend l’immobilier, les transports, la
+propriété intellectuelle, les valeurs mobilières et autres actifs.</li>
+<li>La garantie est évaluée automatiquement sur la plateforme
+conformément aux actes d’État adoptés.</li>
+<li>Le bien gagé demeure à la disposition du propriétaire ; une charge
+temporaire est apposée sur l’objet de la garantie.</li>
+<li>Sur la base du bien gagé, l’opérateur de la plateforme procède à
+l’émission de DFA. En régime pilot-light 2026–2028, la gestion et le
+placement des DFA s’opèrent dans le périmètre d’un opérateur du Système
+d’Information (SI) DFA agréé par la Banque de Russie au titre du
+règlement 779-P (partenaire technologique) ; à l’horizon 2029+ — sous
+réserve d’un paquet législatif — une extension du mandat est
+envisageable.</li>
+<li>L’émission de DFA est assurée par un opérateur-plateforme unique
+obtenant : (a) le statut d’opérateur du SI DFA au registre de la Banque
+de Russie en application de 779-P / de la directive 4336-U, (b) les
+agréments réglementaires connexes (Roskomnadzor, FSTEC,
+Rosfinmonitoring). L’agrément d’opérateur SI DFA n’est pas transférable
+entre personnes morales ; en pilot-light, une construction de
+partenariat technologique avec un opérateur déjà agréé est donc
+utilisée.</li>
+<li>Les DFA sont émis avec le consentement du propriétaire pour la durée
+nécessaire à la réalisation de projets nationaux, d’infrastructures et
+d’autres programmes d’État.</li>
+<li>Pour chaque DFA émis, <strong>un financement ciblé est mis en place
+par le circuit institutionnel de VEB.RF / du Trésor fédéral</strong> (en
+régime pilot-light 2026–2028 — sans amendement à la loi 86-FZ). Les
+fonds sont crédités sur un compte d’entiercement (escrow) dédié, sous la
+supervision d’un établissement financier habilité. À l’horizon 2029+,
+sous réserve du soutien du régulateur et de l’adoption du paquet
+législatif, un passage au modèle d’émission garantie ciblée par la
+Banque de Russie est envisageable (voir Section 9-Horizon
+ci-dessous).</li>
+<li>Les fonds sont utilisés strictement conformément à la législation en
+vigueur (loi 259-FZ, loi 39-FZ, Code budgétaire de la Fédération de
+Russie) et / ou aux lois fédérales et actes d’État nouvellement
+adoptés.</li>
+<li>Les DFA peuvent être placés auprès de participants qualifiés du
+marché des valeurs mobilières par l’intermédiaire d’un opérateur SI DFA
+agréé ; le produit du placement n’est crédité que sur des comptes
+d’entiercement dédiés, sous supervision bancaire.</li>
+<li>À l’expiration du terme du DFA, le bien gagé est restitué au
+propriétaire ou réinvesti par celui-ci dans des projets analogues.</li>
+</ol>
+<hr />
+<h2
+id="bis.-wedge-pilot-20262028-et-horizon-2029-stratégie-à-double-circuit">1-bis.
+Wedge-pilot 2026–2028 et Horizon 2029+ (stratégie à double circuit)</h2>
+<p><strong>Pilot-light 2026–2028 (circuit actuel, sans amendement à
+86-FZ).</strong> CPFSR est lancé en qualité d’opérateur SI DFA au titre
+de la loi 259-FZ existante, en partenariat technologique avec un
+opérateur en place (JSC « Atomyze » — comme opérateur de transaction
+sous sa licence 779-P, CPFSR — comme front-end / agent d’embarquement de
+garanties). Le financement ciblé transite par le <strong>circuit
+institutionnel de VEB.RF</strong> (Fabrique de financement de projet,
+décret du Gouvernement de la Fédération de Russie n° 158 du 15.02.2018)
+et par le <strong>Trésor fédéral</strong> (Code budgétaire). La Banque
+de Russie joue un rôle d’appui en tant que régulateur prudentiel
+(article 4 de 86-FZ), sans pouvoir d’autoriser la finalité ciblée du
+crédit.</p>
+<p><strong>Horizon 2029+ (modèle d’émission garantie ciblée).</strong>
+Uniquement après un track-record positif du wedge-pilot (≥ 12 mois
+d’exploitation industrielle, convergence avérée des métriques
+d’origination PI / remboursement / réalisation des garanties), le paquet
+de quatre amendements (modifications à 86-FZ, 259-FZ, Code budgétaire et
+Code civil) décrit au § 8 du Cadre juridique passe de l’« horizon T+24+
+» à la feuille de route active. Il s’agit de la vision-horizon de
+l’auteur et non du contenu de la communication immédiate avec le
+régulateur.</p>
+<hr />
+<h2 id="ter.-carte-des-champions-et-séquençage-gtm-t0-à-t180">1-ter.
+Carte des Champions et séquençage GTM (T+0 à T+180)</h2>
+<p>La logique du wedge impose de contourner la Banque de Russie à la
+première étape : la BCR est l’instance finale de l’Étape 1 (uniquement
+pour l’inscription de l’opérateur au registre 779-P). Les agréments-clé
+passent par le ministère du Développement économique → ministère des
+Finances → VEB.RF → Douma d’État → région → Atomyze. La carte nominale
+des Champions :</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Étape</th>
+<th>Personne</th>
+<th>Autorité</th>
+<th>Objectif</th>
+<th>Document d’ancrage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T+30</td>
+<td><strong>Maxime Réchetnikov</strong></td>
+<td>Ministère du Développement économique, ministre</td>
+<td>Wedge-pilot Étape 1 comme accélérateur des projets nationaux ; named
+sponsor</td>
+<td>Plan d’affaires + Pitch deck + Wedge_pilot-light</td>
+</tr>
+<tr>
+<td>T+30</td>
+<td><strong>Cabinet du Gouvernement de la Fédération de
+Russie</strong></td>
+<td>via le conseiller sectoriel pour l’économie numérique</td>
+<td>Concept architectural ; groupe de travail interministériel</td>
+<td>Concept § 1-bis + Cadre juridique § 8.1</td>
+</tr>
+<tr>
+<td>T+30</td>
+<td><strong>JSC « Atomyze »</strong></td>
+<td>via un représentant recommandé</td>
+<td>LoI de partenariat technologique : opérateur de transaction 779-P +
+CPFSR front-end</td>
+<td>Wedge_pilot-light § 3 + Pack contractuel 01</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td><strong>Ivan Kolytchev</strong></td>
+<td>Ministère des Finances, vice-ministre (dette)</td>
+<td>Canal extra-budgétaire ; argumentaire de réduction de la pression
+sur le marché OFZ</td>
+<td>Modèle financier v3 + Plan d’affaires + Concept § 1-bis</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td><strong>Vladimir Sazanov</strong></td>
+<td>Ministère des Finances, vice-ministre (fiscalité)</td>
+<td>Position fiscale sur les DFA (article 34.2 du Code des impôts ;
+alinéa 12.2 du paragraphe 2 de l’article 149 CI)</td>
+<td>Cadre juridique § 5 + demande au titre de l’article 34.2 CI</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td><strong>VEB.RF — Fabrique de financement de projet</strong></td>
+<td>via le représentant recommandé par le ministère du Développement
+économique</td>
+<td>LoI / lettre consultative au titre du décret n° 158</td>
+<td>Plan d’affaires + Wedge § 5 + Modèle financier</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td><strong>Gazprombank / Promsviazbank</strong></td>
+<td>via le représentant recommandé par le ministère du Développement
+économique</td>
+<td>MoU sur le rôle de banque de règlement du pilote</td>
+<td>Plan d’affaires + Modèle financier + Pack contractuel</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td><strong>Roustam Minnikhanov</strong></td>
+<td>République du Tatarstan</td>
+<td>MoU sur le pilote municipal : 50–100 objets, 5–10 Md ₽</td>
+<td>Concept + Wedge § 2 + Pitch deck</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td><strong>Alexandre Moor</strong></td>
+<td>Région de Tioumen (réserve)</td>
+<td>idem</td>
+<td>idem</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td><strong>Anatoli Aksakov</strong></td>
+<td>Douma d’État, Commission du marché financier</td>
+<td>Consultation sur 259-FZ pour l’Étape 1 ; horizon Étape 2 — paquet de
+quatre lois fédérales</td>
+<td>Note pour la BCR + Concept + Wedge</td>
+</tr>
+<tr>
+<td>T+180+</td>
+<td><strong>Banque de Russie</strong></td>
+<td>via une position interministérielle consolidée</td>
+<td>Registre des opérateurs SI DFA au titre de 779-P (Étape 1) ;
+dialogue Étape 2 (T+30+ mois)</td>
+<td>Cadre juridique § 8.1 + métriques de succès du wedge ≥ 12 mois</td>
+</tr>
+</tbody>
+</table>
+<p>Les pre-meeting briefs pour chaque Champion se trouvent dans
+<code>02_Юридический_фундамент/Pre-meeting_briefs/</code> (travaux en
+cours en Horizon II.C).</p>
+<hr />
+<h2
+id="quater.-protection-de-lauteur-titulaire-du-savoir-faire">1-quater.
+Protection de l’auteur (titulaire du savoir-faire)</h2>
+<p><strong>Principe :</strong> l’auteur Abdoul-Khakim Akhmadovitch
+Kaguirov est le titulaire unique du savoir-faire au titre du certificat
+n° 4011265 du 19.12.2024. Après apport du savoir-faire au capital social
+de la JSC opérateur, les mécanismes protecteurs suivants sont fixés
+:</p>
+<ol type="1">
+<li><strong>Siège permanent au Conseil d’administration</strong> jusqu’à
+la Série B (≥ 2031), indépendamment de la taille de la participation de
+l’investisseur.</li>
+<li><strong>Engagements protecteurs dans le Shareholders Agreement
+:</strong>
+<ul>
+<li>drag-along — uniquement avec la participation du titulaire ;</li>
+<li>tag-along — protection à 100 % contre toute sortie forcée pour le
+titulaire ;</li>
+<li>anti-dilution — full ratchet pour le titulaire jusqu’à la Série B
+;</li>
+<li>interdiction de cession des droits sur le savoir-faire sans
+consentement du titulaire (article 1465 CC + contrat de licence) ;</li>
+<li>vesting de l’actionnaire institutionnel — 4 ans avec cliff d’un
+an.</li>
+</ul></li>
+<li><strong>Réversion du savoir-faire</strong> en cas de liquidation /
+faillite / OPA hostile : les droits exclusifs sur le savoir-faire
+retournent à l’auteur sans condition.</li>
+<li><strong>Flux de redevances</strong> — 2 % du chiffre d’affaires de
+l’opérateur versés au titulaire en tant que licencier (en sus des
+dividendes sur actions).</li>
+</ol>
+<p>Les points ci-dessus sont consignés dans l’acte constitutif de la JSC
+et dans le contrat de licence conclu entre le titulaire et l’opérateur ;
+ils sont inscrits dans le Shareholders Agreement lors du premier tour
+d’investissement.</p>
+<hr />
+<h2 id="avantages-selon-le-document-source-de-lauteur">2. Avantages
+(selon le document source de l’auteur)</h2>
+<ol type="1">
+<li>Interaction en ligne directe entre le gageur, les agents financiers
+et les exécutants spécialisés sous le contrôle de la Banque de
+Russie.</li>
+<li>Réduction des délais d’évaluation et de mise en gage des
+objets.</li>
+<li>Impulsion au développement de l’industrie des DFA en Russie.</li>
+<li>Mobilisation d’une masse monétaire considérable à partir d’actifs
+privés « dormants ».</li>
+<li>Résolution de projets d’État de grande ampleur.</li>
+<li>Réduction de la file d’attente pour le financement des projets
+globaux.</li>
+<li>Impulsion à l’économie réelle.</li>
+<li>Financement extra-budgétaire des projets d’État dans les industries
+à forte intensité capitalistique (industrie lourde, construction
+mécanique, médecine, science).</li>
+<li>Rémunération financière du propriétaire du bien gagé.</li>
+<li>Dynamique inflationniste maintenue dans son régime habituel.</li>
+</ol>
+<h2
+id="inconvénients-et-conditions-selon-le-document-source-de-lauteur">3.
+Inconvénients et conditions (selon le document source de l’auteur)</h2>
+<ol type="1">
+<li>Des amendements à la législation de la Fédération de Russie sont
+requis (nouvelles lois fédérales).</li>
+<li>Une volonté politique forte est requise.</li>
+</ol>
+<h2 id="horizon-de-réalisation-de-la-plateforme-opérateur">4. Horizon de
+réalisation de la plateforme-opérateur</h2>
+<p><strong>À partir de 18 mois</strong> (selon le concept de
+l’auteur).</p>
+<h2
+id="potentiel-de-lassiette-de-garanties-daprès-la-présentation-de-lauteur">5.
+Potentiel de l’assiette de garanties (d’après la présentation de
+l’auteur)</h2>
+<table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 36%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr>
+<th>Segment</th>
+<th style="text-align: right;">Volume, milliards ₽</th>
+<th style="text-align: right;">Estimation prudente (10 % des actifs × 50
+% de la valeur), milliards ₽</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Parc résidentiel (4,7 Md m², moy. 85 000 ₽/m²)</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr>
+<td>Immobilier commercial</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">2,5</td>
+</tr>
+<tr>
+<td>Terrains (habitation individuelle + terrains d’entreprises)</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td style="text-align: right;"><strong>507</strong></td>
+<td style="text-align: right;"><strong>25,5</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Source : РСФСР_6.pptx, diapositive 9.</p>
+</blockquote>
+<h2 id="périmètre-des-travaux-selon-mandat-du-client">6. Périmètre des
+travaux (selon mandat du client)</h2>
+<ol type="1">
+<li>Documentation technique avec références aux lois fédérales et aux
+instructions de la BCR.</li>
+<li>Site internet (adaptatif, tous appareils).</li>
+<li>Application mobile (Android / iOS / Windows) — qualitative et
+sécurisée.</li>
+<li>Prototype d’application à fonctionnalité intelligible.</li>
+<li>Grande présentation design.</li>
+<li>Présentation compacte, élégamment composée.</li>
+<li>Modèle financier du projet.</li>
+<li>Plan d’affaires.</li>
+<li>Présentation succincte pour les partenaires et investisseurs.</li>
+<li>Note pour les autorités étatiques et les spécialistes de la
+BCR.</li>
+<li>Brochure publicitaire.</li>
+<li>Charte graphique (Brand Book).</li>
+<li>Style de marque appliqué à l’ensemble des documents et au
+projet.</li>
+<li>Versions PDF et Word de tous les documents.</li>
+<li>Évaluation du projet au format international (avec indication de la
+valeur).</li>
+<li>Audit de diligence raisonnable au standard Big Four.</li>
+<li>Avis d’expert sur tous les documents et sur l’ensemble du
+projet.</li>
+<li>Deux versions HTML du projet :
+<ul>
+<li>version complète (pour publication en ligne),</li>
+<li>version courte de présentation.</li>
+</ul></li>
+</ol>
+<h2 id="principes-dexécution-à-la-demande-du-client">7. Principes
+d’exécution (à la demande du client)</h2>
+<ul>
+<li>Uniquement des agents IA hautement qualifiés à chaque étape.</li>
+<li>Audit et avis d’experts au niveau Big Four.</li>
+<li>Design conforme aux tendances mondiales actuelles.</li>
+<li>Modèle financier élaboré par un agent IA financier de classe
+mondiale.</li>
+<li>Contrôle des agents toutes les 10 minutes ; rotation des agents
+bloqués.</li>
+<li>Aucune extrapolation au-delà des sources et des tâches
+définies.</li>
+<li>Aucun mélange avec des matériaux d’autres projets et dossiers.</li>
+<li>Conformité à la législation de la Fédération de Russie et aux
+instructions de la BCR.</li>
+</ul>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

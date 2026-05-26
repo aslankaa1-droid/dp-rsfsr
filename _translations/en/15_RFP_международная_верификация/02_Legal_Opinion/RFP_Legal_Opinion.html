@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../../">
+  <title>RFP — Legal Opinion · ЦПФСР.РФ</title>
+  <meta name="description" content="RFP — Legal Opinion — RFP · external verification. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../../_design-system/print.css">
+
+  <script defer src="../../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../../_design-system/i18n.js"></script>
+  <script defer src="../../../../_design-system/ticker.js"></script>
+  <script defer src="../../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">RFP · external verification</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">RFP · external verification</span>
+      <h1>RFP — Legal Opinion</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="rfp-legal-opinion-from-a-tier-1-firm">RFP — Legal Opinion from a
+tier-1 firm</h1>
+<p><strong>Project:</strong> Digital Platform CPFSR — operator of the
+DFA information system backed by real-estate collateral, with DFA
+issuance for national projects <strong>Client:</strong> Abdul-Khakim
+Akhmadovich Kagirov (Center Group Company) — sole rightsholder of the
+concept (deposit certificate No. 4011265 of 19.12.2024)
+<strong>Engagement reference:</strong> RSFSR-LEGAL-2026 <strong>RFP
+issue date:</strong> 24.05.2026 <strong>Bid deadline:</strong> T+14 days
+(08.06.2026)</p>
+<hr />
+<h2 id="engagement-objective">1. Engagement objective</h2>
+<p>Obtaining an independent tier-1 legal opinion on the project in order
+to: - Lift the regulatory risk flag for tier-1 institutional investors
+and Limited Partners; - Confirm the legal defensibility of the wedge
+construction (Stage 1 wedge-pilot 2026–2028 without amendments to 86-FZ
+vs Stage 2 horizon 2029+ with the package of four federal laws); -
+Obtain a formal sign-off on the readiness of the escrow scheme and the
+contract pack for a commercial launch.</p>
+<h2 id="scope-of-legal-review">2. Scope of legal review</h2>
+<h3 id="dfa-regulatory-regime">2.1. DFA regulatory regime</h3>
+<ul>
+<li><strong>Bank of Russia Regulation No. 779-P</strong> — regime for
+inclusion of an operator in the IS DFA operators register; soft-launch
+path in Stage 1.</li>
+<li><strong>Bank of Russia Directive No. 4336-U</strong> — DFA
+accounting methodology; mandatory reporting.</li>
+<li><strong>Federal Law 86-FZ Article 4</strong> — the Bank of Russia
+mandate; boundaries of Stage 1 / Stage 2.</li>
+<li><strong>Federal Law 259-FZ “On DFA”</strong> — operational
+foundation.</li>
+<li><strong>Federal Law 39-FZ</strong> — boundary between DFA and
+securities for qualification purposes.</li>
+</ul>
+<p>Survey points: is it legal to structure the pilot-light through
+Atomyze JSC as the 779-P operator (sublease vs separate operator); is a
+separate register status required for the CPFSR front-end;
+deployment-ready configuration limits prior to formal amendments.</p>
+<h3 id="escrow-construction">2.2. Escrow construction</h3>
+<ul>
+<li><strong>Civil Code Articles 860.7–860.10</strong> — escrow account
+at the banking level.</li>
+<li><strong>Federal Law 161-FZ</strong> — the National Payment
+System.</li>
+<li>Structure of the escrow agent: bank vs specialised company vs
+VEB.RF.</li>
+<li>Triggers for fund transfer: collateral verified / DFA issued /
+national project reported.</li>
+<li>Disclosure to the end investor (natural person).</li>
+</ul>
+<h3 id="dfa-tax-position">2.3. DFA tax position</h3>
+<ul>
+<li><strong>Tax Code sub-para 12.2 of para 2 of Art. 149</strong> — VAT
+exemption of DFA transactions (introduced by Federal Law 324-FZ of
+31.07.2020).</li>
+<li><strong>Tax Code Art. 34.2</strong> — specifics of taxation of
+digital rights.</li>
+<li><strong>Tax Code Arts. 309–310</strong> — tax on income of foreign
+legal entities from DFA.</li>
+<li>IT preferential rate of 5% (until 31.12.2030) with ≥ 70% IT
+revenue.</li>
+</ul>
+<p>A written legal opinion is required: does sub-para 12.2 of Art. 149
+apply to commission income of the issuing operator, or only to
+transactions in the DFA themselves.</p>
+<h3 id="collateral-regime">2.4. Collateral regime</h3>
+<ul>
+<li><strong>Civil Code § 3 of Chapter 23 (Arts. 334–358.18)</strong> —
+mortgage and pledge of real estate.</li>
+<li><strong>Federal Law 102-FZ “On Mortgage”</strong> — registration of
+the mortgage in the State Real Estate Register.</li>
+<li><strong>Federal Law 218-FZ “On State Real Estate
+Registration”</strong> — note of a digital pledge in the State Real
+Estate Register.</li>
+<li><strong>Civil Code Art. 358.6</strong> — pledge of rights of claim
+(relevant for tokenised collateral).</li>
+</ul>
+<p>Survey point: is the “real-estate pledge → DFA” mechanic compatible
+with the existing 102-FZ regime without the need for amendments?</p>
+<h3 id="corporate-protection-of-the-author-sha-construction">2.5.
+Corporate protection of the author (SHA construction)</h3>
+<ul>
+<li>The author’s stake (A.-Kh. A. Kagirov) — protected until Series B
+through a preferred class + drag-along restrictions.</li>
+<li>Reverse vesting on the know-how (Article 1465 CC) and on the
+software (Article 1262 CC) upon founder exit.</li>
+<li>2% royalty on the operator’s revenue payable to the concept
+rightsholder (post Series B); cap-table mechanics.</li>
+<li>Anti-dilution full ratchet until Series B.</li>
+<li>Drag-along, tag-along, RoFR — standard condition precedents.</li>
+</ul>
+<h3 id="kyc-aml-cft">2.6. KYC / AML / CFT</h3>
+<ul>
+<li><strong>Federal Law 115-FZ</strong> — counteraction of legalisation
+of criminal proceeds.</li>
+<li><strong>CBR Regulation No. 375-P</strong> — KYC procedures for
+financial organisations.</li>
+<li><strong>CBR Directive No. 5599-U</strong> — simplified
+identification via the Unified Biometric System / ESIA.</li>
+<li><strong>FATF Recommendations</strong> — international AML standards
+(for friendly jurisdictions).</li>
+<li><strong>Travel Rule</strong> for DFA (by analogy with FATF
+Recommendation 16 for VASP).</li>
+</ul>
+<h3 id="eula-customer-protection">2.7. EULA / customer protection</h3>
+<ul>
+<li><strong>Federal Law “On Protection of Consumer Rights”</strong>
+Arts. 13, 15, 16 — liability limits, Art. 16 nullity of
+limitations.</li>
+<li><strong>Civil Code Arts. 393, 1064, 1095</strong> — liability for
+harm.</li>
+<li><strong>Federal Law 152-FZ “On Personal Data”</strong> — processing
+of customer personal data.</li>
+<li><strong>GDPR</strong> (EU Regulation 2016/679) — where applicable
+for non-residents.</li>
+</ul>
+<h3 id="ip-regime-know-how-protection">2.8. IP regime (know-how
+protection)</h3>
+<ul>
+<li><strong>Civil Code Article 1465</strong> — trade-secret regime.</li>
+<li><strong>Civil Code Article 1262</strong> — software.</li>
+<li><strong>Deposit certificate No. 4011265 of 19.12.2024</strong>
+(ireg.pro, GOST R 34.11-2012).</li>
+<li>Protection against disclosure in the DD process through NDA +
+ring-fencing.</li>
+</ul>
+<h2 id="deliverables">3. Deliverables</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Document</th>
+<th>Format</th>
+<th>Deadline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inception Memo (kick-off scope)</td>
+<td>PDF, 5–8 pp</td>
+<td>T+7 days</td>
+</tr>
+<tr>
+<td>Preliminary Findings</td>
+<td>PDF, 12–20 pp</td>
+<td>T+14 days</td>
+</tr>
+<tr>
+<td>Final Legal Opinion (signed by Partner)</td>
+<td>PDF, 30–60 pp, with Partner’s signature</td>
+<td>T+28 days</td>
+</tr>
+<tr>
+<td>Q&amp;A management sessions</td>
+<td>2 × 1.5 h</td>
+<td>By schedule</td>
+</tr>
+<tr>
+<td>Executive summary for the investor memorandum</td>
+<td>PDF, 4–6 pp</td>
+<td>T+28 days</td>
+</tr>
+</tbody>
+</table>
+<p>All deliverables — in Russian (primary). The executive summary also
+in English.</p>
+<h2 id="quality-and-independence">4. Quality and independence</h2>
+<ul>
+<li>The signing Partner must be a registered Russian Bar member +
+admitted to work on financial matters (experience in DFA / banking law /
+financial regulation ≥ 5 years).</li>
+<li>Team — minimum 3 persons: Partner + Senior Associate + Junior. CVs
+mandatory.</li>
+<li>Conflict-of-interest disclosure: must not have acted against any
+party to the project (Atomyze JSC, VEB.RF, Ministry of Economic
+Development, Ministry of Finance, Bank of Russia) over the last 24
+months.</li>
+<li>Insurance: PI cover ≥ USD 3M.</li>
+</ul>
+<h2 id="budget-and-timing">5. Budget and timing</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Indicative budget</td>
+<td>RUB 3–8M (RUB 3.6–9.6M incl. VAT)</td>
+</tr>
+<tr>
+<td>Delivery time</td>
+<td>3–5 weeks from kick-off</td>
+</tr>
+<tr>
+<td>Payments</td>
+<td>50% upfront / 50% upon signing of the Final Opinion</td>
+</tr>
+<tr>
+<td>Languages</td>
+<td>RU (primary) + EN (executive summary)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="list-of-invited-tier-1-firms">6. List of invited tier-1
+firms</h2>
+<ol type="1">
+<li><strong>EPAM Law</strong> — leader in DFA and fintech regulation of
+the Russian Federation</li>
+<li><strong>CMS Russia</strong> — international tier-1 office, expertise
+on cross-border structure</li>
+<li><strong>Alrud</strong> — local tier-1, experience in 779-P</li>
+<li><strong>Liniya Prava</strong> — financial law</li>
+<li><strong>Ivanyan &amp; Partners</strong> — banking / financial
+law</li>
+<li><strong>Bryan Cave Leighton Paisner (Russia)</strong> — fallback
+international option</li>
+</ol>
+<h2 id="nda-data-room">7. NDA + Data Room</h2>
+<ul>
+<li>NDA mutual + 5-year survival</li>
+<li>Access to the relevant sections of the Data Room</li>
+<li>Q&amp;A via the VDR Q&amp;A tool</li>
+<li>Permission tier: “Legal Opinion access” (visibility of documents in
+02_Юридический_фундамент, 12_DD_аудит, _Мастер, fragments of
+04_Бизнес-план)</li>
+</ul>
+<h2 id="selection-criteria">8. Selection criteria</h2>
+<table>
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: right;">Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Experience in DFA / 779-P / 259-FZ (≥ 5 projects over 24
+months)</td>
+<td style="text-align: right;">45%</td>
+</tr>
+<tr>
+<td>Partner &amp; team (Bar admission + sector experience)</td>
+<td style="text-align: right;">35%</td>
+</tr>
+<tr>
+<td>Price and timing</td>
+<td style="text-align: right;">20%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="submission">9. Submission</h2>
+<ul>
+<li><strong>Address:</strong> rsfsr-legal@centergroup.ru</li>
+<li><strong>Contact:</strong> A.-Kh. A. Kagirov</li>
+<li><strong>Format:</strong> PDF up to 25 pp (proposal + CVs + price
+quote)</li>
+</ul>
+<hr />
+<p><strong>Date:</strong> 24.05.2026 <strong>Engagement
+reference:</strong> RSFSR-LEGAL-2026 <strong>Center Group
+Company</strong></p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

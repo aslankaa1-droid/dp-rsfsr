@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../">
+  <title>Incorporation of the Operator JSC · ЦПФСР.РФ</title>
+  <meta name="description" content="Incorporation of the Operator JSC — Incorporation of the Operator JSC. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../_design-system/print.css">
+
+  <script defer src="../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../_design-system/i18n.js"></script>
+  <script defer src="../../../_design-system/ticker.js"></script>
+  <script defer src="../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Incorporation of the Operator JSC</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Incorporation of the Operator JSC</span>
+      <h1>Incorporation of the Operator JSC</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1
+id="incorporation-of-the-operator-jsc-and-regulatory-registration">Incorporation
+of the Operator JSC and Regulatory Registration</h1>
+<p><strong>Document:</strong> project for the incorporation of the
+operator legal entity and the plan of parallel regulatory registrations.
+<strong>Goal:</strong> to close the RED flags B5 (no corporate operator)
+and B6 (no Roskomnadzor registration) of the consolidated audit of
+24.05.2026. <strong>Author of the concept and sole founder:</strong>
+Abdul-Khakim Akhmadovich Kagirov (deposit certificate No. 4011265 of
+19.12.2024). <strong>Date:</strong> 24.05.2026.</p>
+<hr />
+<h2 id="corporate-structure">1. Corporate structure</h2>
+<h3 id="type-of-legal-entity">1.1. Type of legal entity</h3>
+<p><strong>JSC “CP RSFSR” (non-public joint-stock company, art. 7 of
+Federal Law No. 208-FZ of 26.12.1995 “On Joint-Stock
+Companies”).</strong></p>
+<p>Reasons for the choice of form: - Compliance with art. 5 part 1 of
+259-FZ (the requirement for the operator of a DFA-issuance IS — a
+non-public JSC, an LLC or a credit institution). - Allows targeted work
+with investors via the issue of preferred shares. - Permits
+participation in interagency projects of the VEB.RF / Ministry of
+Economic Development level.</p>
+<h3 id="share-capital-and-own-funds">1.2. Share capital and own
+funds</h3>
+<p><strong>Notice (legal distinction under 208-FZ vs CBR Directive
+4336-U):</strong> the share capital (art. 25 of 208-FZ) and the own
+funds of the DFA-IS operator (CBR Directive 4336-U as developed from
+779-P) are different categories. Obtaining the status of an operator of
+a DFA IS simultaneously requires:</p>
+<ul>
+<li><strong>Share capital of the JSC:</strong> not less than ₽100,000
+(the minimum under art. 26 of 208-FZ for a non-public JSC). At
+incorporation, ≥ ₽10,000,000 of paid-up ordinary shares is planned.</li>
+<li><strong>Own funds (capital) ≥ ₽50,000,000</strong> (the requirement
+of clause 1.2 of CBR Directive 4336-U). Formed from paid-up share
+capital, share premium, retained earnings and other sources under the
+CBR methodology. Confirmed by an auditor’s opinion.</li>
+</ul>
+<p>Structure as at incorporation: - 100% of ordinary shares — with the
+founder. - A share capital of ≥ ₽10 mn + contribution to additional
+capital / share premium after the Seed round provide aggregate own funds
+of ≥ ₽50 mn by the time of filing with the register of operators of DFA
+ISs. - At later rounds — the issue of preferred shares with special
+rights (protection against dilution of control).</p>
+<h3 id="officers-compliance-with-779-p">1.3. Officers (compliance with
+779-P)</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Position</th>
+<th>779-P requirement</th>
+<th>Appointment timing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>General Director</strong></td>
+<td>Higher economic / legal education; ≥ 3 years of experience in senior
+positions in the financial sector; qualification match</td>
+<td>T+1 mo. after incorporation</td>
+</tr>
+<tr>
+<td><strong>Chair of the Board of Directors</strong></td>
+<td>Independent; reputation confirmed</td>
+<td>T+2 mo.</td>
+</tr>
+<tr>
+<td><strong>Head of Compliance (HOC)</strong></td>
+<td>ICA / IRM / ACAMS certificate or equivalent; ≥ 5 years in
+AML/KYC</td>
+<td>T+2 mo.</td>
+</tr>
+<tr>
+<td><strong>Chief Information Security Officer (CISO)</strong></td>
+<td>FSTEC certificate; ≥ 5 years on CII-1 / UZ-1</td>
+<td>T+2 mo.</td>
+</tr>
+<tr>
+<td><strong>Chief Counsel</strong></td>
+<td>Specialisation in 259-FZ / 779-P / 152-FZ</td>
+<td>T+1 mo.</td>
+</tr>
+<tr>
+<td><strong>Chief Risk Officer (CRO)</strong></td>
+<td>FRM / PRM or equivalent</td>
+<td>T+3 mo.</td>
+</tr>
+<tr>
+<td><strong>Internal Auditor</strong></td>
+<td>Member of an SRO of auditors</td>
+<td>T+3 mo.</td>
+</tr>
+<tr>
+<td><strong>Chief Accountant</strong></td>
+<td>Compliance with art. 7 of Federal Law No. 402-FZ “On Accounting”,
+and the requirements of art. 11.1 of 86-FZ for officers of financial
+infrastructure</td>
+<td>T+1 mo.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="founding-documents">1.4. Founding documents</h3>
+<p>Within the incorporation, the following package is prepared: 1.
+<strong>Charter of JSC “CP RSFSR”</strong> (based on the model charter,
+with special provisions under 779-P). 2. <strong>Sole founder’s
+resolution</strong> on the incorporation of the JSC. 3.
+<strong>Agreement on the incorporation of the JSC</strong>. 4.
+<strong>Application for state registration</strong> (form Р11001) to the
+Federal Tax Service. 5. <strong>Document confirming payment of the share
+capital</strong> (at incorporation — not less than 50% of the share
+capital).</p>
+<p>Preparation of the package — <strong>T+0…T+2 mo.</strong> from the
+decision to launch.</p>
+<h3 id="ownership-structure-target">1.5. Ownership structure
+(target)</h3>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr>
+<th>Stage</th>
+<th style="text-align: right;">Founder</th>
+<th style="text-align: right;">Investor</th>
+<th style="text-align: right;">State capital</th>
+<th style="text-align: right;">Top management (ESOP)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Incorporation</strong></td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td><strong>After the $15M Seed round</strong></td>
+<td style="text-align: right;">79.2%</td>
+<td style="text-align: right;">15.8%</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">5.0% (ESOP)</td>
+</tr>
+<tr>
+<td><strong>After Series A (T+18 mo.)</strong></td>
+<td style="text-align: right;">64%</td>
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">11% (ESOP + new)</td>
+</tr>
+<tr>
+<td><strong>After Series B with state capital (T+36 mo.)</strong></td>
+<td style="text-align: right;">48%</td>
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;">15%</td>
+<td style="text-align: right;">12%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2
+id="placement-on-regulatory-registers-in-parallel-with-incorporation">2.
+Placement on regulatory registers (in parallel with incorporation)</h2>
+<h3 id="registration-as-a-personal-data-operator-art.-22-of-152-fz">2.1.
+Registration as a personal-data operator (art. 22 of 152-FZ)</h3>
+<p><strong>Timing:</strong> notification to Roskomnadzor — <strong>T+0.5
+mo.</strong> (before any processing of users’ personal data in the demo
+app begins).</p>
+<p><strong>Contents of the notification:</strong> - The purposes of PD
+processing. - Categories of PD (name, INN, SNILS, biometrics under
+572-FZ, passport data). - Categories of PD subjects. - The list of
+actions (collection, recording, systematisation, storage, use, transfer,
+deletion). - A description of protection measures (Government Resolution
+No. 1119, FSTEC Order No. 21 / FSB orders). - Information on
+cross-border transfers (absent). - The start date of processing. - The
+processing term.</p>
+<p><strong>Status as at 24.05.2026 in the demo app:</strong> real PD is
+not collected; the Roskomnadzor notification is filed concurrently with
+the registration of the JSC, in order to exclude the offence under art.
+13.11 of the Code of Administrative Offences.</p>
+<h3 id="registration-with-rosfinmonitoring-115-fz">2.2. Registration
+with Rosfinmonitoring (115-FZ)</h3>
+<p><strong>Timing:</strong> <strong>T+1 mo.</strong> Appointment of the
+special AML/CFT officer; development of the IC Rules (Internal Control
+Rules); registration in the Rosfinmonitoring personal account.</p>
+<h3
+id="application-to-the-register-of-dfa-is-operators-bank-of-russia-779-p">2.3.
+Application to the register of DFA-IS operators (Bank of Russia,
+779-P)</h3>
+<p><strong>Timing:</strong> <strong>T+3…T+6 mo.</strong> after
+incorporation of the JSC and assembly of the complete documentation
+package.</p>
+<p><strong>Contents of the application:</strong> - Founding documents of
+the JSC. - Information on officers (under 779-P). - IS rules (art. 6 of
+259-FZ). - Description of the DLT infrastructure (with a specific DLT
+vendor: Masterchain / equivalent). - Protection measures under GOST R
+57580.1 level 4. - FSTEC / FSB opinion. - Independent IS-audit opinion.
+- Documents confirming compliance with 779-P (business continuity,
+operational risk under 716-P, CIPF). - Operator’s business plan (based
+on <code>04_Бизнес-план/Бизнес-план_ЦП_РСФСР.md</code> after refactor).
+- Financial model (based on
+<code>03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.md</code> after
+refactor).</p>
+<h3 id="categorisation-as-cii-187-fz-government-resolution-no.-127">2.4.
+Categorisation as CII (187-FZ, Government Resolution No. 127)</h3>
+<p><strong>Timing:</strong> <strong>T+6…T+12 mo.</strong> (after actual
+operation). Filing of the categorisation application with FSTEC;
+expected category — <strong>1st (a significant CII
+facility)</strong>.</p>
+<h3
+id="certification-of-cipf-fsb-and-information-protection-means-fstec">2.5.
+Certification of CIPF (FSB) and information-protection means
+(FSTEC)</h3>
+<p><strong>Timing:</strong> <strong>T+9…T+18 mo.</strong> Obtaining FSB
+certificates for CIPF (CryptoPro / SignalCom / equivalent) and FSTEC
+certificates for perimeter-protection means.</p>
+<h3
+id="applications-to-rospatent-for-registration-of-computer-programs-art.-1262-of-the-cc">2.6.
+Applications to Rospatent for registration of computer programs (art.
+1262 of the CC)</h3>
+<p><strong>Timing:</strong> <strong>T+1…T+3 mo.</strong> Registration of
+four components: 1. Mobile application (PWA + Capacitor builds). 2.
+Backend. 3. Operator’s DLT node. 4. KYC module.</p>
+<h3 id="trademark-application-art.-1477-of-the-cc">2.7. Trademark
+application (art. 1477 of the CC)</h3>
+<p><strong>Timing:</strong> <strong>T+1 mo.</strong> Application for
+registration of the word signs “CP RSFSR” and “RSFSR” in Nice Classes 9
+(software), 36 (financial services), 42 (scientific and technical
+services).</p>
+<h3
+id="request-to-the-ministry-of-finance-art.-34.2-of-the-tax-code">2.8.
+Request to the Ministry of Finance (art. 34.2 of the Tax Code)</h3>
+<p><strong>Timing:</strong> <strong>T+2 mo.</strong> Written request to
+the Ministry of Finance to obtain an official tax qualification of: -
+the swap of the initial DFA for an infrastructural one (art. 39 of the
+Tax Code vs art. 282.2); - the operator’s status as a tax agent under
+arts. 226.1 / 214.11 of the Tax Code; - the VAT status of DFA operations
+in the new wording of sub-clause 12.2 of clause 2 of art. 149 of the Tax
+Code; - the status for simplified identification of operations under
+part 1.4-2 of art. 7 of 115-FZ.</p>
+<h3 id="application-to-the-regulatory-sandbox-258-fz">2.9. Application
+to the Regulatory Sandbox (258-FZ)</h3>
+<p><strong>Timing:</strong> <strong>T+3 mo.</strong> Application to the
+Department of Financial Technologies of the Bank of Russia to conduct
+pilot-light (see <code>04_Бизнес-план/Wedge_pilot-light.md</code>) under
+an experimental legal regime.</p>
+<hr />
+<h2 id="aggregate-incorporation-roadmap">3. Aggregate incorporation
+roadmap</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Month</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T+0</td>
+<td>Decision to launch; circulation of the concept to the sole
+founder</td>
+</tr>
+<tr>
+<td>T+0.5</td>
+<td>Roskomnadzor notification of PD processing</td>
+</tr>
+<tr>
+<td>T+1</td>
+<td>Filing of the JSC registration documents with the FTS; appointment
+of the General Director, Chief Counsel, Chief Accountant</td>
+</tr>
+<tr>
+<td>T+1</td>
+<td>Trademark application to Rospatent</td>
+</tr>
+<tr>
+<td>T+1</td>
+<td>Rospatent applications for the registration of computer
+programs</td>
+</tr>
+<tr>
+<td>T+2</td>
+<td>Appointment of the CISO, Head of Compliance, Chair of the Board of
+Directors</td>
+</tr>
+<tr>
+<td>T+2</td>
+<td>Registration with Rosfinmonitoring; approval of the IC Rules</td>
+</tr>
+<tr>
+<td>T+2</td>
+<td>Request to the Ministry of Finance on tax qualification (art. 34.2
+of the Tax Code)</td>
+</tr>
+<tr>
+<td>T+3</td>
+<td>Appointment of the CRO, Internal Auditor</td>
+</tr>
+<tr>
+<td>T+3</td>
+<td>Application to the Bank of Russia regulatory sandbox</td>
+</tr>
+<tr>
+<td>T+3</td>
+<td>Preparation of the document package for the application to the
+DFA-IS operators’ register</td>
+</tr>
+<tr>
+<td>T+6</td>
+<td>Filing of the application to the Bank of Russia register of DFA-IS
+operators (779-P)</td>
+</tr>
+<tr>
+<td>T+9</td>
+<td>Start of CIPF / protection-means certification</td>
+</tr>
+<tr>
+<td>T+12</td>
+<td>Categorisation as CII (upon actual operation)</td>
+</tr>
+<tr>
+<td>T+18</td>
+<td>Receipt of all profile certificates</td>
+</tr>
+<tr>
+<td>T+24</td>
+<td>Pilot-light launch under the active 259-FZ (see the wedge
+document)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="legal-risks-closed-by-this-document">4. Legal risks closed by
+this document</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Audit RED flag</th>
+<th>Closure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>B5</strong> No corporate operator legal entity</td>
+<td>Incorporation of a JSC with share capital ≥ ₽50 mn; plan to appoint
+officers under 779-P</td>
+</tr>
+<tr>
+<td><strong>B6</strong> Personal-data operator not registered with
+Roskomnadzor</td>
+<td>Roskomnadzor notification at T+0.5 mo.; until then no real PD is
+collected</td>
+</tr>
+<tr>
+<td><strong>B2</strong> Advertising of an unlicensed financial service
+in RuStore</td>
+<td>The RuStore description has been moved to an
+informational-demonstration register; a disclaimer on the legal status
+has been added (see
+<code>09_Мобильное_приложение/Публикация_RuStore/01_Описание_приложения.md</code>)</td>
+</tr>
+<tr>
+<td><strong>A-legal AMBER A1</strong> Taxes on the DFA swap</td>
+<td>Ministry of Finance request under art. 34.2 of the Tax Code at T+2
+mo.</td>
+</tr>
+<tr>
+<td><strong>A-legal AMBER A2</strong> Tax-agent status</td>
+<td>Within the Ministry of Finance request</td>
+</tr>
+<tr>
+<td><strong>A-legal AMBER A5</strong> CII categorisation</td>
+<td>Filing after 6 months of actual operation</td>
+</tr>
+<tr>
+<td><strong>A-legal AMBER A6</strong> 258-FZ sandbox</td>
+<td>Application to the Bank of Russia FinTech Department at T+3 mo.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="timeline-and-funding-of-initial-regulatory-activity">5. Timeline
+and funding of initial regulatory activity</h2>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align: right;">₽ mn</th>
+<th>Timing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JSC incorporation (state fees, legal support, notary)</td>
+<td style="text-align: right;">0.2</td>
+<td>T+0…T+2 mo.</td>
+</tr>
+<tr>
+<td>Rospatent applications (4 computer programs + trademark)</td>
+<td style="text-align: right;">0.3</td>
+<td>T+1 mo.</td>
+</tr>
+<tr>
+<td>Preparation of the 779-P register package</td>
+<td style="text-align: right;">8.0</td>
+<td>T+3…T+6 mo.</td>
+</tr>
+<tr>
+<td>Preparation of the Rosfinmonitoring IC Rules</td>
+<td style="text-align: right;">0.8</td>
+<td>T+1…T+2 mo.</td>
+</tr>
+<tr>
+<td>Roskomnadzor notification</td>
+<td style="text-align: right;">0.1</td>
+<td>T+0.5 mo.</td>
+</tr>
+<tr>
+<td>Legal support of incorporation (external consultant, 9 mo.)</td>
+<td style="text-align: right;">14.0</td>
+<td>T+0…T+9 mo.</td>
+</tr>
+<tr>
+<td>Ministry of Finance tax opinion (legal component)</td>
+<td style="text-align: right;">1.2</td>
+<td>T+2 mo.</td>
+</tr>
+<tr>
+<td><strong>TOTAL (first block of regulatory expenses)</strong></td>
+<td style="text-align: right;"><strong>24.6</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>This amount is included in the starter round of $15M (₽1,335 mn).</p>
+<hr />
+<p><strong>Preparation date:</strong> 24.05.2026.
+<strong>Prepared:</strong> in the context of remediation of the RED
+flags of the consolidated audit; a unified SoT for the project’s
+regulatory contour.</p>
+
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

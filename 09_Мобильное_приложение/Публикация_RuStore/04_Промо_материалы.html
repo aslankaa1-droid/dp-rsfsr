@@ -1,0 +1,373 @@
+﻿<!doctype html>
+<html lang="ru" data-theme="daylight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Промо материалы · ЦП РСФСР</title>
+<meta name="theme-color" content="#0B2B5C">
+<link rel="stylesheet" href="../../_shared/brand.css">
+<style>
+/* Document-specific styles */
+body { padding-top: 80px; }
+.doc-wrap { max-width: 880px; margin: 0 auto; padding: 48px 24px 96px; }
+.doc-header {
+  padding-bottom: 24px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.doc-header .eyebrow { margin-bottom: 12px; }
+.doc-header h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--primary); margin-bottom: 12px; }
+.doc-header p { color: var(--fg-mute); font-size: .9375rem; margin: 0; }
+.doc-content h1, .doc-content h2, .doc-content h3, .doc-content h4 { color: var(--primary); margin-top: 2em; margin-bottom: .5em; }
+.doc-content h1 { font-size: 1.875rem; }
+.doc-content h2 { font-size: 1.5rem; padding-bottom: 6px; border-bottom: 1px solid var(--border-soft); }
+.doc-content h3 { font-size: 1.25rem; }
+.doc-content h4 { font-size: 1.0625rem; color: var(--fg); }
+.doc-content p { line-height: 1.7; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content ul, .doc-content ol { line-height: 1.7; padding-left: 1.5em; color: var(--fg-soft); margin-bottom: 1em; }
+.doc-content li { margin-bottom: .35em; }
+.doc-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 12px 20px;
+  margin: 1em 0;
+  background: var(--bg-soft);
+  border-radius: 0 8px 8px 0;
+  color: var(--fg-soft);
+}
+.doc-content code {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg-soft);
+  padding: 2px 6px; border-radius: 4px;
+  font-size: .875em; color: var(--primary);
+}
+.doc-content pre {
+  background: var(--bg-soft); padding: 16px; border-radius: 10px;
+  overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: .875rem;
+  border: 1px solid var(--border-soft); margin: 1em 0;
+}
+.doc-content table {
+  width: 100%; border-collapse: collapse; margin: 1.5em 0;
+  background: var(--card-bg); border: 1px solid var(--border-soft);
+  border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-1);
+}
+.doc-content table th {
+  background: var(--primary); color: var(--primary-on);
+  text-align: left; padding: 12px 16px; font-weight: 600;
+  font-size: .8125rem; letter-spacing: .04em; text-transform: uppercase;
+}
+.doc-content table td {
+  padding: 10px 16px; border-bottom: 1px solid var(--border-soft);
+  font-size: .9375rem; color: var(--fg-soft);
+}
+.doc-content table tr:last-child td { border-bottom: none; }
+.doc-content table tr:hover td { background: var(--bg-soft); }
+.doc-content hr {
+  border: none; height: 1px; background: var(--border-soft); margin: 2.5em 0;
+}
+.doc-content a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+.doc-content a:hover { color: var(--accent); }
+.doc-content strong { color: var(--fg); font-weight: 700; }
+
+.doc-actions {
+  display: flex; gap: 10px; margin-top: 32px; flex-wrap: wrap;
+}
+
+/* Floating top button */
+.totop {
+  position: fixed; bottom: 24px; right: 24px; z-index: 50;
+  background: var(--primary); color: var(--primary-on);
+  border: none; border-radius: 50%; width: 48px; height: 48px;
+  cursor: pointer; box-shadow: var(--shadow-3);
+  display: none; font-size: 1.25rem;
+  transition: transform .2s var(--ease);
+}
+.totop:hover { transform: translateY(-2px); }
+.totop.show { display: grid; place-items: center; }
+[dir="rtl"] .totop { right: auto; left: 24px; }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div class="scroll-progress"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="../../07_Презентации/Большая_презентация/index.html"><span class="brand-mark">Р</span><span data-i18n="brand.name">ЦП РСФСР</span></a>
+    <nav class="topbar-nav">
+      <a href="../../07_Презентации/Большая_презентация/index.html#about" data-i18n="nav.about">О платформе</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#hub" data-i18n="nav.hub">Документы</a>
+      <a href="../../08_Веб-сайт/HTML_основной/index.html">Сайт</a>
+      <a href="../../07_Презентации/Малая_презентация/index.html">Презентация</a>
+      <a href="../../07_Презентации/Большая_презентация/index.html#contacts" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+    <div class="topbar-actions">
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-i18n-btn="ru">RU</button>
+        <button class="tbtn" data-i18n-btn="en">EN</button>
+        <button class="tbtn" data-i18n-btn="fr">FR</button>
+        <button class="tbtn" data-i18n-btn="ar">عر</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-theme-btn="daylight" aria-label="Дневная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+        <button class="tbtn" data-theme-btn="midnight" aria-label="Тёмная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="tbtn" data-theme-btn="sepia">◐</button>
+        <button class="tbtn" data-theme-btn="contrast">A11Y</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn" data-font-action="dec">A−</button>
+        <button class="tbtn" data-font-action="reset">A</button>
+        <button class="tbtn" data-font-action="inc">A+</button>
+      </div>
+      <button class="tbtn tbtn-burger">≡</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="eyebrow">Публикация в RuStore</span>
+      <h1>Промо материалы</h1>
+      <p>Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 · 19.12.2024 · ЦП РСФСР</p>
+    </header>
+    <article class="doc-content">
+<h1 id="промо-материалы-для-публикации-в-rustore">Промо-материалы для
+публикации в RuStore</h1>
+<h2 id="состав-комплекта">Состав комплекта</h2>
+<h3 id="иконки-приложения">1. Иконки приложения</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Назначение</th>
+<th>Размер</th>
+<th>Файл</th>
+<th>Формат</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Иконка в каталоге</td>
+<td>512 × 512 px</td>
+<td><code>icons/store-512.png</code></td>
+<td>PNG</td>
+</tr>
+<tr>
+<td>Иконка приложения (адаптивная)</td>
+<td>192 × 192 px</td>
+<td><code>icons/icon-192.svg</code></td>
+<td>SVG</td>
+</tr>
+<tr>
+<td>Иконка приложения (полная)</td>
+<td>512 × 512 px</td>
+<td><code>icons/icon-512.svg</code></td>
+<td>SVG</td>
+</tr>
+</tbody>
+</table>
+<p>Иконки сгенерированы из исходного SVG-логотипа
+<code>Приложение/icons/icon-512.svg</code>.</p>
+<h3 id="feature-graphic-банер">2. Feature graphic / банер</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Назначение</th>
+<th>Размер</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature graphic</td>
+<td>1024 × 500 px</td>
+<td>Основной баннер каталога; включает логотип, название, ключевую
+фразу</td>
+</tr>
+</tbody>
+</table>
+<h3 id="скриншоты">3. Скриншоты</h3>
+<h4 id="минимальные-требования-rustore">Минимальные требования
+RuStore</h4>
+<ul>
+<li>Минимум 5 скриншотов, максимум 8.</li>
+<li>Соотношение сторон: 16:9 (горизонтальный) или 9:16
+(вертикальный).</li>
+<li>Минимальный размер: 320 × 480.</li>
+<li>Рекомендуемый размер: 1080 × 1920 (вертикальный).</li>
+<li>Формат: PNG, JPEG.</li>
+</ul>
+<h4 id="рекомендуемый-набор-скриншотов-по-флоу-приложения">Рекомендуемый
+набор скриншотов (по флоу приложения)</h4>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>№</th>
+<th>Экран</th>
+<th>Скриншот</th>
+<th>Подпись</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Главная (Home)</td>
+<td><code>screen-01-home.png</code></td>
+<td>«Управляйте своими активами в одном приложении»</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Подача актива</td>
+<td><code>screen-02-new-asset.png</code></td>
+<td>«Подайте имущество на залог — имущество остаётся у вас»</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Оценка</td>
+<td><code>screen-03-valuation.png</code></td>
+<td>«Получите профессиональную оценку за 24 часа»</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Смарт-контракт</td>
+<td><code>screen-04-contract.png</code></td>
+<td>«Настройте условия и подпишите смарт-контракт»</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Подписание УКЭП</td>
+<td><code>screen-05-sign.png</code></td>
+<td>«Подтверждение усиленной квалифицированной электронной
+подписью»</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Каталог ЦФА</td>
+<td><code>screen-06-cfa.png</code></td>
+<td>«Контролируйте свой портфель ЦФА»</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Доходы</td>
+<td><code>screen-07-income.png</code></td>
+<td>«Регулярные выплаты вознаграждения»</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Профиль</td>
+<td><code>screen-08-profile.png</code></td>
+<td>«Полный контроль безопасности и данных»</td>
+</tr>
+</tbody>
+</table>
+<h3 id="промо-видео">4. Промо-видео</h3>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Длительность</td>
+<td>15–30 секунд</td>
+</tr>
+<tr>
+<td>Формат</td>
+<td>MP4 (H.264 + AAC)</td>
+</tr>
+<tr>
+<td>Разрешение</td>
+<td>1080 × 1920 (вертикальное)</td>
+</tr>
+<tr>
+<td>Аудио</td>
+<td>с закадровым голосом или субтитрами</td>
+</tr>
+</tbody>
+</table>
+<p>Сценарий (15 секунд): - 0–3 с: логотип + название. - 3–6 с: главная —
+баланс и активы. - 6–9 с: подача актива. - 9–12 с: подписание
+смарт-контракта. - 12–15 с: «ЦФА выпущен» + слоган.</p>
+<h3 id="тексты">5. Тексты</h3>
+<h4 id="краткое-описание-80-символов">Краткое описание (80
+символов)</h4>
+<p>«Платформа выпуска ЦФА под залог имущества — информационно-демонстрационный сервис»</p>
+<h4 id="полное-описание-см.-файл-01_описание_приложения.md">Полное
+описание (см. файл <code>01_Описание_приложения.md</code>)</h4>
+<h4 id="что-нового">Что нового</h4>
+<p>«Первый релиз. Полный жизненный цикл выпуска ЦФА: от подачи актива до
+получения дохода.»</p>
+<h4 id="возрастная-категория">Возрастная категория</h4>
+<p><strong>18+</strong> (финансовое приложение, требующее подтверждённой
+учётной записи Госуслуг).</p>
+<h4 id="категории">Категории</h4>
+<ul>
+<li>Основная: Финансы.</li>
+<li>Дополнительная: Бизнес.</li>
+</ul>
+<h4 id="ключевые-слова">Ключевые слова</h4>
+<p>ЦФА, залог, недвижимость, инвестиции, цифровой рубль, Банк России,
+нацпроекты</p>
+<hr />
+<h2 id="инструкция-по-подготовке-скриншотов">Инструкция по подготовке
+скриншотов</h2>
+<ol type="1">
+<li>Откройте Приложение в браузере на телефонной симуляции (DevTools →
+Mobile, разрешение 1080 × 1920).</li>
+<li>Пройдите соответствующий экран.</li>
+<li>Сделайте скриншот через DevTools (Cmd/Ctrl + Shift + P → «Capture
+screenshot»).</li>
+<li>При необходимости — добавьте подпись и оформление в графическом
+редакторе.</li>
+</ol>
+<h2 id="команда-генерации-иконок-требует-imagemagick-или-pillow">Команда
+генерации иконок (требует ImageMagick или Pillow)</h2>
+<pre class="bash"><code># С помощью Pillow / Python
+python -c &quot;
+from PIL import Image
+import cairosvg, io
+
+for size in [44, 71, 96, 150, 192, 310, 512]:
+    cairosvg.svg2png(url=&#39;Приложение/icons/icon-512.svg&#39;, write_to=f&#39;store-{size}.png&#39;, output_width=size, output_height=size)
+&quot;</code></pre>
+<p>Альтернативно — <code>@capacitor/assets</code> CLI генерирует все
+размеры автоматически.</p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../07_Презентации/Большая_презентация/index.html#hub">К хабу документов</a>
+      <a class="btn btn--ghost" href="../../07_Презентации/Большая_презентация/index.html">Большая презентация</a>
+    </div>
+  </div>
+</main>
+
+<button class="totop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Наверх">↑</button>
+
+<script src="../../_shared/i18n.js"></script>
+<script src="../../_shared/app.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const t = document.querySelector('.totop');
+  if (t) t.classList.toggle('show', window.scrollY > 600);
+});
+</script>
+</body>
+</html>

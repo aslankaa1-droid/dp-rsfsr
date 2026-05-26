@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../">
+  <title>Non-Functional Requirements · ЦПФСР.РФ</title>
+  <meta name="description" content="Non-Functional Requirements — Non-Functional Requirements. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../_design-system/print.css">
+
+  <script defer src="../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../_design-system/i18n.js"></script>
+  <script defer src="../../../_design-system/ticker.js"></script>
+  <script defer src="../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Non-Functional Requirements</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Non-Functional Requirements</span>
+      <h1>Non-Functional Requirements</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="non-functional-requirements-nfr-of-cpfsr">Non-functional
+requirements (NFR) of CPFSR</h1>
+<p>The document elaborates the requirements for performance,
+reliability, information security, observability and operation of the
+platform.</p>
+<hr />
+<h2 id="performance">1. Performance</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Target value</th>
+<th>Measurement method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Peak input load</td>
+<td>5,000 RPS at the API gateway</td>
+<td>Load testing (JMeter / Yandex Tank)</td>
+</tr>
+<tr>
+<td>Average business API response time</td>
+<td>≤ 200 ms (P95)</td>
+<td>Prometheus / OpenTelemetry</td>
+</tr>
+<tr>
+<td>Response time of “heavy” operations (DFA issue)</td>
+<td>≤ 30 sec E2E</td>
+<td>Synthetic monitoring</td>
+</tr>
+<tr>
+<td>Time to the first screen of the mobile application</td>
+<td>≤ 1.5 sec on 4G</td>
+<td>Real User Monitoring</td>
+</tr>
+<tr>
+<td>TPS of the DLT register</td>
+<td>≥ 200 transactions/sec</td>
+<td>Profiling of the DLT node</td>
+</tr>
+<tr>
+<td>Concurrent users</td>
+<td>≥ 50,000 simultaneously</td>
+<td>Stress testing</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reliability-and-availability">2. Reliability and
+availability</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Target value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Annual SLA</td>
+<td>99.99% (≤ 52 min downtime/year)</td>
+</tr>
+<tr>
+<td>MTTR (mean time to repair)</td>
+<td>≤ 15 min for critical circuits</td>
+</tr>
+<tr>
+<td>MTBF (mean time between failures)</td>
+<td>≥ 8,760 h for critical components</td>
+</tr>
+<tr>
+<td>RPO (recovery point)</td>
+<td>0 for the DLT register and DFA data; ≤ 5 min for the rest</td>
+</tr>
+<tr>
+<td>RTO (recovery time)</td>
+<td>≤ 5 min for critical, ≤ 30 min for the rest</td>
+</tr>
+<tr>
+<td>Geo-distribution</td>
+<td>3 active-active data centres</td>
+</tr>
+<tr>
+<td>DB redundancy</td>
+<td>Synchronous replication ≥ N+2</td>
+</tr>
+<tr>
+<td>Backup</td>
+<td>Hourly incremental + daily full, retention 7 years</td>
+</tr>
+</tbody>
+</table>
+<h2 id="scalability">3. Scalability</h2>
+<ol type="1">
+<li><strong>Horizontal scaling</strong> of all stateless services via
+Kubernetes HPA.</li>
+<li><strong>Vertical scaling</strong> of stateful components (DB) — up
+to 1 PB of storage per cluster.</li>
+<li><strong>Sharding</strong> of the DFA register by the mortgagor’s
+identifier for large volumes.</li>
+<li><strong>Partner distribution model</strong> for the load of the
+valuation and insurance modules.</li>
+</ol>
+<h2 id="information-security">4. Information security</h2>
+<h3 id="protection-level">4.1. Protection level</h3>
+<p>The platform complies with <strong>the 4th (maximum) level of
+protection under GOST R 57580.1</strong> and implements all 8 areas of
+protection: - OZD — data protection; - OPI — protection of the IS
+perimeter; - RSI — access control and segregation; - MAU — monitoring,
+audit, response; - OPT — provision of continuous protection; - UPI —
+incident management; - OZU — protection of accounts; - RTsK — response
+to computer attacks.</p>
+<h3 id="cryptography">4.2. Cryptography</h3>
+<ul>
+<li>Only certified means: KriptoPro CSP 5.0, ViPNet CSP, KriptoPro
+HSM.</li>
+<li>Algorithms: GOST R 34.10-2012 (signature), GOST R 34.11-2012 (hash),
+GOST R 34.12-2015 / 34.13-2015 (encryption).</li>
+<li>TLS channels — using GOST certificates (KriptoPro TLS).</li>
+</ul>
+<h3 id="personal-data-protection">4.3. Personal data protection</h3>
+<ul>
+<li>Compliance with FZ-152 and FSTEC Order No. 21.</li>
+<li>ISPDn protection level — <strong>UZ-1</strong> (under RF Government
+Resolution No. 1119).</li>
+<li>Registration in the register of personal data operators of
+Roskomnadzor.</li>
+<li>All operations with personal data are journalised in the immutable
+audit log.</li>
+</ul>
+<h3 id="cii-protection">4.4. CII protection</h3>
+<ul>
+<li>Significance category — <strong>1st (highest)</strong>
+(FZ-187).</li>
+<li>Connection to GosSOPKA.</li>
+<li>Compliance with FSTEC Order No. 239.</li>
+<li>Continuous interaction with NCCCI.</li>
+</ul>
+<h2 id="observability">5. Observability</h2>
+<h3 id="metrics">5.1. Metrics</h3>
+<ul>
+<li>Business metrics: number of issued DFAs, issue volume, issue time,
+conversion.</li>
+<li>Technical metrics: RPS, latency, error rate, resource
+saturation.</li>
+<li>IS metrics: number of incidents, blocked requests, failed
+authorisations.</li>
+<li>Metrics retention — 13 months in VictoriaMetrics with aggregation by
+periods.</li>
+</ul>
+<h3 id="logs">5.2. Logs</h3>
+<ul>
+<li>Structured JSON logs of all services.</li>
+<li>Centralised collection in Loki / a domestic analogue.</li>
+<li>Correlation via trace_id.</li>
+<li>Retention of operational logs — 13 months.</li>
+<li>Retention of audit logs — 10 years (in line with the requirements of
+FZ-152 and the Tax Code of the RF).</li>
+</ul>
+<h3 id="tracing">5.3. Tracing</h3>
+<ul>
+<li>OpenTelemetry stack across all services.</li>
+<li>10% sampling for regular requests, 100% for critical circuits (DFA
+issue, exchange).</li>
+<li>Trace retention — 30 days (HOT), 180 days (COLD).</li>
+</ul>
+<h3 id="alerting">5.4. Alerting</h3>
+<ul>
+<li>Two-tier system: automated alerts + 24/7 SOC duty shift.</li>
+<li>Escalation: L1 (1 min) → L2 (5 min) → L3 (15 min) → operator
+management (30 min).</li>
+</ul>
+<h2 id="operation">6. Operation</h2>
+<h3 id="cicd">6.1. CI/CD</h3>
+<ul>
+<li>Git repository — domestic GitFlic / GitVerse / proprietary GitLab
+on-prem.</li>
+<li>CI: pipelines with mandatory steps:
+<ol type="1">
+<li>Static code analysis (PT Application Inspector, PVS-Studio).</li>
+<li>SAST / DAST (PT AppSec).</li>
+<li>Composition analysis (detection of vulnerable libraries).</li>
+<li>Unit tests (coverage ≥ 80%).</li>
+<li>Integration tests.</li>
+<li>Performance smoke tests.</li>
+<li>UKEP-signing of the release build.</li>
+</ol></li>
+<li>CD: GitOps (Argo CD / a domestic analogue), full automation of
+deployments, with a canary release mechanism.</li>
+</ul>
+<h3 id="configuration-management">6.2. Configuration management</h3>
+<ul>
+<li>All configurations — in Git (Infrastructure as Code, Configuration
+as Code).</li>
+<li>Secrets — through HashiCorp Vault (or a domestic analogue) with
+encryption on HSM.</li>
+</ul>
+<h3 id="backup-and-dr">6.3. Backup and DR</h3>
+<ul>
+<li>Full DR scenario testing — quarterly.</li>
+<li>Recovery drill — once every six months with the participation of the
+SOC.</li>
+</ul>
+<h2 id="compatibility-and-standardisation">7. Compatibility and
+standardisation</h2>
+<ul>
+<li>API: REST (OpenAPI 3.1) for external integrations; gRPC between
+internal services.</li>
+<li>API documentation — automatic generation in the Swagger style.</li>
+<li>Standards support: OAuth 2.1, OpenID Connect, mTLS, JWT with
+RS256/GostR3410.</li>
+<li>Compliance with ISO/IEC 25010 (software quality attributes).</li>
+</ul>
+<h2 id="requirements-for-the-teams-and-operation">8. Requirements for
+the teams and operation</h2>
+<ul>
+<li>24×7 NOC (Network Operations Center).</li>
+<li>24×7 SOC (Security Operations Center) with GosSOPKA
+integration.</li>
+<li>Duty shifts: ≥ 6 people per shift for critical circuits.</li>
+<li>Regular Red Team / Blue Team practices — every 6 months.</li>
+<li>Annual external pentest by a laboratory accredited by FSTEC.</li>
+</ul>
+<h2 id="requirements-for-import-independence">9. Requirements for import
+independence</h2>
+<p>100% of the components of the hardware and software stack must: - be
+included in the Unified Register of Russian Software (RF Government
+Resolution No. 1236), or - be certified by FSTEC of Russia / FSB of
+Russia, or - be a proprietary development of the operator with open
+source and a build on the territory of the RF.</p>
+</article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

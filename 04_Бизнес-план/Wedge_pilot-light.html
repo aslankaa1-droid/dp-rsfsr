@@ -1,0 +1,901 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../">
+  <title>Wedge · pilot-light · ЦПФСР.РФ</title>
+  <meta name="description" content="Wedge · pilot-light — Бизнес-план · wedge. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../_design-system/tokens.css">
+  <link rel="stylesheet" href="../_design-system/global.css">
+  <link rel="stylesheet" href="../_design-system/components.css">
+  <link rel="stylesheet" href="../_design-system/rtl.css">
+  <link rel="stylesheet" href="../_design-system/print.css">
+
+  <script defer src="../_design-system/theme-switcher.js"></script>
+  <script defer src="../_design-system/i18n-data.js"></script>
+  <script defer src="../_design-system/i18n.js"></script>
+  <script defer src="../_design-system/ticker.js"></script>
+  <script defer src="../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Бизнес-план · wedge</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Бизнес-план · wedge</span>
+      <h1>Wedge · pilot-light</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="wedge-pilot-light-в-действующем-259-фз">Wedge / Pilot-light в
+действующем 259-ФЗ</h1>
+<p><strong>Документ:</strong> концепция минимально жизнеспособного
+контура («wedge») оператора ИС ЦФА, не требующего поправок в 86-ФЗ и НПА
+уровня цифрового рубля. <strong>Цель:</strong> закрыть RED-флаг D5
+сводного аудита от 24.05.2026 («Wedge / pilot-light версия
+отсутствует»). <strong>Стратегическая логика:</strong> не входить в Банк
+России на первом шаге с конструкцией, требующей пакета 4 ФЗ; войти через
+wedge-пилот в действующем 259-ФЗ, через альянс ВЭБ.РФ / Минэк /
+Газпромбанк / Атомайз; через 18–36 мес. фактической работы — открыть
+диалог с ЦБ через консолидированную межведомственную позицию.
+<strong>Дата:</strong> 24.05.2026.</p>
+<hr />
+<h2 id="что-такое-wedge-pilot-light">1. Что такое wedge /
+pilot-light</h2>
+<p>Wedge — минимальная конфигурация платформы, в которой: -
+<strong>Сохраняется ценностное предложение</strong> (выпуск целевых ЦФА
+под залог имущества, целевое расходование на проекты социального
+развития). - <strong>Снимается главный регуляторный риск</strong> (отказ
+от формулировки «целевая эмиссия Банка России»). - <strong>Замещается
+источник целевого фондирования</strong> — вместо эмиссии ЦБ используется
+существующий канал инфраструктурного финансирования через ВЭБ.РФ /
+Газпромбанк / ДОМ.РФ. - <strong>Получается базовый юнит-экономический
+контур</strong> (выручка от комиссий за выпуск и сервис). -
+<strong>Создаётся переговорный артефакт</strong> для последующего
+диалога с ЦБ через консолидированную межведомственную позицию.</p>
+<p>Этот режим не требует поправок в 86-ФЗ и БК РФ; полностью
+укладывается в действующее 259-ФЗ + Положение ЦБ №779-П.</p>
+<hr />
+<h2 id="параметры-wedge-пилота">2. Параметры wedge-пилота</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Регион пилота</strong></td>
+<td>Республика Татарстан или Тюменская область (выбор по результатам
+переговоров с региональным правительством)</td>
+</tr>
+<tr>
+<td><strong>Тип залогового имущества</strong></td>
+<td>Муниципальная и государственная недвижимость (без частных лиц на
+первом этапе — для минимизации потребительских рисков)</td>
+</tr>
+<tr>
+<td><strong>Объём пула первого года</strong></td>
+<td>₽ 5–10 млрд (50–100 объектов от муниципалитета)</td>
+</tr>
+<tr>
+<td><strong>Стартовый партнёр-банк</strong></td>
+<td>Газпромбанк или ПСБ (определяется по MoU)</td>
+</tr>
+<tr>
+<td><strong>Стартовый страховщик</strong></td>
+<td>Согар / Ингосстрах / СОГАЗ-СК (тендер)</td>
+</tr>
+<tr>
+<td><strong>Источник целевого фондирования</strong></td>
+<td>Инфраструктурные кредиты ВЭБ.РФ (Фабрика проектного финансирования)
+под государственные гарантии</td>
+</tr>
+<tr>
+<td><strong>Регуляторная база</strong></td>
+<td>259-ФЗ + 779-П + регуляторная песочница 258-ФЗ</td>
+</tr>
+<tr>
+<td><strong>Срок запуска</strong></td>
+<td><strong>Q3 2027 (T+18 мес. от учреждения АО)</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="стейкхолдеры-wedge-пилота">3. Стейкхолдеры wedge-пилота</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Стейкхолдер</th>
+<th>Роль</th>
+<th>Стратегия привлечения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Правительство Татарстана / Тюменской обл.</strong></td>
+<td>Заказчик пилота, поставщик муниципальной залоговой базы</td>
+<td>MoU; кейс «снижение давления на региональный бюджет»</td>
+</tr>
+<tr>
+<td><strong>ВЭБ.РФ</strong></td>
+<td>Источник инфраструктурного фондирования; снимает mandate-конфликт с
+ЦБ</td>
+<td>Прямой канал через Фабрику проектного финансирования; названный
+sponsor — замминистра Минэка</td>
+</tr>
+<tr>
+<td><strong>Газпромбанк</strong></td>
+<td>Расчётный банк пилота; партнёр по выпуску ЦФА</td>
+<td>MoU с проектным финансированием</td>
+</tr>
+<tr>
+<td><strong>Атомайз</strong></td>
+<td>Технологическое партнёрство: Атомайз — оператор сделки по своей
+действующей лицензии 779-П (лицензия операторов ИС ЦФА индивидуальна и
+не передаётся, sublease невозможен); ЦП РСФСР — front-end / агент
+привлечения и оценки залога, KYC/онбординг, технологическая
+инфраструктура</td>
+<td>Двусторонний договор о технологическом партнёрстве;
+интероперабельность DLT-стека; разделение функционала и доходов</td>
+</tr>
+<tr>
+<td><strong>Страховая компания</strong></td>
+<td>Покрытие залогового пула</td>
+<td>Тендер среди СК с лицензией ЦБ</td>
+</tr>
+<tr>
+<td><strong>Минэк</strong></td>
+<td>Политический союзник (нацпроекты — их KPI)</td>
+<td>Главный канал входа; named sponsor</td>
+</tr>
+<tr>
+<td><strong>Минфин</strong></td>
+<td>Согласование налоговой позиции; снижение давления на ОФЗ</td>
+<td>Запрос в Минфин по ст. 34.2 НК; кейс «внебюджетный канал»</td>
+</tr>
+<tr>
+<td><strong>Банк России (надзорный регулятор по ст. 4
+86-ФЗ)</strong></td>
+<td>Регуляторная песочница, реестр операторов ИС ЦФА</td>
+<td>Через консолидированную межведомственную позицию (не first
+call)</td>
+</tr>
+</tbody>
+</table>
+<h3
+id="champion-map-поимённо-по-итогам-уточняющего-аудита-24.05.2026">3.1.
+Champion-map (поимённо, по итогам уточняющего аудита 24.05.2026)</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Орган</th>
+<th>Поимённый champion</th>
+<th>Роль / интерес</th>
+<th>Приоритет контакта</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Минэкономразвития</strong></td>
+<td><strong>Максим Решетников</strong>, министр</td>
+<td>Главный союзник: KPI по нацпроектам, заинтересован в инструментах
+ускорения реализации</td>
+<td>T+1…T+3 мес. (первая точка входа)</td>
+</tr>
+<tr>
+<td><strong>Минфин</strong></td>
+<td><strong>Иван Колычев</strong>, заместитель министра (внешний долг и
+долговая политика)</td>
+<td>Внебюджетный канал финансирования инфраструктуры — снижение давления
+на ОФЗ</td>
+<td>T+3…T+6 мес.</td>
+</tr>
+<tr>
+<td><strong>Минфин</strong></td>
+<td><strong>Владимир Сазанов</strong>, заместитель министра (налоговая
+политика)</td>
+<td>Согласование налоговой позиции по ЦФА (ст. 34.2 НК)</td>
+<td>T+3…T+6 мес.</td>
+</tr>
+<tr>
+<td><strong>Государственная Дума</strong></td>
+<td><strong>Анатолий Аксаков</strong>, председатель Комитета по
+финансовому рынку</td>
+<td>НПА-канал для горизонтной фазы (T+24+); консультативная поддержка по
+интерпретации 259-ФЗ</td>
+<td>T+6…T+12 мес. (для горизонта)</td>
+</tr>
+<tr>
+<td><strong>ВЭБ.РФ</strong></td>
+<td>Через ФПФ — специализированные отделы инфраструктурных проектов;
+LoI/consultative letter</td>
+<td>Источник целевого фондирования (Фабрика проектного финансирования по
+ПП РФ №158)</td>
+<td>T+3…T+6 мес.</td>
+</tr>
+<tr>
+<td><strong>Региональные правительства (пилот)</strong></td>
+<td><strong>Татарстан</strong> — Рустам Минниханов / Рустам Бабиков
+(цифровая трансформация); <strong>Тюменская область</strong> — Александр
+Моор; <strong>Башкортостан</strong> — резервный вариант</td>
+<td>Поставщики муниципальной залоговой базы; политическая воля для
+пилота</td>
+<td>T+6…T+9 мес. (через MoU)</td>
+</tr>
+<tr>
+<td><strong>Банк России (для horizon-фазы)</strong></td>
+<td>Через консолидированную межведомственную позицию Минэк + Минфин +
+Госдума</td>
+<td>Включение института целевой эмиссии в roadmap на T+24+</td>
+<td>Только после wedge-track record ≥ 12 мес.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="шаги-запуска-wedge-пилота">4. Шаги запуска wedge-пилота</h2>
+<h3 id="этап-0-подготовительный-t0t3-мес.">Этап 0 — Подготовительный
+(T+0…T+3 мес.)</h3>
+<ol type="1">
+<li>Учреждение АО «ЦП РСФСР» (см.
+<code>02_Юридический_фундамент/Учреждение_АО_оператора_и_РКН.md</code>).</li>
+<li>Назначение должностных лиц по 779-П.</li>
+<li>Подача в Роспатент / РКН / Росфинмониторинг.</li>
+</ol>
+<h3 id="этап-1-memo-обёртка-и-champion-search-t3t9-мес.">Этап 1 —
+Memo-обёртка и champion search (T+3…T+9 мес.)</h3>
+<ol type="1">
+<li><strong>Memo-обёртка для Минэка / Аппарата Правительства:</strong>
+позиционирование как инструмент ускорения нацпроектов (не как монетарная
+реформа). Формулировка: «целевое фондирование через инфраструктурный
+контур ВЭБ.РФ / Казначейства с участием Банка России как надзорного
+регулятора».</li>
+<li><strong>Champion search:</strong> найти политического носителя
+(замминистра Минэка / советник Председателя Правительства). Без champion
+проект не движется.</li>
+<li><strong>MoU с одним банком</strong> (Газпромбанк или ПСБ) и одной
+страховой компанией.</li>
+<li><strong>MoU с регионом-пилотом</strong> (выбор Татарстана /
+Тюменской обл.).</li>
+</ol>
+<h3 id="этап-2-регуляторные-согласования-t9t15-мес.">Этап 2 —
+Регуляторные согласования (T+9…T+15 мес.)</h3>
+<ol type="1">
+<li><strong>Заявка в реестр операторов ИС ЦФА</strong> Банка России
+(779-П).</li>
+<li><strong>Заявка в регуляторную песочницу</strong> Банка России
+(258-ФЗ).</li>
+<li><strong>Согласование правил ИС</strong> (ст. 6 259-ФЗ).</li>
+<li><strong>Получение профильных сертификатов</strong> ФСТЭК / ФСБ.</li>
+<li><strong>Заключение Минфина</strong> по налоговой позиции (ст. 34.2
+НК).</li>
+</ol>
+<h3 id="этап-3-пилотная-фаза-t15t24-мес.">Этап 3 — Пилотная фаза
+(T+15…T+24 мес.)</h3>
+<ol type="1">
+<li><strong>Подключение муниципальной базы пилот-региона</strong>
+(50–100 объектов).</li>
+<li><strong>Первый цикл выпуска целевых ЦФА</strong> на основе
+муниципального залогового пула.</li>
+<li><strong>Целевое фондирование через ВЭБ.РФ</strong> (Фабрика
+проектного финансирования) под гарантии региона.</li>
+<li><strong>Финансирование нацпроекта</strong> (например, ремонт
+объектов ЖКХ или строительство социального жилья).</li>
+<li><strong>Учёт операций</strong> в действующей правовой архитектуре
+(без поправок в 86-ФЗ).</li>
+</ol>
+<h3 id="этап-4-масштабирование-t24t36-мес.">Этап 4 — Масштабирование
+(T+24…T+36 мес.)</h3>
+<ol type="1">
+<li><strong>Расширение на 3–5 регионов</strong> (мультипликация
+модели).</li>
+<li><strong>Включение второго типа коллатераля</strong> (региональная
+коммерческая недвижимость).</li>
+<li><strong>Подключение второго банка-партнёра</strong>
+(диверсификация).</li>
+<li><strong>Подключение второй страховой компании</strong>.</li>
+<li><strong>Подготовка консолидированной межведомственной
+позиции</strong> (ЦБ + Минфин + Минэк + ВЭБ.РФ) для горизонтного входа в
+Банк России с конструкцией целевого фондирования.</li>
+</ol>
+<h3 id="этап-5-горизонтная-фаза-t36-мес.">Этап 5 — Горизонтная фаза
+(T+36+ мес.)</h3>
+<ol type="1">
+<li>Через накопленный 18–24-месячный track record wedge-пилота —
+<strong>входить в Банк России с консолидированной межведомственной
+позицией</strong>.</li>
+<li>Лоббирование пакета 4 ФЗ (86-ФЗ, 259-ФЗ, БК РФ, ГК) — Минцифры +
+Минфин + ЦБ + Минэк.</li>
+<li>Подзаконные акты, Указание ЦБ, совместный приказ Минфин / ЦБ /
+Минцифры / Росреестр / ФК.</li>
+<li>Полномасштабный запуск с конструкцией целевого фондирования.</li>
+</ol>
+<hr />
+<h2 id="финансовая-логика-wedge-пилота">5. Финансовая логика
+wedge-пилота</h2>
+<h3 id="юнит-экономика-пилота-год-1-2027">5.1. Юнит-экономика пилота год
+1 (2027)</h3>
+<table>
+<thead>
+<tr>
+<th>Показатель</th>
+<th style="text-align: right;">Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Залоговый пул</td>
+<td style="text-align: right;">50 объектов × ₽ 100 млн = <strong>₽ 5
+млрд</strong></td>
+</tr>
+<tr>
+<td>Выпущенные ЦФА</td>
+<td style="text-align: right;">₽ 5 млрд номинал</td>
+</tr>
+<tr>
+<td>Комиссия за выпуск (0,5%)</td>
+<td style="text-align: right;">₽ 25 млн</td>
+</tr>
+<tr>
+<td>Сервисная комиссия за год (0,3% от стека)</td>
+<td style="text-align: right;">₽ 15 млн</td>
+</tr>
+<tr>
+<td>Платформенный сбор за оценку/страх. (0,15%)</td>
+<td style="text-align: right;">₽ 7,5 млн</td>
+</tr>
+<tr>
+<td>Услуги оценщиков (0,8% от объёма)</td>
+<td style="text-align: right;">₽ 40 млн</td>
+</tr>
+<tr>
+<td><strong>Полная выручка год 1</strong></td>
+<td style="text-align: right;"><strong>≈ ₽ 87,5 млн</strong></td>
+</tr>
+<tr>
+<td>OpEx год 1</td>
+<td style="text-align: right;">₽ 70 млн</td>
+</tr>
+<tr>
+<td>EBITDA год 1</td>
+<td style="text-align: right;">₽ 17,5 млн</td>
+</tr>
+<tr>
+<td><strong>EBITDA-маржа год 1</strong></td>
+<td style="text-align: right;"><strong>20%</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="масштабирование-пилота">5.2. Масштабирование пилота</h3>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr>
+<th>Год</th>
+<th style="text-align: right;">Регионов</th>
+<th style="text-align: right;">Залоговый пул, млрд ₽</th>
+<th style="text-align: right;">Выручка, млрд ₽</th>
+<th style="text-align: right;">EBITDA-маржа</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2027 (пилот)</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0,09</td>
+<td style="text-align: right;">20%</td>
+</tr>
+<tr>
+<td>2028 (расширение)</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">0,42</td>
+<td style="text-align: right;">40%</td>
+</tr>
+<tr>
+<td>2029 (расширение)</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">1,8</td>
+<td style="text-align: right;">55%</td>
+</tr>
+<tr>
+<td>2030 (горизонтная фаза)</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">8,4</td>
+<td style="text-align: right;">65%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cash-runway-пилота">5.3. Cash-runway пилота</h3>
+<p>Стартовый раунд $15 млн (₽ 1 335 млн) распределяется: - 24,6 млн ₽ —
+учреждение АО и регуляторная регистрация. - 720 млн ₽ — CapEx первые 18
+мес. (платформа, ЦОДы, лицензии). - 502+220 = 722 млн ₽ — OpEx первого
+года (включая ФОТ 40 чел.). - <strong>Cash-runway gap
+(2025–2026):</strong> −2 080 млн ₽ (с учётом FCF Y1 −1,02 + Y2 −1,06).
+Раунд $15M = 1,335 млрд закрывает 64% пика.
+<strong>Bridge-финансирование 0,75 млрд ₽</strong> на 6–9 мес. через
+ВЭБ.РФ / Газпромбанк под залог IP — единая величина по проекту
+(синхронизировано с Финмодель.md § 4.7 и Международная_оценка.md §
+8).</p>
+<hr />
+<h2 id="конкурентный-анализ-wedge-пилота">6. Конкурентный анализ
+wedge-пилота</h2>
+<p>Аудит D-2 указал на конкурентов, не отражённых в DD. В
+wedge-стратегии — кооптация:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Конкурент</th>
+<th>Wedge-стратегия</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Atomyze, Masterchain, Лайтхаус, Сбер ЦФА, Альфа
+ЦФА</strong></td>
+<td>Кооптация через консорциум-модель. Атомайз — стратегический
+технологический партнёр (оператор сделки по своей лицензии 779-П —
+лицензия не передаётся между ЮЛ; разделение функционала: ЦП РСФСР —
+front-end/агент, Атомайз — оператор), остальные включены в роадмап как
+поставщики DLT-инфраструктуры или комплементарные сервисы.</td>
+</tr>
+<tr>
+<td><strong>Мосбиржа / СПБ Биржа</strong></td>
+<td>Не конкурент в wedge-фазе (не работают с залоговой недвижимостью).
+Партнёр на вторичном рынке ЦФА.</td>
+</tr>
+<tr>
+<td><strong>ВЭБ.РФ Платформа «РОИВ» и «Фабрика проектного
+финансирования»</strong></td>
+<td><strong>Не конкурент, а источник целевого фондирования</strong> в
+wedge. ВЭБ.РФ становится центральным союзником.</td>
+</tr>
+<tr>
+<td><strong>ДОМ.РФ</strong></td>
+<td>Партнёр по токенизации недвижимости (специализация на жилом
+секторе). MoU после пилота.</td>
+</tr>
+<tr>
+<td><strong>Atomyze + Норникель</strong></td>
+<td>Защита от «убийцы» — раннее технологическое партнёрство (оператор
+сделки + соглашение об интероперабельности; без передачи лицензии).</td>
+</tr>
+<tr>
+<td><strong>Цифровой рубль (340-ФЗ)</strong></td>
+<td>Архитектурный комплемент: ЦП РСФСР работает с залоговым
+обеспечением; цифровой рубль — расчётный инструмент. Не конкурент.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="защита-от-mandate-конфликта">7. Защита от mandate-конфликта</h2>
+<p>Главное преимущество wedge: <strong>проект не входит в ЦБ с запросом
+на эмиссию</strong>.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Аргумент против ЦБ-mandate</th>
+<th>Wedge-ответ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ЦБ не имеет полномочий по целевой эмиссии (ст. 4, 22, 75 86-ФЗ)</td>
+<td>В wedge — целевое фондирование через ВЭБ.РФ / Казначейство, не
+требует поправок в 86-ФЗ</td>
+</tr>
+<tr>
+<td>Эмиссия рублей под неликвидный коллатераль — QE со скрытым кредитным
+риском</td>
+<td>В wedge — фондирование через ВЭБ.РФ под государственные гарантии
+региона; кредитный риск на балансе ВЭБ.РФ, а не ЦБ</td>
+</tr>
+<tr>
+<td>Двойной счёт обеспечения</td>
+<td>В wedge — отсутствует: ВЭБ.РФ выдаёт реальный кредит против
+реального залога; ЦФА — расчётный инструмент</td>
+</tr>
+<tr>
+<td>Регуляторная бинарность (10 НПА — политический проект)</td>
+<td>В wedge — не требуется ни одной поправки в действующее
+законодательство; только согласования внутри 259-ФЗ и 258-ФЗ</td>
+</tr>
+<tr>
+<td>Срок до первого выпуска ЦФА</td>
+<td>В wedge — <strong>T+18 мес. от учреждения АО</strong> (единый срок:
+см. п. 2 заголовок Q3 2027); этапы § 4 откалиброваны под этот KPI.
+Горизонтная фаза с пакетом НПА — T+36…T+60 мес. реалистично</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ключевые-success-критерии-wedge-пилота">8. Ключевые
+success-критерии wedge-пилота</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Критерий</th>
+<th>Значение</th>
+<th>Срок</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Учреждение АО + назначение должностных лиц</td>
+<td>По 779-П</td>
+<td>T+2 мес.</td>
+</tr>
+<tr>
+<td>MoU с регионом-пилотом</td>
+<td>Подписано</td>
+<td>T+9 мес.</td>
+</tr>
+<tr>
+<td>MoU с банком и СК</td>
+<td>Подписано</td>
+<td>T+9 мес.</td>
+</tr>
+<tr>
+<td>Включение в реестр операторов ИС ЦФА</td>
+<td>Получено</td>
+<td>T+12 мес.</td>
+</tr>
+<tr>
+<td>Разрешение на регуляторную песочницу</td>
+<td>Получено</td>
+<td>T+12 мес.</td>
+</tr>
+<tr>
+<td>Первый цикл выпуска целевых ЦФА</td>
+<td>₽ 5 млрд</td>
+<td>T+18 мес.</td>
+</tr>
+<tr>
+<td>Первое целевое фондирование через ВЭБ.РФ</td>
+<td>₽ 5 млрд</td>
+<td>T+19 мес.</td>
+</tr>
+<tr>
+<td>Расширение на 3 региона</td>
+<td>Старт</td>
+<td>T+24 мес.</td>
+</tr>
+<tr>
+<td>Консолидированная межведомственная позиция для входа в ЦБ с пакетом
+НПА</td>
+<td>Подписано</td>
+<td>T+30 мес.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="что-wedge-пилот-меняет-в-финансовой-модели">9. Что wedge-пилот
+меняет в финансовой модели</h2>
+<p><strong>Финансовая модель</strong>
+(<code>03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.md</code>)
+учитывает wedge-режим в Conservative-сценарии: - Доля рынка год 10 — 7%
+(вместо 18% в Base). - NPV ≈ ₽ 22 млрд (вместо ₽ 51,2 млрд в Base, WACC
+30% — см. SoT v3). - IRR ≈ 38% (вместо 62% в Base). - Equity Multiple ≈
+5–6x (вместо 12x в Base, exit-on-multiple).</p>
+<p><strong>Conservative-сценарий wedge — это floor</strong>, ниже
+которого проект не падает даже при полном отказе от пакета НПА.</p>
+<hr />
+<h2 id="итог">10. Итог</h2>
+<p>Wedge / pilot-light в действующем 259-ФЗ — <strong>необходимый
+стратегический разворот</strong> по итогам аудита D5. Делает проект: -
+<strong>Регуляторно реалистичным</strong> (не требует пакета 4 ФЗ для
+запуска). - <strong>Политически нейтральным</strong> (не угрожает
+мандату ЦБ). - <strong>Финансово защищённым</strong> (Conservative NPV ₽
+41 млрд при отказе от поправок). - <strong>Переговорно сильным</strong>
+(через 24 мес. фактической работы — консолидированная позиция для входа
+в ЦБ с пакетом НПА).</p>
+<p>Это финальный артефакт, закрывающий стратегический RED-флаг D5.</p>
+<hr />
+<p><strong>Дата подготовки:</strong> 24.05.2026.
+<strong>Подготовлено:</strong> в рамках исправления RED-флагов сводного
+аудита; согласовано с финмоделью и юридическим фундаментом.</p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

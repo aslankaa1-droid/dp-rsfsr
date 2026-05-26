@@ -1,0 +1,425 @@
+﻿<!doctype html>
+<html lang="ru" data-theme="daylight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ЦП РСФСР · Pitch для партнёров и инвесторов</title>
+<meta name="theme-color" content="#0B2B5C">
+<link rel="stylesheet" href="../../_shared/brand.css">
+<style>
+:root{
+  --primary:#0B2B5C; --primary-dark:#061A3A; --primary-light:#1F4A8F;
+  --accent:#C9A961; --accent-soft:#E8D8A8;
+  --n900:#1A1D24; --n700:#3B414C; --n500:#6C7280; --n300:#D0D4DB; --n100:#F4F6FA; --w:#FFFFFF;
+  --success:#1E8E5C;
+}
+*{box-sizing:border-box; margin:0; padding:0}
+body{font-family:'Inter',system-ui,sans-serif; background:var(--n100); color:var(--n900); font-variant-numeric:tabular-nums}
+.deck{display:flex; flex-direction:column; gap:8px; padding:8px}
+.slide{
+  width:100%; max-width:1280px; aspect-ratio:16/9; margin:0 auto;
+  background:var(--w); border-radius:18px; overflow:hidden; position:relative;
+  box-shadow:0 8px 32px rgba(11,43,92,.12);
+  display:flex; align-items:center;
+  padding:6vmin 8vmin;
+}
+.slide--dark{background:linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, var(--primary-light) 100%); color:var(--w)}
+.slide--soft{background:var(--n100)}
+.snum{position:absolute; top:24px; right:32px; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--n500); letter-spacing:.08em; font-weight:600}
+.slide--dark .snum{color:rgba(255,255,255,.45)}
+.tag{display:inline-block; font-size:11px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); margin-bottom:18px}
+h1{font-family:'Onest',sans-serif; font-size:clamp(36px,5vmin,60px); color:var(--primary); line-height:1.1; margin-bottom:18px; font-weight:700; letter-spacing:-.01em}
+.slide--dark h1{color:var(--w)}
+h2{font-family:'Onest',sans-serif; font-size:clamp(28px,3.8vmin,46px); color:var(--primary); line-height:1.15; margin-bottom:14px; font-weight:700}
+.slide--dark h2{color:var(--w)}
+h3{font-family:'Onest',sans-serif; font-size:20px; color:var(--primary); font-weight:600; margin-bottom:8px}
+.slide--dark h3{color:var(--w)}
+.lead{font-size:clamp(15px,1.7vmin,19px); color:var(--n700); line-height:1.55; max-width:62ch}
+.slide--dark .lead{color:rgba(255,255,255,.85)}
+.mono{font-family:'JetBrains Mono',monospace}
+.inner{width:100%}
+
+/* Cover */
+.cover{display:grid; grid-template-columns:1.4fr 1fr; gap:60px; align-items:center; width:100%}
+.cover-mark{width:72px; height:72px; background:var(--accent); border-radius:16px; display:grid; place-items:center; color:var(--primary-dark); font-family:'Onest'; font-weight:700; font-size:32px; position:relative; margin-bottom:24px}
+.cover-mark::after{content:""; position:absolute; top:9px; right:9px; width:12px; height:12px; background:var(--primary-dark)}
+.cover-side{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); border-radius:18px; padding:28px; backdrop-filter:blur(8px)}
+.cover-stat{display:flex; justify-content:space-between; align-items:baseline; padding:10px 0; border-bottom:1px solid rgba(255,255,255,.1)}
+.cover-stat:last-child{border-bottom:none}
+.cover-stat-lbl{font-size:12px; color:rgba(255,255,255,.7)}
+.cover-stat-val{font-family:'Onest'; font-weight:700; font-size:22px; color:var(--w)}
+.cover-stat-val em{color:var(--accent); font-style:normal; font-size:12px; margin-left:4px; font-weight:500}
+
+/* Cards */
+.row-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; width:100%; margin-top:14px}
+.row-4{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; width:100%; margin-top:14px}
+.row-2{display:grid; grid-template-columns:repeat(2,1fr); gap:24px; width:100%; margin-top:14px}
+.card{background:var(--w); border:1px solid var(--n100); border-radius:14px; padding:18px}
+.slide--dark .card{background:rgba(255,255,255,.05); border-color:rgba(255,255,255,.12)}
+.card .n{font-family:'JetBrains Mono'; font-weight:700; color:var(--accent); font-size:12px; letter-spacing:.08em; margin-bottom:8px}
+.card h4{font-family:'Onest'; font-size:16px; color:var(--primary); font-weight:600; margin-bottom:6px}
+.slide--dark .card h4{color:var(--w)}
+.card p{font-size:13px; color:var(--n700); line-height:1.5}
+.slide--dark .card p{color:rgba(255,255,255,.78)}
+
+/* Stat grid */
+.sg{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; width:100%; margin-top:14px}
+.stat{padding:24px; background:var(--w); border-radius:14px; border:1px solid var(--n100)}
+.slide--dark .stat{background:rgba(255,255,255,.05); border-color:rgba(255,255,255,.12)}
+.stat-val{font-family:'Onest'; font-weight:700; font-size:clamp(28px,4vmin,42px); color:var(--primary); line-height:1; margin-bottom:6px}
+.slide--dark .stat-val{color:var(--w)}
+.stat-val em{color:var(--accent); font-style:normal; font-size:14px; margin-left:3px}
+.stat-lbl{font-size:12px; color:var(--n700)}
+.slide--dark .stat-lbl{color:rgba(255,255,255,.7)}
+
+/* Flow */
+.flow{display:grid; grid-template-columns:repeat(6,1fr); gap:10px; width:100%; margin-top:14px}
+.fs{padding:14px 10px; background:var(--w); border-radius:10px; border:1px solid var(--n100); position:relative}
+.fs-n{font-family:'JetBrains Mono'; font-weight:700; color:var(--accent); font-size:10px; letter-spacing:.08em; margin-bottom:4px}
+.fs h4{font-family:'Onest'; font-size:13px; color:var(--primary); font-weight:600; margin-bottom:2px}
+.fs p{font-size:11px; color:var(--n700); line-height:1.3}
+
+/* Business model */
+.bm{display:grid; grid-template-columns:repeat(2,1fr); gap:18px; width:100%; margin-top:14px}
+.bm-card{padding:24px; background:var(--w); border-radius:14px; border-top:4px solid var(--accent)}
+.bm-card:nth-child(2){border-top-color:var(--primary-light)}
+.bm-card:nth-child(3){border-top-color:var(--success)}
+.bm-card:nth-child(4){border-top-color:var(--n700)}
+.bm-card h4{font-family:'Onest'; font-size:17px; color:var(--primary); font-weight:600; margin-bottom:8px}
+.bm-card p{font-size:13px; color:var(--n700); margin-bottom:8px; line-height:1.5}
+.bm-share{font-family:'JetBrains Mono'; font-weight:700; color:var(--accent); font-size:13px}
+
+/* Roadmap */
+.rm{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:14px; width:100%}
+.rph{padding:22px; background:var(--w); border-radius:14px; border-top:4px solid var(--accent)}
+.rph:nth-child(2){border-top-color:var(--primary-light)}
+.rph:nth-child(3){border-top-color:var(--success)}
+.rph-p{font-family:'JetBrains Mono'; color:var(--accent); font-weight:700; font-size:12px; letter-spacing:.05em; margin-bottom:6px}
+.rph:nth-child(2) .rph-p{color:var(--primary-light)}
+.rph:nth-child(3) .rph-p{color:var(--success)}
+.rph h3{font-family:'Onest'; font-size:18px; margin-bottom:8px}
+.rph ul{padding-left:16px}
+.rph li{font-size:12px; color:var(--n700); margin-bottom:4px}
+
+/* Ask */
+.ask-grid{display:grid; grid-template-columns:1fr 1fr; gap:32px; width:100%; align-items:center}
+.ask-ball{padding:36px; background:linear-gradient(135deg, var(--accent) 0%, var(--accent-soft) 100%); border-radius:24px; color:var(--primary-dark); text-align:center}
+.ask-ball .ask-n{font-family:'Onest'; font-weight:700; font-size:clamp(48px,8vmin,84px); line-height:1; margin-bottom:8px}
+.ask-ball .ask-u{font-size:18px; font-weight:600; margin-bottom:10px}
+.ask-ball .ask-d{font-size:13px; opacity:.85; line-height:1.4}
+.use{padding-left:18px}
+.use li{font-size:14px; color:rgba(255,255,255,.88); margin-bottom:8px; line-height:1.4}
+
+/* Contacts */
+.cgrid{display:grid; grid-template-columns:1fr 1fr; gap:28px; width:100%; margin-top:14px}
+.c-card{padding:28px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); border-radius:16px; backdrop-filter:blur(8px)}
+.c-card h3{color:var(--accent); font-size:11px; text-transform:uppercase; letter-spacing:.16em; margin-bottom:8px}
+.c-name{font-family:'Onest'; font-size:22px; color:var(--w); font-weight:600; margin-bottom:6px}
+.c-meta{font-size:13px; color:rgba(255,255,255,.78); line-height:1.5}
+.c-hash{font-family:'JetBrains Mono'; font-size:11px; color:rgba(255,255,255,.6); word-break:break-all; line-height:1.4; margin-top:6px}
+
+/* Responsive — добавлено в финальной правке по результатам аудита 24.05.2026 */
+@media (max-width: 1100px) {
+  .slide{padding:5vmin 6vmin}
+  h1{font-size:clamp(30px,4.5vmin,52px)}
+  h2{font-size:clamp(24px,3.4vmin,40px)}
+  .lead{font-size:clamp(14px,1.6vmin,17px)}
+  .row-4{grid-template-columns:repeat(2,1fr)}
+  .sg{grid-template-columns:repeat(2,1fr)}
+  .flow{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width: 980px) {
+  .slide{aspect-ratio:auto; min-height:90vh; padding:6vmin 5vmin}
+  .cover{grid-template-columns:1fr; gap:24px}
+  .cover-side{order:2}
+  .row-3{grid-template-columns:1fr}
+  .row-2{grid-template-columns:1fr}
+  .ask-grid{grid-template-columns:1fr}
+  .cgrid{grid-template-columns:1fr}
+  .rm{grid-template-columns:1fr}
+}
+@media (max-width: 640px) {
+  .slide{padding:24px 18px; border-radius:12px}
+  .deck{padding:6px; gap:6px}
+  h1{font-size:28px; margin-bottom:12px}
+  h2{font-size:22px; margin-bottom:10px}
+  h3{font-size:17px}
+  .lead{font-size:14px; line-height:1.5}
+  .sg{grid-template-columns:1fr}
+  .flow{grid-template-columns:repeat(2,1fr)}
+  .topbar-nav{display:none}
+  .topbar-actions{flex-wrap:wrap; gap:4px}
+  .tbtn{min-width:32px; height:32px; font-size:11px}
+  .snum{top:12px; right:14px; font-size:10px}
+  .cover-mark{width:54px; height:54px; font-size:24px}
+  .stat-val{font-size:24px}
+  .ask-ball{padding:24px}
+  .ask-ball .ask-n{font-size:42px}
+}
+</style>
+</head>
+<body style="padding-top:64px">
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="../Большая_презентация/index.html"><span class="brand-mark">Р</span><span data-i18n="brand.name">ЦП РСФСР</span></a>
+    <nav class="topbar-nav">
+      <a href="../Большая_презентация/index.html">Большая презентация</a>
+      <a href="../Малая_презентация/index.html">Малая презентация</a>
+      <a href="../Большая_презентация/index.html#hub">Документы</a>
+      <a href="../Большая_презентация/index.html#contacts">Контакты</a>
+    </nav>
+    <div class="topbar-actions">
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-i18n-btn="ru">RU</button>
+        <button class="tbtn" data-i18n-btn="en">EN</button>
+        <button class="tbtn" data-i18n-btn="fr">FR</button>
+        <button class="tbtn" data-i18n-btn="ar">عر</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-theme-btn="daylight" aria-label="Дневная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+        <button class="tbtn" data-theme-btn="midnight" aria-label="Тёмная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="tbtn" data-theme-btn="sepia">◐</button>
+        <button class="tbtn" data-theme-btn="contrast">A11Y</button>
+      </div>
+      <button class="tbtn tbtn-burger">≡</button>
+    </div>
+  </div>
+</header>
+
+<div class="deck">
+
+<!-- S1: Cover -->
+<section class="slide slide--dark">
+  <div class="snum">01 / 10</div>
+  <div class="cover">
+    <div>
+      <div class="cover-mark">Р</div>
+      <span class="tag" style="color:var(--accent)">Pitch · Партнёры и инвесторы</span>
+      <h1>ЦП РСФСР</h1>
+      <h3 style="color:rgba(255,255,255,.92); font-weight:500; max-width:32ch; margin-bottom:18px">Российский Сервис Финансирования Социального Развития</h3>
+      <p class="lead">Платформа-оператор выпуска ЦФА под залог имущества. Pilot-light 2026–2028: целевое фондирование через ФПФ ВЭБ.РФ + Казначейство (без поправок в 86-ФЗ). Горизонт 2029+: расширение мандата при поддержке регулятора.</p>
+    </div>
+    <aside class="cover-side">
+      <div class="cover-stat"><span class="cover-stat-lbl">Стартовая потребность</span><span class="cover-stat-val">1,335<em>млрд ₽ ($15M)</em></span></div>
+      <div class="cover-stat"><span class="cover-stat-lbl">NPV @ WACC 30%</span><span class="cover-stat-val">51,2<em>млрд ₽</em></span></div>
+      <div class="cover-stat"><span class="cover-stat-lbl">Окупаемость</span><span class="cover-stat-val">2,8<em>года</em></span></div>
+      <div class="cover-stat"><span class="cover-stat-lbl">Equity Multiple</span><span class="cover-stat-val">12<em>x</em></span></div>
+      <div class="cover-stat"><span class="cover-stat-lbl">Защита ИС</span><span class="cover-stat-val">№4011265<em>2024</em></span></div>
+    </aside>
+  </div>
+</section>
+
+<!-- S2: Problem -->
+<section class="slide">
+  <div class="snum">02 / 10</div>
+  <div class="inner">
+    <span class="tag">Проблема</span>
+    <h2>Богатая страна — дефицит инвестиционной денежной массы</h2>
+    <p class="lead">Стоимость недвижимости РФ — порядка 507 трлн ₽. Подавляющая часть этого богатства не вовлечена в оборот. При этом нацпроекты конкурируют за ограниченный бюджет и дорогое заёмное фондирование.</p>
+    <div class="row-4">
+      <div class="card"><div class="n">01</div><h4>Бюджет</h4><p>Расходы федерального бюджета ограничены бюджетным правилом и социальным блоком.</p></div>
+      <div class="card"><div class="n">02</div><h4>Ставка</h4><p>Высокая КС ЦБ делает коммерческое заёмное фондирование инфраструктуры нерентабельным.</p></div>
+      <div class="card"><div class="n">03</div><h4>Капитал</h4><p>Доступ к международным рынкам капитала ограничен.</p></div>
+      <div class="card"><div class="n">04</div><h4>Активы</h4><p>«Спящие» частные активы — 507 трлн ₽ без оборота.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- S3: Solution -->
+<section class="slide slide--soft">
+  <div class="snum">03 / 10</div>
+  <div class="inner">
+    <span class="tag">Решение</span>
+    <h2>Платформа-оператор выпуска ЦФА под залог имущества</h2>
+    <p class="lead">Под пул залоговых ЦФА в pilot-light режиме 2026–2028 целевое фондирование организуется через Фабрику проектного финансирования ВЭБ.РФ (ПП РФ №158) и Федеральное казначейство на специальный счёт эскроу. Банк России — общий надзорный регулятор по ст. 4 86-ФЗ. На горизонте 2029+ при принятии пакета НПА — расширение мандата (модель целевой обеспеченной эмиссии). Запуск возможен без поправок в 86-ФЗ.</p>
+    <div class="flow">
+      <div class="fs"><div class="fs-n">01</div><h4>Регистрация</h4><p>Госуслуги, ЕБС (АО ЦБТ)</p></div>
+      <div class="fs"><div class="fs-n">02</div><h4>Оценка</h4><p>135-ФЗ, страхование</p></div>
+      <div class="fs"><div class="fs-n">03</div><h4>Выпуск ЦФА</h4><p>Технопартнёрство с оператором 779-П</p></div>
+      <div class="fs"><div class="fs-n">04</div><h4>Фондирование</h4><p>ФПФ ВЭБ.РФ + Казначейство</p></div>
+      <div class="fs"><div class="fs-n">05</div><h4>Нацпроект</h4><p>Через эскроу-агент</p></div>
+      <div class="fs"><div class="fs-n">06</div><h4>Мена ЦФА</h4><p>Новый объект, доход</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- S4: Market -->
+<section class="slide slide--dark">
+  <div class="snum">04 / 10</div>
+  <div class="inner">
+    <span class="tag" style="color:var(--accent)">Рынок</span>
+    <h2>Залоговая ёмкость — 25,5 трлн ₽</h2>
+    <p class="lead">Консервативный расчёт авторской концепции: 10% активов × 50% стоимости из совокупной стоимости недвижимости РФ 507 трлн ₽. Даже 5% проникновения = 1,3 трлн ₽ внебюджетного финансирования.</p>
+    <div class="sg">
+      <div class="stat"><div class="stat-val">400<em>трлн ₽</em></div><div class="stat-lbl">Жилой фонд РФ</div></div>
+      <div class="stat"><div class="stat-val">45<em>трлн ₽</em></div><div class="stat-lbl">Коммерческая недвижимость</div></div>
+      <div class="stat"><div class="stat-val">62<em>трлн ₽</em></div><div class="stat-lbl">Земельные участки</div></div>
+      <div class="stat"><div class="stat-val">25,5<em>трлн ₽</em></div><div class="stat-lbl">Консервативная залоговая ёмкость</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- S5: Product -->
+<section class="slide">
+  <div class="snum">05 / 10</div>
+  <div class="inner">
+    <span class="tag">Продукт</span>
+    <h2>Интеграционный слой между гражданином, ЦБ и казначейством</h2>
+    <p class="lead">Веб-портал и мобильное приложение для собственника. Бэкенд оператора — лицензированная по 779-П информационная система. Интеграции с Госуслугами, ЕГРН, СМЭВ, ГИС ГМП, Федеральным казначейством, Банком России.</p>
+    <div class="row-3">
+      <div class="card"><h4>Канал собственника</h4><p>iOS / Android / Windows. Подача актива, выбор условий, подпись смарт-контракта, получение доходов.</p></div>
+      <div class="card"><h4>Оператор-платформа</h4><p>Лицензия Банка России. DLT-реестр ЦФА. Смарт-контракты. Эскроу-адаптер. Геораспределение 3 ЦОД.</p></div>
+      <div class="card"><h4>Регуляторный контур</h4><p>ГОСТ Р 57580.1 уровень 4. Категория 1 КИИ. ЭП ГОСТ Р 34.10-2012. Реестр Минцифры.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- S6: Business model -->
+<section class="slide slide--soft">
+  <div class="snum">06 / 10</div>
+  <div class="inner">
+    <span class="tag">Бизнес-модель</span>
+    <h2>Четыре линии комиссионной выручки</h2>
+    <p class="lead">Платформа зарабатывает только на инфраструктурном сервисе, не участвуя в обороте средств целевого фондирования. Структура выручки эволюционирует от первичной (выпуск ЦФА) к сервисной (поддержка реестра и B2B2G-лицензии).</p>
+    <div class="bm">
+      <div class="bm-card"><h4>Комиссия за выпуск</h4><p>0,5% от номинала ЦФА на этапе первичного выпуска.</p><div class="bm-share">Год 5 — 39% выручки</div></div>
+      <div class="bm-card"><h4>Сервисная комиссия</h4><p>0,3% годовых от обращаемого ЦФА за поддержание реестра, отчётность, аудит контрактов.</p><div class="bm-share">Год 10 — 58% выручки</div></div>
+      <div class="bm-card"><h4>Платформенный сбор</h4><p>0,15% за оценочный и страховой модули, интеграцию с партнёрами.</p><div class="bm-share">Стабильно 10–15%</div></div>
+      <div class="bm-card"><h4>B2B2G-лицензии</h4><p>Лицензии для банков и страховых на использование стандарта платформы.</p><div class="bm-share">Год 7+ — растёт до 12%</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- S7: Economics -->
+<section class="slide slide--dark">
+  <div class="snum">07 / 10</div>
+  <div class="inner">
+    <span class="tag" style="color:var(--accent)">Экономика</span>
+    <h2>NPV 51,2 млрд ₽ при стартовом капитале 1,335 млрд ₽ (WACC 30%)</h2>
+    <p class="lead">10-летняя модель: Base — окупаемость 2,8 года, IRR 62%, EM 12x; Conservative — NPV ≈ 22 млрд ₽, EM 5–6x; Optimistic — NPV ≈ 82 млрд ₽. Полные таблицы — в Финансовой модели проекта. SoT v3 от 24.05.2026, post-audit.</p>
+    <div class="sg">
+      <div class="stat"><div class="stat-val">51,2<em>млрд ₽</em></div><div class="stat-lbl">NPV @ WACC 30%</div></div>
+      <div class="stat"><div class="stat-val">62%</div><div class="stat-lbl">IRR (для инвестора 15,8%)</div></div>
+      <div class="stat"><div class="stat-val">2,8<em>года</em></div><div class="stat-lbl">Payback</div></div>
+      <div class="stat"><div class="stat-val">137,9<em>млрд ₽</em></div><div class="stat-lbl">Выручка год 10</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- S8: IP / Defensibility -->
+<section class="slide">
+  <div class="snum">08 / 10</div>
+  <div class="inner">
+    <span class="tag">Защита и преимущества</span>
+    <h2>Депонировано как ноу-хау — 19.12.2024</h2>
+    <p class="lead">Концепция, рабочие процессы и архитектура защищены свидетельством о депонировании №4011265 (хеш ГОСТ-Р 34.11-2012). Депонирование — фиксация даты приоритета. Правовой режим охраны — ноу-хау (ст. 1465 ГК) и программа для ЭВМ (регистрация в Роспатенте — в работе). Без участия правообладателя модель не может быть воспроизведена.</p>
+    <div class="row-3">
+      <div class="card"><h4>Юридический моат</h4><p>Уникальная конструкция «вертикально-интегрированная платформа залога → токенизации → целевого фондирования через ФПФ ВЭБ.РФ» — патентоспособная.</p></div>
+      <div class="card"><h4>Регуляторный моат</h4><p>Платформа становится единым оператором с лицензией ЦБ. Барьер входа для конкурентов — кратно выше стандартных ЦФА-площадок.</p></div>
+      <div class="card"><h4>Технологический моат</h4><p>Интеграции с Государственными информационными системами, статус КИИ-1, сертификация ФСТЭК/ФСБ.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- S9: Roadmap & ask -->
+<section class="slide slide--soft">
+  <div class="snum">09 / 10</div>
+  <div class="inner">
+    <span class="tag">Дорожная карта · Использование средств</span>
+    <h2>Три фазы реализации</h2>
+    <div class="rm">
+      <div class="rph"><div class="rph-p">2025 — 2026</div><h3>Подготовка</h3>
+        <ul><li>Согласование концепции с Банком России</li><li>Межведомственная рабочая группа</li><li>Подготовка пакета НПА</li><li>Разработка и сертификация платформы</li></ul>
+      </div>
+      <div class="rph"><div class="rph-p">2026 — 2027</div><h3>Пилот и основная фаза</h3>
+        <ul><li>Пилот на недвижимости физ./юр. лиц</li><li>Верификация процессов</li><li>Первые целевые выпуски ЦФА</li><li>Масштабирование инфраструктуры</li></ul>
+      </div>
+      <div class="rph"><div class="rph-p">2027 +</div><h3>Тиражирование</h3>
+        <ul><li>Движимое имущество, транспорт</li><li>Фондовые активы</li><li>Интеллектуальная собственность</li><li>БРИКС+ и ЕАЭС</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S9.5: Government Champions (named GTM map) -->
+<section class="slide">
+  <div class="snum">09+ / 10</div>
+  <div class="inner">
+    <span class="tag">GTM · Champion-map · поимённо</span>
+    <h2>Government Champions — поимённая воронка согласований</h2>
+    <p class="lead">Wedge-логика: ЦБ — последняя инстанция Stage 1, не первая. Конкретные люди на каждом этапе.</p>
+    <table style="width:100%; border-collapse:collapse; font-size:13px; margin-top:18px">
+      <thead>
+        <tr style="background:var(--primary); color:#fff">
+          <th style="padding:8px 10px; text-align:left">Этап</th>
+          <th style="padding:8px 10px; text-align:left">Лицо</th>
+          <th style="padding:8px 10px; text-align:left">Орган · Роль</th>
+          <th style="padding:8px 10px; text-align:left">Цель встречи</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)"><b>T+30</b></td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">Максим Решетников</td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">Минэк · министр</td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">Named sponsor; нацпроекты</td></tr>
+        <tr><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)"><b>T+30</b></td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">АО «Атомайз»</td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">Tech-партнёр</td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">LoI о 779-П оператор + front-end</td></tr>
+        <tr><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)"><b>T+90</b></td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">Иван Колычев</td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">Минфин · замминистра (долг)</td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">Внебюджетный канал, давление ОФЗ</td></tr>
+        <tr><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)"><b>T+90</b></td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">Владимир Сазанов</td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">Минфин · замминистра (налоги)</td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">Налоговая позиция по ЦФА</td></tr>
+        <tr><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)"><b>T+90</b></td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">ВЭБ.РФ ФПФ</td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">Гос-фин институт</td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">Consultative letter (ПП № 158)</td></tr>
+        <tr><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)"><b>T+180</b></td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">Рустам Минниханов</td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">Татарстан</td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">MoU: 50–100 объектов, ₽ 5–10 млрд</td></tr>
+        <tr><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)"><b>T+180</b></td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">Анатолий Аксаков</td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">Госдума · Комитет по фин.рынку</td><td style="padding:6px 10px; border-bottom:1px solid var(--border-soft)">Консультация по 259-ФЗ Stage 1</td></tr>
+        <tr><td style="padding:6px 10px"><b>T+180+</b></td><td style="padding:6px 10px">Банк России</td><td style="padding:6px 10px">Регулятор · реестр 779-П</td><td style="padding:6px 10px">Включение оператора (последний шаг)</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:14px; font-size:12px; color:var(--fg-mute)">Pre-meeting brief'ы — 4 драфта в <code>02_Юридический_фундамент/Pre-meeting_briefs/</code>. Полная карта в <code>_Мастер/Концепт.md § 1-ter</code>.</p>
+  </div>
+</section>
+
+<!-- S10: The Ask -->
+<section class="slide slide--dark">
+  <div class="snum">10 / 10</div>
+  <div class="inner">
+    <span class="tag" style="color:var(--accent)">Запрос</span>
+    <h2>Стартовый раунд — $15M / 1,335 млрд ₽</h2>
+    <div class="ask-grid">
+      <div class="ask-ball">
+        <div class="ask-n">$15M<span style="font-size:.4em; margin-left:6px">/ 1,335 млрд ₽</span></div>
+        <div class="ask-u">Seed раунд · FX 89,0 ₽/$</div>
+        <div class="ask-d">Pre-money $80M Base (Reasoned $60–115M) · Post-money $95M · Доля инвестора 15,8%.</div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent); font-size:13px; text-transform:uppercase; letter-spacing:.15em; margin-bottom:14px">Структура раунда</h3>
+        <table style="width:100%; border-collapse:collapse; font-size:14px; margin-bottom:18px">
+          <tr><td style="padding:6px 0; opacity:.7">Ask</td><td style="padding:6px 0; text-align:right; font-family:'JetBrains Mono',monospace"><b>$15M</b> &nbsp; 1,335 млрд ₽</td></tr>
+          <tr><td style="padding:6px 0; opacity:.7">Pre-money (Base)</td><td style="padding:6px 0; text-align:right; font-family:'JetBrains Mono',monospace"><b>$80M</b> &nbsp; 7,12 млрд ₽</td></tr>
+          <tr><td style="padding:6px 0; opacity:.7">Post-money</td><td style="padding:6px 0; text-align:right; font-family:'JetBrains Mono',monospace"><b>$95M</b> &nbsp; 8,455 млрд ₽</td></tr>
+          <tr><td style="padding:6px 0; opacity:.7">Доля инвестора</td><td style="padding:6px 0; text-align:right; font-family:'JetBrains Mono',monospace"><b>15,8%</b></td></tr>
+          <tr><td style="padding:6px 0; opacity:.7">Reasoned диапазон</td><td style="padding:6px 0; text-align:right; font-family:'JetBrains Mono',monospace">$60–115M</td></tr>
+        </table>
+        <h3 style="color:var(--accent); font-size:13px; text-transform:uppercase; letter-spacing:.15em; margin-bottom:14px">Использование средств</h3>
+        <ul class="use">
+          <li><b>40%</b> — разработка платформы и DLT-реестра, сертификация ФСТЭК/ФСБ.</li>
+          <li><b>20%</b> — юридическое сопровождение Stage 1 + подготовка пакета Stage 2 (горизонт 2029+).</li>
+          <li><b>15%</b> — формирование команды, привлечение профильных экспертов.</li>
+          <li><b>15%</b> — построение интеграционного слоя с ГИС.</li>
+          <li><b>10%</b> — операционный буфер и compliance.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cgrid" style="margin-top:32px">
+      <div class="c-card">
+        <h3>Автор и правообладатель</h3>
+        <div class="c-name">Кагиров Абдул-Хаким Ахмадович</div>
+        <div class="c-meta">Свидетельство о депонировании №4011265<br>от 19.12.2024 (ireg.pro)</div>
+      </div>
+      <div class="c-card">
+        <h3>Хеш ГОСТ-Р 34.11-2012</h3>
+        <div class="c-hash">a7d40971cbb5443e0f3d037ff054080dfb0064b59832cf1b89386078bf3de373</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+<script src="../../_shared/i18n.js"></script>
+<script src="../../_shared/app.js"></script>
+</body>
+</html>

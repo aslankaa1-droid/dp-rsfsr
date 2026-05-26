@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../">
+  <title>الأمن والبنية التحتية المعلوماتية الحرجة · ЦПФСР.РФ</title>
+  <meta name="description" content="الأمن والبنية التحتية المعلوماتية الحرجة — الأمن والبنية التحتية المعلوماتية الحرجة. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../_design-system/print.css">
+
+  <script defer src="../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../_design-system/i18n.js"></script>
+  <script defer src="../../../_design-system/ticker.js"></script>
+  <script defer src="../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">الأمن والبنية التحتية المعلوماتية الحرجة</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">الأمن والبنية التحتية المعلوماتية الحرجة</span>
+      <h1>الأمن والبنية التحتية المعلوماتية الحرجة</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="الأمن-وcii-لمنصة-cpfsr">الأمن وCII لمنصة CPFSR</h1>
+<p>يصف المستند نموذج التهديدات ونظام حماية المعلومات ونمط تشغيل المنصة
+بوصفها كائناً للبنية التحتية المعلوماتية الحرجة (FZ-187).</p>
+<hr />
+<h2 id="تصنيف-نظام-المعلومات">1. تصنيف نظام المعلومات</h2>
+<table>
+<thead>
+<tr>
+<th>المعلَمة</th>
+<th>القيمة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>فئة كائن CII (FZ-187)</td>
+<td>1 (الأهمية الأعلى)</td>
+</tr>
+<tr>
+<td>مستوى أمان البيانات الشخصية (قرار الحكومة رقم 1119)</td>
+<td>UZ-1</td>
+</tr>
+<tr>
+<td>مستوى الحماية وفق GOST R 57580.1</td>
+<td>4 (الأعلى)</td>
+</tr>
+<tr>
+<td>فئة نظام المعلومات الحكومي (أمر FSTEC رقم 17)</td>
+<td>K1</td>
+</tr>
+<tr>
+<td>نوع وسائل حماية المعلومات</td>
+<td>معتمدة من FSTEC / FSB</td>
+</tr>
+</tbody>
+</table>
+<h2 id="نموذج-التهديدات">2. نموذج التهديدات</h2>
+<p>بُنِي نموذج التهديدات وفق قاعدة بيانات تهديدات FSTEC الروسي (BDU FSTEC)
+والوثيقة المنهجية لـ FSTEC «منهجية تقييم تهديدات أمن المعلومات»
+(2021).</p>
+<h3 id="مجموعات-التهديدات-الرئيسية">مجموعات التهديدات الرئيسية</h3>
+<ol type="1">
+<li><strong>المتسلِّلون الخارجيون (تحفيز عالٍ):</strong> مجموعات APT تستهدف
+البنية التحتية المالية والحكومية للاتحاد الروسي. الأهداف: سرقة الأموال،
+تعطيل عمل المنصة، اختراق دائرة الإصدار.</li>
+<li><strong>المتسلِّلون الداخليون:</strong> موظفون غير أمناء لدى المشغِّل،
+المقاولين، الشركاء.</li>
+<li><strong>الهندسة الاجتماعية:</strong> التصيّد الاحتيالي لموظفي المشغِّل
+ومستخدمي المنصة.</li>
+<li><strong>هجمات سلسلة التوريد (supply chain):</strong> اختراق وسائل
+حماية المعلومات والمكتبات والتحديثات.</li>
+<li><strong>هجمات DDoS:</strong> على الواجهات العامة وواجهات API.</li>
+<li><strong>هجمات التشفير:</strong> محاولات اختراق المفاتيح، اعتراض
+الجلسات.</li>
+<li><strong>التهديدات المادية:</strong> اقتحام مراكز البيانات، سرقة
+الأوساط.</li>
+<li><strong>تهديدات التوافر:</strong> أعطال الأجهزة، أخطاء التشغيل.</li>
+<li><strong>تهديدات سلامة البيانات:</strong> تعديل السجلات في قواعد
+البيانات والسجلات.</li>
+<li><strong>تهديدات السرية:</strong> تسرّب البيانات الشخصية والمعلومات
+المالية.</li>
+</ol>
+<h3 id="مستويات-الضرر">مستويات الضرر</h3>
+<ul>
+<li>المستوى الأول (كارثي): اختراق دائرة الإصدار؛ غير مقبول، يتطلب أقصى
+حماية.</li>
+<li>المستوى الثاني (شديد): تسرّب جماعي للبيانات الشخصية؛ غير مقبول.</li>
+<li>المستوى الثالث (معتدل): عطل لمكوّن مفرد؛ يُستعاد ضمن RTO.</li>
+</ul>
+<h2 id="نظام-حماية-المعلومات">3. نظام حماية المعلومات</h2>
+<h3 id="حماية-المحيط">3.1. حماية المحيط</h3>
+<ul>
+<li>NGFW محلي (UserGate / SolarSpace).</li>
+<li>WAF (PT Application Firewall).</li>
+<li>Anti-DDoS (Qrator Labs Russia / Stormwall).</li>
+<li>حماية ضد البوتات.</li>
+<li>تجزئة الشبكة وفق مبادئ zero-trust.</li>
+</ul>
+<h3 id="حماية-محطات-عمل-المسؤولين">3.2. حماية محطات عمل المسؤولين</h3>
+<ul>
+<li>EDR (Kaspersky EDR Expert / R-Vision EDR).</li>
+<li>DLP (Solar Dozor / InfoWatch).</li>
+<li>التحكم بالوسائط القابلة للإزالة (محظورة افتراضياً).</li>
+<li>المصادقة بعاملَين لجميع وصولات المسؤولين.</li>
+</ul>
+<h3 id="حماية-البيانات">3.3. حماية البيانات</h3>
+<ul>
+<li>تشفير البيانات في الراحة (KriptoPro Disk).</li>
+<li>تشفير البيانات في النقل (GOST TLS، ViPNet).</li>
+<li>حجب البيانات الشخصية في البيئات غير الإنتاجية.</li>
+<li>ترميز الحقول الحساسة (قواعد البيانات).</li>
+<li>النسخ الاحتياطي على أوساط مشفَّرة.</li>
+</ul>
+<h3 id="حماية-التطبيقات">3.4. حماية التطبيقات</h3>
+<ul>
+<li>التطوير الآمن (Secure SDLC):
+<ul>
+<li>SAST في كل commit؛</li>
+<li>DAST أسبوعياً؛</li>
+<li>SCA (تحليل تركيب البرمجيات)؛</li>
+<li>اختبار اختراق لكل إصدار.</li>
+</ul></li>
+<li>توقيع الإصدارات بـ UKEP.</li>
+<li>بيئات تشغيل معزولة (gVisor / Kata Containers).</li>
+</ul>
+<h3 id="إدارة-الوصول">3.5. إدارة الوصول</h3>
+<ul>
+<li>مبدأ أقل الامتيازات.</li>
+<li>RBAC + ABAC على مستوى الخدمات.</li>
+<li>المصادقة بعاملَين لجميع الموظفين.</li>
+<li>Privileged Access Management (PAM) للمسؤولين.</li>
+<li>تسجيل جميع العمليات المميَّزة.</li>
+</ul>
+<h3 id="المكونات-التشفيرية">3.6. المكوّنات التشفيرية</h3>
+<ul>
+<li>HSM KriptoPro / ViPNet — لتخزين المفاتيح الجذرية.</li>
+<li>تدوير منتظم للمفاتيح (مرة كل 12 شهراً على الأقل للمفاتيح العاملة، كل
+5 سنوات للجذرية).</li>
+<li>رموز UKEP أجهزة للموظفين.</li>
+</ul>
+<h2 id="الامتثال-للمتطلبات-التنظيمية">4. الامتثال للمتطلبات
+التنظيمية</h2>
+<h3 id="fz-187-بشأن-أمن-cii">4.1. FZ-187 «بشأن أمن CII»</h3>
+<ul>
+<li>جرى تصنيف كائن CII وفق الإجراءات المحددة.</li>
+<li>أُرسِل الإخطار إلى FSTEC.</li>
+<li>الاتصال بـ GosSOPKA عبر قناة مؤمَّنة.</li>
+<li>عُيِّن مسؤول عن ضمان أمن كائنات CII المهمة.</li>
+<li>تفاعل منتظم مع NCCCI.</li>
+</ul>
+<h3 id="تعليمة-بنك-روسيا-رقم-6635-u">4.2. تعليمة بنك روسيا رقم
+6635-U</h3>
+<ul>
+<li>لائحة معالجة حوادث أمن المعلومات.</li>
+<li>إخطار بنك روسيا في الآجال المحدَّدة (24 ساعة / 72 ساعة / 30 يوماً حسب
+الفئة).</li>
+<li>سجل الحوادث مع الاحتفاظ لمدة لا تقل عن 5 سنوات.</li>
+</ul>
+<h3 id="أمر-fstec-رقم-239">4.3. أمر FSTEC رقم 239</h3>
+<ul>
+<li>تطبيق وسائل حماية المعلومات لكائنات CII المهمة من الفئة 1.</li>
+<li>فحوصات المطابقة بانتظام.</li>
+</ul>
+<h3 id="أمر-fstec-رقم-17-k1-نظام-معلومات-حكومي">4.4. أمر FSTEC رقم 17
+(K1 — نظام معلومات حكومي)</h3>
+<ul>
+<li>تطبيق وسائل حماية المعلومات ضد الوصول غير المصرح به، التحكم بأفعال
+المسؤولين.</li>
+<li>التصديق المنتظم لنظام المعلومات.</li>
+</ul>
+<h3 id="أمر-fstec-رقم-21-uz-1-ispdn">4.5. أمر FSTEC رقم 21 (UZ-1
+ISPDn)</h3>
+<ul>
+<li>المطابقة لمتطلبات حماية البيانات الشخصية.</li>
+</ul>
+<h3 id="gost-r-57580.1-المستوى-4">4.6. GOST R 57580.1 (المستوى 4)</h3>
+<ul>
+<li>تنفيذ جميع المجالات الثمانية للحماية.</li>
+<li>تقييم منتظم للمطابقة وفق GOST R 57580.2 بواسطة مدقق خارجي.</li>
+</ul>
+<h2 id="النموذج-التشغيلي-لأمن-المعلومات">5. النموذج التشغيلي لأمن
+المعلومات</h2>
+<h3 id="soc-على-مدار-الساعة">5.1. SOC على مدار الساعة</h3>
+<ul>
+<li>L1 — الرصد والتصنيف الأولي.</li>
+<li>L2 — الاستجابة للحوادث، الاحتواء.</li>
+<li>L3 — التحقيق، تحليل السبب الجذري، إيقاف الهجوم.</li>
+<li>Threat hunting — البحث الاستباقي عن التهديدات.</li>
+</ul>
+<h3 id="threat-intelligence">5.2. Threat Intelligence</h3>
+<ul>
+<li>الاتصال بـ BDU FSTEC.</li>
+<li>الاشتراك في تقارير NCCCI وبنك روسيا.</li>
+<li>خدمة TI داخلية (R-Vision TIP / نظير محلي).</li>
+</ul>
+<h3 id="إدارة-الثغرات">5.3. إدارة الثغرات</h3>
+<ul>
+<li>فحص البنية التحتية — أسبوعياً.</li>
+<li>فحص التطبيقات (DAST) — أسبوعياً.</li>
+<li>اختبار اختراق خارجي — سنوياً بواسطة مختبر معتمد.</li>
+<li>اختبار اختراق داخلي — كل نصف سنة بواسطة Red Team.</li>
+</ul>
+<h3 id="التدقيق-والامتثال">5.4. التدقيق والامتثال</h3>
+<ul>
+<li>تدقيق داخلي سنوي لأمن المعلومات.</li>
+<li>تدقيق خارجي سنوي للمطابقة مع GOST R 57580.1.</li>
+<li>فحوصات منتظمة من الجهات التنظيمية (بنك روسيا، FSTEC، FSB،
+Roskomnadzor).</li>
+</ul>
+<h2 id="خطة-الاستجابة-للحوادث">6. خطة الاستجابة للحوادث</h2>
+<h3 id="فئات-الحوادث">6.1. فئات الحوادث</h3>
+<ul>
+<li><strong>الفئة A (حرجة):</strong> اختراق دائرة الإصدار، مفاتيح UKEP،
+تسرّب جماعي للبيانات الشخصية.</li>
+<li><strong>الفئة B (عالية):</strong> اختراق خدمة منفردة، محاولة إصدار
+غير مصرح به لـ DFA.</li>
+<li><strong>الفئة C (متوسطة):</strong> نشاط مشبوه، حوادث منفردة.</li>
+<li><strong>الفئة D (منخفضة):</strong> أحداث خلفية.</li>
+</ul>
+<h3 id="لائحة-الاستجابة">6.2. لائحة الاستجابة</h3>
+<ol type="1">
+<li>الاكتشاف → التصنيف (5 دقائق).</li>
+<li>إخطار قيادة SOC (10 دقائق).</li>
+<li>الاحتواء (15 دقيقة للحرجة).</li>
+<li>إخطار بنك روسيا وGosSOPKA (ساعة للحرجة).</li>
+<li>التحقيق والمعالجة.</li>
+<li>Post-mortem ودروس مستفادة.</li>
+</ol>
+<h2 id="حماية-البيانات-الشخصية">7. حماية البيانات الشخصية</h2>
+<h3 id="المبادئ">7.1. المبادئ</h3>
+<ul>
+<li>Privacy by Design.</li>
+<li>تقليل جمع البيانات.</li>
+<li>تُسجَّل الموافقات في ESIA مع إمكانية السحب.</li>
+<li>الحق في الوصول، التصحيح، الحذف (FZ-152).</li>
+<li>النقل فقط إلى الجهات المخوَّلة.</li>
+</ul>
+<h3 id="التوطين">7.2. التوطين</h3>
+<ul>
+<li>جميع البيانات الشخصية تُخزَّن وتُعالَج حصراً على أراضي الاتحاد الروسي
+(FZ-152، المادة 18).</li>
+</ul>
+<h2 id="الممارسات-المنتظمة">8. الممارسات المنتظمة</h2>
+<table>
+<thead>
+<tr>
+<th>الممارسة</th>
+<th>التواتر</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>اختبار اختراق خارجي</td>
+<td>سنوياً</td>
+</tr>
+<tr>
+<td>اختبار اختراق داخلي (Red Team)</td>
+<td>كل 6 أشهر</td>
+</tr>
+<tr>
+<td>تدريبات DR</td>
+<td>ربع سنوي</td>
+</tr>
+<tr>
+<td>Tabletop exercises</td>
+<td>كل 6 أشهر</td>
+</tr>
+<tr>
+<td>تدقيق المطابقة مع GOST R 57580.2</td>
+<td>سنوياً</td>
+</tr>
+<tr>
+<td>تحديث نموذج التهديدات</td>
+<td>كل نصف سنة</td>
+</tr>
+<tr>
+<td>تحديث سياسات أمن المعلومات</td>
+<td>سنوياً</td>
+</tr>
+<tr>
+<td>تدريب الكوادر على أمن المعلومات</td>
+<td>ربع سنوي</td>
+</tr>
+<tr>
+<td>محاكاة التصيّد الاحتيالي</td>
+<td>شهرياً</td>
+</tr>
+</tbody>
+</table>
+</article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

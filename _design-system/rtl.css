@@ -1,0 +1,29 @@
+/* =====================================================================
+   ЦПФСР.РФ — RTL поддержка (для арабского)
+   ===================================================================== */
+
+[dir="rtl"] {
+  --tracking-tight:  -0.018em; /* меньше для арабского */
+  --tracking-snug:   -0.008em;
+  font-family: var(--font-arabic);
+}
+
+[dir="rtl"] body { font-family: var(--font-arabic); }
+[dir="rtl"] code, [dir="rtl"] pre, [dir="rtl"] .font-mono { direction: ltr; unicode-bidi: embed; }
+[dir="rtl"] .ticker__strip { direction: ltr; } /* числа и тикеры — латиница */
+[dir="rtl"] .ticker__name { font-family: var(--font-arabic); }
+
+[dir="rtl"] .top-bar__brand-text { text-align: right; }
+[dir="rtl"] .icon-btn svg.flip-rtl,
+[dir="rtl"] .nav-link svg.flip-rtl,
+[dir="rtl"] .btn svg.flip-rtl { transform: scaleX(-1); }
+
+[dir="rtl"] .back-to-top { inset-inline-end: var(--space-6); }
+[dir="rtl"] .drawer { transform: translateX(-100%); }
+[dir="rtl"] .drawer.open { transform: translateX(0); }
+
+[dir="rtl"] .footer__bottom { flex-direction: row-reverse; }
+
+[dir="rtl"] table { text-align: right; }
+[dir="rtl"] th, [dir="rtl"] td { text-align: right; }
+[dir="rtl"] td.num, [dir="rtl"] th.num { text-align: left; } /* числа всегда в начале строки */

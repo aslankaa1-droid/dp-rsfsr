@@ -1,0 +1,1980 @@
+﻿<!doctype html>
+<html lang="ru" data-theme="daylight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>ЦП РСФСР — Приложение</title>
+<meta name="description" content="Мобильное приложение Цифровой Платформы РСФСР">
+<meta name="theme-color" content="#0B2B5C" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A0F1A" media="(prefers-color-scheme: dark)">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ЦП РСФСР">
+<link rel="manifest" href="./manifest.json">
+<link rel="icon" type="image/svg+xml" href="./icons/icon-192.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="./icons/icon-512.png">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+<link rel="stylesheet" href="../../_shared/brand.css">
+<script src="../../_shared/i18n.js" defer></script>
+<script src="../../_shared/app.js" defer></script>
+
+<style>
+/* ============ App Shell ============ */
+html, body { height: 100%; overflow: hidden; touch-action: manipulation; }
+body {
+  margin: 0;
+  background: #1A1D24;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--fg);
+  user-select: none; -webkit-user-select: none;
+  position: fixed; inset: 0;
+}
+
+/* Phone frame для desktop-просмотра, на мобиле — full screen */
+.app {
+  position: relative;
+  width: 100%; height: 100%;
+  max-width: 420px; max-height: 920px;
+  margin: 0 auto;
+  background: var(--bg);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  body { background: linear-gradient(135deg, #061A3A 0%, #0B2B5C 100%); display: grid; place-items: center; padding: 20px; overflow: auto; position: relative; }
+  .app { border-radius: 36px; box-shadow: 0 30px 80px rgba(0,0,0,.5), 0 12px 24px rgba(0,0,0,.3); border: 8px solid #000; height: 880px; max-height: 95vh; }
+}
+
+/* App bar */
+.appbar {
+  flex-shrink: 0;
+  padding: env(safe-area-inset-top, 12px) 16px 12px;
+  display: flex; align-items: center; gap: 12px;
+  background: var(--bg-elev);
+  border-bottom: 1px solid var(--border-soft);
+  position: relative; z-index: 5;
+}
+.appbar.dark { background: linear-gradient(180deg, var(--brand-primary-dark), var(--brand-primary)); color: #fff; border-bottom: none; }
+.appbar.transparent { background: transparent; border-bottom: none; position: absolute; left: 0; right: 0; top: 0; }
+.appbar-back {
+  width: 38px; height: 38px;
+  border-radius: 10px; background: var(--bg-soft);
+  display: grid; place-items: center;
+  cursor: pointer; color: var(--primary);
+  font-size: 18px; flex-shrink: 0;
+  border: none; font-family: inherit;
+  transition: background .2s var(--ease);
+}
+.appbar-back:hover { background: var(--border-soft); }
+.appbar.dark .appbar-back { background: rgba(255,255,255,.12); color: #fff; }
+.appbar-title {
+  font-family: 'Onest', sans-serif; font-weight: 600;
+  font-size: 17px; flex: 1;
+  color: var(--primary);
+}
+.appbar.dark .appbar-title { color: #fff; }
+.appbar-action {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  display: grid; place-items: center;
+  cursor: pointer; color: var(--fg-mute);
+  background: transparent; border: none;
+  font-size: 18px; flex-shrink: 0;
+  font-family: inherit;
+  position: relative;
+  transition: background .2s var(--ease);
+}
+.appbar-action:hover { background: var(--bg-soft); color: var(--primary); }
+.appbar.dark .appbar-action { color: rgba(255,255,255,.85); }
+.appbar.dark .appbar-action:hover { background: rgba(255,255,255,.12); color: #fff; }
+.appbar-badge {
+  position: absolute; top: 6px; right: 6px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--brand-error); color: #fff;
+  font-size: 10px; font-weight: 700;
+  display: grid; place-items: center;
+}
+
+/* Screen container */
+.screen {
+  display: none;
+  flex: 1; overflow-y: auto; overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 80px;
+}
+.screen.active {
+  display: flex; flex-direction: column;
+  animation: fadeIn .3s var(--ease-out);
+}
+.screen.hide-nav { padding-bottom: 0; }
+.screen.no-scroll { overflow: hidden; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Content padding */
+.cnt { padding: 16px 20px; }
+.cnt-tight { padding: 8px 20px; }
+
+/* Bottom nav */
+.bnav {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 72px;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+  background: var(--bg-elev);
+  border-top: 1px solid var(--border-soft);
+  display: flex;
+  z-index: 6;
+}
+.bnav-item {
+  flex: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 4px; padding: 8px 4px;
+  color: var(--fg-mute); cursor: pointer;
+  background: transparent; border: none;
+  font-family: inherit;
+  transition: color .2s var(--ease);
+}
+.bnav-item:hover { color: var(--primary); }
+.bnav-item.active { color: var(--primary); }
+.bnav-item.active .bnav-ico { background: var(--bg-soft); }
+.bnav-ico {
+  width: 36px; height: 28px; border-radius: 8px;
+  display: grid; place-items: center;
+  font-size: 18px;
+  transition: background .2s var(--ease);
+}
+.bnav-lbl { font-size: 10px; font-weight: 500; }
+
+/* Hero balance card */
+.balance {
+  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-light) 70%, var(--brand-primary-dark) 100%);
+  color: #fff;
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 14px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-2);
+}
+.balance::after {
+  content: ""; position: absolute;
+  top: -40%; right: -20%;
+  width: 240px; height: 240px;
+  background: radial-gradient(circle, rgba(201,169,97,.22), transparent 70%);
+  pointer-events: none;
+}
+.balance-lbl { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; opacity: .72; font-weight: 600; margin-bottom: 6px; }
+.balance-val { font-family: 'Onest', sans-serif; font-weight: 700; font-size: 36px; line-height: 1; margin-bottom: 6px; }
+.balance-val em { font-size: 16px; color: var(--brand-accent); margin-left: 4px; font-style: normal; font-weight: 500; }
+.balance-row { display: flex; justify-content: space-between; align-items: baseline; font-size: 13px; margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.16); }
+.balance-row span:first-child { opacity: .72; }
+.balance-row b { color: var(--brand-accent); font-weight: 600; }
+
+/* Quick actions */
+.qa {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px;
+  margin-bottom: 14px;
+}
+.qa-it {
+  background: var(--bg-elev);
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  padding: 10px 4px;
+  text-align: center; cursor: pointer;
+  transition: all .2s var(--ease);
+  font-family: inherit;
+}
+.qa-it:hover { border-color: var(--accent); transform: translateY(-1px); }
+.qa-ico { display: block; font-size: 20px; margin-bottom: 4px; color: var(--primary); }
+.qa-lbl { font-size: 10px; color: var(--fg-soft); line-height: 1.2; font-weight: 500; display: block; }
+
+/* List section */
+.lsec { margin-bottom: 14px; }
+.lsec-h {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 8px 4px; margin-bottom: 6px;
+}
+.lsec-h h4 { font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--fg-mute); font-weight: 600; margin: 0; }
+.lsec-h a { font-size: 12px; color: var(--primary); font-weight: 600; text-decoration: none; }
+
+/* Asset / CFA card */
+.it {
+  background: var(--bg-elev); border: 1px solid var(--border-soft);
+  border-radius: 14px; padding: 14px 16px; margin-bottom: 8px;
+  cursor: pointer;
+  transition: all .2s var(--ease);
+  font-family: inherit; text-align: left; width: 100%;
+  display: block;
+}
+.it:hover { border-color: var(--accent); }
+.it-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.it h4 { font-family: 'Onest', sans-serif; font-size: 14px; color: var(--primary); margin: 0 0 4px; font-weight: 600; }
+.it p { font-size: 12px; color: var(--fg-mute); margin: 0; line-height: 1.4; }
+.it-val { font-family: 'Onest', sans-serif; font-size: 16px; font-weight: 700; color: var(--primary); flex-shrink: 0; }
+.it-val em { color: var(--accent); font-style: normal; font-size: 11px; margin-left: 2px; font-weight: 500; }
+.it-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
+
+/* Tag */
+.tag {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 3px 8px; border-radius: 6px;
+  font-size: 10px; font-weight: 600; letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.tag-active   { background: rgba(30,142,92,.14); color: var(--brand-success); }
+.tag-process  { background: rgba(197,138,28,.14); color: var(--brand-warning); }
+.tag-new      { background: rgba(59,130,196,.14); color: var(--brand-info); }
+.tag-pending  { background: rgba(108,114,128,.16); color: var(--fg-mute); }
+.tag-done     { background: rgba(30,142,92,.14); color: var(--brand-success); }
+.tag-error    { background: rgba(179,58,58,.14); color: var(--brand-error); }
+
+/* Buttons */
+.btn-app {
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; padding: 15px 18px;
+  background: var(--primary); color: var(--primary-on);
+  border: none; border-radius: 12px;
+  font-family: inherit; font-size: 15px; font-weight: 600;
+  cursor: pointer; gap: 8px;
+  transition: all .2s var(--ease);
+}
+.btn-app:hover:not(:disabled) { background: var(--brand-primary-light); transform: translateY(-1px); box-shadow: var(--shadow-2); }
+.btn-app:disabled { opacity: .5; cursor: not-allowed; }
+.btn-app + .btn-app { margin-top: 10px; }
+.btn-app--accent { background: var(--accent); color: var(--brand-primary-dark); }
+.btn-app--ghost { background: transparent; color: var(--primary); border: 1px solid var(--primary); }
+.btn-app--ghost:hover { background: var(--primary); color: var(--primary-on); }
+.btn-app--light { background: rgba(255,255,255,.15); color: #fff; border: 1px solid rgba(255,255,255,.25); }
+.btn-app--light:hover { background: rgba(255,255,255,.25); color: #fff; }
+.btn-app--danger { background: var(--brand-error); color: #fff; }
+.btn-row { display: flex; gap: 10px; margin-top: 12px; }
+.btn-row .btn-app { flex: 1; }
+
+/* Inputs */
+.field { margin-bottom: 14px; }
+.field label { display: block; font-size: 11px; font-weight: 600; color: var(--fg-mute); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .08em; }
+.field input, .field select, .field textarea {
+  width: 100%; padding: 14px 14px;
+  background: var(--bg-elev); border: 1px solid var(--border);
+  border-radius: 12px;
+  font-family: inherit; font-size: 15px; color: var(--fg);
+  -webkit-appearance: none;
+}
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--accent); }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.field-hint { font-size: 11px; color: var(--fg-mute); margin-top: 6px; }
+.field-error { font-size: 11px; color: var(--brand-error); margin-top: 6px; }
+
+/* Selector chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip-it {
+  padding: 10px 14px; border-radius: 10px;
+  background: var(--bg-elev); border: 1px solid var(--border);
+  font-size: 13px; font-weight: 500; color: var(--fg-soft);
+  cursor: pointer; transition: all .2s var(--ease);
+  font-family: inherit;
+}
+.chip-it:hover { border-color: var(--accent); }
+.chip-it.active { background: var(--primary); color: var(--primary-on); border-color: var(--primary); }
+
+/* Step indicator */
+.steps { display: flex; gap: 6px; margin-bottom: 20px; padding: 0 4px; }
+.steps i { flex: 1; height: 4px; background: var(--border); border-radius: 2px; font-style: normal; transition: background .3s var(--ease); }
+.steps i.done { background: var(--accent); }
+.steps i.cur  { background: var(--primary); }
+
+/* Section title */
+.section-title {
+  font-family: 'Onest', sans-serif; font-size: 22px;
+  color: var(--primary); margin: 0 0 8px; font-weight: 700;
+}
+.section-sub { font-size: 14px; color: var(--fg-soft); margin-bottom: 20px; line-height: 1.5; }
+
+/* Splash */
+.splash {
+  flex: 1;
+  background: linear-gradient(135deg, var(--brand-primary-dark) 0%, var(--brand-primary) 60%, var(--brand-primary-light) 100%);
+  color: #fff;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 32px;
+}
+.splash-mark {
+  width: 96px; height: 96px;
+  background: var(--brand-accent); border-radius: 24px;
+  display: grid; place-items: center;
+  color: var(--brand-primary-dark);
+  font-family: 'Onest', sans-serif; font-weight: 800; font-size: 44px;
+  position: relative; margin-bottom: 28px;
+  animation: splashIn .8s var(--ease-spring);
+}
+.splash-mark::after { content: ""; position: absolute; top: 12px; right: 12px; width: 14px; height: 14px; background: var(--brand-primary-dark); }
+@keyframes splashIn {
+  from { transform: scale(.4); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.splash h1 { color: #fff; font-size: 36px; margin: 0 0 12px; font-weight: 800; letter-spacing: -.01em; }
+.splash p { color: rgba(255,255,255,.78); font-size: 16px; max-width: 28ch; margin: 0 0 36px; line-height: 1.5; }
+.splash-loader { width: 80px; height: 3px; background: rgba(255,255,255,.15); border-radius: 2px; overflow: hidden; position: relative; }
+.splash-loader::after {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 40%;
+  background: var(--brand-accent);
+  animation: loaderMove 1.5s ease-in-out infinite;
+}
+@keyframes loaderMove {
+  0% { left: -40%; } 100% { left: 100%; }
+}
+
+/* Onboarding */
+.onb-screen { flex: 1; display: flex; flex-direction: column; padding: 40px 24px; }
+.onb-img { flex: 1; display: grid; place-items: center; }
+.onb-img-inner {
+  width: 220px; height: 220px;
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-primary-light));
+  border-radius: 50%;
+  display: grid; place-items: center;
+  font-family: 'Onest', sans-serif; font-size: 80px; color: var(--brand-accent);
+  font-weight: 800;
+  box-shadow: var(--shadow-3);
+}
+.onb-text { text-align: center; padding: 20px 0; }
+.onb-text h2 { color: var(--primary); font-size: 24px; margin-bottom: 12px; }
+.onb-text p { color: var(--fg-soft); font-size: 15px; line-height: 1.5; }
+.onb-dots { display: flex; justify-content: center; gap: 8px; margin: 24px 0; }
+.onb-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); transition: all .2s var(--ease); }
+.onb-dot.active { background: var(--accent); width: 24px; border-radius: 4px; }
+
+/* Sign / OTP */
+.sign-circle {
+  width: 140px; height: 140px;
+  border: 4px solid var(--accent); border-radius: 50%;
+  margin: 32px auto; display: grid; place-items: center;
+  color: var(--primary); font-family: 'Onest', sans-serif;
+  font-size: 56px; font-weight: 700;
+  position: relative;
+}
+.sign-circle::after {
+  content: "✓"; position: absolute; bottom: -6px; right: -6px;
+  width: 36px; height: 36px; background: var(--brand-success);
+  border-radius: 50%; display: grid; place-items: center;
+  color: #fff; font-size: 18px;
+  border: 3px solid var(--bg);
+}
+.otp-input {
+  display: flex; gap: 8px; justify-content: center; margin: 24px 0;
+}
+.otp-box {
+  width: 44px; height: 52px;
+  border: 2px solid var(--border); border-radius: 10px;
+  display: grid; place-items: center;
+  font-family: 'Onest', sans-serif; font-size: 22px; font-weight: 700;
+  color: var(--primary);
+  background: var(--bg-elev);
+  transition: all .2s var(--ease);
+}
+.otp-box.filled { border-color: var(--primary); }
+.otp-box.cur { border-color: var(--accent); animation: blink 1s infinite; }
+@keyframes blink { 50% { border-color: var(--border); } }
+
+/* Success */
+.success-ico {
+  width: 96px; height: 96px;
+  background: var(--brand-success); border-radius: 50%;
+  margin: 32px auto 20px; display: grid; place-items: center;
+  color: #fff; font-size: 48px;
+  animation: successIn .6s var(--ease-spring);
+}
+@keyframes successIn { from { transform: scale(.3); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+/* Smart contract preview */
+.sc-card {
+  background: var(--bg-elev); border: 1px solid var(--border-soft);
+  border-radius: 14px; padding: 16px;
+  margin-bottom: 12px;
+}
+.sc-row {
+  display: flex; justify-content: space-between; padding: 10px 0;
+  border-bottom: 1px solid var(--border-soft); font-size: 13px;
+}
+.sc-row:last-child { border-bottom: none; }
+.sc-row span:first-child { color: var(--fg-mute); }
+.sc-row span:last-child { color: var(--fg); font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+
+/* Profile */
+.profile-head { text-align: center; padding: 24px 16px; }
+.avatar {
+  width: 80px; height: 80px;
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-accent));
+  border-radius: 50%;
+  margin: 0 auto 14px;
+  display: grid; place-items: center;
+  color: #fff; font-family: 'Onest', sans-serif; font-size: 28px; font-weight: 700;
+}
+.profile-name { font-family: 'Onest', sans-serif; font-size: 20px; font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+.profile-id { font-size: 12px; color: var(--fg-mute); font-family: 'JetBrains Mono', monospace; }
+
+.menu-row {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 16px;
+  background: var(--bg-elev); border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all .15s var(--ease);
+  font-family: inherit; text-align: left; width: 100%;
+}
+.menu-row:hover { border-color: var(--accent); }
+.menu-ico {
+  width: 36px; height: 36px; border-radius: 8px;
+  background: var(--bg-soft);
+  display: grid; place-items: center; color: var(--primary);
+  font-size: 16px; flex-shrink: 0;
+}
+.menu-txt { flex: 1; font-size: 14px; color: var(--fg); font-weight: 500; }
+.menu-meta { font-size: 11px; color: var(--fg-mute); }
+.menu-arr::after { content: "›"; color: var(--fg-mute); font-size: 20px; }
+.menu-row.danger .menu-ico { background: rgba(179,58,58,.14); color: var(--brand-error); }
+.menu-row.danger .menu-txt { color: var(--brand-error); }
+
+/* Notif center */
+.notif {
+  display: flex; gap: 12px; padding: 14px 16px;
+  background: var(--bg-elev); border: 1px solid var(--border-soft);
+  border-radius: 12px; margin-bottom: 8px;
+}
+.notif-ico {
+  width: 36px; height: 36px; border-radius: 8px;
+  background: var(--bg-soft);
+  display: grid; place-items: center; color: var(--primary);
+  font-size: 16px; flex-shrink: 0;
+}
+.notif-body { flex: 1; }
+.notif-title { font-size: 14px; font-weight: 600; color: var(--fg); margin-bottom: 4px; }
+.notif-text { font-size: 12px; color: var(--fg-mute); line-height: 1.4; }
+.notif-time { font-size: 11px; color: var(--fg-faint); margin-top: 6px; }
+.notif.unread .notif-title::before { content: "●"; color: var(--accent); margin-right: 6px; font-size: 10px; }
+
+/* Income chart */
+.chart-mini {
+  display: flex; align-items: flex-end; gap: 6px;
+  height: 120px; margin: 20px 0;
+  padding: 0 8px;
+}
+.chart-bar {
+  flex: 1; background: linear-gradient(180deg, var(--accent), var(--brand-accent-soft));
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  min-height: 4px;
+  transition: opacity .2s var(--ease);
+}
+.chart-bar:hover { opacity: .8; }
+.chart-bar span {
+  position: absolute; bottom: -20px; left: 0; right: 0;
+  text-align: center; font-size: 9px; color: var(--fg-mute);
+  font-family: 'JetBrains Mono', monospace;
+}
+.chart-bar b {
+  position: absolute; top: -16px; left: 0; right: 0;
+  text-align: center; font-size: 9px; color: var(--primary);
+  font-family: 'Onest', sans-serif; font-weight: 700;
+}
+
+/* Banner */
+.banner {
+  background: linear-gradient(135deg, var(--accent), var(--brand-accent-soft));
+  color: var(--brand-primary-dark);
+  border-radius: 14px; padding: 16px;
+  margin-bottom: 14px;
+  display: flex; align-items: center; gap: 14px;
+}
+.banner-ico { font-size: 30px; flex-shrink: 0; }
+.banner-body { flex: 1; }
+.banner-title { font-family: 'Onest', sans-serif; font-weight: 700; font-size: 14px; margin-bottom: 2px; }
+.banner-text { font-size: 12px; opacity: .85; }
+
+/* Theme toggle floating */
+.theme-fab {
+  position: absolute; right: 16px;
+  bottom: 90px; z-index: 7;
+  background: var(--bg-elev);
+  border: 1px solid var(--border-soft);
+  border-radius: 50%; width: 44px; height: 44px;
+  display: grid; place-items: center;
+  cursor: pointer; box-shadow: var(--shadow-2);
+  color: var(--primary); font-size: 16px;
+  font-family: inherit;
+}
+.screen.hide-nav ~ .theme-fab { bottom: 16px; }
+
+/* Lang/Theme dropdown */
+.settings-panel {
+  position: absolute; right: 12px; top: 60px; z-index: 10;
+  background: var(--bg-elev); border: 1px solid var(--border-soft);
+  border-radius: 14px; padding: 10px;
+  box-shadow: var(--shadow-3);
+  min-width: 180px; display: none;
+}
+.settings-panel.open { display: block; animation: fadeIn .2s; }
+.settings-panel h5 { font-size: 10px; color: var(--fg-mute); text-transform: uppercase; letter-spacing: .1em; margin: 8px 6px 4px; font-weight: 600; }
+.settings-panel .opt {
+  display: flex; align-items: center; gap: 8px;
+  width: 100%; padding: 8px 10px;
+  background: transparent; border: none;
+  border-radius: 8px;
+  font-family: inherit; font-size: 13px; color: var(--fg);
+  cursor: pointer; text-align: left;
+}
+.settings-panel .opt:hover { background: var(--bg-soft); }
+.settings-panel .opt.active { background: var(--primary); color: var(--primary-on); }
+
+/* Modal */
+.modal-app {
+  position: absolute; inset: 0;
+  background: rgba(6,26,58,.65);
+  backdrop-filter: blur(8px);
+  z-index: 20;
+  display: none; align-items: flex-end; justify-content: center;
+  padding: 20px;
+}
+.modal-app.open { display: flex; animation: fadeIn .2s; }
+.modal-card {
+  background: var(--bg-elev); border-radius: 20px 20px 0 0;
+  width: 100%; padding: 16px 20px 24px;
+  max-height: 80%;
+  overflow-y: auto;
+  animation: slideUp .3s var(--ease-spring);
+}
+.modal-card.center {
+  border-radius: 20px;
+  align-self: center;
+}
+@keyframes slideUp { from { transform: translateY(80px); } to { transform: none; } }
+.modal-drag {
+  width: 36px; height: 4px; background: var(--border);
+  border-radius: 2px; margin: 0 auto 16px;
+}
+
+/* Install prompt */
+#installPrompt {
+  position: absolute; bottom: 88px; left: 16px; right: 16px;
+  z-index: 7; display: none;
+  background: var(--primary); color: var(--primary-on);
+  border-radius: 14px; padding: 14px 16px;
+  font-size: 13px;
+  align-items: center; gap: 12px;
+  box-shadow: var(--shadow-3);
+}
+#installPrompt.show { display: flex; }
+#installPrompt button {
+  background: var(--accent); color: var(--brand-primary-dark);
+  border: none; border-radius: 8px;
+  padding: 8px 14px; font-weight: 600; font-size: 12px;
+  cursor: pointer; font-family: inherit;
+}
+
+/* Small screen tweaks */
+@media (max-height: 600px) {
+  .splash-mark { width: 64px; height: 64px; font-size: 28px; margin-bottom: 16px; }
+  .splash h1 { font-size: 24px; }
+}
+
+/* ============ Drawer (вторичная навигация) ============ */
+.drawer-backdrop {
+  position: fixed; inset: 0; z-index: 50;
+  background: rgba(6, 26, 58, .55);
+  backdrop-filter: blur(2px);
+}
+.drawer {
+  position: fixed; right: 0; top: 0; bottom: 0; z-index: 51;
+  width: min(360px, 84vw);
+  background: var(--bg);
+  box-shadow: -16px 0 60px rgba(0,0,0,.35);
+  display: flex; flex-direction: column;
+  transform: translateX(0);
+  animation: drawerIn .25s var(--ease-out);
+  padding-top: env(safe-area-inset-top, 0);
+}
+[dir="rtl"] .drawer { right: auto; left: 0; box-shadow: 16px 0 60px rgba(0,0,0,.35); }
+@keyframes drawerIn {
+  from { transform: translateX(110%); }
+  to   { transform: translateX(0); }
+}
+.drawer-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 18px 14px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.drawer-head h3 { margin: 0; font-family: 'Onest', sans-serif; font-weight: 700; color: var(--primary); font-size: 17px; }
+.drawer-list { list-style: none; margin: 0; padding: 8px 0; overflow-y: auto; }
+.drawer-list button {
+  display: block; width: 100%;
+  padding: 14px 22px;
+  background: transparent; border: none;
+  text-align: left; cursor: pointer;
+  font-family: inherit; font-size: 15px;
+  color: var(--fg); transition: background .15s var(--ease);
+}
+[dir="rtl"] .drawer-list button { text-align: right; }
+.drawer-list button:hover { background: var(--bg-soft); }
+.drawer-list button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+
+/* ============ Empty / Error / Offline states ============ */
+.state-block {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 40px 28px;
+  text-align: center;
+  color: var(--fg-soft);
+}
+.state-block .state-icon {
+  width: 84px; height: 84px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--bg-soft);
+  color: var(--fg-mute);
+  margin-bottom: 16px;
+}
+.state-block--error .state-icon { background: rgba(179,58,58,.10); color: var(--brand-error); }
+.state-block--offline .state-icon { background: rgba(201,169,97,.16); color: var(--accent); }
+.state-title { font-family: 'Onest', sans-serif; font-weight: 700; font-size: 18px; color: var(--primary); margin: 0 0 6px; }
+.state-msg { font-size: 14px; line-height: 1.55; margin: 0 0 16px; max-width: 30ch; }
+.state-btn { margin-top: 4px; }
+
+/* Focus-visible — внутренняя белая обводка, чтобы золото на золоте читалось */
+.appbar-action:focus-visible,
+.appbar-back:focus-visible,
+.bnav-item:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px rgba(255,255,255,.6);
+}
+</style>
+</head>
+
+<body>
+
+<div class="app" id="app">
+
+  <!-- =================== SCREEN: SPLASH =================== -->
+  <div class="screen active hide-nav no-scroll" data-screen="splash">
+    <div class="splash">
+      <div class="splash-mark">Р</div>
+      <h1>ЦП РСФСР</h1>
+      <p>Российский Сервис Финансирования Социального Развития</p>
+      <div class="splash-loader"></div>
+    </div>
+  </div>
+
+  <!-- =================== SCREEN: LOGIN =================== -->
+  <div class="screen hide-nav" data-screen="login">
+    <div class="splash" style="justify-content:flex-start; padding-top:80px">
+      <div class="splash-mark" style="width:72px; height:72px; font-size:32px">Р</div>
+      <h1 style="font-size:28px">Войти в платформу</h1>
+      <p>Авторизация через Госуслуги (ЕСИА) — единственный способ войти в платформу для физических и юридических лиц.</p>
+      <div style="width:100%; max-width:300px">
+        <button class="btn-app btn-app--accent" onclick="esiaLogin()">
+          <span style="font-size:18px">⌂</span>
+          <span>Войти через Госуслуги</span>
+        </button>
+        <button class="btn-app btn-app--light" onclick="bioLogin()">
+          <span style="font-size:16px">◐</span>
+          <span>Биометрия (Face ID / Touch ID)</span>
+        </button>
+        <p style="margin-top:32px; font-size:11px; color:rgba(255,255,255,.55); line-height:1.5">
+          Защита персональных данных по 152-ФЗ. Лицензия Банка России — 779-П. Авторские права защищены Свидетельством о депонировании №4011265.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== SCREEN: ONBOARDING =================== -->
+  <div class="screen hide-nav" data-screen="onboarding">
+    <div class="appbar transparent" style="background:transparent">
+      <div style="flex:1"></div>
+      <button class="appbar-action" onclick="nav('home')" style="color:var(--primary)">Пропустить</button>
+    </div>
+    <div class="onb-screen">
+      <div class="onb-img">
+        <div class="onb-img-inner" id="onbImg">⊞</div>
+      </div>
+      <div class="onb-text">
+        <h2 id="onbTitle">Внесите актив в залог</h2>
+        <p id="onbDesc">Недвижимость, транспорт, ИС, ценные бумаги — без отчуждения. Имущество остаётся у вас.</p>
+      </div>
+      <div class="onb-dots">
+        <span class="onb-dot active" data-onb="0"></span>
+        <span class="onb-dot" data-onb="1"></span>
+        <span class="onb-dot" data-onb="2"></span>
+      </div>
+      <button class="btn-app" onclick="onbNext()" id="onbBtn">Далее →</button>
+    </div>
+  </div>
+
+  <!-- =================== SCREEN: KYC =================== -->
+  <div class="screen hide-nav" data-screen="kyc">
+    <div class="appbar">
+      <button class="appbar-back" onclick="nav('login')" aria-label="Назад к входу"><span aria-hidden="true">‹</span></button>
+      <span class="appbar-title">Регистрация</span>
+    </div>
+    <div class="cnt">
+      <div class="steps">
+        <i class="cur" id="kyc-s1"></i>
+        <i id="kyc-s2"></i>
+        <i id="kyc-s3"></i>
+      </div>
+      <div id="kyc-step1">
+        <h2 class="section-title">Подтвердите личность</h2>
+        <p class="section-sub">Данные подгружены из вашей подтверждённой учётной записи Госуслуг. Проверьте корректность.</p>
+        <div class="field"><label>Фамилия</label><input value="Иванов" id="k_lastname"></div>
+        <div class="field"><label>Имя</label><input value="Иван" id="k_firstname"></div>
+        <div class="field"><label>Отчество</label><input value="Иванович" id="k_middlename"></div>
+        <div class="field-row">
+          <div class="field"><label>Серия паспорта</label><input value="4520" id="k_pseries"></div>
+          <div class="field"><label>Номер</label><input value="123456" id="k_pnum"></div>
+        </div>
+        <div class="field"><label>ИНН</label><input value="770100000000" id="k_inn"></div>
+        <button class="btn-app" onclick="kycStep(2)">Продолжить</button>
+      </div>
+      <div id="kyc-step2" style="display:none">
+        <h2 class="section-title">Контактные данные</h2>
+        <p class="section-sub">На указанный телефон будет приходить код подтверждения операций.</p>
+        <div class="field"><label>Телефон</label><input value="+7 999 123-45-67" id="k_phone" type="tel"></div>
+        <div class="field"><label>Email</label><input value="ivanov@example.ru" id="k_email" type="email"></div>
+        <div class="field"><label>Регион</label>
+          <select id="k_region">
+            <option>Москва</option><option>Санкт-Петербург</option><option>Московская область</option>
+            <option>Краснодарский край</option><option>Республика Татарстан</option><option>Другое</option>
+          </select>
+        </div>
+        <button class="btn-app" onclick="kycStep(3)">Продолжить</button>
+      </div>
+      <div id="kyc-step3" style="display:none">
+        <h2 class="section-title">Биометрия</h2>
+        <p class="section-sub">Подтвердите биометрию через ЕБС (Положение ЦБ РФ №482-П) для подписания операций без СМС.</p>
+        <div style="text-align:center; padding:40px 0">
+          <div style="width:120px; height:120px; border:3px dashed var(--accent); border-radius:50%; margin:0 auto; display:grid; place-items:center; color:var(--primary); font-size:48px">◐</div>
+          <p style="margin-top:24px; font-size:13px; color:var(--fg-soft)">Поднесите телефон к лицу или приложите палец к датчику отпечатков</p>
+        </div>
+        <button class="btn-app" onclick="kycFinish()">Подтвердить биометрию</button>
+        <button class="btn-app btn-app--ghost" onclick="kycFinish()" style="margin-top:10px">Пропустить — настроить позже</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== SCREEN: HOME =================== -->
+  <div class="screen" data-screen="home">
+    <div class="appbar">
+      <div style="flex:1">
+        <div style="font-size:11px; color:var(--fg-mute); font-weight:500">Добрый день,</div>
+        <div style="font-family:'Onest',sans-serif; font-size:17px; color:var(--primary); font-weight:700" id="userName">Иван Иванович</div>
+      </div>
+      <button class="appbar-action" onclick="nav('notifications')" id="notifBell">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span class="appbar-badge" id="notifBadge" aria-label="2 непрочитанных уведомления">2</span>
+      </button>
+      <button class="appbar-action" onclick="toggleSettings()" aria-label="Настройки"><span aria-hidden="true">⚙</span></button>
+    </div>
+    <div class="cnt">
+      <div class="balance">
+        <div class="balance-lbl">Активы в работе</div>
+        <div class="balance-val" id="totalAssets">12 850 000<em>₽</em></div>
+        <div class="balance-row">
+          <span>В залоге</span>
+          <b id="assetCount">2 объекта</b>
+        </div>
+        <div class="balance-row" style="border-top:none; margin-top:6px; padding-top:0">
+          <span>Доход за квартал</span>
+          <b id="quarterIncome">+ 86 100 ₽</b>
+        </div>
+      </div>
+      <div class="qa">
+        <button class="qa-it" onclick="nav('new-asset')"><span class="qa-ico">＋</span><span class="qa-lbl">Подать актив</span></button>
+        <button class="qa-it" onclick="nav('cfa')"><span class="qa-ico">⚙</span><span class="qa-lbl">Мои ЦФА</span></button>
+        <button class="qa-it" onclick="nav('income')"><span class="qa-ico">₽</span><span class="qa-lbl">Доходы</span></button>
+        <button class="qa-it" onclick="nav('documents')"><span class="qa-ico">≡</span><span class="qa-lbl">Документы</span></button>
+      </div>
+      <div class="banner" onclick="nav('new-asset')" style="cursor:pointer">
+        <div class="banner-ico">★</div>
+        <div class="banner-body">
+          <div class="banner-title">Новый национальный проект</div>
+          <div class="banner-text">Финансирование инфраструктуры. Подайте актив с повышенной ставкой 5,2%.</div>
+        </div>
+      </div>
+      <div class="lsec">
+        <div class="lsec-h"><h4>Мои активы</h4><a onclick="nav('assets')">Все →</a></div>
+        <div id="assetsList"></div>
+      </div>
+      <div class="lsec">
+        <div class="lsec-h"><h4>Последние операции</h4><a onclick="nav('history')">Все →</a></div>
+        <div id="recentOps"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== SCREEN: ASSETS =================== -->
+  <div class="screen" data-screen="assets">
+    <div class="appbar">
+      <button class="appbar-back" onclick="nav('home')" aria-label="Назад на главную"><span aria-hidden="true">‹</span></button>
+      <span class="appbar-title">Мои активы</span>
+      <button class="appbar-action" onclick="nav('new-asset')" aria-label="Добавить актив"><span aria-hidden="true">＋</span></button>
+    </div>
+    <div class="cnt">
+      <div class="chips" style="margin-bottom:14px">
+        <button class="chip-it active" data-filter="all">Все</button>
+        <button class="chip-it" data-filter="real">Недвижимость</button>
+        <button class="chip-it" data-filter="land">Земля</button>
+        <button class="chip-it" data-filter="other">Другое</button>
+      </div>
+      <div id="assetsFull"></div>
+      <button class="btn-app" onclick="nav('new-asset')" style="margin-top:14px">＋ Добавить новый актив</button>
+    </div>
+  </div>
+
+  <!-- =================== SCREEN: ASSET DETAIL =================== -->
+  <div class="screen" data-screen="asset-detail">
+    <div class="appbar">
+      <button class="appbar-back" onclick="nav('assets')" aria-label="Назад к активам"><span aria-hidden="true">‹</span></button>
+      <span class="appbar-title">Актив</span>
+      <button class="appbar-action" aria-label="Дополнительные действия"><span aria-hidden="true">⋮</span></button>
+    </div>
+    <div class="cnt" id="assetDetailContent"></div>
+  </div>
+
+  <!-- =================== SCREEN: NEW ASSET =================== -->
+  <div class="screen hide-nav" data-screen="new-asset">
+    <div class="appbar">
+      <button class="appbar-back" onclick="backNewAsset()" id="naBack" aria-label="Назад"><span aria-hidden="true">‹</span></button>
+      <span class="appbar-title">Новый актив</span>
+    </div>
+    <div class="cnt">
+      <div class="steps">
+        <i class="cur" id="na-s1"></i>
+        <i id="na-s2"></i>
+        <i id="na-s3"></i>
+        <i id="na-s4"></i>
+      </div>
+      <!-- Step 1: Тип имущества -->
+      <div id="na-step1">
+        <h2 class="section-title">Тип имущества</h2>
+        <p class="section-sub">Выберите категорию актива. Платформа поддерживает четыре типа залоговой массы.</p>
+        <div class="chips" style="flex-direction:column">
+          <button class="chip-it" style="width:100%; text-align:left" onclick="naType('real')">
+            <span style="font-size:20px; margin-right:8px">⌂</span>Недвижимость (квартира, дом, апартаменты)
+          </button>
+          <button class="chip-it" style="width:100%; text-align:left" onclick="naType('land')">
+            <span style="font-size:20px; margin-right:8px">▦</span>Земельный участок
+          </button>
+          <button class="chip-it" style="width:100%; text-align:left" onclick="naType('vehicle')">
+            <span style="font-size:20px; margin-right:8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 17h14M3 17v-4l2-5a2 2 0 0 1 2-1h10a2 2 0 0 1 2 1l2 5v4"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></span>Транспортное средство
+          </button>
+          <button class="chip-it" style="width:100%; text-align:left" onclick="naType('ip')">
+            <span style="font-size:20px; margin-right:8px">©</span>Интеллектуальная собственность
+          </button>
+          <button class="chip-it" style="width:100%; text-align:left" onclick="naType('securities')">
+            <span style="font-size:20px; margin-right:8px">≣</span>Ценные бумаги
+          </button>
+        </div>
+      </div>
+      <!-- Step 2: Характеристики -->
+      <div id="na-step2" style="display:none">
+        <h2 class="section-title">Характеристики</h2>
+        <p class="section-sub">Введите кадастровый номер — данные подгрузятся автоматически из ЕГРН.</p>
+        <div class="field"><label>Кадастровый номер</label><input value="77:01:0001000:1234" id="na_kadastr"></div>
+        <div class="field"><label>Адрес</label><input value="г. Москва, ул. Тверская, д. 12, кв. 45" id="na_address"></div>
+        <div class="field-row">
+          <div class="field"><label>Площадь, м²</label><input value="97" id="na_area"></div>
+          <div class="field"><label>Год постройки</label><input value="2015" id="na_year"></div>
+        </div>
+        <div class="field"><label>Документ о праве собственности</label>
+          <select>
+            <option>Свидетельство о собственности</option>
+            <option>Выписка из ЕГРН</option>
+            <option>Договор купли-продажи</option>
+            <option>Договор дарения</option>
+            <option>Свидетельство о наследовании</option>
+          </select>
+        </div>
+        <div class="banner">
+          <div class="banner-ico">ℹ</div>
+          <div class="banner-body">
+            <div class="banner-title">Данные подгружены из ЕГРН</div>
+            <div class="banner-text">Через защищённый канал интеграции с Росреестром (218-ФЗ).</div>
+          </div>
+        </div>
+        <button class="btn-app" onclick="naStep(3)">Продолжить</button>
+      </div>
+      <!-- Step 3: Подтверждение и оценка -->
+      <div id="na-step3" style="display:none">
+        <h2 class="section-title">Заявка на оценку</h2>
+        <p class="section-sub">Партнёр платформы — аккредитованная оценочная компания (135-ФЗ) — проведёт оценку. Срок: до 24 часов.</p>
+        <div class="sc-card">
+          <div class="sc-row"><span>Тип</span><span>Квартира</span></div>
+          <div class="sc-row"><span>Адрес</span><span style="font-size:11px">Тверская, 12-45</span></div>
+          <div class="sc-row"><span>Площадь</span><span>97 м²</span></div>
+          <div class="sc-row"><span>Партнёр</span><span>Из реестра</span></div>
+          <div class="sc-row"><span>Метод</span><span>Сравнительный</span></div>
+          <div class="sc-row"><span>Стоимость заявки</span><span>0 ₽</span></div>
+        </div>
+        <p class="section-sub" style="font-size:12px">Подтверждая, вы соглашаетесь с условиями обработки ПДн (152-ФЗ) и Правилами информационной системы (статья 6 №259-ФЗ).</p>
+        <button class="btn-app" onclick="naStep(4)">Отправить на оценку</button>
+      </div>
+      <!-- Step 4: Результат -->
+      <div id="na-step4" style="display:none">
+        <div class="success-ico">✓</div>
+        <h2 class="section-title" style="text-align:center">Оценка готова</h2>
+        <p class="section-sub" style="text-align:center">Авторизованный партнёр платформы провёл оценку. Страхование включено в стоимость.</p>
+        <div class="balance" style="margin:0 0 14px">
+          <div class="balance-lbl">Оценочная стоимость</div>
+          <div class="balance-val">16 400 000<em>₽</em></div>
+          <div class="balance-row">
+            <span>Залоговый ЦФА (50%)</span>
+            <b>8 200 000 ₽</b>
+          </div>
+        </div>
+        <div class="sc-card">
+          <div class="sc-row"><span>Метод</span><span>Сравнительный</span></div>
+          <div class="sc-row"><span>Страхование</span><span style="color:var(--brand-success)">Включено</span></div>
+          <div class="sc-row"><span>Действительна до</span><span>15.11.2025</span></div>
+        </div>
+        <button class="btn-app btn-app--accent" onclick="nav('contract')">Перейти к смарт-контракту</button>
+        <button class="btn-app btn-app--ghost" onclick="nav('home')" style="margin-top:10px">На главную</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== SCREEN: CONTRACT =================== -->
+  <div class="screen hide-nav" data-screen="contract">
+    <div class="appbar">
+      <button class="appbar-back" onclick="nav('new-asset')" aria-label="Назад к новому активу"><span aria-hidden="true">‹</span></button>
+      <span class="appbar-title">Смарт-контракт</span>
+      <button class="appbar-action" title="Помощь" aria-label="Помощь"><span aria-hidden="true">?</span></button>
+    </div>
+    <div class="cnt">
+      <h2 class="section-title">Условия выпуска ЦФА</h2>
+      <p class="section-sub">Настройте параметры смарт-контракта. Условия исполняются автоматически согласно ст. 4 №259-ФЗ.</p>
+
+      <div class="field">
+        <label>Срок ЦФА</label>
+        <div class="chips">
+          <button class="chip-it" data-term="12">12 мес</button>
+          <button class="chip-it active" data-term="36">36 мес</button>
+          <button class="chip-it" data-term="60">60 мес</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Целевое использование</label>
+        <select id="c_purpose">
+          <option>Национальный проект «Жильё и городская среда»</option>
+          <option>Национальный проект «Здравоохранение»</option>
+          <option>Национальный проект «Образование»</option>
+          <option>Национальный проект «Инфраструктура»</option>
+          <option>Национальный проект «Наука и университеты»</option>
+          <option>Региональная инфраструктурная программа</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Номинал ЦФА</label>
+        <input value="8 200 000 ₽" disabled>
+        <p class="field-hint">50% от оценочной стоимости актива</p>
+      </div>
+
+      <div class="sc-card" style="margin-top:18px">
+        <div class="sc-row"><span>Ставка вознаграждения</span><span style="color:var(--accent)">4,2% годовых</span></div>
+        <div class="sc-row"><span>Доход за весь срок</span><span>1 033 200 ₽</span></div>
+        <div class="sc-row"><span>Эскроу-агент</span><span>Банк России</span></div>
+        <div class="sc-row"><span>Страхование</span><span>Партнёр</span></div>
+        <div class="sc-row"><span>Регистратор обременения</span><span>Росреестр</span></div>
+      </div>
+
+      <div style="background:var(--bg-soft); border-radius:12px; padding:12px 14px; margin-top:14px; font-size:11px; color:var(--fg-mute); line-height:1.5">
+        Подписав контракт, вы соглашаетесь с тем, что на ваш актив накладывается временное обременение в пользу платформы-оператора. Имущество остаётся в вашем распоряжении. По истечении срока обременение снимается.
+      </div>
+
+      <button class="btn-app" onclick="nav('sign')" style="margin-top:14px">Подписать (УКЭП)</button>
+      <button class="btn-app btn-app--ghost" onclick="nav('home')">Сохранить как черновик</button>
+    </div>
+  </div>
+
+  <!-- =================== SCREEN: SIGN =================== -->
+  <div class="screen hide-nav" data-screen="sign">
+    <div class="appbar">
+      <button class="appbar-back" onclick="nav('contract')" aria-label="Назад к контракту"><span aria-hidden="true">‹</span></button>
+      <span class="appbar-title">Подписание</span>
+    </div>
+    <div class="cnt" style="text-align:center">
+      <div class="sign-circle">ЭП</div>
+      <h2 class="section-title">Электронная подпись</h2>
+      <p class="section-sub">Усиленная квалифицированная электронная подпись<br>ГОСТ Р 34.10-2012 / ГОСТ Р 34.11-2012</p>
+      <p style="font-size:13px; color:var(--fg-soft); margin-bottom:24px">Код подтверждения отправлен на<br><b style="color:var(--fg)">+7 (***) ***-45-67</b></p>
+      <div class="otp-input" id="otpInput">
+        <div class="otp-box cur"></div>
+        <div class="otp-box"></div>
+        <div class="otp-box"></div>
+        <div class="otp-box"></div>
+        <div class="otp-box"></div>
+        <div class="otp-box"></div>
+      </div>
+      <button class="btn-app btn-app--accent" onclick="signAuto()" style="margin-top:8px">Использовать биометрию</button>
+      <button class="btn-app btn-app--ghost" onclick="otpFill()">Имитировать ввод кода</button>
+    </div>
+  </div>
+
+  <!-- =================== SCREEN: ISSUED =================== -->
+  <div class="screen hide-nav" data-screen="issued">
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:40px 24px; text-align:center">
+      <div class="success-ico">✓</div>
+      <h1 style="font-family:'Onest',sans-serif; color:var(--primary); font-size:28px; margin-bottom:12px">ЦФА успешно выпущен</h1>
+      <p style="color:var(--fg-soft); font-size:14px; line-height:1.55; margin-bottom:24px">ЦФА зарегистрирован в реестре оператора информационной системы по 779-П. Расчёт по выпуску проведён через инфраструктурный канал ВЭБ.РФ (ПП РФ № 158) и Федеральное казначейство. Обременение зарегистрировано в ЕГРН.</p>
+      <div class="sc-card" style="text-align:left; margin-bottom:14px">
+        <div class="sc-row"><span>ID ЦФА</span><span style="font-size:11px">cfa-7b3a-rsfsr-2025-00018</span></div>
+        <div class="sc-row"><span>Номинал</span><span>8 200 000 ₽</span></div>
+        <div class="sc-row"><span>Статус</span><span style="color:var(--brand-success)">Активен</span></div>
+        <div class="sc-row"><span>Следующая выплата</span><span>15.08.2025</span></div>
+      </div>
+      <button class="btn-app" onclick="nav('cfa')">Перейти к моим ЦФА</button>
+      <button class="btn-app btn-app--ghost" onclick="nav('home')">На главную</button>
+    </div>
+  </div>
+
+  <!-- =================== SCREEN: CFA LIST =================== -->
+  <div class="screen" data-screen="cfa">
+    <div class="appbar">
+      <button class="appbar-back" onclick="nav('home')" aria-label="Назад на главную"><span aria-hidden="true">‹</span></button>
+      <span class="appbar-title">Мои ЦФА</span>
+      <button class="appbar-action" aria-label="Поиск"><span aria-hidden="true">⌕</span></button>
+    </div>
+    <div class="cnt">
+      <div class="balance" style="background:linear-gradient(135deg,var(--brand-primary-dark),var(--brand-primary-light))">
+        <div class="balance-lbl">Совокупная номинальная стоимость</div>
+        <div class="balance-val" id="cfaTotal">8 200 000<em>₽</em></div>
+        <div class="balance-row"><span>Активных ЦФА</span><b id="cfaCount">1</b></div>
+        <div class="balance-row" style="border-top:none; padding-top:0; margin-top:6px"><span>Доход за весь срок</span><b>1 033 200 ₽</b></div>
+      </div>
+      <div class="chips" style="margin-bottom:12px">
+        <button class="chip-it active">Все</button>
+        <button class="chip-it">Активные</button>
+        <button class="chip-it">На выпуске</button>
+        <button class="chip-it">Завершённые</button>
+      </div>
+      <div id="cfaList"></div>
+    </div>
+  </div>
+
+  <!-- =================== SCREEN: CFA DETAIL =================== -->
+  <div class="screen" data-screen="cfa-detail">
+    <div class="appbar">
+      <button class="appbar-back" onclick="nav('cfa')">‹</button>
+      <span class="appbar-title">ЦФА</span>
+      <button class="appbar-action" onclick="openModal('cfa-actions')">⋮</button>
+    </div>
+    <div class="cnt" id="cfaDetailContent"></div>
+  </div>
+
+  <!-- =================== SCREEN: INCOME =================== -->
+  <div class="screen" data-screen="income">
+    <div class="appbar">
+      <button class="appbar-back" onclick="nav('home')" aria-label="Назад на главную"><span aria-hidden="true">‹</span></button>
+      <span class="appbar-title">Доходы</span>
+      <button class="appbar-action">⤓</button>
+    </div>
+    <div class="cnt">
+      <div class="balance">
+        <div class="balance-lbl">Доход с начала года</div>
+        <div class="balance-val">142 800<em>₽</em></div>
+        <div class="balance-row"><span>За квартал</span><b>+ 86 100 ₽</b></div>
+        <div class="balance-row" style="border-top:none; padding-top:0; margin-top:6px"><span>Прогноз годовой</span><b>344 400 ₽</b></div>
+      </div>
+      <div class="lsec-h"><h4>Помесячно</h4></div>
+      <div class="chart-mini" id="incomeChart"></div>
+      <div class="lsec" style="margin-top:32px">
+        <div class="lsec-h"><h4>Поступления</h4><a onclick="nav('history')">Все →</a></div>
+        <div id="incomeList"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== SCREEN: HISTORY =================== -->
+  <div class="screen" data-screen="history">
+    <div class="appbar">
+      <button class="appbar-back" onclick="nav('home')" aria-label="Назад на главную"><span aria-hidden="true">‹</span></button>
+      <span class="appbar-title">История операций</span>
+      <button class="appbar-action" aria-label="Поиск"><span aria-hidden="true">⌕</span></button>
+    </div>
+    <div class="cnt">
+      <div class="chips" style="margin-bottom:14px">
+        <button class="chip-it active">Все</button>
+        <button class="chip-it">Выплаты</button>
+        <button class="chip-it">Выпуск ЦФА</button>
+        <button class="chip-it">Мена</button>
+      </div>
+      <div id="historyList"></div>
+    </div>
+  </div>
+
+  <!-- =================== SCREEN: NOTIFICATIONS =================== -->
+  <div class="screen hide-nav" data-screen="notifications">
+    <div class="appbar">
+      <button class="appbar-back" onclick="nav('home')" aria-label="Назад на главную"><span aria-hidden="true">‹</span></button>
+      <span class="appbar-title">Уведомления</span>
+      <button class="appbar-action" onclick="clearNotifs()">⊘</button>
+    </div>
+    <div class="cnt">
+      <div id="notifList"></div>
+    </div>
+  </div>
+
+  <!-- =================== SCREEN: PROFILE =================== -->
+  <div class="screen" data-screen="profile">
+    <div class="appbar">
+      <button class="appbar-back" onclick="nav('home')" aria-label="Назад на главную"><span aria-hidden="true">‹</span></button>
+      <span class="appbar-title">Профиль</span>
+      <button class="appbar-action" onclick="nav('settings')">⚙</button>
+    </div>
+    <div class="cnt">
+      <div class="profile-head">
+        <div class="avatar">ИИ</div>
+        <div class="profile-name" id="profileName">Иван Иванович Иванов</div>
+        <div class="profile-id">ID · usr-rsfsr-104221</div>
+        <div style="margin-top:14px">
+          <span class="tag tag-active">Подтверждённый аккаунт</span>
+        </div>
+      </div>
+      <button class="menu-row menu-arr" onclick="nav('settings')">
+        <span class="menu-ico">⚙</span>
+        <span class="menu-txt">Настройки и безопасность</span>
+      </button>
+      <button class="menu-row menu-arr" onclick="alert('Открыть документ паспорта')">
+        <span class="menu-ico">⌂</span>
+        <span class="menu-txt">Паспортные данные</span>
+        <span class="menu-meta">Подтверждено</span>
+      </button>
+      <button class="menu-row menu-arr">
+        <span class="menu-ico">$</span>
+        <span class="menu-txt">Реквизиты для выплат</span>
+      </button>
+      <button class="menu-row menu-arr">
+        <span class="menu-ico">≡</span>
+        <span class="menu-txt">Мои документы</span>
+        <span class="menu-meta">12</span>
+      </button>
+      <button class="menu-row menu-arr" onclick="nav('notifications')">
+        <span class="menu-ico">⚐</span>
+        <span class="menu-txt">Уведомления</span>
+      </button>
+      <button class="menu-row menu-arr" onclick="nav('documents')">
+        <span class="menu-ico">📑</span>
+        <span class="menu-txt">Документы платформы</span>
+      </button>
+      <button class="menu-row menu-arr" onclick="nav('support')">
+        <span class="menu-ico">?</span>
+        <span class="menu-txt">Помощь и поддержка</span>
+      </button>
+      <button class="menu-row danger menu-arr" onclick="logout()">
+        <span class="menu-ico">⤴</span>
+        <span class="menu-txt">Выйти</span>
+      </button>
+      <p style="text-align:center; margin-top:24px; font-size:10px; color:var(--fg-mute); line-height:1.5">
+        ЦП РСФСР · Свидетельство о депонировании №4011265<br>
+        Кагиров А.-Х.А. · 19.12.2024<br>
+        <span style="font-family:'JetBrains Mono', monospace; font-size:9px; color:var(--accent)">ГОСТ-Р 34.11-2012</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- =================== SCREEN: SETTINGS =================== -->
+  <div class="screen hide-nav" data-screen="settings">
+    <div class="appbar">
+      <button class="appbar-back" onclick="nav('profile')">‹</button>
+      <span class="appbar-title">Настройки</span>
+    </div>
+    <div class="cnt">
+      <h4 style="font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:var(--fg-mute); margin:8px 4px">Язык</h4>
+      <div class="chips" style="margin-bottom:18px">
+        <button class="chip-it active" data-i18n-btn="ru">Русский</button>
+        <button class="chip-it" data-i18n-btn="en">English</button>
+        <button class="chip-it" data-i18n-btn="fr">Français</button>
+        <button class="chip-it" data-i18n-btn="ar">العربية</button>
+      </div>
+
+      <h4 style="font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:var(--fg-mute); margin:8px 4px">Тема</h4>
+      <div class="chips" style="margin-bottom:18px">
+        <button class="chip-it active" data-theme-btn="daylight" aria-label="Дневная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg> Светлая</button>
+        <button class="chip-it" data-theme-btn="midnight" aria-label="Тёмная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg> Тёмная</button>
+        <button class="chip-it" data-theme-btn="sepia" aria-label="Мягкая тема">◐ Мягкая</button>
+        <button class="chip-it" data-theme-btn="contrast" aria-label="Контраст A11Y">A11Y</button>
+      </div>
+
+      <h4 style="font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:var(--fg-mute); margin:8px 4px">Размер шрифта</h4>
+      <div class="chips" style="margin-bottom:18px">
+        <button class="chip-it" data-font-action="dec">A−</button>
+        <button class="chip-it active" data-font-action="reset">A</button>
+        <button class="chip-it" data-font-action="inc">A+</button>
+      </div>
+
+      <h4 style="font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:var(--fg-mute); margin:8px 4px">Безопасность</h4>
+      <button class="menu-row menu-arr">
+        <span class="menu-ico">◐</span>
+        <span class="menu-txt">Биометрия (Face ID)</span>
+        <span class="menu-meta">Включена</span>
+      </button>
+      <button class="menu-row menu-arr">
+        <span class="menu-ico">⊞</span>
+        <span class="menu-txt">PIN-код</span>
+        <span class="menu-meta">Настроить</span>
+      </button>
+      <button class="menu-row menu-arr">
+        <span class="menu-ico">⚐</span>
+        <span class="menu-txt">Push-уведомления</span>
+        <span class="menu-meta">Включены</span>
+      </button>
+      <button class="menu-row menu-arr">
+        <span class="menu-ico">⌂</span>
+        <span class="menu-txt">Двухфакторная аутентификация</span>
+        <span class="menu-meta">SMS + Биометрия</span>
+      </button>
+      <p style="text-align:center; margin-top:24px; font-size:11px; color:var(--fg-mute)">
+        Версия для специалистов · сборка от <span class="mono" style="color:var(--accent)">19.12.2024</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- =================== SCREEN: DOCUMENTS =================== -->
+  <div class="screen" data-screen="documents">
+    <div class="appbar">
+      <button class="appbar-back" onclick="nav('home')" aria-label="Назад на главную"><span aria-hidden="true">‹</span></button>
+      <span class="appbar-title">Документы платформы</span>
+    </div>
+    <div class="cnt">
+      <p class="section-sub">Полная база документации проекта — концепция, правовой контур, техдокументация, оценка, DD-аудит и экспертиза.</p>
+      <button class="menu-row menu-arr" onclick="openExt('../../07_Презентации/Большая_презентация/index.html#hub')">
+        <span class="menu-ico">📑</span>
+        <span class="menu-txt">Хаб документов</span>
+        <span class="menu-meta">17</span>
+      </button>
+      <button class="menu-row menu-arr" onclick="openExt('../../07_Презентации/Большая_презентация/index.html')">
+        <span class="menu-ico">★</span>
+        <span class="menu-txt">Большая презентация</span>
+      </button>
+      <button class="menu-row menu-arr" onclick="openExt('../../07_Презентации/Малая_презентация/index.html')">
+        <span class="menu-ico">≡</span>
+        <span class="menu-txt">Малая презентация</span>
+      </button>
+      <button class="menu-row menu-arr" onclick="openExt('../../08_Веб-сайт/HTML_основной/index.html')">
+        <span class="menu-ico">⊞</span>
+        <span class="menu-txt">Веб-сайт проекта</span>
+      </button>
+      <button class="menu-row menu-arr" onclick="openExt('../../02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html')">
+        <span class="menu-ico">§</span>
+        <span class="menu-txt">Юридический фундамент</span>
+        <span class="menu-meta">259-ФЗ</span>
+      </button>
+      <button class="menu-row menu-arr" onclick="openExt('../../11_Оценка/Международная_оценка_проекта.html')">
+        <span class="menu-ico">$</span>
+        <span class="menu-txt">Международная оценка</span>
+        <span class="menu-meta">IVS 2022</span>
+      </button>
+      <button class="menu-row menu-arr" onclick="openExt('../../12_DD_аудит/DD_отчёт.html')">
+        <span class="menu-ico">✓</span>
+        <span class="menu-txt">DD-аудит Big-4</span>
+      </button>
+      <button class="menu-row menu-arr" onclick="openExt('../../13_Экспертиза/Экспертное_заключение.html')">
+        <span class="menu-ico">⊕</span>
+        <span class="menu-txt">Экспертное заключение</span>
+        <span class="menu-meta">4,93/5</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- =================== SCREEN: SUPPORT =================== -->
+  <div class="screen hide-nav" data-screen="support">
+    <div class="appbar">
+      <button class="appbar-back" onclick="nav('profile')">‹</button>
+      <span class="appbar-title">Помощь и поддержка</span>
+    </div>
+    <div class="cnt">
+      <h2 class="section-title">Чем помочь?</h2>
+      <button class="menu-row menu-arr"><span class="menu-ico">?</span><span class="menu-txt">FAQ — частые вопросы</span></button>
+      <button class="menu-row menu-arr"><span class="menu-ico">💬</span><span class="menu-txt">Чат с оператором</span><span class="menu-meta">Онлайн</span></button>
+      <button class="menu-row menu-arr"><span class="menu-ico">📞</span><span class="menu-txt">Телефон 8 800 ...</span></button>
+      <button class="menu-row menu-arr" onclick="openExt('../../07_Презентации/Большая_презентация/index.html#contacts')">
+        <span class="menu-ico">@</span><span class="menu-txt">Связаться через форму</span>
+      </button>
+      <h4 style="font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:var(--fg-mute); margin:24px 4px 8px">Полезное</h4>
+      <button class="menu-row menu-arr" onclick="openExt('../../01_Техническая_документация/02_Функциональные_требования.html')">
+        <span class="menu-ico">≣</span><span class="menu-txt">Функциональные возможности</span>
+      </button>
+      <button class="menu-row menu-arr" onclick="openExt('../../02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html')">
+        <span class="menu-ico">§</span><span class="menu-txt">Правовая основа</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- =================== BOTTOM NAV =================== -->
+  <nav class="bnav" id="bnav" aria-label="Основная навигация приложения">
+    <button class="bnav-item active" data-tab="home" onclick="nav('home')" aria-current="page" aria-label="Главная">
+      <span class="bnav-ico" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </span>
+      <span class="bnav-lbl">Главная</span>
+    </button>
+    <button class="bnav-item" data-tab="assets" onclick="nav('assets')" aria-label="Активы">
+      <span class="bnav-ico" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      </span>
+      <span class="bnav-lbl">Активы</span>
+    </button>
+    <button class="bnav-item" data-tab="cfa" onclick="nav('cfa')" aria-label="Цифровые финансовые активы">
+      <span class="bnav-ico" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+      </span>
+      <span class="bnav-lbl">ЦФА</span>
+    </button>
+    <button class="bnav-item" data-tab="income" onclick="nav('income')" aria-label="Доходы">
+      <span class="bnav-ico" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      </span>
+      <span class="bnav-lbl">Доходы</span>
+    </button>
+    <button class="bnav-item" data-tab="more" onclick="openDrawer()" aria-label="Ещё (профиль, KYC, контракты, оценщики)" aria-haspopup="true">
+      <span class="bnav-ico" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+      </span>
+      <span class="bnav-lbl">Ещё</span>
+    </button>
+  </nav>
+
+  <!-- =================== DRAWER (вторичная навигация) =================== -->
+  <div class="drawer-backdrop" id="drawerBackdrop" onclick="closeDrawer()" hidden></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" hidden>
+    <div class="drawer-head">
+      <h3 id="drawerTitle">Все разделы</h3>
+      <button class="appbar-action" onclick="closeDrawer()" aria-label="Закрыть"><span aria-hidden="true">×</span></button>
+    </div>
+    <nav aria-label="Все экраны приложения">
+      <ul class="drawer-list" role="menu">
+        <li role="none"><button role="menuitem" onclick="nav('profile');closeDrawer()">Профиль и KYC</button></li>
+        <li role="none"><button role="menuitem" onclick="nav('kyc');closeDrawer()">Биометрическая верификация</button></li>
+        <li role="none"><button role="menuitem" onclick="nav('contract');closeDrawer()">Смарт-контракты</button></li>
+        <li role="none"><button role="menuitem" onclick="nav('sign');closeDrawer()">Подписание УКЭП</button></li>
+        <li role="none"><button role="menuitem" onclick="nav('asset-detail');closeDrawer()">Детальный просмотр актива</button></li>
+        <li role="none"><button role="menuitem" onclick="nav('cfa-detail');closeDrawer()">Детальный просмотр ЦФА</button></li>
+        <li role="none"><button role="menuitem" onclick="nav('appraisal');closeDrawer()">Оценщики и страховщики</button></li>
+        <li role="none"><button role="menuitem" onclick="nav('docs');closeDrawer()">Налоговые справки</button></li>
+        <li role="none"><button role="menuitem" onclick="nav('notifications');closeDrawer()">Уведомления</button></li>
+        <li role="none"><button role="menuitem" onclick="nav('support');closeDrawer()">Поддержка и обращения</button></li>
+        <li role="none"><button role="menuitem" onclick="nav('about');closeDrawer()">О приложении</button></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- =================== EMPTY / ERROR / OFFLINE STATES (повторно-используемые) =================== -->
+  <template id="tplEmpty">
+    <div class="state-block" role="status" aria-live="polite">
+      <div class="state-icon" aria-hidden="true">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="15" x2="16" y2="15"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+      </div>
+      <h4 class="state-title">Пока пусто</h4>
+      <p class="state-msg">Здесь появятся записи, как только вы добавите первый объект.</p>
+    </div>
+  </template>
+  <template id="tplError">
+    <div class="state-block state-block--error" role="alert">
+      <div class="state-icon" aria-hidden="true">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </div>
+      <h4 class="state-title">Не удалось загрузить</h4>
+      <p class="state-msg">Произошла ошибка. Проверьте соединение и попробуйте ещё раз.</p>
+      <button class="btn btn--primary state-btn" onclick="location.reload()">Повторить</button>
+    </div>
+  </template>
+  <template id="tplOffline">
+    <div class="state-block state-block--offline" role="status" aria-live="polite">
+      <div class="state-icon" aria-hidden="true">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l22 22"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M10.71 5.05A16 16 0 0 1 22.58 9"/><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+      </div>
+      <h4 class="state-title">Нет соединения</h4>
+      <p class="state-msg">Приложение работает в офлайн-режиме. Данные синхронизируются при подключении.</p>
+    </div>
+  </template>
+
+  <!-- Settings dropdown -->
+  <div class="settings-panel" id="settingsPanel">
+    <h5>Язык</h5>
+    <button class="opt active" data-i18n-btn="ru"><span class="lang-iso" aria-hidden="true">RU</span> Русский</button>
+    <button class="opt" data-i18n-btn="en"><span class="lang-iso" aria-hidden="true">EN</span> English</button>
+    <button class="opt" data-i18n-btn="fr"><span class="lang-iso" aria-hidden="true">FR</span> Français</button>
+    <button class="opt" data-i18n-btn="ar"><span class="lang-iso" aria-hidden="true">AR</span> العربية</button>
+    <h5>Тема</h5>
+    <button class="opt active" data-theme-btn="daylight" aria-label="Дневная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg> Светлая</button>
+    <button class="opt" data-theme-btn="midnight" aria-label="Тёмная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg> Тёмная</button>
+    <button class="opt" data-theme-btn="sepia">◐ Мягкая</button>
+    <button class="opt" data-theme-btn="contrast">A11Y Контраст</button>
+  </div>
+
+  <!-- Install prompt -->
+  <div id="installPrompt">
+    <div style="flex:1">Установить приложение</div>
+    <button onclick="installApp()">Установить</button>
+    <button style="background:rgba(255,255,255,.15); color:#fff" onclick="dismissInstall()">×</button>
+  </div>
+
+  <!-- Universal modal -->
+  <div class="modal-app" id="modalApp">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-drag"></div>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="../../_shared/i18n.js"></script>
+<script>
+// ============ STATE ============
+const State = {
+  user: { fio: 'Иван Иванович Иванов', initials: 'ИИ', id: 'usr-rsfsr-104221', kyc: false },
+  assets: [
+    { id: 'a1', type: 'real', title: 'Квартира', address: 'г. Москва, ул. Тверская, д. 12, кв. 45', area: '97 м²', valuation: 16400000, cfaActive: 8200000, status: 'active', tag: 'Активно' },
+    { id: 'a2', type: 'land', title: 'Земельный участок', address: 'Истринский район, ИЖС', area: '12 соток', valuation: 4650000, cfaActive: 0, status: 'valuation', tag: 'Оценка' }
+  ],
+  cfas: [
+    { id: 'cfa-7a3b-rsfsr-2025-00014', asset: 'Квартира Тверская', nominal: 8200000, term: 36, rate: 4.2, status: 'active', tag: 'Активно',
+      nextPayout: '15.08.2025', issued: '15.11.2024', programme: 'Жильё и городская среда' }
+  ],
+  history: [
+    { date: '15.05.2025', title: 'Квартальное вознаграждение', subtitle: 'ЦФА · Квартира Тверская', amount: '+ 86 100 ₽', kind: 'in' },
+    { date: '15.02.2025', title: 'Квартальное вознаграждение', subtitle: 'ЦФА · Квартира Тверская', amount: '+ 56 700 ₽', kind: 'in' },
+    { date: '15.11.2024', title: 'Выпуск ЦФА', subtitle: 'Квартира Тверская', amount: 'Номинал 8 200 000 ₽', kind: 'event' }
+  ],
+  notifications: [
+    { id: 'n1', icon: '✓', title: 'Выплата зачислена', text: 'Квартальное вознаграждение 86 100 ₽ зачислено на ваш счёт.', time: '2 часа назад', unread: true },
+    { id: 'n2', icon: '★', title: 'Новая программа', text: 'Доступен национальный проект «Инфраструктура» с повышенной ставкой.', time: 'вчера', unread: true },
+    { id: 'n3', icon: '⌂', title: 'Оценка готова', text: 'Земельный участок (Истринский р-н) оценён в 4 650 000 ₽.', time: '2 дня назад', unread: false },
+    { id: 'n4', icon: 'ⓘ', title: 'Регистрация обременения', text: 'Обременение по ЦФА cfa-7a3b зарегистрировано в ЕГРН.', time: '14.11.2024', unread: false }
+  ],
+  na: { type: null, step: 1 }
+};
+
+const fmt = (n, suf) => (n.toLocaleString('ru-RU').replace(/,/g, ' ')) + (suf || ' ₽');
+
+// ============ ROUTER ============
+function nav(name) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  const s = document.querySelector('[data-screen="' + name + '"]');
+  if (s) s.classList.add('active');
+  location.hash = name;
+  // Bottom nav active
+  document.querySelectorAll('.bnav-item').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
+  document.getElementById('bnav').style.display = (s && s.classList.contains('hide-nav')) ? 'none' : 'flex';
+  document.querySelector('.app').scrollTop = 0;
+  if (s) s.scrollTop = 0;
+  // Hooks
+  if (name === 'home') renderHome();
+  if (name === 'assets') renderAssets();
+  if (name === 'cfa') renderCfa();
+  if (name === 'income') renderIncome();
+  if (name === 'history') renderHistory();
+  if (name === 'notifications') renderNotifs();
+  if (name === 'asset-detail') renderAssetDetail();
+  if (name === 'cfa-detail') renderCfaDetail();
+}
+
+// ============ AUTH FLOW ============
+function esiaLogin() { setTimeout(() => nav('kyc'), 600); }
+function bioLogin()  { setTimeout(() => nav('home'), 600); }
+function logout()    { State.user.kyc = false; nav('login'); }
+
+// ============ KYC ============
+function kycStep(n) {
+  document.querySelectorAll('[id^="kyc-step"]').forEach(d => d.style.display = 'none');
+  document.getElementById('kyc-step' + n).style.display = 'block';
+  for (let i = 1; i <= 3; i++) {
+    const el = document.getElementById('kyc-s' + i);
+    el.className = i < n ? 'done' : (i === n ? 'cur' : '');
+  }
+}
+function kycFinish() {
+  State.user.kyc = true;
+  if (!localStorage.getItem('rsfsr-onboarded')) {
+    localStorage.setItem('rsfsr-onboarded', '1');
+    nav('onboarding');
+  } else { nav('home'); }
+}
+
+// ============ ONBOARDING ============
+const ONB = [
+  { ico: '⊞', title: 'Внесите актив в залог', desc: 'Недвижимость, транспорт, ИС, ценные бумаги — без отчуждения. Имущество остаётся у вас.' },
+  { ico: '⚙', title: 'Платформа выпускает ЦФА',  desc: 'Под ваш актив оператор по 779-П выпускает ЦФА. Финансирование размещения — через Фабрику ВЭБ.РФ (ПП РФ № 158) и Федеральное казначейство.' },
+  { ico: '₽', title: 'Получайте доход',         desc: 'Регулярные выплаты вознаграждения. По истечении срока обременение снимается.' }
+];
+let onbIdx = 0;
+function onbNext() {
+  onbIdx++;
+  if (onbIdx >= ONB.length) { nav('home'); return; }
+  document.getElementById('onbImg').textContent = ONB[onbIdx].ico;
+  document.getElementById('onbTitle').textContent = ONB[onbIdx].title;
+  document.getElementById('onbDesc').textContent = ONB[onbIdx].desc;
+  document.querySelectorAll('.onb-dot').forEach((d, i) => d.classList.toggle('active', i === onbIdx));
+  document.getElementById('onbBtn').textContent = (onbIdx === ONB.length - 1) ? 'Начать работу →' : 'Далее →';
+}
+
+// ============ NEW ASSET FLOW ============
+function naType(t) {
+  State.na.type = t;
+  document.querySelectorAll('#na-step1 .chip-it').forEach(c => c.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+  setTimeout(() => naStep(2), 250);
+}
+function naStep(n) {
+  State.na.step = n;
+  for (let i = 1; i <= 4; i++) {
+    const el = document.getElementById('na-s' + i);
+    el.className = i < n ? 'done' : (i === n ? 'cur' : '');
+  }
+  document.querySelectorAll('[id^="na-step"]').forEach(d => d.style.display = 'none');
+  document.getElementById('na-step' + n).style.display = 'block';
+}
+function backNewAsset() {
+  if (State.na.step > 1) naStep(State.na.step - 1);
+  else nav('home');
+}
+
+// ============ SIGN ============
+let otpProgress = 0;
+function otpFill() {
+  const boxes = document.querySelectorAll('#otpInput .otp-box');
+  const codes = '742369';
+  let i = 0;
+  const t = setInterval(() => {
+    if (i >= 6) {
+      clearInterval(t);
+      setTimeout(() => nav('issued'), 350);
+      return;
+    }
+    boxes[i].textContent = codes[i];
+    boxes[i].classList.add('filled');
+    boxes[i].classList.remove('cur');
+    if (i + 1 < 6) boxes[i + 1].classList.add('cur');
+    i++;
+  }, 240);
+}
+function signAuto() {
+  setTimeout(() => nav('issued'), 600);
+}
+
+// ============ RENDERS ============
+function renderHome() {
+  // assets list
+  const root = document.getElementById('assetsList');
+  if (!root) return;
+  root.innerHTML = State.assets.slice(0, 2).map(a => `
+    <button class="it" onclick="openAsset('${a.id}')">
+      <div class="it-row">
+        <div>
+          <h4>${a.title} · ${a.address.split(',')[1] || a.address}</h4>
+          <p>${a.area} · ${a.tag === 'Активно' ? 'оценка ' + fmt(a.valuation) : a.tag}</p>
+        </div>
+        <span class="tag ${a.status === 'active' ? 'tag-active' : 'tag-process'}">${a.tag}</span>
+      </div>
+      <div class="it-foot">
+        <span style="font-size:11px; color:var(--fg-mute)">${a.cfaActive ? 'Текущий ЦФА' : 'Прогноз ЦФА'}</span>
+        <span class="it-val">${fmt(a.cfaActive || a.valuation * 0.5).replace(' ₽', '')}<em>₽</em></span>
+      </div>
+    </button>
+  `).join('');
+
+  const ops = document.getElementById('recentOps');
+  if (ops) ops.innerHTML = State.history.slice(0, 2).map(h => `
+    <div class="it">
+      <div class="it-row">
+        <div>
+          <h4>${h.title}</h4>
+          <p>${h.subtitle} · ${h.date}</p>
+        </div>
+        <span class="it-val" style="font-size:13px; color:${h.kind === 'in' ? 'var(--brand-success)' : 'var(--primary)'}">${h.amount}</span>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderAssets() {
+  const root = document.getElementById('assetsFull');
+  if (!root) return;
+  root.innerHTML = State.assets.map(a => `
+    <button class="it" onclick="openAsset('${a.id}')">
+      <div class="it-row">
+        <div>
+          <h4>${a.title}</h4>
+          <p>${a.address}</p>
+        </div>
+        <span class="tag ${a.status === 'active' ? 'tag-active' : 'tag-process'}">${a.tag}</span>
+      </div>
+      <div class="it-foot">
+        <span style="font-size:11px; color:var(--fg-mute)">${a.area} · оценка ${fmt(a.valuation)}</span>
+        <span class="it-val">${fmt(a.cfaActive || a.valuation * 0.5).replace(' ₽', '')}<em>₽</em></span>
+      </div>
+    </button>
+  `).join('');
+}
+
+let curAsset = null;
+function openAsset(id) {
+  curAsset = State.assets.find(a => a.id === id);
+  nav('asset-detail');
+}
+function renderAssetDetail() {
+  if (!curAsset) return;
+  const a = curAsset;
+  const root = document.getElementById('assetDetailContent');
+  if (!root) return;
+  root.innerHTML = `
+    <div class="balance" style="background:linear-gradient(135deg,${a.status === 'active' ? 'var(--brand-success),var(--brand-success-light)' : 'var(--brand-warning),var(--brand-warning-light)'})">
+      <div class="balance-lbl">${a.title}</div>
+      <div class="balance-val">${fmt(a.valuation).replace(' ₽','')}<em>₽</em></div>
+      <div class="balance-row"><span>Адрес</span><b style="font-size:12px">${a.address.split(',')[1] || ''}</b></div>
+      <div class="balance-row" style="border-top:none; padding-top:0; margin-top:6px"><span>Статус</span><b>${a.tag}</b></div>
+    </div>
+    <h4 style="font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:var(--fg-mute); margin:8px 4px">Параметры</h4>
+    <div class="sc-card">
+      <div class="sc-row"><span>Тип</span><span>${a.title}</span></div>
+      <div class="sc-row"><span>Площадь</span><span>${a.area}</span></div>
+      <div class="sc-row"><span>Оценочная стоимость</span><span>${fmt(a.valuation)}</span></div>
+      <div class="sc-row"><span>Залоговый ЦФА</span><span>${fmt(a.cfaActive || a.valuation * 0.5)}</span></div>
+      <div class="sc-row"><span>Обременение</span><span>${a.status === 'active' ? 'ЕГРН зарегистр.' : 'Нет'}</span></div>
+      <div class="sc-row"><span>Страхование</span><span style="color:var(--brand-success)">Включено</span></div>
+    </div>
+    ${a.status === 'active' ?
+      `<button class="btn-app" onclick="nav('cfa-detail')">Перейти к ЦФА</button>
+       <button class="btn-app btn-app--ghost" onclick="alert('Просмотр истории актива')">История операций</button>` :
+      `<button class="btn-app" onclick="nav('contract')">Запустить выпуск ЦФА</button>
+       <button class="btn-app btn-app--ghost" onclick="alert('Запрос на переоценку')">Запросить переоценку</button>`}
+  `;
+}
+
+function renderCfa() {
+  const root = document.getElementById('cfaList');
+  if (!root) return;
+  root.innerHTML = State.cfas.map(c => `
+    <button class="it" onclick="openCfa('${c.id}')">
+      <div class="it-row">
+        <div>
+          <h4>${c.asset}</h4>
+          <p>ID · ${c.id.substring(0, 22)}…</p>
+        </div>
+        <span class="tag tag-active">${c.tag}</span>
+      </div>
+      <div class="it-foot">
+        <div>
+          <div style="font-size:10px; color:var(--fg-mute); text-transform:uppercase; letter-spacing:.06em; font-weight:600">${c.programme}</div>
+          <div style="font-size:11px; color:var(--fg-soft); margin-top:2px">${c.term} мес · ${c.rate}% годовых</div>
+        </div>
+        <span class="it-val">${fmt(c.nominal).replace(' ₽','')}<em>₽</em></span>
+      </div>
+    </button>
+  `).join('');
+}
+
+let curCfa = null;
+function openCfa(id) {
+  curCfa = State.cfas.find(c => c.id === id);
+  nav('cfa-detail');
+}
+function renderCfaDetail() {
+  if (!curCfa) return;
+  const c = curCfa;
+  const root = document.getElementById('cfaDetailContent');
+  if (!root) return;
+  const totalIncome = Math.round(c.nominal * c.rate / 100 * c.term / 12);
+  root.innerHTML = `
+    <div class="balance">
+      <div class="balance-lbl">${c.asset}</div>
+      <div class="balance-val">${fmt(c.nominal).replace(' ₽','')}<em>₽</em></div>
+      <div class="balance-row"><span>ID ЦФА</span><b style="font-family:'JetBrains Mono', monospace; font-size:10px">${c.id.substring(0,16)}…</b></div>
+      <div class="balance-row" style="border-top:none; padding-top:0; margin-top:6px"><span>Статус</span><b style="color:var(--brand-accent)">${c.tag}</b></div>
+    </div>
+    <h4 style="font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:var(--fg-mute); margin:8px 4px">Условия смарт-контракта</h4>
+    <div class="sc-card">
+      <div class="sc-row"><span>Срок</span><span>${c.term} мес</span></div>
+      <div class="sc-row"><span>Ставка</span><span style="color:var(--accent)">${c.rate}% годовых</span></div>
+      <div class="sc-row"><span>Доход за срок</span><span>${fmt(totalIncome)}</span></div>
+      <div class="sc-row"><span>Программа</span><span style="font-size:11px">${c.programme}</span></div>
+      <div class="sc-row"><span>Эскроу</span><span>Банк России</span></div>
+      <div class="sc-row"><span>Выпуск</span><span>${c.issued}</span></div>
+      <div class="sc-row"><span>Следующая выплата</span><span>${c.nextPayout}</span></div>
+    </div>
+    <h4 style="font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:var(--fg-mute); margin:18px 4px 8px">Поступления</h4>
+    <div class="it"><div class="it-row"><div><h4>15.05.2025</h4><p>Квартальная выплата</p></div><span class="it-val" style="color:var(--brand-success)">+ 86 100<em>₽</em></span></div></div>
+    <div class="it"><div class="it-row"><div><h4>15.02.2025</h4><p>Квартальная выплата</p></div><span class="it-val" style="color:var(--brand-success)">+ 56 700<em>₽</em></span></div></div>
+    <button class="btn-app" style="margin-top:14px" onclick="alert('Скачать смарт-контракт (PDF)')">Скачать договор</button>
+    <button class="btn-app btn-app--ghost" onclick="alert('Запрос на мену ЦФА')">Запросить мену</button>
+  `;
+}
+
+function renderIncome() {
+  const chart = document.getElementById('incomeChart');
+  if (!chart) return;
+  const months = ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'];
+  const vals = [0,57,0,0,86,0,0,86,0,0,86,0]; // тыс ₽
+  const maxV = Math.max(...vals, 100);
+  chart.innerHTML = vals.map((v, i) => `
+    <div class="chart-bar" style="height:${Math.max(4, v/maxV*100)}%">
+      ${v > 0 ? '<b>' + v + 'k</b>' : ''}
+      <span>${months[i]}</span>
+    </div>
+  `).join('');
+  const list = document.getElementById('incomeList');
+  if (list) list.innerHTML = State.history.filter(h => h.kind === 'in').map(h => `
+    <div class="it">
+      <div class="it-row">
+        <div><h4>${h.title}</h4><p>${h.subtitle} · ${h.date}</p></div>
+        <span class="it-val" style="color:var(--brand-success); font-size:14px">${h.amount}</span>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderHistory() {
+  const root = document.getElementById('historyList');
+  if (!root) return;
+  root.innerHTML = State.history.map(h => `
+    <div class="it">
+      <div class="it-row">
+        <div><h4>${h.title}</h4><p>${h.subtitle} · ${h.date}</p></div>
+        <span class="it-val" style="font-size:13px; color:${h.kind === 'in' ? 'var(--brand-success)' : 'var(--primary)'}">${h.amount}</span>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderNotifs() {
+  const root = document.getElementById('notifList');
+  if (!root) return;
+  root.innerHTML = State.notifications.map(n => `
+    <div class="notif${n.unread ? ' unread' : ''}">
+      <div class="notif-ico">${n.icon}</div>
+      <div class="notif-body">
+        <div class="notif-title">${n.title}</div>
+        <div class="notif-text">${n.text}</div>
+        <div class="notif-time">${n.time}</div>
+      </div>
+    </div>
+  `).join('');
+  // mark all as read after viewing
+  State.notifications.forEach(n => n.unread = false);
+  updateNotifBadge();
+}
+function clearNotifs() {
+  State.notifications = [];
+  updateNotifBadge();
+  renderNotifs();
+}
+function updateNotifBadge() {
+  const unread = State.notifications.filter(n => n.unread).length;
+  const b = document.getElementById('notifBadge');
+  if (!b) return;
+  if (unread > 0) {
+    b.textContent = unread;
+    b.style.display = 'grid';
+    b.setAttribute('aria-label', unread + ' непрочитанных уведомлений');
+  } else {
+    b.style.display = 'none';
+    b.removeAttribute('aria-label');
+  }
+}
+
+// ============ DRAWER (вторичная навигация) ============
+function openDrawer() {
+  const d = document.getElementById('drawer');
+  const bd = document.getElementById('drawerBackdrop');
+  if (!d || !bd) return;
+  d.hidden = false; bd.hidden = false;
+  // Перевод фокуса на заголовок для скринридеров
+  setTimeout(() => d.querySelector('#drawerTitle')?.focus?.(), 50);
+  document.body.style.overflow = 'hidden';
+}
+function closeDrawer() {
+  const d = document.getElementById('drawer');
+  const bd = document.getElementById('drawerBackdrop');
+  if (d) d.hidden = true;
+  if (bd) bd.hidden = true;
+  document.body.style.overflow = '';
+}
+
+// ============ NETWORK STATUS ============
+function setNetStatus(online) {
+  const root = document.documentElement;
+  root.dataset.online = online ? '1' : '0';
+  // При офлайн — показать всплывающий тост
+  if (!online) {
+    showToast('Нет соединения. Работаем в офлайн-режиме.', 'offline');
+  } else {
+    showToast('Соединение восстановлено', 'success', 1800);
+  }
+}
+function showToast(msg, kind, ttl) {
+  ttl = ttl || 3000;
+  let t = document.getElementById('appToast');
+  if (!t) {
+    t = document.createElement('div');
+    t.id = 'appToast';
+    t.style.cssText = 'position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:#0B2B5C;color:#fff;padding:10px 18px;border-radius:24px;font-size:14px;z-index:200;box-shadow:0 10px 30px rgba(0,0,0,.35);opacity:0;transition:opacity .25s ease;';
+    t.setAttribute('role', 'status');
+    t.setAttribute('aria-live', 'polite');
+    document.body.appendChild(t);
+  }
+  t.textContent = msg;
+  if (kind === 'offline') t.style.background = '#B33A3A';
+  else if (kind === 'success') t.style.background = '#1E8E5C';
+  else t.style.background = '#0B2B5C';
+  requestAnimationFrame(() => { t.style.opacity = '1'; });
+  clearTimeout(t._h);
+  t._h = setTimeout(() => { t.style.opacity = '0'; }, ttl);
+}
+
+// ============ MODAL ============
+function openModal(kind) {
+  const m = document.getElementById('modalApp');
+  const c = document.getElementById('modalContent');
+  let html = '';
+  if (kind === 'cfa-actions') {
+    html = `
+      <h3 style="font-family:'Onest', sans-serif; color:var(--primary); margin:0 0 14px">Действия с ЦФА</h3>
+      <button class="menu-row menu-arr" onclick="alert('Скачать договор'); closeModal()"><span class="menu-ico">⤓</span><span class="menu-txt">Скачать смарт-контракт</span></button>
+      <button class="menu-row menu-arr" onclick="alert('Просмотр истории'); closeModal()"><span class="menu-ico">📜</span><span class="menu-txt">История транзакций</span></button>
+      <button class="menu-row menu-arr" onclick="alert('Запрос мены ЦФА'); closeModal()"><span class="menu-ico">⇄</span><span class="menu-txt">Запросить мену</span></button>
+      <button class="menu-row menu-arr" onclick="alert('Поддержка по ЦФА'); closeModal()"><span class="menu-ico">?</span><span class="menu-txt">Поддержка по этому ЦФА</span></button>
+      <button class="btn-app btn-app--ghost" onclick="closeModal()" style="margin-top:10px">Отмена</button>
+    `;
+  }
+  c.innerHTML = html;
+  m.classList.add('open');
+}
+function closeModal() { document.getElementById('modalApp').classList.remove('open'); }
+document.getElementById('modalApp').addEventListener('click', e => {
+  if (e.target.id === 'modalApp') closeModal();
+});
+
+// ============ SETTINGS PANEL ============
+function toggleSettings() {
+  document.getElementById('settingsPanel').classList.toggle('open');
+}
+document.addEventListener('click', e => {
+  const p = document.getElementById('settingsPanel');
+  if (!p) return;
+  if (!p.contains(e.target) && !e.target.closest('[onclick*="toggleSettings"]')) p.classList.remove('open');
+});
+
+// ============ THEME / FONT (отдельная логика, упрощённо для PWA) ============
+const Theme = {
+  set(name) {
+    document.documentElement.setAttribute('data-theme', name);
+    document.querySelectorAll('[data-theme-btn]').forEach(b => b.classList.toggle('active', b.dataset.themeBtn === name));
+    try { localStorage.setItem('rsfsr-theme', name); } catch(e) {}
+  },
+  init() {
+    let t = 'daylight';
+    try { t = localStorage.getItem('rsfsr-theme') || 'daylight'; } catch(e) {}
+    this.set(t);
+    document.querySelectorAll('[data-theme-btn]').forEach(b =>
+      b.addEventListener('click', () => this.set(b.dataset.themeBtn))
+    );
+  }
+};
+const FontScale = {
+  cur: 0, levels: ['normal','large','xlarge'],
+  set(l) {
+    const h = document.documentElement;
+    if (l === 'normal') h.removeAttribute('data-fontscale');
+    else h.setAttribute('data-fontscale', l);
+    this.cur = this.levels.indexOf(l);
+    try { localStorage.setItem('rsfsr-fontscale', l); } catch(e) {}
+  },
+  init() {
+    let s = 'normal';
+    try { s = localStorage.getItem('rsfsr-fontscale') || 'normal'; } catch(e) {}
+    this.set(s);
+    document.querySelectorAll('[data-font-action]').forEach(b => b.addEventListener('click', () => {
+      const a = b.dataset.fontAction;
+      if (a === 'inc') this.cur = Math.min(this.cur + 1, this.levels.length - 1);
+      else if (a === 'dec') this.cur = Math.max(this.cur - 1, 0);
+      else this.cur = 0;
+      this.set(this.levels[this.cur]);
+    }));
+  }
+};
+
+// ============ EXTERNAL LINKS ============
+function openExt(url) {
+  // открываем в новой вкладке
+  window.open(url, '_blank', 'noopener');
+}
+
+// ============ PWA INSTALL ============
+let installPromptEvent = null;
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  installPromptEvent = e;
+  setTimeout(() => document.getElementById('installPrompt').classList.add('show'), 2000);
+});
+function installApp() {
+  if (!installPromptEvent) { dismissInstall(); return; }
+  installPromptEvent.prompt();
+  installPromptEvent.userChoice.finally(() => {
+    installPromptEvent = null;
+    dismissInstall();
+  });
+}
+function dismissInstall() { document.getElementById('installPrompt').classList.remove('show'); }
+
+// ============ SERVICE WORKER ============
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
+  });
+}
+
+// ============ INIT ============
+function init() {
+  Theme.init();
+  FontScale.init();
+
+  // Splash → Login через 1.5 сек
+  setTimeout(() => {
+    if (location.hash) nav(location.hash.substring(1));
+    else nav('login');
+  }, 1500);
+
+  // Назад через history
+  window.addEventListener('hashchange', () => {
+    const target = location.hash.substring(1);
+    if (target) {
+      const s = document.querySelector('[data-screen="' + target + '"]');
+      if (s && !s.classList.contains('active')) nav(target);
+    }
+  });
+
+  // Закрытие drawer по Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeDrawer();
+  });
+
+  // Сетевой статус
+  window.addEventListener('online', () => setNetStatus(true));
+  window.addEventListener('offline', () => setNetStatus(false));
+  document.documentElement.dataset.online = navigator.onLine ? '1' : '0';
+
+  updateNotifBadge();
+}
+
+if (document.readyState !== 'loading') init();
+else document.addEventListener('DOMContentLoaded', init);
+</script>
+
+</body>
+</html>

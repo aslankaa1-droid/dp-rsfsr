@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../">
+  <title>Due Diligence — отчёт · ЦПФСР.РФ</title>
+  <meta name="description" content="Due Diligence — отчёт — DD аудит. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../_design-system/tokens.css">
+  <link rel="stylesheet" href="../_design-system/global.css">
+  <link rel="stylesheet" href="../_design-system/components.css">
+  <link rel="stylesheet" href="../_design-system/rtl.css">
+  <link rel="stylesheet" href="../_design-system/print.css">
+
+  <script defer src="../_design-system/theme-switcher.js"></script>
+  <script defer src="../_design-system/i18n-data.js"></script>
+  <script defer src="../_design-system/i18n.js"></script>
+  <script defer src="../_design-system/ticker.js"></script>
+  <script defer src="../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">DD аудит</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">DD аудит</span>
+      <h1>Due Diligence — отчёт</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="due-diligence-отчёт">Due Diligence отчёт</h1>
+<h2 id="цифровая-платформа-рсфср">Цифровая Платформа РСФСР</h2>
+<p><strong>Стандарт работы:</strong> методология Due Diligence уровня
+Большой Четвёрки (Deloitte / EY / KPMG / PwC). Документ подготовлен в
+формате внутреннего DD-отчёта для совета директоров / инвестора.
+<strong>Объект DD:</strong> проектная документация ЦП РСФСР по состоянию
+на 2025 г. <strong>Подход:</strong> обзор по шести направлениям
+(Commercial / Legal / Financial / Technical / Operational / Tax &amp;
+Regulatory) + сводный заключительный раздел с честными красными флагами
+и рекомендациями.</p>
+<hr />
+<h2 id="executive-summary">1. Executive Summary</h2>
+<h3 id="структура-dd">Структура DD</h3>
+<p>Отчёт охватывает шесть классических областей Due Diligence и одну
+дополнительную (ESG / устойчивое развитие), всего семь модулей. Каждый
+модуль завершается оценкой:</p>
+<ul>
+<li><strong>Green</strong> — без существенных замечаний;</li>
+<li><strong>Amber</strong> — замечания, требующие проработки до
+closing;</li>
+<li><strong>Red</strong> — критические замечания, требующие устранения
+как условие сделки.</li>
+</ul>
+<h3 id="общая-оценка-проекта">Общая оценка проекта</h3>
+<table>
+<thead>
+<tr>
+<th>Модуль</th>
+<th style="text-align: center;">Статус</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Commercial DD</td>
+<td style="text-align: center;">🟢 Green</td>
+</tr>
+<tr>
+<td>2. Legal DD</td>
+<td style="text-align: center;">🟡 Amber</td>
+</tr>
+<tr>
+<td>3. Financial DD</td>
+<td style="text-align: center;">🟢 Green</td>
+</tr>
+<tr>
+<td>4. Technical DD</td>
+<td style="text-align: center;">🟡 Amber</td>
+</tr>
+<tr>
+<td>5. Operational DD</td>
+<td style="text-align: center;">🟡 Amber</td>
+</tr>
+<tr>
+<td>6. Tax &amp; Regulatory DD</td>
+<td style="text-align: center;">🟡 Amber</td>
+</tr>
+<tr>
+<td>7. ESG / Sustainability DD</td>
+<td style="text-align: center;">🟢 Green</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Сводное заключение:</strong> проект имеет высокую внутреннюю
+логику, защищённый IP, релевантную рыночную нишу и сильный
+социально-экономический эффект. Главный фактор риска —
+<strong>регуляторный (бинарность принятия поправок в 86-ФЗ и
+259-ФЗ)</strong>. При устранении amber-замечаний (план понятен) проект
+может быть рекомендован к стартовому финансированию.</p>
+<hr />
+<h2 id="commercial-due-diligence">2. Commercial Due Diligence</h2>
+<h3 id="анализ-продукта">2.1. Анализ продукта</h3>
+<p>ЦП РСФСР — front-end / агентская платформа выпуска ЦФА под залог
+имущества, работающая в двухстадийной архитектуре. <strong>Stage 1
+(pilot-light 2026–2028):</strong> размещения проводятся через
+технологическое партнёрство с действующим оператором информационной
+системы выпуска ЦФА по 779-П (АО «Атомайз» либо иной субъект реестра —
+лицензия 779-П индивидуальна и не передаётся); фондирование — через
+Фабрику проектного финансирования ВЭБ.РФ (ПП РФ № 158) и Федеральное
+казначейство в рамках Бюджетного кодекса. Дополнительная эмиссия Банка
+России в Stage 1 не предусмотрена; ЦБ — общий надзорный регулятор по ст.
+4 ФЗ № 86-ФЗ. <strong>Stage 2 (горизонт 2029+):</strong> расширение
+мандата к модели целевой обеспеченной эмиссии под пул залоговых ЦФА —
+defensible horizon, реализация после положительного track-record Stage 1
+≥ 12 мес. и принятия пакета 4 ФЗ-поправок. Аналогов с такой
+двухстадийной архитектурой в публичном поле не выявлено ни в РФ, ни на
+международных рынках.</p>
+<h3 id="анализ-рынка">2.2. Анализ рынка</h3>
+<ul>
+<li>Совокупная стоимость недвижимости РФ — порядка <strong>507 трлн
+₽</strong>.</li>
+<li>Консервативная залоговая ёмкость — <strong>25,5 трлн
+₽</strong>.</li>
+<li>Целевой объём проникновения к году 10 — 20% (~5 трлн ₽), что
+эквивалентно <strong>~3% годового номинального ВВП РФ</strong>.</li>
+<li>Конкурентов с аналогичной моделью на сегодня нет.</li>
+</ul>
+<h3 id="конкурентная-среда">2.3. Конкурентная среда</h3>
+<ul>
+<li>Внутренний рынок ЦФА растёт; действующие операторы реестра 779-П —
+Сбер, Альфа, Атомайз, Мастерчейн. В Stage 1 ЦП РСФСР работает как
+front-end / агент через технологическое партнёрство с одним из них;
+конкуренции на лицензионном уровне нет.</li>
+<li>Дифференциация ЦП РСФСР — wedge-архитектура: размещения ЦФА
+привязаны к инфраструктурному фондированию через Фабрику ВЭБ.РФ +
+Федеральное казначейство, что превращает партнёра-оператора в
+дистрибуционный канал, а ЦП РСФСР — в специализированную
+инфраструктурную надстройку для целевых проектов с залоговым
+обеспечением.</li>
+<li>Международные референсы (Securitize, Polymath, HQLAx) — токенизация
+активов общего назначения, без целевого государственного
+финансирования.</li>
+</ul>
+<h3 id="стратегические-партнёрства">2.4. Стратегические партнёрства</h3>
+<ul>
+<li>Подразумевается работа с Банком России, Минфином, Минцифры,
+Федеральным казначейством, Росфинмониторингом — все государственные
+ключевые узлы.</li>
+<li>Партнёрская сеть из оценщиков и страховщиков — потенциально 100+
+организаций.</li>
+</ul>
+<h3 id="stakeholder-map-government-champions">2.5. Stakeholder map /
+Government Champions</h3>
+<p>GTM-sequencing проекта построен на wedge-логике: ЦБ — последняя
+инстанция Stage 1, не первая. Поимённый Champion-map (синхронизирован с
+<code>_Мастер/Концепт.md § 1-ter</code>):</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Этап</th>
+<th>Лицо / Орган</th>
+<th>Роль в воронке</th>
+<th>Артефакт</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T+30</td>
+<td>Минэк (М. Решетников)</td>
+<td>Named sponsor; включение в нацпроекты</td>
+<td>Pitch_deck slide «Government Champions»</td>
+</tr>
+<tr>
+<td>T+30</td>
+<td>Аппарат Правительства РФ</td>
+<td>Архитектурная рамка</td>
+<td>Концепт § 1-bis</td>
+</tr>
+<tr>
+<td>T+30</td>
+<td>АО «Атомайз»</td>
+<td>Технологический партнёр 779-П</td>
+<td>LoI (Pre-meeting_briefs/01)</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td>Минфин (И. Колычев)</td>
+<td>Внебюджетный канал, давление ОФЗ</td>
+<td>Финмодель v3</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td>Минфин (В. Сазанов)</td>
+<td>Налоговая позиция по ЦФА</td>
+<td>Юр.фундамент § 5</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td>ВЭБ.РФ ФПФ</td>
+<td>Consultative letter по ПП № 158</td>
+<td>Pre-meeting_briefs/02</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td>Газпромбанк / ПСБ</td>
+<td>MoU расчётного банка</td>
+<td>Pre-meeting_briefs/04</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td>Татарстан (Р. Минниханов)</td>
+<td>Региональный MoU (50–100 объектов)</td>
+<td>Pre-meeting_briefs/03</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td>Госдума (А. Аксаков)</td>
+<td>Консультация по 259-ФЗ</td>
+<td>Доклад для ЦБ</td>
+</tr>
+<tr>
+<td>T+180+</td>
+<td>Банк России</td>
+<td>Реестр операторов ИС ЦФА по 779-П</td>
+<td>Юр.фундамент § 8.1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Риск-сигнал:</strong> отказ хотя бы одного из champion’ов
+уровня министр/замминистр → откат к Stage 2 / horizon 2029+, потеря ≈ 24
+мес. на пакет 4 ФЗ.</p>
+<h3 id="оценка-green">Оценка: 🟢 Green</h3>
+<p>Бизнес-модель состоятельная, рынок огромный, конкурентов нет.
+Stakeholder map поимённый — стандарт tier-1 GTM для
+государственно-значимых проектов.</p>
+<h3 id="рекомендации">Рекомендации</h3>
+<ol type="1">
+<li>Подготовить меморандумы о намерениях с 2–3 ключевыми
+банками-партнёрами на этапе seed.</li>
+<li>Подготовить пилотный сегмент (например, ИЖС в Московской области)
+для быстрого PoC.</li>
+</ol>
+<hr />
+<h2 id="legal-due-diligence">3. Legal Due Diligence</h2>
+<h3 id="право-интеллектуальной-собственности">3.1. Право
+интеллектуальной собственности</h3>
+<ul>
+<li>Концепция и ноу-хау депонированы (свидетельство №4011265 от
+19.12.2024, ireg.pro, ГОСТ-Р 34.11-2012).</li>
+<li>Авторские права принадлежат Кагирову А.-Х.А. — единолично.</li>
+<li>Депонирование — фиксация даты приоритета. Правовой режим охраны —
+ноу-хау (ст. 1465 ГК) и программа для ЭВМ (регистрация в Роспатенте — в
+работе).</li>
+</ul>
+<p><strong>Оценка:</strong> 🟢 — IP корректно оформлен и защищён.</p>
+<h3 id="соответствие-законодательству">3.2. Соответствие
+законодательству</h3>
+<p>Платформа опирается на: - Закон №259-ФЗ (ЦФА); - Закон №86-ФЗ (ЦБ РФ,
+в т.ч. в редакции №340-ФЗ о цифровом рубле); - Закон №161-ФЗ (НПС); -
+Закон №115-ФЗ (ПОД/ФТ); - Закон №152-ФЗ (ПДн); - Закон №187-ФЗ (КИИ); -
+ГК РФ (залог, эскроу, смарт-контракт); - Положения ЦБ 779-П, 780-П,
+683-П.</p>
+<p><strong>Оценка:</strong> 🟢 — базовый каркас существует в действующем
+праве.</p>
+<h3 id="необходимые-регуляторные-действия">3.3. Необходимые регуляторные
+действия</h3>
+<p><strong>Stage 1 (2026–2028) — без поправок в ФЗ.</strong> Запуск
+ближнего контура возможен в действующем правовом поле: - 259-ФЗ +
+Положение Банка России 779-П / Указание 4336-У — оператор по
+технологическому партнёрству; - ПП РФ от 15.02.2018 № 158 — фондирование
+через Фабрику проектного финансирования ВЭБ.РФ; - Бюджетный кодекс РФ —
+расчёты через Федеральное казначейство; - ГК РФ — залог и эскроу.</p>
+<p><strong>Stage 2 (горизонт 2029+) — пакет 4 ФЗ + 6 подзаконных
+актов</strong> (см. документ «Юридический фундамент», разделы 8.2 и
+8.3). Условие входа — положительный track-record Stage 1 ≥ 12 мес. и
+межведомственная позиция Минэк / Минфин / ВЭБ.РФ / Госдума.</p>
+<p><strong>Оценка:</strong> 🟡 Amber — Stage 1 не несёт бинарного
+регуляторного риска и реализуется в действующем поле; Stage 2 —
+defensible horizon, не блокирующий ближний инвестиционный roadmap.</p>
+<h3 id="корпоративная-структура-оператора">3.4. Корпоративная структура
+оператора</h3>
+<ul>
+<li>На момент DD юридическое лицо оператора не создано.</li>
+<li>Требуется ОПФ: АО или ООО (по 779-П).</li>
+<li>Минимальный капитал — 50 млн ₽ на входе, 500 млн ₽ к промышленной
+фазе.</li>
+</ul>
+<p><strong>Оценка:</strong> 🟡 — создание оператора-юрлица — задача на
+первые 90 дней после привлечения раунда.</p>
+<h3 id="лицензирование">3.5. Лицензирование</h3>
+<ul>
+<li>Включение в реестр операторов ИС Банка России (статья 5 №259-ФЗ +
+Положение №779-П).</li>
+<li>Сертификация СЗИ ФСТЭК / ФСБ.</li>
+<li>Уведомление в Роскомнадзор как оператора ПДн.</li>
+<li>Уведомление в ФСТЭК как объекта КИИ.</li>
+</ul>
+<p><strong>Оценка:</strong> 🟡 — процесс понятный, но многоэтапный,
+требует 6–9 месяцев.</p>
+<h3 id="соглашения-с-государственными-контрагентами">3.6. Соглашения с
+государственными контрагентами</h3>
+<p>На момент DD отсутствуют формальные соглашения с ЦБ РФ, Минфином,
+Федеральным казначейством — что нормально для текущей стадии
+(концепция).</p>
+<p><strong>Оценка:</strong> 🟡 — задача на этап подготовки.</p>
+<h3 id="итог-legal-dd-amber">Итог Legal DD: 🟡 Amber</h3>
+<h3 id="рекомендации-1">Рекомендации</h3>
+<ol type="1">
+<li>Создать оператора-юрлицо в первые 90 дней.</li>
+<li>Подключить юридического советника уровня крупной российской
+консалтинговой компании (Bryan Cave / Городисский / Пепеляев).</li>
+<li>Подготовить пакет проектов НПА и провести презентацию для Банка
+России в первые 180 дней.</li>
+</ol>
+<hr />
+<h2 id="financial-due-diligence">4. Financial Due Diligence</h2>
+<h3 id="финансовая-модель">4.1. Финансовая модель</h3>
+<p>Модель 10-летняя, базовая (BASE) / консервативная (CONSERVATIVE) /
+оптимистичная (OPTIMISTIC).</p>
+<p><strong>Ключевые KPI (BASE):</strong> - NPV @ WACC 30% = <strong>51,2
+млрд ₽</strong>; - IRR ≈ 62% (с TV); - Payback = <strong>2,8
+года</strong>; - Пиковая потребность в финансировании = <strong>1,3 млрд
+₽</strong> (стартовый раунд); - Выручка год 5 = 37 млрд ₽; - Выручка год
+10 = 138 млрд ₽; - EBITDA маржа TV ≈ 74,8% (отражает инфраструктурную
+природу с учётом OpEx-добавок на комплаенс, кибербезопасность,
+юридическое сопровождение и пул оценщиков/страховщиков).</p>
+<p><strong>Допущения модели:</strong> - Доля рынка от 25,5 трлн ₽ растёт
+с 0,5% в год 2 до 20% в год 10. - Средняя комиссия за выпуск ЦФА: 0,5%
+номинала. - Сервисная комиссия: 0,3% годовых от обращаемого ЦФА. -
+CapEx: 850 млн ₽ за 18 мес.; OpEx: 380 млн ₽/год с +10%/год индексацией.
+- WACC: 30% (основан на 10Y ОФЗ + риск-премия).</p>
+<h3 id="чувствительность">4.2. Чувствительность</h3>
+<ul>
+<li>WACC ±3 п.п. → NPV ±25%;</li>
+<li>Доля рынка ×0,5 → NPV –27%;</li>
+<li>Комиссия ±20% → NPV ±21%.</li>
+</ul>
+<p>Чувствительность асимметричная: даже консервативные сценарии (доля
+×0,5; WACC 25%) дают <strong>NPV ~57 млрд ₽</strong> — модель
+устойчива.</p>
+<h3 id="допущения-по-выручке">4.3. Допущения по выручке</h3>
+<ul>
+<li>Структура выручки эволюционирует от первичных комиссий за размещение
+(год 5: 39%) к сервисной марже от обслуживания обращаемых ЦФА (год 10:
+58%). Это типично для инфраструктурного оператора и означает повышенную
+предсказуемость денежных потоков на горизонте.</li>
+</ul>
+<h3 id="оценка-green-1">Оценка: 🟢 Green</h3>
+<p>Модель тщательная, допущения разумные, чувствительность
+отработана.</p>
+<h3 id="рекомендации-2">Рекомендации</h3>
+<ol type="1">
+<li>Подкрепить допущения по комиссиям бенчмарками российских
+ЦФА-операторов (Сбер, Атомайз).</li>
+<li>Подготовить квартальную модель на первые 24 месяца для управления
+денежным потоком пилотной фазы.</li>
+</ol>
+<hr />
+<h2 id="technical-due-diligence">5. Technical Due Diligence</h2>
+<h3 id="архитектура">5.1. Архитектура</h3>
+<ul>
+<li>7-слойная архитектура микросервисов.</li>
+<li>Геораспределение 3 ЦОД active-active-active + резервный.</li>
+<li>DLT-реестр на отечественной платформе.</li>
+<li>Импортонезависимость 100%.</li>
+</ul>
+<h3 id="технологический-стек">5.2. Технологический стек</h3>
+<ul>
+<li>Astra Linux Special Edition / РЕД ОС.</li>
+<li>Postgres Pro / Ред БД / Tantor.</li>
+<li>Отечественный Kubernetes-дистрибутив.</li>
+<li>КриптоПро / ВипНет для криптографии.</li>
+<li>Apache Kafka.</li>
+</ul>
+<p><strong>Оценка:</strong> 🟢 — все компоненты реалистичны, в реестре
+Минцифры или сертифицированы ФСТЭК.</p>
+<h3 id="dlt-реестр">5.3. DLT-реестр</h3>
+<ul>
+<li>Permissioned DLT с PBFT-консенсусом.</li>
+<li>Привязка к Мастерчейн / Waves Enterprise — на этапе пилота требуется
+выбор поставщика.</li>
+</ul>
+<p><strong>Оценка:</strong> 🟡 — выбор DLT-поставщика — критическое
+решение, нужно проводить PoC с двумя кандидатами.</p>
+<h3 id="безопасность">5.4. Безопасность</h3>
+<ul>
+<li>Категория КИИ 1.</li>
+<li>ГОСТ Р 57580.1 уровень 4.</li>
+<li>УЗ-1 для ПДн.</li>
+</ul>
+<p><strong>Оценка:</strong> 🟡 — амбициозный, но достижимый профиль.
+Требует сильную ИБ-команду и значительные затраты на сертификацию.</p>
+<h3 id="команда">5.5. Команда</h3>
+<ul>
+<li>Заявленный размер к концу года 2 — 120 человек.</li>
+<li>На момент DD команда не сформирована (что нормально на текущей
+стадии).</li>
+</ul>
+<p><strong>Оценка:</strong> 🟡 — найм 120 человек за 12–18 мес. требует
+ресурса; митигация — партнёрство с крупным интегратором (КРОК / IBS /
+Лига Цифровой Экономики / ICL).</p>
+<h3 id="итог-technical-dd-amber">Итог Technical DD: 🟡 Amber</h3>
+<h3 id="рекомендации-3">Рекомендации</h3>
+<ol type="1">
+<li>Запустить PoC с двумя DLT-поставщиками в первые 90 дней.</li>
+<li>Заключить рамочное соглашение с крупным интегратором на расширение
+команды.</li>
+<li>На стадии MVP — fокус на core-сервисах (KYC, оценка, выпуск ЦФА,
+реестр), отложить второстепенное.</li>
+</ol>
+<hr />
+<h2 id="operational-due-diligence">6. Operational Due Diligence</h2>
+<h3 id="процессы">6.1. Процессы</h3>
+<p>Жизненный цикл ЦФА описан в 19 шагах и в виде 6 ключевых этапов.
+Процессы детализированы в техдокументации.</p>
+<h3 id="партнёрская-сеть">6.2. Партнёрская сеть</h3>
+<p>Требуется набрать оценочные и страховые организации — на момент DD
+есть план, но нет заключённых соглашений.</p>
+<p><strong>Оценка:</strong> 🟡 — первые соглашения должны появиться в
+первые 180 дней.</p>
+<h3 id="команда-и-подбор">6.3. Команда и подбор</h3>
+<p>Не сформирована. Найм 120 человек за 12–18 мес. — реалистичная задача
+при правильном партнёрстве.</p>
+<p><strong>Оценка:</strong> 🟡 — задача на executive search.</p>
+<h3 id="регуляторные-процессы">6.4. Регуляторные процессы</h3>
+<p>Регуляторная отчётность — детально проработана в техдокументации.</p>
+<p><strong>Оценка:</strong> 🟢 — концептуально готово; реализация — в
+фазе разработки.</p>
+<h3 id="итог-operational-dd-amber">Итог Operational DD: 🟡 Amber</h3>
+<h3 id="рекомендации-4">Рекомендации</h3>
+<ol type="1">
+<li>Подобрать CEO и CTO в первые 60 дней; затем разворачивание
+организационной структуры.</li>
+<li>Заключить рамочные соглашения с 2–3 оценочными и 2 страховыми
+компаниями в первые 180 дней.</li>
+</ol>
+<hr />
+<h2 id="tax-regulatory-due-diligence">7. Tax &amp; Regulatory Due
+Diligence</h2>
+<h3 id="налоговый-режим">7.1. Налоговый режим</h3>
+<p>Операции с ЦФА регулируются: - статьёй 214.11 НК РФ (НДФЛ); - главой
+25 НК РФ (налог на прибыль); - подпунктом 12.2 пункта 2 статьи 149 НК РФ
+(ФЗ от 31.07.2020 № 324-ФЗ — освобождение операций с ЦФА от НДС) (НДС —
+освобождение в части).</p>
+<p><strong>Оценка:</strong> 🟡 — налоговая практика по ЦФА формируется;
+рекомендуется получить разъяснения Минфина / ФНС на этапе пилота.</p>
+<h3 id="регуляторные-ставки-и-комиссии">7.2. Регуляторные ставки и
+комиссии</h3>
+<ul>
+<li>ЦБ РФ: лицензионные сборы — отсутствуют (отдельные плательщики
+госпошлины).</li>
+<li>Росфинмониторинг: без специальных сборов.</li>
+</ul>
+<h3 id="налоговая-нагрузка-по-модели">7.3. Налоговая нагрузка по
+модели</h3>
+<ul>
+<li>Эффективная ставка налога на прибыль: 20% (стандартная).</li>
+<li>Страховые взносы: 30%.</li>
+<li>НДС: применимость по операциям подлежит уточнению.</li>
+</ul>
+<h3 id="итог-amber">Итог: 🟡 Amber</h3>
+<h3 id="рекомендации-5">Рекомендации</h3>
+<ol type="1">
+<li>Получить разъяснения Минфина по налогообложению операций мены
+ЦФА.</li>
+<li>Получить разъяснения ФНС по НДФЛ-учёту операций.</li>
+</ol>
+<hr />
+<h2 id="esg-sustainability-due-diligence">8. ESG / Sustainability Due
+Diligence</h2>
+<h3 id="социальный-эффект">8.1. Социальный эффект</h3>
+<ul>
+<li>Развитие нацпроектов — массовый социальный эффект.</li>
+<li>Дополнительный доход для собственников залога — финансовая
+инклюзия.</li>
+<li>Рост занятости в инфраструктурных проектах.</li>
+</ul>
+<h3 id="экологический-след">8.2. Экологический след</h3>
+<ul>
+<li>Платформа цифровая; основной экологический эффект —
+энергопотребление ЦОД.</li>
+<li>DLT-реестр permissioned — экологически нейтрален в отличие от
+PoW-блокчейнов.</li>
+</ul>
+<h3 id="корпоративное-управление">8.3. Корпоративное управление</h3>
+<ul>
+<li>Прозрачная структура; все операции в неизменяемом аудит-логе.</li>
+<li>Регуляторный надзор Банка России.</li>
+</ul>
+<h3 id="итог-green">Итог: 🟢 Green</h3>
+<p>ESG-профиль сильный; проект — отличный кейс для государственного
+ESG-фондирования.</p>
+<hr />
+<h2 id="сводный-список-red-и-amber-флагов">9. Сводный список Red и
+Amber-флагов</h2>
+<h3 id="red-флаги-требуют-устранения-как-условие-сделки">Red-флаги
+(требуют устранения как условие сделки)</h3>
+<p>На текущей стадии <strong>критических red-флагов не
+выявлено</strong>. Регуляторная зависимость (поправки в 86-ФЗ и 259-ФЗ)
+переведена в Amber при наличии плана митигации.</p>
+<h3
+id="amber-флаги-план-должен-быть-утверждён-в-первые-180-дней-closing">Amber-флаги
+(план должен быть утверждён в первые 180 дней closing)</h3>
+<ol type="1">
+<li>Отсутствие оператора-юридического лица.</li>
+<li>Отсутствие лицензии Банка России (плановый срок получения — 12–15
+мес.).</li>
+<li>Не выбран DLT-поставщик.</li>
+<li>Не сформирована команда (120 чел. к концу года 2).</li>
+<li>Отсутствуют соглашения с оценочными и страховыми партнёрами.</li>
+<li>Налоговая практика по операциям с ЦФА не устоявшаяся.</li>
+<li>Бинарный регуляторный риск (пакет НПА).</li>
+</ol>
+<h3 id="рекомендации-по-структурированию-сделки">Рекомендации по
+структурированию сделки</h3>
+<ol type="1">
+<li><strong>Транчирование инвестиций</strong> по достижению milestones
+(создание юрлица, получение лицензии, выпуск первого ЦФА).</li>
+<li><strong>Резервирование 20% раунда</strong> на параллельное
+юридическое сопровождение НПА (это критическая задача).</li>
+<li><strong>Условие лицензии</strong>: финальная транша связана с
+включением в реестр операторов ИС Банка России.</li>
+<li><strong>Совет директоров</strong> оператора — с представителями
+инвестора и независимыми членами (минимум 30% независимых).</li>
+<li><strong>Опцион сотрудников</strong> (ESOP) на 10% от пула —
+обязательное условие для удержания ключевых сотрудников.</li>
+</ol>
+<hr />
+<h2 id="итоговое-заключение">10. Итоговое заключение</h2>
+<p>Проект <strong>рекомендован к стартовому финансированию</strong> при
+условии:</p>
+<ol type="1">
+<li>Создание оператора-юрлица в первые 90 дней.</li>
+<li>Утверждённый план получения лицензии Банка России к месяцу 12.</li>
+<li>Утверждённый план параллельной работы с законодателями по принятию
+пакета НПА.</li>
+<li>Подбор CEO и CTO в первые 60 дней.</li>
+<li>PoC двух DLT-поставщиков в первые 90 дней.</li>
+</ol>
+<p><strong>Целевой стартовый раунд:</strong> $ 15 млн (₽ 1,335 млрд по
+курсу 89,0) при post-money $ 95 млн (₽ 8,455 млрд) на Base-сценарии
+(pre-money $ 80 млн); доля инвестора — 15,8%. Reasoned диапазон $60–115
+млн post-money.</p>
+<p><strong>Главный аргумент:</strong> соотношение «потребность к
+потенциалу» = 1 : 20 000. Даже консервативный сценарий даёт NPV в
+десятки миллиардов рублей. Регуляторный риск — единственный значимый, и
+он бинарный с понятной митигацией.</p>
+<hr />
+<p><em>DD-отчёт подготовлен в составе пакета проектной документации
+«Цифровая Платформа РСФСР» и предназначен для использования инвестором,
+советом директоров и регуляторами при оценке проекта. Документ не
+заменяет независимый DD аккредитованной аудиторской компанией и
+предназначен как структурированный обзор по методологии Большой
+Четвёрки.</em></p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

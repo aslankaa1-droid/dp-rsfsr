@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../../../">
+  <title>Due Diligence Report · ЦПФСР.РФ</title>
+  <meta name="description" content="Due Diligence Report — Due Diligence. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../../../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../../_design-system/tokens.css">
+  <link rel="stylesheet" href="../../../_design-system/global.css">
+  <link rel="stylesheet" href="../../../_design-system/components.css">
+  <link rel="stylesheet" href="../../../_design-system/rtl.css">
+  <link rel="stylesheet" href="../../../_design-system/print.css">
+
+  <script defer src="../../../_design-system/theme-switcher.js"></script>
+  <script defer src="../../../_design-system/i18n-data.js"></script>
+  <script defer src="../../../_design-system/translations-registry.js"></script>
+  <script defer src="../../../_design-system/i18n.js"></script>
+  <script defer src="../../../_design-system/ticker.js"></script>
+  <script defer src="../../../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../../../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../../../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../../../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../../../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../../../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../../../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../../../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../../../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../../../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../../../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../../../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../../../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../../../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../../../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../../../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../../../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../../../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Due Diligence</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Due Diligence</span>
+      <h1>Due Diligence Report</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1 id="due-diligence-report">Due Diligence Report</h1>
+<h2 id="digital-platform-cpfsr">Digital Platform CPFSR</h2>
+<p><strong>Standard of work:</strong> Big Four-grade Due Diligence
+methodology (Deloitte / EY / KPMG / PwC). The document is prepared in
+the format of an internal DD report for the board of directors /
+investor. <strong>Object of the DD:</strong> the CPFSR project
+documentation as at 2025. <strong>Approach:</strong> review across six
+areas (Commercial / Legal / Financial / Technical / Operational / Tax
+&amp; Regulatory) + a consolidated concluding section with honest red
+flags and recommendations.</p>
+<hr />
+<h2 id="executive-summary">1. Executive Summary</h2>
+<h3 id="structure-of-the-dd">Structure of the DD</h3>
+<p>The report covers the six classic Due Diligence areas plus one
+additional (ESG / Sustainability), seven modules in total. Each module
+concludes with an assessment:</p>
+<ul>
+<li><strong>Green</strong> — no material observations;</li>
+<li><strong>Amber</strong> — observations to be addressed before
+closing;</li>
+<li><strong>Red</strong> — critical observations that must be remedied
+as a condition of the deal.</li>
+</ul>
+<h3 id="overall-project-assessment">Overall project assessment</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Commercial DD</td>
+<td style="text-align: center;">🟢 Green</td>
+</tr>
+<tr>
+<td>2. Legal DD</td>
+<td style="text-align: center;">🟡 Amber</td>
+</tr>
+<tr>
+<td>3. Financial DD</td>
+<td style="text-align: center;">🟢 Green</td>
+</tr>
+<tr>
+<td>4. Technical DD</td>
+<td style="text-align: center;">🟡 Amber</td>
+</tr>
+<tr>
+<td>5. Operational DD</td>
+<td style="text-align: center;">🟡 Amber</td>
+</tr>
+<tr>
+<td>6. Tax &amp; Regulatory DD</td>
+<td style="text-align: center;">🟡 Amber</td>
+</tr>
+<tr>
+<td>7. ESG / Sustainability DD</td>
+<td style="text-align: center;">🟢 Green</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Consolidated conclusion:</strong> the project has high
+internal logic, protected IP, a relevant market niche and a strong
+social-economic effect. The principal risk factor is <strong>regulatory
+(the binary nature of the adoption of amendments to 86-FZ and
+259-FZ)</strong>. With the amber observations addressed (the plan is
+clear), the project can be recommended for starter financing.</p>
+<hr />
+<h2 id="commercial-due-diligence">2. Commercial Due Diligence</h2>
+<h3 id="product-analysis">2.1. Product analysis</h3>
+<p>CPFSR is a front-end / agent platform for the issuance of DFA against
+pledged assets, operating in a two-stage architecture. <strong>Stage 1
+(pilot-light 2026–2028):</strong> placements are conducted through a
+technology partnership with an incumbent operator of the DFA information
+system under 779-P (Atomyze JSC or another register entity — the 779-P
+licence is individual and not transferable); funding flows through the
+VEB.RF Project Finance Factory (Government Decree No. 158) and the
+Federal Treasury under the Budget Code. Additional Bank of Russia
+issuance is not envisaged in Stage 1; the CBR is the supervisory
+regulator under Article 4 of Federal Law 86-FZ. <strong>Stage 2 (2029+
+horizon):</strong> expansion of the mandate to a targeted
+secured-emission model against a pool of pledged DFA — a defensible
+horizon, implemented after a positive Stage 1 track record of ≥ 12
+months and adoption of the package of four federal laws. No analogues
+with such a two-stage architecture have been identified in public
+sources in the Russian Federation or in international markets.</p>
+<h3 id="market-analysis">2.2. Market analysis</h3>
+<ul>
+<li>Aggregate Russian real-estate value — approximately <strong>RUB 507
+tn</strong>.</li>
+<li>Conservative collateral capacity — <strong>RUB 25.5
+tn</strong>.</li>
+<li>Target market penetration by Year 10 — 20% (~RUB 5 tn), equivalent
+to <strong>~3% of the annual nominal GDP of the Russian
+Federation</strong>.</li>
+<li>No competitors with an analogous model exist today.</li>
+</ul>
+<h3 id="competitive-environment">2.3. Competitive environment</h3>
+<ul>
+<li>The domestic DFA market is growing; current 779-P register operators
+include Sber, Alfa, Atomyze, Masterchain. In Stage 1 CPFSR operates as a
+front-end / agent through a technology partnership with one of them;
+there is no competition at the licensing level.</li>
+<li>The differentiation of CPFSR is the wedge architecture: DFA
+placements are anchored to infrastructure funding through the VEB.RF
+Factory + the Federal Treasury, which turns the operator-partner into a
+distribution channel and CPFSR into a specialised infrastructure layer
+for targeted projects with collateral backing.</li>
+<li>International references (Securitize, Polymath, HQLAx) —
+general-purpose asset tokenisation without targeted state
+financing.</li>
+</ul>
+<h3 id="strategic-partnerships">2.4. Strategic partnerships</h3>
+<ul>
+<li>Implied work with the Bank of Russia, Ministry of Finance, Ministry
+of Digital Development, Federal Treasury, Rosfinmonitoring — all key
+state nodes.</li>
+<li>A partner network of appraisers and insurers — potentially 100+
+organisations.</li>
+</ul>
+<h3 id="stakeholder-map-government-champions">2.5. Stakeholder map /
+Government Champions</h3>
+<p>The GTM sequencing of the project is built on wedge logic: the CBR is
+the final instance of Stage 1, not the first. The named Champion-map
+(synchronised with <code>_Мастер/Концепт.md § 1-ter</code>):</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Person / Authority</th>
+<th>Role in the funnel</th>
+<th>Anchor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T+30</td>
+<td>Ministry of Economic Development (M. Reshetnikov)</td>
+<td>Named sponsor; inclusion in national projects</td>
+<td>Pitch_deck slide “Government Champions”</td>
+</tr>
+<tr>
+<td>T+30</td>
+<td>Office of the Government of the Russian Federation</td>
+<td>Architectural framework</td>
+<td>Concept § 1-bis</td>
+</tr>
+<tr>
+<td>T+30</td>
+<td>Atomyze JSC</td>
+<td>Technology partner under 779-P</td>
+<td>LoI (Pre-meeting_briefs/01)</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td>Ministry of Finance (I. Kolychev)</td>
+<td>Off-budget channel, OFZ pressure</td>
+<td>Financial Model v3</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td>Ministry of Finance (V. Sazanov)</td>
+<td>DFA tax position</td>
+<td>Legal Framework § 5</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td>VEB.RF Project Finance Factory</td>
+<td>Consultative letter under Decree 158</td>
+<td>Pre-meeting_briefs/02</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td>Gazprombank / PSB</td>
+<td>Settlement-bank MoU</td>
+<td>Pre-meeting_briefs/04</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td>Tatarstan (R. Minnikhanov)</td>
+<td>Regional MoU (50–100 objects)</td>
+<td>Pre-meeting_briefs/03</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td>State Duma (A. Aksakov)</td>
+<td>Consultation on 259-FZ</td>
+<td>Briefing for the CBR</td>
+</tr>
+<tr>
+<td>T+180+</td>
+<td>Bank of Russia</td>
+<td>Register of IS DFA operators under 779-P</td>
+<td>Legal Framework § 8.1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Risk signal:</strong> refusal of at least one champion at the
+minister / deputy-minister level → rollback to Stage 2 / horizon 2029+,
+loss of ≈ 24 months on the package of four federal laws.</p>
+<h3 id="assessment-green">Assessment: 🟢 Green</h3>
+<p>The business model is solid, the market is vast, no competitors
+exist. The named Stakeholder map is a tier-1 GTM standard for
+state-significant projects.</p>
+<h3 id="recommendations">Recommendations</h3>
+<ol type="1">
+<li>Prepare memoranda of intent with 2–3 key partner banks at the Seed
+stage.</li>
+<li>Prepare a pilot segment (e.g., individual housing in the Moscow
+Region) for a quick PoC.</li>
+</ol>
+<hr />
+<h2 id="legal-due-diligence">3. Legal Due Diligence</h2>
+<h3 id="intellectual-property">3.1. Intellectual property</h3>
+<ul>
+<li>The concept and know-how are deposited (Certificate No. 4011265 of
+19.12.2024, ireg.pro, GOST R 34.11-2012).</li>
+<li>Copyright belongs to A.-Kh. A. Kagirov — exclusively.</li>
+<li>The deposit fixes the priority date. The legal protection regime —
+know-how (Article 1465 CC) and software (registration with Rospatent —
+in progress).</li>
+</ul>
+<p><strong>Assessment:</strong> 🟢 — the IP is duly formalised and
+protected.</p>
+<h3 id="compliance-with-legislation">3.2. Compliance with
+legislation</h3>
+<p>The platform relies on: - Federal Law 259-FZ (DFA); - Federal Law
+86-FZ (on the CBR, including in the version of 340-FZ on the digital
+ruble); - Federal Law 161-FZ (National Payment System); - Federal Law
+115-FZ (AML/CFT); - Federal Law 152-FZ (Personal Data); - Federal Law
+187-FZ (CII); - Civil Code (pledge, escrow, smart contract); - CBR
+Regulations 779-P, 780-P, 683-P.</p>
+<p><strong>Assessment:</strong> 🟢 — the basic framework already exists
+in the current law.</p>
+<h3 id="required-regulatory-actions">3.3. Required regulatory
+actions</h3>
+<p><strong>Stage 1 (2026–2028) — no amendments to federal laws.</strong>
+Launch of the near contour is possible within the current legal
+framework: - 259-FZ + CBR Regulation 779-P / Directive 4336-U — operator
+via technology partnership; - Government Decree No. 158 of 15.02.2018 —
+funding through the VEB.RF Project Finance Factory; - the Budget Code of
+the Russian Federation — settlements through the Federal Treasury; - the
+Civil Code — pledge and escrow.</p>
+<p><strong>Stage 2 (2029+ horizon) — a package of four federal laws +
+six sub-legislative acts</strong> (see the Legal Framework document,
+Sections 8.2 and 8.3). Entry condition — a positive Stage 1 track record
+of ≥ 12 months and an inter-agency position of the Ministry of Economic
+Development / Ministry of Finance / VEB.RF / State Duma.</p>
+<p><strong>Assessment:</strong> 🟡 Amber — Stage 1 carries no binary
+regulatory risk and is delivered within the current framework; Stage 2 —
+a defensible horizon, non-blocking for the near-term investment
+roadmap.</p>
+<h3 id="corporate-structure-of-the-operator">3.4. Corporate structure of
+the operator</h3>
+<ul>
+<li>As of the DD, the operator legal entity has not been created.</li>
+<li>Corporate form required: JSC or LLC (under 779-P).</li>
+<li>Minimum capital — RUB 50M at entry, RUB 500M for the industrial
+phase.</li>
+</ul>
+<p><strong>Assessment:</strong> 🟡 — creating the operator legal entity
+is a task for the first 90 days after the round.</p>
+<h3 id="licensing">3.5. Licensing</h3>
+<ul>
+<li>Inclusion in the CBR register of IS operators (Article 5 of 259-FZ +
+Regulation 779-P).</li>
+<li>FSTEC / FSB certification of cyber-protection equipment.</li>
+<li>Notification to Roskomnadzor as a personal-data operator.</li>
+<li>Notification to FSTEC as a CII facility.</li>
+</ul>
+<p><strong>Assessment:</strong> 🟡 — the process is clear but
+multi-stage, requires 6–9 months.</p>
+<h3 id="agreements-with-state-counterparties">3.6. Agreements with state
+counterparties</h3>
+<p>At the DD date there are no formal agreements with the CBR, Ministry
+of Finance, or Federal Treasury — which is normal at the current
+(concept) stage.</p>
+<p><strong>Assessment:</strong> 🟡 — task for the preparation stage.</p>
+<h3 id="legal-dd-result-amber">Legal DD result: 🟡 Amber</h3>
+<h3 id="recommendations-1">Recommendations</h3>
+<ol type="1">
+<li>Create the operator legal entity in the first 90 days.</li>
+<li>Engage a top-tier Russian legal advisor (Bryan Cave / Gorodissky /
+Pepeliaev).</li>
+<li>Prepare the legislative drafts and make a presentation to the Bank
+of Russia within the first 180 days.</li>
+</ol>
+<hr />
+<h2 id="financial-due-diligence">4. Financial Due Diligence</h2>
+<h3 id="financial-model">4.1. Financial model</h3>
+<p>A 10-year model, with BASE / CONSERVATIVE / OPTIMISTIC scenarios.</p>
+<p><strong>Key KPIs (BASE):</strong> - NPV @ WACC 30% = <strong>RUB 51.2
+bn</strong>; - IRR ≈ 62% (with TV); - Payback = <strong>2.8
+years</strong>; - Peak financing need = <strong>RUB 1.3 bn</strong>
+(starter round); - Year-5 revenue = RUB 37 bn; - Year-10 revenue = RUB
+138 bn; - TV EBITDA margin ≈ 74.8% (reflects the infrastructure nature,
+taking into account OpEx add-ons for compliance, cyber-security, legal
+support and a pool of appraisers/insurers).</p>
+<p><strong>Model assumptions:</strong> - Share of the RUB 25.5 tn market
+grows from 0.5% in Year 2 to 20% in Year 10. - Average DFA issuance
+commission: 0.5% of nominal. - Servicing commission: 0.3% per annum on
+outstanding DFA. - CapEx: RUB 850 mn over 18 months; OpEx: RUB 380
+mn/year with +10%/year indexation. - WACC: 30% (based on 10Y OFZ + risk
+premium).</p>
+<h3 id="sensitivity">4.2. Sensitivity</h3>
+<ul>
+<li>WACC ±3 p.p. → NPV ±25%;</li>
+<li>Market share ×0.5 → NPV –27%;</li>
+<li>Commission ±20% → NPV ±21%.</li>
+</ul>
+<p>The sensitivity is asymmetric: even conservative scenarios (share
+×0.5; WACC 25%) yield an <strong>NPV of ~RUB 57 bn</strong> — the model
+is resilient.</p>
+<h3 id="revenue-assumptions">4.3. Revenue assumptions</h3>
+<ul>
+<li>The revenue mix evolves from primary placement commissions (Year 5:
+39%) to a servicing margin on outstanding DFA (Year 10: 58%). This is
+typical for an infrastructure operator and means greater predictability
+of cash flows over the horizon.</li>
+</ul>
+<h3 id="assessment-green-1">Assessment: 🟢 Green</h3>
+<p>The model is rigorous, the assumptions reasonable, the sensitivity
+analysis is in place.</p>
+<h3 id="recommendations-2">Recommendations</h3>
+<ol type="1">
+<li>Support the commission assumptions with benchmarks from Russian DFA
+operators (Sber, Atomyze).</li>
+<li>Prepare a quarterly model for the first 24 months for cash-flow
+management of the pilot phase.</li>
+</ol>
+<hr />
+<h2 id="technical-due-diligence">5. Technical Due Diligence</h2>
+<h3 id="architecture">5.1. Architecture</h3>
+<ul>
+<li>A 7-layer microservices architecture.</li>
+<li>Geo-distribution: 3 active-active-active data centres + a
+backup.</li>
+<li>DLT register on a domestic platform.</li>
+<li>100% import independence.</li>
+</ul>
+<h3 id="technology-stack">5.2. Technology stack</h3>
+<ul>
+<li>Astra Linux Special Edition / RED OS.</li>
+<li>Postgres Pro / Red DB / Tantor.</li>
+<li>A domestic Kubernetes distribution.</li>
+<li>KriptoPro / VipNet cryptography.</li>
+<li>Apache Kafka.</li>
+</ul>
+<p><strong>Assessment:</strong> 🟢 — all components are realistic, in
+the Ministry of Digital Development register or FSTEC-certified.</p>
+<h3 id="dlt-register">5.3. DLT register</h3>
+<ul>
+<li>A permissioned DLT with PBFT consensus.</li>
+<li>Binding to Masterchain / Waves Enterprise — at the pilot stage a
+choice of provider is required.</li>
+</ul>
+<p><strong>Assessment:</strong> 🟡 — the choice of DLT provider is a
+critical decision; a PoC with two candidates is required.</p>
+<h3 id="security">5.4. Security</h3>
+<ul>
+<li>CII category 1.</li>
+<li>GOST R 57580.1 level 4.</li>
+<li>Personal-data protection level UZ-1.</li>
+</ul>
+<p><strong>Assessment:</strong> 🟡 — an ambitious but achievable
+profile. It requires a strong security team and significant
+certification spend.</p>
+<h3 id="team">5.5. Team</h3>
+<ul>
+<li>Declared size by the end of Year 2 — 120 persons.</li>
+<li>At the DD date the team is not formed (which is normal at the
+current stage).</li>
+</ul>
+<p><strong>Assessment:</strong> 🟡 — hiring 120 people in 12–18 months
+requires resourcing; the mitigation is a partnership with a large
+integrator (KROK / IBS / Digital Economy League / ICL).</p>
+<h3 id="technical-dd-result-amber">Technical DD result: 🟡 Amber</h3>
+<h3 id="recommendations-3">Recommendations</h3>
+<ol type="1">
+<li>Run a PoC with two DLT providers in the first 90 days.</li>
+<li>Enter into a framework agreement with a major integrator for team
+scaling.</li>
+<li>At the MVP stage — focus on the core services (KYC, valuation, DFA
+issuance, register), defer secondary functions.</li>
+</ol>
+<hr />
+<h2 id="operational-due-diligence">6. Operational Due Diligence</h2>
+<h3 id="processes">6.1. Processes</h3>
+<p>The DFA life cycle is described in 19 steps and in the form of 6 key
+stages. The processes are detailed in the technical documentation.</p>
+<h3 id="partner-network">6.2. Partner network</h3>
+<p>A network of appraisal and insurance organisations is to be assembled
+— at the DD date there is a plan but no signed agreements.</p>
+<p><strong>Assessment:</strong> 🟡 — the first agreements should appear
+within the first 180 days.</p>
+<h3 id="team-and-recruiting">6.3. Team and recruiting</h3>
+<p>Not formed. Hiring 120 people over 12–18 months — a realistic task
+with the right partnership.</p>
+<p><strong>Assessment:</strong> 🟡 — an executive-search task.</p>
+<h3 id="regulatory-processes">6.4. Regulatory processes</h3>
+<p>Regulatory reporting is detailed in the technical documentation.</p>
+<p><strong>Assessment:</strong> 🟢 — conceptually ready; implementation
+is in development.</p>
+<h3 id="operational-dd-result-amber">Operational DD result: 🟡
+Amber</h3>
+<h3 id="recommendations-4">Recommendations</h3>
+<ol type="1">
+<li>Select CEO and CTO in the first 60 days; then unfold the
+organisational structure.</li>
+<li>Enter into framework agreements with 2–3 appraisal and 2 insurance
+companies in the first 180 days.</li>
+</ol>
+<hr />
+<h2 id="tax-regulatory-due-diligence">7. Tax &amp; Regulatory Due
+Diligence</h2>
+<h3 id="tax-regime">7.1. Tax regime</h3>
+<p>DFA transactions are governed by: - Article 214.11 of the Tax Code
+(personal income tax); - Chapter 25 of the Tax Code (profit tax); -
+sub-paragraph 12.2 of paragraph 2 of Article 149 of the Tax Code
+(Federal Law of 31.07.2020 No. 324-FZ — exemption of DFA transactions
+from VAT) (partial VAT exemption).</p>
+<p><strong>Assessment:</strong> 🟡 — DFA tax practice is being formed;
+written clarifications from the Ministry of Finance / FNS are
+recommended at the pilot stage.</p>
+<h3 id="regulatory-fees">7.2. Regulatory fees</h3>
+<ul>
+<li>CBR: no licensing fees (separate state-duty payers).</li>
+<li>Rosfinmonitoring: no special fees.</li>
+</ul>
+<h3 id="tax-burden-under-the-model">7.3. Tax burden under the model</h3>
+<ul>
+<li>Effective profit tax rate: 20% (standard).</li>
+<li>Social contributions: 30%.</li>
+<li>VAT: applicability across operations to be clarified.</li>
+</ul>
+<h3 id="result-amber">Result: 🟡 Amber</h3>
+<h3 id="recommendations-5">Recommendations</h3>
+<ol type="1">
+<li>Obtain Ministry of Finance clarifications on the taxation of DFA
+exchange transactions.</li>
+<li>Obtain FNS clarifications on PIT accounting of operations.</li>
+</ol>
+<hr />
+<h2 id="esg-sustainability-due-diligence">8. ESG / Sustainability Due
+Diligence</h2>
+<h3 id="social-effect">8.1. Social effect</h3>
+<ul>
+<li>Development of national projects — a mass social effect.</li>
+<li>Additional income for collateral owners — financial inclusion.</li>
+<li>Increased employment in infrastructure projects.</li>
+</ul>
+<h3 id="environmental-footprint">8.2. Environmental footprint</h3>
+<ul>
+<li>The platform is digital; the principal environmental effect is
+data-centre energy consumption.</li>
+<li>A permissioned DLT register — environmentally neutral, unlike PoW
+blockchains.</li>
+</ul>
+<h3 id="corporate-governance">8.3. Corporate governance</h3>
+<ul>
+<li>A transparent structure; all operations are in an immutable audit
+log.</li>
+<li>Regulatory oversight by the Bank of Russia.</li>
+</ul>
+<h3 id="result-green">Result: 🟢 Green</h3>
+<p>The ESG profile is strong; the project is an excellent case for state
+ESG funding.</p>
+<hr />
+<h2 id="consolidated-list-of-red-and-amber-flags">9. Consolidated list
+of Red and Amber flags</h2>
+<h3 id="red-flags-must-be-remedied-as-a-condition-of-the-deal">Red flags
+(must be remedied as a condition of the deal)</h3>
+<p>At the current stage <strong>no critical red flags have been
+identified</strong>. The regulatory dependency (amendments to 86-FZ and
+259-FZ) has been moved to Amber on the back of a mitigation plan.</p>
+<h3
+id="amber-flags-a-plan-must-be-approved-within-the-first-180-days-of-closing">Amber
+flags (a plan must be approved within the first 180 days of
+closing)</h3>
+<ol type="1">
+<li>The operator legal entity has not been created.</li>
+<li>Bank of Russia licence not yet obtained (planned receipt — 12–15
+months).</li>
+<li>DLT provider not selected.</li>
+<li>The team is not formed (120 persons by the end of Year 2).</li>
+<li>No agreements with appraisal and insurance partners.</li>
+<li>DFA tax practice is not settled.</li>
+<li>Binary regulatory risk (legislative package).</li>
+</ol>
+<h3 id="recommendations-on-deal-structuring">Recommendations on deal
+structuring</h3>
+<ol type="1">
+<li><strong>Tranching of investments</strong> linked to the achievement
+of milestones (creation of the legal entity, obtaining the licence,
+issuance of the first DFA).</li>
+<li><strong>Reservation of 20% of the round</strong> for parallel legal
+support of the legislation (a critical task).</li>
+<li><strong>Licence condition</strong>: the final tranche is tied to
+inclusion in the CBR register of IS DFA operators.</li>
+<li><strong>Board of directors</strong> of the operator — with investor
+representatives and independent directors (a minimum of 30%
+independent).</li>
+<li><strong>Employee option plan (ESOP)</strong> of 10% of the pool — a
+mandatory condition for retaining key staff.</li>
+</ol>
+<hr />
+<h2 id="final-conclusion">10. Final conclusion</h2>
+<p>The project is <strong>recommended for starter financing</strong>
+subject to:</p>
+<ol type="1">
+<li>Creation of the operator legal entity in the first 90 days.</li>
+<li>An approved plan for obtaining the CBR licence by Month 12.</li>
+<li>An approved plan for parallel work with legislators on the
+legislative package.</li>
+<li>Selection of a CEO and CTO in the first 60 days.</li>
+<li>A PoC of two DLT providers in the first 90 days.</li>
+</ol>
+<p><strong>Target starter round:</strong> USD 15M (RUB 1.335 bn at the
+rate of 89.0) at a post-money of USD 95M (RUB 8.455 bn) under the Base
+scenario (pre-money USD 80M); investor stake — 15.8%. Reasoned range of
+USD 60–115M post-money.</p>
+<p><strong>Main argument:</strong> the “need-to-potential” ratio = 1 :
+20,000. Even the conservative scenario yields an NPV in the tens of
+billions of rubles. The regulatory risk is the only significant one and
+it is binary with a clear mitigation plan.</p>
+<hr />
+<p><em>The DD report is prepared as part of the Digital Platform CPFSR
+documentation pack and is intended for use by the investor, the board of
+directors and regulators when assessing the project. The document does
+not replace an independent DD by an accredited audit firm and is
+intended as a structured overview under Big Four methodology.</em></p>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../../../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

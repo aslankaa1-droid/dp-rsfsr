@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="ru" class="theme-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFBFC">
+  <meta name="cpfsr-root" content="../">
+  <title>Концепт ЦП РСФСР · ЦПФСР.РФ</title>
+  <meta name="description" content="Концепт ЦП РСФСР — Мастер · концепт. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+
+  <link rel="icon" type="image/svg+xml" href="../_design-system/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../_design-system/tokens.css">
+  <link rel="stylesheet" href="../_design-system/global.css">
+  <link rel="stylesheet" href="../_design-system/components.css">
+  <link rel="stylesheet" href="../_design-system/rtl.css">
+  <link rel="stylesheet" href="../_design-system/print.css">
+
+  <script defer src="../_design-system/theme-switcher.js"></script>
+  <script defer src="../_design-system/i18n-data.js"></script>
+  <script defer src="../_design-system/i18n.js"></script>
+  <script defer src="../_design-system/ticker.js"></script>
+  <script defer src="../_design-system/ui.js"></script>
+
+  <style>
+    /* Document layout (premium reader view) */
+    .doc-wrap { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+    .doc-header {
+      padding-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .doc-header__eyebrow {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-cap);
+      color: var(--color-gold);
+      font-weight: var(--fw-semi);
+      margin-bottom: var(--space-3);
+    }
+    .doc-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      color: var(--color-text);
+    }
+    .doc-header__meta {
+      font-size: var(--fs-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .doc-content { font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text); }
+    .doc-content > * + * { margin-top: var(--space-4); }
+    .doc-content h1 { font-size: var(--fs-2xl); margin-top: var(--space-9); }
+    .doc-content h2 { font-size: var(--fs-xl); margin-top: var(--space-8); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+    .doc-content h3 { font-size: var(--fs-lg); margin-top: var(--space-7); color: var(--color-accent); }
+    .doc-content h4 { font-size: var(--fs-md); margin-top: var(--space-6); }
+    .doc-content p { max-width: 70ch; color: var(--color-text); }
+    .doc-content ul, .doc-content ol { padding-inline-start: var(--space-6); }
+    .doc-content li + li { margin-top: var(--space-2); }
+    .doc-content blockquote {
+      margin: var(--space-6) 0;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-surface-2);
+      border-inline-start: 4px solid var(--color-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .doc-content code {
+      font-family: var(--font-mono);
+      background: var(--color-surface-2);
+      color: var(--color-accent);
+      padding: 0.15em 0.4em;
+      border-radius: var(--r-xs);
+      border: 1px solid var(--color-border);
+      font-size: 0.92em;
+    }
+    .doc-content pre {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      padding: var(--space-4);
+      overflow-x: auto;
+      line-height: 1.55;
+      font-family: var(--font-mono);
+      font-size: var(--fs-sm);
+      margin: var(--space-5) 0;
+    }
+    .doc-content pre code { background: transparent; border: none; padding: 0; color: var(--color-text); }
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-5) 0;
+      font-variant-numeric: tabular-nums;
+      font-size: var(--fs-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .doc-content table th {
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-weight: var(--fw-semi);
+      text-transform: uppercase;
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-cap);
+      padding: var(--space-3) var(--space-4);
+      text-align: start;
+      border-bottom: 1px solid var(--color-border-strong);
+    }
+    .doc-content table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      text-align: start;
+      vertical-align: top;
+    }
+    .doc-content table tr:last-child td { border-bottom: none; }
+    .doc-content table tr:hover { background: var(--color-surface-2); }
+    .doc-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .doc-content a {
+      color: var(--color-accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--dur-fast) var(--ease-out);
+    }
+    .doc-content a:hover { border-bottom-color: var(--color-accent); }
+    .doc-content strong { font-weight: var(--fw-semi); color: var(--color-text); }
+    .doc-content em { font-style: italic; color: var(--color-text); }
+
+    .doc-actions {
+      display: flex; gap: var(--space-3); margin-top: var(--space-9);
+      padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== SKIP-LINK ====== -->
+<a class="skip-link" href="#main">К содержанию</a>
+
+<!-- ====== TOP-BAR (sticky на любой скролл) ====== -->
+<header class="top-bar" role="banner">
+  <div class="top-bar__inner">
+    <a class="top-bar__brand" href="../index.html" aria-label="ЦПФСР.РФ — на главную">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="brand-em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B3D2E"/><stop offset="100%" stop-color="#1F6B54"/></linearGradient></defs>
+        <path d="M24 2 L42 8 V24 C42 34 34 42 24 46 C14 42 6 34 6 24 V8 Z" fill="url(#brand-em)"/>
+        <rect x="22.5" y="11" width="3" height="26" fill="#E4C892"/>
+        <rect x="13" y="13" width="22" height="2.2" fill="#E4C892" opacity="0.85"/>
+        <rect x="15" y="22" width="18" height="2.2" fill="#E4C892" opacity="0.75"/>
+        <rect x="17" y="31" width="14" height="2.2" fill="#E4C892" opacity="0.65"/>
+        <circle cx="24" cy="6.5" r="1.6" fill="#E4C892"/>
+      </svg>
+      <span class="top-bar__brand-text">
+        <strong data-i18n="brand.short">ЦПФСР.РФ</strong>
+        <small data-i18n="brand.tagline">Цифровая Платформа Финансирования Социального Развития</small>
+      </span>
+    </a>
+    <nav class="top-bar__nav" aria-label="Основная навигация">
+      <a class="nav-link" href="../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+    <div class="top-bar__spacer"></div>
+    <div class="top-bar__actions">
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-lang" aria-label="Язык" title="Язык">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </button>
+        <div class="menu" id="menu-lang">
+          <button class="menu__item" data-lang-option="ru"><span class="menu__item-flag">🇷🇺</span><span>Русский</span></button>
+          <button class="menu__item" data-lang-option="en"><span class="menu__item-flag">🇬🇧</span><span>English</span></button>
+          <button class="menu__item" data-lang-option="fr"><span class="menu__item-flag">🇫🇷</span><span>Français</span></button>
+          <button class="menu__item" data-lang-option="ar"><span class="menu__item-flag">🇸🇦</span><span>العربية</span></button>
+        </div>
+      </div>
+      <div class="menu-anchor">
+        <button class="icon-btn" data-menu-trigger="#menu-theme" aria-label="Тема" title="Тема">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <div class="menu" id="menu-theme">
+          <button class="menu__item" data-theme-option="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg><span data-i18n="themes.light">Светлая</span></button>
+          <button class="menu__item" data-theme-option="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span data-i18n="themes.dark">Тёмная</span></button>
+          <button class="menu__item" data-theme-option="sepia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v6h6"/></svg><span data-i18n="themes.sepia">Сепия</span></button>
+        </div>
+      </div>
+      <button class="icon-btn burger" data-drawer-trigger aria-label="Меню" title="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-label="Котировки">
+  <div class="ticker__label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="8" opacity="0.5"/></svg>
+    <span data-i18n="ticker.live">Live</span>
+  </div>
+  <div class="ticker__track"><span class="ticker__strip"></span></div>
+  <div class="ticker__stamp">—</div>
+</div>
+
+<!-- ====== DRAWER (mobile) ====== -->
+<div class="drawer-overlay" data-drawer-close></div>
+<aside class="drawer" aria-label="Мобильная навигация">
+  <div class="drawer__head">
+    <strong data-i18n="actions.menu">Меню</strong>
+    <button class="icon-btn" data-drawer-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav class="drawer__nav">
+      <a class="nav-link" href="../index.html" data-i18n="nav.home">Главная</a>
+      <a class="nav-link" href="../_Мастер/Концепт.html" data-i18n="nav.concept">Концепция</a>
+      <a class="nav-link" href="../03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.html" data-i18n="nav.finance">Финансовая модель</a>
+      <a class="nav-link" href="../11_Оценка/Международная_оценка_проекта.html" data-i18n="nav.valuation">Оценка</a>
+      <a class="nav-link" href="../04_Бизнес-план/Бизнес-план_ЦП_РСФСР.html" data-i18n="nav.business">Бизнес-план</a>
+      <a class="nav-link" href="../12_DD_аудит/DD_отчёт.html" data-i18n="nav.dd">DD-аудит</a>
+      <a class="nav-link" href="../13_Экспертиза/Экспертное_заключение.html" data-i18n="nav.expertise">Экспертиза</a>
+      <a class="nav-link" href="../14_Аудит/АУДИТ%20Сводный%20пост-Горизонт-III%2024.05.2026/Сводный_аудит_пост_Горизонт_III.html" data-i18n="nav.audit">Аудит</a>
+      <a class="nav-link" href="../07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html" data-i18n="nav.presentations">Презентации</a>
+      <a class="nav-link" href="../05_Бренд-бук/Бренд-бук_ЦП_РСФСР.html" data-i18n="nav.brand">Бренд-бук</a>
+      <a class="nav-link" href="../09_Мобильное_приложение/Приложение/index.html" data-i18n="nav.mobile">Мобильное приложение</a>
+      <a class="nav-link" href="../17_Data_room/INDEX.html" data-i18n="nav.dataroom">Data room</a>
+      <a class="nav-link" href="../16_Governance_и_Compliance/Governance_Pack.html" data-i18n="nav.governance">Governance</a>
+      <a class="nav-link" href="../15_RFP_международная_верификация/01_Vendor_DD_Big4/RFP_Vendor_DD.html" data-i18n="nav.rfp">RFP</a>
+      <a class="nav-link" href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main id="main">
+  <nav class="container" style="padding-top: var(--space-4);" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="../index.html" data-i18n="nav.home">Главная</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li><a href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
+      <li class="breadcrumb__sep">/</li>
+      <li class="breadcrumb__current">Мастер · концепт</li>
+    </ol>
+  </nav>
+
+  <div class="doc-wrap">
+    <header class="doc-header">
+      <span class="doc-header__eyebrow">Мастер · концепт</span>
+      <h1>Концепт ЦП РСФСР</h1>
+      <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
+    </header>
+    <article class="doc-content">
+<h1
+id="цифровая-платформа-российский-сервис-финансирования-социального-развития">Цифровая
+Платформа «Российский Сервис Финансирования Социального Развития»</h1>
+<h2 id="цп-рсфср-единый-концепт-документ-проекта">ЦП РСФСР — единый
+концепт-документ проекта</h2>
+<p><strong>Автор и правообладатель:</strong> Кагиров Абдул-Хаким
+Ахмадович<br />
+<strong>Защита интеллектуальной собственности:</strong> Свидетельство о
+депонировании №4011265 от 19.12.2024, ireg.pro, хеш ГОСТ-Р
+34.11-2012<br />
+<strong>Тип охраны:</strong> Ноу-хау (коммерческая тайна) / Авторское
+право<br />
+<strong>Юридическая природа свидетельства:</strong> депонирование на
+ireg.pro фиксирует дату приоритета и хеш произведения (ст. 1259, 1262
+ГК). Концепция и методология охраняются в режимах: программа для ЭВМ
+(ст. 1262 ГК — регистрация в Роспатенте, в работе), ноу-хау/коммерческая
+тайна (ст. 1465–1469 ГК, ФЗ №98-ФЗ — режим введён внутренним
+приказом)</p>
+<hr />
+<h2 id="концептуальная-суть-по-12-пунктам-автора">1. Концептуальная суть
+(по 12 пунктам автора)</h2>
+<p>ЦП РСФСР — цифровая платформа-оператор, подключаемая к
+государственным и банковским сервисам, обеспечивающая привлечение
+залоговой массы для выпуска и обслуживания ЦФА (цифровых финансовых
+активов).</p>
+<ol type="1">
+<li>Приложение подключается к государственным и банковским
+сервисам.</li>
+<li>Обеспечивает привлечение залоговой массы для выпуска и обслуживания
+ЦФА.</li>
+<li>Залоговая масса — недвижимость, транспорт, интеллектуальная
+собственность, ценные бумаги и т.д.</li>
+<li>Залог оценивается автоматически на платформе согласно принятым
+государственным актам.</li>
+<li>Залоговое имущество остаётся в распоряжении собственника, но на
+объект залога накладывается временное обременение.</li>
+<li>Под заложенное имущество оператор платформы осуществляет выпуск ЦФА.
+В pilot-light режиме 2026–2028 управление и реализация ЦФА — в периметре
+лицензированного оператора ИС ЦФА по 779-П (технологический партнёр); на
+горизонте 2029+ — при принятии пакета НПА — возможно расширение
+мандата.</li>
+<li>Выпуск ЦФА осуществляется единым оператором-платформой, получающим
+(а) статус оператора ИС ЦФА в реестре Банка России по 779-П / Указанию
+4336-У, (б) сопутствующие регуляторные согласования (РКН, ФСТЭК,
+Росфинмониторинг). Лицензия оператора ИС ЦФА не передаётся между ЮЛ,
+поэтому в pilot-light используется конструкция технологического
+партнёрства с действующим оператором.</li>
+<li>ЦФА выпускается с согласия собственника на срок, необходимый для
+реализации национальных, инфраструктурных проектов и других
+государственных программ.</li>
+<li>Под каждый выпущенный ЦФА осуществляется <strong>целевое
+фондирование через инфраструктурный контур ВЭБ.РФ / Федерального
+казначейства</strong> (в pilot-light режиме 2026–2028 гг. — без поправок
+в 86-ФЗ). Денежные средства зачисляются на специальный счёт эскроу под
+надзором уполномоченного финансового института. На горизонте 2029+ — при
+поддержке регулятора и принятии пакета НПА — возможен переход к модели
+целевой обеспеченной эмиссии Банка России (см. раздел 9-горизонт
+ниже).</li>
+<li>Денежные средства используются строго в соответствии с действующим
+законодательством (259-ФЗ, 39-ФЗ, БК РФ) и/или вновь принятыми ФЗ и
+государственными актами.</li>
+<li>ЦФА могут быть реализованы квалифицированным участникам рынка ценных
+бумаг через лицензированного оператора ИС ЦФА; средства от реализации
+зачисляются только на специальные эскроу-счета под банковским
+надзором.</li>
+<li>По истечении срока использования ЦФА заложенное имущество
+возвращается собственнику либо реинвестируется им в аналогичные
+проекты.</li>
+</ol>
+<hr />
+<h2
+id="bis.-wedge-pilot-20262028-и-горизонт-2029-двухконтурная-стратегия">1-bis.
+Wedge-pilot 2026–2028 и горизонт 2029+ (двухконтурная стратегия)</h2>
+<p><strong>Pilot-light 2026–2028 (текущий контур, без поправок в
+86-ФЗ).</strong> ЦП РСФСР запускается как оператор ИС ЦФА по
+действующему 259-ФЗ при технологическом партнёрстве с действующим
+оператором (АО «Атомайз» — как оператор сделки по своей лицензии 779-П,
+ЦП РСФСР — как front-end / агент привлечения залога). Целевое
+фондирование — через <strong>инфраструктурный контур ВЭБ.РФ</strong>
+(Фабрика проектного финансирования, постановление Правительства РФ от
+15.02.2018 №158) и <strong>Федеральное казначейство</strong> (БК РФ).
+Поддерживающая роль Банка России — надзорный регулятор (ст. 4 86-ФЗ),
+без полномочий по согласованию целевого назначения кредита.</p>
+<p><strong>Горизонт 2029+ (модель целевой обеспеченной
+эмиссии).</strong> Только после положительного track-record wedge-pilot
+(≥ 12 мес. промышленной эксплуатации, доказанная сходимость метрик
+ОИС/возвратности/реализации залога) — пакет 4 ФЗ-поправок (внесение
+изменений в 86-ФЗ, 259-ФЗ, БК РФ, ГК РФ), описанный в § 8 Юридического
+фундамента, переводится из «горизонт T+24+» в активный roadmap. Это
+позиция автора как horizon-видение, а не предмет ближайшей коммуникации
+с регулятором.</p>
+<hr />
+<h2 id="ter.-champion-map-и-gtm-sequencing-t0t180">1-ter. Champion-map и
+GTM-sequencing (T+0…T+180)</h2>
+<p>Wedge-логика требует обхода Банка России на первом шаге: ЦБ —
+последняя инстанция Stage 1 (только включение оператора в реестр 779-П).
+Ключевые согласования проводятся через Минэк → Минфин → ВЭБ.РФ → Госдума
+→ регион → Атомайз. Champion-map поимённый:</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Этап</th>
+<th>Лицо</th>
+<th>Орган</th>
+<th>Цель</th>
+<th>Артефакт-обёртка</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T+30</td>
+<td><strong>Максим Решетников</strong></td>
+<td>Минэк, министр</td>
+<td>Wedge-pilot Stage 1 как инструмент ускорения нацпроектов; named
+sponsor</td>
+<td>Бизнес-план + Pitch_deck + Wedge_pilot-light</td>
+</tr>
+<tr>
+<td>T+30</td>
+<td><strong>Аппарат Правительства РФ</strong></td>
+<td>через профильного советника по цифровой экономике</td>
+<td>Архитектурный концепт; межведомственная рабочая группа</td>
+<td>Концепт § 1-bis + Юр.фундамент § 8.1</td>
+</tr>
+<tr>
+<td>T+30</td>
+<td><strong>АО «Атомайз»</strong></td>
+<td>через рекомендованного представителя</td>
+<td>LoI о технологическом партнёрстве: оператор сделки 779-П + ЦП РСФСР
+front-end</td>
+<td>Wedge_pilot-light § 3 + Договорный пакет 01</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td><strong>Иван Колычев</strong></td>
+<td>Минфин, замминистра (долг)</td>
+<td>Внебюджетный канал; кейс снижения давления на ОФЗ</td>
+<td>Финмодель v3 + Бизнес-план + Концепт § 1-bis</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td><strong>Владимир Сазанов</strong></td>
+<td>Минфин, замминистра (налоги)</td>
+<td>Налоговая позиция по ЦФА (ст. 34.2 НК; пп. 12.2 п. 2 ст. 149
+НК)</td>
+<td>Юр.фундамент § 5 + запрос ст. 34.2 НК</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td><strong>ВЭБ.РФ ФПФ</strong></td>
+<td>через рекомендованного представителя Минэка</td>
+<td>LoI / consultative letter по ПП РФ № 158</td>
+<td>Бизнес-план + Wedge § 5 + Финмодель</td>
+</tr>
+<tr>
+<td>T+90</td>
+<td><strong>Газпромбанк / ПСБ</strong></td>
+<td>через рекомендованного представителя Минэка</td>
+<td>MoU о роли расчётного банка пилота</td>
+<td>Бизнес-план + Финмодель + Договорный пакет</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td><strong>Рустам Минниханов</strong></td>
+<td>Республика Татарстан</td>
+<td>MoU о муниципальном пилоте: 50–100 объектов, ₽ 5–10 млрд</td>
+<td>Концепт + Wedge § 2 + Pitch_deck</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td><strong>Александр Моор</strong></td>
+<td>Тюменская обл. (резерв)</td>
+<td>то же</td>
+<td>то же</td>
+</tr>
+<tr>
+<td>T+180</td>
+<td><strong>Анатолий Аксаков</strong></td>
+<td>Госдума, Комитет по фин. рынку</td>
+<td>Консультация по 259-ФЗ для Stage 1; horizon Stage 2 — пакет 4
+ФЗ</td>
+<td>Доклад для ЦБ + Концепт + Wedge</td>
+</tr>
+<tr>
+<td>T+180+</td>
+<td><strong>Банк России</strong></td>
+<td>через консолидированную межведомственную позицию</td>
+<td>Реестр операторов ИС ЦФА по 779-П (Stage 1); диалог по Stage 2
+(T+30+ мес.)</td>
+<td>Юр.фундамент § 8.1 + wedge success metrics ≥ 12 мес.</td>
+</tr>
+</tbody>
+</table>
+<p>Pre-meeting brief’ы по каждому champion’у — в
+<code>02_Юридический_фундамент/Pre-meeting_briefs/</code> (готовится в
+Горизонте II.C).</p>
+<hr />
+<h2 id="quater.-защита-автора-правообладатель-ноу-хау">1-quater. Защита
+автора (правообладатель ноу-хау)</h2>
+<p><strong>Принцип:</strong> автор Кагиров Абдул-Хаким Ахмадович —
+единственный правообладатель ноу-хау по свидетельству №4011265 от
+19.12.2024. После внесения ноу-хау в уставный капитал АО-оператора
+фиксируются защитные механизмы:</p>
+<ol type="1">
+<li><strong>Неотъемлемая позиция в Совете директоров</strong> до Series
+B (≥ 2031), независимо от размера доли инвестора.</li>
+<li><strong>Защитные ковенанты в Shareholders Agreement:</strong>
+<ul>
+<li>drag-along — только с участием правообладателя;</li>
+<li>tag-along — для правообладателя 100% защита от forced exit;</li>
+<li>anti-dilution — full ratchet для правообладателя до Series B;</li>
+<li>запрет на отчуждение прав на ноу-хау без согласия правообладателя
+(ст. 1465 ГК + лицензионный договор);</li>
+<li>vesting institutional shareholder — 4 года с cliff 1 год.</li>
+</ul></li>
+<li><strong>Реверс ноу-хау</strong> при ликвидации / banktrotcy /
+враждебном выкупе: исключительные права на ноу-хау возвращаются автору
+безусловно.</li>
+<li><strong>Royalty-стрим</strong> — 2% от выручки оператора в адрес
+правообладателя как лицензиара (наряду с дивидендами по акциям).</li>
+</ol>
+<p>Перечисленные пункты фиксируются в учредительном договоре АО и
+лицензионном договоре между правообладателем и оператором; вносятся в
+Shareholders Agreement при первом раунде инвестиций.</p>
+<hr />
+<h2 id="преимущества-из-исходного-документа-автора">2. Преимущества (из
+исходного документа автора)</h2>
+<ol type="1">
+<li>Прямое онлайн-взаимодействие залогодателя, финансовых агентов и
+специализированных исполнителей под контролем ЦБ РФ.</li>
+<li>Сокращение сроков оценки и залога объектов.</li>
+<li>Толчок развитию индустрии ЦФА в России.</li>
+<li>Привлечение огромной денежной массы за счёт «спящих» частных
+активов.</li>
+<li>Решение объёмных государственных проектов.</li>
+<li>Сокращение очередности финансирования глобальных проектов.</li>
+<li>Импульс реальному сектору экономики.</li>
+<li>Внебюджетное финансирование госпроектов в денежноёмких отраслях
+(тяжёлая промышленность, машиностроение, медицина, наука).</li>
+<li>Финансовое вознаграждение собственнику залогового имущества.</li>
+<li>Инфляционные процессы — в обычном режиме.</li>
+</ol>
+<h2 id="недостатки-и-условия-из-исходного-документа-автора">3.
+Недостатки и условия (из исходного документа автора)</h2>
+<ol type="1">
+<li>Требуется внесение изменений в законодательство РФ (новые ФЗ).</li>
+<li>Требуется мощная политическая воля.</li>
+</ol>
+<h2 id="срок-реализации-платформы-оператора">4. Срок реализации
+платформы-оператора</h2>
+<p><strong>От 18 месяцев</strong> (по концепции автора).</p>
+<h2 id="потенциал-залоговой-массы-из-презентации-автора">5. Потенциал
+залоговой массы (из презентации автора)</h2>
+<table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 36%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr>
+<th>Сегмент</th>
+<th style="text-align: right;">Объём, трлн ₽</th>
+<th style="text-align: right;">Консервативно (10% активов × 50%
+стоимости), трлн ₽</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Жилой фонд (4,7 млрд м², ср. 85 000 ₽/м²)</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr>
+<td>Коммерческая недвижимость</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">2,5</td>
+</tr>
+<tr>
+<td>Земельные участки (ИЖС + земля под предприятиями)</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td><strong>ИТОГО</strong></td>
+<td style="text-align: right;"><strong>507</strong></td>
+<td style="text-align: right;"><strong>25,5</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Источник: РСФСР_6.pptx, слайд 9.</p>
+</blockquote>
+<h2 id="состав-работ-по-поручению-заказчика">6. Состав работ (по
+поручению заказчика)</h2>
+<ol type="1">
+<li>Техническая документация со ссылками на ФЗ и инструкции ЦБ РФ.</li>
+<li>Интернет-сайт (адаптив, все устройства).</li>
+<li>Мобильное приложение (Android / iOS / Windows) — качественное и
+безопасное.</li>
+<li>Прототип приложения с понятным функционалом.</li>
+<li>Большая дизайнерская презентация.</li>
+<li>Малая красиво оформленная презентация.</li>
+<li>Финансовая модель проекта.</li>
+<li>Бизнес-план.</li>
+<li>Краткая презентация для партнёров и инвесторов.</li>
+<li>Доклад для госструктур и специалистов ЦБ РФ.</li>
+<li>Рекламный буклет.</li>
+<li>Бренд-бук.</li>
+<li>Брендированный стиль документов и всего проекта.</li>
+<li>PDF и Word версии всех документов.</li>
+<li>Оценка проекта в международном формате (с указанием стоимости).</li>
+<li>DD-аудит уровня «Большой четвёрки».</li>
+<li>Экспертиза всех документов и всего проекта.</li>
+<li>Две HTML-версии всего проекта:
+<ul>
+<li>полная (для размещения в интернет),</li>
+<li>короткая презентационная.</li>
+</ul></li>
+</ol>
+<h2 id="принципы-выполнения-по-требованию-заказчика">7. Принципы
+выполнения (по требованию заказчика)</h2>
+<ul>
+<li>Только высококвалифицированные ИИ-агенты на каждом этапе.</li>
+<li>Аудит и экспертизы — уровень «Большой четвёрки».</li>
+<li>Дизайн — современные мировые тренды.</li>
+<li>Финансовая модель — финансовый ИИ-агент мирового уровня.</li>
+<li>Контроль агентов каждые 10 минут; ротация зависших.</li>
+<li>Никаких додумываний поверх исходников и поставленных задач.</li>
+<li>Без подмешивания материалов из других проектов и папок.</li>
+<li>Соответствие законодательству РФ и инструкциям ЦБ РФ.</li>
+</ul>
+    </article>
+    <div class="doc-actions">
+      <a class="btn btn--primary" href="../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flip-rtl"><polyline points="9 18 15 12 9 6" transform="scale(-1,1) translate(-24,0)"/></svg>
+        <span data-i18n="actions.back_to_home">На главную</span>
+      </a>
+      <a class="btn btn--ghost" href="../site-map.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 9 6 9 21"/><polyline points="21 6 15 6 15 21"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
+        <span data-i18n="nav.sitemap">Карта сайта</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container-max">
+    <div class="footer__bottom">
+      <span data-i18n="footer.rights">© 2026 Кагиров А.-Х.А. · Center Group Company · св. №4011265 от 19.12.2024</span>
+      <span data-i18n="footer.engagement">Engagement reference: CPFSR-RF-DESIGN-2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== BACK-TO-TOP ====== -->
+<button class="back-to-top" aria-label="Наверх" title="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+</body>
+</html>

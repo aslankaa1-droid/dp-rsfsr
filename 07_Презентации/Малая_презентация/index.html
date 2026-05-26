@@ -1,0 +1,429 @@
+﻿<!doctype html>
+<html lang="ru" data-theme="daylight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ЦП РСФСР · Малая презентация</title>
+<meta name="theme-color" content="#0B2B5C">
+<meta name="description" content="ЦП РСФСР — компактная презентация. 12 слайдов, 4 темы, 4 языка (RU/EN/FR/AR).">
+<link rel="stylesheet" href="../../_shared/brand.css">
+<style>
+/* Слайдовый режим: каждый блок занимает экран */
+html { scroll-snap-type: y mandatory; }
+.slide {
+  min-height: 100vh; min-height: 100svh;
+  scroll-snap-align: start;
+  display: flex; align-items: center;
+  padding: 110px 0 60px;
+  position: relative;
+}
+.slide--dark { background: linear-gradient(135deg, var(--brand-primary-dark) 0%, var(--brand-primary) 60%, var(--brand-primary-light) 100%); color: #fff; }
+.slide--dark h1, .slide--dark h2, .slide--dark h3 { color: #fff; }
+.slide--dark .lead { color: rgba(255,255,255,.85); }
+.slide--dark .card { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.14); }
+.slide--dark .card h4 { color: #fff; }
+.slide--dark .card p { color: rgba(255,255,255,.78); }
+.slide--soft { background: var(--bg-soft); }
+.slide--gold { background: linear-gradient(135deg, var(--brand-accent) 0%, var(--brand-accent-soft) 100%); color: var(--brand-primary-dark); }
+.slide--gold h2 { color: var(--brand-primary-dark); }
+.slide--gold .lead { color: rgba(11,43,92,.85); }
+
+.snum {
+  position: absolute; top: 90px; right: 32px;
+  font-family: 'JetBrains Mono', monospace; font-weight: 700;
+  font-size: .75rem; letter-spacing: .12em; color: var(--fg-faint);
+}
+[dir="rtl"] .snum { right: auto; left: 32px; }
+.slide--dark .snum { color: rgba(255,255,255,.4); }
+.slide--gold .snum { color: rgba(11,43,92,.4); }
+
+.cover-mark {
+  width: 84px; height: 84px;
+  background: var(--brand-accent); border-radius: 20px;
+  display: grid; place-items: center;
+  color: var(--brand-primary-dark);
+  font-family: 'Onest', sans-serif; font-weight: 800; font-size: 2.5rem;
+  position: relative; margin-bottom: 28px;
+}
+.cover-mark::after {
+  content: ""; position: absolute; top: 10px; right: 10px;
+  width: 14px; height: 14px; background: var(--brand-primary-dark);
+}
+.cover-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: center; }
+@media (max-width: 980px) { .cover-grid { grid-template-columns: 1fr; } }
+
+.dots {
+  position: fixed; right: 24px; top: 50%; transform: translateY(-50%);
+  display: flex; flex-direction: column; gap: 8px; z-index: 50;
+}
+.dots a {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: rgba(11,43,92,.25);
+  transition: all .2s var(--ease);
+}
+.dots a:hover { background: var(--accent); transform: scale(1.4); }
+@media (max-width: 900px) { .dots { display: none; } }
+
+.benef-card { padding: 28px; border-top: 4px solid var(--accent); }
+.benef-card:nth-child(2) { border-top-color: var(--brand-primary-light); }
+.benef-card:nth-child(3) { border-top-color: var(--brand-success); }
+
+.tl-phase { padding: 28px; background: var(--card-bg); border: 1px solid var(--border-soft); border-radius: 16px; border-top: 4px solid var(--accent); }
+.tl-phase:nth-child(2) { border-top-color: var(--brand-primary-light); }
+.tl-phase:nth-child(3) { border-top-color: var(--brand-success); }
+.tl-period { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: .875rem; color: var(--accent); margin-bottom: 6px; letter-spacing: .04em; }
+.tl-phase:nth-child(2) .tl-period { color: var(--brand-primary-light); }
+.tl-phase:nth-child(3) .tl-period { color: var(--brand-success); }
+
+.flow6 { display: grid; grid-template-columns: repeat(6,1fr); gap: 12px; margin-top: 24px; }
+@media (max-width: 1100px) { .flow6 { grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 600px) { .flow6 { grid-template-columns: 1fr 1fr; } }
+.flow-step { padding: 18px 14px; background: var(--card-bg); border: 1px solid var(--border-soft); border-radius: 12px; }
+.flow-step .n { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--accent); font-size: .75rem; letter-spacing: .08em; margin-bottom: 6px; }
+.flow-step h4 { color: var(--primary); font-size: 1rem; margin-bottom: 4px; }
+.flow-step p { font-size: .8125rem; color: var(--fg-soft); margin: 0; }
+
+.legal-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-top: 24px; }
+@media (max-width: 900px) { .legal-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 540px) { .legal-grid { grid-template-columns: 1fr; } }
+
+.bignum { display: flex; align-items: flex-end; gap: 40px; flex-wrap: wrap; }
+.bignum-v { font-family: 'Onest', sans-serif; font-weight: 800; font-size: clamp(80px, 14vmin, 200px); line-height: 1; color: var(--accent); }
+.bignum-cap { font-size: 1.125rem; color: var(--fg-soft); max-width: 34ch; }
+.slide--dark .bignum-cap { color: rgba(255,255,255,.85); }
+.slide--gold .bignum-cap { color: var(--brand-primary-dark); }
+
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<div class="scroll-progress"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="#s1"><span class="brand-mark">Р</span><span data-i18n="brand.name">ЦП РСФСР</span></a>
+    <nav class="topbar-nav" id="navlinks">
+      <a href="#s1">01</a><a href="#s3">02</a><a href="#s4">03</a><a href="#s5">04</a>
+      <a href="#s6">05</a><a href="#s7">06</a><a href="#s8">07</a><a href="#s9">08</a>
+      <a href="#s10">09</a><a href="#s11">10</a><a href="#s12">11</a>
+    </nav>
+    <div class="topbar-actions">
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-i18n-btn="ru">RU</button>
+        <button class="tbtn" data-i18n-btn="en">EN</button>
+        <button class="tbtn" data-i18n-btn="fr">FR</button>
+        <button class="tbtn" data-i18n-btn="ar">عر</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn active" data-theme-btn="daylight" aria-label="Дневная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+        <button class="tbtn" data-theme-btn="midnight" aria-label="Тёмная тема"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="tbtn" data-theme-btn="sepia">◐</button>
+        <button class="tbtn" data-theme-btn="contrast">A11Y</button>
+      </div>
+      <div class="tbtn-grp">
+        <button class="tbtn" data-font-action="dec">A−</button>
+        <button class="tbtn" data-font-action="reset">A</button>
+        <button class="tbtn" data-font-action="inc">A+</button>
+      </div>
+      <button class="tbtn tbtn-burger">≡</button>
+    </div>
+  </div>
+</header>
+
+<nav class="dots">
+  <a href="#s1" title="Титул"></a><a href="#s2" title="Сущность"></a><a href="#s3" title="Проблема"></a>
+  <a href="#s4" title="Потенциал"></a><a href="#s5" title="Цикл"></a><a href="#s6" title="Эффект"></a>
+  <a href="#s7" title="Технология"></a><a href="#s8" title="Правовой контур"></a>
+  <a href="#s9" title="Экономика"></a><a href="#s10" title="Дорожная карта"></a>
+  <a href="#s11" title="Защита"></a><a href="#s12" title="Контакты"></a>
+</nav>
+
+<main id="main">
+
+<!-- 1: Cover -->
+<section class="slide slide--dark" id="s1">
+  <div class="snum">01 / 12</div>
+  <div class="container">
+    <div class="cover-grid">
+      <div class="reveal">
+        <div class="cover-mark">Р</div>
+        <span class="eyebrow" data-i18n="hero.eyebrow">Цифровая платформа · ЦФА · Инфраструктурное фондирование</span>
+        <h1 data-i18n="brand.name" style="margin-bottom:12px">ЦП РСФСР</h1>
+        <h3 style="color:rgba(255,255,255,.92); font-weight:500; max-width:32ch" data-i18n="hero.subtitle">Российский Сервис Финансирования Социального Развития</h3>
+        <p class="lead" style="margin-top:18px" data-i18n="hero.lead">Цифровая платформа-оператор выпуска ЦФА под залог имущества — с целевым инфраструктурным фондированием через Фабрику ВЭБ.РФ (ПП РФ № 158) и Федеральное казначейство в Stage 1 pilot-light 2026–2028; расширение мандата в Stage 2 — горизонт 2029+ на национальные и инфраструктурные проекты.</p>
+      </div>
+      <aside class="hero-panel reveal-right">
+        <div class="stat"><span class="stat-lbl" data-i18n="contacts.author">Автор</span><span class="stat-val" style="font-size:1rem">Кагиров А.-Х. А.</span></div>
+        <div class="stat"><span class="stat-lbl" data-i18n="contacts.sviditelstvo">Свидетельство</span><span class="stat-val" style="font-size:1rem; font-family:'JetBrains Mono', monospace">№4011265</span></div>
+        <div class="stat"><span class="stat-lbl">Дата депонирования</span><span class="stat-val" style="font-size:1rem; font-family:'JetBrains Mono', monospace">19.12.2024</span></div>
+        <div class="stat"><span class="stat-lbl" data-i18n="stats.term">Срок запуска</span><span class="stat-val">от 18<em data-i18n="stats.months">мес.</em></span></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 2: Сущность -->
+<section class="slide" id="s2">
+  <div class="snum">02 / 12</div>
+  <div class="container">
+    <div class="s-head reveal">
+      <span class="eyebrow" data-i18n="solution.eyebrow">Сущность проекта</span>
+      <h2 data-i18n="solution.title">Платформа-оператор выпуска ЦФА под залог имущества</h2>
+      <p class="lead" data-i18n="solution.lead">Оператор выпускает ЦФА на залоговое имущество граждан и организаций. Под пул ЦФА в pilot-light 2026–2028 целевое фондирование организуется через ФПФ ВЭБ.РФ + Федеральное казначейство на счёт эскроу (без поправок в 86-ФЗ). Банк России — надзорный регулятор по ст. 4 86-ФЗ.</p>
+    </div>
+    <div class="row row-4 stagger reveal">
+      <div class="card card--feature"><div class="card-num">01</div><h4 data-i18n="solution.b1">Залог</h4><p data-i18n="solution.b1d">Имущество остаётся у собственника. Оценка автоматизирована.</p></div>
+      <div class="card card--feature"><div class="card-num">02</div><h4 data-i18n="solution.b2">Выпуск ЦФА</h4><p data-i18n="solution.b2d">Технопартнёрство с оператором ИС ЦФА по 779-П (ст. 5 №259-ФЗ).</p></div>
+      <div class="card card--feature"><div class="card-num">03</div><h4 data-i18n="solution.b3">Целевое фондирование</h4><p data-i18n="solution.b3d">ФПФ ВЭБ.РФ + Казначейство. Целевой счёт эскроу.</p></div>
+      <div class="card card--feature"><div class="card-num">04</div><h4 data-i18n="solution.b4">Мена ЦФА</h4><p data-i18n="solution.b4d">Новый объект → новый ЦФА; собственник получает доход.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3: Проблема -->
+<section class="slide slide--soft" id="s3">
+  <div class="snum">03 / 12</div>
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="problem.eyebrow">Проблематика</span>
+      <h2 data-i18n="problem.title">Богатая страна — дефицит инвестиционной денежной массы</h2>
+    </div>
+    <div class="bignum reveal" style="margin-top:32px">
+      <div class="bignum-v">507<span style="font-size:.4em; margin-left:8px">трлн ₽</span></div>
+      <div class="bignum-cap" data-i18n="problem.lead">Совокупная стоимость недвижимости Российской Федерации. Огромный запас национального богатства не вовлечён в финансовый оборот, а национальные проекты конкурируют за ограниченный бюджет.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 4: Потенциал -->
+<section class="slide slide--dark" id="s4">
+  <div class="snum">04 / 12</div>
+  <div class="container">
+    <div class="s-head reveal">
+      <span class="eyebrow" data-i18n="potential.eyebrow">Потенциал</span>
+      <h2 data-i18n="potential.title">Залоговая ёмкость — 25,5 трлн ₽</h2>
+      <p class="lead" data-i18n="potential.lead">Консервативная оценка: 10% активов × 50% стоимости. Из совокупных 507 трлн ₽ недвижимости РФ.</p>
+    </div>
+    <div class="row row-4 stagger reveal">
+      <div class="stat"><div class="stat-val">400<em>трлн ₽</em></div><div class="stat-lbl" data-i18n="potential.sJil">Жилой фонд</div></div>
+      <div class="stat"><div class="stat-val">45<em>трлн ₽</em></div><div class="stat-lbl" data-i18n="potential.sCom">Коммерческая</div></div>
+      <div class="stat"><div class="stat-val">62<em>трлн ₽</em></div><div class="stat-lbl" data-i18n="potential.sZem">Земельные участки</div></div>
+      <div class="stat"><div class="stat-val">25,5<em>трлн ₽</em></div><div class="stat-lbl">Залоговая ёмкость</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5: Жизненный цикл -->
+<section class="slide" id="s5">
+  <div class="snum">05 / 12</div>
+  <div class="container">
+    <div class="s-head reveal">
+      <span class="eyebrow" data-i18n="flow.eyebrow">Жизненный цикл</span>
+      <h2 data-i18n="flow.title">Шесть ключевых этапов из 19 шагов</h2>
+    </div>
+    <div class="flow6 stagger reveal">
+      <div class="flow-step"><div class="n">01</div><h4 data-i18n="flow.s1">Регистрация</h4><p data-i18n="flow.s1d">ЕСИА / ЕБС</p></div>
+      <div class="flow-step"><div class="n">02</div><h4 data-i18n="flow.s2">Оценка</h4><p data-i18n="flow.s2d">135-ФЗ, страхование</p></div>
+      <div class="flow-step"><div class="n">03</div><h4 data-i18n="flow.s3">Выпуск ЦФА</h4><p data-i18n="flow.s3d">259-ФЗ, смарт-контракт</p></div>
+      <div class="flow-step"><div class="n">04</div><h4 data-i18n="flow.s4">Фондирование</h4><p data-i18n="flow.s4d">ФПФ ВЭБ.РФ + Казначейство</p></div>
+      <div class="flow-step"><div class="n">05</div><h4 data-i18n="flow.s5">Реализация</h4><p data-i18n="flow.s5d">Казначейство → нацпроект</p></div>
+      <div class="flow-step"><div class="n">06</div><h4 data-i18n="flow.s6">Мена ЦФА</h4><p data-i18n="flow.s6d">Новый объект, доход</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6: Эффект -->
+<section class="slide slide--soft" id="s6">
+  <div class="snum">06 / 12</div>
+  <div class="container">
+    <div class="s-head reveal">
+      <span class="eyebrow" data-i18n="effect.eyebrow">Эффект</span>
+      <h2 data-i18n="effect.title">Сбалансированная модель для трёх стейкхолдеров</h2>
+    </div>
+    <div class="row row-3 stagger reveal">
+      <div class="card benef-card">
+        <h3 data-i18n="effect.gov">Государство</h3>
+        <ul style="padding-left:18px; margin:0">
+          <li data-i18n="effect.gov1">Внебюджетное финансирование</li>
+          <li data-i18n="effect.gov2">Сокращение очерёдности</li>
+          <li data-i18n="effect.gov3">Мультипликатор 1,8–2,3</li>
+          <li data-i18n="effect.gov4">Развитие цифровой экономики</li>
+        </ul>
+      </div>
+      <div class="card benef-card">
+        <h3 data-i18n="effect.cb">Банк России</h3>
+        <ul style="padding-left:18px; margin:0">
+          <li data-i18n="effect.cb1">Развитие финансового рынка</li>
+          <li data-i18n="effect.cb2">Денежная масса под обеспечение</li>
+          <li data-i18n="effect.cb3">Цифровой рубль в нацпроектах</li>
+          <li data-i18n="effect.cb4">Полный контроль расходов</li>
+        </ul>
+      </div>
+      <div class="card benef-card">
+        <h3 data-i18n="effect.people">Население и бизнес</h3>
+        <ul style="padding-left:18px; margin:0">
+          <li data-i18n="effect.p1">Доход от собственных активов</li>
+          <li data-i18n="effect.p2">Рост занятости</li>
+          <li data-i18n="effect.p3">Бесплатное страхование залога</li>
+          <li data-i18n="effect.p4">Цифровая грамотность</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7: Технология -->
+<section class="slide slide--dark" id="s7">
+  <div class="snum">07 / 12</div>
+  <div class="container">
+    <div class="s-head reveal">
+      <span class="eyebrow">Технология</span>
+      <h2>Импортонезависимая платформа</h2>
+      <p class="lead">100% компонентов — из реестра российского ПО Минцифры или сертифицированы ФСТЭК. Уровень защиты — максимальный 4-й по ГОСТ Р 57580.1.</p>
+    </div>
+    <div class="row row-4 stagger reveal">
+      <div class="card"><div class="card-num">3 ЦОД</div><h4>Геораспределение</h4><p>Active-active-active в разных федеральных округах.</p></div>
+      <div class="card"><div class="card-num">99,99%</div><h4>SLA</h4><p>RPO 0 / RTO 5 мин для критичных контуров.</p></div>
+      <div class="card"><div class="card-num">КИИ-1</div><h4>Категория КИИ</h4><p>1 категория, ГосСОПКА, ФСТЭК, НКЦКИ.</p></div>
+      <div class="card"><div class="card-num">DLT</div><h4>Реестр ЦФА</h4><p>Permissioned, PBFT-консенсус, отечественная платформа.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8: Правовой контур -->
+<section class="slide" id="s8">
+  <div class="snum">08 / 12</div>
+  <div class="container">
+    <div class="s-head reveal">
+      <span class="eyebrow" data-i18n="legal.eyebrow">Правовой контур</span>
+      <h2 data-i18n="legal.title">Строго в правовом поле Российской Федерации</h2>
+      <p class="lead" data-i18n="legal.lead">Базовый каркас уже существует. Для полного запуска требуется принятие пакета из 10 нормативных актов.</p>
+    </div>
+    <div class="legal-grid stagger reveal">
+      <div class="fz"><code>259-ФЗ</code><span>ЦФА</span></div>
+      <div class="fz"><code>86-ФЗ</code><span>Банк России</span></div>
+      <div class="fz"><code>340-ФЗ</code><span>Цифровой рубль</span></div>
+      <div class="fz"><code>115-ФЗ</code><span>ПОД/ФТ</span></div>
+      <div class="fz"><code>187-ФЗ</code><span>КИИ</span></div>
+      <div class="fz"><code>152-ФЗ</code><span>ПДн</span></div>
+      <div class="fz"><code>779-П</code><span>Оператор ИС</span></div>
+      <div class="fz"><code>683-П</code><span>Защита информации</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9: Экономика -->
+<section class="slide slide--dark" id="s9">
+  <div class="snum">09 / 12</div>
+  <div class="container">
+    <div class="s-head reveal">
+      <span class="eyebrow" data-i18n="econ.eyebrow">Экономика</span>
+      <h2 data-i18n="econ.title">NPV 51,2 млрд ₽ при стартовом капитале 1,3 млрд ₽</h2>
+      <p class="lead" data-i18n="econ.lead">10-летняя модель: окупаемость 2,8 года. Даже консервативный сценарий даёт NPV ≈ 57 млрд ₽.</p>
+    </div>
+    <div class="row row-4 stagger reveal">
+      <div class="stat"><div class="stat-val">51,2<em>млрд ₽</em></div><div class="stat-lbl" data-i18n="stats.npv">NPV @ WACC 30%</div></div>
+      <div class="stat"><div class="stat-val">62% (project-level)</div><div class="stat-lbl" data-i18n="stats.irr">IRR</div></div>
+      <div class="stat"><div class="stat-val">2,8<em data-i18n="stats.years">года</em></div><div class="stat-lbl" data-i18n="stats.payback">Окупаемость</div></div>
+      <div class="stat"><div class="stat-val">138<em>млрд ₽</em></div><div class="stat-lbl" data-i18n="stats.rev10">Выручка год 10</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10: Дорожная карта -->
+<section class="slide slide--soft" id="s10">
+  <div class="snum">10 / 12</div>
+  <div class="container">
+    <div class="s-head reveal">
+      <span class="eyebrow" data-i18n="roadmap.eyebrow">Дорожная карта</span>
+      <h2 data-i18n="roadmap.title">Три фазы реализации</h2>
+    </div>
+    <div class="row row-3 stagger reveal">
+      <div class="tl-phase">
+        <div class="tl-period">2025 — 2026</div>
+        <h3 data-i18n="roadmap.p1t">Подготовка</h3>
+        <ul data-i18n="roadmap.p1l" style="padding-left:18px; margin:0; color:var(--fg-soft); font-size:.9375rem">
+          <li>Согласование с Банком России</li><li>Межведомственная группа</li><li>Пакет НПА</li><li>Разработка и сертификация</li>
+        </ul>
+      </div>
+      <div class="tl-phase">
+        <div class="tl-period">2026 — 2027</div>
+        <h3 data-i18n="roadmap.p2t">Пилот и основная фаза</h3>
+        <ul data-i18n="roadmap.p2l" style="padding-left:18px; margin:0; color:var(--fg-soft); font-size:.9375rem">
+          <li>Пилот на недвижимости</li><li>Верификация процессов</li><li>Первые целевые выпуски ЦФА</li><li>Масштабирование</li>
+        </ul>
+      </div>
+      <div class="tl-phase">
+        <div class="tl-period">2027 +</div>
+        <h3 data-i18n="roadmap.p3t">Тиражирование</h3>
+        <ul data-i18n="roadmap.p3l" style="padding-left:18px; margin:0; color:var(--fg-soft); font-size:.9375rem">
+          <li>Движимое имущество</li><li>Фондовые активы</li><li>Интеллектуальная собственность</li><li>БРИКС+ / ЕАЭС</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11: Защита -->
+<section class="slide slide--gold" id="s11">
+  <div class="snum">11 / 12</div>
+  <div class="container">
+    <div class="s-head reveal">
+      <span class="eyebrow" style="color:var(--brand-primary-dark)">Защита и преимущества</span>
+      <h2>Депонировано как ноу-хау — 19 декабря 2024</h2>
+      <p class="lead">Концепция и архитектура платформы защищены свидетельством о депонировании №4011265 (ireg.pro, хеш ГОСТ-Р 34.11-2012). Депонирование — фиксация даты приоритета. Правовой режим охраны — ноу-хау (ст. 1465 ГК) и программа для ЭВМ (регистрация в Роспатенте — в работе). Уникальная двухстадийная архитектура wedge-pilot 2026–2028 (ВЭБ.РФ + Казначейство) → горизонт 2029+ (расширение мандата через пакет 4 ФЗ) — патентоспособная и без публичных аналогов в РФ и за рубежом.</p>
+    </div>
+    <div class="row row-3 stagger reveal">
+      <div class="card" style="background:rgba(11,43,92,.08); border-color:rgba(11,43,92,.12)">
+        <div class="card-num" style="color:var(--brand-primary-dark)">Юридический</div>
+        <h4 style="color:var(--brand-primary-dark)">Защищённое ноу-хау</h4>
+        <p style="color:rgba(11,43,92,.8)">Без участия правообладателя модель не воспроизводится.</p>
+      </div>
+      <div class="card" style="background:rgba(11,43,92,.08); border-color:rgba(11,43,92,.12)">
+        <div class="card-num" style="color:var(--brand-primary-dark)">Регуляторный</div>
+        <h4 style="color:var(--brand-primary-dark)">Единый оператор ЦБ</h4>
+        <p style="color:rgba(11,43,92,.8)">Барьер входа для конкурентов кратно выше стандартных ЦФА-площадок.</p>
+      </div>
+      <div class="card" style="background:rgba(11,43,92,.08); border-color:rgba(11,43,92,.12)">
+        <div class="card-num" style="color:var(--brand-primary-dark)">Технологический</div>
+        <h4 style="color:var(--brand-primary-dark)">Интеграции с ГИС</h4>
+        <p style="color:rgba(11,43,92,.8)">Госуслуги, ЕГРН, СМЭВ, Казначейство — единый контур.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12: Контакты -->
+<section class="slide slide--dark" id="s12">
+  <div class="snum">12 / 12</div>
+  <div class="container">
+    <div class="s-head reveal">
+      <span class="eyebrow" data-i18n="contacts.eyebrow">Контакты</span>
+      <h2 data-i18n="contacts.title">Связаться по проекту</h2>
+      <p class="lead" data-i18n="contacts.lead">Проект открыт к взаимодействию с Банком России, Минфином, Минцифры и Федеральным казначейством.</p>
+    </div>
+    <div class="row row-2 reveal">
+      <div class="card">
+        <span class="eyebrow" data-i18n="contacts.author">Автор и правообладатель</span>
+        <h3 style="font-size:1.5rem; margin-bottom:6px">Кагиров Абдул-Хаким Ахмадович</h3>
+        <p style="color:rgba(255,255,255,.85); font-size:.9375rem">Свидетельство о депонировании №4011265 от 19.12.2024 (ireg.pro). Ноу-хау, коммерческая тайна. Депонирование — фиксация даты приоритета. Правовой режим охраны — ноу-хау (ст. 1465 ГК) и программа для ЭВМ (регистрация в Роспатенте — в работе).</p>
+      </div>
+      <div class="card">
+        <span class="eyebrow" data-i18n="contacts.hashLabel">Хеш ГОСТ-Р 34.11-2012</span>
+        <p class="mono" style="font-size:.75rem; word-break:break-all; line-height:1.6; color:rgba(255,255,255,.82); margin:0">a7d40971cbb5443e0f3d037ff054080dfb0064b59832cf1b89386078bf3de373</p>
+        <div style="margin-top:18px">
+          <a class="btn btn--accent" href="../Большая_презентация/index.html">Большая презентация</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script src="../../_shared/i18n.js"></script>
+<script src="../../_shared/app.js"></script>
+</body>
+</html>

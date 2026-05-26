@@ -1,0 +1,25 @@
+# Снапшоты (192 МБ, не нужны на хостинге)
+_снапшоты/
+
+# Служебные tools (генераторы PDF/HTML, не нужны в публикации)
+_tools/
+
+# Скрипты обёрток переводов (служебные)
+_translations/_batch7_wrap.ps1
+_translations/_batch8_wrap.ps1
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# Node (если появится)
+node_modules/
+package-lock.json
+
+# Build artefacts
+*.log
+*.tmp
