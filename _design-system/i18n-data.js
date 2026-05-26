@@ -69,8 +69,25 @@
       sections: {
         blocks: {
           eyebrow: 'Структура проекта',
-          title: 'Семнадцать тематических блоков',
-          lead: 'Полный документальный пакет — от технической документации до Governance Pack и Compliance Matrix'
+          title: 'Шестнадцать тематических блоков',
+          lead: 'Полный документальный пакет — от технической документации до Governance Pack и Compliance Matrix',
+          c01_title: 'Техническая документация', c01_desc: 'Концепт, функциональные и нефункциональные требования, DLT-реестр ЦФА, архитектурные диаграммы, дорожная карта',
+          c02_title: 'Юридический фундамент', c02_desc: '259-ФЗ wedge через ВЭБ.РФ / Газпромбанк / Минэк / Атомайз, Stage 1 / Stage 2, pre-meeting briefs, учреждение АО',
+          c03_title: 'Финансовая модель', c03_desc: 'SoT v3: NPV 51,2 / IRR 62 % / WACC 30 % / EM 12× / Payback 2,8. Monte Carlo, sensitivity, tornado, multi-stage TV',
+          c04_title: 'Бизнес-план', c04_desc: 'Wedge-pilot-light, GTM-sequencing, Champion-map, unit-экономика, дорожная карта 2026-2034',
+          c05_title: 'Бренд-бук', c05_desc: 'Палитра, типографика, логотип, применения, охранное поле',
+          c07_title: 'Презентации', c07_desc: 'Pitch deck RU/EN (a16z канон), Доклад для ЦБ РФ, Pre-meeting briefs, One-pager',
+          c08_title: 'Веб-сайт', c08_desc: 'Публичная страница проекта, SEO-разметка, заявки и контакты',
+          c09_title: 'Мобильное приложение', c09_desc: 'PWA installable + Capacitor v6+, спецификация, КД (API, модель данных), Vitest / Playwright / Appium',
+          c10_title: 'Рекламные материалы', c10_desc: 'Буклеты, баннеры, social-media kit, ATL/BTL',
+          c11_title: 'Международная оценка', c11_desc: 'DCF, мультипликаторы, scenarios, fairness benchmark vs tier-1 fintech',
+          c12_title: 'DD-отчёт', c12_desc: 'Stakeholder map, Government Champions, регуляторное окружение, риски, mitigants',
+          c13_title: 'Экспертиза', c13_desc: 'Экспертное заключение по существу проекта',
+          c14_title: 'Сводный аудит · 9,22 / 10', c14_desc: 'Пост-Горизонт-III: A·Tech / B·Legal / C·Fin / D·Strat / E·Design / F·QA / G·International',
+          c15_title: 'RFP для внешней верификации', c15_desc: 'Big-4 Vendor DD, Legal Opinion, IT-сертификация (ФСТЭК → ISO 27001 → SOC 2), Market Study',
+          c16_title: 'Governance и Compliance', c16_desc: 'Совет директоров 3/5 независимых, 4 комитета, Code of Conduct, ESG (SASB+TCFD), Compliance Matrix 12×75',
+          c17_title: 'Data room', c17_desc: 'VDR-структура 10 разделов × ~75 документов в каноне Intralinks/Datasite, permission tiers',
+          arrow: 'Открыть'
         },
         champion: {
           eyebrow: 'Government Champions',
@@ -163,8 +180,25 @@
       sections: {
         blocks: {
           eyebrow: 'Project structure',
-          title: 'Seventeen thematic blocks',
-          lead: 'A complete documentation pack — from technical specifications to a Governance Pack and a Compliance Matrix'
+          title: 'Sixteen thematic blocks',
+          lead: 'A complete documentation pack — from technical specifications to a Governance Pack and a Compliance Matrix',
+          c01_title: 'Technical Documentation', c01_desc: 'Concept, functional and non-functional requirements, DLT register of DFAs, architecture diagrams, development roadmap',
+          c02_title: 'Legal Foundation', c02_desc: '259-FZ wedge via VEB.RF / Gazprombank / MinEcon / Atomyze, Stage 1 / Stage 2, pre-meeting briefs, JSC incorporation',
+          c03_title: 'Financial Model', c03_desc: 'SoT v3: NPV 51.2 / IRR 62% / WACC 30% / EM 12× / Payback 2.8. Monte Carlo, sensitivity, tornado, multi-stage TV',
+          c04_title: 'Business Plan', c04_desc: 'Wedge-pilot-light, GTM sequencing, Champion-map, unit economics, 2026-2034 roadmap',
+          c05_title: 'Brand Book', c05_desc: 'Palette, typography, logo, applications, exclusion zone',
+          c07_title: 'Presentations', c07_desc: 'Pitch deck RU/EN (a16z canon), CBR Report, pre-meeting briefs, one-pager',
+          c08_title: 'Web Site', c08_desc: 'Public project page, SEO markup, applications and contacts',
+          c09_title: 'Mobile Application', c09_desc: 'PWA installable + Capacitor v6+, specification, design docs (API, data model), Vitest / Playwright / Appium',
+          c10_title: 'Promotional Materials', c10_desc: 'Brochures, banners, social-media kit, ATL/BTL',
+          c11_title: 'International Valuation', c11_desc: 'DCF, multiples, scenarios, fairness benchmark vs tier-1 fintech',
+          c12_title: 'DD Report', c12_desc: 'Stakeholder map, Government Champions, regulatory environment, risks, mitigants',
+          c13_title: 'Expertise', c13_desc: 'Expert opinion on the substance of the project',
+          c14_title: 'Summary Audit · 9.22 / 10', c14_desc: 'Post-Horizon-III: A·Tech / B·Legal / C·Fin / D·Strat / E·Design / F·QA / G·International',
+          c15_title: 'RFP for External Verification', c15_desc: 'Big-4 Vendor DD, Legal Opinion, IT certification (FSTEC → ISO 27001 → SOC 2), Market Study',
+          c16_title: 'Governance and Compliance', c16_desc: 'Board 3/5 independent, 4 committees, Code of Conduct, ESG (SASB+TCFD), Compliance Matrix 12×75',
+          c17_title: 'Data Room', c17_desc: 'VDR structure 10 sections × ~75 documents in Intralinks/Datasite canon, permission tiers',
+          arrow: 'Open'
         },
         champion: {
           eyebrow: 'Government Champions',
@@ -257,8 +291,25 @@
       sections: {
         blocks: {
           eyebrow: 'Structure du projet',
-          title: 'Dix-sept blocs thématiques',
-          lead: 'Un dossier documentaire complet — des spécifications techniques au Governance Pack et à la matrice de conformité'
+          title: 'Seize blocs thématiques',
+          lead: 'Un dossier documentaire complet — des spécifications techniques au Governance Pack et à la matrice de conformité',
+          c01_title: 'Documentation technique', c01_desc: 'Concept, exigences fonctionnelles et non fonctionnelles, registre DLT des AFN, diagrammes d''architecture, feuille de route',
+          c02_title: 'Fondement juridique', c02_desc: 'Wedge FZ-259 via VEB.RF / Gazprombank / MinEco / Atomyze, étape 1 / 2, briefs pré-réunion, constitution SA',
+          c03_title: 'Modèle financier', c03_desc: 'SoT v3 : NPV 51,2 / IRR 62 % / WACC 30 % / EM 12× / Payback 2,8. Monte Carlo, sensibilité, tornado, TV multi-étapes',
+          c04_title: 'Plan d''affaires', c04_desc: 'Wedge-pilot-light, séquençage GTM, Champion-map, unit economics, feuille de route 2026-2034',
+          c05_title: 'Brand book', c05_desc: 'Palette, typographie, logo, applications, zone d''exclusion',
+          c07_title: 'Présentations', c07_desc: 'Pitch deck RU/EN (canon a16z), rapport pour la BdR, briefs pré-réunion, one-pager',
+          c08_title: 'Site web', c08_desc: 'Page publique du projet, balisage SEO, demandes et contacts',
+          c09_title: 'Application mobile', c09_desc: 'PWA installable + Capacitor v6+, spécification, documentation de conception (API, modèle de données), Vitest / Playwright / Appium',
+          c10_title: 'Matériels promotionnels', c10_desc: 'Brochures, bannières, social-media kit, ATL/BTL',
+          c11_title: 'Évaluation internationale', c11_desc: 'DCF, multiples, scénarios, benchmark d''équité vs fintech tier-1',
+          c12_title: 'Rapport DD', c12_desc: 'Carte des parties prenantes, Government Champions, environnement réglementaire, risques, mitigants',
+          c13_title: 'Expertise', c13_desc: 'Avis d''expert sur le fond du projet',
+          c14_title: 'Audit synthétique · 9,22 / 10', c14_desc: 'Post-Horizon-III : A·Tech / B·Legal / C·Fin / D·Strat / E·Design / F·QA / G·International',
+          c15_title: 'RFP pour vérification externe', c15_desc: 'Big-4 Vendor DD, Legal Opinion, certification IT (FSTEC → ISO 27001 → SOC 2), Market Study',
+          c16_title: 'Gouvernance et conformité', c16_desc: 'Conseil 3/5 indépendants, 4 comités, Code of Conduct, ESG (SASB+TCFD), Compliance Matrix 12×75',
+          c17_title: 'Data room', c17_desc: 'Structure VDR 10 sections × ~75 documents selon le canon Intralinks/Datasite, permission tiers',
+          arrow: 'Ouvrir'
         },
         champion: {
           eyebrow: 'Champions gouvernementaux',
@@ -351,8 +402,25 @@
       sections: {
         blocks: {
           eyebrow: 'هيكل المشروع',
-          title: 'سبع عشرة كتلة موضوعية',
-          lead: 'حزمة وثائقية متكاملة — من المواصفات التقنية إلى حزمة الحوكمة ومصفوفة الامتثال'
+          title: 'ست عشرة كتلة موضوعية',
+          lead: 'حزمة وثائقية متكاملة — من المواصفات التقنية إلى حزمة الحوكمة ومصفوفة الامتثال',
+          c01_title: 'الوثائق التقنية', c01_desc: 'المفهوم، المتطلبات الوظيفية وغير الوظيفية، سجل DLT لـ DFA، المخططات المعمارية، خارطة الطريق',
+          c02_title: 'الأساس القانوني', c02_desc: 'wedge FZ-259 عبر VEB.RF / Gazprombank / وزارة الاقتصاد / Atomyze، المرحلة 1 / 2، إحاطات قبل الاجتماع، تأسيس شركة مساهمة',
+          c03_title: 'النموذج المالي', c03_desc: 'SoT v3: NPV 51,2 / IRR 62% / WACC 30% / EM 12× / Payback 2,8. Monte Carlo، الحساسية، tornado، TV متعدد المراحل',
+          c04_title: 'خطة العمل', c04_desc: 'Wedge-pilot-light، تسلسل GTM، خريطة الرعاة، اقتصاديات الوحدة، خارطة الطريق 2026-2034',
+          c05_title: 'دليل الهوية', c05_desc: 'لوحة الألوان، الطباعة، الشعار، التطبيقات، منطقة الحماية',
+          c07_title: 'العروض التقديمية', c07_desc: 'Pitch deck RU/EN (معيار a16z)، تقرير لبنك روسيا، إحاطات قبل الاجتماع، one-pager',
+          c08_title: 'الموقع الإلكتروني', c08_desc: 'الصفحة العامة للمشروع، ترميز SEO، الطلبات والاتصالات',
+          c09_title: 'تطبيق الهاتف المحمول', c09_desc: 'PWA installable + Capacitor v6+، المواصفات، الوثائق التصميمية (API، نموذج البيانات)، Vitest / Playwright / Appium',
+          c10_title: 'المواد الترويجية', c10_desc: 'الكتيبات، اللافتات، مجموعة وسائل التواصل الاجتماعي، ATL/BTL',
+          c11_title: 'التقييم الدولي', c11_desc: 'DCF، المضاعفات، السيناريوهات، معيار العدالة مقابل fintech tier-1',
+          c12_title: 'تقرير DD', c12_desc: 'خريطة أصحاب المصلحة، الرعاة الحكوميون، البيئة التنظيمية، المخاطر، التخفيفات',
+          c13_title: 'الخبرة', c13_desc: 'رأي الخبير بشأن جوهر المشروع',
+          c14_title: 'التدقيق المُلخَّص · 9,22 / 10', c14_desc: 'ما بعد-Horizon-III: A·Tech / B·Legal / C·Fin / D·Strat / E·Design / F·QA / G·International',
+          c15_title: 'RFP للتحقق الخارجي', c15_desc: 'Big-4 Vendor DD، Legal Opinion، اعتماد IT (FSTEC → ISO 27001 → SOC 2)، Market Study',
+          c16_title: 'الحوكمة والامتثال', c16_desc: 'مجلس 3/5 مستقلون، 4 لجان، Code of Conduct، ESG (SASB+TCFD)، Compliance Matrix 12×75',
+          c17_title: 'Data room', c17_desc: 'هيكل VDR من 10 أقسام × ~75 مستنداً وفق معيار Intralinks/Datasite، طبقات الصلاحيات',
+          arrow: 'فتح'
         },
         champion: {
           eyebrow: 'الرعاة الحكوميون',
