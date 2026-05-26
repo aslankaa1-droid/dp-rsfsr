@@ -11,18 +11,17 @@
    ===================================================================== */
 window.CPFSR_AUTH = {
 
-  // Активные PIN-коды (любой подходящий пропускает на сайт).
-  // label — для удобства администратора (не показывается публично).
+  // Активные PIN-коды Аслана (любой пропускает на сайт).
   PINS: [
-    { label: 'Аслан — основной',  hash: '481f6cc0511143ccdd7e2d1b1b94faf0a700a8b49cd13922a70b5ae28acaa8c5' }, // PIN: 654321
-    { label: 'Гостевой / партнёры', hash: '023f5351b94db0bdcde8dd21da240ac75adc1fc82371c516543b25485cb900de' }  // PIN: 142536
-    // ↑ Можно добавлять ещё. Пример:
-    // { label: 'Минэк — Решетников', hash: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX...' },
-    // { label: 'Минфин — Колычев',   hash: 'YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY...' }
+    { label: 'Аслан PIN 1', hash: '831f7756d9ceeeaf55c495a005261772fbc546b15704cfa7fd300f9947ceb775' }, // PIN: 929647
+    { label: 'Аслан PIN 2', hash: '0a44cd2cbce532cd9caae282721286ca5ee7d65f3fc119d9e1cd37341144615e' }, // PIN: 929657
+    { label: 'Аслан PIN 3', hash: '3e4360471ed97c89d6c0ecb0ae0a888aa28a9576c4429c58f54c40176c1e2714' }, // PIN: 925203
+    { label: 'Аслан PIN 4', hash: '0409eab7d375cb35eccaff5c0d58f1cbba07e1987ca60bcb9fb79ae09fd794d2' }, // PIN: 969795
+    { label: 'Аслан PIN 5', hash: '8b76a77156d3a40827e29704a590372f844872f961094a7cf774ef67a1be62e9' }  // PIN: 070970
   ],
 
-  // (legacy alias на случай старого кода — оставлен первый PIN из PINS)
-  PIN_HASH: '481f6cc0511143ccdd7e2d1b1b94faf0a700a8b49cd13922a70b5ae28acaa8c5',
+  // (legacy alias — первый PIN из PINS, для совместимости с возможным старым кодом)
+  PIN_HASH: '831f7756d9ceeeaf55c495a005261772fbc546b15704cfa7fd300f9947ceb775',
 
   // Сколько дней сессия живёт после успешного ввода PIN
   SESSION_DAYS: 30,
