@@ -137,8 +137,12 @@
         return;
       }
       const hash = await sha256(pin);
-      if (hash === cfg.PIN_HASH) {
+      /* Поддержка множества PIN: cfg.PINS = [{label, hash}, ...]; fallback на cfg.PIN_HASH */
+      const list = Array.isArray(cfg.PINS) && cfg.PINS.length ? cfg.PINS : [{ label: 'default', hash: cfg.PIN_HASH }];
+      const matched = list.find(p => p.hash === hash);
+      if (matched) {
         setAuthed();
+        try { localStorage.setItem('cpfsr-auth-label', matched.label || ''); } catch (e) {}
         ov.remove();
         document.documentElement.style.overflow = '';
       } else {
