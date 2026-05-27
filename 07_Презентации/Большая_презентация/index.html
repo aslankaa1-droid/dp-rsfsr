@@ -917,40 +917,30 @@
     <div class="row row-2 reveal">
       <div class="card">
         <h3 style="margin-bottom:20px">Информационная служба проекта</h3>
-        <form class="form-grid" id="contactForm" onsubmit="return sendContact(event)">
-          <div class="form-row">
-            <div class="field">
-              <label data-i18n="contacts.formName">Ваше имя</label>
-              <input type="text" name="name" required>
-            </div>
-            <div class="field">
-              <label data-i18n="contacts.formOrg">Организация</label>
-              <input type="text" name="org">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="field">
-              <label data-i18n="contacts.formEmail">Email для ответа</label>
-              <input type="email" name="email" required>
-            </div>
-            <div class="field">
-              <label data-i18n="contacts.formTopic">Тема обращения</label>
-              <select name="topic">
-                <option>Запрос на встречу</option>
-                <option>Регуляторное взаимодействие</option>
-                <option>Инвестиции и партнёрство</option>
-                <option>Технологическое партнёрство</option>
-                <option>Прочее</option>
-              </select>
-            </div>
-          </div>
-          <div class="field">
-            <label data-i18n="contacts.formMessage">Сообщение</label>
-            <textarea name="message" required></textarea>
-          </div>
-          <button class="btn btn--accent" type="submit" data-i18n="contacts.send">Отправить</button>
-          <p id="formStatus" style="font-size:.875rem; color:var(--brand-success); display:none; margin-top:8px"></p>
-        </form>
+        <div class="direct-contact">
+          <p style="margin:0 0 18px; font-size:.9375rem; color:var(--fg-soft); line-height:1.6">
+            Свяжитесь с информационной службой проекта напрямую — удобным для вас способом:
+          </p>
+          <ul style="list-style:none; padding:0; margin:0 0 18px; display:flex; flex-direction:column; gap:12px">
+            <li><a href="mailto:aslankaa@yandex.ru?subject=ЦПФСР.РФ%20—%20обращение" style="display:block; padding:14px 18px; border:1px solid var(--line, #E5E7EB); border-radius:10px; text-decoration:none; color:var(--fg); background:#fff">
+              <span style="display:block; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; color:var(--fg-soft); margin-bottom:2px">E-mail</span>
+              <span style="font-size:1rem; font-weight:600">aslankaa@yandex.ru</span>
+            </a></li>
+            <li><a href="tel:+79697955555" style="display:block; padding:14px 18px; border:1px solid var(--line, #E5E7EB); border-radius:10px; text-decoration:none; color:var(--fg); background:#fff">
+              <span style="display:block; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; color:var(--fg-soft); margin-bottom:2px">Телефон</span>
+              <span style="font-size:1rem; font-weight:600">+7 (969) 795-55-55</span>
+            </a></li>
+            <li><a href="https://t.me/aslan_kaa" target="_blank" rel="noopener" style="display:block; padding:14px 18px; border:1px solid var(--line, #E5E7EB); border-radius:10px; text-decoration:none; color:var(--fg); background:#fff">
+              <span style="display:block; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; color:var(--fg-soft); margin-bottom:2px">Telegram</span>
+              <span style="font-size:1rem; font-weight:600">@aslan_kaa</span>
+            </a></li>
+          </ul>
+          <p style="font-size:.75rem; color:var(--fg-soft); line-height:1.55; margin:0">
+            Сайт является информационным ресурсом. Персональные данные посетителей на сайте не
+            собираются и не обрабатываются в смысле Федерального закона № 152-ФЗ «О персональных
+            данных». Связь — по указанным каналам, которыми вы пользуетесь напрямую.
+          </p>
+        </div>
       </div>
       <div>
         <div class="card" style="margin-bottom:14px">
@@ -1032,20 +1022,8 @@
 <script src="../../_shared/finmodel.js"></script>
 
 <script>
-// === Contact form (mailto, для локальной работы — без сервера) ===
-function sendContact(ev) {
-  ev.preventDefault();
-  const f = ev.target;
-  const subject = encodeURIComponent('[ЦП РСФСР] ' + (f.topic.value || 'Обращение'));
-  const body = encodeURIComponent(
-    `Имя: ${f.name.value}\nОрганизация: ${f.org.value || '—'}\nEmail: ${f.email.value}\n\n${f.message.value}`
-  );
-  window.location.href = `mailto:info@example.com?subject=${subject}&body=${body}`;
-  const s = document.getElementById('formStatus');
-  s.style.display = 'block';
-  s.textContent = (I18N.dict[I18N.current].contacts.sent || 'Спасибо.');
-  return false;
-}
+// Контакт-форма убрана по требованию 152-ФЗ: сайт не собирает ПДн.
+// Связь — через прямые ссылки (mailto / tel / Telegram) в блоке #contacts.
 
 // === Графики Chart.js ===
 function getCss(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }

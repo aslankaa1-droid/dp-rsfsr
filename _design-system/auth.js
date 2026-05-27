@@ -97,13 +97,9 @@
 
         <div class="reset-pane" id="reset-pane">
           <h1 style="text-align:center">Сменить PIN</h1>
-          <p class="auth-sub" style="text-align:center">Заявка придёт на ${cfg.RESET_EMAIL}</p>
-          <label>Желаемый новый PIN (6 цифр)</label>
-          <input type="text" id="reset-newpin" maxlength="6" inputmode="numeric" pattern="[0-9]{6}" placeholder="Например, 142536">
-          <label>Ваше имя (для подтверждения)</label>
-          <input type="text" id="reset-name" placeholder="Аслан">
-          <button class="primary" id="reset-submit">Отправить запрос</button>
-          <div class="ok-msg" id="reset-ok">✓ Запрос отправлен. Проверьте почту ${cfg.RESET_EMAIL} — придёт письмо с новым PIN и инструкцией активации.</div>
+          <p class="auth-sub" style="text-align:center;line-height:1.55">Сайт не собирает персональные данные. Чтобы сменить PIN — напишите напрямую на e-mail администратора:</p>
+          <a class="primary" style="display:block;text-align:center;text-decoration:none;line-height:1.4" href="mailto:${cfg.RESET_EMAIL}?subject=ЦПФСР.РФ%20—%20запрос%20смены%20PIN&body=Здравствуйте.%0AПрошу%20сменить%20PIN%20на%20сайте%20https%3A%2F%2Fdpfsd.ru%20на%20новый%3A%20______%20(6%20цифр).%0AС%20уважением%2C%20______">${cfg.RESET_EMAIL}</a>
+          <p class="auth-sub" style="text-align:center;margin-top:14px;font-size:11.5px;line-height:1.5">Письмо откроется в вашем почтовом клиенте. Сайт ваши данные не получит и не сохранит.</p>
           <button class="back" id="reset-back">← Назад к вводу PIN</button>
         </div>
       </div>
@@ -190,48 +186,8 @@
       pinPane.style.display = 'block';
       resetPane.style.display = 'none';
     });
-    ov.querySelector('#reset-submit').addEventListener('click', async () => {
-      const newpin = ov.querySelector('#reset-newpin').value.trim();
-      const name = ov.querySelector('#reset-name').value.trim() || 'Не указано';
-      if (!/^[0-9]{6}$/.test(newpin)) {
-        alert('PIN должен состоять из 6 цифр');
-        return;
-      }
-      const btn = ov.querySelector('#reset-submit');
-      btn.disabled = true; btn.textContent = 'Отправка...';
-
-      const payload = {
-        _subject: 'ЦПФСР.РФ — запрос смены PIN',
-        _captcha: 'false',
-        _template: 'table',
-        Сайт: 'https://dpfsd.ru',
-        Заявитель: name,
-        'Желаемый PIN': newpin,
-        'Текущий хеш в коде': cfg.PIN_HASH.substring(0, 12) + '…',
-        Время: new Date().toISOString(),
-        'User-Agent': navigator.userAgent
-      };
-
-      try {
-        const resp = await fetch(cfg.RESET_ENDPOINT, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-        if (resp.ok) {
-          ov.querySelector('#reset-ok').style.display = 'block';
-          btn.textContent = '✓ Отправлено';
-        } else {
-          btn.disabled = false;
-          btn.textContent = 'Отправить запрос';
-          alert('Ошибка отправки. Попробуйте позже или напишите напрямую на ' + cfg.RESET_EMAIL);
-        }
-      } catch (e) {
-        btn.disabled = false;
-        btn.textContent = 'Отправить запрос';
-        alert('Сеть недоступна. Напишите напрямую на ' + cfg.RESET_EMAIL);
-      }
-    });
+    /* Reset-PIN: переход на mailto: происходит штатным кликом <a>, никакого fetch.
+       Форму ввода и POST на formsubmit.co сняли (152-ФЗ): сайт не собирает данные. */
 
     /* Focus first key for keyboard */
     setTimeout(() => ov.querySelector('[data-digit="1"]').focus(), 100);
