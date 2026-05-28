@@ -805,7 +805,8 @@
         if (Array.isArray(val)) {
           el.innerHTML = val.map(v => `<li>${v}</li>`).join('');
         } else if (typeof val === 'string') {
-          el.textContent = val;
+          if (el.hasAttribute('data-i18n-html')) el.innerHTML = val;
+          else el.textContent = val;
         }
       });
       document.querySelectorAll('[data-i18n-attr]').forEach(el => {
