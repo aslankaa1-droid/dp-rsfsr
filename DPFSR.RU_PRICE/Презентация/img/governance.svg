@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" width="1000" height="580">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0E1117"/>
+      <stop offset="100%" stop-color="#161B22"/>
+    </linearGradient>
+    <linearGradient id="goldStroke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F2D88A"/>
+      <stop offset="100%" stop-color="#7A5C2E"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="580" fill="url(#bg2)"/>
+  <text x="500" y="46" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="700" font-size="22" fill="#ECEEF2" letter-spacing="1">Институциональный контур ЦПФСР</text>
+  <text x="500" y="70" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#8C95A4">Государственные чемпионы Stage 1 · Регуляторный контур · Каналы фондирования</text>
+
+  <!-- Центр: оператор ЦПФСР -->
+  <g>
+    <rect x="380" y="250" width="240" height="100" rx="6" fill="#0B1220" stroke="url(#goldStroke)" stroke-width="2"/>
+    <text x="500" y="285" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="700" font-size="18" fill="#C9A14A">АО-ОПЕРАТОР ЦПФСР</text>
+    <text x="500" y="310" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#ECEEF2">DLT-реестр ЦФА · 779-П</text>
+    <text x="500" y="328" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#8C95A4">dpfsd.ru · ноу-хау №4011265</text>
+  </g>
+
+  <!-- Узлы вокруг -->
+  <g font-family="Manrope, sans-serif" font-weight="600" font-size="13" fill="#ECEEF2">
+    <!-- ЦБ РФ -->
+    <g transform="translate(140, 130)">
+      <rect width="200" height="72" rx="4" fill="#1F2733" stroke="#C9CED6" stroke-opacity="0.2"/>
+      <text x="14" y="26">ЦБ РФ</text>
+      <text x="14" y="52" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#8C95A4">Надзорный регулятор</text>
+    </g>
+    <!-- Минфин -->
+    <g transform="translate(660, 130)">
+      <rect width="200" height="72" rx="4" fill="#1F2733" stroke="#C9CED6" stroke-opacity="0.2"/>
+      <text x="14" y="26">Минфин РФ</text>
+      <text x="14" y="52" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#8C95A4">Колычев · Сазанов</text>
+    </g>
+    <!-- Минэк -->
+    <g transform="translate(80, 270)">
+      <rect width="200" height="72" rx="4" fill="#1F2733" stroke="#C9CED6" stroke-opacity="0.2"/>
+      <text x="14" y="26">Минэкономразвития</text>
+      <text x="14" y="52" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#8C95A4">М. Г. Решетников</text>
+    </g>
+    <!-- ВЭБ -->
+    <g transform="translate(720, 270)">
+      <rect width="200" height="72" rx="4" fill="#1F2733" stroke="#C9CED6" stroke-opacity="0.2"/>
+      <text x="14" y="26">ВЭБ.РФ + Газпромбанк</text>
+      <text x="14" y="52" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#8C95A4">Каналы целевого фондирования</text>
+    </g>
+    <!-- Госдума -->
+    <g transform="translate(140, 420)">
+      <rect width="200" height="72" rx="4" fill="#1F2733" stroke="#C9CED6" stroke-opacity="0.2"/>
+      <text x="14" y="26">Госдума · ФинКомитет</text>
+      <text x="14" y="52" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#8C95A4">А. Г. Аксаков</text>
+    </g>
+    <!-- Регионы -->
+    <g transform="translate(660, 420)">
+      <rect width="200" height="72" rx="4" fill="#1F2733" stroke="#C9CED6" stroke-opacity="0.2"/>
+      <text x="14" y="26">Пилот-регионы</text>
+      <text x="14" y="52" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#8C95A4">Татарстан · Тюмень</text>
+    </g>
+  </g>
+
+  <!-- Линии связи -->
+  <g stroke="#C9A14A" stroke-width="1" stroke-opacity="0.4" fill="none">
+    <path d="M 340 166 Q 400 220 380 290"/>
+    <path d="M 660 166 Q 600 220 620 290"/>
+    <path d="M 280 306 L 380 306"/>
+    <path d="M 720 306 L 620 306"/>
+    <path d="M 340 456 Q 400 380 380 350"/>
+    <path d="M 660 456 Q 600 380 620 350"/>
+  </g>
+</svg>

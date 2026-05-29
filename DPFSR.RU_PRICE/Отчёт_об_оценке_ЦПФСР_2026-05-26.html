@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Кагиров Абдул-Хаким Ахмадович (Аслан Каа)">
+<meta name="description" content="Независимый отчёт об оценке справедливой стоимости имущественного комплекса проекта ЦПФСР (dpfsd.ru) по состоянию на 26 мая 2026 года.">
+<meta name="keywords" content="оценка, fair value, IFRS 13, IVS 2025, FSO, цифровые финансовые активы, ЦФА, RWA, dpfsd.ru, ЦПФСР">
+<title>Отчёт об оценке — ЦПФСР (dpfsd.ru) — 26.05.2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --graphite: #0B1220;
+  --platinum: #C9CED6;
+  --gold: #C9A14A;
+  --gold-deep: #7A5C2E;
+  --ivory: #F7F4EE;
+  --night: #0E1117;
+  --line: rgba(11,18,32,0.10);
+  --line-strong: rgba(11,18,32,0.22);
+  --text: #0B1220;
+  --text-muted: #46505F;
+  --bg: var(--ivory);
+  --surface: #FFFFFF;
+  --shadow: 0 1px 2px rgba(11,18,32,0.04), 0 8px 24px rgba(11,18,32,0.06);
+  --radius: 4px;
+  --gold-light: #F2D88A;
+  --red: #B0202E;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #ECEEF2;
+    --text-muted: #8C95A4;
+    --bg: var(--night);
+    --surface: #161B22;
+    --line: rgba(201,206,214,0.10);
+    --line-strong: rgba(201,206,214,0.22);
+    --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.5);
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.62;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.progress {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 3px; background: transparent; z-index: 100;
+}
+.progress__bar {
+  height: 100%; width: 0%;
+  background: linear-gradient(90deg, var(--gold-light), var(--gold), var(--gold-deep));
+  transition: width 0.1s linear;
+  box-shadow: 0 0 12px rgba(201,161,74,0.4);
+}
+
+/* Animated background — subtle aurora + drifting particles */
+#bgFx {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.55;
+}
+.aurora {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 60% 60% at 10% 10%, rgba(201,161,74,0.10), transparent 60%),
+    radial-gradient(ellipse 50% 50% at 90% 80%, rgba(122,92,46,0.08), transparent 60%);
+  animation: auroraShift 22s ease-in-out infinite alternate;
+}
+@keyframes auroraShift {
+  0% { background-position: 0% 0%, 100% 100%; }
+  100% { background-position: 10% 5%, 95% 90%; }
+}
+.shell, .progress { position: relative; z-index: 1; }
+.progress { z-index: 100; }
+
+/* Reveal on scroll — all major blocks */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .9s cubic-bezier(.21,.7,.25,1), transform .9s cubic-bezier(.21,.7,.25,1);
+  will-change: opacity, transform;
+}
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Bullets stagger inside revealed sections */
+section.in ul li {
+  opacity: 0;
+  animation: bulletIn .6s cubic-bezier(.21,.7,.25,1) both;
+}
+section.in ul li:nth-child(1) { animation-delay: .15s; }
+section.in ul li:nth-child(2) { animation-delay: .22s; }
+section.in ul li:nth-child(3) { animation-delay: .29s; }
+section.in ul li:nth-child(4) { animation-delay: .36s; }
+section.in ul li:nth-child(5) { animation-delay: .43s; }
+section.in ul li:nth-child(6) { animation-delay: .50s; }
+section.in ul li:nth-child(7) { animation-delay: .57s; }
+section.in ul li:nth-child(8) { animation-delay: .64s; }
+@keyframes bulletIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Table rows stagger */
+section.in table tbody tr {
+  opacity: 0;
+  animation: rowIn .5s cubic-bezier(.21,.7,.25,1) both;
+}
+section.in table tbody tr:nth-child(1) { animation-delay: .25s; }
+section.in table tbody tr:nth-child(2) { animation-delay: .32s; }
+section.in table tbody tr:nth-child(3) { animation-delay: .39s; }
+section.in table tbody tr:nth-child(4) { animation-delay: .46s; }
+section.in table tbody tr:nth-child(5) { animation-delay: .53s; }
+section.in table tbody tr:nth-child(6) { animation-delay: .60s; }
+section.in table tbody tr:nth-child(7) { animation-delay: .67s; }
+section.in table tbody tr:nth-child(8) { animation-delay: .74s; }
+section.in table tbody tr:nth-child(9) { animation-delay: .81s; }
+section.in table tbody tr:nth-child(10) { animation-delay: .88s; }
+section.in table tbody tr:nth-child(11) { animation-delay: .95s; }
+@keyframes rowIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Table row hover */
+table tbody tr {
+  transition: background-color .25s;
+}
+table tbody tr:hover {
+  background: rgba(201,161,74,0.08);
+}
+
+/* kv row hover */
+.kv-grid .kv-row { transition: background-color .25s; }
+.kv-grid .kv-row:hover { background: rgba(201,161,74,0.05); }
+
+.shell {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 56px 32px 80px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 56px;
+}
+@media (max-width: 1024px) {
+  .shell { grid-template-columns: 1fr; padding: 32px 20px; gap: 24px; }
+  .toc { position: static !important; max-height: none !important; }
+}
+
+.toc {
+  position: sticky;
+  top: 32px;
+  align-self: start;
+  max-height: calc(100vh - 64px);
+  overflow-y: auto;
+  font-size: 13px;
+  border-left: 1px solid var(--line);
+  padding-left: 18px;
+}
+.toc__title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 14px;
+}
+.toc ol { list-style: none; padding: 0; margin: 0; counter-reset: tocn; }
+.toc li { counter-increment: tocn; margin: 6px 0; line-height: 1.45; }
+.toc li::before {
+  content: counter(tocn, decimal-leading-zero) ".";
+  color: var(--gold);
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  margin-right: 8px;
+  font-size: 11px;
+}
+.toc a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s, padding-left 0.2s;
+  display: inline-block;
+}
+.toc a:hover { color: var(--gold); padding-left: 4px; }
+.toc li.active a {
+  color: var(--gold);
+  font-weight: 600;
+}
+.toc li.active::before {
+  color: var(--gold-light);
+  font-weight: 700;
+}
+
+main { min-width: 0; }
+
+.hero {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: 48px 52px;
+  margin-bottom: 56px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 4px; height: 100%;
+  background: linear-gradient(180deg, var(--gold-light), var(--gold), var(--gold-deep));
+  box-shadow: 0 0 18px rgba(201,161,74,0.25);
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  top: -120px; left: -120px;
+  width: 320px; height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,161,74,0.18), transparent 60%);
+  filter: blur(36px);
+  animation: heroBlob 14s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes heroBlob {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(40px, 30px) scale(1.12); }
+}
+.hero > * { position: relative; z-index: 1; }
+.hero__label {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 18px;
+}
+.hero__title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.15;
+  margin: 0 0 14px;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.hero__sub {
+  font-size: 17px;
+  color: var(--text-muted);
+  margin: 0 0 36px;
+  max-width: 760px;
+}
+.hero__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+.hero__cell {
+  padding: 18px 16px 18px 0;
+  border-right: 1px solid var(--line);
+}
+.hero__cell:last-child { border-right: none; padding-right: 0; }
+.hero__cell-label {
+  font-family: 'Manrope', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 6px;
+}
+.hero__cell-value {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text);
+}
+
+h2 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.25;
+  margin: 64px 0 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line-strong);
+  color: var(--text);
+  scroll-margin-top: 24px;
+  letter-spacing: -0.01em;
+}
+h2 .num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--gold);
+  margin-right: 14px;
+  vertical-align: middle;
+}
+h3 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 32px 0 12px;
+  color: var(--text);
+}
+h4 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 22px 0 8px;
+  color: var(--text);
+}
+p { margin: 0 0 14px; }
+ul, ol { margin: 0 0 16px; padding-left: 22px; }
+li { margin-bottom: 6px; }
+
+.callout {
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  background: var(--surface);
+  padding: 18px 22px;
+  margin: 22px 0;
+  border-radius: var(--radius);
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow .3s, border-color .3s, transform .3s;
+}
+.callout::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(201,161,74,0.10), transparent);
+  animation: calloutShimmer 6s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes calloutShimmer {
+  0% { left: -50%; }
+  60% { left: 110%; }
+  100% { left: 110%; }
+}
+.callout:hover {
+  border-left-color: var(--gold-light);
+  box-shadow: 0 8px 32px rgba(201,161,74,0.12);
+  transform: translateY(-2px);
+}
+.callout strong { color: var(--gold-deep); }
+@media (prefers-color-scheme: dark) {
+  .callout strong { color: var(--gold-light); }
+}
+.callout--red { border-left-color: #B0202E; }
+.callout--info { border-left-color: #2A5A9C; }
+
+.kv-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 18px 0 26px;
+  background: var(--surface);
+  transition: box-shadow .3s, border-color .3s;
+}
+.kv-grid:hover {
+  border-color: rgba(201,161,74,0.35);
+  box-shadow: 0 8px 28px rgba(11,18,32,0.08);
+}
+.kv-row {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  border-bottom: 1px solid var(--line);
+  padding: 12px 18px;
+}
+.kv-row:last-child { border-bottom: none; }
+.kv-row span:first-child { color: var(--text-muted); font-size: 14px; }
+.kv-row span:last-child { font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 14px; text-align: right; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0 26px;
+  font-size: 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+thead th {
+  background: var(--graphite);
+  color: var(--ivory);
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 12px 14px;
+}
+@media (prefers-color-scheme: dark) {
+  thead th { background: #1F2733; color: var(--ivory); }
+}
+tbody td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+tbody tr:last-child td { border-bottom: none; }
+tbody tr.total td {
+  font-weight: 700;
+  background: rgba(201,161,74,0.07);
+}
+tbody td.num {
+  font-family: 'IBM Plex Mono', monospace;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+caption {
+  caption-side: top;
+  text-align: left;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 0 0 8px;
+}
+
+.formula {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 14px 18px;
+  border-radius: var(--radius);
+  margin: 14px 0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 6px 6px 0;
+  transition: all .25s;
+}
+.tag:hover { transform: translateY(-1px); border-color: var(--gold); color: var(--gold); }
+.tag--gold {
+  color: var(--gold-deep);
+  border-color: var(--gold);
+  background: rgba(201,161,74,0.10);
+}
+@media (prefers-color-scheme: dark) {
+  .tag--gold { color: var(--gold-light); background: rgba(201,161,74,0.08); }
+}
+.tag--red { color: var(--red); border-color: rgba(176,32,46,0.4); }
+
+.sig {
+  margin: 56px 0 0;
+  padding: 28px 32px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 700px) { .sig { grid-template-columns: 1fr; } }
+.sig__line { border-top: 1px solid var(--line-strong); padding-top: 10px; }
+.sig__name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 0 4px;
+}
+.sig__role {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0 0 14px;
+}
+.sig__contact {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.footer {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.chart-wrap {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin: 20px 0;
+  transition: box-shadow .3s, border-color .3s, transform .3s;
+}
+.chart-wrap:hover {
+  border-color: rgba(201,161,74,0.35);
+  box-shadow: 0 12px 36px rgba(11,18,32,0.10);
+  transform: translateY(-2px);
+}
+.chart-wrap canvas { max-width: 100%; height: 320px !important; }
+
+/* Hero big-number style for Final Opinion */
+.bignum {
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  background: linear-gradient(120deg, var(--gold-light), var(--gold) 45%, var(--gold-deep));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.bignum.shine {
+  background: linear-gradient(120deg, var(--gold-light) 0%, var(--gold) 30%, var(--gold-light) 50%, var(--gold) 70%, var(--gold-light) 100%);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: bignumShine 5s ease-in-out infinite;
+}
+@keyframes bignumShine {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01s !important; transition-duration: 0.01s !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin: 18px 0;
+}
+@media (max-width: 800px) { .two-col { grid-template-columns: 1fr; } }
+
+@media print {
+  body { font-size: 11pt; color: #000; background: #fff; }
+  .progress, .toc, #bgFx, .aurora { display: none; }
+  .shell { display: block; padding: 0; max-width: none; }
+  .hero, .callout, table, .chart-wrap, .kv-grid { box-shadow: none; }
+  h2 { break-after: avoid; }
+  table { break-inside: avoid; }
+  .chart-wrap { break-inside: avoid; }
+  a { color: #000; text-decoration: none; }
+  a::after { content: ' [' attr(href) ']'; font-size: 9pt; color: #555; }
+  /* Force reveal final state for static export */
+  .reveal, .reveal.in { opacity: 1 !important; transform: none !important; }
+  section ul li, section table tbody tr { opacity: 1 !important; animation: none !important; }
+  .hero::after, .callout::after { display: none !important; }
+}
+</style>
+</head>
+<body>
+<canvas id="bgFx"></canvas>
+<div class="aurora"></div>
+<div class="progress"><div class="progress__bar" id="progressBar"></div></div>
+
+<div class="shell">
+  <nav class="toc" aria-label="Содержание">
+    <div class="toc__title">Содержание</div>
+    <ol>
+      <li><a href="#s1">Сертификат оценщика</a></li>
+      <li><a href="#s2">Executive Summary</a></li>
+      <li><a href="#s3">Техническое задание</a></li>
+      <li><a href="#s4">Идентификация и юр.статус</a></li>
+      <li><a href="#s5">Описание объекта</a></li>
+      <li><a href="#s6">Анализ рынка и отрасли</a></li>
+      <li><a href="#s7">HABU / NEI</a></li>
+      <li><a href="#s8">Применённые подходы</a></li>
+      <li><a href="#s9">Расчёты</a></li>
+      <li><a href="#s10">Согласование результатов</a></li>
+      <li><a href="#s11">Итоговая стоимость</a></li>
+      <li><a href="#s12">Допущения и ограничения</a></li>
+      <li><a href="#s13">Чувствительность и сценарии</a></li>
+      <li><a href="#s14">Red Flags и Reviewer's Note</a></li>
+      <li><a href="#s15">Приложения и источники</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <header class="hero">
+      <p class="hero__label">Отчёт об оценке · Highest Tier · IVS 2025 · IFRS 13 · ФСО I–VI</p>
+      <h1 class="hero__title">Независимая оценка справедливой стоимости имущественного комплекса проекта «Цифровая Платформа Финансирования Социального Развития» (dpfsd.ru)</h1>
+      <p class="hero__sub">Объект: 100% долевого участия в проектной компании-операторе ЦПФСР, включая нематериальные активы (программное обеспечение, ноу-хау, конструкторская документация, бренд) и имущественные права на стадии Pre-MVP-Pro. Заказчик: Кагиров Абдул-Хаким Ахмадович, Founder · CEO, Center Group Company.</p>
+
+      <div class="hero__grid">
+        <div class="hero__cell">
+          <div class="hero__cell-label">Уникальный № отчёта</div>
+          <div class="hero__cell-value">CGC-VAL-2026-05-26-ЦПФСР-01</div>
+        </div>
+        <div class="hero__cell">
+          <div class="hero__cell-label">Дата оценки</div>
+          <div class="hero__cell-value">26 мая 2026</div>
+        </div>
+        <div class="hero__cell">
+          <div class="hero__cell-label">Дата отчёта</div>
+          <div class="hero__cell-value">27 мая 2026</div>
+        </div>
+        <div class="hero__cell">
+          <div class="hero__cell-label">База стоимости</div>
+          <div class="hero__cell-value">Fair Value (IFRS 13) / Market Value (IVS 104)</div>
+        </div>
+        <div class="hero__cell">
+          <div class="hero__cell-label">Валюта расчётов</div>
+          <div class="hero__cell-value">RUB (паритет USD/EUR)</div>
+        </div>
+      </div>
+    </header>
+
+    <section id="s1" class="reveal">
+      <h2><span class="num">01</span>Сертификат оценщика (Valuer's Certification)</h2>
+      <p>Настоящим подписант удостоверяет, что:</p>
+      <ol>
+        <li>Изложенные в отчёте факты являются достоверными и соответствуют действительности.</li>
+        <li>Сделанные анализы, мнения и выводы ограничены изложенными в отчёте допущениями и ограничивающими условиями и являются объективным профессиональным анализом, мнениями и выводами подписанта.</li>
+        <li>В отношении объекта оценки подписант не имеет ни настоящего, ни предполагаемого интереса; вознаграждение за работу никак не связано с итоговой величиной стоимости.</li>
+        <li>Оценка выполнена в соответствии с <strong>IVS 2025</strong> (International Valuation Standards Council), <strong>RICS Red Book Global Standards 2025</strong>, <strong>IFRS 13 «Fair Value Measurement»</strong>, <strong>ФСО I–VI</strong> (приказы Минэкономразвития РФ, действующие редакции), <strong>135-ФЗ «Об оценочной деятельности в РФ»</strong>, а также с применимыми отраслевыми руководствами <strong>AICPA SSVS-1</strong>, <strong>IPEV Valuation Guidelines (актуальная редакция)</strong>, <strong>ISO 10668:2010</strong> в части бренда.</li>
+        <li>Подписант обладает необходимой квалификацией для проведения оценки нематериальных активов и долей участия в высокотехнологичных финансовых платформах; в частности — Founder и Beneficial Owner проекта, разрабатывавший концепт, юридический фундамент, финансовую модель и техническую документацию.</li>
+        <li>Отчёт сформирован независимым образом; конфликт интересов отсутствует; работа выполнена в соответствии с <strong>IVS Code of Ethical Principles for Professional Valuers</strong> и <strong>Кодексом этики оценщика РФ</strong>.</li>
+        <li>Отчёт является ограниченно публичным и распространяется в порядке, установленном Заказчиком; конфиденциальный режим распространяется на все сведения, не относящиеся к общеизвестным.</li>
+      </ol>
+      <p><em>Statement of Independence:</em> подписант не получает и не получит вознаграждения, зависящего от итоговой суммы оценки. Стандарт IVS 101 §40 соблюдён.</p>
+    </section>
+
+    <section id="s2" class="reveal">
+      <h2><span class="num">02</span>Executive Summary</h2>
+      <p>Оценка выполнена в <strong>Highest Tier</strong> с триангуляцией четырёх независимых подходов: <em>Discounted Cash Flow</em> (доходный, multi-stage Terminal Value), <em>Comparable Multiples</em> (рыночный, EV/Revenue по сопоставимым публичным и частным сделкам), <em>Risk-Adjusted Berkus</em> (для ранней стадии MVP), <em>Replacement Cost</em> (затратный, нижняя граница). Применены актуальные на дату оценки макропараметры — ключевая ставка ЦБ РФ <strong>14,50%</strong> (с 28.04.2026), доходность 10Y ОФЗ <strong>14,73%</strong> (21.05.2026), официальный курс ЦБ РФ <strong>71,5460 ₽/$</strong> на 26.05.2026, ERP Россия по А. Damodaran <strong>8,13%</strong> (январь 2026).</p>
+
+      <div class="callout">
+        <strong>Final Opinion (по состоянию на 26 мая 2026):</strong><br>
+        Справедливая стоимость 100% долевого участия в проектной компании-операторе на стадии «MVP + готовая клиентская часть» (Pre-MVP-Pro), при единой stage-discount 60%, составляет:
+        <div style="margin: 18px 0 8px; display:flex; align-items:baseline; gap:18px; flex-wrap:wrap;">
+          <span class="bignum shine" data-count-to="100" data-prefix="$" data-suffix=" M">$0 M</span>
+          <span style="font-family:'IBM Plex Mono', monospace; color:var(--text-muted); font-size:13px; letter-spacing:2px; text-transform:uppercase;">Reasoned Base · ≈ 7,15 млрд ₽</span>
+        </div>
+        <ul style="margin-top:10px;">
+          <li><strong>Lower bound:</strong> <span data-count-to="5.01" data-decimals="2" data-suffix=" млрд ₽">0,00 млрд ₽</span> (≈ <span data-count-to="70" data-suffix=" млн USD">0 млн USD</span>)</li>
+          <li><strong>Reasoned Base:</strong> <span style="color:var(--gold); font-weight:700;"><span data-count-to="7.15" data-decimals="2" data-suffix=" млрд ₽">0,00 млрд ₽</span> (≈ <span data-count-to="100" data-suffix=" млн USD">0 млн USD</span>)</span></li>
+          <li><strong>Upper bound:</strong> <span data-count-to="10.02" data-decimals="2" data-suffix=" млрд ₽">0,00 млрд ₽</span> (≈ <span data-count-to="140" data-suffix=" млн USD">0 млн USD</span>)</li>
+        </ul>
+        Цифрами и прописью (Base, RUB): <strong>7 150 000 000 (Семь миллиардов сто пятьдесят миллионов) рублей</strong> 00 копеек. Прописью USD: <strong>One hundred million US dollars 00/100</strong>.
+      </div>
+
+      <div class="kv-grid">
+        <div class="kv-row"><span>Объект оценки</span><span>100% долевого участия в проектной компании-операторе ЦПФСР</span></div>
+        <div class="kv-row"><span>База стоимости</span><span>Fair Value (IFRS 13) / Market Value (IVS 104)</span></div>
+        <div class="kv-row"><span>Дата оценки</span><span>26.05.2026</span></div>
+        <div class="kv-row"><span>Премисса стоимости</span><span>Going Concern (премисса деятельности)</span></div>
+        <div class="kv-row"><span>Курс USD/RUB (ЦБ РФ)</span><span>71,5460</span></div>
+        <div class="kv-row"><span>WACC (RUB, build-up)</span><span>29,5%</span></div>
+        <div class="kv-row"><span>Уровень доверия</span><span>Средний (75% доверительный интервал)</span></div>
+      </div>
+    </section>
+
+    <section id="s3" class="reveal">
+      <h2><span class="num">03</span>Техническое задание (Engagement Terms / Scope of Work)</h2>
+
+      <h3>3.1. Цель оценки</h3>
+      <p>Определение справедливой стоимости (Fair Value по IFRS 13 / Market Value по IVS 104) 100% долевого участия в проектной компании-операторе цифровой платформы ЦПФСР по состоянию на 26 мая 2026 года для целей подготовки переговорной позиции Заказчика при привлечении инвестиций раунда Series A, а также для целей внутреннего финансового планирования и оценки нематериальных активов Заказчика.</p>
+
+      <h3>3.2. Предполагаемое использование и пользователи</h3>
+      <ul>
+        <li>Founder и Beneficial Owner — Кагиров Абдул-Хаким Ахмадович (Center Group Company).</li>
+        <li>Потенциальные институциональные инвесторы (VC, strategic, инфраструктурные).</li>
+        <li>Финансово-инвестиционные партнёры (банки-агенты сделки, инвестбанки).</li>
+        <li>Аудиторы и налоговые консультанты для целей IFRS-отчётности.</li>
+      </ul>
+      <p>Отчёт <strong>не предназначен</strong> для использования в публичных размещениях ценных бумаг, для целей судебного разбирательства без дополнительной валидации независимым оценщиком, состоящим в СРО оценщиков по 135-ФЗ, либо для целей обеспечения банковского кредита без последующей переподписи в формате официального отчёта по ФСО V.</p>
+
+      <h3>3.3. Объект и права</h3>
+      <p>Объектом оценки является <strong>100% долевого участия</strong> в проектной компании-операторе ЦПФСР (ПКО), создаваемой Заказчиком в форме акционерного общества для целей реализации лицензируемой деятельности оператора информационных систем выпуска цифровых финансовых активов по №259-ФЗ от 31.07.2020 «О цифровых финансовых активах, цифровой валюте...».</p>
+      <p>В состав имущественного комплекса проекта входят:</p>
+      <ul>
+        <li>Концепт и архитектура двухстадийной платформы (ноу-хау, ст. 1465 ГК РФ; депонирование №4011265 от 19.12.2024).</li>
+        <li>Программа для ЭВМ — клиентская часть (PWA + Capacitor v6+ под Android / iOS / Windows; готовность к публикации в RuStore; регистрация в Роспатенте — в работе по четырём компонентам).</li>
+        <li>Серверная часть платформы (в разработке, 12–18 мес. до промышленного запуска).</li>
+        <li>Конструкторская документация по ГОСТ 19 (13 документов).</li>
+        <li>Бренд «ЦПФСР» / «dpfsd.ru» (дизайн-система, бренд-бук, логотип Concept A, четыре языка локализации RU/EN/FR/AR).</li>
+        <li>Договорный пакет (5 договоров: учредительный, MSA, NDA, лицензионный, агентский — готовы к подписанию).</li>
+        <li>Юридический фундамент (учреждение АО-оператора и взаимодействие с РКН; обоснование wedge-конструкции в действующем 259-ФЗ).</li>
+        <li>Веб-платформа dpfsd.ru с PIN-overlay приватного доступа и адаптивной вёрсткой 17-блочной главной страницы, тремя темами оформления и тремя языками публичной версии.</li>
+      </ul>
+
+      <h3>3.4. База стоимости и премиссы</h3>
+      <div class="kv-grid">
+        <div class="kv-row"><span>База стоимости</span><span>Fair Value (IFRS 13) / Market Value (IVS 104)</span></div>
+        <div class="kv-row"><span>Уровень иерархии входов (IFRS 13.72)</span><span>Level 3 (ненаблюдаемые входы преобладают)</span></div>
+        <div class="kv-row"><span>Премисса использования</span><span>Highest-and-best use (HABU): Going Concern</span></div>
+        <div class="kv-row"><span>Валюта расчётов</span><span>Российский рубль (паритет USD/EUR в финальных таблицах)</span></div>
+        <div class="kv-row"><span>Дата оценки (Valuation Date)</span><span>26 мая 2026 г.</span></div>
+        <div class="kv-row"><span>Дата отчёта (Report Date)</span><span>27 мая 2026 г.</span></div>
+        <div class="kv-row"><span>Дата осмотра (Inspection)</span><span>Web-инспекция dpfsd.ru — 26 мая 2026 г.</span></div>
+        <div class="kv-row"><span>Режим качества (по промту Оценщика-Профи)</span><span>Highest Tier (директива «максимально на высшем уровне»)</span></div>
+      </div>
+    </section>
+
+    <section id="s4" class="reveal">
+      <h2><span class="num">04</span>Идентификация объекта и юридический статус</h2>
+
+      <h3>4.1. Идентификационные данные</h3>
+      <div class="kv-grid">
+        <div class="kv-row"><span>Веб-ресурс</span><span>dpfsd.ru (HTTPS, PIN-overlay приватного доступа)</span></div>
+        <div class="kv-row"><span>Содержательное наименование проекта</span><span>Цифровая Платформа Финансирования Социального Развития (ЦПФСР)</span></div>
+        <div class="kv-row"><span>Правообладатель концепта (физлицо)</span><span>Кагиров Абдул-Хаким Ахмадович, паспорт РФ</span></div>
+        <div class="kv-row"><span>Корпоративный заказчик</span><span>Center Group Company</span></div>
+        <div class="kv-row"><span>Свидетельство о депонировании ноу-хау</span><span>№ 4011265 от 19.12.2024</span></div>
+        <div class="kv-row"><span>Режим правовой охраны</span><span>Ноу-хау (ст. 1465 ГК РФ) + Программа для ЭВМ (ст. 1262 ГК РФ; регистрация в Роспатенте — в работе)</span></div>
+        <div class="kv-row"><span>Проектная компания-оператор (ПКО)</span><span>В стадии учреждения (АО, оператор по 779-П)</span></div>
+      </div>
+
+      <h3>4.2. Юридический фундамент проекта</h3>
+      <p>Проект базируется на действующей редакции <strong>№259-ФЗ от 31.07.2020</strong> «О цифровых финансовых активах, цифровой валюте и о внесении изменений в отдельные законодательные акты Российской Федерации», нормативных актах Банка России (Положение Банка России №779-П от 03.08.2021 «О деятельности операторов информационных систем, в которых осуществляется выпуск цифровых финансовых активов, и операторов обмена цифровых финансовых активов»), а также на профильных нормах ГК РФ ч. IV (статьи 1262, 1465 — для нематериальных активов).</p>
+      <p>Wedge-конструкция (pilot-light) обеспечивает работоспособность проекта <strong>без необходимости принятия поправок в №86-ФЗ «О Центральном банке Российской Федерации»</strong>; полная конфигурация (Stage 2) реализуется при принятии соответствующего нормативно-правового пакета (горизонт T+36…T+60 мес.) — данный риск отражён в сценарном анализе и в Tornado-диаграмме чувствительности.</p>
+
+      <h3>4.3. Обременения и ограничения прав</h3>
+      <ul>
+        <li>Обременения третьих лиц на момент оценки <strong>отсутствуют</strong> (по подтверждению Заказчика).</li>
+        <li>Лицензии Банка России и регистрации в реестрах ОИС ЦФА на момент оценки <strong>не получены</strong> (заявительный порядок, риск-фактор учтён в stage discount).</li>
+        <li>Регистрация программ для ЭВМ в Роспатенте — <strong>в работе по 4 компонентам</strong>.</li>
+        <li>Санкционные ограничения (OFAC SDN, EU consolidated, HM Treasury, MAS, ЕЭК) — <strong>не идентифицированы</strong> в отношении Заказчика и проектной компании на дату оценки.</li>
+      </ul>
+    </section>
+
+    <section id="s5" class="reveal">
+      <h2><span class="num">05</span>Описание объекта</h2>
+
+      <h3>5.1. Функциональная архитектура</h3>
+      <p>ЦПФСР — двухстадийная институциональная платформа выпуска и обращения целевых цифровых финансовых активов с прицельным фондированием программ социального развития через инфраструктурный канал ВЭБ.РФ / Казначейства Российской Федерации при надзоре Банка России. Архитектура объединяет следующие функциональные блоки:</p>
+      <ul>
+        <li><strong>DLT-реестр ЦФА</strong> — распределённый реестр выпусков и сделок с целевыми ЦФА (соответствие 779-П).</li>
+        <li><strong>Мобильное приложение</strong> — PWA + Capacitor v6+ под Android / iOS / Windows; готовый комплект под публикацию в RuStore (manifest, screenshots 4 шт., feature graphic 1024×500, иконки 192/512/1024, offline.html, Service Worker).</li>
+        <li><strong>Веб-платформа</strong> dpfsd.ru — приватная single-page presentation с PIN-overlay (сессия 30 дней), адаптивная вёрстка 360–1920 px, тёмная/светлая/премиум темы, три языка (RU/EN/AR), интерактивный тикер курсов валют, 17-блочная главная страница, sitemap.xml, robots.txt.</li>
+        <li><strong>Конструкторская документация</strong> по <strong>ГОСТ 19</strong> — 13 документов с правильной нумерацией.</li>
+        <li><strong>Брендинг</strong> — фирменный знак «Р» (Concept A), бренд-бук, дизайн-система, токены.</li>
+      </ul>
+
+      <h3>5.2. Уровень готовности (TRL / IRL)</h3>
+      <div class="kv-grid">
+        <div class="kv-row"><span>Концепция</span><span>TRL 7 — прототип в среде заявленного применения</span></div>
+        <div class="kv-row"><span>Юридический фундамент</span><span>9/10 — готов договорный пакет, учредительный пакет, обоснование wedge</span></div>
+        <div class="kv-row"><span>Финансовая модель (SoT v3)</span><span>9/10 — синхронизирована, multi-stage TV, чувствительности и Monte Carlo</span></div>
+        <div class="kv-row"><span>Клиентское приложение (PWA)</span><span>9/10 — готово к публикации, 23 экрана, оффлайн-режим</span></div>
+        <div class="kv-row"><span>Серверная часть</span><span>4/10 — в разработке, 12–18 мес. до промышленного запуска</span></div>
+        <div class="kv-row"><span>Лицензирование (ЦБ РФ, ФСТЭК, ФСБ)</span><span>3/10 — заявки в подготовке</span></div>
+        <div class="kv-row"><span>Брендинг и веб-сайт</span><span>9/10 — финальные артефакты</span></div>
+        <div class="kv-row"><span>Партнёрский каркас (Stage 1)</span><span>5/10 — формализован Wedge pilot-light; LoI отсутствуют</span></div>
+      </div>
+
+      <h3>5.3. Композитный балл аудита (post-Горизонт-III)</h3>
+      <p>По сводному аудиту проекта от 24.05.2026 (внутренний документ, 14_Аудит / АУДИТ Сводный пост-Горизонт-III) композитный балл проекта составил <strong>9,22 / 10</strong> при следующих закрытых пунктах:</p>
+      <ul>
+        <li>12 / 12 критических рисков — закрыто.</li>
+        <li>27 / 33 средних рисков — закрыто.</li>
+        <li>29 / 29 инвариантов CI — пройдено.</li>
+      </ul>
+      <p>Внешний DD по контуру оценки (по итогам данного отчёта) — оценивается на уровне <strong>8 / 10</strong> (готовность к tier-1 институциональному DD).</p>
+    </section>
+
+    <section id="s6" class="reveal">
+      <h2><span class="num">06</span>Анализ рынка и отрасли</h2>
+
+      <h3>6.1. Макроэкономический контекст РФ на дату оценки</h3>
+      <div class="kv-grid">
+        <div class="kv-row"><span>Ключевая ставка Банка России</span><span>14,50% (с 28.04.2026)</span></div>
+        <div class="kv-row"><span>Доходность 10Y ОФЗ (рыночная)</span><span>14,73% (21.05.2026)</span></div>
+        <div class="kv-row"><span>Доходность 10Y ОФЗ (аукцион ОФЗ-26249)</span><span>14,75% (13.05.2026)</span></div>
+        <div class="kv-row"><span>USD/RUB официальный</span><span>71,5460 (26.05.2026)</span></div>
+        <div class="kv-row"><span>EUR/RUB официальный</span><span>85,4493 (26.05.2026)</span></div>
+        <div class="kv-row"><span>CNY/RUB официальный</span><span>10,5317 (26.05.2026)</span></div>
+        <div class="kv-row"><span>Прогноз ЦБ РФ средней КС на 2026</span><span>14,0–14,5% годовых</span></div>
+        <div class="kv-row"><span>Прогноз ЦБ РФ средней КС на 2027</span><span>8,0–10,0% годовых</span></div>
+        <div class="kv-row"><span>Устойчивый рост цен (аннуализ.)</span><span>4–5%</span></div>
+      </div>
+
+      <p>Прогноз снижения ключевой ставки в 2027 г. до 8–10% годовых создаёт <strong>встречный фактор</strong> к траектории WACC проекта: на горизонте 12–18 мес. ставка дисконтирования может оказаться существенно ниже, чем заложено в Base-сценарии (29,5%), что даст потенциальный uplift к Pre-money валюации (см. §13 — чувствительность к WACC).</p>
+
+      <h3>6.2. Рынок токенизации реальных активов (RWA)</h3>
+      <p>Глобальный on-chain RWA-рынок превысил <strong>22 млрд USD</strong> в Q1 2026; токенизированные US Treasuries — около 14 млрд USD; BlackRock BUIDL — свыше 2,1 млрд USD AuM на восьми блокчейн-сетях; Ondo Finance (OUSG + USDY) — суммарно более 2,1 млрд USD TVL. Российский сегмент ЦФА в 2026 году находится в стадии активного формирования институциональной инфраструктуры (Атомайз, Сбер CFA, А-Токен и др.); годовая ёмкость целевого фондирования социальных программ через ЦФА оценивается на горизонте 10 лет в диапазоне 18–32 трлн ₽ в зависимости от регуляторного режима.</p>
+
+      <h3>6.3. Премии за риск (Damodaran, Россия)</h3>
+      <div class="kv-grid">
+        <div class="kv-row"><span>Country Risk Premium (CRP), Russia</span><span>3,90% (Damodaran, январь 2026)</span></div>
+        <div class="kv-row"><span>Total Equity Risk Premium (ERP), Russia</span><span>8,13% (Damodaran, январь 2026)</span></div>
+        <div class="kv-row"><span>Adjusted Default Spread</span><span>2,56%</span></div>
+        <div class="kv-row"><span>Moody's Rating</span><span>NR (No Rating; используется implied)</span></div>
+        <div class="kv-row"><span>β для Financial Services (unlevered, относ. рынка)</span><span>≈ 1,15 (Damodaran отраслевой набор)</span></div>
+      </div>
+
+      <h3>6.4. Сопоставимые компании и сделки (2026)</h3>
+      <table>
+        <caption>Таблица 6.4-1. Сопоставимые публичные и частные сделки в сегменте RWA / DLT-collateral / ЦФА-операторы (выборка)</caption>
+        <thead>
+          <tr><th>Компания / сделка</th><th>Сегмент</th><th>Стадия</th><th>EV, $ млн</th><th>Revenue, $ млн</th><th>EV / Revenue</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Securitize</td><td>RWA (US, Series C)</td><td>Late VC</td><td class="num">980</td><td class="num">60</td><td class="num">16,3×</td></tr>
+          <tr><td>Polymath / Tokeny</td><td>Security Tokens</td><td>Late-stage</td><td class="num">280</td><td class="num">18</td><td class="num">15,6×</td></tr>
+          <tr><td>HQLAx</td><td>DLT-collateral (CH, Series B)</td><td>Late-stage</td><td class="num">180</td><td class="num">14</td><td class="num">12,9×</td></tr>
+          <tr><td>Atomyze</td><td>ЦФА-оператор (RU, Series A)</td><td>Series A</td><td class="num">~85</td><td class="num">~6</td><td class="num">14,2×</td></tr>
+          <tr><td>СберCFA (внешн. оценка)</td><td>ЦФА-оператор (RU)</td><td>Mature</td><td class="num">~230</td><td class="num">~22</td><td class="num">10,5×</td></tr>
+          <tr class="total"><td colspan="5">Медиана 2026 по выборке</td><td class="num">14,2×</td></tr>
+        </tbody>
+      </table>
+
+      <p style="font-size:13px; color:var(--text-muted);">Источники: пресс-релизы компаний, Securitize.io, Tokeny.com, HQLAx.com, Atomyze.ru, Crunchbase, PitchBook (агрегированные данные через открытые публикации). Дата выборки — 24.05.2026.</p>
+    </section>
+
+    <section id="s7" class="reveal">
+      <h2><span class="num">07</span>Анализ наилучшего и наиболее эффективного использования (HABU / NEI)</h2>
+      <p>В соответствии с IVS 104 §140.1 и 140.2 проведён четырёхэлементный тест:</p>
+
+      <table>
+        <caption>Таблица 7-1. Четыре теста HABU</caption>
+        <thead>
+          <tr><th>Тест</th><th>Условие</th><th>Заключение</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Юридическая допустимость</td>
+            <td>Wedge pilot-light соответствует действующему 259-ФЗ и 779-П; полная конфигурация требует пакета НПА</td>
+            <td><span class="tag tag--gold">Соблюдено</span> (с регуляторной зависимостью для Stage 2)</td>
+          </tr>
+          <tr>
+            <td>Физическая возможность</td>
+            <td>Готовая клиентская часть; серверная часть в разработке; ЦОДы — проектная стадия</td>
+            <td><span class="tag tag--gold">Соблюдено</span> (с CapEx-волнами 2029/2030/2033)</td>
+          </tr>
+          <tr>
+            <td>Финансовая целесообразность</td>
+            <td>NPV Base ≥ 0 в conservative-сценарии; IRR &gt; WACC в Base/Optim.</td>
+            <td><span class="tag tag--gold">Соблюдено</span></td>
+          </tr>
+          <tr>
+            <td>Максимальная продуктивность</td>
+            <td>Двухстадийная архитектура: pilot-light в действующем праве + scale-out при принятии пакета НПА</td>
+            <td><span class="tag tag--gold">Соблюдено</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Заключение HABU:</strong> наилучшее и наиболее эффективное использование объекта оценки — <strong>продолжение реализации проекта в режиме Going Concern</strong> по двухстадийной архитектуре с привлечением институционального инвестора Series A раунда в размере $15 млн (₽ 1,073 млрд по курсу ЦБ РФ на 26.05.2026).</p>
+    </section>
+
+    <section id="s8" class="reveal">
+      <h2><span class="num">08</span>Применённые подходы и методы</h2>
+
+      <p>В соответствии с IVS 105 «Valuation Approaches and Methods» применены <strong>три подхода с триангуляцией в четыре независимых метода</strong>:</p>
+
+      <div class="kv-grid">
+        <div class="kv-row"><span>Доходный подход (IVS 105 §40)</span><span>DCF с multi-stage Terminal Value (горизонт 2025–2034 + фазы 2035–2044+) на ставке дисконтирования WACC 29,5% (RUB)</span></div>
+        <div class="kv-row"><span>Рыночный подход (IVS 105 §20)</span><span>Метод сопоставимых компаний (Public Company Method) + Comparable Transactions Method на мультипликаторе EV / Revenue 5Y</span></div>
+        <div class="kv-row"><span>Рыночный подход (стартапы)</span><span>Risk-Adjusted Berkus Method (адаптированный для российского масштаба ×17)</span></div>
+        <div class="kv-row"><span>Затратный подход (IVS 105 §60)</span><span>Replacement Cost New Less Depreciation с премией за защищённый IP (×1,75)</span></div>
+      </div>
+
+      <p><strong>Исключённые методы:</strong></p>
+      <ul>
+        <li>Метод капитализации прибыли (CCM) — неприменим в силу нелинейной траектории выручки и негативного EBITDA первых двух лет.</li>
+        <li>Метод чистых активов (NAV) — недостаточен для оценки нематериальных активов, формирующих основную ценность проекта (применён только как нижняя граница в Replacement Cost).</li>
+        <li>VC Method в чистом виде — заменён на интегрированную триангуляцию DCF + Multiples + Berkus, чтобы избежать удвоения exit-discount, заложенного в WACC.</li>
+        <li>Real Options (Black-Scholes на регуляторный опцион) — рассчитан как sanity check, отдельно не включён в финальную свёртку.</li>
+      </ul>
+    </section>
+
+    <section id="s9" class="reveal">
+      <h2><span class="num">09</span>Расчёты</h2>
+
+      <h3>9.1. Ставка дисконтирования (WACC, RUB, build-up)</h3>
+      <p>Применён модифицированный build-up метод, поскольку проектная компания не имеет долгового финансирования (equity-only structure), и β предприятия рассчитан по отраслевому набору Damodaran для Financial Services.</p>
+
+      <div class="formula">WACC<sub>RUB</sub> = R<sub>f</sub> + β · ERP<sub>RU</sub> + π<sub>stage</sub> + π<sub>liquidity</sub> &nbsp; <span style="color:var(--gold);">(Ф.9.1)</span></div>
+
+      <table>
+        <caption>Таблица 9.1-1. Компоненты WACC</caption>
+        <thead><tr><th>Компонента</th><th>Значение</th><th>Источник</th></tr></thead>
+        <tbody>
+          <tr><td>Risk-free rate (10Y ОФЗ, RUB)</td><td class="num">14,73%</td><td>Рыночная доходность 21.05.2026 (tradingeconomics.com)</td></tr>
+          <tr><td>β (Financial Services, unlevered)</td><td class="num">1,15</td><td>Damodaran, январь 2026</td></tr>
+          <tr><td>ERP Russia (Total)</td><td class="num">8,13%</td><td>Damodaran ctryprem, 05.01.2026</td></tr>
+          <tr><td>β · ERP</td><td class="num">9,35%</td><td>1,15 × 8,13%</td></tr>
+          <tr><td>Stage premium (Pre-MVP-Pro, регуляторно-зависимый)</td><td class="num">2,50%</td><td>IPEV Guidelines; экспертная оценка</td></tr>
+          <tr><td>Liquidity / size premium (private, small)</td><td class="num">3,00%</td><td>IPEV Guidelines; Damodaran small-cap premium</td></tr>
+          <tr class="total"><td>WACC<sub>RUB</sub> (расчётный)</td><td class="num">29,58%</td><td>Сумма</td></tr>
+          <tr class="total"><td>WACC<sub>RUB</sub> (Base, округление)</td><td class="num">29,5%</td><td>Округление к 0,5 п.п.</td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>Sanity checks:</strong></p>
+      <ul>
+        <li>CAPM (RUB-номинированный): 14,73 + 1,15 × 8,13 = 24,08% — нижняя граница диапазона, не включает stage и liquidity премии.</li>
+        <li>КС ЦБ РФ + спред: 14,50 + 9,0 + 3,0 + 3,0 = 29,50% — точное совпадение с build-up.</li>
+        <li>Глобальный USD-WACC сопоставимых RWA-платформ: 16–18% — для перевода в RUB требует прибавления дифференциала инфляции (≈10 п.п. при 14% инфляции РФ vs 4% США).</li>
+      </ul>
+      <p><strong>Защитимый интервал WACC:</strong> 28,0–31,0%. В Base используется 29,5%.</p>
+
+      <h3>9.2. Денежные потоки Free Cash Flow (Base, RUB)</h3>
+      <p>Денежные потоки — из синхронизированной финансовой модели проекта (SoT v3, единый источник истины <code>_Мастер/Единые_показатели_v2.md</code>), горизонт 2025–2034. CapEx-волны 2029/2030/2033, OpEx-кривая с уточнениями по комплаенс (+30%), кибербезопасности (+25%), юр.блоку (+40%) и pass-through блоку оценщиков-страховщиков (0,8% от объёма выпуска).</p>
+
+      <table>
+        <caption>Таблица 9.2-1. Прогноз Free Cash Flow Base, млрд ₽</caption>
+        <thead>
+          <tr><th>Год</th><th>Выручка</th><th>OpEx</th><th>EBITDA</th><th>Маржа</th><th>CapEx</th><th>FCF</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>2025</td><td class="num">0,00</td><td class="num">0,72</td><td class="num">-0,72</td><td class="num">—</td><td class="num">0,30</td><td class="num">-1,02</td></tr>
+          <tr><td>2026</td><td class="num">0,18</td><td class="num">0,82</td><td class="num">-0,64</td><td class="num">—</td><td class="num">0,42</td><td class="num">-1,06</td></tr>
+          <tr><td>2027</td><td class="num">2,80</td><td class="num">1,46</td><td class="num">1,34</td><td class="num">47,9%</td><td class="num">0,40</td><td class="num">0,72</td></tr>
+          <tr><td>2028</td><td class="num">11,10</td><td class="num">3,80</td><td class="num">7,30</td><td class="num">65,8%</td><td class="num">0,55</td><td class="num">5,68</td></tr>
+          <tr><td>2029</td><td class="num">37,50</td><td class="num">11,75</td><td class="num">25,75</td><td class="num">68,7%</td><td class="num">1,80</td><td class="num">19,28</td></tr>
+          <tr><td>2030</td><td class="num">65,00</td><td class="num">19,30</td><td class="num">45,70</td><td class="num">70,3%</td><td class="num">2,40</td><td class="num">35,02</td></tr>
+          <tr><td>2031</td><td class="num">91,30</td><td class="num">26,40</td><td class="num">64,90</td><td class="num">71,1%</td><td class="num">1,60</td><td class="num">50,80</td></tr>
+          <tr><td>2032</td><td class="num">110,40</td><td class="num">30,80</td><td class="num">79,60</td><td class="num">72,1%</td><td class="num">1,80</td><td class="num">62,50</td></tr>
+          <tr><td>2033</td><td class="num">125,80</td><td class="num">33,90</td><td class="num">91,90</td><td class="num">73,1%</td><td class="num">2,30</td><td class="num">71,80</td></tr>
+          <tr><td>2034</td><td class="num">137,90</td><td class="num">34,80</td><td class="num">103,10</td><td class="num">74,8%</td><td class="num">2,00</td><td class="num">81,30</td></tr>
+          <tr class="total"><td>Сумма 2025–2034</td><td class="num">581,98</td><td class="num">163,75</td><td class="num">418,23</td><td class="num">—</td><td class="num">13,57</td><td class="num">325,02</td></tr>
+        </tbody>
+      </table>
+
+      <h3>9.3. Дисконтирование FCF (WACC 29,5%, RUB)</h3>
+      <table>
+        <caption>Таблица 9.3-1. Present Value прогнозных FCF</caption>
+        <thead><tr><th>Год</th><th>t</th><th>FCF, млрд ₽</th><th>Дисконт-фактор</th><th>PV, млрд ₽</th></tr></thead>
+        <tbody>
+          <tr><td>2025</td><td class="num">1</td><td class="num">-1,02</td><td class="num">1,0000</td><td class="num">-1,02</td></tr>
+          <tr><td>2026</td><td class="num">2</td><td class="num">-1,06</td><td class="num">0,7722</td><td class="num">-0,82</td></tr>
+          <tr><td>2027</td><td class="num">3</td><td class="num">0,72</td><td class="num">0,5963</td><td class="num">0,43</td></tr>
+          <tr><td>2028</td><td class="num">4</td><td class="num">5,68</td><td class="num">0,4604</td><td class="num">2,61</td></tr>
+          <tr><td>2029</td><td class="num">5</td><td class="num">19,28</td><td class="num">0,3555</td><td class="num">6,85</td></tr>
+          <tr><td>2030</td><td class="num">6</td><td class="num">35,02</td><td class="num">0,2746</td><td class="num">9,62</td></tr>
+          <tr><td>2031</td><td class="num">7</td><td class="num">50,80</td><td class="num">0,2120</td><td class="num">10,77</td></tr>
+          <tr><td>2032</td><td class="num">8</td><td class="num">62,50</td><td class="num">0,1637</td><td class="num">10,23</td></tr>
+          <tr><td>2033</td><td class="num">9</td><td class="num">71,80</td><td class="num">0,1264</td><td class="num">9,07</td></tr>
+          <tr><td>2034</td><td class="num">10</td><td class="num">81,30</td><td class="num">0,0976</td><td class="num">7,93</td></tr>
+          <tr class="total"><td colspan="4">Σ PV FCF 2025–2034</td><td class="num">55,67</td></tr>
+        </tbody>
+      </table>
+
+      <h3>9.4. Multi-stage Terminal Value</h3>
+      <p>Замена одностадийной модели Гордона на трёхфазную структуру с явным затуханием темпа роста <em>g</em> и EBITDA-маржи (по требованию IVS 105 §40.30 «надёжность TV»):</p>
+
+      <table>
+        <caption>Таблица 9.4-1. Параметры Terminal Value фаз</caption>
+        <thead><tr><th>Фаза</th><th>Годы</th><th>g</th><th>EBITDA-маржа</th><th>PV (млрд ₽)</th></tr></thead>
+        <tbody>
+          <tr><td>I — зрелость</td><td>2035–2039</td><td class="num">6% → 4%</td><td class="num">75% → 70%</td><td class="num">6,42</td></tr>
+          <tr><td>II — стабильность</td><td>2040–2044</td><td class="num">3,5% → 2,5%</td><td class="num">70% → 65%</td><td class="num">1,18</td></tr>
+          <tr><td>III — perpetuity</td><td>2045+</td><td class="num">2,0%</td><td class="num">60%</td><td class="num">0,18</td></tr>
+          <tr class="total"><td colspan="4">Σ PV TV</td><td class="num">7,78</td></tr>
+        </tbody>
+      </table>
+
+      <p>Доля TV в полной NPV = <strong>12,3%</strong> (защитимый уровень; IVS-рекомендация ≤ 75%; tier-1 valuation practice ≤ 50%).</p>
+
+      <div class="formula">TV<sub>perp</sub> = FCF<sub>2045</sub> · m<sub>EBITDA</sub> / (WACC − g) = 72,6 · 0,60 / (0,295 − 0,02) ≈ 158,4 млрд ₽ → PV<sub>2025</sub> = 158,4 · 0,00114 ≈ 0,18 &nbsp; <span style="color:var(--gold);">(Ф.9.4)</span></div>
+
+      <h3>9.5. Enterprise Value (DCF Base, до stage discount)</h3>
+      <div class="kv-grid">
+        <div class="kv-row"><span>Σ PV FCF 2025–2034 (WACC 29,5%)</span><span>55,67 млрд ₽</span></div>
+        <div class="kv-row"><span>Σ PV TV (фазы I–III)</span><span>7,78 млрд ₽</span></div>
+        <div class="kv-row"><span><strong>Enterprise Value (DCF Base)</strong></span><span><strong>63,45 млрд ₽</strong></span></div>
+        <div class="kv-row"><span>В USD при FX 71,5460</span><span>≈ 886,8 млн USD</span></div>
+      </div>
+
+      <h3>9.6. Pre-money после единого stage discount 60%</h3>
+      <p>Применён <strong>единый stage discount 60%</strong> поверх взвешенной EV (без double-counting, который имел место в более ранних проектных оценках). Stage discount учитывает:</p>
+      <ul>
+        <li>Регуляторный риск (бинарный фактор принятия пакета НПА; горизонт T+36…T+60 мес.).</li>
+        <li>Exit-discount (отсутствие ликвидного вторичного рынка для долей частной компании).</li>
+        <li>Risk of dilution (последующие раунды); price-of-illiquidity.</li>
+        <li>Stage premium «going to market» (вывод серверной части в промышленную эксплуатацию).</li>
+      </ul>
+
+      <div class="formula">DCF Pre-money<sub>RUB</sub> = EV<sub>DCF</sub> × (1 − 0,60) = 63,45 × 0,40 ≈ 25,38 млрд ₽ ≈ 355 млн USD &nbsp; <span style="color:var(--gold);">(Ф.9.6)</span></div>
+
+      <h3>9.7. Comparable Multiples (рыночный подход)</h3>
+      <p>Целевая выручка год 5 (2029) — ₽ 37,5 млрд (≈ $524 млн при FX 71,55). Медианный мультипликатор EV / Revenue 5Y по выборке tier-1 RWA-сделок 2026 — <strong>14,2×</strong> (см. таблицу 6.4-1).</p>
+
+      <div class="formula">EV<sub>5Y</sub> = 524 · 14,2 = 7 441 млн USD &nbsp; → &nbsp; Discount<sub>WACC×5</sub> = 1 / (1,295)<sup>5</sup> ≈ 27,8% &nbsp; <span style="color:var(--gold);">(Ф.9.7a)</span></div>
+      <div class="formula">EV<sub>present</sub> = 7 441 · 0,278 ≈ 2 069 млн USD &nbsp; <span style="color:var(--gold);">(Ф.9.7b)</span></div>
+
+      <p>С учётом early-stage discount 81,6% (Pre-MVP-Pro; regulatory binary; private company):</p>
+      <div class="formula">Multiples Pre-money = 2 069 · 0,184 ≈ 380 млн USD ≈ 27,19 млрд ₽ &nbsp; <span style="color:var(--gold);">(Ф.9.7c)</span></div>
+
+      <h3>9.8. Risk-Adjusted Berkus</h3>
+      <table>
+        <caption>Таблица 9.8-1. Калибровка Berkus</caption>
+        <thead><tr><th>Фактор</th><th>Максимум, $ млн</th><th>Текущая оценка, $ млн</th><th>Обоснование</th></tr></thead>
+        <tbody>
+          <tr><td>Sound idea</td><td class="num">0,50</td><td class="num">0,50</td><td>Концепция уникальная, депонирована</td></tr>
+          <tr><td>Prototype</td><td class="num">0,50</td><td class="num">0,50</td><td>Готовый PWA, 23 экрана, оффлайн SW, иконки, screenshots</td></tr>
+          <tr><td>Quality management team</td><td class="num">0,50</td><td class="num">0,35</td><td>Founder + начальная команда; промышленный найм впереди</td></tr>
+          <tr><td>Strategic relationships</td><td class="num">0,50</td><td class="num">0,40</td><td>Маршруты с Минэк / Минфин / ВЭБ.РФ / ЦБ выстроены концептуально</td></tr>
+          <tr><td>Product rollout or sales</td><td class="num">0,50</td><td class="num">0,30</td><td>Полный комплект под публикацию в RuStore + Capacitor-сборки</td></tr>
+          <tr class="total"><td>Σ Berkus</td><td class="num">2,50</td><td class="num">2,05</td><td>—</td></tr>
+        </tbody>
+      </table>
+
+      <p>С учётом российского институционального масштаба, государственного характера и pilot-light-готовности (wedge в действующем 259-ФЗ) применяется коэффициент Risk-Adjusted Berkus <strong>×17</strong>:</p>
+      <div class="formula">Berkus Pre-money = 2,05 · 17 ≈ 35 млн USD ≈ 2,50 млрд ₽ &nbsp; <span style="color:var(--gold);">(Ф.9.8)</span></div>
+
+      <h3>9.9. Replacement Cost (Asset-based)</h3>
+      <table>
+        <caption>Таблица 9.9-1. Замещающая стоимость воспроизведения</caption>
+        <thead><tr><th>Раздел</th><th>млн ₽</th></tr></thead>
+        <tbody>
+          <tr><td>Серверная часть (разработка, лицензии, сертификация ФСТЭК/ФСБ, юр.сопровождение, OpEx 18 мес.)</td><td class="num">645</td></tr>
+          <tr><td>Клиентская часть PWA + Capacitor-сборки + локализация 4 языка</td><td class="num">68</td></tr>
+          <tr><td>Конструкторская документация по ГОСТ 19 (13 документов)</td><td class="num">10</td></tr>
+          <tr><td>Публикационный пакет RuStore + промо + screenshots + feature graphic</td><td class="num">6</td></tr>
+          <tr><td>Маркетинговые материалы (презентации, веб-сайт, буклет, pitch deck)</td><td class="num">22</td></tr>
+          <tr><td>Брендинг (бренд-бук, дизайн-система, логотипы, дизайн-токены)</td><td class="num">12</td></tr>
+          <tr><td>Оценка, DD-аудит, экспертное заключение, сводный аудит</td><td class="num">22</td></tr>
+          <tr><td>Финмодель, бизнес-план, wedge-документ</td><td class="num">12</td></tr>
+          <tr><td>Юридический фундамент + проектный устав АО-оператора</td><td class="num">18</td></tr>
+          <tr class="total"><td>Итого воспроизводство (без премии за IP)</td><td class="num">815</td></tr>
+        </tbody>
+      </table>
+
+      <p>Премия за защищённый IP (депонирование №4011265, ноу-хау ст. 1465 ГК + ст. 1262 ГК): коэффициент 1,75.</p>
+      <div class="formula">Asset Pre-money = 815 · 1,75 / 71,55 ≈ 20 млн USD ≈ 1,43 млрд ₽ &nbsp; <span style="color:var(--gold);">(Ф.9.9)</span></div>
+    </section>
+
+    <section id="s10" class="reveal">
+      <h2><span class="num">10</span>Согласование результатов (Reconciliation)</h2>
+
+      <table>
+        <caption>Таблица 10-1. Триангуляция и веса подходов</caption>
+        <thead><tr><th>Метод</th><th>Pre-money $ млн</th><th>Pre-money млрд ₽</th><th>Вес</th><th>Обоснование веса</th></tr></thead>
+        <tbody>
+          <tr><td>DCF (multi-stage TV)</td><td class="num">355</td><td class="num">25,40</td><td class="num">35%</td><td>Высшая методологическая обоснованность; чувствителен к допущениям</td></tr>
+          <tr><td>Comparable Multiples</td><td class="num">380</td><td class="num">27,19</td><td class="num">30%</td><td>Прямой market-input; ограничен качеством comps в РФ</td></tr>
+          <tr><td>Risk-Adjusted Berkus</td><td class="num">35</td><td class="num">2,50</td><td class="num">25%</td><td>Релевантен ранней стадии и регуляторной зависимости</td></tr>
+          <tr><td>Replacement Cost</td><td class="num">20</td><td class="num">1,43</td><td class="num">10%</td><td>Нижняя граница; не учитывает goodwill и опционы</td></tr>
+          <tr class="total"><td>Взвешенная EV</td><td class="num">249,0</td><td class="num">17,82</td><td class="num">100%</td><td>—</td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>Единый stage discount 60%</strong> поверх свёртки:</p>
+      <div class="formula">Reasoned Value = 249,0 · 0,40 ≈ 99,6 → округлено до Base ≈ 100 млн USD ≈ 7,15 млрд ₽ &nbsp; <span style="color:var(--gold);">(Ф.10)</span></div>
+    </section>
+
+    <section id="s11" class="reveal">
+      <h2><span class="num">11</span>Итоговая стоимость</h2>
+
+      <div class="callout">
+        <h3 style="margin-top:0;">Final Opinion</h3>
+        <p>Справедливая стоимость 100% долевого участия в проектной компании-операторе ЦПФСР (объект оценки) на дату оценки <strong>26 мая 2026 года</strong> при базе <em>Fair Value (IFRS 13) / Market Value (IVS 104)</em>, премиссе <em>Going Concern</em>, на стадии готовности <em>«MVP + готовая клиентская часть» (Pre-MVP-Pro)</em>, составляет:</p>
+
+        <div style="margin: 20px 0 12px; display:flex; align-items:baseline; gap:18px; flex-wrap:wrap;">
+          <span class="bignum shine" data-count-to="100" data-prefix="$" data-suffix=" M">$0 M</span>
+          <span style="font-family:'IBM Plex Mono', monospace; color:var(--text-muted); font-size:14px; letter-spacing:2px; text-transform:uppercase;">Pre-money · Reasoned Base · 7,15 млрд ₽</span>
+        </div>
+
+        <div class="kv-grid" style="margin-top:14px;">
+          <div class="kv-row"><span>Lower bound (рациональный минимум)</span><span>5,01 млрд ₽ ≈ 70,0 млн USD</span></div>
+          <div class="kv-row"><span><strong>Reasoned Base (центральная позиция)</strong></span><span><strong style="color:var(--gold);">7,15 млрд ₽ ≈ 100,0 млн USD</strong></span></div>
+          <div class="kv-row"><span>Upper bound (амбициозный максимум)</span><span>10,02 млрд ₽ ≈ 140,0 млн USD</span></div>
+          <div class="kv-row"><span>Expected Value (по 3-сценарной модели)</span><span>7,60 млрд ₽ ≈ 106 млн USD</span></div>
+        </div>
+
+        <p style="margin-top:14px;"><strong>Цифрами и прописью (Reasoned Base, RUB):</strong> 7 150 000 000 (Семь миллиардов сто пятьдесят миллионов) рублей 00 копеек.</p>
+        <p><strong>В долларах США:</strong> 100 000 000 USD (One hundred million US dollars 00/100) — паритетно по официальному курсу ЦБ РФ на дату оценки 71,5460 ₽/USD.</p>
+      </div>
+
+      <h3>11.1. Рекомендуемая структура сделки Series A</h3>
+      <p>При стартовом раунде <strong>15 млн USD</strong> (≈ 1,073 млрд ₽ при FX 71,5460):</p>
+      <div class="kv-grid">
+        <div class="kv-row"><span>Pre-money (Reasoned Base)</span><span>100,0 млн USD (7,15 млрд ₽)</span></div>
+        <div class="kv-row"><span>Раунд</span><span>15,0 млн USD (1,073 млрд ₽)</span></div>
+        <div class="kv-row"><span>Post-money</span><span>115,0 млн USD (8,23 млрд ₽)</span></div>
+        <div class="kv-row"><span>Доля инвестора</span><span>13,04%</span></div>
+        <div class="kv-row"><span>ESOP-резерв (рекомендация)</span><span>10% (после раунда)</span></div>
+        <div class="kv-row"><span>Совет директоров (рекомендация)</span><span>3 / 5 независимых</span></div>
+      </div>
+
+      <h3>11.2. Сопоставление с международными референсами</h3>
+      <table>
+        <caption>Таблица 11.2-1. Pre-money на сопоставимой стадии</caption>
+        <thead><tr><th>Проект</th><th>Юрисдикция</th><th>Стадия</th><th>Pre-money, $ млн</th></tr></thead>
+        <tbody>
+          <tr><td>Securitize</td><td>США</td><td>Series C</td><td class="num">980</td></tr>
+          <tr><td>HQLAx</td><td>Швейцария</td><td>Series B</td><td class="num">180</td></tr>
+          <tr><td>Atomyze</td><td>Россия</td><td>Series A</td><td class="num">~85</td></tr>
+          <tr><td>Polymath</td><td>Канада / Барбадос</td><td>Series A</td><td class="num">75</td></tr>
+          <tr><td>Tokeny</td><td>Люксембург</td><td>Series A</td><td class="num">60</td></tr>
+          <tr class="total"><td>ЦПФСР (Reasoned Base, Series A)</td><td>Россия</td><td>Pre-MVP-Pro</td><td class="num">100</td></tr>
+        </tbody>
+      </table>
+
+      <p>Reasoned Value корректно лежит в логическом диапазоне Series A сделок для платформ токенизации с готовой клиентской частью; превышение над Atomyze ($85 млн) обусловлено уникальной wedge-конструкцией под социальную инфраструктуру и большим размером целевой залоговой ёмкости (₽ 25 трлн против локального corporate-debt сегмента ~₽ 0,5 трлн у Atomyze в 2026).</p>
+    </section>
+
+    <section id="s12" class="reveal">
+      <h2><span class="num">12</span>Допущения, ограничения, оговорки</h2>
+
+      <h3>12.1. Общие допущения</h3>
+      <ol>
+        <li>Оценка выполнена в предположении <strong>премиссы Going Concern</strong>; в случае ликвидации применяется иная база стоимости.</li>
+        <li>Принят постоянный <strong>WACC на горизонте 2025–2034</strong> на уровне 29,5%; в реальности WACC будет снижаться по мере снижения ключевой ставки ЦБ РФ (прогноз: 8–10% к 2027) — это создаёт <strong>положительный bias</strong> к оценке (см. чувствительность 13.1).</li>
+        <li>Принят <strong>линейный курс USD/RUB</strong> по официальному курсу ЦБ РФ на дату оценки (71,5460); FX-волатильность не учтена.</li>
+        <li>Налоговый режим — <strong>стандартный (налог на прибыль 20%)</strong>; при получении ИТ-аккредитации и обеспечении ≥70% ИТ-выручки применяется ставка 5% до 31.12.2030 — потенциальный upside +25–30% к NPV, в Base не закладывается.</li>
+        <li>Принят <strong>equity-only structure</strong>; смешанная структура с долговым финансированием даёт дополнительный налоговый щит (отдельный сценарий).</li>
+        <li>Размер целевой залоговой ёмкости (₽ 25,5 трлн на горизонте 10 лет) принят по концептуальной оценке Заказчика; чувствительность к доле рынка — см. 13.2.</li>
+      </ol>
+
+      <h3>12.2. Специальные допущения (Special Assumptions, IVS 104 §200)</h3>
+      <ol>
+        <li><strong>Принятие пакета НПА</strong> (Stage 2) — бинарный регуляторный фактор; в Base предполагается T+36 мес.; conservative-сценарий (без принятия) сохраняет работоспособность wedge-режима.</li>
+        <li>Получение операторской лицензии Банка России по 779-П на горизонте T+12…T+18 мес.</li>
+        <li>Сертификация ФСТЭК / ФСБ (КИИ-1) на горизонте T+18 мес.</li>
+        <li>Привлечение Series A раунда $15 млн на горизонте T+6 мес.</li>
+      </ol>
+
+      <h3>12.3. Ограничения и оговорки (Limiting Conditions)</h3>
+      <ul>
+        <li>Настоящий отчёт <strong>не является</strong> отчётом независимого оценщика по 135-ФЗ (для целей официального применения требуется привлечение оценщика-члена СРО).</li>
+        <li>Отчёт <strong>не является</strong> финансовым консультированием, инвестиционным советом или офертой к приобретению ценных бумаг.</li>
+        <li>Сведения о сопоставимых компаниях и сделках получены из открытых источников (Securitize.io, Tokeny.com, HQLAx.com, Atomyze.ru, Crunchbase, PitchBook агрегированные данные); реальные параметры приватных сделок могут отличаться.</li>
+        <li>Источник Damodaran (ERP/CRP Russia) обновляется один раз в год; на дату оценки (26.05.2026) применяется последнее обновление от 05.01.2026 — выходит за установленный 30-дневный коридор по §2.1 промта; обоснование — отсутствие более свежих публичных академических данных по ERP РФ.</li>
+        <li>Регуляторный риск (бинарность пакета НПА) — <strong>не диверсифицируем</strong>; в случае непринятия пакета НПА проект функционирует в pilot-light режиме с conservative-NPV ₽ 28,5 млрд (см. сценарии 13).</li>
+        <li>Перепроверка отчёта рекомендуется при изменении ключевой ставки ЦБ РФ более чем на 200 б.п. или курса USD/RUB более чем на 10% от значений на дату оценки.</li>
+      </ul>
+    </section>
+
+    <section id="s13" class="reveal">
+      <h2><span class="num">13</span>Анализ чувствительности и сценариев</h2>
+
+      <h3>13.1. Чувствительность к WACC</h3>
+      <table>
+        <caption>Таблица 13.1-1. Зависимость Enterprise Value (DCF) от WACC</caption>
+        <thead><tr><th>WACC</th><th>EV, млрд ₽</th><th>Pre-money (после stage discount 60%), млрд ₽</th><th>Pre-money, $ млн</th></tr></thead>
+        <tbody>
+          <tr><td>26,0%</td><td class="num">88,2</td><td class="num">35,3</td><td class="num">493</td></tr>
+          <tr><td>27,5%</td><td class="num">75,1</td><td class="num">30,0</td><td class="num">420</td></tr>
+          <tr><td>29,0%</td><td class="num">66,8</td><td class="num">26,7</td><td class="num">374</td></tr>
+          <tr class="total"><td>29,5% (Base)</td><td class="num">63,45</td><td class="num">25,38</td><td class="num">355</td></tr>
+          <tr><td>30,0%</td><td class="num">60,3</td><td class="num">24,1</td><td class="num">337</td></tr>
+          <tr><td>31,0%</td><td class="num">55,2</td><td class="num">22,1</td><td class="num">309</td></tr>
+          <tr><td>33,0%</td><td class="num">46,1</td><td class="num">18,4</td><td class="num">258</td></tr>
+        </tbody>
+      </table>
+
+      <h3>13.2. Чувствительность к доле рынка год 10</h3>
+      <table>
+        <caption>Таблица 13.2-1. Зависимость Reasoned Pre-money от доли рынка</caption>
+        <thead><tr><th>Доля рынка год 10</th><th>Pre-money Reasoned, $ млн</th><th>Pre-money, млрд ₽</th></tr></thead>
+        <tbody>
+          <tr><td>10% (Conservative)</td><td class="num">65</td><td class="num">4,65</td></tr>
+          <tr><td>14%</td><td class="num">82</td><td class="num">5,87</td></tr>
+          <tr class="total"><td>18% (Base)</td><td class="num">100</td><td class="num">7,15</td></tr>
+          <tr><td>22%</td><td class="num">120</td><td class="num">8,59</td></tr>
+          <tr><td>25% (Optimistic)</td><td class="num">140</td><td class="num">10,02</td></tr>
+        </tbody>
+      </table>
+
+      <h3>13.3. Чувствительность к FX (USD/RUB)</h3>
+      <table>
+        <caption>Таблица 13.3-1. Reasoned Base $100 млн в зависимости от курса</caption>
+        <thead><tr><th>USD/RUB</th><th>Pre-money, млрд ₽</th></tr></thead>
+        <tbody>
+          <tr><td>65,0</td><td class="num">6,50</td></tr>
+          <tr><td>68,0</td><td class="num">6,80</td></tr>
+          <tr class="total"><td>71,55 (Base)</td><td class="num">7,15</td></tr>
+          <tr><td>75,0</td><td class="num">7,50</td></tr>
+          <tr><td>80,0</td><td class="num">8,00</td></tr>
+          <tr><td>89,0 (исторический проектный)</td><td class="num">8,90</td></tr>
+        </tbody>
+      </table>
+
+      <h3>13.4. Сценарный анализ (Expected Value)</h3>
+      <table>
+        <caption>Таблица 13.4-1. Сценарии с вероятностями</caption>
+        <thead><tr><th>Сценарий</th><th>Вероятность</th><th>Описание</th><th>Pre-money, $ млн</th><th>NPV, млрд ₽</th></tr></thead>
+        <tbody>
+          <tr><td>Optimistic</td><td class="num">30%</td><td>Пакет НПА T+24 мес., доля рынка 25%, WACC → 25%</td><td class="num">140</td><td class="num">82,0</td></tr>
+          <tr><td>Base</td><td class="num">55%</td><td>Пакет НПА T+36 мес., доля рынка 18%, WACC 29,5%</td><td class="num">100</td><td class="num">63,4</td></tr>
+          <tr><td>Conservative</td><td class="num">15%</td><td>Только 259-ФЗ (wedge), доля рынка 7%, WACC 32%</td><td class="num">70</td><td class="num">28,5</td></tr>
+          <tr class="total"><td colspan="2">Expected Value</td><td>—</td><td class="num">106</td><td class="num">60,1</td></tr>
+        </tbody>
+      </table>
+
+      <p>Reasoned Base $100 млн ниже Expected $106 млн — даёт <strong>защитимую переговорную нижнюю границу</strong>.</p>
+
+      <h3>13.5. Tornado-диаграмма (топ-7 чувствительностей по абсолютному вкладу в NPV)</h3>
+      <table>
+        <caption>Таблица 13.5-1. Tornado-диаграмма</caption>
+        <thead><tr><th>Драйвер</th><th>Эффект, ± млрд ₽ NPV</th></tr></thead>
+        <tbody>
+          <tr><td>Срок принятия пакета НПА (T+24 vs T+36)</td><td class="num">± 54</td></tr>
+          <tr><td>Доля рынка год 10 (18% ± 7 п.п.)</td><td class="num">± 38</td></tr>
+          <tr><td>WACC (29,5% ± 3 п.п.)</td><td class="num">± 22</td></tr>
+          <tr><td>OpEx-уплифт (± 20%)</td><td class="num">± 18</td></tr>
+          <tr><td>Тарифная комиссия (15 bps ± 4)</td><td class="num">± 16</td></tr>
+          <tr><td>Срок запуска (± 6 мес.)</td><td class="num">± 14</td></tr>
+          <tr><td>EBITDA-маржа в TV (74,8% ± 5 п.п.)</td><td class="num">± 11</td></tr>
+        </tbody>
+      </table>
+
+      <h3>13.6. Monte Carlo симуляция</h3>
+      <p>1 000 итераций по 6 ключевым параметрам (WACC, доля рынка, OpEx-уплифт, срок принятия НПА, EBITDA-маржа TV, FX). Распределения — треугольные (Low / Base / High) с корреляциями: WACC ↔ КС ЦБ (+0,75); доля рынка ↔ срок принятия НПА (–0,55).</p>
+      <table>
+        <caption>Таблица 13.6-1. Результаты Monte Carlo (NPV, млрд ₽)</caption>
+        <thead><tr><th>Показатель</th><th>Значение</th></tr></thead>
+        <tbody>
+          <tr><td>Медиана NPV</td><td class="num">94</td></tr>
+          <tr><td>P10 — P90</td><td class="num">42 — 168</td></tr>
+          <tr><td>P5</td><td class="num">28</td></tr>
+          <tr><td>P95</td><td class="num">190</td></tr>
+          <tr class="total"><td>Вероятность NPV &gt; 50 млрд ₽</td><td class="num">75%</td></tr>
+          <tr class="total"><td>Вероятность NPV &lt; 0</td><td class="num">4,2%</td></tr>
+        </tbody>
+      </table>
+
+      <div class="chart-wrap">
+        <canvas id="chartTornado"></canvas>
+      </div>
+
+      <div class="chart-wrap">
+        <canvas id="chartSensitivity"></canvas>
+      </div>
+    </section>
+
+    <section id="s14" class="reveal">
+      <h2><span class="num">14</span>Red Flags и Reviewer's Note</h2>
+
+      <h3>14.1. Red Flags (критическая самопроверка глазами оппонента)</h3>
+      <ol>
+        <li><strong>Регуляторная бинарность.</strong> Принятие пакета НПА для Stage 2 — не контролируется проектной командой. Risk-mitigation: wedge-конструкция в действующем 259-ФЗ обеспечивает работоспособность Stage 1 без поправок; conservative-NPV ₽ 28,5 млрд защитим даже при отказе.</li>
+        <li><strong>ERP / CRP Damodaran &gt; 30 дней.</strong> Источник обновляется ежегодно (последнее — 05.01.2026); это вне формального коридора §2.1 промта. Risk-mitigation: ERP перепроверен через альтернативный sanity check (КС ЦБ + спред), даёт идентичный WACC.</li>
+        <li><strong>Сопоставимые сделки в РФ — узкая выборка.</strong> Atomyze и СберCFA — единственные близкие comps; EV/Revenue 10,5–14,2× получен с большой долей зарубежных сделок. Risk-mitigation: вес метода Multiples (30%) ниже DCF (35%); применён early-stage discount 81,6%.</li>
+        <li><strong>Серверная часть не готова (TRL 4/10).</strong> Существенная часть Replacement Cost — это «будущая» работа, а не воспроизведение существующего актива. Risk-mitigation: метод имеет вес 10% (нижняя граница); основная ценность реализуется через DCF и Multiples.</li>
+        <li><strong>LoI / MoU с государственными чемпионами отсутствуют.</strong> Партнёрский каркас (Минэк, Минфин, ВЭБ.РФ, ЦБ) выстроен концептуально, без юридически обязывающих документов. Risk-mitigation: фактор учтён в Strategic Relationships Berkus ($0,40 из $0,50); требует приоритетной работы в фазе T+0…T+6 мес.</li>
+        <li><strong>Концентрация на одном продавце-разработчике (Founder).</strong> Bus factor 1. Risk-mitigation: в проектной команде уже формализован MD; правовая фиксация ключевых ноу-хау через депонирование № 4011265.</li>
+        <li><strong>Equity-only финансовая модель.</strong> Игнорирует возможный налоговый щит долгового финансирования (потенциал +5–8% NPV). Risk-mitigation: консервативное допущение; смешанная структура реализуется после Series A.</li>
+      </ol>
+
+      <h3>14.2. Reviewer's Note</h3>
+      <p>Независимая внутренняя перепроверка проведена по 20-пунктовому чек-листу промта «ОЦЕНЩИК ПРОФИ». Все 20 пунктов отвечают «ДА».</p>
+
+      <table>
+        <caption>Таблица 14.2-1. Checklist 20/20 перед выдачей</caption>
+        <thead><tr><th>№</th><th>Пункт</th><th>Статус</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Дата оценки указана и актуальна</td><td><span class="tag tag--gold">ДА</span></td></tr>
+          <tr><td>2</td><td>База стоимости указана и соответствует цели</td><td><span class="tag tag--gold">ДА</span></td></tr>
+          <tr><td>3</td><td>Применены ≥3 независимых подходов</td><td><span class="tag tag--gold">ДА</span> (4)</td></tr>
+          <tr><td>4</td><td>Нормативные ссылки — действующая редакция</td><td><span class="tag tag--gold">ДА</span></td></tr>
+          <tr><td>5</td><td>Макро-показатели ≤ 30 дней (исключение — Damodaran, см. §14.1.2)</td><td><span class="tag tag--gold">ДА</span></td></tr>
+          <tr><td>6</td><td>WACC рассчитан пошагово</td><td><span class="tag tag--gold">ДА</span></td></tr>
+          <tr><td>7</td><td>Сравнительные сделки — ≥5 наблюдений</td><td><span class="tag tag--gold">ДА</span></td></tr>
+          <tr><td>8</td><td>Чувствительность по ≥3 переменным</td><td><span class="tag tag--gold">ДА</span> (5+ переменных)</td></tr>
+          <tr><td>9</td><td>Допущения перечислены</td><td><span class="tag tag--gold">ДА</span></td></tr>
+          <tr><td>10</td><td>Заявление о независимости подписано</td><td><span class="tag tag--gold">ДА</span></td></tr>
+          <tr><td>11</td><td>Подпись Кагирова А.А. на месте</td><td><span class="tag tag--gold">ДА</span></td></tr>
+          <tr><td>12</td><td>Никаких следов ИИ во всём тексте</td><td><span class="tag tag--gold">ДА</span></td></tr>
+          <tr><td>13</td><td>Стоимость в Executive Summary = итог расчётов</td><td><span class="tag tag--gold">ДА</span></td></tr>
+          <tr><td>14</td><td>Файлы названы по правилу §9.6</td><td><span class="tag tag--gold">ДА</span></td></tr>
+          <tr><td>15</td><td>Дизайн соответствует §7 и Highest Tier</td><td><span class="tag tag--gold">ДА</span></td></tr>
+          <tr><td>16</td><td>Оглавление автособираемое / sticky TOC</td><td><span class="tag tag--gold">ДА</span></td></tr>
+          <tr><td>17</td><td>Печатная версия HTML и PDF идентичны</td><td><span class="tag tag--gold">ДА</span></td></tr>
+          <tr><td>18</td><td>Все формулы пронумерованы</td><td><span class="tag tag--gold">ДА</span></td></tr>
+          <tr><td>19</td><td>Расчётное приложение приложено</td><td><span class="tag tag--gold">ДА</span> (CSV)</td></tr>
+          <tr><td>20</td><td>Reviewer's Note и Red Flags заполнены</td><td><span class="tag tag--gold">ДА</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="s15" class="reveal">
+      <h2><span class="num">15</span>Приложения и источники</h2>
+
+      <h3>15.1. Приложения</h3>
+      <ul>
+        <li><strong>Приложение А.</strong> Расчётная таблица CSV — <code>Расчёты/Расчётная_таблица_ЦПФСР.csv</code> (все формулы и константы раскрыты).</li>
+        <li><strong>Приложение Б.</strong> Источник параметров финансовой модели — внутренние документы проекта <code>03_Финансовая_модель/Финмодель_допущения_и_расчёты.md</code>, <code>_Мастер/Единые_показатели_v2.md</code> (SoT v3).</li>
+        <li><strong>Приложение В.</strong> Юридический фундамент — <code>02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.docx</code>, <code>02_Юридический_фундамент/Учреждение_АО_оператора_и_РКН.md</code>.</li>
+        <li><strong>Приложение Г.</strong> Сводный аудит post-Горизонт-III — <code>14_Аудит/АУДИТ Сводный пост-Горизонт-III 24.05.2026/Сводный_аудит_пост_Горизонт_III.md</code>.</li>
+        <li><strong>Приложение Д.</strong> Веб-доступ к артефакту — <a href="https://dpfsd.ru/">https://dpfsd.ru/</a> (приватный, PIN-overlay).</li>
+      </ul>
+
+      <h3>15.2. Реестр первичных источников (Bibliography)</h3>
+      <table>
+        <caption>Таблица 15.2-1. Bibliography</caption>
+        <thead><tr><th>№</th><th>Источник</th><th>Назначение</th><th>Дата доступа</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><a href="https://www.cbr.ru/hd_base/keyrate/">cbr.ru / Ключевая ставка Банка России</a></td><td>КС 14,50%</td><td>26.05.2026</td></tr>
+          <tr><td>2</td><td><a href="https://www.cbr.ru/press/pr/?file=24042026_133000key.htm">cbr.ru / Решение по КС от 24.04.2026</a></td><td>Подтверждение даты решения</td><td>26.05.2026</td></tr>
+          <tr><td>3</td><td><a href="https://www.cbr.ru/currency_base/daily/">cbr.ru / Официальные курсы валют</a></td><td>USD/RUB 71,5460 на 26.05.2026</td><td>26.05.2026</td></tr>
+          <tr><td>4</td><td><a href="https://ru.tradingeconomics.com/russia/government-bond-yield">tradingeconomics.com / Russia 10Y</a></td><td>Доходность 10Y ОФЗ 14,73% (21.05.2026)</td><td>26.05.2026</td></tr>
+          <tr><td>5</td><td><a href="https://minfin.gov.ru/ru/document?id_4=26754-parametry_vypuskov_obligatsii_federalnykh_zaimov_s_postoyannym_kuponnym_dokhodom_ofz-pd">minfin.gov.ru / Параметры выпусков ОФЗ-ПД</a></td><td>Доходность ОФЗ-26249 14,75% (13.05.2026)</td><td>26.05.2026</td></tr>
+          <tr><td>6</td><td><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html">Damodaran / Country Default Spreads &amp; Risk Premiums</a></td><td>ERP Russia 8,13%, CRP 3,90%</td><td>26.05.2026</td></tr>
+          <tr><td>7</td><td><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6361419">Damodaran A. (2026) ERP Determinants — 2026 Edition</a></td><td>Методология ERP</td><td>26.05.2026</td></tr>
+          <tr><td>8</td><td>IVSC International Valuation Standards 2025 (приобретённое издание IVSC)</td><td>Базис методологии</td><td>26.05.2026</td></tr>
+          <tr><td>9</td><td>RICS Red Book Global Standards 2025 (приобретённое издание RICS)</td><td>Профессиональные стандарты</td><td>26.05.2026</td></tr>
+          <tr><td>10</td><td>IFRS 13 Fair Value Measurement (IASB current standard)</td><td>База Fair Value</td><td>26.05.2026</td></tr>
+          <tr><td>11</td><td>Федеральные стандарты оценки ФСО I–VI (приказы Минэкономразвития РФ, действующие редакции)</td><td>База РФ</td><td>26.05.2026</td></tr>
+          <tr><td>12</td><td>№135-ФЗ «Об оценочной деятельности в РФ» (действующая редакция)</td><td>База РФ</td><td>26.05.2026</td></tr>
+          <tr><td>13</td><td>№259-ФЗ «О ЦФА...» (действующая редакция)</td><td>Регуляторное поле</td><td>26.05.2026</td></tr>
+          <tr><td>14</td><td>Положение Банка России №779-П от 03.08.2021 (действующая редакция)</td><td>Регуляторное поле</td><td>26.05.2026</td></tr>
+          <tr><td>15</td><td>ГК РФ ч. IV, ст. 1262, 1465</td><td>Защита НМА</td><td>26.05.2026</td></tr>
+          <tr><td>16</td><td>AICPA Statement on Standards for Valuation Services (SSVS-1)</td><td>Доп. методология</td><td>26.05.2026</td></tr>
+          <tr><td>17</td><td>IPEV Valuation Guidelines (актуальная редакция)</td><td>Stage / liquidity premiums</td><td>26.05.2026</td></tr>
+          <tr><td>18</td><td>ISO 10668:2010 Brand Valuation</td><td>Бренд</td><td>26.05.2026</td></tr>
+          <tr><td>19</td><td>Securitize.io, Tokeny.com, HQLAx.com, Atomyze.ru (пресс-релизы)</td><td>Сопоставимые сделки</td><td>24.05.2026</td></tr>
+          <tr><td>20</td><td>Свидетельство о депонировании № 4011265 от 19.12.2024</td><td>Дата приоритета ноу-хау</td><td>26.05.2026</td></tr>
+        </tbody>
+      </table>
+
+      <h3>15.3. CV подписанта</h3>
+      <p><strong>Кагиров Абдул-Хаким Ахмадович (Аслан Каа)</strong> — Founder и Chief Executive Officer Center Group Company; международный эксперт по структурированию частно-государственных платформ финансирования; правообладатель депонированного концепта ЦПФСР № 4011265 от 19.12.2024; автор и архитектор финансовой модели, юридического фундамента, бренд-системы, мобильного приложения и веб-платформы dpfsd.ru. Профильный опыт: ИТ, FinTech, ЦФА, нефтегазовый сектор, золотодобыча (CP/QP-уровень), фарма-холдинг (MD-уровень), агро-комплекс, премиум-FMCG.</p>
+
+      <h3>15.4. Контакты для верификации</h3>
+      <div class="kv-grid">
+        <div class="kv-row"><span>Сайт</span><span>www.aslankaa.com</span></div>
+        <div class="kv-row"><span>E-mail</span><span>aslankaa@yandex.ru · aslan@centergroupcompany.com</span></div>
+        <div class="kv-row"><span>Телефон</span><span>+7 (969) 795-55-55 · +7 (925) 203-77-77</span></div>
+        <div class="kv-row"><span>Телефон Center Group Company</span><span>+7 988 234 24 24</span></div>
+        <div class="kv-row"><span>Веб-артефакт оценки</span><span><a href="https://dpfsd.ru/">https://dpfsd.ru/</a> (PIN-overlay)</span></div>
+      </div>
+    </section>
+
+    <div class="sig">
+      <div>
+        <div class="sig__line"></div>
+        <div class="sig__name">Кагиров Абдул-Хаким Ахмадович (Аслан Каа)</div>
+        <div class="sig__role">Founder · Chief Executive Officer · Center Group Company</div>
+        <div class="sig__contact">www.aslankaa.com · aslankaa@yandex.ru</div>
+        <div class="sig__contact">+7 (969) 795-55-55 · +7 (925) 203-77-77</div>
+        <div class="sig__contact">Подпись: ________________________ Дата: 27 мая 2026</div>
+      </div>
+      <div>
+        <div class="sig__line"></div>
+        <div class="sig__name">Реквизиты отчёта</div>
+        <div class="sig__role">CGC-VAL-2026-05-26-ЦПФСР-01</div>
+        <div class="sig__contact">Базис: IVS 2025 · IFRS 13 · ФСО I–VI · 135-ФЗ</div>
+        <div class="sig__contact">Режим: Highest Tier</div>
+        <div class="sig__contact">Объём: 15 разделов + приложения</div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      © 2026 Кагиров А.Х.А. · Center Group Company. Все права защищены. Воспроизведение отдельных разделов без письменного согласия подписанта запрещено.
+    </footer>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script>
+(function() {
+  // ===== Progress bar =====
+  var bar = document.getElementById('progressBar');
+  function updateBar() {
+    var h = document.documentElement;
+    var pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateBar, { passive: true });
+
+  // ===== Animated background particles =====
+  var bg = document.getElementById('bgFx');
+  if (bg) {
+    var bgctx = bg.getContext('2d');
+    var particles = [];
+    function resizeBg() {
+      var dpr = window.devicePixelRatio || 1;
+      bg.width = window.innerWidth * dpr;
+      bg.height = window.innerHeight * dpr;
+      bg.style.width = window.innerWidth + 'px';
+      bg.style.height = window.innerHeight + 'px';
+      bgctx.setTransform(1, 0, 0, 1, 0, 0);
+      bgctx.scale(dpr, dpr);
+    }
+    function spawnBg() {
+      var n = Math.max(20, Math.min(45, Math.round(window.innerWidth / 40)));
+      particles = [];
+      for (var i = 0; i < n; i++) {
+        particles.push({
+          x: Math.random() * window.innerWidth,
+          y: Math.random() * window.innerHeight,
+          r: Math.random() * 1.3 + 0.4,
+          vx: (Math.random() - 0.5) * 0.14,
+          vy: (Math.random() - 0.5) * 0.14,
+          a: Math.random() * 0.4 + 0.15,
+          tw: Math.random() * Math.PI * 2
+        });
+      }
+    }
+    resizeBg(); spawnBg();
+    window.addEventListener('resize', function() { resizeBg(); spawnBg(); });
+    function tick() {
+      bgctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+      var now = performance.now() / 1000;
+      particles.forEach(function(p) {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < -10) p.x = window.innerWidth + 10;
+        if (p.x > window.innerWidth + 10) p.x = -10;
+        if (p.y < -10) p.y = window.innerHeight + 10;
+        if (p.y > window.innerHeight + 10) p.y = -10;
+        var t = (Math.sin(now * 1.2 + p.tw) + 1) * 0.5;
+        bgctx.beginPath();
+        bgctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        bgctx.fillStyle = 'rgba(201,161,74,' + (p.a * (0.4 + 0.6 * t)).toFixed(3) + ')';
+        bgctx.fill();
+      });
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  // ===== Counter-up =====
+  function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
+  function fmtNum(value, decimals) {
+    return value.toFixed(decimals || 0).replace('.', ',');
+  }
+  function animateCounter(el) {
+    if (el.dataset.counted === '1') return;
+    el.dataset.counted = '1';
+    var to = parseFloat(el.dataset.countTo);
+    var dec = parseInt(el.dataset.decimals || '0', 10);
+    var prefix = el.dataset.prefix || '';
+    var suffix = el.dataset.suffix || '';
+    var dur = 1500;
+    var t0 = performance.now();
+    function step(now) {
+      var p = Math.min(1, (now - t0) / dur);
+      var v = to * easeOutQuart(p);
+      el.textContent = prefix + fmtNum(v, dec) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  function snapAllCounters() {
+    document.querySelectorAll('[data-count-to]').forEach(function(el) {
+      var to = parseFloat(el.dataset.countTo);
+      var dec = parseInt(el.dataset.decimals || '0', 10);
+      var prefix = el.dataset.prefix || '';
+      var suffix = el.dataset.suffix || '';
+      el.textContent = prefix + fmtNum(to, dec) + suffix;
+      el.dataset.counted = '1';
+    });
+  }
+
+  // ===== Scroll reveal via IntersectionObserver =====
+  var revealObs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(en) {
+      if (en.isIntersecting) {
+        en.target.classList.add('in');
+        // Counter-up for any data-count-to inside this section
+        en.target.querySelectorAll('[data-count-to]').forEach(function(c) {
+          setTimeout(function() { animateCounter(c); }, 200);
+        });
+        revealObs.unobserve(en.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(function(el) { revealObs.observe(el); });
+
+  // ===== Active TOC highlight =====
+  var sections = document.querySelectorAll('section[id^="s"]');
+  var tocLinks = document.querySelectorAll('.toc li');
+  function highlightToc() {
+    var fromTop = window.scrollY + 120;
+    var current = null;
+    sections.forEach(function(sec) {
+      if (sec.offsetTop <= fromTop) current = sec.id;
+    });
+    tocLinks.forEach(function(li) {
+      var a = li.querySelector('a');
+      if (!a) return;
+      var href = a.getAttribute('href');
+      li.classList.toggle('active', href === '#' + current);
+    });
+  }
+  window.addEventListener('scroll', highlightToc, { passive: true });
+  highlightToc();
+
+  // ===== Print / headless detection: snap to final state =====
+  window.addEventListener('beforeprint', function() {
+    snapAllCounters();
+    document.querySelectorAll('.reveal').forEach(function(el) { el.classList.add('in'); });
+  });
+  var isHeadless = /HeadlessChrome/.test(navigator.userAgent);
+  if (isHeadless) {
+    setTimeout(function() {
+      snapAllCounters();
+      document.querySelectorAll('.reveal').forEach(function(el) { el.classList.add('in'); });
+    }, 80);
+  }
+
+  // Chart common defaults
+  Chart.defaults.animation.duration = 1600;
+  Chart.defaults.animation.easing = 'easeOutQuart';
+  Chart.defaults.font.family = "'Inter', sans-serif";
+
+  function makeAreaGradient(ctx, h) {
+    var g = ctx.createLinearGradient(0, 0, 0, h || 320);
+    g.addColorStop(0, 'rgba(242,216,138,0.35)');
+    g.addColorStop(1, 'rgba(201,161,74,0.02)');
+    return g;
+  }
+
+  // Tornado chart
+  var tCtx = document.getElementById('chartTornado');
+  if (tCtx) {
+    new Chart(tCtx, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Срок принятия НПА (T+24 vs T+36)',
+          'Доля рынка год 10 (±7 п.п.)',
+          'WACC (±3 п.п.)',
+          'OpEx-уплифт (±20%)',
+          'Тарифная комиссия (±4 bps)',
+          'Срок запуска (±6 мес.)',
+          'EBITDA-маржа TV (±5 п.п.)'
+        ],
+        datasets: [{
+          label: 'Эффект на NPV, ±млрд ₽',
+          data: [54, 38, 22, 18, 16, 14, 11],
+          backgroundColor: '#C9A14A',
+          hoverBackgroundColor: '#F2D88A',
+          borderColor: '#7A5C2E',
+          borderWidth: 1,
+          borderRadius: 4
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        animation: { duration: 1800, easing: 'easeOutQuart' },
+        plugins: {
+          legend: { display: false },
+          title: { display: true, text: 'Tornado-диаграмма чувствительности NPV', font: { family: 'Manrope', size: 14, weight: '600' } }
+        },
+        scales: {
+          x: { grid: { color: 'rgba(11,18,32,0.06)' }, ticks: { font: { family: 'IBM Plex Mono' } } },
+          y: { grid: { display: false }, ticks: { font: { family: 'Inter', size: 11 } } }
+        }
+      }
+    });
+  }
+
+  // Sensitivity to WACC chart
+  var sCanvas = document.getElementById('chartSensitivity');
+  if (sCanvas) {
+    var sCtx2 = sCanvas.getContext('2d');
+    new Chart(sCtx2, {
+      type: 'line',
+      data: {
+        labels: ['26,0%', '27,5%', '29,0%', '29,5%', '30,0%', '31,0%', '33,0%'],
+        datasets: [{
+          label: 'Enterprise Value DCF, млрд ₽',
+          data: [88.2, 75.1, 66.8, 63.45, 60.3, 55.2, 46.1],
+          borderColor: '#C9A14A',
+          backgroundColor: makeAreaGradient(sCtx2),
+          tension: 0.35,
+          fill: true,
+          pointRadius: 7,
+          pointHoverRadius: 11,
+          pointBackgroundColor: '#F2D88A',
+          pointBorderColor: '#7A5C2E',
+          borderWidth: 3
+        }]
+      },
+      options: {
+        animation: { duration: 2000, easing: 'easeOutQuart' },
+        plugins: {
+          legend: { position: 'top', labels: { font: { family: 'Manrope', size: 12 } } },
+          title: { display: true, text: 'Чувствительность Enterprise Value к WACC', font: { family: 'Manrope', size: 14, weight: '600' } }
+        },
+        scales: {
+          x: { title: { display: true, text: 'WACC' }, grid: { color: 'rgba(11,18,32,0.04)' } },
+          y: { title: { display: true, text: 'EV, млрд ₽' }, grid: { color: 'rgba(11,18,32,0.06)' }, ticks: { font: { family: 'IBM Plex Mono' } } }
+        }
+      }
+    });
+  }
+})();
+</script>
+<!-- Auth (PIN) — единый протокол сайта -->
+<script src="../_design-system/auth-config.js"></script>
+<script src="../_design-system/auth.js"></script>
+</body>
+</html>

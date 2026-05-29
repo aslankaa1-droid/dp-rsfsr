@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="ivory" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F7F4EE"/>
+      <stop offset="100%" stop-color="#E2DDD3"/>
+    </linearGradient>
+    <linearGradient id="goldBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F2D88A"/>
+      <stop offset="100%" stop-color="#7A5C2E"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="#0E1117"/>
+  <text x="400" y="44" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="700" font-size="20" fill="#ECEEF2" letter-spacing="1">Целевая залоговая ёмкость ЦПФСР</text>
+  <text x="400" y="68" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#8C95A4">10% активов в системе × 50% LTV</text>
+
+  <g transform="translate(80, 110)">
+    <rect x="0" y="0" width="640" height="44" fill="#1F2733" stroke="#C9CED6" stroke-opacity="0.18"/>
+    <rect x="0" y="0" width="500" height="44" fill="url(#goldBar)" opacity="0.85"/>
+    <text x="14" y="28" font-family="Manrope, sans-serif" font-weight="600" font-size="14" fill="#0B1220">Жилой фонд</text>
+    <text x="626" y="28" text-anchor="end" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="13" fill="#0B1220">₽ 400 трлн → ₽ 20,0 трлн</text>
+  </g>
+
+  <g transform="translate(80, 175)">
+    <rect x="0" y="0" width="640" height="44" fill="#1F2733" stroke="#C9CED6" stroke-opacity="0.18"/>
+    <rect x="0" y="0" width="62" height="44" fill="url(#goldBar)" opacity="0.85"/>
+    <text x="14" y="28" font-family="Manrope, sans-serif" font-weight="600" font-size="14" fill="#ECEEF2">Земля</text>
+    <text x="626" y="28" text-anchor="end" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="13" fill="#ECEEF2">₽ 62 трлн → ₽ 3,0 трлн</text>
+  </g>
+
+  <g transform="translate(80, 240)">
+    <rect x="0" y="0" width="640" height="44" fill="#1F2733" stroke="#C9CED6" stroke-opacity="0.18"/>
+    <rect x="0" y="0" width="45" height="44" fill="url(#goldBar)" opacity="0.85"/>
+    <text x="14" y="28" font-family="Manrope, sans-serif" font-weight="600" font-size="14" fill="#ECEEF2">Коммерческая</text>
+    <text x="626" y="28" text-anchor="end" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="13" fill="#ECEEF2">₽ 45 трлн → ₽ 2,5 трлн</text>
+  </g>
+
+  <g transform="translate(80, 330)">
+    <rect x="0" y="0" width="640" height="2" fill="#C9A14A"/>
+    <text x="14" y="36" font-family="Manrope, sans-serif" font-weight="700" font-size="18" fill="#ECEEF2">ИТОГО консервативная адресуемая ёмкость</text>
+    <text x="626" y="36" text-anchor="end" font-family="Manrope, sans-serif" font-weight="700" font-size="22" fill="#C9A14A">₽ 25,5 трлн</text>
+  </g>
+
+  <g transform="translate(80, 400)">
+    <text font-family="Inter, sans-serif" font-size="12" fill="#8C95A4">Целевая доля рынка год 10 (Base) — 18%</text>
+    <text y="22" font-family="Inter, sans-serif" font-size="12" fill="#8C95A4">Conservative — 7%, Optimistic — 25%</text>
+    <text y="44" font-family="IBM Plex Mono, monospace" font-size="11" fill="#7A5C2E">Источник: концепт автора (РСФСР_6.pptx, сл. 9), Базель LTV 50%</text>
+  </g>
+</svg>

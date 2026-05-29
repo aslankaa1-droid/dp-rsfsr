@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Кагиров Абдул-Хаким Ахмадович (Аслан Каа)">
+<meta name="description" content="Презентация отчёта об оценке справедливой стоимости имущественного комплекса проекта ЦПФСР (dpfsd.ru) — Center Group Company.">
+<title>ЦПФСР · Презентация отчёта об оценке · 26.05.2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --graphite: #0B1220;
+  --night: #0E1117;
+  --night-2: #161B22;
+  --line-soft: rgba(201,206,214,0.10);
+  --line-mid: rgba(201,206,214,0.20);
+  --gold: #C9A14A;
+  --gold-light: #F2D88A;
+  --gold-deep: #7A5C2E;
+  --ivory: #F7F4EE;
+  --platinum: #C9CED6;
+  --text: #ECEEF2;
+  --text-mute: #8C95A4;
+  --red: #B0202E;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  height: 100%;
+  background: var(--night);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+.deck {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+.deck::-webkit-scrollbar { width: 0; }
+
+.slide {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 80px;
+  position: relative;
+  background: var(--night);
+  border-bottom: 1px solid var(--line-soft);
+  overflow: hidden;
+}
+
+/* Animated ambient background — subtle aurora */
+.slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 80% 10%, rgba(201,161,74,0.06), transparent 50%),
+    radial-gradient(ellipse at 10% 90%, rgba(122,92,46,0.05), transparent 55%);
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  z-index: 0;
+}
+.slide.is-active::after { opacity: 1; }
+.slide > * { position: relative; z-index: 1; }
+
+/* Entry animations driven by .is-active */
+.slide .slide__kicker,
+.slide h1.slide__title,
+.slide h2.slide__title,
+.slide .slide__lead,
+.slide .bigfig,
+.slide .grid,
+.slide .row,
+.slide .card,
+.slide .card--gold,
+.slide ul.bullets,
+.slide table.deck-tbl,
+.slide .kv,
+.slide .chart-box,
+.slide img.fit,
+.slide .title__overline,
+.slide .title__h,
+.slide .title__sub,
+.slide .title__meta,
+.slide .title__right img,
+.slide .final__seal,
+.slide .final__signoff {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .9s cubic-bezier(.21,.7,.25,1), transform .9s cubic-bezier(.21,.7,.25,1);
+}
+.slide.is-active .slide__kicker { opacity: 1; transform: none; transition-delay: .12s; }
+.slide.is-active h1.slide__title,
+.slide.is-active h2.slide__title { opacity: 1; transform: none; transition-delay: .22s; }
+.slide.is-active .slide__lead { opacity: 1; transform: none; transition-delay: .34s; }
+.slide.is-active .bigfig { opacity: 1; transform: none; transition-delay: .28s; }
+.slide.is-active .grid,
+.slide.is-active .row,
+.slide.is-active .kv,
+.slide.is-active table.deck-tbl,
+.slide.is-active ul.bullets,
+.slide.is-active img.fit,
+.slide.is-active .chart-box { opacity: 1; transform: none; transition-delay: .46s; }
+.slide.is-active .card,
+.slide.is-active .card--gold { opacity: 1; transform: none; transition-delay: .56s; }
+
+/* Stagger cards by index */
+.slide.is-active .grid > *:nth-child(1) { transition-delay: .50s; }
+.slide.is-active .grid > *:nth-child(2) { transition-delay: .60s; }
+.slide.is-active .grid > *:nth-child(3) { transition-delay: .70s; }
+.slide.is-active .grid > *:nth-child(4) { transition-delay: .80s; }
+.slide.is-active .grid > *:nth-child(5) { transition-delay: .90s; }
+.slide.is-active .grid > *:nth-child(6) { transition-delay: 1.0s; }
+
+/* Title slide overrides */
+.slide.title.is-active .title__overline { opacity: 1; transform: none; transition-delay: .15s; }
+.slide.title.is-active .title__h { opacity: 1; transform: none; transition-delay: .35s; }
+.slide.title.is-active .title__sub { opacity: 1; transform: none; transition-delay: .55s; }
+.slide.title.is-active .title__meta { opacity: 1; transform: none; transition-delay: .75s; }
+.slide.title.is-active .title__right img { opacity: 1; transform: none; transition-delay: .35s; }
+
+/* Final slide */
+.slide.final.is-active .final__seal { opacity: 1; transform: none; transition-delay: .2s; }
+.slide.final.is-active .final__signoff { opacity: 1; transform: none; transition-delay: .6s; }
+@media (max-width: 900px) {
+  .slide { padding: 36px 26px; }
+}
+
+.slide__num {
+  position: absolute;
+  top: 28px;
+  right: 36px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+.slide__brand {
+  position: absolute;
+  top: 28px;
+  left: 36px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--text-mute);
+}
+.slide__brand::before {
+  content: '';
+  display: inline-block;
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: 1px;
+}
+.slide__footer {
+  position: absolute;
+  bottom: 26px;
+  left: 36px;
+  right: 36px;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--text-mute);
+  letter-spacing: 1px;
+}
+.slide__kicker {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+h1.slide__title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin-bottom: 28px;
+  color: var(--text);
+  max-width: 1200px;
+}
+h2.slide__title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 3.5vw, 44px);
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+  margin-bottom: 22px;
+  color: var(--text);
+}
+.slide__lead {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--text-mute);
+  max-width: 920px;
+  margin-bottom: 30px;
+}
+
+.gold { color: var(--gold); }
+.ivory { color: var(--ivory); }
+
+.divider {
+  width: 56px;
+  height: 3px;
+  background: var(--gold);
+  margin: 22px 0;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+}
+.grid-2 { grid-template-columns: 1fr 1fr; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: var(--night-2);
+  border: 1px solid var(--line-soft);
+  padding: 26px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: transform .35s cubic-bezier(.21,.7,.25,1), border-color .35s, box-shadow .35s;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(201,161,74,0.10), transparent 55%);
+  opacity: 0;
+  transition: opacity .35s;
+  pointer-events: none;
+}
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201,161,74,0.5);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.35), 0 0 0 1px rgba(201,161,74,0.18);
+}
+.card:hover::before { opacity: 1; }
+.card--gold {
+  border-color: var(--gold);
+  background: linear-gradient(135deg, rgba(201,161,74,0.10), rgba(122,92,46,0.04));
+}
+.card--gold::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(242,216,138,0.14), transparent);
+  animation: cardShimmer 4s ease-in-out infinite;
+}
+@keyframes cardShimmer {
+  0% { left: -60%; }
+  60% { left: 120%; }
+  100% { left: 120%; }
+}
+.card__label {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.card__value {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 8px;
+  font-variant-numeric: tabular-nums;
+}
+.card__sub {
+  font-size: 13px;
+  color: var(--text-mute);
+  line-height: 1.5;
+}
+
+ul.bullets {
+  list-style: none;
+  padding: 0;
+  font-size: 17px;
+  line-height: 1.65;
+}
+ul.bullets li {
+  padding-left: 26px;
+  position: relative;
+  margin-bottom: 10px;
+}
+ul.bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 12px;
+  height: 2px;
+  background: var(--gold);
+}
+
+table.deck-tbl {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: var(--night-2);
+  border: 1px solid var(--line-soft);
+}
+table.deck-tbl thead th {
+  background: #1F2733;
+  color: var(--ivory);
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--line-mid);
+}
+table.deck-tbl tbody td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--line-soft);
+}
+table.deck-tbl tbody tr:last-child td { border-bottom: none; }
+table.deck-tbl tbody tr.t-total td {
+  font-weight: 700;
+  color: var(--gold);
+  background: rgba(201,161,74,0.05);
+}
+table.deck-tbl td.num {
+  font-family: 'IBM Plex Mono', monospace;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.bigfig {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+.bigfig__num {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(60px, 9vw, 124px);
+  line-height: 1;
+  color: var(--gold);
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #F8E4A8, #C9A14A 50%, #7A5C2E);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 60px rgba(201,161,74,0.25);
+  position: relative;
+}
+.bigfig__num.shine {
+  background: linear-gradient(120deg, #F8E4A8 0%, #C9A14A 30%, #F8E4A8 50%, #C9A14A 70%, #F8E4A8 100%);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shineMove 5s ease-in-out infinite;
+}
+@keyframes shineMove {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+}
+.bigfig__unit {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--text-mute);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.chip {
+  display: inline-block;
+  padding: 5px 12px;
+  border: 1px solid var(--line-mid);
+  border-radius: 999px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  margin: 0 6px 6px 0;
+}
+.chip--gold { color: var(--gold); border-color: var(--gold); }
+.chip--red { color: var(--red); border-color: rgba(176,32,46,0.5); }
+
+.nav {
+  position: fixed;
+  bottom: 22px;
+  right: 24px;
+  display: flex;
+  gap: 6px;
+  z-index: 50;
+}
+.nav button {
+  width: 38px; height: 38px;
+  background: var(--night-2);
+  border: 1px solid var(--line-mid);
+  color: var(--text);
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 18px;
+  font-family: 'IBM Plex Mono', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .15s;
+}
+.nav button:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.progress-strip {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: rgba(255,255,255,0.04);
+  z-index: 50;
+}
+.progress-strip__bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold-light), var(--gold), var(--gold-deep));
+  width: 0%;
+  transition: width .15s;
+}
+
+.dots {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 50;
+}
+.dots span {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--line-mid);
+  transition: all .2s;
+  cursor: pointer;
+}
+.dots span.active {
+  background: var(--gold);
+  width: 18px;
+  border-radius: 3px;
+  box-shadow: 0 0 12px rgba(201,161,74,0.6);
+}
+
+/* Animated background canvas (particles layer) */
+#particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.55;
+}
+
+/* Bullets — staggered animation */
+.slide.is-active ul.bullets li {
+  animation: bulletIn .7s cubic-bezier(.21,.7,.25,1) both;
+}
+.slide.is-active ul.bullets li:nth-child(1) { animation-delay: .55s; }
+.slide.is-active ul.bullets li:nth-child(2) { animation-delay: .65s; }
+.slide.is-active ul.bullets li:nth-child(3) { animation-delay: .75s; }
+.slide.is-active ul.bullets li:nth-child(4) { animation-delay: .85s; }
+.slide.is-active ul.bullets li:nth-child(5) { animation-delay: .95s; }
+.slide.is-active ul.bullets li:nth-child(6) { animation-delay: 1.05s; }
+.slide.is-active ul.bullets li:nth-child(7) { animation-delay: 1.15s; }
+@keyframes bulletIn {
+  from { opacity: 0; transform: translateX(-14px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Table rows fade-in */
+.slide.is-active table.deck-tbl tbody tr {
+  animation: rowIn .5s cubic-bezier(.21,.7,.25,1) both;
+}
+.slide.is-active table.deck-tbl tbody tr:nth-child(1) { animation-delay: .55s; }
+.slide.is-active table.deck-tbl tbody tr:nth-child(2) { animation-delay: .62s; }
+.slide.is-active table.deck-tbl tbody tr:nth-child(3) { animation-delay: .69s; }
+.slide.is-active table.deck-tbl tbody tr:nth-child(4) { animation-delay: .76s; }
+.slide.is-active table.deck-tbl tbody tr:nth-child(5) { animation-delay: .83s; }
+.slide.is-active table.deck-tbl tbody tr:nth-child(6) { animation-delay: .90s; }
+.slide.is-active table.deck-tbl tbody tr:nth-child(7) { animation-delay: .97s; }
+.slide.is-active table.deck-tbl tbody tr:nth-child(8) { animation-delay: 1.04s; }
+.slide.is-active table.deck-tbl tbody tr:nth-child(9) { animation-delay: 1.11s; }
+.slide.is-active table.deck-tbl tbody tr:nth-child(10) { animation-delay: 1.18s; }
+.slide.is-active table.deck-tbl tbody tr:nth-child(11) { animation-delay: 1.25s; }
+@keyframes rowIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Floating glow blob on title */
+.glow-blob {
+  position: absolute;
+  width: 520px; height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,161,74,0.25), transparent 60%);
+  filter: blur(40px);
+  z-index: 0;
+  animation: blobFloat 12s ease-in-out infinite;
+}
+.glow-blob.b1 { top: -100px; right: -120px; animation-delay: 0s; }
+.glow-blob.b2 { bottom: -120px; left: -140px; animation-delay: 4s; background: radial-gradient(circle, rgba(122,92,46,0.22), transparent 60%); }
+@keyframes blobFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -20px) scale(1.08); }
+}
+
+/* Chip — hover */
+.chip { transition: all .25s; cursor: default; }
+.chip:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Smooth divider grow */
+.slide.is-active .divider { animation: dividerGrow 1s cubic-bezier(.21,.7,.25,1) .4s both; }
+@keyframes dividerGrow {
+  from { width: 0; }
+  to { width: 56px; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01s !important; transition-duration: 0.01s !important; }
+}
+
+/* Hero / title slide */
+.slide.title {
+  background:
+    radial-gradient(ellipse at 30% 30%, rgba(201,161,74,0.10), transparent 60%),
+    radial-gradient(ellipse at 70% 70%, rgba(122,92,46,0.08), transparent 60%),
+    var(--night);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+.title__left { padding-right: 40px; }
+.title__overline {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+.title__h {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(42px, 5.5vw, 78px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 26px;
+}
+.title__sub {
+  font-size: 18px;
+  color: var(--text-mute);
+  margin-bottom: 32px;
+  line-height: 1.6;
+  max-width: 580px;
+}
+.title__meta {
+  border-top: 1px solid var(--line-mid);
+  padding-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 580px;
+}
+.title__meta-cell {
+  font-family: 'IBM Plex Mono', monospace;
+}
+.title__meta-cell span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--text-mute);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+.title__meta-cell strong {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--text);
+}
+.title__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title__right img { max-width: 560px; width: 100%; height: auto; }
+
+/* Final slide */
+.slide.final {
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(201,161,74,0.12), transparent 70%),
+    var(--night);
+  align-items: center;
+  text-align: center;
+}
+.final__seal { max-width: 460px; width: 100%; margin-bottom: 14px; }
+.final__signoff {
+  margin-top: 24px;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: var(--text);
+}
+.final__signoff span {
+  display: block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--text-mute);
+  margin-top: 8px;
+  letter-spacing: 1px;
+}
+
+.kv {
+  display: grid;
+  grid-template-columns: 1fr;
+  font-size: 14px;
+  background: var(--night-2);
+  border: 1px solid var(--line-soft);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.kv__row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  border-bottom: 1px solid var(--line-soft);
+  padding: 11px 16px;
+}
+.kv__row:last-child { border-bottom: none; }
+.kv__row span:first-child { color: var(--text-mute); }
+.kv__row span:last-child {
+  font-family: 'IBM Plex Mono', monospace;
+  text-align: right;
+  font-weight: 500;
+}
+
+.row { display: flex; gap: 24px; flex-wrap: wrap; }
+
+.chart-box {
+  background: var(--night-2);
+  border: 1px solid var(--line-soft);
+  padding: 14px 18px;
+  border-radius: 6px;
+  height: 100%;
+}
+.chart-box canvas { width: 100% !important; height: 280px !important; }
+
+img.fit {
+  max-width: 100%;
+  max-height: 76vh;
+  display: block;
+  margin: 0 auto;
+}
+
+.hint {
+  position: fixed;
+  bottom: 22px;
+  left: 24px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--text-mute);
+  letter-spacing: 1px;
+  opacity: 0.7;
+  z-index: 50;
+}
+
+@media print {
+  html, body { overflow: visible; height: auto; background: #0E1117; color: var(--text); }
+  .deck { height: auto; overflow: visible; scroll-snap-type: none; }
+  .slide {
+    height: 1080px;
+    width: 1920px;
+    page-break-after: always;
+    background: #0E1117;
+    border: none;
+    padding: 60px 80px;
+  }
+  .nav, .progress-strip, .dots, .hint, #particles { display: none; }
+  @page { size: 1920px 1080px; margin: 0; }
+  /* Force all entry animations into final state for static export */
+  .slide *,
+  .slide .slide__kicker,
+  .slide h1.slide__title,
+  .slide h2.slide__title,
+  .slide .slide__lead,
+  .slide .bigfig,
+  .slide .grid,
+  .slide .row,
+  .slide .card,
+  .slide .card--gold,
+  .slide ul.bullets,
+  .slide ul.bullets li,
+  .slide table.deck-tbl,
+  .slide table.deck-tbl tbody tr,
+  .slide .kv,
+  .slide .chart-box,
+  .slide img.fit,
+  .slide .title__overline,
+  .slide .title__h,
+  .slide .title__sub,
+  .slide .title__meta,
+  .slide .title__right img,
+  .slide .final__seal,
+  .slide .final__signoff,
+  .slide .divider {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+  .slide .divider { width: 56px !important; }
+  /* Make counters show final values */
+  [data-count-to]::after {
+    content: '';
+  }
+  .card--gold::after { display: none; }
+  .card::before { display: none; }
+}
+</style>
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+<div class="progress-strip"><div class="progress-strip__bar" id="pbar"></div></div>
+
+<div class="deck" id="deck">
+
+<!-- =========== 01 · TITLE =========== -->
+<section class="slide title">
+  <div class="glow-blob b1"></div>
+  <div class="glow-blob b2"></div>
+  <div class="slide__brand">Center Group Company</div>
+  <div class="slide__num">01 / 26</div>
+  <div class="title__left">
+    <div class="title__overline">Независимая оценка · Highest Tier · IVS 2025 · IFRS 13 · ФСО I–VI</div>
+    <h1 class="title__h">Цифровая Платформа Финансирования Социального Развития</h1>
+    <p class="title__sub">Отчёт об оценке справедливой стоимости имущественного комплекса проекта <span class="gold">dpfsd.ru</span> на дату 26 мая 2026 года. Триангуляция четырёх подходов: DCF · Multiples · Berkus · Replacement Cost.</p>
+    <div class="title__meta">
+      <div class="title__meta-cell"><span>Объект</span><strong>100% долевого участия</strong></div>
+      <div class="title__meta-cell"><span>Дата оценки</span><strong>26 · 05 · 2026</strong></div>
+      <div class="title__meta-cell"><span>База</span><strong>Fair Value (IFRS 13)</strong></div>
+    </div>
+  </div>
+  <div class="title__right">
+    <img src="img/hero_token.svg" alt="ЦПФСР token mark">
+  </div>
+</section>
+
+<!-- =========== 02 · FINAL OPINION (HERO) =========== -->
+<section class="slide">
+  <div class="slide__brand">Final Opinion</div>
+  <div class="slide__num">02 / 26</div>
+  <div class="slide__kicker">Справедливая стоимость · Reasoned Base</div>
+  <div class="bigfig" style="margin-bottom:14px;">
+    <span class="bigfig__num shine" data-count-to="100" data-prefix="$" data-suffix="M">$0M</span>
+    <span class="bigfig__unit">Pre-money · 26.05.2026</span>
+  </div>
+  <h2 class="slide__title" style="color: var(--gold); font-family: 'Playfair Display', serif; font-size: clamp(28px, 3vw, 40px);">≈ 7,15 млрд ₽ · USD/RUB 71,5460</h2>
+  <p class="slide__lead">При единой stage discount 60% поверх взвешенной EV (без double-counting). Диапазон зоны переговоров: <span class="gold">$70 – 140 млн</span>. Expected Value (3 сценария) — $106 млн.</p>
+  <div class="grid grid-4" style="margin-top:14px;">
+    <div class="card">
+      <div class="card__label">Lower bound</div>
+      <div class="card__value">$70 M</div>
+      <div class="card__sub">5,01 млрд ₽ · рациональный минимум</div>
+    </div>
+    <div class="card card--gold">
+      <div class="card__label">Reasoned Base</div>
+      <div class="card__value gold">$100 M</div>
+      <div class="card__sub">7,15 млрд ₽ · переговорная база</div>
+    </div>
+    <div class="card">
+      <div class="card__label">Upper bound</div>
+      <div class="card__value">$140 M</div>
+      <div class="card__sub">10,02 млрд ₽ · амбиция</div>
+    </div>
+    <div class="card">
+      <div class="card__label">Expected Value</div>
+      <div class="card__value">$106 M</div>
+      <div class="card__sub">7,60 млрд ₽ · взвешено по 3 сценариям</div>
+    </div>
+  </div>
+  <div class="slide__footer"><span>CGC-VAL-2026-05-26-ЦПФСР-01</span><span>IVS 2025 · IFRS 13 · ФСО I–VI</span></div>
+</section>
+
+<!-- =========== 03 · ОБЪЕКТ =========== -->
+<section class="slide">
+  <div class="slide__brand">Объект оценки</div>
+  <div class="slide__num">03 / 26</div>
+  <div class="slide__kicker">Что оценивается</div>
+  <h2 class="slide__title">100% долевого участия в проектной компании-операторе ЦПФСР</h2>
+  <p class="slide__lead">Двухстадийная институциональная платформа выпуска целевых ЦФА (по №259-ФЗ и Положению Банка России №779-П) с прицельным фондированием программ социального развития через инфраструктурный канал ВЭБ.РФ / Казначейства РФ при надзоре Банка России.</p>
+  <div class="grid grid-2">
+    <div>
+      <div class="slide__kicker" style="font-size:10px;">Имущественный комплекс</div>
+      <ul class="bullets">
+        <li>Концепт и архитектура (ноу-хау, ст. 1465 ГК · №4011265 от 19.12.2024)</li>
+        <li>Программа для ЭВМ — PWA + Capacitor v6+ (Android / iOS / Windows)</li>
+        <li>Серверная часть (в разработке, 12–18 мес.)</li>
+        <li>Конструкторская документация ГОСТ 19 (13 документов)</li>
+        <li>Бренд «ЦПФСР» · dpfsd.ru · 4 языка локализации</li>
+        <li>Договорный пакет (5 договоров)</li>
+        <li>Юридический фундамент + учредительный пакет АО</li>
+      </ul>
+    </div>
+    <div>
+      <div class="slide__kicker" style="font-size:10px;">Контактный артефакт</div>
+      <div class="kv">
+        <div class="kv__row"><span>Веб-ресурс</span><span>dpfsd.ru (PIN-overlay)</span></div>
+        <div class="kv__row"><span>Логотип</span><span>«Р» (Concept A)</span></div>
+        <div class="kv__row"><span>Локализация</span><span>RU · EN · FR · AR</span></div>
+        <div class="kv__row"><span>Темы оформления</span><span>3 (Day · Night · Premium)</span></div>
+        <div class="kv__row"><span>Главная</span><span>17 блоков</span></div>
+        <div class="kv__row"><span>Mobile</span><span>360 → 1920 px</span></div>
+        <div class="kv__row"><span>SEO / PWA</span><span>sitemap.xml · robots.txt · SW</span></div>
+        <div class="kv__row"><span>Композитный балл аудита</span><span style="color: var(--gold);">9,22 / 10</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== 04 · АРХИТЕКТУРА =========== -->
+<section class="slide">
+  <div class="slide__brand">Двухстадийная архитектура</div>
+  <div class="slide__num">04 / 26</div>
+  <div class="slide__kicker">Wedge pilot-light → полная конфигурация</div>
+  <h2 class="slide__title">Архитектура снимает регуляторный риск отказа</h2>
+  <img src="img/architecture.svg" class="fit" alt="Архитектура ЦПФСР: Stage 1 и Stage 2" style="max-height: 65vh;">
+</section>
+
+<!-- =========== 05 · УРОВЕНЬ ГОТОВНОСТИ =========== -->
+<section class="slide">
+  <div class="slide__brand">Готовность проекта</div>
+  <div class="slide__num">05 / 26</div>
+  <div class="slide__kicker">TRL · IRL · Композитный балл</div>
+  <h2 class="slide__title">Стадия Pre-MVP-Pro · композитный балл аудита 9,22 / 10</h2>
+  <div class="grid grid-2">
+    <div>
+      <table class="deck-tbl">
+        <thead><tr><th>Компонент</th><th>Уровень</th></tr></thead>
+        <tbody>
+          <tr><td>Концепция</td><td class="num">TRL 7</td></tr>
+          <tr><td>Юридический фундамент</td><td class="num">9 / 10</td></tr>
+          <tr><td>Финансовая модель SoT v3</td><td class="num">9 / 10</td></tr>
+          <tr><td>Клиентское приложение (PWA)</td><td class="num">9 / 10</td></tr>
+          <tr><td>Серверная часть</td><td class="num">4 / 10</td></tr>
+          <tr><td>Лицензирование (ЦБ РФ, ФСТЭК, ФСБ)</td><td class="num">3 / 10</td></tr>
+          <tr><td>Брендинг и веб-сайт</td><td class="num">9 / 10</td></tr>
+          <tr><td>Партнёрский каркас (Stage 1)</td><td class="num">5 / 10</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="card card--gold" style="margin-bottom:14px;">
+        <div class="card__label">Композитный балл аудита</div>
+        <div class="card__value gold" data-count-to="9.22" data-decimals="2" data-suffix=" / 10">0,00 / 10</div>
+        <div class="card__sub">post-Горизонт-III, 24.05.2026</div>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card__label">Критические риски</div>
+          <div class="card__value">12 / 12</div>
+          <div class="card__sub">закрыто</div>
+        </div>
+        <div class="card">
+          <div class="card__label">Средние риски</div>
+          <div class="card__value">27 / 33</div>
+          <div class="card__sub">закрыто</div>
+        </div>
+        <div class="card">
+          <div class="card__label">CI-инварианты</div>
+          <div class="card__value">29 / 29</div>
+          <div class="card__sub">пройдено</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== 06 · МАКРО НА ДАТУ ОЦЕНКИ =========== -->
+<section class="slide">
+  <div class="slide__brand">Макроэкономический контекст РФ</div>
+  <div class="slide__num">06 / 26</div>
+  <div class="slide__kicker">26 · 05 · 2026 · первичные источники</div>
+  <h2 class="slide__title">Свежие параметры, принятые в расчёте</h2>
+  <div class="grid grid-3">
+    <div class="card">
+      <div class="card__label">Ключевая ставка ЦБ РФ</div>
+      <div class="card__value gold" data-count-to="14.50" data-decimals="2" data-suffix="%">0,00%</div>
+      <div class="card__sub">с 28.04.2026 · cbr.ru</div>
+    </div>
+    <div class="card">
+      <div class="card__label">10Y ОФЗ рыночная</div>
+      <div class="card__value gold" data-count-to="14.73" data-decimals="2" data-suffix="%">0,00%</div>
+      <div class="card__sub">21.05.2026 · tradingeconomics</div>
+    </div>
+    <div class="card">
+      <div class="card__label">USD/RUB ЦБ РФ</div>
+      <div class="card__value gold" data-count-to="71.546" data-decimals="4">0,0000</div>
+      <div class="card__sub">26.05.2026 · официальный</div>
+    </div>
+    <div class="card">
+      <div class="card__label">EUR/RUB ЦБ РФ</div>
+      <div class="card__value">85,4493</div>
+      <div class="card__sub">26.05.2026</div>
+    </div>
+    <div class="card">
+      <div class="card__label">Damodaran ERP Russia</div>
+      <div class="card__value">8,13%</div>
+      <div class="card__sub">05.01.2026 · ctryprem</div>
+    </div>
+    <div class="card">
+      <div class="card__label">Damodaran CRP Russia</div>
+      <div class="card__value">3,90%</div>
+      <div class="card__sub">05.01.2026 · ctryprem</div>
+    </div>
+  </div>
+  <p class="slide__lead" style="margin-top:22px;">Прогноз ЦБ РФ на 2027 — средняя КС 8–10%. Это создаёт <span class="gold">встречный положительный фактор</span> к WACC проекта и потенциальный uplift к будущим оценкам.</p>
+</section>
+
+<!-- =========== 07 · РЫНОК RWA =========== -->
+<section class="slide">
+  <div class="slide__brand">Глобальный рынок RWA</div>
+  <div class="slide__num">07 / 26</div>
+  <div class="slide__kicker">Контекст 2026</div>
+  <h2 class="slide__title">Институциональная токенизация — фаза взрывного роста</h2>
+  <div class="grid grid-3" style="margin-bottom:18px;">
+    <div class="card">
+      <div class="card__label">On-chain RWA Q1 2026</div>
+      <div class="card__value gold">$22 B+</div>
+      <div class="card__sub">tradersunion · metamask news</div>
+    </div>
+    <div class="card">
+      <div class="card__label">Tokenized US Treasuries</div>
+      <div class="card__value gold">$14 B</div>
+      <div class="card__sub">включая BlackRock BUIDL</div>
+    </div>
+    <div class="card">
+      <div class="card__label">Ondo OUSG + USDY</div>
+      <div class="card__value">$2,1 B</div>
+      <div class="card__sub">TVL суммарно</div>
+    </div>
+  </div>
+  <table class="deck-tbl">
+    <thead><tr><th>Платформа</th><th>Юрисдикция</th><th>Стадия</th><th>EV, $ млн</th><th>EV/Revenue</th></tr></thead>
+    <tbody>
+      <tr><td>Securitize</td><td>США</td><td>Series C</td><td class="num">980</td><td class="num">16,3×</td></tr>
+      <tr><td>Polymath / Tokeny</td><td>Канада · LUX</td><td>Late-stage</td><td class="num">280</td><td class="num">15,6×</td></tr>
+      <tr><td>HQLAx</td><td>Швейцария</td><td>Series B</td><td class="num">180</td><td class="num">12,9×</td></tr>
+      <tr><td>Atomyze</td><td>Россия</td><td>Series A</td><td class="num">~85</td><td class="num">14,2×</td></tr>
+      <tr><td>СберCFA</td><td>Россия</td><td>Mature</td><td class="num">~230</td><td class="num">10,5×</td></tr>
+      <tr class="t-total"><td colspan="4">Медиана выборки 2026</td><td class="num">14,2×</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- =========== 08 · ЦЕЛЕВАЯ ЁМКОСТЬ =========== -->
+<section class="slide">
+  <div class="slide__brand">Целевая залоговая ёмкость</div>
+  <div class="slide__num">08 / 26</div>
+  <div class="slide__kicker">Российский сегмент социальной инфраструктуры</div>
+  <h2 class="slide__title">₽ 25,5 трлн консервативной адресуемой ёмкости</h2>
+  <img src="img/market_pyramid.svg" class="fit" alt="Залоговая ёмкость ЦПФСР" style="max-height:62vh;">
+</section>
+
+<!-- =========== 09 · ИНСТИТУЦИОНАЛЬНЫЙ КОНТУР =========== -->
+<section class="slide">
+  <div class="slide__brand">Институциональный контур</div>
+  <div class="slide__num">09 / 26</div>
+  <div class="slide__kicker">Чемпионы Stage 1</div>
+  <h2 class="slide__title">Государственные чемпионы и каналы фондирования</h2>
+  <img src="img/governance.svg" class="fit" alt="Институциональный контур ЦПФСР" style="max-height:60vh;">
+</section>
+
+<!-- =========== 10 · МЕТОДОЛОГИЯ =========== -->
+<section class="slide">
+  <div class="slide__brand">Методология оценки</div>
+  <div class="slide__num">10 / 26</div>
+  <div class="slide__kicker">Триангуляция · IVS 105</div>
+  <h2 class="slide__title">Четыре независимых метода с весовой свёрткой</h2>
+  <div class="grid grid-2" style="align-items: center;">
+    <div>
+      <img src="img/compass.svg" class="fit" alt="Компас триангуляции" style="max-height:62vh;">
+    </div>
+    <div>
+      <ul class="bullets">
+        <li><strong class="ivory">DCF (35%)</strong> · multi-stage TV, WACC 29,5% RUB build-up</li>
+        <li><strong class="ivory">Multiples (30%)</strong> · EV/Revenue 5Y 14,2× по 5 сопоставимым</li>
+        <li><strong class="ivory">Risk-Adjusted Berkus (25%)</strong> · ×17 для российского институционального масштаба</li>
+        <li><strong class="ivory">Replacement Cost (10%)</strong> · ×1,75 премия за защищённый IP</li>
+      </ul>
+      <div class="divider"></div>
+      <p class="slide__lead" style="font-size:15px;">Единый stage discount <span class="gold">60%</span> применяется <em>поверх свёртки</em>, а не внутри методов — это устраняет double-counting, который встречался в ранних проектных оценках.</p>
+      <div style="margin-top:14px;">
+        <span class="chip">IVS 2025</span>
+        <span class="chip">IFRS 13</span>
+        <span class="chip">ФСО I–VI</span>
+        <span class="chip">AICPA SSVS-1</span>
+        <span class="chip">IPEV Guidelines</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== 11 · WACC =========== -->
+<section class="slide">
+  <div class="slide__brand">Ставка дисконтирования</div>
+  <div class="slide__num">11 / 26</div>
+  <div class="slide__kicker">WACC RUB build-up · Ф.9.1</div>
+  <h2 class="slide__title">WACC = 29,5% (защитимый интервал 28,0–31,0%)</h2>
+  <div class="grid grid-2">
+    <div>
+      <table class="deck-tbl">
+        <thead><tr><th>Компонента</th><th>Значение</th></tr></thead>
+        <tbody>
+          <tr><td>R<sub>f</sub> (10Y ОФЗ, RUB)</td><td class="num">14,73%</td></tr>
+          <tr><td>β (Financial Services)</td><td class="num">1,15</td></tr>
+          <tr><td>ERP Russia (Damodaran)</td><td class="num">8,13%</td></tr>
+          <tr><td>β · ERP</td><td class="num">9,35%</td></tr>
+          <tr><td>Stage premium</td><td class="num">2,50%</td></tr>
+          <tr><td>Liquidity / size premium</td><td class="num">3,00%</td></tr>
+          <tr class="t-total"><td>WACC расчётный</td><td class="num">29,58%</td></tr>
+          <tr class="t-total"><td>WACC Base (округление)</td><td class="num">29,50%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="card">
+        <div class="card__label">Sanity checks</div>
+        <ul class="bullets" style="font-size:14px;">
+          <li>CAPM RUB = 14,73 + 1,15 × 8,13 = <strong class="gold">24,08%</strong></li>
+          <li>КС ЦБ + спред = 14,50 + 9,00 + 3,00 + 3,00 = <strong class="gold">29,50%</strong></li>
+          <li>Global USD-WACC + дифф. инфляции ≈ <strong class="gold">26–28%</strong></li>
+        </ul>
+        <p style="font-size:13px; color: var(--text-mute); margin-top:14px;">Три независимых метода сходятся в коридоре 24–30%, что подтверждает 29,5% как защитимую центральную точку.</p>
+      </div>
+      <div class="card" style="margin-top:14px;">
+        <div class="card__label">Прогноз ЦБ</div>
+        <div class="card__sub" style="font-size:15px; line-height:1.6; color: var(--text);">Средняя КС в 2027 — <span class="gold">8–10%</span>. По мере снижения ставки WACC будет падать, что даёт <span class="gold">положительный bias</span> к будущим оценкам проекта.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== 12 · FCF ПРОГНОЗ =========== -->
+<section class="slide">
+  <div class="slide__brand">Прогноз Free Cash Flow</div>
+  <div class="slide__num">12 / 26</div>
+  <div class="slide__kicker">Base · 2025–2034 · млрд ₽</div>
+  <h2 class="slide__title">Денежные потоки до и после wedge-перехода</h2>
+  <div class="chart-box" style="height:380px;"><canvas id="chartFcf"></canvas></div>
+  <p class="slide__lead" style="margin-top:14px; font-size:15px;">
+    Сумма FCF за 10 лет — <span class="gold">₽ 325,02 млрд</span>; EBITDA-маржа в зрелой фазе — 74,8% (синхронизирована с финмоделью SoT v3 после рефактора 24.05.2026; ранняя нереалистичная 96,9% устранена).
+  </p>
+</section>
+
+<!-- =========== 13 · ДОРОЖНАЯ КАРТА =========== -->
+<section class="slide">
+  <div class="slide__brand">Дорожная карта</div>
+  <div class="slide__num">13 / 26</div>
+  <div class="slide__kicker">Вехи · CapEx-волны · конверсия</div>
+  <h2 class="slide__title">Series A → лицензия → Stage 2 → зрелая фаза</h2>
+  <img src="img/timeline.svg" class="fit" alt="Timeline 2025-2034" style="max-height:65vh;">
+</section>
+
+<!-- =========== 14 · DCF + Multi-stage TV =========== -->
+<section class="slide">
+  <div class="slide__brand">DCF · Enterprise Value</div>
+  <div class="slide__num">14 / 26</div>
+  <div class="slide__kicker">Multi-stage Terminal Value</div>
+  <h2 class="slide__title">EV (DCF Base) = 63,45 млрд ₽ · доля TV 12,3%</h2>
+  <div class="grid grid-2">
+    <div>
+      <table class="deck-tbl">
+        <thead><tr><th>Компонент</th><th>млрд ₽</th></tr></thead>
+        <tbody>
+          <tr><td>Σ PV FCF 2025–2034 (WACC 29,5%)</td><td class="num">55,67</td></tr>
+          <tr><td>PV TV фаза I (2035–2039, g 6%→4%, маржа 75%→70%)</td><td class="num">6,42</td></tr>
+          <tr><td>PV TV фаза II (2040–2044, g 3,5%→2,5%, маржа 70%→65%)</td><td class="num">1,18</td></tr>
+          <tr><td>PV TV perpetuity (2045+, g 2%, маржа 60%)</td><td class="num">0,18</td></tr>
+          <tr class="t-total"><td>Enterprise Value DCF Base</td><td class="num">63,45</td></tr>
+          <tr><td>В USD при FX 71,5460</td><td class="num">$886,8M</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="card card--gold">
+        <div class="card__label">DCF Pre-money (после stage discount 60%)</div>
+        <div class="card__value gold">$355 M</div>
+        <div class="card__sub">25,38 млрд ₽ · Ф.9.6</div>
+      </div>
+      <p class="slide__lead" style="margin-top:18px; font-size:15px;">Multi-stage TV вместо одностадийной модели Гордона снижает долю TV в полной NPV до <span class="gold">12,3%</span> (рекомендация IVS 105 §40.30 — ≤ 75%; tier-1 practice — ≤ 50%). Критическая граница устранена.</p>
+      <div class="kv" style="margin-top:14px;">
+        <div class="kv__row"><span>Stage I, годы</span><span>2035–2039</span></div>
+        <div class="kv__row"><span>Stage II, годы</span><span>2040–2044</span></div>
+        <div class="kv__row"><span>Stage III, годы</span><span>2045+</span></div>
+        <div class="kv__row"><span>TV<sub>perp</sub> номинальный</span><span>158,4 млрд ₽</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== 15 · MULTIPLES =========== -->
+<section class="slide">
+  <div class="slide__brand">Comparable Multiples</div>
+  <div class="slide__num">15 / 26</div>
+  <div class="slide__kicker">Рыночный подход · EV/Revenue 5Y</div>
+  <h2 class="slide__title">Multiples Pre-money = $380 M</h2>
+  <div class="grid grid-2">
+    <div>
+      <table class="deck-tbl">
+        <thead><tr><th>Шаг</th><th>Значение</th></tr></thead>
+        <tbody>
+          <tr><td>Выручка год 5 (2029)</td><td class="num">$ 524 M</td></tr>
+          <tr><td>Медианный мультипликатор</td><td class="num">14,2×</td></tr>
+          <tr><td>EV<sub>5Y</sub> (Ф.9.7a)</td><td class="num">$ 7 441 M</td></tr>
+          <tr><td>Дисконт WACC × 5</td><td class="num">27,8%</td></tr>
+          <tr><td>EV<sub>present</sub> (Ф.9.7b)</td><td class="num">$ 2 069 M</td></tr>
+          <tr><td>Early-stage discount (Pre-MVP-Pro)</td><td class="num">81,6%</td></tr>
+          <tr class="t-total"><td>Multiples Pre-money (Ф.9.7c)</td><td class="num">$ 380 M</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="card">
+        <div class="card__label">Обоснование 14,2×</div>
+        <ul class="bullets" style="font-size:14px;">
+          <li>Securitize (Series C, US) — 16,3×</li>
+          <li>Polymath / Tokeny — 15,6×</li>
+          <li>HQLAx (Series B, CH) — 12,9×</li>
+          <li>Atomyze (Series A, RU) — 14,2×</li>
+          <li>СберCFA (mature, RU) — 10,5×</li>
+        </ul>
+        <p style="font-size:12px; color: var(--text-mute); margin-top:12px;">Источники: пресс-релизы, PitchBook, Crunchbase. Дата выборки — 24.05.2026.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== 16 · BERKUS + ASSET =========== -->
+<section class="slide">
+  <div class="slide__brand">Risk-Adjusted Berkus · Asset</div>
+  <div class="slide__num">16 / 26</div>
+  <div class="slide__kicker">Дополнительные методы</div>
+  <h2 class="slide__title">Berkus $35M · Replacement Cost $20M</h2>
+  <div class="grid grid-2">
+    <div>
+      <div class="card__label" style="font-size:11px; color: var(--gold);">BERKUS · ×17 РОССИЙСКИЙ МАСШТАБ</div>
+      <table class="deck-tbl" style="margin-top:10px;">
+        <thead><tr><th>Фактор</th><th>Макс</th><th>Оценка</th></tr></thead>
+        <tbody>
+          <tr><td>Sound idea</td><td class="num">0,50</td><td class="num">0,50</td></tr>
+          <tr><td>Prototype</td><td class="num">0,50</td><td class="num">0,50</td></tr>
+          <tr><td>Quality management team</td><td class="num">0,50</td><td class="num">0,35</td></tr>
+          <tr><td>Strategic relationships</td><td class="num">0,50</td><td class="num">0,40</td></tr>
+          <tr><td>Product rollout / sales</td><td class="num">0,50</td><td class="num">0,30</td></tr>
+          <tr class="t-total"><td>Σ Berkus, $ млн</td><td class="num">2,50</td><td class="num">2,05</td></tr>
+          <tr class="t-total"><td>× 17 = Pre-money</td><td colspan="2" class="num">$ 35 M</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="card__label" style="font-size:11px; color: var(--gold);">REPLACEMENT COST · ×1,75 ПРЕМИЯ ЗА IP</div>
+      <table class="deck-tbl" style="margin-top:10px;">
+        <thead><tr><th>Раздел</th><th>млн ₽</th></tr></thead>
+        <tbody>
+          <tr><td>Серверная часть + сертификации</td><td class="num">645</td></tr>
+          <tr><td>Клиентская часть PWA + 4 языка</td><td class="num">68</td></tr>
+          <tr><td>КД ГОСТ 19 (13 документов)</td><td class="num">10</td></tr>
+          <tr><td>RuStore-пакет + промо</td><td class="num">6</td></tr>
+          <tr><td>Маркетинг + презентации</td><td class="num">22</td></tr>
+          <tr><td>Брендинг + дизайн-система</td><td class="num">12</td></tr>
+          <tr><td>Оценка / DD / аудит</td><td class="num">22</td></tr>
+          <tr><td>Финмодель + бизнес-план</td><td class="num">12</td></tr>
+          <tr><td>Юр.фундамент + Устав АО</td><td class="num">18</td></tr>
+          <tr class="t-total"><td>Σ воспроизводство</td><td class="num">815</td></tr>
+          <tr class="t-total"><td>× 1,75 / 71,55 = Pre-money</td><td class="num">$ 20 M</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- =========== 17 · ТРИАНГУЛЯЦИЯ =========== -->
+<section class="slide">
+  <div class="slide__brand">Согласование результатов</div>
+  <div class="slide__num">17 / 26</div>
+  <div class="slide__kicker">Reconciliation · Ф.10</div>
+  <h2 class="slide__title">Взвешенная EV $249M → Reasoned Value $100M</h2>
+  <div class="chart-box" style="height:320px;"><canvas id="chartTri"></canvas></div>
+  <div class="grid grid-2" style="margin-top:18px;">
+    <table class="deck-tbl">
+      <thead><tr><th>Метод</th><th>$ млн</th><th>Вес</th><th>Вклад</th></tr></thead>
+      <tbody>
+        <tr><td>DCF</td><td class="num">355</td><td class="num">35%</td><td class="num">124,3</td></tr>
+        <tr><td>Multiples</td><td class="num">380</td><td class="num">30%</td><td class="num">114,0</td></tr>
+        <tr><td>Berkus ×17</td><td class="num">35</td><td class="num">25%</td><td class="num">8,75</td></tr>
+        <tr><td>Asset ×1,75</td><td class="num">20</td><td class="num">10%</td><td class="num">2,00</td></tr>
+        <tr class="t-total"><td>Взвешенная EV</td><td class="num">249</td><td class="num">100%</td><td class="num">249,0</td></tr>
+      </tbody>
+    </table>
+    <div>
+      <div class="card card--gold">
+        <div class="card__label">Stage discount единый</div>
+        <div class="card__value gold" data-count-to="60" data-suffix="%">0%</div>
+        <div class="card__sub">регуляторный риск + exit-discount + dilution + going-to-market</div>
+      </div>
+      <div class="card card--gold" style="margin-top:14px;">
+        <div class="card__label">Reasoned Value Pre-money</div>
+        <div class="card__value gold" data-count-to="100" data-prefix="$ " data-suffix=" M">$ 0 M</div>
+        <div class="card__sub">≈ 7,15 млрд ₽ (FX 71,5460)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== 18 · СЦЕНАРИИ =========== -->
+<section class="slide">
+  <div class="slide__brand">Сценарный анализ</div>
+  <div class="slide__num">18 / 26</div>
+  <div class="slide__kicker">Optimistic · Base · Conservative</div>
+  <h2 class="slide__title">Expected Value $106M · Reasoned Base ниже</h2>
+  <div class="grid grid-3">
+    <div class="card">
+      <div class="card__label">Optimistic · 30%</div>
+      <div class="card__value">$ 140 M</div>
+      <div class="card__sub">Пакет НПА T+24 · доля 25% · WACC → 25%</div>
+      <div style="margin-top:10px;"><span class="chip chip--gold">NPV 82,0 млрд ₽</span></div>
+    </div>
+    <div class="card card--gold">
+      <div class="card__label">Base · 55%</div>
+      <div class="card__value gold">$ 100 M</div>
+      <div class="card__sub">Пакет НПА T+36 · доля 18% · WACC 29,5%</div>
+      <div style="margin-top:10px;"><span class="chip chip--gold">NPV 63,4 млрд ₽</span></div>
+    </div>
+    <div class="card">
+      <div class="card__label">Conservative · 15%</div>
+      <div class="card__value">$ 70 M</div>
+      <div class="card__sub">Только 259-ФЗ (wedge) · доля 7% · WACC 32%</div>
+      <div style="margin-top:10px;"><span class="chip">NPV 28,5 млрд ₽</span></div>
+    </div>
+  </div>
+  <div class="row" style="margin-top:22px; align-items:center;">
+    <div class="card" style="flex:1;">
+      <div class="card__label">Expected Value (3-сценарий)</div>
+      <div class="card__value">$ 106 M · 60,1 млрд ₽</div>
+      <div class="card__sub">Reasoned Base $100M < EV $106M → защитимая переговорная нижняя граница</div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== 19 · TORNADO =========== -->
+<section class="slide">
+  <div class="slide__brand">Tornado-диаграмма</div>
+  <div class="slide__num">19 / 26</div>
+  <div class="slide__kicker">Топ-7 чувствительностей</div>
+  <h2 class="slide__title">Регуляторный фактор — главный драйвер риска</h2>
+  <div class="chart-box" style="height: 60vh;"><canvas id="chartTornado"></canvas></div>
+</section>
+
+<!-- =========== 20 · MONTE CARLO =========== -->
+<section class="slide">
+  <div class="slide__brand">Monte Carlo</div>
+  <div class="slide__num">20 / 26</div>
+  <div class="slide__kicker">1000 итераций · 6 параметров</div>
+  <h2 class="slide__title">P(NPV > 50 млрд ₽) = 75% · P(NPV < 0) = 4,2%</h2>
+  <div class="grid grid-2">
+    <div>
+      <div class="chart-box" style="height:380px;"><canvas id="chartMc"></canvas></div>
+    </div>
+    <div>
+      <table class="deck-tbl">
+        <thead><tr><th>Перцентиль</th><th>NPV, млрд ₽</th></tr></thead>
+        <tbody>
+          <tr><td>P5</td><td class="num">28</td></tr>
+          <tr><td>P10</td><td class="num">42</td></tr>
+          <tr class="t-total"><td>Медиана</td><td class="num">94</td></tr>
+          <tr><td>P90</td><td class="num">168</td></tr>
+          <tr><td>P95</td><td class="num">190</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:14px; margin-top:14px; color: var(--text-mute); line-height:1.6;">Корреляции в симуляции: WACC ↔ КС ЦБ (+0,75); доля рынка ↔ срок принятия НПА (−0,55). Распределения по 6 параметрам — треугольные (Low/Base/High).</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========== 21 · WACC SENSITIVITY =========== -->
+<section class="slide">
+  <div class="slide__brand">Чувствительность к WACC</div>
+  <div class="slide__num">21 / 26</div>
+  <div class="slide__kicker">DCF EV · диапазон 26–33%</div>
+  <h2 class="slide__title">Снижение ключевой ставки = uplift к оценке</h2>
+  <div class="chart-box" style="height:62vh;"><canvas id="chartSens"></canvas></div>
+</section>
+
+<!-- =========== 22 · СТРУКТУРА СДЕЛКИ =========== -->
+<section class="slide">
+  <div class="slide__brand">Структура сделки Series A</div>
+  <div class="slide__num">22 / 26</div>
+  <div class="slide__kicker">Рекомендация</div>
+  <h2 class="slide__title">$15M раунд · post-money $115M · доля инвестора 13,04%</h2>
+  <div class="grid grid-2">
+    <div>
+      <div class="kv">
+        <div class="kv__row"><span>Pre-money (Reasoned Base)</span><span class="gold">$ 100,0 M · 7,15 млрд ₽</span></div>
+        <div class="kv__row"><span>Раунд</span><span>$ 15,0 M · 1,073 млрд ₽</span></div>
+        <div class="kv__row"><span>Post-money</span><span class="gold">$ 115,0 M · 8,23 млрд ₽</span></div>
+        <div class="kv__row"><span>Доля инвестора</span><span class="gold">13,04%</span></div>
+        <div class="kv__row"><span>ESOP-резерв (рек.)</span><span>10% (после раунда)</span></div>
+        <div class="kv__row"><span>Совет директоров (рек.)</span><span>3 / 5 независимых</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="card__label" style="font-size:11px; color: var(--gold);">СОПОСТАВЛЕНИЕ С МЕЖДУНАРОДНЫМИ</div>
+      <table class="deck-tbl" style="margin-top:10px;">
+        <thead><tr><th>Проект</th><th>Pre-money, $ млн</th></tr></thead>
+        <tbody>
+          <tr><td>Securitize · Series C · US</td><td class="num">980</td></tr>
+          <tr><td>HQLAx · Series B · CH</td><td class="num">180</td></tr>
+          <tr class="t-total"><td>ЦПФСР · Reasoned · RU</td><td class="num">100</td></tr>
+          <tr><td>Atomyze · Series A · RU</td><td class="num">~85</td></tr>
+          <tr><td>Polymath · Series A · CA/BB</td><td class="num">75</td></tr>
+          <tr><td>Tokeny · Series A · LUX</td><td class="num">60</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- =========== 23 · RED FLAGS =========== -->
+<section class="slide">
+  <div class="slide__brand">Red Flags · самопроверка</div>
+  <div class="slide__num">23 / 26</div>
+  <div class="slide__kicker">Reviewer's Note</div>
+  <h2 class="slide__title">Семь точек атаки и их митигация</h2>
+  <div class="grid grid-2">
+    <div>
+      <ul class="bullets" style="font-size:15px;">
+        <li><strong class="ivory">Регуляторная бинарность.</strong> Wedge защищает Stage 1 · conservative NPV ₽ 28,5 млрд</li>
+        <li><strong class="ivory">Damodaran > 30 дней.</strong> Sanity-check через КС ЦБ + спред даёт идентичный WACC</li>
+        <li><strong class="ivory">Comps в РФ — узкая выборка.</strong> Вес Multiples 30%; early-stage discount 81,6%</li>
+        <li><strong class="ivory">Серверная часть TRL 4/10.</strong> Replacement Cost вес 10% (нижняя граница)</li>
+      </ul>
+    </div>
+    <div>
+      <ul class="bullets" style="font-size:15px;">
+        <li><strong class="ivory">LoI / MoU отсутствуют.</strong> Приоритет работы T+0…T+6 мес.</li>
+        <li><strong class="ivory">Bus factor 1.</strong> Депонирование № 4011265 — частичная защита ноу-хау</li>
+        <li><strong class="ivory">Equity-only финмодель.</strong> Долговой щит даёт +5–8% NPV (вне Base)</li>
+      </ul>
+      <div class="card card--gold" style="margin-top:18px;">
+        <div class="card__label">Checklist приёмки</div>
+        <div class="card__value gold">20 / 20</div>
+        <div class="card__sub">все пункты §11 промта «Оценщик-Профи» — ДА</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== 24 · ДОПУЩЕНИЯ =========== -->
+<section class="slide">
+  <div class="slide__brand">Допущения и ограничения</div>
+  <div class="slide__num">24 / 26</div>
+  <div class="slide__kicker">IVS 104 §200 · Special Assumptions</div>
+  <h2 class="slide__title">Что принято, что нет</h2>
+  <div class="grid grid-2">
+    <div>
+      <div class="slide__kicker" style="font-size:10px;">Допущения</div>
+      <ul class="bullets" style="font-size:14px;">
+        <li>Going Concern, без сценария ликвидации</li>
+        <li>Постоянный WACC 29,5% на 2025–2034 (консервативно)</li>
+        <li>Линейный USD/RUB по курсу ЦБ РФ; FX-волатильность вне</li>
+        <li>Налог на прибыль 20% (ИТ-льгота 5% — отдельный сценарий)</li>
+        <li>Equity-only structure; долговой щит вне Base</li>
+      </ul>
+    </div>
+    <div>
+      <div class="slide__kicker" style="font-size:10px;">Special Assumptions</div>
+      <ul class="bullets" style="font-size:14px;">
+        <li>Принятие пакета НПА (Stage 2) — Base T+36 мес.</li>
+        <li>Операторская лицензия Банка России — T+12…T+18 мес.</li>
+        <li>Сертификация ФСТЭК / ФСБ (КИИ-1) — T+18 мес.</li>
+        <li>Привлечение Series A $15M — T+6 мес.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card" style="margin-top:18px;">
+    <div class="card__label">Перепроверка</div>
+    <div class="card__sub" style="font-size:15px; color: var(--text); line-height:1.6;">Рекомендуется при изменении ключевой ставки ЦБ РФ более чем на 200 б.п. или курса USD/RUB более чем на 10% от значений на дату оценки.</div>
+  </div>
+</section>
+
+<!-- =========== 25 · ИСТОЧНИКИ =========== -->
+<section class="slide">
+  <div class="slide__brand">Источники и стандарты</div>
+  <div class="slide__num">25 / 26</div>
+  <div class="slide__kicker">Первичные источники · нормативная база</div>
+  <h2 class="slide__title">20 первичных источников · 9 стандартов</h2>
+  <div class="grid grid-3">
+    <div>
+      <div class="slide__kicker" style="font-size:10px;">Макро · РФ</div>
+      <ul class="bullets" style="font-size:13px;">
+        <li>cbr.ru — КС 14,50%</li>
+        <li>cbr.ru — USD/RUB 71,5460</li>
+        <li>tradingeconomics — 10Y ОФЗ 14,73%</li>
+        <li>minfin — ОФЗ-26249 14,75%</li>
+      </ul>
+    </div>
+    <div>
+      <div class="slide__kicker" style="font-size:10px;">Премии за риск</div>
+      <ul class="bullets" style="font-size:13px;">
+        <li>Damodaran ctryprem — ERP 8,13%</li>
+        <li>Damodaran CRP — 3,90%</li>
+        <li>SSRN ERP 2026 Edition</li>
+      </ul>
+    </div>
+    <div>
+      <div class="slide__kicker" style="font-size:10px;">Стандарты</div>
+      <ul class="bullets" style="font-size:13px;">
+        <li>IVS 2025 (IVSC)</li>
+        <li>RICS Red Book 2025</li>
+        <li>IFRS 13 (IASB)</li>
+        <li>ФСО I–VI · 135-ФЗ · 259-ФЗ · 779-П</li>
+        <li>AICPA SSVS-1 · IPEV · ISO 10668</li>
+      </ul>
+    </div>
+  </div>
+  <div class="grid grid-2" style="margin-top:22px;">
+    <div>
+      <div class="slide__kicker" style="font-size:10px;">Сопоставимые сделки</div>
+      <ul class="bullets" style="font-size:13px;">
+        <li>Securitize.io, Tokeny.com</li>
+        <li>HQLAx.com, Atomyze.ru</li>
+        <li>Crunchbase, PitchBook (агрегаты)</li>
+      </ul>
+    </div>
+    <div>
+      <div class="slide__kicker" style="font-size:10px;">Внутренние документы проекта</div>
+      <ul class="bullets" style="font-size:13px;">
+        <li>03_Финансовая_модель / Финмодель SoT v3</li>
+        <li>14_Аудит / Сводный аудит post-Горизонт-III</li>
+        <li>Свидетельство о депонировании № 4011265 от 19.12.2024</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- =========== 26 · FINAL =========== -->
+<section class="slide final">
+  <div class="slide__brand">Final Opinion · подпись</div>
+  <div class="slide__num">26 / 26</div>
+  <img src="img/final_seal.svg" alt="Reasoned Fair Value seal" class="final__seal">
+  <div class="final__signoff">
+    Кагиров Абдул-Хаким Ахмадович (Аслан Каа)
+    <span>Founder · CEO · Center Group Company · www.aslankaa.com · 27 мая 2026</span>
+  </div>
+  <div style="margin-top:24px;">
+    <span class="chip chip--gold">IVS 2025</span>
+    <span class="chip chip--gold">IFRS 13</span>
+    <span class="chip chip--gold">ФСО I–VI</span>
+    <span class="chip chip--gold">RICS Red Book</span>
+    <span class="chip">+7 (969) 795-55-55</span>
+    <span class="chip">aslankaa@yandex.ru</span>
+  </div>
+</section>
+
+</div>
+
+<div class="dots" id="dots"></div>
+<div class="nav">
+  <button id="prev" title="Назад (←)">‹</button>
+  <button id="next" title="Вперёд (→)">›</button>
+</div>
+<div class="hint">← → стрелки · Space · кликни точку</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script>
+(function() {
+  var deck = document.getElementById('deck');
+  var slides = document.querySelectorAll('.slide');
+  var pbar = document.getElementById('pbar');
+  var dotsEl = document.getElementById('dots');
+  var idx = 0;
+  var total = slides.length;
+
+  // ===== Particles background =====
+  var pc = document.getElementById('particles');
+  var pctx = pc.getContext('2d');
+  var particles = [];
+  function resizeCanvas() {
+    pc.width = window.innerWidth * (window.devicePixelRatio || 1);
+    pc.height = window.innerHeight * (window.devicePixelRatio || 1);
+    pc.style.width = window.innerWidth + 'px';
+    pc.style.height = window.innerHeight + 'px';
+    pctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
+  }
+  resizeCanvas();
+  window.addEventListener('resize', function() {
+    pc.width = window.innerWidth * (window.devicePixelRatio || 1);
+    pc.height = window.innerHeight * (window.devicePixelRatio || 1);
+    pc.style.width = window.innerWidth + 'px';
+    pc.style.height = window.innerHeight + 'px';
+    pctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
+  });
+  function spawnParticles() {
+    var n = Math.max(28, Math.min(60, Math.round(window.innerWidth / 30)));
+    particles = [];
+    for (var i = 0; i < n; i++) {
+      particles.push({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        r: Math.random() * 1.4 + 0.4,
+        vx: (Math.random() - 0.5) * 0.18,
+        vy: (Math.random() - 0.5) * 0.18,
+        a: Math.random() * 0.5 + 0.18,
+        twinkle: Math.random() * Math.PI * 2
+      });
+    }
+  }
+  spawnParticles();
+  window.addEventListener('resize', spawnParticles);
+  function tick() {
+    pctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    var now = performance.now() / 1000;
+    particles.forEach(function(p) {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < -10) p.x = window.innerWidth + 10;
+      if (p.x > window.innerWidth + 10) p.x = -10;
+      if (p.y < -10) p.y = window.innerHeight + 10;
+      if (p.y > window.innerHeight + 10) p.y = -10;
+      var twinkle = (Math.sin(now * 1.4 + p.twinkle) + 1) * 0.5;
+      pctx.beginPath();
+      pctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      pctx.fillStyle = 'rgba(201,161,74,' + (p.a * (0.45 + 0.55 * twinkle)).toFixed(3) + ')';
+      pctx.fill();
+    });
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+
+  // ===== Counter-up =====
+  function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
+  function fmtNum(value, decimals) {
+    var fixed = value.toFixed(decimals || 0);
+    return fixed.replace('.', ',');
+  }
+  function setFinalCounter(el) {
+    var to = parseFloat(el.dataset.countTo);
+    var dec = parseInt(el.dataset.decimals || '0', 10);
+    var prefix = el.dataset.prefix || '';
+    var suffix = el.dataset.suffix || '';
+    el.textContent = prefix + fmtNum(to, dec) + suffix;
+    el.dataset.counted = '1';
+  }
+  function animateCounter(el) {
+    if (el.dataset.counted === '1') return;
+    el.dataset.counted = '1';
+    var to = parseFloat(el.dataset.countTo);
+    var dec = parseInt(el.dataset.decimals || '0', 10);
+    var prefix = el.dataset.prefix || '';
+    var suffix = el.dataset.suffix || '';
+    var dur = 1400;
+    var t0 = performance.now();
+    function step(now) {
+      var p = Math.min(1, (now - t0) / dur);
+      var v = to * easeOutQuart(p);
+      el.textContent = prefix + fmtNum(v, dec) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  // Print / headless: jump to final values immediately for all counters
+  function snapAllCountersFinal() {
+    document.querySelectorAll('[data-count-to]').forEach(setFinalCounter);
+  }
+  window.addEventListener('beforeprint', snapAllCountersFinal);
+  // Detect headless Chrome and force print state immediately
+  var isHeadless = /HeadlessChrome/.test(navigator.userAgent);
+  if (isHeadless) {
+    document.documentElement.classList.add('is-print');
+    setTimeout(function() {
+      snapAllCountersFinal();
+      slides.forEach(function(s) { s.classList.add('is-active'); });
+    }, 50);
+  }
+
+  // Single-slide export mode for PPTX rendering: ?s=N (1-based)
+  var qp = new URLSearchParams(window.location.search);
+  if (qp.has('s')) {
+    var n = parseInt(qp.get('s'), 10) - 1;
+    document.documentElement.classList.add('is-export');
+    var pc2 = document.getElementById('particles');
+    if (pc2) pc2.style.display = 'none';
+    var navEl = document.querySelector('.nav');
+    var dotsEl2 = document.getElementById('dots');
+    var pbarEl = document.querySelector('.progress-strip');
+    var hintEl = document.querySelector('.hint');
+    [navEl, dotsEl2, pbarEl, hintEl].forEach(function(el) { if (el) el.style.display = 'none'; });
+    setTimeout(function() {
+      snapAllCountersFinal();
+      slides.forEach(function(s) { s.classList.add('is-active'); });
+      deck.scrollTo({ top: n * window.innerHeight, behavior: 'instant' });
+    }, 100);
+  }
+  function resetCounter(el) {
+    el.dataset.counted = '';
+    var dec = parseInt(el.dataset.decimals || '0', 10);
+    var prefix = el.dataset.prefix || '';
+    var suffix = el.dataset.suffix || '';
+    el.textContent = prefix + fmtNum(0, dec) + suffix;
+  }
+
+  // ===== Card magnetic hover =====
+  document.querySelectorAll('.card').forEach(function(card) {
+    card.addEventListener('mousemove', function(e) {
+      var rect = card.getBoundingClientRect();
+      var mx = ((e.clientX - rect.left) / rect.width) * 100;
+      var my = ((e.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty('--mx', mx + '%');
+      card.style.setProperty('--my', my + '%');
+    });
+    card.addEventListener('mouseleave', function() {
+      card.style.setProperty('--mx', '50%');
+      card.style.setProperty('--my', '50%');
+    });
+  });
+
+  // ===== Activate slide on view =====
+  function setActiveSlide(i) {
+    slides.forEach(function(s, j) {
+      s.classList.toggle('is-active', j === i);
+      // re-trigger counters when slide leaves and re-enters
+      if (j !== i) {
+        s.querySelectorAll('[data-count-to]').forEach(resetCounter);
+      }
+    });
+    var active = slides[i];
+    if (active) {
+      active.querySelectorAll('[data-count-to]').forEach(function(el) {
+        // delay until entry animation pulls element in
+        setTimeout(function() { animateCounter(el); }, 400);
+      });
+    }
+  }
+
+  // Build dots
+  slides.forEach(function(_, i) {
+    var d = document.createElement('span');
+    d.addEventListener('click', function() { goTo(i); });
+    dotsEl.appendChild(d);
+  });
+  var dotEls = dotsEl.querySelectorAll('span');
+
+  var prevIdx = -1;
+  function update() {
+    var top = deck.scrollTop;
+    idx = Math.round(top / window.innerHeight);
+    if (idx < 0) idx = 0;
+    if (idx >= total) idx = total - 1;
+    pbar.style.width = ((idx + 1) / total * 100) + '%';
+    dotEls.forEach(function(d, i) { d.classList.toggle('active', i === idx); });
+    if (idx !== prevIdx) {
+      prevIdx = idx;
+      setActiveSlide(idx);
+    }
+  }
+  function goTo(i) {
+    idx = Math.max(0, Math.min(total - 1, i));
+    deck.scrollTo({ top: idx * window.innerHeight, behavior: 'smooth' });
+  }
+  document.getElementById('prev').addEventListener('click', function() { goTo(idx - 1); });
+  document.getElementById('next').addEventListener('click', function() { goTo(idx + 1); });
+  deck.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { goTo(idx + 1); e.preventDefault(); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { goTo(idx - 1); e.preventDefault(); }
+    if (e.key === 'Home') { goTo(0); e.preventDefault(); }
+    if (e.key === 'End') { goTo(total - 1); e.preventDefault(); }
+  });
+  update();
+
+  // Chart common
+  var grid = 'rgba(201,206,214,0.08)';
+  var tickColor = '#8C95A4';
+  var goldColor = '#C9A14A';
+  var goldFill = 'rgba(201,161,74,0.18)';
+  Chart.defaults.color = tickColor;
+  Chart.defaults.font.family = "'Inter', sans-serif";
+  Chart.defaults.animation.duration = 1400;
+  Chart.defaults.animation.easing = 'easeOutQuart';
+
+  function makeGoldGradient(ctx) {
+    var g = ctx.createLinearGradient(0, 0, 0, 300);
+    g.addColorStop(0, '#F2D88A');
+    g.addColorStop(1, '#7A5C2E');
+    return g;
+  }
+  function makeAreaGradient(ctx) {
+    var g = ctx.createLinearGradient(0, 0, 0, 320);
+    g.addColorStop(0, 'rgba(242,216,138,0.35)');
+    g.addColorStop(1, 'rgba(201,161,74,0.02)');
+    return g;
+  }
+
+  // FCF chart
+  new Chart(document.getElementById('chartFcf'), {
+    type: 'bar',
+    data: {
+      labels: ['2025','2026','2027','2028','2029','2030','2031','2032','2033','2034'],
+      datasets: [
+        {
+          label: 'FCF, млрд ₽',
+          data: [-1.02,-1.06,0.72,5.68,19.28,35.02,50.80,62.50,71.80,81.30],
+          backgroundColor: function(ctx) { return ctx.raw < 0 ? '#B0202E' : goldColor; },
+          borderRadius: 3
+        },
+        {
+          label: 'Выручка, млрд ₽',
+          data: [0, 0.18, 2.80, 11.10, 37.50, 65.00, 91.30, 110.40, 125.80, 137.90],
+          type: 'line',
+          borderColor: '#C9CED6',
+          backgroundColor: 'rgba(201,206,214,0.12)',
+          tension: 0.25,
+          fill: true,
+          yAxisID: 'y2'
+        }
+      ]
+    },
+    options: {
+      plugins: { legend: { position: 'top', labels: { font: { family: 'Manrope', size: 11, weight: '600' } } } },
+      scales: {
+        x: { grid: { color: grid }, ticks: { color: tickColor, font: { family: 'IBM Plex Mono', size: 11 } } },
+        y: { grid: { color: grid }, ticks: { color: tickColor, font: { family: 'IBM Plex Mono' } }, title: { display: true, text: 'FCF, млрд ₽', color: tickColor } },
+        y2: { position: 'right', grid: { display: false }, ticks: { color: '#C9CED6', font: { family: 'IBM Plex Mono' } }, title: { display: true, text: 'Выручка, млрд ₽', color: '#C9CED6' } }
+      }
+    }
+  });
+
+  // Triangulation
+  new Chart(document.getElementById('chartTri'), {
+    type: 'bar',
+    data: {
+      labels: ['DCF', 'Multiples', 'Berkus ×17', 'Asset ×1,75'],
+      datasets: [
+        { label: 'Pre-money, $ млн', data: [355, 380, 35, 20], backgroundColor: goldColor, borderRadius: 3 },
+        { label: 'Вес, %', data: [35, 30, 25, 10], backgroundColor: '#C9CED6', yAxisID: 'y2', borderRadius: 3 }
+      ]
+    },
+    options: {
+      plugins: { legend: { position: 'top', labels: { font: { family: 'Manrope', size: 11, weight: '600' } } } },
+      scales: {
+        x: { grid: { color: grid }, ticks: { color: tickColor, font: { family: 'Manrope', size: 12 } } },
+        y: { grid: { color: grid }, ticks: { color: tickColor, font: { family: 'IBM Plex Mono' } }, title: { display: true, text: '$ млн', color: tickColor } },
+        y2: { position: 'right', grid: { display: false }, ticks: { color: '#C9CED6', font: { family: 'IBM Plex Mono' } }, title: { display: true, text: 'Вес, %', color: '#C9CED6' }, max: 50 }
+      }
+    }
+  });
+
+  // Tornado
+  new Chart(document.getElementById('chartTornado'), {
+    type: 'bar',
+    data: {
+      labels: ['Срок принятия НПА','Доля рынка год 10','WACC','OpEx-уплифт','Тарифная комиссия','Срок запуска','EBITDA-маржа TV'],
+      datasets: [{ label: 'Эффект на NPV, ±млрд ₽', data: [54,38,22,18,16,14,11], backgroundColor: goldColor, borderRadius: 3 }]
+    },
+    options: {
+      indexAxis: 'y',
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { color: grid }, ticks: { color: tickColor, font: { family: 'IBM Plex Mono' } } },
+        y: { grid: { display: false }, ticks: { color: '#ECEEF2', font: { family: 'Inter', size: 13 } } }
+      }
+    }
+  });
+
+  // Monte Carlo histogram (approx)
+  var mcLabels = ['<20','20-40','40-60','60-80','80-100','100-120','120-140','140-160','160-180','180+'];
+  var mcData = [25, 95, 165, 195, 175, 145, 95, 60, 30, 15];
+  new Chart(document.getElementById('chartMc'), {
+    type: 'bar',
+    data: {
+      labels: mcLabels,
+      datasets: [{ label: 'Частота (из 1000 итераций)', data: mcData, backgroundColor: function(ctx) {
+        var v = parseInt(mcLabels[ctx.dataIndex]);
+        return v < 50 ? '#B0202E' : goldColor;
+      }, borderRadius: 3 }]
+    },
+    options: {
+      plugins: { legend: { display: false }, title: { display: true, text: 'Распределение NPV, млрд ₽', font: { family: 'Manrope', size: 12, weight: '600' } } },
+      scales: {
+        x: { grid: { color: grid }, ticks: { color: tickColor, font: { family: 'IBM Plex Mono', size: 11 } } },
+        y: { grid: { color: grid }, ticks: { color: tickColor, font: { family: 'IBM Plex Mono' } } }
+      }
+    }
+  });
+
+  // Sensitivity to WACC
+  var sensCtx = document.getElementById('chartSens').getContext('2d');
+  new Chart(sensCtx, {
+    type: 'line',
+    data: {
+      labels: ['26,0%','27,5%','29,0%','29,5%','30,0%','31,0%','33,0%'],
+      datasets: [{
+        label: 'Enterprise Value DCF, млрд ₽',
+        data: [88.2, 75.1, 66.8, 63.45, 60.3, 55.2, 46.1],
+        borderColor: goldColor,
+        backgroundColor: makeAreaGradient(sensCtx),
+        tension: 0.35,
+        fill: true,
+        pointRadius: 7,
+        pointHoverRadius: 10,
+        pointBackgroundColor: '#F2D88A',
+        pointBorderColor: '#7A5C2E',
+        borderWidth: 3
+      }]
+    },
+    options: {
+      animation: { duration: 1800, easing: 'easeOutQuart' },
+      plugins: { legend: { position: 'top', labels: { font: { family: 'Manrope', size: 12, weight: '600' } } } },
+      scales: {
+        x: { title: { display: true, text: 'WACC, %', color: tickColor }, grid: { color: grid }, ticks: { color: tickColor, font: { family: 'IBM Plex Mono', size: 13 } } },
+        y: { title: { display: true, text: 'EV, млрд ₽', color: tickColor }, grid: { color: grid }, ticks: { color: tickColor, font: { family: 'IBM Plex Mono' } } }
+      }
+    }
+  });
+
+  // ===== Mouse parallax on title slide hero image =====
+  var heroImg = document.querySelector('.slide.title .title__right img');
+  if (heroImg) {
+    document.addEventListener('mousemove', function(e) {
+      if (!slides[0].classList.contains('is-active')) return;
+      var cx = window.innerWidth / 2;
+      var cy = window.innerHeight / 2;
+      var dx = (e.clientX - cx) / cx;
+      var dy = (e.clientY - cy) / cy;
+      heroImg.style.transform = 'translate3d(' + (dx * 14) + 'px, ' + (dy * 14) + 'px, 0)';
+    });
+  }
+})();
+</script>
+<!-- Auth (PIN) — единый протокол сайта -->
+<script src="../../_design-system/auth-config.js"></script>
+<script src="../../_design-system/auth.js"></script>
+</body>
+</html>
