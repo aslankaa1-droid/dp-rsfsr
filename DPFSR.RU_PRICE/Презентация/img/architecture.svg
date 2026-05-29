@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1117"/>
+      <stop offset="100%" stop-color="#161B22"/>
+    </linearGradient>
+    <linearGradient id="stage1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1F2733"/>
+      <stop offset="100%" stop-color="#2A3645"/>
+    </linearGradient>
+    <linearGradient id="stage2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C9A14A"/>
+      <stop offset="100%" stop-color="#7A5C2E"/>
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#C9A14A"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="560" fill="url(#bgGrad)"/>
+
+  <text x="500" y="48" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="700" font-size="22" fill="#ECEEF2" letter-spacing="1">Двухстадийная архитектура ЦПФСР</text>
+  <text x="500" y="74" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="13" fill="#8C95A4">Wedge pilot-light в действующем 259-ФЗ → полная конфигурация при пакете НПА</text>
+
+  <g>
+    <rect x="60" y="120" width="420" height="380" rx="6" fill="url(#stage1)" stroke="#C9CED6" stroke-opacity="0.18"/>
+    <text x="80" y="155" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="11" fill="#C9A14A" letter-spacing="3">STAGE 1</text>
+    <text x="80" y="185" font-family="Manrope, sans-serif" font-weight="700" font-size="20" fill="#ECEEF2">Wedge pilot-light</text>
+    <text x="80" y="208" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#8C95A4">T+0 . . . T+18 мес.</text>
+
+    <g transform="translate(80, 240)" font-family="Inter, sans-serif" font-size="13" fill="#ECEEF2">
+      <text y="0">● Действующий 259-ФЗ + 779-П</text>
+      <text y="28">● Оператор ИС ЦФА (АО)</text>
+      <text y="56">● Целевые ЦФА → социальная инфра</text>
+      <text y="84">● ВЭБ.РФ / Газпромбанк (Stage-1 рельсы)</text>
+      <text y="112">● ФСТЭК / ФСБ (КИИ-1)</text>
+      <text y="140">● Atomyze / СберCFA — конкуренты</text>
+    </g>
+
+    <g transform="translate(80, 420)">
+      <text font-family="IBM Plex Mono, monospace" font-size="10" fill="#8C95A4" letter-spacing="2">CONSERVATIVE NPV</text>
+      <text y="22" font-family="Manrope, sans-serif" font-weight="700" font-size="24" fill="#C9A14A">28,5 млрд ₽</text>
+    </g>
+  </g>
+
+  <g transform="translate(490, 280)">
+    <line x1="0" y1="0" x2="50" y2="0" stroke="#C9A14A" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="25" y="-12" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#C9A14A" letter-spacing="1">T+36</text>
+  </g>
+
+  <g>
+    <rect x="560" y="120" width="380" height="380" rx="6" fill="none" stroke="#C9A14A" stroke-width="2"/>
+    <rect x="560" y="120" width="380" height="46" rx="6" fill="url(#stage2)"/>
+    <text x="580" y="150" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="11" fill="#0B1220" letter-spacing="3">STAGE 2</text>
+    <text x="580" y="195" font-family="Manrope, sans-serif" font-weight="700" font-size="20" fill="#ECEEF2">Полная конфигурация</text>
+    <text x="580" y="218" font-family="Inter, sans-serif" font-weight="400" font-size="12" fill="#8C95A4">T+36 . . . T+60 мес. (после пакета НПА)</text>
+
+    <g transform="translate(580, 250)" font-family="Inter, sans-serif" font-size="13" fill="#ECEEF2">
+      <text y="0">● Поправки 86-ФЗ + ЦБ как надзорный</text>
+      <text y="28">● Прямой канал ВЭБ.РФ ↔ Казначейство</text>
+      <text y="56">● Залоговая ёмкость ₽25,5 трлн</text>
+      <text y="84">● Доля рынка год 10 — 18% (Base)</text>
+      <text y="112">● Лицензия первый-в-классе</text>
+      <text y="140">● Регуляторный moat 3–5 лет</text>
+    </g>
+
+    <g transform="translate(580, 430)">
+      <text font-family="IBM Plex Mono, monospace" font-size="10" fill="#C9A14A" letter-spacing="2">BASE NPV</text>
+      <text y="22" font-family="Manrope, sans-serif" font-weight="700" font-size="32" fill="#C9A14A">63,4 млрд ₽</text>
+    </g>
+  </g>
+</svg>

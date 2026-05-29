@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="700" height="700">
+  <defs>
+    <radialGradient id="seal" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#F8E4A8"/>
+      <stop offset="55%" stop-color="#C9A14A"/>
+      <stop offset="100%" stop-color="#3D2D14"/>
+    </radialGradient>
+    <pattern id="dots" patternUnits="userSpaceOnUse" width="14" height="14">
+      <circle cx="7" cy="7" r="0.8" fill="#0B1220" fill-opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <style>
+    .seal-pulse { transform-origin: 350px 350px; animation: sealPulse 3.2s ease-in-out infinite; }
+    @keyframes sealPulse {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(242,216,138,0)); }
+      50% { transform: scale(1.015); filter: drop-shadow(0 0 28px rgba(242,216,138,0.6)); }
+    }
+    .seal-rotate { transform-origin: 350px 350px; animation: sealSpin 80s linear infinite; }
+    @keyframes sealSpin { to { transform: rotate(360deg); } }
+    .text-rotate { transform-origin: 350px 350px; animation: textSpin 120s linear infinite; }
+    @keyframes textSpin { to { transform: rotate(360deg); } }
+  </style>
+  <g class="seal-pulse">
+    <circle cx="350" cy="350" r="320" fill="url(#seal)"/>
+    <circle cx="350" cy="350" r="320" fill="url(#dots)"/>
+  </g>
+  <circle cx="350" cy="350" r="290" fill="none" stroke="#0B1220" stroke-width="2" stroke-opacity="0.5"/>
+  <g class="seal-rotate">
+    <circle cx="350" cy="350" r="272" fill="none" stroke="#0B1220" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="4,3"/>
+  </g>
+  <circle cx="350" cy="350" r="230" fill="none" stroke="#0B1220" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <!-- Circular text "REASONED FAIR VALUE · 26 MAY 2026 · CGC-VAL-2026-05-26 ·" -->
+  <defs>
+    <path id="circleTop" d="M 100 350 A 250 250 0 0 1 600 350" fill="none"/>
+    <path id="circleBot" d="M 100 350 A 250 250 0 0 0 600 350" fill="none"/>
+  </defs>
+  <g class="text-rotate">
+    <text font-family="Manrope, sans-serif" font-weight="700" font-size="20" fill="#0B1220" letter-spacing="8">
+      <textPath href="#circleTop" startOffset="50%" text-anchor="middle">REASONED FAIR VALUE · 26 MAY 2026</textPath>
+    </text>
+    <text font-family="IBM Plex Mono, monospace" font-weight="500" font-size="13" fill="#0B1220" letter-spacing="4">
+      <textPath href="#circleBot" startOffset="50%" text-anchor="middle">CGC-VAL-2026-05-26-ЦПФСР-01  ·  IVS 2025 · IFRS 13</textPath>
+    </text>
+  </g>
+
+  <!-- Center stack -->
+  <text x="350" y="290" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="700" font-size="22" fill="#0B1220" letter-spacing="4">PRE-MONEY</text>
+  <text x="350" y="395" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-weight="700" font-size="98" fill="#0B1220">$100M</text>
+  <text x="350" y="445" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="22" fill="#0B1220">≈ 7,15 млрд ₽</text>
+  <line x1="220" y1="470" x2="480" y2="470" stroke="#0B1220" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="350" y="500" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="14" fill="#0B1220" opacity="0.85">USD 70–140M · RUB 5,0–10,0 млрд</text>
+</svg>

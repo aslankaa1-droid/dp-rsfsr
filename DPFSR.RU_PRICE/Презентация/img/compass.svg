@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="700" height="700">
+  <defs>
+    <radialGradient id="dial" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#161B22"/>
+      <stop offset="100%" stop-color="#0B1220"/>
+    </radialGradient>
+    <linearGradient id="needle" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F2D88A"/>
+      <stop offset="100%" stop-color="#7A5C2E"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .ring-rotate { transform-origin: 350px 350px; animation: ringSpin 60s linear infinite; }
+    @keyframes ringSpin { to { transform: rotate(360deg); } }
+    .ring-rotate-rev { transform-origin: 350px 350px; animation: ringSpinRev 90s linear infinite; }
+    @keyframes ringSpinRev { to { transform: rotate(-360deg); } }
+    .center-pulse { transform-origin: 350px 350px; animation: centerPulse 2.5s ease-in-out infinite; }
+    @keyframes centerPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+    .needle-pulse { transform-origin: 350px 350px; animation: needleFade 3s ease-in-out infinite; }
+    .needle-pulse:nth-child(2) { animation-delay: 0.4s; }
+    .needle-pulse:nth-child(3) { animation-delay: 0.8s; }
+    .needle-pulse:nth-child(4) { animation-delay: 1.2s; }
+    @keyframes needleFade {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 1; }
+    }
+  </style>
+  <rect width="700" height="700" fill="#0E1117"/>
+  <circle cx="350" cy="350" r="310" fill="url(#dial)" stroke="#C9A14A" stroke-width="1.5" stroke-opacity="0.6"/>
+  <g class="ring-rotate">
+    <circle cx="350" cy="350" r="270" fill="none" stroke="#C9CED6" stroke-width="0.5" stroke-opacity="0.25" stroke-dasharray="6,4"/>
+  </g>
+  <g class="ring-rotate-rev">
+    <circle cx="350" cy="350" r="200" fill="none" stroke="#C9CED6" stroke-width="0.5" stroke-opacity="0.2" stroke-dasharray="2,6"/>
+  </g>
+  <circle cx="350" cy="350" r="130" fill="none" stroke="#C9CED6" stroke-width="0.5" stroke-opacity="0.12"/>
+
+  <g stroke="#C9A14A" stroke-width="1.5" opacity="0.5">
+    <line x1="350" y1="60" x2="350" y2="100"/>
+    <line x1="350" y1="600" x2="350" y2="640"/>
+    <line x1="60" y1="350" x2="100" y2="350"/>
+    <line x1="600" y1="350" x2="640" y2="350"/>
+  </g>
+
+  <!-- North - DCF (35%) -->
+  <g>
+    <polygon class="needle-pulse" points="350,90 320,310 350,300 380,310" fill="url(#needle)"/>
+    <text x="350" y="50" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="700" font-size="22" fill="#C9A14A">DCF</text>
+    <text x="350" y="74" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#ECEEF2">35% · $355 млн</text>
+  </g>
+  <!-- East - Multiples (30%) -->
+  <g>
+    <polygon class="needle-pulse" points="610,350 380,330 390,350 380,370" fill="url(#needle)" opacity="0.9"/>
+    <text x="610" y="345" text-anchor="end" font-family="Manrope, sans-serif" font-weight="700" font-size="22" fill="#C9A14A">Multiples</text>
+    <text x="610" y="370" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="13" fill="#ECEEF2">30% · $380 млн</text>
+  </g>
+  <!-- South - Berkus (25%) -->
+  <g>
+    <polygon class="needle-pulse" points="350,610 320,400 350,410 380,400" fill="url(#needle)" opacity="0.85"/>
+    <text x="350" y="660" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="700" font-size="22" fill="#C9A14A">Berkus ×17</text>
+    <text x="350" y="685" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#ECEEF2">25% · $35 млн</text>
+  </g>
+  <!-- West - Asset (10%) -->
+  <g>
+    <polygon class="needle-pulse" points="90,350 320,330 310,350 320,370" fill="url(#needle)" opacity="0.6"/>
+    <text x="90" y="345" font-family="Manrope, sans-serif" font-weight="700" font-size="22" fill="#C9A14A">Asset</text>
+    <text x="90" y="370" font-family="IBM Plex Mono, monospace" font-size="13" fill="#ECEEF2">10% · $20 млн</text>
+  </g>
+
+  <g class="center-pulse">
+    <circle cx="350" cy="350" r="44" fill="#0B1220" stroke="#C9A14A" stroke-width="2"/>
+    <circle cx="350" cy="350" r="56" fill="none" stroke="#C9A14A" stroke-width="0.8" stroke-opacity="0.4" stroke-dasharray="3,3"/>
+  </g>
+  <text x="350" y="345" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="700" font-size="12" fill="#C9A14A">REASONED</text>
+  <text x="350" y="365" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="700" font-size="14" fill="#F2D88A">$100M</text>
+</svg>

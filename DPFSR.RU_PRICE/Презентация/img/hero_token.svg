@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <radialGradient id="goldRad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#F2D88A"/>
+      <stop offset="45%" stop-color="#C9A14A"/>
+      <stop offset="100%" stop-color="#5C4319"/>
+    </radialGradient>
+    <linearGradient id="rim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8E4A8"/>
+      <stop offset="50%" stop-color="#C9A14A"/>
+      <stop offset="100%" stop-color="#5C4319"/>
+    </linearGradient>
+    <linearGradient id="shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F8E4A8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#F8E4A8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#F8E4A8" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .pulse-ring { transform-origin: 300px 300px; animation: ringPulse 4s ease-in-out infinite; }
+      @keyframes ringPulse {
+        0%, 100% { transform: scale(1); opacity: 0.4; }
+        50% { transform: scale(1.06); opacity: 0.85; }
+      }
+      .spin-slow { transform-origin: 300px 300px; animation: spinSlow 22s linear infinite; }
+      @keyframes spinSlow { to { transform: rotate(360deg); } }
+      .spin-rev { transform-origin: 300px 300px; animation: spinRev 28s linear infinite; }
+      @keyframes spinRev { to { transform: rotate(-360deg); } }
+      .spark { animation: sparkPulse 2.2s ease-in-out infinite; transform-origin: center; }
+      .spark:nth-child(2) { animation-delay: 0.5s; }
+      .spark:nth-child(3) { animation-delay: 1.0s; }
+      .spark:nth-child(4) { animation-delay: 1.5s; }
+      @keyframes sparkPulse {
+        0%, 100% { opacity: 0.3; r: 2.5; }
+        50% { opacity: 1; r: 4.5; }
+      }
+      .shimmer-line {
+        animation: shimmerMove 3.6s ease-in-out infinite;
+        transform-origin: 300px 300px;
+      }
+      @keyframes shimmerMove {
+        0% { transform: rotate(-45deg); opacity: 0; }
+        20% { opacity: 0.7; }
+        80% { opacity: 0.7; }
+        100% { transform: rotate(315deg); opacity: 0; }
+      }
+      .letter-r {
+        animation: letterFloat 6s ease-in-out infinite;
+        transform-origin: 300px 290px;
+      }
+      @keyframes letterFloat {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-4px); }
+      }
+    </style>
+  </defs>
+  <circle class="pulse-ring" cx="300" cy="310" r="270" fill="#0B1220" opacity="0.4"/>
+  <circle cx="300" cy="300" r="240" fill="url(#goldRad)" stroke="url(#rim)" stroke-width="6"/>
+  <g class="spin-slow">
+    <circle cx="300" cy="300" r="210" fill="none" stroke="#0B1220" stroke-width="1.5" stroke-opacity="0.3"/>
+  </g>
+  <g class="spin-rev">
+    <circle cx="300" cy="300" r="195" fill="none" stroke="#0B1220" stroke-width="0.5" stroke-opacity="0.4" stroke-dasharray="2,4"/>
+  </g>
+  <g class="shimmer-line">
+    <ellipse cx="300" cy="300" rx="240" ry="40" fill="url(#shimmer)" opacity="0.4"/>
+  </g>
+  <text class="letter-r" x="300" y="290" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-weight="700" font-size="180" fill="#0B1220" letter-spacing="-5">Р</text>
+  <text x="300" y="350" text-anchor="middle" font-family="Manrope, Inter, sans-serif" font-weight="700" font-size="22" fill="#0B1220" letter-spacing="6">ЦПФСР</text>
+  <text x="300" y="380" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="11" fill="#0B1220" letter-spacing="2" opacity="0.7">DIGITAL · FINANCIAL · ASSET</text>
+  <g>
+    <circle class="spark" cx="300" cy="120" r="3" fill="#F2D88A" filter="url(#glow)"/>
+    <circle class="spark" cx="480" cy="300" r="3" fill="#F2D88A" filter="url(#glow)"/>
+    <circle class="spark" cx="300" cy="480" r="3" fill="#F2D88A" filter="url(#glow)"/>
+    <circle class="spark" cx="120" cy="300" r="3" fill="#F2D88A" filter="url(#glow)"/>
+  </g>
+</svg>
