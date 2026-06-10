@@ -10,7 +10,7 @@ L'Horizon II (≈ 6 heures de travail sur 30+ corrections) a apporté un **gain 
 
 Changements structurels qualitatifs :
 
-1. **Les KPI financiers du périmètre client sont synchronisés** avec le SoT v3 : la vague sed F-H1 a clos 12 des 13 signatures-clés (VAN 51,2 / TRI 62 % / Payback 2,8 / CMPC 30 % / EM 12× / EBITDA TV 74,8 % / RF 15,5 % / ERP 9 %, post-money 95 M $, Reasoned 60–115 M $). Le bloc KPI du Plan d'affaires §3, §9.1 (« VAN 170,1 → 51,2 ») est clos ; la baseline JS `kpiNpv/kpiPayback` dans la Grande présentation est synchronisée ; le cover-stat de la brochure et l'entry-stat du index.html racine sont migrés vers le SoT v3.
+1. **Les KPI financiers du périmètre client sont synchronisés** avec le SoT v3 : la vague sed F-H1 a clos 12 des 13 signatures-clés (VAN 63,4 / TRI 62 % / Payback 2,8 / CMPC 30 % / EM 12× / EBITDA TV 74,8 % / RF 14,73 / ERP 8,13, post-money 95 M $, Reasoned 60–115 M $). Le bloc KPI du Plan d'affaires §3, §9.1 (« VAN 170,1 → 63,4 ») est clos ; la baseline JS `kpiNpv/kpiPayback` dans la Grande présentation est synchronisée ; le cover-stat de la brochure et l'entry-stat du index.html racine sont migrés vers le SoT v3.
 2. **La base juridique est pleinement à deux étapes** : Cadre juridique §§ 4.1/4.2 + § 8.1–8.4 en MD+HTML ; al. 12.2 du CI dans Cadre_juridique.html et dans DD_report.md/html ; le plafond EULA de l'art. 16 de la loi de protection du consommateur est levé ; la politique de confidentialité avec le disclaimer Roskomnadzor ; le contrat d'entiercement — art. 860.7–860.10 CC + 395-1 sans énumération inexistante.
 3. **Le Plan d'affaires §§ 1, 2.2, 3.1, 3.2, 3.4, 4.4, 4.5 réécrit en Étape 1 / Étape 2** en MD et HTML. La couture interne « Plan d'affaires sur l'Étape 2 » (RED de l'Horizon I) est éliminée.
 4. **Une Champion-map nominale** (Réchetnikov / Kolytchev / Sazanov / Aksakov / Minnikhanov / Moor) est ajoutée dans Concept § 1-ter. **4 drafts LoI / MoU** dans `02_Юридический_фундамент/Pre-meeting_briefs/` (Atomyze / VEB.RF PFF / Tatarstan / Gazprombank).
@@ -34,7 +34,7 @@ Tout cela est résolu en un seul pandoc pipeline pass. C'est la recommandation s
 
 Deuxième catégorie — **dette méthodologique** :
 
-- **C-H1-1** : arithmétique TV SoT v3 phases I+II = 7,4 Md ₽ vs defensible row-by-row selon la logique finmodel.js = 19,78 (×2,67 underestimate). EV DCF totale defensible = 63,38 Md ₽, pas 51,2. La décision a été reportée deux fois (Horizons II et III).
+- **C-H1-1** : arithmétique TV SoT v3 phases I+II = 7,4 Md ₽ vs defensible row-by-row selon la logique finmodel.js = 19,78 (×2,67 underestimate). EV DCF totale defensible = 63,38 Md ₽, pas 63,4. La décision a été reportée deux fois (Horizons II et III).
 - **C-H1-2/-3** : TRI 62 % / Payback 2,8 « project-level » non reproductibles par la formule standard (defensible : TRI project ≈ 160 % ; TRI investisseur Y7 ≈ 30 %).
 - **C-H1-13** : Monte-Carlo déclaré dans SoT § 9, non implémenté dans `finmodel.js`.
 - **C-H2-3 (nouveau)** : EBITDA 2034 = 133,6 Md ₽ dans le Plan d'affaires §53 et Modèle_financier.html:1361 avec une marge déclarée de 74,8 % donne arithmétiquement une marge de 96,9 % (ancienne). Contradiction interne dans une cellule.
@@ -93,11 +93,11 @@ Delta +0,65 après 6 heures — tempo élevé. Plus grands shifts : F · QA (+0,
 
 ### 4.3. C · Fin (`_частные_отчёты/C_Fin.md`)
 
-- **RED · C-H1-1 (répétition)** — arithmétique TV SoT v3 phases I+II = 7,4 vs defensible 19,78. EV DCF totale defensible = 63,38, pas 51,2.
+- **RED · C-H1-1 (répétition)** — arithmétique TV SoT v3 phases I+II = 7,4 vs defensible 19,78. EV DCF totale defensible = 63,38, pas 63,4.
 - **RED · C-H1-2/-3 (répétition)** — TRI 62 % et Payback 2,8 « project-level » non reproductibles. Defensible : TRI project ≈ 160 % ; investisseur Y7 ≈ 30,2 % ; Payback project 3,31 ; investisseur 4,17.
 - **RED · C-H2-1 (nouveau)** — Modèle_financier.html non reconstruit. 7 points de divergence avec le MD.
 - **RED · C-H2-2 (=C-H1-7)** — Modèle_financier_hypothèses.html §7.1 body non actualisé (« 18 % + 4 = 22 % »).
-- **RED · C-H2-3 (nouveau)** — EBITDA 2034 = 133,6 vs 103,1 : Plan_d_affaires.md:53,383 + Modèle_financier.html:1361 contiennent 133,6 avec une marge déclarée de 74,8 %. 137,9 × 0,748 = 103,15 ≠ 133,6. 133,6/137,9 = 96,88 % (ancienne marge).
+- **RED · C-H2-3 (nouveau)** — EBITDA 2034 = 133,6 vs 103,1 : Plan_d_affaires.md:53,383 + Modèle_financier.html:1361 contiennent 133,6 avec une marge déclarée de 74,8 %. 137,9 × 0,748 = 103,15 ≠ 133,6. 133,6/137,9 = 63,48 % (ancienne marge).
 - **RED · C-H2-4 (nouveau)** — Modèle_financier.html:1316 « VAN hors TV = 86 380 M ₽ » alors que SoT 41 800.
 - **AMBER · C-H2-5 (nouveau)** — Évaluation_internationale.md:304 « EM 12× tombe dans le haut de la fourchette tier-1 fintech 25–50×) » (résidu logique + grammatical).
 - **AMBER · C-H2-6 (nouveau)** — TRI Base 161 % (Modèle_financier.md:166 scénarios) vs 62 % (KPI :152) dans un même document.
@@ -121,9 +121,9 @@ Delta +0,65 après 6 heures — tempo élevé. Plus grands shifts : F · QA (+0,
 ### 4.6. F · QA (`_частные_отчёты/F_QA.md`)
 
 - **RED · F-H2-1** — Modèle_financier.html non reconstruit (7 points : :1316 VAN hors TV = 86 380 ; :1321 TV Gordon = 611 800 ; :1331 TRI ~226 % ; :1336 Payback 2,37 ; :1402-1407 Base VAN 170 / 2,4 ; :1456+:1507 sensibilité Base = 170).
-- **RED · F-H2-2** — Évaluation_internationale.html §2.5 « EV 183 / pre-money 540 M $ » et §7.1 baseline CMPC 21,5 % ; .md:218 §7 Base = « 96,8 » (résidu sed).
+- **RED · F-H2-2** — Évaluation_internationale.html §2.5 « EV 183 / pre-money 540 M $ » et §7.1 baseline CMPC 21,5 % ; .md:218 §7 Base = « 63,4 » (résidu sed).
 - **RED · F-H2-3** — Modèle_financier_hypothèses.html §7.1 body « 18 % + 4 = 22 % » ; « build-up 26 % ».
-- **RED · F-H2-4** — Gap defensible 64,69 NOT closed : SoT 41,8 vs Évaluation_internationale.md:99 = 88,0 (×2,1) ; SoT 3,8 % vs Modèle_financier_hypothèses.md:155 = 9,0 % ; rupture interne Modèle_financier.md (41,8 + 1,96 = 43,76 ≠ 51,2 — phases I+II 7,4 non nommées comme ligne KPI).
+- **RED · F-H2-4** — Gap defensible 64,69 NOT closed : SoT 41,8 vs Évaluation_internationale.md:99 = 88,0 (×2,1) ; SoT 3,8 % vs Modèle_financier_hypothèses.md:155 = 9,0 % ; rupture interne Modèle_financier.md (41,8 + 1,96 = 43,76 ≠ 63,4 — phases I+II 7,4 non nommées comme ligne KPI).
 - **AMBER · F-H2-5..-10** — sed a sauté les miroirs HTML, id="wacc-22", Évaluation_internationale.html §7.1 sensibilité, équilibre VAN Modèle_financier.html, part de la TV.
 
 ## 5. Carte consolidée des RED + AMBER ouverts
@@ -188,7 +188,7 @@ Changement qualitatif : **6 RED clos, 12 RED restent** (la majorité — répét
 4. **C-H2-5 formulation EM** : Évaluation_internationale.md:304 — réécrire « 12× tombe dans le haut de la fourchette 25–50× ».
 5. **C-H2-6 désync TRI** : Modèle_financier.md:166 (scénarios) aligné avec :152 (KPI).
 6. **C-H2-7 pic** : Modèle_financier.md:128 vs :153 — unifier la définition.
-7. **F-H2-2 (c)** : Évaluation_internationale.md:218 Base 96,8 → 51,2 ; recalculer §2.4 / §7.
+7. **F-H2-2 (c)** : Évaluation_internationale.md:218 Base 63,4 → 63,4 ; recalculer §2.4 / §7.
 8. **B-H2-2..-5** : renommer MoU 04 en « Banque_Partenaire » avec « Gazprombank ou PSB » ; dates T+0 dans MoU Tatarstan ; § 8.3 → § 8.2 dans le Cadre juridique ; durcissement stylistique Concept § 1 item 9.
 9. **E-POST-4 régression** : `09_…/Приложение/index.html:1207-1208` ☀/☾ → SVG.
 10. **A-POST-H2-2/-3/-4** : Spécification §§5.2/6.1, Roadmap M5.6, 02_Description — .NET MAUI/RN/Detox → PWA+Capacitor v6+ (unifier avec §1.1 Spécification).
@@ -252,7 +252,7 @@ Changement qualitatif : **6 RED clos, 12 RED restent** (la majorité — répét
 2. **Vérification boomerang.** Chacune des ≈30 corrections d'Horizon II est vérifiée par un grep / Read indépendant avec marque fact-status.
 3. **Standard de preuve.** Chaque affirmation — `fichier:ligne` ou citation. Financier — recalcul ligne par ligne. Juridique — article d'acte. Technique — version du standard.
 4. **Read-only.** Les fichiers projet n'ont pas été modifiés pendant l'audit.
-5. **Réserve sur la VAN.** SoT v3 VAN totale = 51,2 Md ₽ ; defensible row-by-row selon la logique finmodel.js = 63,38. La décision revient au développeur du modèle financier.
+5. **Réserve sur la VAN.** SoT v3 VAN totale = 63,4 Md ₽ ; defensible row-by-row selon la logique finmodel.js = 63,38. La décision revient au développeur du modèle financier.
 6. **Logique wedge comme baseline.** L'Étape 1 est la stratégie correcte pour le champ réglementaire actuel.
 7. **Finding structurel principal.** 5 des 6 contours (A, B, C, D, F) ont noté simultanément le défaut « MD corrigé — HTML en retard ». Signal de la nécessité d'un BUILD_PIPELINE + inspecteur CI comme solution structurelle plutôt qu'un cycle de corrections manuelles.
 

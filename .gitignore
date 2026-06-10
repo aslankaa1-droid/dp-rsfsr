@@ -26,3 +26,7 @@ package-lock.json
 # Build artefacts
 *.log
 *.tmp
+
+# Temp Office locks + one-off helper
+~$*
+_dpfsd_fix_www.ps1

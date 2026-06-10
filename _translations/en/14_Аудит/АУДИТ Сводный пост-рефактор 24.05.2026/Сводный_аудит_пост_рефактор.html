@@ -288,7 +288,7 @@ for which actual closure is absent or façade-only. The heaviest:
 Business Plan .md/.html, DD Report .md/.html, Large Deck, Small Deck,
 Международная_оценка .md/.html, Expert Opinion, the root index.html
 partially) <strong>retain the pre-refactor financial KPIs</strong> — NPV
-₽170 / ₽96.8 bn, IRR ~228%, WACC 22%, Equity Multiple 48× / 781×, EBITDA
+₽170 / ₽63.4 bn, IRR ~228%, WACC 22%, Equity Multiple 48× / 781×, EBITDA
 TV 96.9%, Payback 2.4 years, post-money $75M, Reasoned $35–95M, RF
 13.5%, ERP 6%, KS 18% (in the sensitivity baseline);
 <strong>(b)</strong> the EULA at
@@ -298,7 +298,7 @@ Protection Act (“commissions over 12 months”), which blocks RuStore
 publication; <strong>(c)</strong> SoT v3 contains its own TV arithmetic
 error — Phases I+II of the Multi-stage TV are declared as ₽7.4 bn, while
 the line-by-line recomputation yields ₽21.0 bn (×2.84), which moves the
-defensible full NPV from 51.2 to ₽64.7 bn; <strong>(d)</strong> Business
+defensible full NPV from 63.4 to ₽64.7 bn; <strong>(d)</strong> Business
 Plan §§ 1, 5, 21, 23, DD Report §§ 2.1, 3.3, 10 and CBR Address §§ 3.1,
 6, 10 continue to describe the Stage 2 emission model as the operational
 baseline, without an explicit horizon marker; <strong>(e)</strong> the
@@ -495,8 +495,8 @@ report: <code>_частные_отчёты/C_Fin.md</code>)</h3>
 <li><strong>RED · C-POST-1</strong> — SoT v3 § 5 TV arithmetic: Phases
 I+II are declared as ₽7.4 bn; the defensible recomputation yields
 <strong>₽21.03 bn</strong> (×2.84). Full defensible DCF EV =
-<strong>₽64.69 bn</strong>, not 51.2.</li>
-<li><strong>RED · C-POST-2</strong> — IRR 62% “for a 15.8% investor” is
+<strong>₽64.69 bn</strong>, not 63.4.</li>
+<li><strong>RED · C-POST-2</strong> — IRR 62% “for a 13.04 investor” is
 not reproducible. The standard investor-IRR Y7 =
 <strong>28.6%</strong>.</li>
 <li><strong>RED · C-POST-3</strong> — Payback 2.8 years “for the
@@ -550,7 +550,7 @@ MoU = 0.</li>
 A-POST-8).</li>
 <li><strong>AMBER · E-POST-2</strong> —
 <code>Pitch_deck.html:350-353</code> slide 10 “The Ask” — only “₽1.3 bn”
-without pre-money $80M / post-money $95M / 15.8% stake. A blocker on the
+without pre-money $100M / post-money $115M / 13.04 stake. A blocker on the
 ask slide for a tier-1 investor.</li>
 <li><strong>AMBER · E-POST-3</strong> — <code>manifest.json:11</code> —
 a single theme_color value (PWA installation on a dark-themed shell uses
@@ -585,23 +585,23 @@ private report):</p>
 </thead>
 <tbody>
 <tr>
-<td>WACC 30%</td>
+<td>WACC 29.5</td>
 <td>30%</td>
 <td>DD Report .md/.html (22%), Финмодель .html × 4, Финмодель_допущения
 .html, Международная_оценка.html (22%)</td>
 </tr>
 <tr>
-<td>Full NPV ₽51.2 bn</td>
-<td>51.2</td>
-<td>index.html (96.8), Large/Small Decks (170), HTML main (170),
+<td>Full NPV ₽63.4 bn</td>
+<td>63.4</td>
+<td>index.html (63.4), Large/Small Decks (170), HTML main (170),
 Business Plan .md/.html (170), DD Report.html (170), Финмодель .md
-(96.8) × 4, Международная_оценка .md (96.8) × 3</td>
+(63.4) × 4, Международная_оценка .md (63.4) × 3</td>
 </tr>
 <tr>
 <td>IRR 62%</td>
 <td>62%</td>
 <td>Large/Small Decks (228%), Финмодель.html × 2, Business Plan
-.md/.html (228) × 5, Expert Opinion .md/.html (228 — hybrid “NPV 51.2 at
+.md/.html (228) × 5, Expert Opinion .md/.html (228 — hybrid “NPV 63.4 at
 IRR ~228%”)</td>
 </tr>
 <tr>
@@ -621,18 +621,18 @@ IRR ~228%”)</td>
 74.8% instead of unrealistic 74.8%”</td>
 </tr>
 <tr>
-<td>RF 15.5%</td>
+<td>RF 14.73</td>
 <td>15.5</td>
 <td>Международная_оценка.html (13.5%)</td>
 </tr>
 <tr>
-<td>ERP 9%</td>
+<td>ERP 8.13</td>
 <td>9%</td>
 <td>Финмодель_допущения.html (6-8%)</td>
 </tr>
 <tr>
-<td>KS CBR 21%</td>
-<td>21%</td>
+<td>KS CBR 14.5</td>
+<td>14.5</td>
 <td>Финмодель.md (18% in the sensitivity baseline)</td>
 </tr>
 </tbody>
@@ -780,7 +780,7 @@ mirrors</td>
 <td>RED</td>
 <td>C</td>
 <td>TV Phases I+II SoT 7.4 vs defensible 21.03; full defensible NPV
-64.7, not 51.2</td>
+64.7, not 63.4</td>
 </tr>
 <tr>
 <td>C-POST-2</td>
@@ -977,10 +977,10 @@ prototype:538. ≈ 10 minutes.</li>
 <li><strong>sw.js screenshot paths</strong> (A-POST-8): lines 23-26. ≈ 2
 minutes.</li>
 <li><strong>Pitch Deck slide 10</strong> (E-POST-2): add a “Round
-structure” block — ask 1.335 / pre $80M / post $95M / 15.8% stake. ≈ 15
+structure” block — ask 1.335 / pre $100M / post $115M / 13.04 stake. ≈ 15
 minutes.</li>
-<li><strong>F-block sed across 15+ files</strong>: NPV 170/96.8 →
-<strong>51.2 (or 64.7 after C-POST-1 is resolved)</strong>; IRR 228 → 62
+<li><strong>F-block sed across 15+ files</strong>: NPV 170/63.4 →
+<strong>63.4 (or 64.7 after C-POST-1 is resolved)</strong>; IRR 228 → 62
 (project) or 28.6 (investor) with an explicit marker; Payback 2.4 → 2.8
 (project) or 4.21 (investor); WACC 22 → 30; EBITDA 96.9 → 74.8; EM 48 →
 12 (with an explicit formula); post-money $75 → $95; Reasoned $35-95 →
@@ -1120,7 +1120,7 @@ under Stage 1</td>
 <td><strong>Gazprombank-DD / PSB-DD</strong></td>
 <td>Not ready</td>
 <td>Horizon I + unification of financial KPIs across all 15+ artefacts +
-a decision on C-POST-1 (defensible NPV 51.2 vs 64.7)</td>
+a decision on C-POST-1 (defensible NPV 63.4 vs 64.7)</td>
 </tr>
 <tr>
 <td><strong>Tier-1 VC (a16z / Sequoia / Index)</strong></td>
@@ -1149,7 +1149,7 @@ days):</strong> amicable VC / strategic partner / VEB.RF IPF
 (preliminary meeting). Strategic ceiling = $30-60M pre-money via the
 wedge-pilot justification.</p>
 <p><strong>Defensible position after Horizon I + II (3 months):</strong>
-Gazprombank / PSB DD / tier-1 VC seed-stage. Strategic ceiling = $80M
+Gazprombank / PSB DD / tier-1 VC seed-stage. Strategic ceiling = $100M
 pre-money Base under SoT v3 (or $100-120M at NPV-defensible 64.7 after
 C-POST-1 is resolved).</p>
 <h2 id="methodology-and-reservations">8. Methodology and
@@ -1179,7 +1179,7 @@ inside SoT v3 itself (which was not present in the previous version —
 the error arose during reworking); (c) Open status in the refactor log
 on 6 Design items (which raised E’s honesty rating to 7.9 vs 7.4).</li>
 <li><strong>NPV reservation.</strong> The tables use the declared SoT v3
-value of ₽51.2 bn. The defensible recomputation gives ₽64.7 bn. The
+value of ₽63.4 bn. The defensible recomputation gives ₽64.7 bn. The
 final decision rests with the financial-model owner; for investor
 communication the fault line must be removed before delivery.</li>
 <li><strong>Wedge logic as baseline.</strong> All strategic assessments

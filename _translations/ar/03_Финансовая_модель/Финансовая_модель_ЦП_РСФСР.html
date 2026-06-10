@@ -269,8 +269,7 @@
 بالمليارات ₽. <strong>التاريخ المرجعي:</strong> 24.05.2026 (refactor
 كامل بعد التدقيق الموحَّد؛ Source of Truth وحيد —
 <code>_Мастер/Единые_показатели_v2.md</code>). <strong>المعطيات السوقية
-الثابتة:</strong> سعر بنك روسيا الأساسي 21 %، FX USD/RUB 89.0، ERP RF 9
-%، RF (OFZ 10 سنوات) 15.5 %، هدف التضخم 4 %.</p>
+الثابتة:</strong> سعر بنك روسيا الأساسي 14.5، FX USD/RUB 71.55، ERP RF 8.13، RF (OFZ 10 سنوات) 14.73، هدف التضخم 4 %.</p>
 <p>يُقدَّم الملف كنموذج قابل للقراءة آليًّا بصيغة Markdown مع صيغ صريحة في
 التعليقات. أُجريت جميع الحسابات أدناه يدويًّا بالصيغ ذاتها المُعاد إنتاجها
 في <code>_shared/finmodel.js</code> (النموذج التفاعلي في العرض الكبير).
@@ -637,11 +636,11 @@ DFA)</td>
 </tr>
 <tr>
 <td>السعر الأساسي لبنك روسيا في 24.05.2026</td>
-<td>21.0 %</td>
+<td>14.5</td>
 </tr>
 <tr>
 <td>RF (OFZ 10 سنوات، 24.05.2026)</td>
-<td>15.5 %</td>
+<td>14.73</td>
 </tr>
 <tr>
 <td>ERP RF (Damodaran مايو 2026)</td>
@@ -1190,7 +1189,7 @@ tier-1 (Visa 67 %، بورصة موسكو 75 %، جهات الإيداع 50–65
 <h2 id="الورقة-4.-التقييم-والحساسية-multi-stage">الورقة 4. التقييم
 والحساسية (multi-stage)</h2>
 <h3 id="السيناريو-الأساسي-kpi-متزامن-مع-sot-v3">السيناريو الأساسي — KPI
-(متزامن مع SoT v3)</h3>
+(متزامن مع SoT v4)</h3>
 <table>
 <colgroup>
 <col style="width: 30%" />
@@ -1206,14 +1205,14 @@ tier-1 (Visa 67 %، بورصة موسكو 75 %، جهات الإيداع 50–65
 </thead>
 <tbody>
 <tr>
-<td><strong>NPV @ WACC 30 %، TV multi-stage</strong></td>
+<td><strong>NPV @ WACC 29.5، TV multi-stage</strong></td>
 <td style="text-align: right;"><strong>51 200 مليون ₽</strong></td>
-<td>≈ 51.2 مليار ₽ (DCF EV الكامل = 41.8 + 7.4 + 1.96)</td>
+<td>≈ 63.4 مليار ₽ (DCF EV الكامل = 43.0 + 20.5)</td>
 </tr>
 <tr>
-<td>NPV دون TV (FCF عشر سنوات فقط، WACC 30 %)</td>
+<td>NPV دون TV (FCF عشر سنوات فقط، WACC 29.5)</td>
 <td style="text-align: right;">41 800 مليون ₽</td>
-<td>مجموع FCF المخصومة 2025–2034 = 41.78 مليار ₽</td>
+<td>مجموع FCF المخصومة 2025–2034 = 43.0 مليار ₽</td>
 </tr>
 <tr>
 <td>TV multi-stage — المرحلتان I+II (FCF 2035–2044، مخصوم إلى 2025)</td>
@@ -1223,13 +1222,13 @@ tier-1 (Visa 67 %، بورصة موسكو 75 %، جهات الإيداع 50–65
 <tr>
 <td>TV multi-stage — perpetuity (FCF 2045+، مخصوم إلى 2025)</td>
 <td style="text-align: right;">1 960 مليون ₽</td>
-<td>g = 2 %، EBITDA 60 %؛ الحصة من NPV الكلي = 3.8 % (SoT v3 § 5)</td>
+<td>g = 2 %، EBITDA 60 %؛ الحصة من NPV الكلي = ~32% (SoT v4 § 5)</td>
 </tr>
 <tr>
 <td><strong>IRR على مستوى المشروع</strong></td>
 <td style="text-align: right;"><strong>~62 %</strong> (project على
 FCF+TV)</td>
-<td>Investor-level Y7 عند حصة 15.8 % ≈ 28.6 %</td>
+<td>Investor-level Y7 عند حصة 13.04 ≈ 28.6 %</td>
 </tr>
 <tr>
 <td><strong>Payback على مستوى المشروع</strong></td>
@@ -1247,7 +1246,7 @@ FCF+TV)</td>
 <td style="text-align: right;"><strong>12×</strong> (نطاق مرجعي قابل
 للدفاع 8–12×)</td>
 <td>exit-on-multiple بأفق المرحلة 2 + Series B. الأساس 6.06× عند حصة
-15.8 % وNPV 51.2</td>
+13.04 وNPV 63.4</td>
 </tr>
 <tr>
 <td>إيراد السنة 5 (2029)</td>
@@ -1269,10 +1268,10 @@ FCF+TV)</td>
 <p><strong>Equity Multiple 12× (exit-on-multiple)</strong> — مرجعية عُليا
 قابلة للدفاع على مسار Series B (8.77×) + أفق المرحلة 2 (توسّع التفويض
 2029+). القيمة الأساسية exit-on-multiple في المرحلة 1 عند حصة مستثمر
-15.8 % وNPV كلية 51.2 تساوي 6.06×. مدعومة بالتوسع السريع 2028–2030
+13.04 وNPV كلية 63.4 تساوي 6.06×. مدعومة بالتوسع السريع 2028–2030
 والانتقال إلى mandate-expansion للمرحلة 2.</p>
 <h3 id="السيناريوهات-متزامنة-مع-sot-v3-8-أوزان-305515">السيناريوهات
-(متزامنة مع SoT v3 § 8، أوزان 30/55/15)</h3>
+(متزامنة مع SoT v4 § 8، أوزان 30/55/15)</h3>
 <table>
 <colgroup>
 <col style="width: 13%" />
@@ -1286,7 +1285,7 @@ FCF+TV)</td>
 <tr>
 <th>السيناريو</th>
 <th style="text-align: right;">Pre-money</th>
-<th style="text-align: right;">NPV الكلي (WACC 30 %)</th>
+<th style="text-align: right;">NPV الكلي (WACC 29.5)</th>
 <th style="text-align: right;">IRR على مستوى المشروع</th>
 <th style="text-align: right;">Payback على مستوى المشروع</th>
 <th style="text-align: right;">الاحتمال</th>
@@ -1304,7 +1303,7 @@ FCF+TV)</td>
 <tr>
 <td><strong>Base</strong> (wedge-pilot 2026–2028، حصة 18 %)</td>
 <td style="text-align: right;">80 مليون $</td>
-<td style="text-align: right;"><strong>51.2 مليار ₽</strong></td>
+<td style="text-align: right;"><strong>63.4 مليار ₽</strong></td>
 <td style="text-align: right;">161 %</td>
 <td style="text-align: right;">3.24 سنة</td>
 <td style="text-align: right;">55 %</td>
@@ -1328,15 +1327,15 @@ FCF+TV)</td>
 </tbody>
 </table>
 <blockquote>
-<p><strong>KPI على مستوى المستثمر (لمستثمر Seed بحصة 15.8 %، خروج
+<p><strong>KPI على مستوى المستثمر (لمستثمر Seed بحصة 13.04، خروج
 Y7):</strong> IRR Base ≈ 28.6 %؛ Payback عبر cash distribution ≈ 4.21
 سنة. project-level مقابل investor-level — محوران مختلفان: الأول يجيب «كم
 يساوي المشروع كاملًا»، والثاني «كم يستردّ مستثمر Seed خلال أفقه».</p>
 </blockquote>
-<h3 id="الحساسيات-متزامنة-مع-sot-v3-9">الحساسيات (متزامنة مع SoT v3 §
+<h3 id="الحساسيات-متزامنة-مع-sot-v3-9">الحساسيات (متزامنة مع SoT v4 §
 9)</h3>
 <h4 id="npv-مليار-wacc-حصة-السوق-الأساس-ks-21-share-1.0-21">NPV (مليار
-₽): WACC × حصة السوق (الأساس KS = 21 %، share ×1.0 = 21 %)</h4>
+₽): WACC × حصة السوق (الأساس KS = 14.5، share ×1.0 = 14.5)</h4>
 <table>
 <colgroup>
 <col style="width: 13%" />
@@ -1351,7 +1350,7 @@ Y7):</strong> IRR Base ≈ 28.6 %؛ Payback عبر cash distribution ≈ 4.21
 <th>WACC  Share</th>
 <th style="text-align: right;">×0.5 (10.5 %)</th>
 <th style="text-align: right;">×0.75 (15.75 %)</th>
-<th style="text-align: right;">×1.0 (21 %)</th>
+<th style="text-align: right;">×1.0 (14.5)</th>
 <th style="text-align: right;">×1.25 (26.25 %)</th>
 <th style="text-align: right;">×1.5 (31.5 %)</th>
 </tr>
@@ -1377,7 +1376,7 @@ Y7):</strong> IRR Base ≈ 28.6 %؛ Payback عبر cash distribution ≈ 4.21
 <td><strong>30 % (base)</strong></td>
 <td style="text-align: right;">25</td>
 <td style="text-align: right;">35</td>
-<td style="text-align: right;"><strong>51.2</strong></td>
+<td style="text-align: right;"><strong>63.4</strong></td>
 <td style="text-align: right;">66</td>
 <td style="text-align: right;">81</td>
 </tr>
@@ -1424,7 +1423,7 @@ Y7):</strong> IRR Base ≈ 28.6 %؛ Payback عبر cash distribution ≈ 4.21
 <tr>
 <td><strong>0 (base)</strong></td>
 <td style="text-align: right;">57</td>
-<td style="text-align: right;"><strong>51.2</strong></td>
+<td style="text-align: right;"><strong>63.4</strong></td>
 <td style="text-align: right;">46</td>
 <td style="text-align: right;">41</td>
 <td style="text-align: right;">37</td>
@@ -1458,7 +1457,7 @@ Y7):</strong> IRR Base ≈ 28.6 %؛ Payback عبر cash distribution ≈ 4.21
 <td style="text-align: right;">± 20</td>
 </tr>
 <tr>
-<td>WACC (30 % ± 3 نقاط مئوية)</td>
+<td>WACC (29.5 ± 3 نقاط مئوية)</td>
 <td style="text-align: right;">± 12</td>
 </tr>
 <tr>
@@ -1536,7 +1535,7 @@ Y7):</strong> IRR Base ≈ 28.6 %؛ Payback عبر cash distribution ≈ 4.21
 </ul>
 <h4 id="تحليل-break-even">تحليل break-even</h4>
 <ul>
-<li>الإيراد عند NPV = 0 بـ WACC 30 %: 22.8 مليار ₽ في 2030 (مقابل الخطة
+<li>الإيراد عند NPV = 0 بـ WACC 29.5: 22.8 مليار ₽ في 2030 (مقابل الخطة
 65 مليار ₽) — هامش أمان كبير.</li>
 </ul>
 <hr />
@@ -1552,7 +1551,7 @@ finmodel.js التفاعلي</h2>
 التدقيق)</h2>
 <ol type="1">
 <li><strong>WACC</strong> = build-up دون double-CRP في RUB-denominated
-RF؛ β = 1.15 (Damodaran fintech 2026)؛ ERP RF 9 % (Damodaran مايو 2026).
+RF؛ β = 1.15 (Damodaran fintech 2026)؛ ERP RF 8.13 (Damodaran مايو 2026).
 30 % كحدّ أدنى قابل للدفاع.</li>
 <li><strong>Multi-stage TV</strong> حلّ محل Gordon — انخفضت حصة TV من NPV
 من 49 % إلى 9 %.</li>
@@ -1564,8 +1563,8 @@ RF؛ β = 1.15 (Damodaran fintech 2026)؛ ERP RF 9 % (Damodaran مايو 2026).
 متوقعة 88 مليون دولار.</li>
 <li><strong>الحساسيات</strong> موسَّعة: OpEx × الموعد، هامش EBITDA TV × g،
 مونتي كارلو، إجهاد السيولة، break-even.</li>
-<li><strong>FX</strong> مُثبَّت: 89.0 ₽/$ في 24.05.2026.</li>
-<li><strong>سعر بنك روسيا الأساسي</strong> مُثبَّت: 21.0 % في
+<li><strong>FX</strong> مُثبَّت: 71.55 ₽/$ في 24.05.2026.</li>
+<li><strong>سعر بنك روسيا الأساسي</strong> مُثبَّت: 14.5 في
 24.05.2026.</li>
 </ol>
 <hr />

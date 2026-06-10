@@ -266,34 +266,34 @@
 <hr />
 <h2 id="c4-level-1-system-context">1. C4 — Level 1: System Context</h2>
 <pre class="mermaid"><code>graph TB
-    subgraph "Окружение"
-        OWN["Залогодатель<br/>физлицо / юрлицо / госпредприятие / НКО"]
-        VAL["Оценочная организация<br/>(партнёр платформы)"]
-        INS["Страховая организация<br/>(партнёр платформы)"]
-        CB["Центральный банк<br/>Российской Федерации"]
-        FK["Федеральное казначейство"]
-        FR["Росфинмониторинг"]
-        ROSR["Росреестр (ЕГРН)"]
-        GOSUS["Госуслуги (ЕСИА / ЕБС)"]
-        SMEV["СМЭВ 3"]
-        NPRA["Государственный заказчик<br/>(министерства, ведомства)"]
-        FSB["ФСТЭК / ФСБ / НКЦКИ<br/>(надзор за КИИ)"]
+    subgraph &quot;Окружение&quot;
+        OWN[&quot;Залогодатель&lt;br/&gt;физлицо / юрлицо / госпредприятие / НКО&quot;]
+        VAL[&quot;Оценочная организация&lt;br/&gt;(партнёр платформы)&quot;]
+        INS[&quot;Страховая организация&lt;br/&gt;(партнёр платформы)&quot;]
+        CB[&quot;Центральный банк&lt;br/&gt;Российской Федерации&quot;]
+        FK[&quot;Федеральное казначейство&quot;]
+        FR[&quot;Росфинмониторинг&quot;]
+        ROSR[&quot;Росреестр (ЕГРН)&quot;]
+        GOSUS[&quot;Госуслуги (ЕСИА / ЕБС)&quot;]
+        SMEV[&quot;СМЭВ 3&quot;]
+        NPRA[&quot;Государственный заказчик&lt;br/&gt;(министерства, ведомства)&quot;]
+        FSB[&quot;ФСТЭК / ФСБ / НКЦКИ&lt;br/&gt;(надзор за КИИ)&quot;]
     end
 
-    RSFSR["**ЦП РСФСР**<br/>Платформа-оператор<br/>выпуска ЦФА"]
+    RSFSR[&quot;**ЦП РСФСР**&lt;br/&gt;Платформа-оператор&lt;br/&gt;выпуска ЦФА&quot;]
 
-    OWN -->|подача актива| RSFSR
-    RSFSR -->|оценка| VAL
-    VAL -->|результат| RSFSR
-    RSFSR -->|страхование| INS
-    RSFSR <-->|ЦФА / реестр| CB
-    CB <-->|Целевое фондирование / эскроу| FK
-    FK -->|финансирование| NPRA
-    RSFSR -->|отчётность 115-ФЗ| FR
-    RSFSR <-->|обременения| ROSR
-    RSFSR <-->|идентификация| GOSUS
-    RSFSR -->|межведомственный обмен| SMEV
-    RSFSR <-->|надзор КИИ| FSB</code></pre>
+    OWN --&gt;|подача актива| RSFSR
+    RSFSR --&gt;|оценка| VAL
+    VAL --&gt;|результат| RSFSR
+    RSFSR --&gt;|страхование| INS
+    RSFSR &lt;--&gt;|ЦФА / реестр| CB
+    CB &lt;--&gt;|Целевое фондирование / эскроу| FK
+    FK --&gt;|финансирование| NPRA
+    RSFSR --&gt;|отчётность 115-ФЗ| FR
+    RSFSR &lt;--&gt;|обременения| ROSR
+    RSFSR &lt;--&gt;|идентификация| GOSUS
+    RSFSR --&gt;|межведомственный обмен| SMEV
+    RSFSR &lt;--&gt;|надзор КИИ| FSB</code></pre>
 <h3 id="описание">Описание</h3>
 <p>ЦП РСФСР — центральная платформа, соединяющая четыре типа
 стейкхолдеров: - <strong>Собственники активов</strong> — физические и
@@ -305,90 +305,90 @@
 <hr />
 <h2 id="c4-level-2-containers">2. C4 — Level 2: Containers</h2>
 <pre class="mermaid"><code>graph LR
-    subgraph "Канал собственника"
-        WEB["Веб-портал / PWA<br/>(Vanilla JS + ГОСТ TLS)"]
-        IOS["iOS App<br/>(Capacitor wrapper + WebView)"]
-        AND["Android App<br/>(Capacitor wrapper + WebView)"]
-        WIN["Windows App<br/>(PWA через WebView2)"]
+    subgraph &quot;Канал собственника&quot;
+        WEB[&quot;Веб-портал / PWA&lt;br/&gt;(Vanilla JS + ГОСТ TLS)&quot;]
+        IOS[&quot;iOS App&lt;br/&gt;(Capacitor wrapper + WebView)&quot;]
+        AND[&quot;Android App&lt;br/&gt;(Capacitor wrapper + WebView)&quot;]
+        WIN[&quot;Windows App&lt;br/&gt;(PWA через WebView2)&quot;]
     end
 
-    subgraph "Edge"
-        WAF["WAF<br/>PT Application Firewall"]
-        APIGW["API Gateway<br/>отеч. NGFW + GW"]
+    subgraph &quot;Edge&quot;
+        WAF[&quot;WAF&lt;br/&gt;PT Application Firewall&quot;]
+        APIGW[&quot;API Gateway&lt;br/&gt;отеч. NGFW + GW&quot;]
     end
 
-    subgraph "Сервисы платформы"
-        AUTH["Auth Service<br/>(ЕСИА / ЕБС)"]
-        KYC["KYC / AML Service"]
-        CAT["Catalog Service<br/>(активы)"]
-        VAL["Valuation Service"]
-        INS["Insurance Service"]
-        CFA["CFA Issuer Service"]
-        SC["Smart Contract Engine"]
-        DLT["DLT Adapter"]
-        ESCROW["Escrow Adapter<br/>(к ЦБ РФ)"]
-        TREAS["Treasury Adapter"]
-        REP["Reporting Service"]
-        NOT["Notification Service"]
-        ADM["Admin Service"]
+    subgraph &quot;Сервисы платформы&quot;
+        AUTH[&quot;Auth Service&lt;br/&gt;(ЕСИА / ЕБС)&quot;]
+        KYC[&quot;KYC / AML Service&quot;]
+        CAT[&quot;Catalog Service&lt;br/&gt;(активы)&quot;]
+        VAL[&quot;Valuation Service&quot;]
+        INS[&quot;Insurance Service&quot;]
+        CFA[&quot;CFA Issuer Service&quot;]
+        SC[&quot;Smart Contract Engine&quot;]
+        DLT[&quot;DLT Adapter&quot;]
+        ESCROW[&quot;Escrow Adapter&lt;br/&gt;(к ЦБ РФ)&quot;]
+        TREAS[&quot;Treasury Adapter&quot;]
+        REP[&quot;Reporting Service&quot;]
+        NOT[&quot;Notification Service&quot;]
+        ADM[&quot;Admin Service&quot;]
     end
 
-    subgraph "Данные"
-        PG["Postgres Pro<br/>(основная)"]
-        REG["DLT Registry<br/>(Мастерчейн)"]
-        S3["S3-Object Storage<br/>(документы)"]
-        REDIS["In-memory Cache"]
-        KAFKA["Kafka Broker"]
+    subgraph &quot;Данные&quot;
+        PG[&quot;Postgres Pro&lt;br/&gt;(основная)&quot;]
+        REG[&quot;DLT Registry&lt;br/&gt;(Мастерчейн)&quot;]
+        S3[&quot;S3-Object Storage&lt;br/&gt;(документы)&quot;]
+        REDIS[&quot;In-memory Cache&quot;]
+        KAFKA[&quot;Kafka Broker&quot;]
     end
 
-    subgraph "Внешние ГИС"
-        ESIA["ЕСИА / ЕБС"]
-        ROSR["ЕГРН"]
-        CBROS["ЦБ РФ"]
-        FKAZ["Фед. казначейство"]
-        FMON["Росфинмониторинг"]
-        FNS["ФНС"]
+    subgraph &quot;Внешние ГИС&quot;
+        ESIA[&quot;ЕСИА / ЕБС&quot;]
+        ROSR[&quot;ЕГРН&quot;]
+        CBROS[&quot;ЦБ РФ&quot;]
+        FKAZ[&quot;Фед. казначейство&quot;]
+        FMON[&quot;Росфинмониторинг&quot;]
+        FNS[&quot;ФНС&quot;]
     end
 
-    WEB --> WAF
-    IOS --> WAF
-    AND --> WAF
-    WIN --> WAF
-    WAF --> APIGW
+    WEB --&gt; WAF
+    IOS --&gt; WAF
+    AND --&gt; WAF
+    WIN --&gt; WAF
+    WAF --&gt; APIGW
 
-    APIGW --> AUTH
-    APIGW --> CAT
-    APIGW --> VAL
-    APIGW --> CFA
-    APIGW --> NOT
-    APIGW --> ADM
+    APIGW --&gt; AUTH
+    APIGW --&gt; CAT
+    APIGW --&gt; VAL
+    APIGW --&gt; CFA
+    APIGW --&gt; NOT
+    APIGW --&gt; ADM
 
-    AUTH --> ESIA
-    KYC --> ESIA
-    CAT --> ROSR
-    VAL --> KAFKA
-    INS --> KAFKA
-    CFA --> SC
-    CFA --> KAFKA
-    SC --> DLT
-    DLT --> REG
-    DLT --> ESCROW
-    ESCROW --> CBROS
-    ESCROW --> TREAS
-    TREAS --> FKAZ
-    REP --> FMON
-    REP --> FNS
-    REP --> CBROS
+    AUTH --&gt; ESIA
+    KYC --&gt; ESIA
+    CAT --&gt; ROSR
+    VAL --&gt; KAFKA
+    INS --&gt; KAFKA
+    CFA --&gt; SC
+    CFA --&gt; KAFKA
+    SC --&gt; DLT
+    DLT --&gt; REG
+    DLT --&gt; ESCROW
+    ESCROW --&gt; CBROS
+    ESCROW --&gt; TREAS
+    TREAS --&gt; FKAZ
+    REP --&gt; FMON
+    REP --&gt; FNS
+    REP --&gt; CBROS
 
-    AUTH --> PG
-    KYC --> PG
-    CAT --> PG
-    VAL --> PG
-    INS --> PG
-    CFA --> PG
-    CAT --> S3
-    NOT --> KAFKA
-    AUTH --> REDIS</code></pre>
+    AUTH --&gt; PG
+    KYC --&gt; PG
+    CAT --&gt; PG
+    VAL --&gt; PG
+    INS --&gt; PG
+    CFA --&gt; PG
+    CAT --&gt; S3
+    NOT --&gt; KAFKA
+    AUTH --&gt; REDIS</code></pre>
 <h3 id="описание-1">Описание</h3>
 <p>Платформа состоит из трёх основных слоёв: 1. <strong>Каналы</strong>
 — веб и мобильные приложения залогодателя, плюс кабинеты партнёров. 2.
@@ -399,92 +399,92 @@ DLT-реестр, кеш, брокер сообщений, внешние ГИС
 <h2 id="c4-level-3-components-cfa-issuer-service">3. C4 — Level 3:
 Components (CFA Issuer Service)</h2>
 <pre class="mermaid"><code>graph TB
-    subgraph "CFA Issuer Service"
-        VAL["CFA Validator<br/>(проверка условий)"]
-        MIN["CFA Minter<br/>(создание токена)"]
-        SUBM["DLT Submitter<br/>(публикация в реестр)"]
-        SIGN["UKE Signer<br/>(ГОСТ 34.10)"]
-        EVT["Event Publisher<br/>(Kafka)"]
-        REP["Reporter<br/>(статусы, отчёты)"]
+    subgraph &quot;CFA Issuer Service&quot;
+        VAL[&quot;CFA Validator&lt;br/&gt;(проверка условий)&quot;]
+        MIN[&quot;CFA Minter&lt;br/&gt;(создание токена)&quot;]
+        SUBM[&quot;DLT Submitter&lt;br/&gt;(публикация в реестр)&quot;]
+        SIGN[&quot;UKE Signer&lt;br/&gt;(ГОСТ 34.10)&quot;]
+        EVT[&quot;Event Publisher&lt;br/&gt;(Kafka)&quot;]
+        REP[&quot;Reporter&lt;br/&gt;(статусы, отчёты)&quot;]
     end
 
-    INPUT["Подписанный смарт-контракт"]
-    DLT["DLT Registry"]
-    KAFKA["Kafka"]
-    CB["ЦБ РФ"]
+    INPUT[&quot;Подписанный смарт-контракт&quot;]
+    DLT[&quot;DLT Registry&quot;]
+    KAFKA[&quot;Kafka&quot;]
+    CB[&quot;ЦБ РФ&quot;]
 
-    INPUT --> VAL
-    VAL --> MIN
-    MIN --> SIGN
-    SIGN --> SUBM
-    SUBM --> DLT
-    SUBM --> EVT
-    EVT --> KAFKA
-    EVT --> REP
-    REP --> CB</code></pre>
+    INPUT --&gt; VAL
+    VAL --&gt; MIN
+    MIN --&gt; SIGN
+    SIGN --&gt; SUBM
+    SUBM --&gt; DLT
+    SUBM --&gt; EVT
+    EVT --&gt; KAFKA
+    EVT --&gt; REP
+    REP --&gt; CB</code></pre>
 <hr />
 <h2 id="c4-level-3-components-smart-contract-engine">4. C4 — Level 3:
 Components (Smart Contract Engine)</h2>
 <pre class="mermaid"><code>graph LR
-    subgraph "Smart Contract Engine"
-        TPL["Template Library"]
-        BUILDER["SC Builder"]
-        VAL["Conditions Validator"]
-        EXEC["Execution Runtime"]
-        TRIG["Event Trigger"]
-        AUD["Audit Logger"]
+    subgraph &quot;Smart Contract Engine&quot;
+        TPL[&quot;Template Library&quot;]
+        BUILDER[&quot;SC Builder&quot;]
+        VAL[&quot;Conditions Validator&quot;]
+        EXEC[&quot;Execution Runtime&quot;]
+        TRIG[&quot;Event Trigger&quot;]
+        AUD[&quot;Audit Logger&quot;]
     end
 
-    USR["Залогодатель"]
-    DLT["DLT Registry"]
-    KAFKA["Kafka"]
+    USR[&quot;Залогодатель&quot;]
+    DLT[&quot;DLT Registry&quot;]
+    KAFKA[&quot;Kafka&quot;]
 
-    USR --> BUILDER
-    TPL --> BUILDER
-    BUILDER --> VAL
-    VAL --> EXEC
-    EXEC --> TRIG
-    TRIG --> KAFKA
-    EXEC --> AUD
-    AUD --> DLT</code></pre>
+    USR --&gt; BUILDER
+    TPL --&gt; BUILDER
+    BUILDER --&gt; VAL
+    VAL --&gt; EXEC
+    EXEC --&gt; TRIG
+    TRIG --&gt; KAFKA
+    EXEC --&gt; AUD
+    AUD --&gt; DLT</code></pre>
 <hr />
 <h2 id="deployment-diagram-упрощённая">5. Deployment Diagram
 (упрощённая)</h2>
 <pre class="mermaid"><code>graph TB
-    subgraph "ЦОД-1 (Центральный ФО)"
-        K8S1["k8s cluster #1"]
-        PG1["Postgres Pro #1"]
-        DLT1["DLT Node #1"]
-        HSM1["HSM #1"]
+    subgraph &quot;ЦОД-1 (Центральный ФО)&quot;
+        K8S1[&quot;k8s cluster #1&quot;]
+        PG1[&quot;Postgres Pro #1&quot;]
+        DLT1[&quot;DLT Node #1&quot;]
+        HSM1[&quot;HSM #1&quot;]
     end
-    subgraph "ЦОД-2 (Уральский ФО)"
-        K8S2["k8s cluster #2"]
-        PG2["Postgres Pro #2"]
-        DLT2["DLT Node #2"]
-        HSM2["HSM #2"]
+    subgraph &quot;ЦОД-2 (Уральский ФО)&quot;
+        K8S2[&quot;k8s cluster #2&quot;]
+        PG2[&quot;Postgres Pro #2&quot;]
+        DLT2[&quot;DLT Node #2&quot;]
+        HSM2[&quot;HSM #2&quot;]
     end
-    subgraph "ЦОД-3 (Сибирский ФО)"
-        K8S3["k8s cluster #3"]
-        PG3["Postgres Pro #3"]
-        DLT3["DLT Node #3"]
-        HSM3["HSM #3"]
+    subgraph &quot;ЦОД-3 (Сибирский ФО)&quot;
+        K8S3[&quot;k8s cluster #3&quot;]
+        PG3[&quot;Postgres Pro #3&quot;]
+        DLT3[&quot;DLT Node #3&quot;]
+        HSM3[&quot;HSM #3&quot;]
     end
-    subgraph "DR ЦОД (резервный)"
-        K8S4["k8s cluster (cold)"]
-        BACK["Backup storage"]
+    subgraph &quot;DR ЦОД (резервный)&quot;
+        K8S4[&quot;k8s cluster (cold)&quot;]
+        BACK[&quot;Backup storage&quot;]
     end
 
-    K8S1 <--> K8S2
-    K8S2 <--> K8S3
-    K8S1 <--> K8S3
-    PG1 <-->|sync repl| PG2
-    PG2 <-->|sync repl| PG3
-    DLT1 <-->|consensus| DLT2
-    DLT2 <-->|consensus| DLT3
-    DLT1 <-->|consensus| DLT3
-    BACK <-- K8S1
-    BACK <-- K8S2
-    BACK <-- K8S3</code></pre>
+    K8S1 &lt;--&gt; K8S2
+    K8S2 &lt;--&gt; K8S3
+    K8S1 &lt;--&gt; K8S3
+    PG1 &lt;--&gt;|sync repl| PG2
+    PG2 &lt;--&gt;|sync repl| PG3
+    DLT1 &lt;--&gt;|consensus| DLT2
+    DLT2 &lt;--&gt;|consensus| DLT3
+    DLT1 &lt;--&gt;|consensus| DLT3
+    BACK &lt;-- K8S1
+    BACK &lt;-- K8S2
+    BACK &lt;-- K8S3</code></pre>
 <h3 id="описание-2">Описание</h3>
 <ul>
 <li>Active-active-active топология по 3 ЦОД, расположенных в разных
@@ -509,36 +509,36 @@ Components (Smart Contract Engine)</h2>
     participant CB as ЦБ РФ
     participant FK as Фед. казначейство
 
-    U->>APP: Регистрация
-    APP->>API: AuthN (ЕСИА)
-    API->>KYC: проверка 115-ФЗ
-    KYC-->>API: OK
-    U->>APP: Подача актива
-    APP->>API: createAsset
-    API->>CAT: createAsset
-    CAT->>ROSR: getAssetInfo
-    ROSR-->>CAT: данные ЕГРН
-    CAT-->>API: assetId
-    U->>APP: Запросить оценку
-    APP->>API: requestValuation
-    API->>VAL: createValuationOrder
-    VAL-->>API: pending
-    Note over VAL: Оценщик-партнёр<br/>выполняет оценку
-    VAL-->>API: valuationDone
-    U->>APP: Подписать смарт-контракт
-    APP->>API: signContract (УКЭП)
-    API->>SC: build & sign
-    SC->>CFA: requestIssue
-    CFA->>DLT: mint(cfaId)
-    DLT-->>CFA: OK
-    CFA->>CB: transferToCB
-    CB-->>CFA: receipt
-    CB->>FK: emission
-    FK-->>CB: confirmed
-    CB-->>CFA: ACTIVE
-    CFA-->>API: cfaId ACTIVE
-    API-->>APP: success
-    APP-->>U: ЦФА выпущен</code></pre>
+    U-&gt;&gt;APP: Регистрация
+    APP-&gt;&gt;API: AuthN (ЕСИА)
+    API-&gt;&gt;KYC: проверка 115-ФЗ
+    KYC--&gt;&gt;API: OK
+    U-&gt;&gt;APP: Подача актива
+    APP-&gt;&gt;API: createAsset
+    API-&gt;&gt;CAT: createAsset
+    CAT-&gt;&gt;ROSR: getAssetInfo
+    ROSR--&gt;&gt;CAT: данные ЕГРН
+    CAT--&gt;&gt;API: assetId
+    U-&gt;&gt;APP: Запросить оценку
+    APP-&gt;&gt;API: requestValuation
+    API-&gt;&gt;VAL: createValuationOrder
+    VAL--&gt;&gt;API: pending
+    Note over VAL: Оценщик-партнёр&lt;br/&gt;выполняет оценку
+    VAL--&gt;&gt;API: valuationDone
+    U-&gt;&gt;APP: Подписать смарт-контракт
+    APP-&gt;&gt;API: signContract (УКЭП)
+    API-&gt;&gt;SC: build &amp; sign
+    SC-&gt;&gt;CFA: requestIssue
+    CFA-&gt;&gt;DLT: mint(cfaId)
+    DLT--&gt;&gt;CFA: OK
+    CFA-&gt;&gt;CB: transferToCB
+    CB--&gt;&gt;CFA: receipt
+    CB-&gt;&gt;FK: emission
+    FK--&gt;&gt;CB: confirmed
+    CB--&gt;&gt;CFA: ACTIVE
+    CFA--&gt;&gt;API: cfaId ACTIVE
+    API--&gt;&gt;APP: success
+    APP--&gt;&gt;U: ЦФА выпущен</code></pre>
 <hr />
 <h2 id="sequence-мена-цфа">7. Sequence — мена ЦФА</h2>
 <pre class="mermaid"><code>sequenceDiagram
@@ -550,19 +550,19 @@ Components (Smart Contract Engine)</h2>
     participant CB as ЦБ РФ
     participant OWN as Залогодатель
 
-    NPRA->>FK: акт ввода объекта
-    FK->>ROSR: регистрация ПС
-    ROSR-->>FK: свидетельство
-    FK->>CFA: запрос на выпуск нового ЦФА
-    CFA->>DLT: mint(cfaIdNew, оценка_новая)
-    DLT-->>CFA: OK
-    CFA->>CB: запрос на мену старого ЦФА собственника на новый
-    CB-->>CFA: подтверждено
-    DLT->>DLT: status MENA_DONE
-    CFA->>ROSR: снять обременение по старому
-    ROSR-->>CFA: OK
-    CFA->>OWN: вознаграждение
-    OWN-->>CFA: ACK</code></pre>
+    NPRA-&gt;&gt;FK: акт ввода объекта
+    FK-&gt;&gt;ROSR: регистрация ПС
+    ROSR--&gt;&gt;FK: свидетельство
+    FK-&gt;&gt;CFA: запрос на выпуск нового ЦФА
+    CFA-&gt;&gt;DLT: mint(cfaIdNew, оценка_новая)
+    DLT--&gt;&gt;CFA: OK
+    CFA-&gt;&gt;CB: запрос на мену старого ЦФА собственника на новый
+    CB--&gt;&gt;CFA: подтверждено
+    DLT-&gt;&gt;DLT: status MENA_DONE
+    CFA-&gt;&gt;ROSR: снять обременение по старому
+    ROSR--&gt;&gt;CFA: OK
+    CFA-&gt;&gt;OWN: вознаграждение
+    OWN--&gt;&gt;CFA: ACK</code></pre>
 <hr />
 <h2 id="замечания">8. Замечания</h2>
 <ul>
@@ -602,6 +602,5 @@ Components (Smart Contract Engine)</h2>
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 
-<script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"; mermaid.initialize({startOnLoad:true, theme:"default"});</script>
 </body>
 </html>

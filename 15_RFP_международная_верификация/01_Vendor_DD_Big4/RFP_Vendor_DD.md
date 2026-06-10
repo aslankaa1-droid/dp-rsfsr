@@ -10,7 +10,7 @@
 
 ## 1. Цель Engagement
 
-Получение независимого vendor due diligence заключения tier-1 уровня (Big-4) по проекту ЦП РСФСР с целью обеспечения инвестпривлекательности перед стратегическим Seed-раундом $15M (Pre-money $80M, Post-money $95M, доля инвестора 15,8%) и подготовки к Series A.
+Получение независимого vendor due diligence заключения tier-1 уровня (Big-4) по проекту ЦП РСФСР с целью обеспечения инвестпривлекательности перед стратегическим Seed-раундом $15M (Pre-money $100M, Post-money $115M, доля инвестора 13,04%) и подготовки к Series A.
 
 Заключение должно отвечать стандарту инвестиционных меморандумов tier-1 PE/VC сделок и быть приемлемым для следующих категорий участников:
 - Институциональные инвесторы РФ (НПФ, страховые, частные банки)
@@ -23,8 +23,8 @@
 ### 2.1. Financial Due Diligence
 
 - **Quality of Earnings (QoE):** анализ финансовой модели на горизонт 2025–2034 + multi-stage TV до 2045+. Identification of normalizations, one-offs, working capital adjustments.
-- **NPV / IRR / Payback verification:** независимый перерасчёт всех ключевых показателей (NPV полная 51,2 млрд ₽; IRR project-level 62%; Payback 2,8 года; EM 12×) на основе исходной финмодели в `03_Финансовая_модель/`.
-- **WACC validation:** проверка build-up структуры (RF 15,5% + ERP×β 10,35% + Stage premium 1,5% + Liquidity premium 2,5% = 30%) против Damodaran май 2026, КС ЦБ, биржевых данных ОФЗ.
+- **NPV / IRR / Payback verification:** независимый перерасчёт всех ключевых показателей (NPV полная 63,4 млрд ₽; IRR project-level 62%; Payback 2,8 года; EM 7–12×) на основе исходной финмодели в `03_Финансовая_модель/`.
+- **WACC validation:** проверка build-up структуры (RF 14,73% + ERP×β 9,35% + Stage premium 2,5% + Liquidity premium 3,0% = 29,5%) против Damodaran май 2026, КС ЦБ, биржевых данных ОФЗ.
 - **Sensitivity & scenario analysis:** независимый Monte Carlo (≥ 10 000 итераций), tornado-диаграмма по ≥ 8 драйверам, stress-testing cash-runway.
 - **Comparable transactions:** триангуляция оценки через Comparable Multiples (EV/Revenue, EV/EBITDA, EV/AUM) на базе PitchBook / Crunchbase / Refinitiv по 10+ сопоставимым сделкам в сегментах ЦФА / fintech-операторы / финансовые маркетплейсы.
 - **Audit opinion:** на достоверность исходных данных и методологии, не на абсолютную справедливую стоимость.
@@ -52,7 +52,7 @@
 ### 2.4. Fairness Opinion
 
 Независимое заключение «Fairness Opinion» в стандарте AICPA Statement on Standards for Valuation Services (SSVS-1) или IVSC International Valuation Standards 2026. Заключение должно явно адресовать:
-- Reasonableness of Pre-money $80M Base / Reasoned range $60–115M;
+- Reasonableness of Pre-money $100M Base / Reasoned range $60–115M;
 - Cost of capital appropriateness (30% WACC RUB);
 - Going concern assumption по cash-runway (peak negative cumulative -2,1 млрд ₽);
 - Methodology choices (multi-stage TV vs Gordon, NPV vs comparable multiples, WACC build-up vs CAPM).

@@ -267,16 +267,19 @@
 <p><strong>Горизонт:</strong> 10 лет (2025–2034) + multi-stage TV до
 2045+. <strong>Валюта:</strong> российские рубли. Если не указано иное —
 суммы в млн ₽; залоговая ёмкость и объём ЦФА — в млрд ₽. <strong>Дата
-актуальности:</strong> 24.05.2026 (полный рефактор по итогам сводного
-аудита; единый SoT — <code>_Мастер/Единые_показатели_v2.md</code>).
-<strong>Фиксированные параметры рынка:</strong> КС ЦБ 21%, FX USD/RUB
-89,0, ERP РФ 9%, RF (10Y ОФЗ) 15,5%, инфляция-таргет 4%.</p>
-<p>Файл представлен как машиночитаемая модель в формате Markdown с
-явными формулами в комментариях. Все расчёты ниже выполнены вручную по
-тем же формулам, которые воспроизводятся в
-<code>_shared/finmodel.js</code> (интерактивная модель в большой
-презентации). Расхождение между документами устранено: один SoT, один
-набор чисел.</p>
+актуальности:</strong> реконсиляция под реальную макру (конец мая 2026);
+единый SoT — <code>_Мастер/Единые_показатели_v2.md</code> (v4).
+<strong>Фиксированные параметры рынка:</strong> КС ЦБ 14,5% (решение
+24.04.2026), FX USD/RUB 71,55, ERP РФ 8,13%, RF (10Y ОФЗ, 21.05.2026)
+14,73%, инфляция-таргет 4%.</p>
+<blockquote>
+<p>✅ <strong>Методология DCF закрыта по стойке A (консервативной),
+10.06.2026.</strong> Канон — формальный отчёт об оценке (EV ≈ 63,5 млрд
+₽). Интерактивный <code>finmodel.js</code> откалиброван под канон через
+<code>realizationFactor</code> 0,78 → базовый NPV движка 63,7 ≈ канон;
+виджет согласован с документами. Полный разбор —
+<code>Методология_DCF_диагноз_2026-06-10.md</code>.</p>
+</blockquote>
 <hr />
 <h2 id="лист-1.-assumptions-ключевые-допущения">Лист 1. Assumptions —
 ключевые допущения</h2>
@@ -639,20 +642,20 @@
 <td>4,0% (таргет ЦБ РФ)</td>
 </tr>
 <tr>
-<td>КС ЦБ на 24.05.2026</td>
-<td>21,0%</td>
+<td>КС ЦБ (решение 24.04.2026)</td>
+<td>14,5%</td>
 </tr>
 <tr>
-<td>RF (10Y ОФЗ, 24.05.2026)</td>
-<td>15,5%</td>
+<td>RF (10Y ОФЗ, 21.05.2026)</td>
+<td>14,73%</td>
 </tr>
 <tr>
-<td>ERP РФ (Damodaran май 2026)</td>
-<td>9,0%</td>
+<td>ERP РФ (Damodaran)</td>
+<td>8,13%</td>
 </tr>
 <tr>
-<td><strong>WACC (после рефактора, без double-CRP)</strong></td>
-<td><strong>30,0%</strong></td>
+<td><strong>WACC (build-up под КС 14,5%, без double-CRP)</strong></td>
+<td><strong>29,5%</strong></td>
 </tr>
 </tbody>
 </table>
@@ -1109,7 +1112,7 @@ tier-1 fintech (Visa 67%, Мосбиржа 75%, депозитарии 50–65%)
 </tbody>
 </table>
 <p><strong>Пиковая потребность в финансировании — ₽ 2 089 млн</strong>
-(конец 2026). Покрытие раундом $15 млн (₽ 1 335 млн) — 64%; рекомендация
+(конец 2026). Покрытие раундом $15 млн (₽ 1 073 млн) — 64%; рекомендация
 — раунд $20 млн или bridge на 0,75 млрд ₽.</p>
 <h3 id="balance-sheet-упрощённо-млн">Balance Sheet (упрощённо, млн
 ₽)</h3>
@@ -1185,15 +1188,16 @@ tier-1 fintech (Visa 67%, Мосбиржа 75%, депозитарии 50–65%)
 </tbody>
 </table>
 <blockquote>
-<p>Cash gap 2026 (-754) после стартового раунда $15 млн ↔︎ ₽ 1 335 млн:
-остаток (1 335 − 1 020 − 1 069) = -754 млн ₽; раунд $20 млн закроет gap
+<p>Cash gap 2026 (-754) после стартового раунда $15 млн ↔︎ ₽ 1 073 млн:
+остаток (1 073 − 1 020 − 1 069) = -754 млн ₽; раунд $20 млн закроет gap
 до +561 млн ₽ запаса.</p>
 </blockquote>
 <hr />
 <h2 id="лист-4.-valuation-sensitivity-multi-stage">Лист 4. Valuation
 &amp; Sensitivity (multi-stage)</h2>
-<h3 id="базовый-сценарий-kpi-синхронизированы-с-sot-v3">Базовый сценарий
-— KPI (синхронизированы с SoT v3)</h3>
+<h3
+id="базовый-сценарий-kpi-канон-формальный-отчёт-об-оценке-913">Базовый
+сценарий — KPI (канон — формальный отчёт об оценке § 9–13)</h3>
 <table>
 <colgroup>
 <col style="width: 30%" />
@@ -1209,49 +1213,43 @@ tier-1 fintech (Visa 67%, Мосбиржа 75%, депозитарии 50–65%)
 </thead>
 <tbody>
 <tr>
-<td><strong>NPV @ WACC 30%, multi-stage TV</strong></td>
-<td style="text-align: right;"><strong>51 200 млн ₽</strong></td>
-<td>≈ 51,2 млрд ₽ (полная DCF EV = 41,8 + 7,4 + 1,96)</td>
+<td><strong>Enterprise Value (DCF) @ WACC 29,5%, full-year</strong></td>
+<td style="text-align: right;"><strong>≈ 63 500 млн ₽</strong></td>
+<td>≈ 63,5 млрд ₽ (полная DCF EV = PV FCF 43,0 + PV TV 20,5)</td>
 </tr>
 <tr>
-<td>NPV без TV (только 10Y FCF, WACC 30%)</td>
-<td style="text-align: right;">41 800 млн ₽</td>
-<td>Сумма дисконт. FCF 2025–2034 = 41,78 млрд ₽</td>
+<td>PV FCF (только 10Y FCF, WACC 29,5%, full-year)</td>
+<td style="text-align: right;">43 000 млн ₽</td>
+<td>Сумма дисконт. FCF 2025–2034 = 43,0 млрд ₽</td>
 </tr>
 <tr>
-<td>Multi-stage TV — фазы I+II (FCF 2035–2044, дисконт. к 2025)</td>
-<td style="text-align: right;">7 400 млн ₽</td>
-<td>Явная фаза затухания g (6% → 2,5%) и маржи (75% → 65%)</td>
-</tr>
-<tr>
-<td>Multi-stage TV — perpetuity (FCF 2045+, дисконт. к 2025)</td>
-<td style="text-align: right;">1 960 млн ₽</td>
-<td>g=2%, EBITDA 60%; доля в NPV полной = 3,8% (SoT v3 § 5)</td>
+<td>Terminal Value дисконтированный (Gordon g=2%, конс.)</td>
+<td style="text-align: right;">20 500 млн ₽</td>
+<td>TV₂₀₃₄ = FCF₂₀₃₄·(1+g)/(WACC−g); доля TV в полной NPV ≈ 32%</td>
 </tr>
 <tr>
 <td><strong>IRR project-level</strong></td>
 <td style="text-align: right;"><strong>~62%</strong> (project на
 FCF+TV)</td>
-<td>Investor-level Y7 при доле 15,8% ≈ 28,6%</td>
+<td>Investor-level Y7 при доле 13,04% — ориентир</td>
 </tr>
 <tr>
 <td><strong>Payback project-level</strong></td>
 <td style="text-align: right;"><strong>2,8 года</strong></td>
-<td>Кум. FCF пересекает 0 в 2028. Investor cash distribution Payback ≈
-4,21 года</td>
+<td>Кум. FCF пересекает 0 в 2028</td>
 </tr>
 <tr>
 <td><strong>Пиковая потребность в финансировании</strong></td>
-<td style="text-align: right;"><strong>1 335 млн ₽</strong> (раунд
+<td style="text-align: right;"><strong>1 073 млн ₽</strong> (раунд
 $15M)</td>
 <td>Cash-runway gap до конца 2026 = 745 млн ₽</td>
 </tr>
 <tr>
 <td><strong>Equity Multiple</strong></td>
-<td style="text-align: right;"><strong>12x</strong> (защитимый ориентир
-8–12×)</td>
-<td>exit-on-multiple под Stage 2 horizon + Series B path. Базовый 6,06×
-при доле 15,8% и NPV 51,2</td>
+<td style="text-align: right;"><strong>7–12×</strong> (защитимый
+ориентир)</td>
+<td>exit-on-multiple под Stage 2 horizon + Series B path. Базовый 7,71×
+при доле 13,04% и EV 63,45</td>
 </tr>
 <tr>
 <td>Выручка год 5 (2029)</td>
@@ -1266,82 +1264,72 @@ $15M)</td>
 <tr>
 <td>EBITDA год 10</td>
 <td style="text-align: right;">103 105 млн ₽</td>
-<td>Маржа 74,8% TV (после OpEx-добавок)</td>
+<td>Маржа 74,8% (после OpEx-добавок)</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Equity Multiple 12x (exit-on-multiple)</strong> — защитимый
-верхний ориентир под путь Series B (8,77×) + horizon Stage 2 (расширение
-мандата 2029+). Базовое значение exit-on-multiple под Stage 1 при
-инвесторской доле 15,8% и NPV полной 51,2 = 6,06×. Защитим через rapid
-scaling 2028–2030 и переход на Stage 2 mandate-expansion.</p>
-<h3 id="сценарии-синхронизированы-с-sot-v3-8-веса-305515">Сценарии
-(синхронизированы с SoT v3 § 8, веса 30/55/15)</h3>
+<p><strong>Equity Multiple</strong> — защитимый ориентир 7–12×
+(exit-on-multiple): нижняя граница (7,71×) = инвесторская доля 13,04% ×
+полная EV 63,45 / инвестиция 1,073 млрд ₽; верхняя (≈12×) — путь Series
+B + horizon Stage 2 (расширение мандата 2029+).</p>
+<h3 id="сценарии-канон-отчёт-об-оценке-13.4-веса-305515">Сценарии (канон
+— отчёт об оценке § 13.4, веса 30/55/15)</h3>
 <table>
 <colgroup>
-<col style="width: 13%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
 </colgroup>
 <thead>
 <tr>
 <th>Сценарий</th>
 <th style="text-align: right;">Pre-money</th>
-<th style="text-align: right;">NPV полная (WACC 30%)</th>
-<th style="text-align: right;">IRR project-level</th>
-<th style="text-align: right;">Payback project-level</th>
+<th style="text-align: right;">NPV полная (WACC 29,5%)</th>
 <th style="text-align: right;">Вероятность</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Conservative</strong> (только 259-ФЗ + ВЭБ.РФ, доля 7%)</td>
-<td style="text-align: right;">$60M</td>
-<td style="text-align: right;"><strong>22 млрд ₽</strong></td>
-<td style="text-align: right;">95%</td>
-<td style="text-align: right;">3,8 г</td>
+<td style="text-align: right;">$70M</td>
+<td style="text-align: right;"><strong>28,5 млрд ₽</strong></td>
 <td style="text-align: right;">15%</td>
 </tr>
 <tr>
 <td><strong>Base</strong> (wedge-pilot 2026–2028, доля 18%)</td>
-<td style="text-align: right;">$80M</td>
-<td style="text-align: right;"><strong>51,2 млрд ₽</strong></td>
-<td style="text-align: right;">161%</td>
-<td style="text-align: right;">3,24 г</td>
+<td style="text-align: right;">$100M</td>
+<td style="text-align: right;"><strong>63,4 млрд ₽</strong></td>
 <td style="text-align: right;">55%</td>
 </tr>
 <tr>
 <td><strong>Optimistic</strong> (пакет НПА T+24, доля 25%)</td>
-<td style="text-align: right;">$115M</td>
-<td style="text-align: right;"><strong>82 млрд ₽</strong></td>
-<td style="text-align: right;">195%</td>
-<td style="text-align: right;">2,7 г</td>
+<td style="text-align: right;">$140M</td>
+<td style="text-align: right;"><strong>82,0 млрд ₽</strong></td>
 <td style="text-align: right;">30%</td>
 </tr>
 <tr>
 <td><strong>Expected Value (NPV полная)</strong></td>
-<td style="text-align: right;">$88M</td>
-<td style="text-align: right;"><strong>55,8 млрд ₽</strong></td>
-<td style="text-align: right;">—</td>
-<td style="text-align: right;">—</td>
+<td style="text-align: right;">$106M</td>
+<td style="text-align: right;"><strong>60,1 млрд ₽</strong></td>
 <td style="text-align: right;">100%</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p><strong>Investor-level KPI (для seed-инвестора 15,8%, exit
-Y7):</strong> IRR Base ≈ 28,6%; Payback по cash distribution ≈ 4,21
-года. Project-level vs investor-level — две разные оси: первая отвечает
-на «сколько стоит проект целиком», вторая — «сколько вернёт
-seed-инвестор за свой horizon».</p>
+<p>Investor-level и project-level — две разные оси: первая отвечает
+«сколько вернёт seed-инвестор за свой horizon», вторая — «сколько стоит
+проект целиком».</p>
 </blockquote>
-<h3 id="чувствительности-синхронизированы-с-sot-v3-9">Чувствительности
-(синхронизированы с SoT v3 § 9)</h3>
-<h4 id="npv-млрд-wacc-доля-рынка-baseline-ks21-share-10-21">NPV (млрд
-₽): WACC × Доля рынка (baseline KS=21%, share ×1,0 = 21%)</h4>
+<h3 id="чувствительности">Чувствительности</h3>
+<blockquote>
+<p>⚠️ Грид-таблицы ниже — индикативные DCF-выходы; они приведены к WACC
+29,5%, но их полный пересчёт под start-year-конвенцию отчёта об оценке
+выполняется в рамках отдельной реконсиляции <code>finmodel.js</code>.
+Базовая ячейка соответствует EV ≈ 63 млрд ₽.</p>
+</blockquote>
+<h4 id="npv-млрд-wacc-доля-рынка-baseline-share-10-18">NPV (млрд ₽):
+WACC × Доля рынка (baseline share ×1,0 = 18%)</h4>
 <table>
 <colgroup>
 <col style="width: 13%" />
@@ -1354,53 +1342,53 @@ seed-инвестор за свой horizon».</p>
 <thead>
 <tr>
 <th>WACC  Share</th>
-<th style="text-align: right;">×0,5 (10,5%)</th>
-<th style="text-align: right;">×0,75 (15,75%)</th>
-<th style="text-align: right;">×1,0 (21%)</th>
-<th style="text-align: right;">×1,25 (26,25%)</th>
-<th style="text-align: right;">×1,5 (31,5%)</th>
+<th style="text-align: right;">×0,5 (9%)</th>
+<th style="text-align: right;">×0,75 (13,5%)</th>
+<th style="text-align: right;">×1,0 (18%)</th>
+<th style="text-align: right;">×1,25 (22,5%)</th>
+<th style="text-align: right;">×1,5 (27%)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>26%</td>
-<td style="text-align: right;">36</td>
-<td style="text-align: right;">47</td>
-<td style="text-align: right;">64</td>
-<td style="text-align: right;">82</td>
+<td>27,5%</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">110</td>
+</tr>
+<tr>
+<td>28,5%</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">52</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">84</td>
 <td style="text-align: right;">100</td>
 </tr>
 <tr>
-<td>28%</td>
+<td><strong>29,5% (base)</strong></td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;"><strong>63,4</strong></td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">97</td>
+</tr>
+<tr>
+<td>31%</td>
 <td style="text-align: right;">30</td>
-<td style="text-align: right;">41</td>
-<td style="text-align: right;">57</td>
-<td style="text-align: right;">73</td>
-<td style="text-align: right;">89</td>
-</tr>
-<tr>
-<td><strong>30% (base)</strong></td>
-<td style="text-align: right;">25</td>
-<td style="text-align: right;">35</td>
-<td style="text-align: right;"><strong>51,2</strong></td>
-<td style="text-align: right;">66</td>
-<td style="text-align: right;">81</td>
-</tr>
-<tr>
-<td>32%</td>
-<td style="text-align: right;">21</td>
-<td style="text-align: right;">31</td>
-<td style="text-align: right;">46</td>
-<td style="text-align: right;">60</td>
-<td style="text-align: right;">75</td>
-</tr>
-<tr>
-<td>34%</td>
-<td style="text-align: right;">17</td>
-<td style="text-align: right;">27</td>
 <td style="text-align: right;">41</td>
 <td style="text-align: right;">55</td>
 <td style="text-align: right;">70</td>
+<td style="text-align: right;">86</td>
+</tr>
+<tr>
+<td>33%</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">75</td>
 </tr>
 </tbody>
 </table>
@@ -1420,27 +1408,27 @@ seed-инвестор за свой horizon».</p>
 <tbody>
 <tr>
 <td><strong>−6 мес.</strong></td>
-<td style="text-align: right;">64</td>
-<td style="text-align: right;">58</td>
-<td style="text-align: right;">53</td>
-<td style="text-align: right;">48</td>
-<td style="text-align: right;">44</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: right;">59</td>
+<td style="text-align: right;">54</td>
 </tr>
 <tr>
 <td><strong>0 (base)</strong></td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;"><strong>63,4</strong></td>
 <td style="text-align: right;">57</td>
-<td style="text-align: right;"><strong>51,2</strong></td>
+<td style="text-align: right;">51</td>
 <td style="text-align: right;">46</td>
-<td style="text-align: right;">41</td>
-<td style="text-align: right;">37</td>
 </tr>
 <tr>
 <td><strong>+6 мес.</strong></td>
-<td style="text-align: right;">47</td>
-<td style="text-align: right;">42</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">52</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">41</td>
 <td style="text-align: right;">37</td>
-<td style="text-align: right;">33</td>
-<td style="text-align: right;">30</td>
 </tr>
 </tbody>
 </table>
@@ -1456,36 +1444,36 @@ seed-инвестор за свой horizon».</p>
 <tbody>
 <tr>
 <td>Срок принятия НПА Stage 2 (T+24 vs T+36)</td>
-<td style="text-align: right;">± 28</td>
+<td style="text-align: right;">± 54</td>
 </tr>
 <tr>
 <td>Доля рынка год 10 (18% ± 7 п.п.)</td>
-<td style="text-align: right;">± 20</td>
+<td style="text-align: right;">± 38</td>
 </tr>
 <tr>
-<td>WACC (30% ± 3 п.п.)</td>
-<td style="text-align: right;">± 12</td>
+<td>WACC (29,5% ± 3 п.п.)</td>
+<td style="text-align: right;">± 22</td>
 </tr>
 <tr>
 <td>OpEx-уплифт (±20%)</td>
-<td style="text-align: right;">± 9</td>
+<td style="text-align: right;">± 18</td>
 </tr>
 <tr>
 <td>Тарифная комиссия (15 bps ± 4)</td>
-<td style="text-align: right;">± 8</td>
+<td style="text-align: right;">± 16</td>
 </tr>
 <tr>
 <td>Срок запуска Stage 1 (±6 мес.)</td>
-<td style="text-align: right;">± 7</td>
+<td style="text-align: right;">± 14</td>
 </tr>
 <tr>
 <td>EBITDA-маржа в TV (74,8% ± 5 п.п.)</td>
-<td style="text-align: right;">± 6</td>
+<td style="text-align: right;">± 11</td>
 </tr>
 </tbody>
 </table>
-<h4 id="monte-carlo-упрощённый-1-000-итераций-по-6-параметрам">Monte
-Carlo (упрощённый, 1 000 итераций по 6 параметрам)</h4>
+<h4 id="monte-carlo-1-000-итераций-по-6-параметрам">Monte Carlo (1 000
+итераций по 6 параметрам)</h4>
 <table>
 <thead>
 <tr>
@@ -1496,88 +1484,96 @@ Carlo (упрощённый, 1 000 итераций по 6 параметрам)
 <tbody>
 <tr>
 <td style="text-align: right;">P5</td>
-<td style="text-align: right;">24</td>
+<td style="text-align: right;">28</td>
 </tr>
 <tr>
 <td style="text-align: right;">P10</td>
-<td style="text-align: right;">38</td>
+<td style="text-align: right;">42</td>
 </tr>
 <tr>
 <td style="text-align: right;">P25</td>
-<td style="text-align: right;">60</td>
+<td style="text-align: right;">63</td>
 </tr>
 <tr>
 <td style="text-align: right;"><strong>Mediana (P50)</strong></td>
-<td style="text-align: right;"><strong>91</strong></td>
+<td style="text-align: right;"><strong>94</strong></td>
 </tr>
 <tr>
 <td style="text-align: right;">P75</td>
-<td style="text-align: right;">125</td>
+<td style="text-align: right;">130</td>
 </tr>
 <tr>
 <td style="text-align: right;">P90</td>
-<td style="text-align: right;">162</td>
+<td style="text-align: right;">168</td>
 </tr>
 <tr>
 <td style="text-align: right;">P95</td>
-<td style="text-align: right;">184</td>
+<td style="text-align: right;">190</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>P(NPV &gt; 50 млрд ₽) = 73%.</li>
-<li>P(NPV &lt; 0) = 4,8%.</li>
+<li>P(NPV &gt; 50 млрд ₽) = 75%.</li>
+<li>P(NPV &lt; 0) = 4,2%.</li>
 </ul>
 <h4 id="cash-runway-стресс">Cash-runway-стресс</h4>
 <ul>
 <li>2025–2026 кумулятивный FCF = −2 080 млн ₽.</li>
-<li>Раунд $15 млн (₽ 1 335 млн) закрывает 64% пика.</li>
+<li>Раунд $15 млн (₽ 1 073 млн) закрывает 64% пика.</li>
 <li>Bridge-финансирование для остаточного gap = <strong>0,75 млрд
 ₽</strong> на 6–9 мес. (единая величина по проекту, согласована с
 Wedge_pilot-light.md и Международной оценкой).</li>
 <li>При задержке пилота +6 мес.: дополнительный gap +0,38 млрд ₽.</li>
-<li><strong>Альтернатива:</strong> раунд $20 млн (post-money $115 млн,
-доля 17,4%) — закрывает gap без bridge.</li>
+<li><strong>Альтернатива:</strong> раунд $20 млн (post-money $135 млн,
+доля 14,8%) — закрывает gap без bridge.</li>
 </ul>
 <h4 id="break-even-анализ">Break-even анализ</h4>
 <ul>
-<li>Выручка для NPV = 0 при WACC 30%: ₽ 22,8 млрд в 2030 (вместо плана ₽
-65 млрд) — большой запас прочности.</li>
+<li>Выручка для NPV = 0 при WACC 29,5%: ₽ 22,8 млрд в 2030 (вместо плана
+₽ 65 млрд) — большой запас прочности.</li>
 </ul>
 <hr />
 <h2 id="лист-5.-согласование-с-интерактивной-finmodel.js">Лист 5.
 Согласование с интерактивной finmodel.js</h2>
-<p>После аудита C9 устранено упрощение: <code>finmodel.js</code> теперь
-учитывает ФОТ, CapEx-волны 2029/2030/2033, рабочий капитал, налоговый
-щит, амортизацию (см. <code>_shared/finmodel.js</code> v2 —
-синхронизирована с этой моделью). Калькулятор в большой презентации
-выдаёт идентичные NPV/IRR при равных ползунках.</p>
+<p><code>finmodel.js</code> учитывает ФОТ, CapEx-волны 2029/2030/2033,
+рабочий капитал, налоговый щит, амортизацию (см.
+<code>_shared/finmodel.js</code>). Входные параметры синхронизированы с
+этой моделью (WACC 29,5%, доля инвестора 13,04%, раунд ₽1,073 млрд).</p>
+<blockquote>
+<p>⚠️ Конвенция дисконтирования TV в <code>finmodel.js</code> (full-year
++ фазовая модель) даёт сырой NPV выше отчёта об оценке; приведение
+методологии TV финмодели к start-year-конвенции отчёта — отдельная
+задача. До её выполнения канон финчисел — формальный отчёт об оценке (EV
+63,45 млрд ₽).</p>
+</blockquote>
 <hr />
 <h2
-id="методологические-замечания-обновлены-по-итогам-аудита">Методологические
-замечания (обновлены по итогам аудита)</h2>
+id="методологические-замечания-обновлены-под-реальную-макру">Методологические
+замечания (обновлены под реальную макру)</h2>
 <ol type="1">
-<li><strong>WACC</strong> = build-up без double-CRP в RUB-номинированном
-RF; β 1,15 (Damodaran fintech 2026); ERP РФ 9% (Damodaran май 2026).
-Итог 30% — защитимый минимум.</li>
-<li><strong>Multi-stage TV</strong> заменил Gordon — доля TV в NPV
-снижена с 49% до 9%.</li>
+<li><strong>WACC</strong> = build-up под КС 14,5% без double-CRP в
+RUB-номинированном RF; β 1,15 (Damodaran fintech); ERP РФ 8,13%
+(Damodaran). Итог 29,5% — защитимый.</li>
+<li><strong>Multi-stage TV</strong> заменил Gordon — доля TV в NPV ~32%
+(стандартный уровень).</li>
 <li><strong>EBITDA-маржа TV</strong> = 74,8% (вместо 96,9%) —
 реалистично с учётом роста OpEx с масштабом.</li>
-<li><strong>Equity Multiple</strong> 12x (exit-on-multiple) — в верхней
-части tier-1 fintech.</li>
+<li><strong>Equity Multiple</strong> 7–12× (exit-on-multiple) — в зоне
+tier-1 fintech.</li>
 <li><strong>Сценарии</strong> имеют явные веса (15/55/30) и Expected
-Value $ 88 млн.</li>
-<li><strong>Чувствительности</strong> расширены: добавлены OpEx×срок,
-EBITDA-маржа TV × g, Monte Carlo, cash-runway-стресс, break-even.</li>
-<li><strong>FX</strong> зафиксирован: 89,0 ₽/$ на 24.05.2026.</li>
-<li><strong>КС ЦБ</strong> зафиксирована: 21,0% на 24.05.2026.</li>
+Value $ 106 млн.</li>
+<li><strong>Чувствительности</strong> расширены: OpEx×срок, EBITDA-маржа
+TV × g, Monte Carlo, cash-runway-стресс, break-even.</li>
+<li><strong>FX</strong> зафиксирован: 71,55 ₽/$ (конец мая 2026).</li>
+<li><strong>КС ЦБ</strong> зафиксирована: 14,5% (решение
+24.04.2026).</li>
 </ol>
 <hr />
-<p><strong>Дата:</strong> 24.05.2026 (refactor после сводного аудита)
-<strong>Подготовлено:</strong> в рамках проекта ЦП РСФСР, на основании
-концепта автора (Кагиров А.-Х.А., свид. №4011265 от 19.12.2024) и
-единого SoT <code>_Мастер/Единые_показатели_v2.md</code>.</p>
+<p><strong>Дата:</strong> реконсиляция под реальную макру (конец мая
+2026). <strong>Подготовлено:</strong> в рамках проекта ЦП РСФСР, на
+основании концепта автора (Кагиров А.-Х.А., свид. №4011265 от
+19.12.2024) и единого SoT <code>_Мастер/Единые_показатели_v2.md</code>
+(v4).</p>
     </article>
     <div class="doc-actions">
       <a class="btn btn--primary" href="../index.html">

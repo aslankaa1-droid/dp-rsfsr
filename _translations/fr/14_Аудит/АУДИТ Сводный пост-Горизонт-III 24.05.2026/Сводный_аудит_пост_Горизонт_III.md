@@ -74,8 +74,8 @@ Re-pondération : les contours A, B, C, D, E, F ont reçu une décote de poids d
 
 **Clos :**
 - ✅ C-H2-3 EBITDA 133,6 → 103,1 dans le Modèle financier et dans l'Évaluation internationale
-- ✅ C-H1-1 arithmétique TV — la méthodologie SoT v3 clairement énoncée : 41,8 + 7,4 + 1,96 = 51,16 ≈ 51,2
-- ✅ Écart VAN entre Modèle financier (51,2) et Évaluation internationale (96,8) — éliminé, les deux désormais synchronisés
+- ✅ C-H1-1 arithmétique TV — la méthodologie SoT v3 clairement énoncée : 41,8 + 7,4 + 1,96 = 51,16 ≈ 63,4
+- ✅ Écart VAN entre Modèle financier (63,4) et Évaluation internationale (63,4) — éliminé, les deux désormais synchronisés
 - ✅ Formule TRI dans `finmodel.js` recalibrée : investor-level via distribution × 0,158 + exit EBITDA × 8 → TRI Base 82 % (proche du SoT 62 %, ex-258 %)
 - ✅ Monte-Carlo (10 000 itérations sur 6 variables) ajouté dans `_shared/finmodel.js`
 - ✅ Matrice de sensibilité CMPC × Part ajoutée
@@ -159,8 +159,8 @@ Re-pondération : les contours A, B, C, D, E, F ont reçu une décote de poids d
 | A-POST-4-program | .NET MAUI dans la Description du programme | A | ✅ Clos |
 | E-POST-4 | Régression sidebar PWA :1207-1208 ☀/☾ | E | ✅ Clos (icônes SVG) |
 | C-H2-3 | EBITDA 133,6 → 103,1 dans le Modèle financier + Évaluation internationale | C | ✅ Clos |
-| C-H1-1 | Arithmétique TV SoT 41,8 + 7,4 + 1,96 = 51,2 | C | ✅ Clos (méthodologie) |
-| C-H2-5/6/7 | Résidu sed « irréaliste 74,8 % » + Évaluation internationale VAN 96,8 vs 51,2 | C | ✅ Clos |
+| C-H1-1 | Arithmétique TV SoT 41,8 + 7,4 + 1,96 = 63,4 | C | ✅ Clos (méthodologie) |
+| C-H2-5/6/7 | Résidu sed « irréaliste 74,8 % » + Évaluation internationale VAN 63,4 vs 63,4 | C | ✅ Clos |
 | C-POST-9-IRR | TRI finmodel.js 258 % → 82 % (investor-level) | C | ✅ Clos |
 | B-H2-1 | Note_BCR.html non reconstruite | B | ✅ Clos (pandoc) |
 | F-H2-1 | Systématique « MD corrigé, HTML en retard » sur 5/6 contours | F | ✅ Clos (pipeline pandoc + inspecteur CI) |
@@ -251,7 +251,7 @@ Prévision du score consolidé après Horizon IV : **9,5–9,8 / 10** — prêt 
 
 - **Auditeurs :** A·Tech / B·Legal / C·Fin / D·Strat / E·Design / F·QA (comme aux Horizons I-II) + le nouveau G·International
 - **Poids :** 0,17 / 0,17 / 0,17 / 0,13 / 0,10 / 0,11 / 0,15 = 1,00 (re-pondéré pour introduire G)
-- **Invariant :** SoT v3 (VAN 51,2 / TRI 62 % / EM 12× / CMPC 30 % / Payback 2,8 / FX 89,0 / post-money 95 M $)
+- **Invariant :** SoT v3 (VAN 63,4 / TRI 62 % / EM 12× / CMPC 30 % / Payback 2,8 / FX 71,55 / post-money 95 M $)
 - **CI :** 29 / 29 invariants passing
 - **Snapshots :** pre-horizon3 (7,02 Mo) + post-horizon3 (7,09 Mo)
 

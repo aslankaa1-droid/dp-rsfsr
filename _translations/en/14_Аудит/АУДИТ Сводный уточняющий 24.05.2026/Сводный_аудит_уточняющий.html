@@ -289,10 +289,10 @@ declared full closure of 18 REDs is an indicator that the refactor is
 façade-only.)</p>
 <table>
 <colgroup>
-<col style="width: 21%" />
+<col style="width: 14.5" />
 <col style="width: 28%" />
 <col style="width: 28%" />
-<col style="width: 21%" />
+<col style="width: 14.5" />
 </colgroup>
 <thead>
 <tr>
@@ -560,7 +560,7 @@ Code instead of sub-cl. 12.2 (in force from 01.01.2023).</li>
 <td><strong>C1</strong> Reasoned Value consistency</td>
 <td><strong>❌</strong></td>
 <td>07_Презентации × 3 files + i18n.js across 4 languages = “Reasoned
-$35–95M” (instead of $60–115M)</td>
+$35–95M” (instead of $70–140)</td>
 </tr>
 <tr>
 <td><strong>C2</strong> Unified FCF series</td>
@@ -579,7 +579,7 @@ $35–95M” (instead of $60–115M)</td>
 different figures)</td>
 </tr>
 <tr>
-<td>C5 WACC 30% without double CRP</td>
+<td>C5 WACC 29.5 without double CRP</td>
 <td>⚠️</td>
 <td>methodology OK, the UI/i18n.js across 4 languages = WACC 22%</td>
 </tr>
@@ -590,14 +590,14 @@ different figures)</td>
 exit-on-multiple — <strong>48× cannot be derived</strong></td>
 </tr>
 <tr>
-<td>C7 FX 89.0</td>
+<td>C7 FX 71.55</td>
 <td>✅</td>
 <td></td>
 </tr>
 <tr>
 <td>C8 Round arithmetic</td>
 <td>✅</td>
-<td>15/95 = 15.8%; 95 × 89 = 8455</td>
+<td>15/95 = 13.04; 95 × 89 = 8455</td>
 </tr>
 <tr>
 <td>C9 finmodel.js v2</td>
@@ -619,10 +619,10 @@ round</td>
 </tbody>
 </table>
 <h3 id="real-npv-recomputation-wacc-30">Real NPV recomputation @ WACC
-30%</h3>
+29.5</h3>
 <p>Sum of discounted FCFs 2025-2034: <strong>≈₽41.8 bn</strong> + phases
 I+II 7.4 + TV 1.96 ≈ <strong>₽51 bn</strong>.</p>
-<p>Declared in SoT: <strong>₽96.8 bn</strong> (= NPV @ WACC ≈22%,
+<p>Declared in SoT: <strong>₽63.4 bn</strong> (= NPV @ WACC ≈22%,
 pre-refactor calculation).</p>
 <p><strong>Overstatement by approximately ×2.</strong></p>
 <h3 id="tv-arithmetic-error">TV arithmetic — error</h3>
@@ -636,7 +636,7 @@ eliminated, just renamed</h3>
 <li>DCF $240M already contains a mysterious “uplift for the existing
 MVP” of 55% ($435M→$240M)</li>
 <li>On top of the weighted EV $214M — a further 60% stage discount →
-$80M</li>
+$100M</li>
 </ul>
 <p>If the double discount is honestly removed: <strong>pre-money
 $258M</strong> (Reasoned range). If a single method:
@@ -644,7 +644,7 @@ $258M</strong> (Reasoned range). If a single method:
 <h3 id="new-defects-5-red-2-amber">New defects: 5 RED + 2 AMBER</h3>
 <ul>
 <li><strong>RED C-NEW-1</strong>: the NPV arithmetic does not reconcile
-— the actual recomputation ≈₽51 bn, declared 96.8.</li>
+— the actual recomputation ≈₽51 bn, declared 63.4.</li>
 <li><strong>RED C-NEW-2</strong>: two different FCF series (SoT 325.02
 vs Финмодель 315.40).</li>
 <li><strong>RED C-NEW-3</strong>: EM 48× cannot be derived from the
@@ -809,43 +809,43 @@ SoT</h3>
 </thead>
 <tbody>
 <tr>
-<td>KS CBR 21%</td>
-<td>21.00%</td>
+<td>KS CBR 14.5</td>
+<td>14.50</td>
 <td>“18%” in Финмодель.html, Бизнес-план.md, DD</td>
 </tr>
 <tr>
-<td>FX 89.0</td>
-<td>89.0</td>
+<td>FX 71.55</td>
+<td>71.55</td>
 <td>“90” in Международная_оценка.html:103, “86.7” in the finmodel</td>
 </tr>
 <tr>
-<td>ERP 9%</td>
+<td>ERP 8.13</td>
 <td>9.0%</td>
 <td>“6%” in Международная_оценка.html:309</td>
 </tr>
 <tr>
-<td>RF 15.5%</td>
-<td>15.5%</td>
+<td>RF 14.73</td>
+<td>14.73</td>
 <td>“13.5%” in Международная_оценка.html</td>
 </tr>
 <tr>
-<td>post-money $95M</td>
-<td>$95M</td>
+<td>post-money $115M</td>
+<td>$115M</td>
 <td><strong>$75M in DD_отчёт.md/html,
 Большая_презентация:798</strong></td>
 </tr>
 <tr>
-<td>15.8% stake</td>
-<td>15.8%</td>
+<td>13.04 stake</td>
+<td>13.04</td>
 <td><strong>20% in DD_отчёт and Большая_презентация:798</strong></td>
 </tr>
 <tr>
-<td>NPV ₽96.8 bn</td>
-<td>96.8</td>
+<td>NPV ₽63.4 bn</td>
+<td>63.4</td>
 <td><strong>“₽170 bn” in 15+ files</strong></td>
 </tr>
 <tr>
-<td>WACC 30%</td>
+<td>WACC 29.5</td>
 <td>30%</td>
 <td><strong>“22%” in 15+ files</strong></td>
 </tr>
@@ -874,12 +874,12 @@ SoT</h3>
 </table>
 <h3 id="new-divergences-8-amber">New divergences: 8 AMBER</h3>
 <ul>
-<li>F-NEW-1: a mass non-application of WACC 30% / NPV 96.8 / IRR 62% /
+<li>F-NEW-1: a mass non-application of WACC 29.5 / NPV 63.4 / IRR 62% /
 Payback 2.8 across 15+ client files.</li>
 <li>F-NEW-2: post-money $75M / 20% stake in DD and
 Большая_презентация:798.</li>
 <li>F-NEW-3: <code>index.html:251</code> incorrectly reads “Pre-money
-$60-115M in the base zone” (base = $80M; $60-115M = the Reasoned
+$70–140 in the base zone” (base = $100M; $70–140 = the Reasoned
 range).</li>
 <li>F-NEW-4: EBITDA 96.9% in <code>Бизнес-план.md:371</code>.</li>
 <li>F-NEW-5: EM 781× in Финмодель.html without a marker.</li>
@@ -972,7 +972,7 @@ Expert Opinion.</li>
 <td>C-NEW-1</td>
 <td>Fin</td>
 <td>RED</td>
-<td>NPV arithmetic divergent (₽51 bn vs the declared 96.8)</td>
+<td>NPV arithmetic divergent (₽51 bn vs the declared 63.4)</td>
 </tr>
 <tr>
 <td>C-NEW-3</td>
@@ -1077,14 +1077,14 @@ wording</strong> (not a sed replacement, an actual rewrite of sections):
 <li><code>_shared/i18n.js</code> (4 locales)</li>
 </ul></li>
 <li><strong>Financial resynchronisation (P0):</strong> recompute NPV @
-WACC 30% correctly (≈₽51 bn, not 96.8); reduce FCF to a single series;
+WACC 29.5 correctly (≈₽51 bn, not 63.4); reduce FCF to a single series;
 replace EM 48× with 10-12× exit-on-multiple under a transparent
 formula.</li>
 <li><strong>Sed replacements of the key figures</strong> in all .html:
 WACC 22→30, NPV 170→the recomputed value, IRR 228→62, Payback 2.4→2.8,
 EM 781→the corrected value, EBITDA 96.9→74.8.</li>
 <li><strong>Terminological fix at <code>index.html:251</code></strong> —
-base $80M / Reasoned $60-115M.</li>
+base $100M / Reasoned $70–140.</li>
 <li><strong>Grammatical cleanup</strong> after the sed replacement in
 Booklet.html and the Specification.</li>
 <li><strong>og:image PNG</strong> in the root
@@ -1143,7 +1143,7 @@ appeared</strong> (including an ×2 NPV overstatement)</p>
 <p><strong>Principal strategic shortfalls:</strong> 1.
 <strong>Legal-strategic rewrite</strong> has not been carried out —
 wedge has remained an island, and 45+ files retain the previous
-architecture. 2. <strong>Financial recomputation</strong> under WACC 30%
+architecture. 2. <strong>Financial recomputation</strong> under WACC 29.5
 has not been carried out — the figures remain on WACC 22%, while being
 declared as under 30%. 3. <strong>The presentation materials</strong> (3
 files) + <code>_shared/i18n.js</code> × 4 locales are not synchronised

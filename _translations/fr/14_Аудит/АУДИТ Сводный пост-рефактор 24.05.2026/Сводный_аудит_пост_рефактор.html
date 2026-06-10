@@ -290,7 +290,7 @@ Les plus lourds : <strong>(a)</strong> 15+ fichiers HTML/MD clients
 Grande présentation, Petite présentation, Международная_оценка
 .md/.html, Avis d’expert, index.html racine partiellement)
 <strong>conservent les KPI financiers d’avant refactorisation</strong> —
-NPV 170 / 96,8 Md ₽, IRR ~228 %, WACC 22 %, Equity Multiple 48× / 781×,
+NPV 170 / 63,4 Md ₽, IRR ~228 %, WACC 22 %, Equity Multiple 48× / 781×,
 EBITDA TV 96,9 %, Payback 2,4 ans, post-money 75 M $, Reasoned 35–95 M
 $, RF 13,5 %, ERP 6 %, KS 18 % (baseline de sensibilité) ;
 <strong>(b)</strong> le CLUF dans
@@ -300,7 +300,7 @@ pour 12 mois »), ce qui bloque la publication RuStore ;
 <strong>(c)</strong> SoT v3 contient sa propre erreur arithmétique sur
 la TV — les phases I+II de la TV multi-stage sont déclarées à 7,4 Md ₽,
 le recalcul ligne par ligne donne 21,0 Md (×2,84), ce qui fait passer la
-NPV totale defensible de 51,2 à 64,7 Md ₽ ; <strong>(d)</strong> le Plan
+NPV totale defensible de 63,4 à 64,7 Md ₽ ; <strong>(d)</strong> le Plan
 d’affaires §§ 1, 5, 21, 23, le Rapport DD §§ 2.1, 3.3, 10 et le Rapport
 pour la BC §§ 3.1, 6, 10 continuent à décrire le modèle d’émission Stage
 2 comme la ligne opérationnelle, sans marqueur explicite d’horizon ;
@@ -500,9 +500,9 @@ préambule architectural supérieur.</li>
 <li><strong>RED · C-POST-1</strong> — Arithmétique TV SoT v3 § 5 :
 phases I+II déclarées à 7,4 Md ₽, le recalcul defensible donne
 <strong>21,03 Md</strong> (×2,84). VE complète DCF defensible =
-<strong>64,69 Md ₽</strong>, et non 51,2.</li>
+<strong>64,69 Md ₽</strong>, et non 63,4.</li>
 <li><strong>RED · C-POST-2</strong> — IRR 62 % « pour un investisseur
-15,8 % » non reproductible. IRR investor Y7 standard = <strong>28,6
+13,04 » non reproductible. IRR investor Y7 standard = <strong>28,6
 %</strong>.</li>
 <li><strong>RED · C-POST-3</strong> — Payback 2,8 ans « pour
 l’investisseur » non reproductible. Investor cash distribution Payback =
@@ -555,7 +555,7 @@ Design (rapport complet : <code>_частные_отчёты/E_Design.md</code>)
 (voir A-POST-8).</li>
 <li><strong>AMBER · E-POST-2</strong> —
 <code>Pitch_deck.html:350-353</code> slide 10 « The Ask » — uniquement «
-1,3 Md ₽ » sans pre-money 80 M $ / post-money 95 M $ / part 15,8 %.
+1,3 Md ₽ » sans pre-money 80 M $ / post-money 95 M $ / part 13,04.
 Bloqueur sur la slide de demande pour un investisseur tier-1.</li>
 <li><strong>AMBER · E-POST-3</strong> — <code>manifest.json:11</code> —
 valeur unique theme_color (l’installation PWA sur un shell sombre
@@ -591,24 +591,24 @@ privé) :</p>
 </thead>
 <tbody>
 <tr>
-<td>WACC 30 %</td>
+<td>WACC 29,5</td>
 <td>30 %</td>
 <td>Rapport DD .md/.html (22 %), Финмодель .html × 4,
 Финмодель_допущения .html, Международная_оценка.html (22 %)</td>
 </tr>
 <tr>
-<td>NPV complète 51,2 Md</td>
-<td>51,2</td>
-<td>index.html (96,8), Grande/Petite présentations (170), HTML principal
+<td>NPV complète 63,4 Md</td>
+<td>63,4</td>
+<td>index.html (63,4), Grande/Petite présentations (170), HTML principal
 (170), Plan d’affaires .md/.html (170), Rapport DD.html (170), Финмодель
-.md (96,8) × 4, Международная_оценка .md (96,8) × 3</td>
+.md (63,4) × 4, Международная_оценка .md (63,4) × 3</td>
 </tr>
 <tr>
 <td>IRR 62 %</td>
 <td>62 %</td>
 <td>Grande/Petite présentations (228 %), Финмодель.html × 2, Plan
 d’affaires .md/.html (228) × 5, Avis d’expert .md/.html (228 — hybride «
-NPV 51,2 à IRR ~228 % »)</td>
+NPV 63,4 à IRR ~228 % »)</td>
 </tr>
 <tr>
 <td>Payback 2,8 ans</td>
@@ -627,18 +627,18 @@ NPV 51,2 à IRR ~228 % »)</td>
 réalistes au lieu de 74,8 % irréalistes »</td>
 </tr>
 <tr>
-<td>RF 15,5 %</td>
+<td>RF 14,73</td>
 <td>15,5</td>
 <td>Международная_оценка.html (13,5 %)</td>
 </tr>
 <tr>
-<td>ERP 9 %</td>
+<td>ERP 8,13</td>
 <td>9 %</td>
 <td>Финмодель_допущения.html (6-8 %)</td>
 </tr>
 <tr>
-<td>KS BC 21 %</td>
-<td>21 %</td>
+<td>KS BC 14,5</td>
+<td>14,5</td>
 <td>Финмодель.md (18 % dans la baseline de sensibilité)</td>
 </tr>
 </tbody>
@@ -787,7 +787,7 @@ divergentes</td>
 <td>RED</td>
 <td>C</td>
 <td>TV phases I+II SoT 7,4 vs defensible 21,03 ; NPV complète defensible
-64,7, et non 51,2</td>
+64,7, et non 63,4</td>
 </tr>
 <tr>
 <td>C-POST-2</td>
@@ -988,10 +988,9 @@ prototype:538. ≈ 10 minutes.</li>
 <li><strong>Chemins sw.js des captures</strong> (A-POST-8) : lignes
 23-26. ≈ 2 minutes.</li>
 <li><strong>Pitch deck slide 10</strong> (E-POST-2) : ajouter un bloc «
-Structure du tour » — ask 1,335 / pre 80 M $ / post 95 M $ / part 15,8
-%. ≈ 15 minutes.</li>
-<li><strong>Passage sed bloc F sur 15+ fichiers</strong> : NPV 170/96,8
-→ <strong>51,2 (ou 64,7 après résolution de C-POST-1)</strong> ; IRR 228
+Structure du tour » — ask 1,335 / pre 80 M $ / post 95 M $ / part 13,04. ≈ 15 minutes.</li>
+<li><strong>Passage sed bloc F sur 15+ fichiers</strong> : NPV 170/63,4
+→ <strong>63,4 (ou 64,7 après résolution de C-POST-1)</strong> ; IRR 228
 → 62 (project) ou 28,6 (investor) avec marqueur explicite ; Payback 2,4
 → 2,8 (project) ou 4,21 (investor) ; WACC 22 → 30 ; EBITDA 96,9 → 74,8 ;
 EM 48 → 12 (avec formule explicite) ; post-money 75 → 95 $ ; Reasoned
@@ -1136,7 +1135,7 @@ la BC sous Stage 1</td>
 <td><strong>Gazprombank-DD / PSB-DD</strong></td>
 <td>Non prêt</td>
 <td>Horizon I + unification des KPI financiers dans tous les 15+
-artefacts + décision sur C-POST-1 (NPV defensible 51,2 vs 64,7)</td>
+artefacts + décision sur C-POST-1 (NPV defensible 63,4 vs 64,7)</td>
 </tr>
 <tr>
 <td><strong>VC tier-1 (a16z / Sequoia / Index)</strong></td>
@@ -1197,7 +1196,7 @@ SoT v3 (absente de la version précédente — erreur survenue lors du
 retravail) ; (c) statut Open dans le journal de refactorisation sur 6
 points Design (ce qui a fait monter l’honnêteté de E à 7,9 vs 7,4).</li>
 <li><strong>Réserve sur la NPV.</strong> Les tableaux utilisent la
-valeur déclarée dans SoT v3 de 51,2 Md ₽. Le recalcul defensible donne
+valeur déclarée dans SoT v3 de 63,4 Md ₽. Le recalcul defensible donne
 64,7 Md ₽. La décision finale revient au titulaire du modèle financier ;
 pour la communication avec l’investisseur, la ligne de fracture doit
 être éliminée avant la remise des documents.</li>

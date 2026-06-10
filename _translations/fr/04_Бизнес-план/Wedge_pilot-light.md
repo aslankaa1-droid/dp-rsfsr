@@ -195,7 +195,7 @@ Avantage principal du wedge : **le projet n'arrive pas à la BCR avec une demand
 
 Le **modèle financier** (`03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.md`) prend en compte le régime wedge dans le scénario Conservateur :
 - Part de marché année 10 — 7 % (vs 18 % en Base).
-- VAN ≈ 22 Md ₽ (vs 51,2 Md ₽ en Base, CMPC 30 % — voir SoT v3).
+- VAN ≈ 22 Md ₽ (vs 63,4 Md ₽ en Base, CMPC 29,5 % — voir SoT v3).
 - TRI ≈ 38 % (vs 62 % en Base).
 - Equity Multiple ≈ 5–6× (vs 12× en Base, exit-on-multiple).
 

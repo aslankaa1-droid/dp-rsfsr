@@ -195,7 +195,7 @@ The principal advantage of the wedge: **the project does not approach the CBR wi
 
 The **Financial Model** (`03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.md`) accounts for the wedge regime in the Conservative scenario:
 - Year-10 market share — 7% (vs 18% in Base).
-- NPV ≈ RUB 22 bn (vs RUB 51.2 bn in Base, WACC 30% — see SoT v3).
+- NPV ≈ RUB 22 bn (vs RUB 63.4 bn in Base, WACC 29.5 — see SoT v3).
 - IRR ≈ 38% (vs 62% in Base).
 - Equity Multiple ≈ 5–6× (vs 12× in Base, exit-on-multiple).
 
