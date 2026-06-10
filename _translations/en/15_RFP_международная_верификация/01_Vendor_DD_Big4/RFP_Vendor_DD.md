@@ -10,7 +10,7 @@
 
 ## 1. Engagement objective
 
-Obtaining an independent tier-1 (Big-4) Vendor Due Diligence opinion on the CPFSR project, in order to secure investment attractiveness for a strategic Seed round of USD 15M (Pre-money USD 80M, Post-money USD 95M, investor stake 15.8%) and to prepare for Series A.
+Obtaining an independent tier-1 (Big-4) Vendor Due Diligence opinion on the CPFSR project, in order to secure investment attractiveness for a strategic Seed round of USD 15M (Pre-money USD 100, Post-money USD 115, investor stake 13.04) and to prepare for Series A.
 
 The opinion must meet the standard of investor memoranda used in tier-1 PE/VC transactions and be acceptable to the following categories of participants:
 - Institutional investors of the Russian Federation (pension funds, insurers, private banks)
@@ -23,8 +23,8 @@ The opinion must meet the standard of investor memoranda used in tier-1 PE/VC tr
 ### 2.1. Financial Due Diligence
 
 - **Quality of Earnings (QoE):** review of the financial model over the 2025–2034 horizon plus multi-stage Terminal Value to 2045+. Identification of normalisations, one-offs, working-capital adjustments.
-- **NPV / IRR / Payback verification:** independent recomputation of all key metrics (full NPV RUB 51.2 bn; project-level IRR 62%; Payback 2.8 years; EM 12×) based on the source model in `03_Финансовая_модель/`.
-- **WACC validation:** verification of the build-up structure (RF 15.5% + ERP×β 10.35% + Stage premium 1.5% + Liquidity premium 2.5% = 30%) against Damodaran May 2026, the CBR key rate, and OFZ market data.
+- **NPV / IRR / Payback verification:** independent recomputation of all key metrics (full NPV RUB 63.4 bn; project-level IRR 62%; Payback 2.8 years; EM 12×) based on the source model in `03_Финансовая_модель/`.
+- **WACC validation:** verification of the build-up structure (RF 14.73 + ERP×β 10.35% + Stage premium 1.5% + Liquidity premium 2.5% = 30%) against Damodaran May 2026, the CBR key rate, and OFZ market data.
 - **Sensitivity & scenario analysis:** independent Monte Carlo (≥ 10,000 iterations), tornado diagram covering ≥ 8 drivers, cash-runway stress testing.
 - **Comparable transactions:** triangulation of the valuation via Comparable Multiples (EV/Revenue, EV/EBITDA, EV/AUM) using PitchBook / Crunchbase / Refinitiv on 10+ comparable deals across DFA / fintech-operator / financial-marketplace segments.
 - **Audit opinion:** on the reliability of source data and methodology, not on absolute fair value.
@@ -52,7 +52,7 @@ The opinion must meet the standard of investor memoranda used in tier-1 PE/VC tr
 ### 2.4. Fairness Opinion
 
 An independent Fairness Opinion under the AICPA Statement on Standards for Valuation Services (SSVS-1) or IVSC International Valuation Standards 2026. The opinion must explicitly address:
-- Reasonableness of Pre-money USD 80M Base / Reasoned range USD 60–115M;
+- Reasonableness of Pre-money USD 100 Base / Reasoned range USD 70–140M;
 - Cost of capital appropriateness (30% WACC RUB);
 - Going-concern assumption on cash-runway (peak negative cumulative RUB −2.1 bn);
 - Methodology choices (multi-stage TV vs Gordon, NPV vs comparable multiples, WACC build-up vs CAPM).

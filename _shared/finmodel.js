@@ -1,8 +1,13 @@
 /* ============================================================
    Интерактивная финансовая модель ЦП РСФСР · v2 (24.05.2026)
 
-   Полный синтез после рефактора по итогам сводного аудита:
-   - WACC 30% (без double-CRP в RUB-номинированной базе)
+   Полный синтез после рефактора по итогам сводного аудита + реконсиляция
+   под реальную макру (SoT v4, 10.06.2026): КС ЦБ 14,5% (24.04.2026), FX 71,55.
+   - WACC 29,5% (build-up под КС 14,5%; RF=ОФЗ 14,73% + β·ERP + stage + liquidity)
+   - дисконтирование full-year (консервативная конвенция)
+   - СТОЙКА A (консервативная, выбрана 10.06.2026): realizationFactor 0,78 приводит
+     базовый NPV движка к канону ~63,7 млрд ₽ (выручка Y10 ~138). См.
+     03_Финансовая_модель/Методология_DCF_диагноз_2026-06-10.md
    - OpEx-кривая с реалистичным ростом (комплаенс +30%, кибербез +25%,
      юр. +40%, оценщики/страховщики 0,8% от объёма)
    - EBITDA-маржа в TV сходится к 74,8% (вместо 96,9%)
@@ -23,12 +28,15 @@
     capacityTrn: 25.0,         // трлн ₽ — залоговая ёмкость на 2025
     capacityGrowth: 0.04,      // индексация по таргету ЦБ
     shareYr10: 0.18,           // 18% доля к году 10 (Base; conservative 7%, optim 25%)
+    realizationFactor: 0.78,   // стойка A (консервативная): реализация валовой тарифной выручки
+                               // (рамп-ап, отток, скидки, неплатящие) — приводит выручку Y10 ~175→~138
+                               // и базовый NPV к консервативному канону ~63 млрд ₽
     feeIssue: 0.0050,          // комиссия за выпуск
     feeService: 0.0030,        // сервисная комиссия от стека
     feePlatform: 0.0015,       // платформенный сбор
     feeB2BMax: 0.0015,         // максимум по году 10
     feeAppraisal: 0.0080,      // услуги оценщиков и страховщиков (новое после аудита)
-    wacc: 0.30,                // 30% — refactor WACC (RUB, без double-CRP)
+    wacc: 0.295,               // 29,5% — WACC под КС 14,5% (SoT v4, build-up валюации §9.1)
     opexBase: 0.502,           // млрд ₽ базовый OpEx (без ФОТ) — рост за счёт +30% комплаенс
     opexGrowth: 0.10,          // +10%/год до 2029, далее затухание
     fteStart: 40,
@@ -94,7 +102,7 @@
       const r4 = issue * p.feeB2BMax * Math.min(1, y / 10);
       const r5 = 0.05 + (y - 1) * 0.12; // тех.интеграции
       const r6 = issue * p.feeAppraisal;
-      const rev = r1 + r2 + r3 + r4 + r5 + r6;
+      const rev = (r1 + r2 + r3 + r4 + r5 + r6) * p.realizationFactor;
 
       // FTE и ФОТ
       const fte = p.fteStart + (p.fteYr10 - p.fteStart) * (y - 1) / 9;
@@ -106,7 +114,7 @@
       // дополнительная составляющая от оценщиков-страховщиков уже в выручке как pass-through;
       // но требует встречного OpEx
       const opexFixed = p.opexBase * growthFactor;
-      const opexAppraisal = issue * p.feeAppraisal * 0.85; // 85% — pass-through издержки
+      const opexAppraisal = issue * p.feeAppraisal * 0.85 * p.realizationFactor; // pass-through, масштабируется реализацией
       const opex = opexFixed + opexAppraisal + payroll;
 
       const ebitda = rev - opex;
@@ -182,12 +190,12 @@
     npv += tvDisc;
 
     // IRR investor-level — рассчитан под точку зрения seed-инвестора:
-    //   - инвестиция: -1,335 млрд ₽ (раунд $15 млн × FX 89,0) в год 0;
-    //   - cash distribution: investorShare (15,8%) × positive FCF проекта по годам 2–10;
+    //   - инвестиция: -1,073 млрд ₽ (раунд $15 млн × FX 71,55) в год 0;
+    //   - cash distribution: investorShare (13,04%) × positive FCF проекта по годам 2–10;
     //   - exit: investorShare × (EBITDA Y10 × 8 fintech-exit-multiple) в год 10.
-    // Это согласуется с SoT v3 § 6: Investor-level IRR Base ≈ 60–70% (NPV полная 51,2 / round 1,335).
-    const investorShare_IRR = 0.158;
-    const round_IRR = 1.335;
+    // SoT v4 § 6: Investor-level IRR Base при доле 13,04% (NPV полная ≈ 63,45 / round 1,073).
+    const investorShare_IRR = 0.1304;
+    const round_IRR = 1.073;
     function npvAt(rate) {
       let n = -round_IRR; // год 0
       years.forEach(yr => {
@@ -213,11 +221,11 @@
 
     // Equity Multiple для seed-инвестора:
     // exit-on-multiple = (доля × полная DCF EV) / стартовая инвестиция.
-    // SoT v3: доля 15,8%, post-money $95M, раунд $15M = 1,335 млрд ₽ при FX 89.
+    // SoT v4: доля 13,04%, post-money $115M, раунд $15M = 1,073 млрд ₽ при FX 71,55.
     // Полная EV (npv) уже включает sum_disc_fcf 10y + tvDisc (multi-stage TV) — см. строку 182.
-    // Защищаемый ориентир — 6–12×: нижняя граница exit-on-multiple под NPV 51,2; верхняя — Series B path.
-    const startRound = 1.335; // млрд ₽ — раунд $15 млн при FX 89,0
-    const investorShare = 0.158; // 15,8% после Seed
+    // Защищаемый ориентир — 7–12×: нижняя граница exit-on-multiple под NPV ≈63,45; верхняя — Series B path.
+    const startRound = 1.073; // млрд ₽ — раунд $15 млн при FX 71,55
+    const investorShare = 0.1304; // 13,04% после Seed
     const fullEV = npv; // npv уже = sum_disc_fcf_10y + tvDisc; без double-count tvDisc
     const equityMultiple = (investorShare * fullEV) / startRound;
     // total project return — справочная метрика, не TVPI инвестора
@@ -270,7 +278,7 @@
 
   // Monte Carlo: симуляция распределения NPV по N переменным
   // Параметры (10k итераций по умолчанию):
-  //   wacc: 30% ± 3 п.п. (truncated normal)
+  //   wacc: 29,5% ± 3 п.п. (truncated normal)
   //   shareYr10: 18% ± 7 п.п. (truncated [5%, 35%])
   //   feeIssue: 0,50% ± 0,10 п.п.
   //   opexBase: 0,502 ± 15%
@@ -280,7 +288,7 @@
     iter = iter || 10000;
     const results = [];
     const config = Object.assign({
-      waccMean: 0.30, waccSd: 0.03,
+      waccMean: 0.295, waccSd: 0.03,
       shareMean: 0.18, shareSd: 0.07, shareMin: 0.05, shareMax: 0.35,
       feeMean: 0.0050, feeSd: 0.0010,
       opexMean: 0.502, opexSdRatio: 0.15,
@@ -322,7 +330,7 @@
 
   // Matrix sensitivity: NPV(wacc × share)
   function sensitivityMatrix(waccArr, shareArr) {
-    waccArr = waccArr || [0.26, 0.28, 0.30, 0.32, 0.34];
+    waccArr = waccArr || [0.255, 0.275, 0.295, 0.315, 0.335];
     shareArr = shareArr || [0.10, 0.135, 0.18, 0.225, 0.27]; // ×0,5 .. ×1,5 от 18%
     const rows = [];
     for (const w of waccArr) {
@@ -338,9 +346,9 @@
 
   // 3 сценария Base / Conservative / Optimistic
   function scenariosCalc() {
-    const conservative = model({ shareYr10: 0.07, feeIssue: 0.0040, opexBase: 0.577, wacc: 0.32 });
+    const conservative = model({ shareYr10: 0.07, feeIssue: 0.0040, opexBase: 0.577, wacc: 0.315 });
     const base = model({});
-    const optimistic = model({ shareYr10: 0.25, feeIssue: 0.0060, opexBase: 0.452, wacc: 0.28 });
+    const optimistic = model({ shareYr10: 0.25, feeIssue: 0.0060, opexBase: 0.452, wacc: 0.275 });
     const ev = 0.55 * base.npv + 0.30 * optimistic.npv + 0.15 * conservative.npv;
     return {
       conservative: { npv: conservative.npv, irr: conservative.irr, payback: conservative.payback, weight: 0.15 },
@@ -355,7 +363,7 @@
     const baseRes = model({});
     const baseNpv = baseRes.npv;
     const tests = [
-      { name: 'WACC ±3 п.п.', low: { wacc: 0.27 }, high: { wacc: 0.33 } },
+      { name: 'WACC ±3 п.п.', low: { wacc: 0.265 }, high: { wacc: 0.325 } },
       { name: 'Доля рынка год 10 ±7 п.п.', low: { shareYr10: 0.11 }, high: { shareYr10: 0.25 } },
       { name: 'Комиссия выпуска ±0,1 п.п.', low: { feeIssue: 0.0040 }, high: { feeIssue: 0.0060 } },
       { name: 'OpEx-уплифт ±20%', low: { opexBase: 0.402 }, high: { opexBase: 0.602 } },

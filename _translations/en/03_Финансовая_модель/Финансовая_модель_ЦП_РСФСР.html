@@ -270,8 +270,8 @@ otherwise stated, amounts are in RUB millions; the collateral capacity
 and the DFA volumes are in RUB billions. <strong>Reference
 date:</strong> 24.05.2026 (full refactor following the composite audit;
 single Source of Truth — <code>_Мастер/Единые_показатели_v2.md</code>).
-<strong>Fixed market parameters:</strong> CBR key rate 21%, FX USD/RUB
-89.0, ERP RF 9%, RF (10Y OFZ) 15.5%, inflation target 4%.</p>
+<strong>Fixed market parameters:</strong> CBR key rate 14.5, FX USD/RUB
+71.55, ERP RF 8.13, RF (10Y OFZ) 14.73, inflation target 4%.</p>
 <p>The file is presented as a machine-readable model in Markdown format
 with explicit formulas in comments. All calculations below are performed
 by hand using the same formulas that are reproduced in
@@ -642,11 +642,11 @@ exemption for DFA transactions)</td>
 </tr>
 <tr>
 <td>CBR key rate on 24.05.2026</td>
-<td>21.0%</td>
+<td>14.5</td>
 </tr>
 <tr>
 <td>RF (10Y OFZ, 24.05.2026)</td>
-<td>15.5%</td>
+<td>14.73</td>
 </tr>
 <tr>
 <td>ERP RF (Damodaran May 2026)</td>
@@ -1196,7 +1196,7 @@ close the gap with a buffer of RUB +561 mn.</p>
 <h2 id="sheet-4.-valuation-sensitivity-multi-stage">Sheet 4. Valuation
 &amp; Sensitivity (multi-stage)</h2>
 <h3 id="base-scenario-kpis-synchronised-with-sot-v3">Base scenario —
-KPIs (synchronised with SoT v3)</h3>
+KPIs (synchronised with SoT v4)</h3>
 <table>
 <colgroup>
 <col style="width: 30%" />
@@ -1212,31 +1212,26 @@ KPIs (synchronised with SoT v3)</h3>
 </thead>
 <tbody>
 <tr>
-<td><strong>NPV @ WACC 30%, multi-stage TV</strong></td>
-<td style="text-align: right;"><strong>RUB 51,200 mn</strong></td>
-<td>≈ RUB 51.2 bn (full DCF EV = 41.8 + 7.4 + 1.96)</td>
+<td><strong>NPV @ WACC 29.5, multi-stage TV</strong></td>
+<td style="text-align: right;"><strong>RUB 63,450 mn</strong></td>
+<td>≈ RUB 63.4 bn (full DCF EV = 43.0 + 20.5)</td>
 </tr>
 <tr>
-<td>NPV ex-TV (only 10Y FCF, WACC 30%)</td>
-<td style="text-align: right;">RUB 41,800 mn</td>
-<td>Sum of discounted FCF 2025–2034 = RUB 41.78 bn</td>
+<td>NPV ex-TV (only 10Y FCF, WACC 29.5)</td>
+<td style="text-align: right;">RUB 43,000 mn</td>
+<td>Sum of discounted FCF 2025–2034 = RUB 43.0 bn</td>
 </tr>
-<tr>
-<td>Multi-stage TV — phases I+II (FCF 2035–2044, discounted to
-2025)</td>
-<td style="text-align: right;">RUB 7,400 mn</td>
-<td>Explicit fade phase: g (6% → 2.5%) and margin (75% → 65%)</td>
-</tr>
+
 <tr>
 <td>Multi-stage TV — perpetuity (FCF 2045+, discounted to 2025)</td>
-<td style="text-align: right;">RUB 1,960 mn</td>
-<td>g = 2%, EBITDA 60%; share in full NPV = 3.8% (SoT v3 § 5)</td>
+<td style="text-align: right;">RUB 20,500 mn</td>
+<td>g = 2%, EBITDA 60%; share in full NPV = ~32% (SoT v4 § 5)</td>
 </tr>
 <tr>
 <td><strong>Project-level IRR</strong></td>
 <td style="text-align: right;"><strong>~62%</strong> (project on
 FCF+TV)</td>
-<td>Investor-level Y7 at a 15.8% stake ≈ 28.6%</td>
+<td>Investor-level Y7 at a 13.04 stake ≈ 28.6%</td>
 </tr>
 <tr>
 <td><strong>Project-level Payback</strong></td>
@@ -1255,7 +1250,7 @@ round)</td>
 <td style="text-align: right;"><strong>12×</strong> (defensible
 benchmark 8–12×)</td>
 <td>exit-on-multiple under the Stage 2 horizon + Series B path. Baseline
-6.06× at a 15.8% stake and NPV 51.2</td>
+6.06× at a 13.04 stake and NPV 63.4</td>
 </tr>
 <tr>
 <td>Year-5 revenue (2029)</td>
@@ -1276,12 +1271,12 @@ benchmark 8–12×)</td>
 </table>
 <p><strong>Equity Multiple 12× (exit-on-multiple)</strong> — defensible
 upper benchmark on the Series B path (8.77×) + Stage 2 horizon (mandate
-expansion 2029+). The Stage-1 baseline exit-on-multiple value at a 15.8%
-investor stake and a full NPV of 51.2 is 6.06×. Defensible via rapid
+expansion 2029+). The Stage-1 baseline exit-on-multiple value at a 13.04
+investor stake and a full NPV of 63.4 is 6.06×. Defensible via rapid
 scaling 2028–2030 and the transition to the Stage-2 mandate
 expansion.</p>
 <h3 id="scenarios-synchronised-with-sot-v3-8-weights-305515">Scenarios
-(synchronised with SoT v3 § 8, weights 30/55/15)</h3>
+(synchronised with SoT v4 § 8, weights 30/55/15)</h3>
 <table>
 <colgroup>
 <col style="width: 13%" />
@@ -1295,7 +1290,7 @@ expansion.</p>
 <tr>
 <th>Scenario</th>
 <th style="text-align: right;">Pre-money</th>
-<th style="text-align: right;">Full NPV (WACC 30%)</th>
+<th style="text-align: right;">Full NPV (WACC 29.5)</th>
 <th style="text-align: right;">Project-level IRR</th>
 <th style="text-align: right;">Project-level Payback</th>
 <th style="text-align: right;">Probability</th>
@@ -1312,8 +1307,8 @@ expansion.</p>
 </tr>
 <tr>
 <td><strong>Base</strong> (wedge-pilot 2026–2028, share 18%)</td>
-<td style="text-align: right;">USD 80M</td>
-<td style="text-align: right;"><strong>RUB 51.2 bn</strong></td>
+<td style="text-align: right;">USD 100M</td>
+<td style="text-align: right;"><strong>RUB 63.4 bn</strong></td>
 <td style="text-align: right;">161%</td>
 <td style="text-align: right;">3.24 y</td>
 <td style="text-align: right;">55%</td>
@@ -1329,8 +1324,8 @@ expansion.</p>
 </tr>
 <tr>
 <td><strong>Expected Value (full NPV)</strong></td>
-<td style="text-align: right;">USD 88M</td>
-<td style="text-align: right;"><strong>RUB 55.8 bn</strong></td>
+<td style="text-align: right;">USD 106M</td>
+<td style="text-align: right;"><strong>RUB 60.1</strong></td>
 <td style="text-align: right;">—</td>
 <td style="text-align: right;">—</td>
 <td style="text-align: right;">100%</td>
@@ -1338,16 +1333,16 @@ expansion.</p>
 </tbody>
 </table>
 <blockquote>
-<p><strong>Investor-level KPIs (for a Seed investor at 15.8%, exit
+<p><strong>Investor-level KPIs (for a Seed investor at 13.04, exit
 Y7):</strong> IRR Base ≈ 28.6%; Payback by cash distribution ≈ 4.21
 years. Project-level vs investor-level — two different axes: the first
 answers “how much is the entire project worth”, the second “how much
 will the Seed investor recover over their horizon”.</p>
 </blockquote>
 <h3 id="sensitivities-synchronised-with-sot-v3-9">Sensitivities
-(synchronised with SoT v3 § 9)</h3>
+(synchronised with SoT v4 § 9)</h3>
 <h4 id="npv-rub-bn-wacc-market-share-baseline-ks21-share-1.0-21">NPV
-(RUB bn): WACC × Market share (baseline KS=21%, share ×1.0 = 21%)</h4>
+(RUB bn): WACC × Market share (baseline KS=14.5, share ×1.0 = 14.5)</h4>
 <table>
 <colgroup>
 <col style="width: 13%" />
@@ -1362,7 +1357,7 @@ will the Seed investor recover over their horizon”.</p>
 <th>WACC  Share</th>
 <th style="text-align: right;">×0.5 (10.5%)</th>
 <th style="text-align: right;">×0.75 (15.75%)</th>
-<th style="text-align: right;">×1.0 (21%)</th>
+<th style="text-align: right;">×1.0 (14.5)</th>
 <th style="text-align: right;">×1.25 (26.25%)</th>
 <th style="text-align: right;">×1.5 (31.5%)</th>
 </tr>
@@ -1388,7 +1383,7 @@ will the Seed investor recover over their horizon”.</p>
 <td><strong>30% (base)</strong></td>
 <td style="text-align: right;">25</td>
 <td style="text-align: right;">35</td>
-<td style="text-align: right;"><strong>51.2</strong></td>
+<td style="text-align: right;"><strong>63.4</strong></td>
 <td style="text-align: right;">66</td>
 <td style="text-align: right;">81</td>
 </tr>
@@ -1435,7 +1430,7 @@ will the Seed investor recover over their horizon”.</p>
 <tr>
 <td><strong>0 (base)</strong></td>
 <td style="text-align: right;">57</td>
-<td style="text-align: right;"><strong>51.2</strong></td>
+<td style="text-align: right;"><strong>63.4</strong></td>
 <td style="text-align: right;">46</td>
 <td style="text-align: right;">41</td>
 <td style="text-align: right;">37</td>
@@ -1469,7 +1464,7 @@ drivers)</h4>
 <td style="text-align: right;">± 20</td>
 </tr>
 <tr>
-<td>WACC (30% ± 3 p.p.)</td>
+<td>WACC (29.5 ± 3 p.p.)</td>
 <td style="text-align: right;">± 12</td>
 </tr>
 <tr>
@@ -1547,7 +1542,7 @@ stake 17.4%) closes the gap without a bridge.</li>
 </ul>
 <h4 id="break-even-analysis">Break-even analysis</h4>
 <ul>
-<li>Revenue at NPV = 0 at WACC 30%: RUB 22.8 bn in 2030 (vs the plan of
+<li>Revenue at NPV = 0 at WACC 29.5: RUB 22.8 bn in 2030 (vs the plan of
 RUB 65 bn) — a large safety margin.</li>
 </ul>
 <hr />
@@ -1564,7 +1559,7 @@ same slider settings.</p>
 (updated post-audit)</h2>
 <ol type="1">
 <li><strong>WACC</strong> = build-up without double-CRP in
-RUB-denominated RF; β = 1.15 (Damodaran fintech 2026); ERP RF 9%
+RUB-denominated RF; β = 1.15 (Damodaran fintech 2026); ERP RF 8.13
 (Damodaran May 2026). Resulting 30% is a defensible minimum.</li>
 <li><strong>Multi-stage TV</strong> has replaced Gordon — the TV share
 in NPV has dropped from 49% to 9%.</li>
@@ -1573,12 +1568,12 @@ given OpEx growth with scale.</li>
 <li><strong>Equity Multiple</strong> 12× (exit-on-multiple) — within the
 upper band of tier-1 fintech.</li>
 <li><strong>Scenarios</strong> have explicit weights (15/55/30) and
-Expected Value of USD 88M.</li>
+Expected Value of USD 106M.</li>
 <li><strong>Sensitivities</strong> have been extended: added OpEx ×
 timing, TV EBITDA margin × g, Monte Carlo, cash-runway stress,
 break-even.</li>
-<li><strong>FX</strong> is fixed: RUB/USD 89.0 as of 24.05.2026.</li>
-<li><strong>CBR key rate</strong> is fixed: 21.0% as of 24.05.2026.</li>
+<li><strong>FX</strong> is fixed: RUB/USD 71.55 as of 24.05.2026.</li>
+<li><strong>CBR key rate</strong> is fixed: 14.5 as of 24.05.2026.</li>
 </ol>
 <hr />
 <p><strong>Date:</strong> 24.05.2026 (refactor following the composite

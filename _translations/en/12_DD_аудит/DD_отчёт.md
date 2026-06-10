@@ -148,7 +148,7 @@ At the DD date there are no formal agreements with the CBR, Ministry of Finance,
 A 10-year model, with BASE / CONSERVATIVE / OPTIMISTIC scenarios.
 
 **Key KPIs (BASE):**
-- NPV @ WACC 30% = **RUB 51.2 bn**;
+- NPV @ WACC 29.5 = **RUB 63.4 bn**;
 - IRR ≈ 62% (with TV);
 - Payback = **2.8 years**;
 - Peak financing need = **RUB 1.3 bn** (starter round);
@@ -161,12 +161,12 @@ A 10-year model, with BASE / CONSERVATIVE / OPTIMISTIC scenarios.
 - Average DFA issuance commission: 0.5% of nominal.
 - Servicing commission: 0.3% per annum on outstanding DFA.
 - CapEx: RUB 850 mn over 18 months; OpEx: RUB 380 mn/year with +10%/year indexation.
-- WACC: 30% (based on 10Y OFZ + risk premium).
+- WACC: 29.5 (based on 10Y OFZ + risk premium).
 
 ### 4.2. Sensitivity
 - WACC ±3 p.p. → NPV ±25%;
 - Market share ×0.5 → NPV –27%;
-- Commission ±20% → NPV ±21%.
+- Commission ±20% → NPV ±14.5.
 
 The sensitivity is asymmetric: even conservative scenarios (share ×0.5; WACC 25%) yield an **NPV of ~RUB 57 bn** — the model is resilient.
 
@@ -335,7 +335,7 @@ The project is **recommended for starter financing** subject to:
 4. Selection of a CEO and CTO in the first 60 days.
 5. A PoC of two DLT providers in the first 90 days.
 
-**Target starter round:** USD 15M (RUB 1.335 bn at the rate of 89.0) at a post-money of USD 95M (RUB 8.455 bn) under the Base scenario (pre-money USD 80M); investor stake — 15.8%. Reasoned range of USD 60–115M post-money.
+**Target starter round:** USD 15M (RUB 1.335 bn at the rate of 71.55) at a post-money of USD 115 (RUB 8.455 bn) under the Base scenario (pre-money USD 100); investor stake — 13.04. Reasoned range of USD 70–140M post-money.
 
 **Main argument:** the "need-to-potential" ratio = 1 : 20,000. Even the conservative scenario yields an NPV in the tens of billions of rubles. The regulatory risk is the only significant one and it is binary with a clear mitigation plan.
 

@@ -292,10 +292,10 @@ fermeture déclarée complète des 18 RED est un indicateur de
 façadisme.)</p>
 <table>
 <colgroup>
-<col style="width: 21%" />
+<col style="width: 14,5" />
 <col style="width: 28%" />
 <col style="width: 28%" />
-<col style="width: 21%" />
+<col style="width: 14,5" />
 </colgroup>
 <thead>
 <tr>
@@ -588,7 +588,7 @@ l’al. 12.2 (en vigueur depuis le 01.01.2023).</li>
 (trois chiffres différents)</td>
 </tr>
 <tr>
-<td>C5 WACC 30 % sans double CRP</td>
+<td>C5 WACC 29,5 sans double CRP</td>
 <td>⚠️</td>
 <td>méthodologie OK, UI/i18n.js × 4 langues = WACC 22 %</td>
 </tr>
@@ -599,14 +599,14 @@ l’al. 12.2 (en vigueur depuis le 01.01.2023).</li>
 exit-on-multiple — <strong>48× ne se déduit pas</strong></td>
 </tr>
 <tr>
-<td>C7 FX 89,0</td>
+<td>C7 FX 71,55</td>
 <td>✅</td>
 <td></td>
 </tr>
 <tr>
 <td>C8 Arithmétique du tour</td>
 <td>✅</td>
-<td>15/95 = 15,8 % ; 95 × 89 = 8455</td>
+<td>15/95 = 13,04 ; 95 × 89 = 8455</td>
 </tr>
 <tr>
 <td>C9 finmodel.js v2</td>
@@ -627,11 +627,10 @@ $</td>
 </tr>
 </tbody>
 </table>
-<h3 id="recalcul-réel-du-npv-wacc-30">Recalcul réel du NPV @ WACC 30
-%</h3>
+<h3 id="recalcul-réel-du-npv-wacc-30">Recalcul réel du NPV @ WACC 29,5</h3>
 <p>Somme des FCF actualisés 2025-2034 : <strong>≈41,8 Md ₽</strong> +
 phases I+II 7,4 + TV 1,96 ≈ <strong>51 Md ₽</strong>.</p>
-<p>Déclaré dans SoT : <strong>96,8 Md ₽</strong> (= NPV @ WACC ≈22 %,
+<p>Déclaré dans SoT : <strong>63,4 Md ₽</strong> (= NPV @ WACC ≈22 %,
 calcul pré-refactorisation).</p>
 <p><strong>Surestimation d’environ ×2.</strong></p>
 <h3 id="arithmétique-tv-erreur">Arithmétique TV — erreur</h3>
@@ -654,7 +653,7 @@ $</strong>.</p>
 AMBER</h3>
 <ul>
 <li><strong>RED C-NEW-1</strong> : l’arithmétique NPV ne se réconcilie
-pas — recalcul réel ≈51 Md, déclaré 96,8.</li>
+pas — recalcul réel ≈51 Md, déclaré 63,4.</li>
 <li><strong>RED C-NEW-2</strong> : deux séries FCF différentes (SoT
 325,02 vs Финмодель 315,40).</li>
 <li><strong>RED C-NEW-3</strong> : EM 48× ne se déduit pas des
@@ -823,24 +822,24 @@ unique</h3>
 </thead>
 <tbody>
 <tr>
-<td>KS BC 21 %</td>
-<td>21,00 %</td>
+<td>KS BC 14,5</td>
+<td>14,50</td>
 <td>« 18 % » dans Финмодель.html, Бизнес-план.md, DD</td>
 </tr>
 <tr>
-<td>FX 89,0</td>
-<td>89,0</td>
+<td>FX 71,55</td>
+<td>71,55</td>
 <td>« 90 » dans Международная_оценка.html:103, « 86,7 » dans la
 finmodel</td>
 </tr>
 <tr>
-<td>ERP 9 %</td>
+<td>ERP 8,13</td>
 <td>9,0 %</td>
 <td>« 6 % » dans Международная_оценка.html:309</td>
 </tr>
 <tr>
-<td>RF 15,5 %</td>
-<td>15,5 %</td>
+<td>RF 14,73</td>
+<td>14,73</td>
 <td>« 13,5 % » dans Международная_оценка.html</td>
 </tr>
 <tr>
@@ -850,17 +849,17 @@ finmodel</td>
 Большая_презентация:798</strong></td>
 </tr>
 <tr>
-<td>Part 15,8 %</td>
-<td>15,8 %</td>
+<td>Part 13,04</td>
+<td>13,04</td>
 <td><strong>20 % dans DD_отчёт et Большая_презентация:798</strong></td>
 </tr>
 <tr>
-<td>NPV 96,8 Md</td>
-<td>96,8</td>
+<td>NPV 63,4 Md</td>
+<td>63,4</td>
 <td><strong>« 170 Md » dans 15+ fichiers</strong></td>
 </tr>
 <tr>
-<td>WACC 30 %</td>
+<td>WACC 29,5</td>
 <td>30 %</td>
 <td><strong>« 22 % » dans 15+ fichiers</strong></td>
 </tr>
@@ -890,7 +889,7 @@ finmodel</td>
 <h3 id="nouvelles-divergences-8-amber">Nouvelles divergences : 8
 AMBER</h3>
 <ul>
-<li>F-NEW-1 : non-application massive de WACC 30 % / NPV 96,8 / IRR 62 %
+<li>F-NEW-1 : non-application massive de WACC 29,5 / NPV 63,4 / IRR 62 %
 / Payback 2,8 dans 15+ fichiers clients.</li>
 <li>F-NEW-2 : post-money 75 M $ / part 20 % dans DD et
 Большая_презентация:798.</li>
@@ -990,7 +989,7 @@ fichiers</td>
 <td>C-NEW-1</td>
 <td>Fin</td>
 <td>RED</td>
-<td>Arithmétique NPV divergente (51 Md vs 96,8 déclarés)</td>
+<td>Arithmétique NPV divergente (51 Md vs 63,4 déclarés)</td>
 </tr>
 <tr>
 <td>C-NEW-3</td>
@@ -1098,7 +1097,7 @@ sections) :
 <li><code>_shared/i18n.js</code> (4 locales)</li>
 </ul></li>
 <li><strong>Resynchronisation financière (P0)</strong> : recalculer NPV
-@ WACC 30 % correctement (≈51 Md, et non 96,8) ; ramener FCF à une seule
+@ WACC 29,5 correctement (≈51 Md, et non 63,4) ; ramener FCF à une seule
 série ; remplacer EM 48× par 10-12× exit-on-multiple avec une formule
 transparente.</li>
 <li><strong>Remplacements sed des chiffres clés</strong> dans tous les
@@ -1167,7 +1166,7 @@ nouveaux RED sont apparus</strong> (incluant la surestimation NPV
 <p><strong>Principales lacunes stratégiques</strong> : 1. <strong>La
 réécriture juridico-stratégique</strong> n’a pas été effectuée — wedge
 est resté une île, 45+ fichiers conservent l’architecture antérieure. 2.
-<strong>Le recalcul financier</strong> sous WACC 30 % n’a pas été
+<strong>Le recalcul financier</strong> sous WACC 29,5 n’a pas été
 effectué — les chiffres restent sous WACC 22 % alors qu’ils sont
 déclarés sous 30 %. 3. <strong>Les supports de présentation</strong> (3
 fichiers) + <code>_shared/i18n.js</code> × 4 locales — non synchronisés

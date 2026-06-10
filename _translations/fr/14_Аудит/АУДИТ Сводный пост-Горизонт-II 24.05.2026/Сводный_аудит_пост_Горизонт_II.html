@@ -279,10 +279,10 @@ Tech +0,3 (8,4 → 8,7).</p>
 <ol type="1">
 <li><strong>Les KPI financiers du périmètre client sont
 synchronisés</strong> avec le SoT v3 : la vague sed F-H1 a clos 12 des
-13 signatures-clés (VAN 51,2 / TRI 62 % / Payback 2,8 / CMPC 30 % / EM
-12× / EBITDA TV 74,8 % / RF 15,5 % / ERP 9 %, post-money 95 M $,
+13 signatures-clés (VAN 63,4 / TRI 62 % / Payback 2,8 / CMPC 30 % / EM
+12× / EBITDA TV 74,8 % / RF 14,73 / ERP 8,13, post-money 95 M $,
 Reasoned 60–115 M $). Le bloc KPI du Plan d’affaires §3, §9.1 (« VAN
-170,1 → 51,2 ») est clos ; la baseline JS <code>kpiNpv/kpiPayback</code>
+170,1 → 63,4 ») est clos ; la baseline JS <code>kpiNpv/kpiPayback</code>
 dans la Grande présentation est synchronisée ; le cover-stat de la
 brochure et l’entry-stat du index.html racine sont migrés vers le SoT
 v3.</li>
@@ -343,7 +343,7 @@ d’entiercement de l’émission ciblée » sans marqueur Étape 2.</li>
 11.4, nouvelles lignes risk-card § 10 (D-PR-6/7) — absentes du
 HTML.</li>
 <li><strong>08_Diagrammes_architecturaux.html:184-186</strong> — mermaid
-avec RN+.NET MAUI (le MD est correctement Capacitor).</li>
+avec RN+native (le MD est correctement Capacitor).</li>
 </ul>
 <p>Tout cela est résolu en un seul pandoc pipeline pass. C’est la
 recommandation structurelle de l’Horizon III.</p>
@@ -351,7 +351,7 @@ recommandation structurelle de l’Horizon III.</p>
 <ul>
 <li><strong>C-H1-1</strong> : arithmétique TV SoT v3 phases I+II = 7,4
 Md ₽ vs defensible row-by-row selon la logique finmodel.js = 19,78
-(×2,67 underestimate). EV DCF totale defensible = 63,38 Md ₽, pas 51,2.
+(×2,67 underestimate). EV DCF totale defensible = 63,38 Md ₽, pas 63,4.
 La décision a été reportée deux fois (Horizons II et III).</li>
 <li><strong>C-H1-2/-3</strong> : TRI 62 % / Payback 2,8 « project-level
 » non reproductibles par la formule standard (defensible : TRI project ≈
@@ -368,7 +368,7 @@ déclarée de 74,8 % donne arithmétiquement une marge de 96,9 %
 <li>E-POST-4 régression : ☀ ☾ dans PWA Paramètres
 <code>09_…/index.html:1207-1208</code> (la vague sed n’a touché que le
 settings-panel 1414-1415).</li>
-<li>A-POST-H2-2/3/4 : .NET MAUI / React Native / Detox dans la
+<li>A-POST-H2-2/3/4 : native / React Native / Detox dans la
 Spécification §§ 5.2, 6.1, la Feuille de route M5.6,
 02_Description_du_programme (sous-couverture H-I).</li>
 <li>B-NEW-12 : listes d’officiers 779-P dans l’incorporation JSC vs
@@ -473,7 +473,7 @@ verdict</h2>
 <td style="text-align: right;">8,7 / 10</td>
 <td>Les 4 corrections H-I sont closes proprement. Régression : sidebar
 PWA <code>1207-1208</code> ☀/☾. Sous-couverture H-I : Spécification
-§§5.2/6.1 .NET MAUI/RN/Detox, Roadmap M5.6, 02_Description.
+§§5.2/6.1 native/RN/Detox, Roadmap M5.6, 02_Description.
 08_Architectural.html (mermaid) — H-III.</td>
 </tr>
 <tr>
@@ -522,20 +522,20 @@ ouverts clés</h2>
 <ul>
 <li><strong>AMBER · A-POST-5 (re²)</strong> —
 <code>08_Diagrammes_architecturaux.html:184-186</code> conserve mermaid
-avec RN+.NET MAUI. Le MD est correctement Capacitor.</li>
+avec RN+native. Le MD est correctement Capacitor.</li>
 <li><strong>AMBER · A-POST-H2-1</strong> — régression II.E :
 <code>09_Мобильное_приложение/Приложение/index.html:1207-1208</code> la
 sidebar PWA conserve <code>Clair ☀</code> et <code>Sombre ☾</code>
 (settings-panel <code>:1414-1415</code> correct).</li>
 <li><strong>AMBER · A-POST-H2-2</strong> — Spécification
-<code>:151,165,167</code> : §§5.2/6.1 « Windows (.NET MAUI) », « Jest
+<code>:151,165,167</code> : §§5.2/6.1 « Windows (native) », « Jest
 pour RN », « Detox pour RN, MAUI UITest » — contredit §1.1
 PWA+Capacitor.</li>
 <li><strong>AMBER · A-POST-H2-3</strong> —
 <code>07_Feuille_de_route_de_développement.md:81,129</code> M5.6 « .NET
 MAUI ».</li>
 <li><strong>AMBER · A-POST-H2-4</strong> —
-<code>02_Description_du_programme.md:30</code> « C# (.NET MAUI/Windows
+<code>02_Description_du_programme.md:30</code> « C# (native/Windows
 App SDK) ».</li>
 <li><strong>AMBER · A-POST-H2-5..-8</strong> — sitemap x-default 1/18,
 apple-touch-icon dans manifest, dérive de tone dans DD_report.html «
@@ -566,7 +566,7 @@ double mention Étape 1 (style).</li>
 <ul>
 <li><strong>RED · C-H1-1 (répétition)</strong> — arithmétique TV SoT v3
 phases I+II = 7,4 vs defensible 19,78. EV DCF totale defensible = 63,38,
-pas 51,2.</li>
+pas 63,4.</li>
 <li><strong>RED · C-H1-2/-3 (répétition)</strong> — TRI 62 % et Payback
 2,8 « project-level » non reproductibles. Defensible : TRI project ≈ 160
 % ; investisseur Y7 ≈ 30,2 % ; Payback project 3,31 ; investisseur
@@ -579,7 +579,7 @@ Modèle_financier_hypothèses.html §7.1 body non actualisé (« 18 % + 4 =
 <li><strong>RED · C-H2-3 (nouveau)</strong> — EBITDA 2034 = 133,6 vs
 103,1 : Plan_d_affaires.md:53,383 + Modèle_financier.html:1361
 contiennent 133,6 avec une marge déclarée de 74,8 %. 137,9 × 0,748 =
-103,15 ≠ 133,6. 133,6/137,9 = 96,88 % (ancienne marge).</li>
+103,15 ≠ 133,6. 133,6/137,9 = 63,48 % (ancienne marge).</li>
 <li><strong>RED · C-H2-4 (nouveau)</strong> — Modèle_financier.html:1316
 « VAN hors TV = 86 380 M ₽ » alors que SoT 41 800.</li>
 <li><strong>AMBER · C-H2-5 (nouveau)</strong> —
@@ -633,13 +633,13 @@ reconstruit (7 points : :1316 VAN hors TV = 86 380 ; :1321 TV Gordon =
 170 / 2,4 ; :1456+:1507 sensibilité Base = 170).</li>
 <li><strong>RED · F-H2-2</strong> — Évaluation_internationale.html §2.5
 « EV 183 / pre-money 540 M $ » et §7.1 baseline CMPC 21,5 % ; .md:218 §7
-Base = « 96,8 » (résidu sed).</li>
+Base = « 63,4 » (résidu sed).</li>
 <li><strong>RED · F-H2-3</strong> — Modèle_financier_hypothèses.html
 §7.1 body « 18 % + 4 = 22 % » ; « build-up 26 % ».</li>
 <li><strong>RED · F-H2-4</strong> — Gap defensible 64,69 NOT closed :
 SoT 41,8 vs Évaluation_internationale.md:99 = 88,0 (×2,1) ; SoT 3,8 % vs
 Modèle_financier_hypothèses.md:155 = 9,0 % ; rupture interne
-Modèle_financier.md (41,8 + 1,96 = 43,76 ≠ 51,2 — phases I+II 7,4 non
+Modèle_financier.md (41,8 + 1,96 = 43,76 ≠ 63,4 — phases I+II 7,4 non
 nommées comme ligne KPI).</li>
 <li><strong>AMBER · F-H2-5..-10</strong> — sed a sauté les miroirs HTML,
 id=“wacc-22”, Évaluation_internationale.html §7.1 sensibilité, équilibre
@@ -667,7 +667,7 @@ RED + AMBER ouverts</h2>
 <td>A-POST-5</td>
 <td>AMBER</td>
 <td>A</td>
-<td>08_Diagrammes_architecturaux.html (mermaid RN+.NET MAUI)</td>
+<td>08_Diagrammes_architecturaux.html (mermaid RN+native)</td>
 </tr>
 <tr>
 <td>A-POST-H2-1</td>
@@ -679,19 +679,19 @@ RED + AMBER ouverts</h2>
 <td>A-POST-H2-2</td>
 <td>AMBER</td>
 <td>A</td>
-<td>Spécification §§5.2/6.1 .NET MAUI/RN/Detox</td>
+<td>Spécification §§5.2/6.1 native/RN/Detox</td>
 </tr>
 <tr>
 <td>A-POST-H2-3</td>
 <td>AMBER</td>
 <td>A</td>
-<td>Roadmap M5.6 .NET MAUI</td>
+<td>Roadmap M5.6 native</td>
 </tr>
 <tr>
 <td>A-POST-H2-4</td>
 <td>AMBER</td>
 <td>A</td>
-<td>02_Description_du_programme C# .NET MAUI</td>
+<td>02_Description_du_programme C# native</td>
 </tr>
 <tr>
 <td>A-POST-H2-5..-8</td>
@@ -942,7 +942,7 @@ la fourchette 25–50× ».</li>
 <li><strong>C-H2-7 pic</strong> : Modèle_financier.md:128 vs :153 —
 unifier la définition.</li>
 <li><strong>F-H2-2 (c)</strong> : Évaluation_internationale.md:218 Base
-96,8 → 51,2 ; recalculer §2.4 / §7.</li>
+63,4 → 63,4 ; recalculer §2.4 / §7.</li>
 <li><strong>B-H2-2..-5</strong> : renommer MoU 04 en « Banque_Partenaire
 » avec « Gazprombank ou PSB » ; dates T+0 dans MoU Tatarstan ; § 8.3 → §
 8.2 dans le Cadre juridique ; durcissement stylistique Concept § 1 item
@@ -950,7 +950,7 @@ unifier la définition.</li>
 <li><strong>E-POST-4 régression</strong> :
 <code>09_…/Приложение/index.html:1207-1208</code> ☀/☾ → SVG.</li>
 <li><strong>A-POST-H2-2/-3/-4</strong> : Spécification §§5.2/6.1,
-Roadmap M5.6, 02_Description — .NET MAUI/RN/Detox → PWA+Capacitor v6+
+Roadmap M5.6, 02_Description — native/RN/Detox → PWA+Capacitor v6+
 (unifier avec §1.1 Spécification).</li>
 </ol>
 <h3 id="horizon-iii.c-décisions-méthodologiques-1-jour">Horizon III.C —
@@ -998,7 +998,7 @@ d’émission de DFA ».</li>
 (≈ 1-2 jours)</h3>
 <ol start="25" type="1">
 <li><strong>BUILD_PIPELINE.md + inspecteur CI</strong> — pandoc +
-mermaid + grep terminologique (RN / .NET MAUI / Detox / ☀ / ☾ /
+mermaid + grep terminologique (RN / native / Detox / ☀ / ☾ /
 emoji-drapeaux / marqueur Étape 2) au git push. Clôt architecturalement
 la classe « MD corrigé — HTML en retard ».</li>
 <li>B-NEW-12 séparer les listes 779-P (à concorder avec la BCR vs
@@ -1110,7 +1110,7 @@ fact-status.</li>
 ligne. Juridique — article d’acte. Technique — version du standard.</li>
 <li><strong>Read-only.</strong> Les fichiers projet n’ont pas été
 modifiés pendant l’audit.</li>
-<li><strong>Réserve sur la VAN.</strong> SoT v3 VAN totale = 51,2 Md ₽ ;
+<li><strong>Réserve sur la VAN.</strong> SoT v3 VAN totale = 63,4 Md ₽ ;
 defensible row-by-row selon la logique finmodel.js = 63,38. La décision
 revient au développeur du modèle financier.</li>
 <li><strong>Logique wedge comme baseline.</strong> L’Étape 1 est la

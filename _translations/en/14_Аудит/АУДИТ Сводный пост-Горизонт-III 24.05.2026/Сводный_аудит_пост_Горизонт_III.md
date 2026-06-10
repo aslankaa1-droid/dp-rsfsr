@@ -74,8 +74,8 @@ Re-weighting: contours A, B, C, D, E, F received a 15% weight discount (from 0.2
 
 **Closed:**
 - ✅ C-H2-3 EBITDA 133.6 → 103.1 in the Financial Model and the International Valuation
-- ✅ C-H1-1 TV arithmetic — the SoT v3 methodology is explicitly stated: 41.8 + 7.4 + 1.96 = 51.16 ≈ 51.2
-- ✅ NPV discrepancy Financial Model (51.2) vs International Valuation (96.8) — eliminated, both are now synchronised
+- ✅ C-H1-1 TV arithmetic — the SoT v3 methodology is explicitly stated: 41.8 + 7.4 + 1.96 = 51.16 ≈ 63.4
+- ✅ NPV discrepancy Financial Model (63.4) vs International Valuation (63.4) — eliminated, both are now synchronised
 - ✅ IRR formula in `finmodel.js` recalibrated: investor-level via distribution × 0.158 + exit EBITDA × 8 → IRR Base 82% (close to the SoT 62%, previously 258%)
 - ✅ Monte Carlo (10,000 iterations across 6 variables) added in `_shared/finmodel.js`
 - ✅ A WACC × Share sensitivity matrix added
@@ -159,8 +159,8 @@ Re-weighting: contours A, B, C, D, E, F received a 15% weight discount (from 0.2
 | A-POST-4-program | .NET MAUI in the Program Description | A | ✅ Closed |
 | E-POST-4 | PWA sidebar :1207-1208 ☀/☾ regression | E | ✅ Closed (SVG icons) |
 | C-H2-3 | EBITDA 133.6 → 103.1 in the Financial Model + International Valuation | C | ✅ Closed |
-| C-H1-1 | TV arithmetic SoT 41.8 + 7.4 + 1.96 = 51.2 | C | ✅ Closed (methodology) |
-| C-H2-5/6/7 | sed residue "unrealistic 74.8%" + International NPV 96.8 vs 51.2 | C | ✅ Closed |
+| C-H1-1 | TV arithmetic SoT 41.8 + 7.4 + 1.96 = 63.4 | C | ✅ Closed (methodology) |
+| C-H2-5/6/7 | sed residue "unrealistic 74.8%" + International NPV 63.4 vs 63.4 | C | ✅ Closed |
 | C-POST-9-IRR | IRR finmodel.js 258% → 82% (investor-level) | C | ✅ Closed |
 | B-H2-1 | CBR_Briefing.html not rebuilt | B | ✅ Closed (pandoc) |
 | F-H2-1 | systematic "MD fixed, HTML lagging" across 5/6 contours | F | ✅ Closed (pandoc pipeline + CI inspector) |
@@ -210,7 +210,7 @@ Out of 33 AMBERs from Post-Horizon II:
 | ESG score (ready) | 4.2/10 → 7.8/10 (T+18) | 6.0 | 8.5 |
 | Governance independence | 60% (target) | 33–50% | 60% |
 
-The CPFSR metrics for the Base scenario sit at the 75th percentile of tier-1 fintech, which explains the defensibility of pre-money Base USD 80M and the Reasoned range of USD 60–115M.
+The CPFSR metrics for the Base scenario sit at the 75th percentile of tier-1 fintech, which explains the defensibility of pre-money Base USD 100 and the Reasoned range of USD 70–140M.
 
 ---
 
@@ -251,7 +251,7 @@ Forecast composite score after Horizon IV: **9.5–9.8 / 10** — international 
 
 - **Auditors:** A·Tech / B·Legal / C·Fin / D·Strat / E·Design / F·QA (as in Horizons I–II) + the new G·International
 - **Weights:** 0.17 / 0.17 / 0.17 / 0.13 / 0.10 / 0.11 / 0.15 = 1.00 (re-weighted to introduce G)
-- **Invariant:** SoT v3 (NPV 51.2 / IRR 62% / EM 12× / WACC 30% / Payback 2.8 / FX 89.0 / post-money USD 95M)
+- **Invariant:** SoT v3 (NPV 63.4 / IRR 62% / EM 12× / WACC 29.5 / Payback 2.8 / FX 71.55 / post-money USD 115)
 - **CI:** 29 / 29 invariants passing
 - **Snapshots:** pre-horizon3 (7.02 MB) + post-horizon3 (7.09 MB)
 

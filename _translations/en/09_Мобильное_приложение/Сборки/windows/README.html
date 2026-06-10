@@ -269,7 +269,7 @@ build</h2>
 <p>The fastest path: packaging the existing PWA into an MSIX package via
 <strong>PWA Builder</strong> or directly through <strong>Microsoft Edge
 WebView2</strong>.</p>
-<h3 id="b.-.net-maui-webview2">B. .NET MAUI + WebView2</h3>
+<h3 id="b.-.net-maui-webview2">B. native + WebView2</h3>
 <p>A full-fledged native Windows application with PWA integration via
 the WebView2 control. Provides more capabilities (native Windows Hello
 biometrics, protected storage), but requires more work.</p>
@@ -316,7 +316,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="
 <p>For a production build, an EV Code Signing Certificate is used
 (domestic CAs: SkyDNS, RU-CENTER).</p>
 <hr />
-<h2 id="approach-b-.net-maui-webview2">3. Approach B: .NET MAUI +
+<h2 id="approach-b-.net-maui-webview2">3. Approach B: native +
 WebView2</h2>
 <h3 id="requirements-1">Requirements</h3>
 <ul>
@@ -327,7 +327,7 @@ workload.</li>
 </ul>
 <h3 id="project-creation">Project creation</h3>
 <ol type="1">
-<li>Visual Studio → New Project → .NET MAUI App.</li>
+<li>Visual Studio → New Project → native App.</li>
 <li>Name: <code>RU.RSFSR.App</code>.</li>
 <li>Location: <code>Сборки/windows/</code>.</li>
 <li>Framework: .NET 8.</li>

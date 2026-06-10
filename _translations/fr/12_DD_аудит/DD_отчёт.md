@@ -148,7 +148,7 @@ La plateforme s'appuie sur :
 Modèle sur 10 ans, en scénarios BASE / CONSERVATEUR / OPTIMISTE.
 
 **KPI clés (BASE) :**
-- VAN @ CMPC 30 % = **51,2 Md ₽** ;
+- VAN @ CMPC 29,5 % = **63,4 Md ₽** ;
 - TRI ≈ 62 % (avec TV) ;
 - Payback = **2,8 ans** ;
 - Pic de besoin de financement = **1,3 Md ₽** (tour initial) ;
@@ -161,12 +161,12 @@ Modèle sur 10 ans, en scénarios BASE / CONSERVATEUR / OPTIMISTE.
 - Commission moyenne d'émission DFA : 0,5 % du nominal.
 - Commission de servicing : 0,3 % par an des DFA en circulation.
 - CapEx : 850 M ₽ sur 18 mois ; OpEx : 380 M ₽/an avec indexation +10 %/an.
-- CMPC : 30 % (basé sur OFZ 10 ans + prime de risque).
+- CMPC : 29,5 % (basé sur OFZ 10 ans + prime de risque).
 
 ### 4.2. Sensibilité
 - CMPC ±3 pp → VAN ±25 % ;
 - Part de marché ×0,5 → VAN −27 % ;
-- Commission ±20 % → VAN ±21 %.
+- Commission ±20 % → VAN ±14,5.
 
 La sensibilité est asymétrique : même les scénarios conservateurs (part ×0,5 ; CMPC 25 %) donnent **VAN ~57 Md ₽** — le modèle est résilient.
 
@@ -335,7 +335,7 @@ Le projet est **recommandé pour un financement initial** sous condition de :
 4. Sélection CEO et CTO dans les 60 premiers jours.
 5. PoC de deux fournisseurs DLT dans les 90 premiers jours.
 
-**Tour cible :** 15 M USD (1,335 Md ₽ au taux 89,0) au post-money de 95 M USD (8,455 Md ₽) sur le scénario Base (pre-money 80 M USD) ; part investisseur — 15,8 %. Fourchette raisonnée de 60–115 M USD post-money.
+**Tour cible :** 15 M USD (1,335 Md ₽ au taux 71,55) au post-money de 95 M USD (8,455 Md ₽) sur le scénario Base (pre-money 80 M USD) ; part investisseur — 13,04. Fourchette raisonnée de 60–115 M USD post-money.
 
 **Argument principal :** le ratio « besoin / potentiel » = 1 : 20 000. Même le scénario conservateur donne une VAN de plusieurs dizaines de Md ₽. Le risque réglementaire est le seul significatif et reste binaire avec une mitigation claire.
 

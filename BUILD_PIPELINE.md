@@ -66,7 +66,7 @@ powershell -ExecutionPolicy Bypass -File _tools\ci_invariants.ps1
 ```
 
 Проверяет:
-- SoT-инварианты во всех MD/HTML: NPV 51,2 / IRR 62% / EM 12× / WACC 30% / Payback 2,8
+- SoT-инварианты во всех MD/HTML: NPV 63,4 / IRR 62% / EM 7–12× / WACC 29,5% / Payback 2,8
 - Отсутствие sed-residue: «X (вместо X)», «вместо самого себя»
 - Отсутствие следов ИИ-маркеров: `v1.0`, `draft`, `AI-generated`, `TODO`, `FIXME`, `Claude`, `GPT`
 - Согласованность hreflang в sitemap.xml
@@ -131,13 +131,13 @@ Pandoc-template содержит:
 Все числовые показатели проекта берутся из `_Мастер/Единые_показатели_v2.md`. При изменении SoT — обновить и пересобрать всё через `build_html.sh all`.
 
 Ключевые инварианты SoT v3 (24.05.2026):
-- NPV полная = 51,2 млрд ₽
+- NPV полная = 63,4 млрд ₽
 - IRR project-level = 62%
 - Payback = 2,8 года
-- WACC = 30% (build-up: RF 15,5 + ERP×β 10,35 + stage 1,5 + liq 2,5)
+- WACC = 29,5% (build-up: RF 15,5 + ERP×β 10,35 + stage 1,5 + liq 2,5)
 - Equity Multiple = 12× (защитимый верхний ориентир)
-- FX = 89,0 ₽/$
-- Pre-money Base = $80M; Post-money = $95M; Доля инвестора = 15,8%
+- FX = 71,55 ₽/$
+- Pre-money Base = $100M; Post-money = $115M; Доля инвестора = 13,04%
 
 ---
 

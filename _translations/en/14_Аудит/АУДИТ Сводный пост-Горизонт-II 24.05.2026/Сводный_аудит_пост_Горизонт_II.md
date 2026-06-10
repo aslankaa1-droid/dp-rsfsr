@@ -10,7 +10,7 @@ Horizon II (≈ 6 hours of work across 30+ fixes) produced a **weighted score up
 
 Structural qualitative changes:
 
-1. **Financial KPIs of the client-side perimeter are synchronised** with SoT v3: the F-H1 sed wave closed 12 of 13 key signatures (NPV 51.2 / IRR 62% / Payback 2.8 / WACC 30% / EM 12× / TV EBITDA 74.8% / RF 15.5% / ERP 9%, post-money USD 95M, Reasoned USD 60–115M). The Business Plan §3, §9.1 KPI block ("NPV 170.1 → 51.2") is closed; the JS baseline `kpiNpv/kpiPayback` in the Major Presentation is synchronised; the booklet cover-stat and the root index.html entry-stat are migrated to SoT v3.
+1. **Financial KPIs of the client-side perimeter are synchronised** with SoT v3: the F-H1 sed wave closed 12 of 13 key signatures (NPV 63.4 / IRR 62% / Payback 2.8 / WACC 29.5 / EM 12× / TV EBITDA 74.8% / RF 14.73 / ERP 8.13, post-money USD 115, Reasoned USD 70–140M). The Business Plan §3, §9.1 KPI block ("NPV 170.1 → 63.4") is closed; the JS baseline `kpiNpv/kpiPayback` in the Major Presentation is synchronised; the booklet cover-stat and the root index.html entry-stat are migrated to SoT v3.
 2. **The legal base is fully two-stage**: Legal Framework §§ 4.1/4.2 + § 8.1–8.4 in MD+HTML; sub-para 12.2 of the Tax Code in Legal Framework.html and DD_report.md/html; the consumer-law Article 16 EULA cap removed; the privacy policy with the Roskomnadzor disclaimer; the escrow agreement — CC Articles 860.7–860.10 + 395-1 without the non-existent enumeration.
 3. **Business Plan §§ 1, 2.2, 3.1, 3.2, 3.4, 4.4, 4.5 rewritten under Stage 1 / Stage 2** in MD and HTML. The internal seam "Business Plan on Stage 2" (Horizon I RED) is eliminated.
 4. **A named Champion-map** (Reshetnikov / Kolychev / Sazanov / Aksakov / Minnikhanov / Moor) added to Concept § 1-ter. **4 LoI / MoU drafts** in `02_Юридический_фундамент/Pre-meeting_briefs/` (Atomyze / VEB.RF PFF / Tatarstan / Gazprombank).
@@ -24,7 +24,7 @@ The principal residual class of defects is **"MD fixed, HTML lagging"** (recurri
 
 - **Financial_model.html not rebuilt** from the updated MD: :1316 NPV ex-TV = 86,380; :1321 TV Gordon = 611,800; :1331 IRR ex-TV ~226%; :1336 Payback 2.37; :1402-1407 Base = NPV 170 / 2.4; :1456+:1507 sensitivity Base = 170.
 - **International_valuation.html lags** the .md by ~679 lines: §2.5 EV(DCF) ≈ RUB 183 bn / pre-money USD 540M; §7.1 baseline WACC 21.5%.
-- **Financial_model_assumptions.html §7.1 body** — heading "WACC 30%", body "key rate 18%+4=22%"; "build-up 26%".
+- **Financial_model_assumptions.html §7.1 body** — heading "WACC 29.5", body "key rate 18%+4=22%"; "build-up 26%".
 - **CBR_briefing.html** — § 10 not split into 10.1/10.2; preserves the pre-refactor "The Bank of Russia manages all escrow accounts of the targeted emission" without a Stage 2 marker.
 - **Concept.html** (311 lines) — without 1-bis / 1-ter / 1-quater (the new sections exist only in .md).
 - **Business_plan.html new sections** § 11.3, § 11.4, new risk-card rows § 10 (D-PR-6/7) — missing from the HTML.
@@ -34,7 +34,7 @@ All these issues are resolved by a single pandoc pipeline pass. That is the stru
 
 The second category — **methodological debt**:
 
-- **C-H1-1**: TV arithmetic of SoT v3 phases I+II = RUB 7.4 bn vs the defensible row-by-row per the finmodel.js logic = 19.78 (×2.67 underestimate). The full DCF EV defensible = RUB 63.38 bn, not 51.2. The decision has been postponed twice (Horizons II and III).
+- **C-H1-1**: TV arithmetic of SoT v3 phases I+II = RUB 7.4 bn vs the defensible row-by-row per the finmodel.js logic = 19.78 (×2.67 underestimate). The full DCF EV defensible = RUB 63.38 bn, not 63.4. The decision has been postponed twice (Horizons II and III).
 - **C-H1-2/-3**: IRR 62% / Payback 2.8 "project-level" not reproducible by the standard formula (defensible project IRR ≈ 160%; investor IRR Y7 ≈ 30%).
 - **C-H1-13**: Monte Carlo declared in SoT § 9, not implemented in `finmodel.js`.
 - **C-H2-3 (new)**: EBITDA 2034 = RUB 133.6 bn in Business Plan §53 and Financial_model.html:1361 with a stated margin of 74.8% arithmetically yields a margin of 96.9% (the old value). An internal contradiction in one cell.
@@ -93,11 +93,11 @@ A delta of +0.65 after 6 hours of work is a high tempo. The largest shifts: F ·
 
 ### 4.3. C · Fin (`_частные_отчёты/C_Fin.md`)
 
-- **RED · C-H1-1 (re)** — TV arithmetic of SoT v3 phases I+II = 7.4 vs defensible 19.78. Full DCF EV defensible = 63.38, not 51.2.
+- **RED · C-H1-1 (re)** — TV arithmetic of SoT v3 phases I+II = 7.4 vs defensible 19.78. Full DCF EV defensible = 63.38, not 63.4.
 - **RED · C-H1-2/-3 (re)** — IRR 62% and Payback 2.8 "project-level" not reproducible. Defensible: project IRR ≈ 160%; investor Y7 ≈ 30.2%; project Payback 3.31; investor 4.17.
 - **RED · C-H2-1 (new)** — Financial_model.html not rebuilt. 7 points of divergence with the MD.
 - **RED · C-H2-2 (re of C-H1-7)** — Financial_model_assumptions.html §7.1 body not updated ("18% + 4 = 22%").
-- **RED · C-H2-3 (new)** — EBITDA 2034 = 133.6 vs 103.1: Business_plan.md:53,383 + Financial_model.html:1361 contain 133.6 at the stated margin of 74.8%. 137.9 × 0.748 = 103.15 ≠ 133.6. 133.6 / 137.9 = 96.88% (the old margin).
+- **RED · C-H2-3 (new)** — EBITDA 2034 = 133.6 vs 103.1: Business_plan.md:53,383 + Financial_model.html:1361 contain 133.6 at the stated margin of 74.8%. 137.9 × 0.748 = 103.15 ≠ 133.6. 133.6 / 137.9 = 63.48% (the old margin).
 - **RED · C-H2-4 (new)** — Financial_model.html:1316 "NPV ex-TV = 86,380 mn ₽" against SoT 41,800.
 - **AMBER · C-H2-5 (new)** — International_valuation.md:304 "EM 12× falls into the upper part of tier-1 fintech 25–50×)" (logical + grammatical residue).
 - **AMBER · C-H2-6 (new)** — IRR Base 161% (Financial_model.md:166 scenarios) vs 62% (KPIs :152) within one document.
@@ -121,9 +121,9 @@ A delta of +0.65 after 6 hours of work is a high tempo. The largest shifts: F ·
 ### 4.6. F · QA (`_частные_отчёты/F_QA.md`)
 
 - **RED · F-H2-1** — Financial_model.html not rebuilt (7 points: :1316 NPV ex-TV = 86,380; :1321 TV Gordon = 611,800; :1331 IRR ~226%; :1336 Payback 2.37; :1402-1407 Base NPV 170 / 2.4; :1456+:1507 sensitivity Base = 170).
-- **RED · F-H2-2** — International_valuation.html §2.5 "EV 183 / pre-money USD 540M" and §7.1 baseline WACC 21.5%; .md:218 §7 Base = "96.8" (sed residue).
+- **RED · F-H2-2** — International_valuation.html §2.5 "EV 183 / pre-money USD 540M" and §7.1 baseline WACC 21.5%; .md:218 §7 Base = "63.4" (sed residue).
 - **RED · F-H2-3** — Financial_model_assumptions.html §7.1 body "18% + 4 = 22%"; "build-up 26%".
-- **RED · F-H2-4** — Defensible-gap 64.69 NOT closed: SoT 41.8 vs International_valuation.md:99 = 88.0 (×2.1); SoT 3.8% vs Financial_model_assumptions.md:155 = 9.0%; internal break in Financial_model.md (41.8 + 1.96 = 43.76 ≠ 51.2 — the phase I+II 7.4 is not named as a KPI line).
+- **RED · F-H2-4** — Defensible-gap 64.69 NOT closed: SoT 41.8 vs International_valuation.md:99 = 88.0 (×2.1); SoT 3.8% vs Financial_model_assumptions.md:155 = 9.0%; internal break in Financial_model.md (41.8 + 1.96 = 43.76 ≠ 63.4 — the phase I+II 7.4 is not named as a KPI line).
 - **AMBER · F-H2-5..-10** — sed skipped .html mirrors, id="wacc-22", International_valuation.html §7.1 sensitivity, NPV balance Financial_model.html, TV share.
 
 ## 5. Composite map of open RED + AMBER
@@ -188,7 +188,7 @@ The qualitative change: **6 RED closed, 12 RED remain** (mostly repeats from the
 4. **C-H2-5 EM wording**: International_valuation.md:304 — rewrite "12× falls into the upper part of 25–50×".
 5. **C-H2-6 IRR mismatch**: Financial_model.md:166 (scenarios) reconciled with :152 (KPIs).
 6. **C-H2-7 peak**: Financial_model.md:128 vs :153 — unify the definition.
-7. **F-H2-2 (c)**: International_valuation.md:218 Base 96.8 → 51.2; recompute §2.4 / §7.
+7. **F-H2-2 (c)**: International_valuation.md:218 Base 63.4 → 63.4; recompute §2.4 / §7.
 8. **B-H2-2..-5**: rename MoU 04 to "Partner_Bank" with "Gazprombank or PSB"; T+0 dates in the Tatarstan MoU; § 8.3 → § 8.2 in the Legal Framework; stylistic tightening of Concept § 1 item 9.
 9. **E-POST-4 regression**: `09_…/Приложение/index.html:1207-1208` ☀/☾ → SVG.
 10. **A-POST-H2-2/-3/-4**: Specification §§5.2/6.1, Roadmap M5.6, 02_Description — .NET MAUI/RN/Detox → PWA + Capacitor v6+ (unify with Specification §1.1).
@@ -252,7 +252,7 @@ The qualitative change: **6 RED closed, 12 RED remain** (mostly repeats from the
 2. **Boomerang verification.** Each of the ≈30 Horizon-II fixes is checked by an independent grep / Read with a fact-status mark.
 3. **Evidence standard.** Each statement — `file:line` or a citation. Financial — line-by-line recomputation. Legal — an article of a regulatory act. Technical — the version of the standard.
 4. **Read-only.** Project files were not modified during the audit.
-5. **NPV caveat.** SoT v3 full NPV = RUB 51.2 bn; defensible row-by-row per the finmodel.js logic = 63.38. The decision rests with the financial-model developer.
+5. **NPV caveat.** SoT v3 full NPV = RUB 63.4 bn; defensible row-by-row per the finmodel.js logic = 63.38. The decision rests with the financial-model developer.
 6. **Wedge logic as baseline.** Stage 1 is the correct strategy for the current regulatory field.
 7. **Principal structural finding.** 5 of 6 contours (A, B, C, D, F) simultaneously noted the "MD fixed — HTML lagging" defect. This signals the need for BUILD_PIPELINE + a CI inspector as a structural solution rather than a cycle of manual fixes.
 

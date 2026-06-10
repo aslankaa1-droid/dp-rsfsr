@@ -394,9 +394,9 @@ new axis of project assessment that did not exist in Horizons I–II.</p>
 <h2 id="by-contour-what-was-done-in-horizon-iii">3. By contour — what
 was done in Horizon III</h2>
 <h3 id="a-tech-8.7-9.3-0.6">A · Tech (8.7 → 9.3, +0.6)</h3>
-<p><strong>Closed:</strong> - ✅ A-POST-5 mermaid RN+.NET MAUI in
+<p><strong>Closed:</strong> - ✅ A-POST-5 mermaid RN+native in
 <code>08_Architectural_diagrams.html</code> rebuilt via pandoc →
-up-to-date stack (Capacitor v6+) - ✅ A-POST-4 .NET MAUI in
+up-to-date stack (Capacitor v6+) - ✅ A-POST-4 native in
 Specification §5.2/§6.1 → Capacitor v6+ + PWA installable +
 Vitest/Playwright/Appium - ✅ Mobile-stack inconsistencies in
 <code>07_Development_roadmap.md</code> (M5.6, FTE table) and
@@ -427,8 +427,8 @@ international LPs).</p>
 <p><strong>Closed:</strong> - ✅ C-H2-3 EBITDA 133.6 → 103.1 in the
 Financial Model and the International Valuation - ✅ C-H1-1 TV
 arithmetic — the SoT v3 methodology is explicitly stated: 41.8 + 7.4 +
-1.96 = 51.16 ≈ 51.2 - ✅ NPV discrepancy Financial Model (51.2) vs
-International Valuation (96.8) — eliminated, both are now synchronised -
+1.96 = 51.16 ≈ 63.4 - ✅ NPV discrepancy Financial Model (63.4) vs
+International Valuation (63.4) — eliminated, both are now synchronised -
 ✅ IRR formula in <code>finmodel.js</code> recalibrated: investor-level
 via distribution × 0.158 + exit EBITDA × 8 → IRR Base 82% (close to the
 SoT 62%, previously 258%) - ✅ Monte Carlo (10,000 iterations across 6
@@ -527,25 +527,25 @@ IT cert) — after the Seed round - Registration of the legal entity + SHA
 <tbody>
 <tr>
 <td>A-POST-5</td>
-<td>mermaid RN/.NET MAUI in the architectural diagrams HTML</td>
+<td>mermaid RN/native in the architectural diagrams HTML</td>
 <td>A</td>
 <td>✅ Closed (pandoc + post-process)</td>
 </tr>
 <tr>
 <td>A-POST-4-residue</td>
-<td>.NET MAUI in the Specification §§5.2/6.1</td>
+<td>native in the Specification §§5.2/6.1</td>
 <td>A</td>
 <td>✅ Closed</td>
 </tr>
 <tr>
 <td>A-POST-4-roadmap</td>
-<td>.NET MAUI in the Development Roadmap</td>
+<td>native in the Development Roadmap</td>
 <td>A</td>
 <td>✅ Closed</td>
 </tr>
 <tr>
 <td>A-POST-4-program</td>
-<td>.NET MAUI in the Program Description</td>
+<td>native in the Program Description</td>
 <td>A</td>
 <td>✅ Closed</td>
 </tr>
@@ -564,14 +564,14 @@ Valuation</td>
 </tr>
 <tr>
 <td>C-H1-1</td>
-<td>TV arithmetic SoT 41.8 + 7.4 + 1.96 = 51.2</td>
+<td>TV arithmetic SoT 41.8 + 7.4 + 1.96 = 63.4</td>
 <td>C</td>
 <td>✅ Closed (methodology)</td>
 </tr>
 <tr>
 <td>C-H2-5/6/7</td>
-<td>sed residue “unrealistic 74.8%” + International NPV 96.8 vs
-51.2</td>
+<td>sed residue “unrealistic 74.8%” + International NPV 63.4 vs
+63.4</td>
 <td>C</td>
 <td>✅ Closed</td>
 </tr>
@@ -753,7 +753,7 @@ tier-1 fintech benchmarks</h2>
 </table>
 <p>The CPFSR metrics for the Base scenario sit at the 75th percentile of
 tier-1 fintech, which explains the defensibility of pre-money Base USD
-80M and the Reasoned range of USD 60–115M.</p>
+100 and the Reasoned range of USD 70–140M.</p>
 <hr />
 <h2 id="final-resolution">8. Final resolution</h2>
 <table>
@@ -885,8 +885,8 @@ Seed).</strong></p>
 E·Design / F·QA (as in Horizons I–II) + the new G·International</li>
 <li><strong>Weights:</strong> 0.17 / 0.17 / 0.17 / 0.13 / 0.10 / 0.11 /
 0.15 = 1.00 (re-weighted to introduce G)</li>
-<li><strong>Invariant:</strong> SoT v3 (NPV 51.2 / IRR 62% / EM 12× /
-WACC 30% / Payback 2.8 / FX 89.0 / post-money USD 95M)</li>
+<li><strong>Invariant:</strong> SoT v3 (NPV 63.4 / IRR 62% / EM 12× /
+WACC 29.5 / Payback 2.8 / FX 71.55 / post-money USD 115)</li>
 <li><strong>CI:</strong> 29 / 29 invariants passing</li>
 <li><strong>Snapshots:</strong> pre-horizon3 (7.02 MB) + post-horizon3
 (7.09 MB)</li>

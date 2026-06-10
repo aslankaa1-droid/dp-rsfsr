@@ -1,20 +1,20 @@
-# ЦПФСР.РФ · Engagement reference
+﻿ ЦПФСР.РФ · Engagement reference
 
 | Поле | Значение |
-|---|---|
-| **Engagement reference** | CPFSR-RF-DESIGN-2026 |
-| **Дата начала** | 24.05.2026 |
-| **Заказчик** | Кагиров А.-Х.А. · Center Group Company |
-| **Базовая версия проекта** | «ЦП РСФСР Исправленный» (пост-Горизонт-III, сводный балл 9,22 / 10) |
-| **Базовый аудит** | `14_Аудит/АУДИТ Сводный пост-Горизонт-III 24.05.2026/Сводный_аудит_пост_Горизонт_III.md` |
-| **Правообладатель** | Свидетельство № 4011265 от 19.12.2024 |
-| **Контакты** | +7 988 234 24 24 · aslan@centergroupcompany.com · aslankaa.com |
+|
+| Engagement reference | CPFSR-RF-DESIGN-2026 |
+| Дата начала | 24.05.2026 |
+| Заказчик | Кагиров А.-Х.А. · Center Group Company |
+| Базовая версия проекта | «ЦП РСФСР Исправленный» (пост-Горизонт-III, сводный балл 9,22 / 10) |
+| Базовый аудит | 14_Аудит/АУДИТ Сводный пост-Горизонт-III 24.05.2026/Сводный_аудит_пост_Горизонт_III.md |
+| Правообладатель | Свидетельство № 4011265 от 19.12.2024 |
+| Контакты | +7 988 234 24 24 · aslan@centergroupcompany.com · aslankaa.com |
 
 ---
 
-## Контур текущего engagement
+ Контур текущего engagement
 
-Премиум-перекомплектовка проекта в новой папке `E:\Проекты Аслана\ЦПФСР.РФ\` со следующими требованиями заказчика:
+Премиум-перекомплектовка проекта в новой папке E:\Проекты Аслана\ЦПФСР.РФ\ со следующими требованиями заказчика:
 
 - единый премиум-дизайн всех артефактов (документов, форм, презентаций, финмодели, одностраничника, бренд-бука, буклетов, аудитов, отчётов, экспертиз, веб-сайта, мобильного приложения, прототипа);
 - профессиональный логотип, иконки, плавные переходы, шрифты, изображения, таблицы, графики, интерактивные графики;
@@ -29,56 +29,57 @@
 
 ---
 
-## Source of Truth (зафиксировано в `_Мастер/Единые_показатели_v2.md`)
+ Source of Truth (зафиксировано в Мастер/Единые_показатели_v2.md)
 
 | Показатель | Значение |
-|---|---|
-| NPV (Base) | 51,2 млрд ₽ |
+|
+| NPV (Base) | 63,4 млрд ₽ |
 | IRR investor-level | 62 % |
 | WACC дисконт | 30 % |
 | EM (Base) | 12× |
 | Payback | 2,8 года |
-| FX (USD/RUB) | 89,0 |
+| FX (USD/RUB) | 71,55 |
 | Доля раунда | 15,8 % |
-| Post-money (Base) | $95M |
-| Pre-money (Base) | $80M |
+| Post-money (Base) | $115M |
+| Pre-money (Base) | $100M |
 | Раунд | $15M |
 
 ---
 
-## Дизайн-система (этот engagement)
+ Дизайн-система (этот engagement)
 
 | Компонент | Файл |
-|---|---|
-| Токены | `_design-system/tokens.css` |
-| Базовые стили | `_design-system/global.css` |
-| Компоненты UI | `_design-system/components.css` |
-| RTL | `_design-system/rtl.css` |
-| Print / PDF | `_design-system/print.css` |
-| Логотип (полный) | `_design-system/logo.svg` |
-| Логотип (mono) | `_design-system/logo-mono.svg` |
-| Логотип (lockup с текстом) | `_design-system/logo-lockup.svg` |
-| Favicon | `_design-system/favicon.svg` |
-| Theme switcher | `_design-system/theme-switcher.js` |
-| i18n | `_design-system/i18n.js` + `_design-system/i18n/{ru,en,ar}.json` |
-| Ticker (курсы) | `_design-system/ticker.js` |
-| UI-хелперы | `_design-system/ui.js` |
-| Партиалы для повторного использования | `_design-system/partials.html` |
+|
+| Токены | design-system/tokens.css |
+| Базовые стили | design-system/global.css |
+| Компоненты UI | design-system/components.css |
+| RTL | design-system/rtl.css |
+| Print / PDF | design-system/print.css |
+| Логотип (полный) | design-system/logo.svg |
+| Логотип (mono) | design-system/logo-mono.svg |
+| Логотип (lockup с текстом) | design-system/logo-lockup.svg |
+| Favicon | design-system/favicon.svg |
+| Theme switcher | design-system/theme-switcher.js |
+| i18n | design-system/i18n.js + design-system/i18n/{ru,en,ar}.json |
+| Ticker (курсы) | design-system/ticker.js |
+| UI-хелперы | design-system/ui.js |
+| Партиалы для повторного использования | design-system/partials.html |
 
 ---
 
-## Производственный пайплайн
+ Производственный пайплайн
 
 | Шаг | Команда |
-|---|---|
-| 1. Пересборка HTML из MD | `bash _tools/build_html.sh all` |
-| 2. CI-инспектор инвариантов | `powershell -ExecutionPolicy Bypass -File _tools/ci_invariants.ps1` |
-| 3. Снапшот | сжать корень в `_снапшоты/`-zip с датой |
+|
+| 1. Пересборка HTML из MD | bash _tools/build_html.sh all |
+| 2. CI-инспектор инвариантов | powershell -ExecutionPolicy Bypass -File _tools/ci_invariants.ps1 |
+| 3. Снапшот | сжать корень в снапшоты/-zip с датой |
 
 ---
 
-## Связи
+ Связи
 
-- Базовая папка: `E:\Проекты Аслана\Приложение_РСФСР\ЦП РСФСР Исправленный\` (источник)
-- Эта папка: `E:\Проекты Аслана\ЦПФСР.РФ\` (целевая, премиум-дизайн)
-- Журнал текущей сессии: `_Мастер/Журнал_сессии_2026-05-24_премиум-дизайн.md`
+- Базовая папка: E:\Проекты Аслана\Приложение_РСФСР\ЦП РСФСР Исправленный\ (источник)
+- Эта папка: E:\Проекты Аслана\ЦПФСР.РФ\ (целевая, премиум-дизайн)
+- Журнал текущей сессии: Мастер/Журнал_сессии_2026-05-24_премиум-дизайн.md
+

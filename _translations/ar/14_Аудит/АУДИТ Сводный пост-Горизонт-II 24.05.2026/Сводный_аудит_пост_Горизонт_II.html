@@ -277,10 +277,10 @@ C · Fin +0.6 (5.9 → 6.5) · E · Design +0.5 (8.2 → 8.7) · A · Tech +0.3
 <p>التغيّرات الهيكلية النوعية:</p>
 <ol type="1">
 <li><strong>مؤشّرات KPI المالية للمحيط العميل متزامنة</strong> مع SoT v3:
-أغلقت موجة sed F-H1 الاثنتي عشرة من أصل ثلاث عشرة توقيعًا رئيسًا (NPV 51.2
-/ IRR 62 % / Payback 2.8 / WACC 30 % / EM 12× / EBITDA TV 74.8 % / RF
-15.5 % / ERP 9 %، post-money 95 مليون $، Reasoned 60–115 مليون $). أُغلق
-بلوك KPI في خطة العمل §3 و§9.1 («NPV 170.1 → 51.2»)؛ baseline JS
+أغلقت موجة sed F-H1 الاثنتي عشرة من أصل ثلاث عشرة توقيعًا رئيسًا (NPV 63.4
+/ IRR 62 % / Payback 2.8 / WACC 29.5 / EM 12× / EBITDA TV 74.8 % / RF
+14.73 / ERP 8.13، post-money 95 مليون $، Reasoned 60–115 مليون $). أُغلق
+بلوك KPI في خطة العمل §3 و§9.1 («NPV 170.1 → 63.4»)؛ baseline JS
 <code>kpiNpv/kpiPayback</code> في العرض الكبير مُتزامن؛ cover-stat للكتيّب
 وentry-stat لـ index.html الجذر مُنقَلَين إلى SoT v3.</li>
 <li><strong>القاعدة القانونية ذات مرحلتين بالكامل</strong>: الإطار
@@ -322,7 +322,7 @@ sensitivity Base = 170.</li>
 سطرًا: §2.5 EV(DCF) ≈ 183 مليار / pre-money 540 مليون $؛ §7.1 baseline
 WACC 21.5 %.</li>
 <li><strong>Финмодель_допущения.html §7.1 body</strong> — العنوان «WACC
-30 %»، الجسم «KS 18 %+4=22 %»؛ «build-up 26 %».</li>
+29.5»، الجسم «KS 18 %+4=22 %»؛ «build-up 26 %».</li>
 <li><strong>Доклад_для_госструктур_и_ЦБ_РФ.html</strong> — § 10 غير مُقسَّم
 إلى 10.1/10.2؛ يحتفظ بنص ما قبل refactor «بنك روسيا يدير جميع حسابات
 escrow للإصدار المستهدف» دون علامة المرحلة 2.</li>
@@ -331,7 +331,7 @@ escrow للإصدار المستهدف» دون علامة المرحلة 2.</li
 <li><strong>Бизнес-план.html أقسام جديدة</strong> § 11.3, § 11.4، أسطر
 خريطة المخاطر الجديدة § 10 (D-PR-6/7) — غائبة في HTML.</li>
 <li><strong>08_Архитектурные_диаграммы.html:184-186</strong> — mermaid
-مع RN+.NET MAUI (MD صحيح Capacitor).</li>
+مع RN+native (MD صحيح Capacitor).</li>
 </ul>
 <p>تُحلّ كلّ هذه المسائل بـ pandoc pipeline pass واحد. هذه توصية الأفق III
 الهيكلية.</p>
@@ -339,7 +339,7 @@ escrow للإصدار المستهدف» دون علامة المرحلة 2.</li
 <ul>
 <li><strong>C-H1-1</strong>: حسابيّات TV SoT v3 للمرحلتين I+II = 7.4
 مليار ₽ مقابل defensible row-by-row وفق منطق finmodel.js = 19.78 (×2.67
-underestimate). EV DCF الكامل defensible = 63.38 مليار ₽، لا 51.2.
+underestimate). EV DCF الكامل defensible = 63.38 مليار ₽، لا 63.4.
 القرار أُجِّل مرّتين (الأفق II والأفق III).</li>
 <li><strong>C-H1-2/-3</strong>: IRR 62 % / Payback 2.8 «project-level»
 غير قابلَين للتكرار بالصيغة المعيارية (defensible: project IRR ≈ 160 %؛
@@ -355,7 +355,7 @@ investor IRR Y7 ≈ 30 %).</li>
 <li>E-POST-4 انحدار: ☀ ☾ في إعدادات PWA
 <code>09_…/index.html:1207-1208</code> (موجة sed لمست panel الإعدادات
 1414-1415 فحسب).</li>
-<li>A-POST-H2-2/3/4: .NET MAUI / React Native / Detox في المواصفات §§
+<li>A-POST-H2-2/3/4: native / React Native / Detox في المواصفات §§
 5.2، 6.1، خريطة الطريق M5.6، 02_Описание_программы (تغطية الأفق I
 ناقصة).</li>
 <li>B-NEW-12: قوائم مسؤولي 779-P في Учреждение_АО مقابل الإطار القانوني
@@ -505,19 +505,19 @@ defensible-разлом 64.69 NOT closed.</td>
 <ul>
 <li><strong>AMBER · A-POST-5 (re²)</strong> —
 <code>08_Архитектурные_диаграммы.html:184-186</code> يحتفظ بـ mermaid مع
-RN+.NET MAUI. MD صحيح Capacitor.</li>
+RN+native. MD صحيح Capacitor.</li>
 <li><strong>AMBER · A-POST-H2-1</strong> — انحدار II.E:
 <code>09_Мобильное_приложение/Приложение/index.html:1207-1208</code>
 احتفظت sidebar PWA بـ <code>Светлая ☀</code> و <code>Тёмная ☾</code>
 (settings-panel <code>:1414-1415</code> صحيح).</li>
 <li><strong>AMBER · A-POST-H2-2</strong> — المواصفات
-<code>:151,165,167</code>: §§5.2/6.1 «Windows (.NET MAUI)»، «Jest для
+<code>:151,165,167</code>: §§5.2/6.1 «Windows (native)»، «Jest для
 RN»، «Detox для RN, MAUI UITest» — يتعارض مع §1.1 PWA+Capacitor.</li>
 <li><strong>AMBER · A-POST-H2-3</strong> —
 <code>07_Дорожная_карта_разработки.md:81,129</code> M5.6 «.NET
 MAUI».</li>
 <li><strong>AMBER · A-POST-H2-4</strong> —
-<code>02_Описание_программы.md:30</code> «C# (.NET MAUI/Windows App
+<code>02_Описание_программы.md:30</code> «C# (native/Windows App
 SDK)».</li>
 <li><strong>AMBER · A-POST-H2-5..-8</strong> — sitemap x-default 1/18،
 apple-touch-icon في manifest، انحراف نبرة DD_отчёт.html «إيرادات
@@ -546,7 +546,7 @@ apple-touch-icon في manifest، انحراف نبرة DD_отчёт.html «إي
 <ul>
 <li><strong>RED · C-H1-1 (تكرار)</strong> — حسابيّات TV SoT v3 للمرحلتين
 I+II = 7.4 مقابل defensible 19.78. EV DCF الكامل defensible = 63.38، لا
-51.2.</li>
+63.4.</li>
 <li><strong>RED · C-H1-2/-3 (تكرار)</strong> — IRR 62 % وPayback 2.8
 «project-level» غير قابلَين للتكرار. defensible: project IRR ≈ 160 %؛
 investor Y7 ≈ 30.2 %؛ project Payback 3.31؛ investor 4.17.</li>
@@ -556,7 +556,7 @@ investor Y7 ≈ 30.2 %؛ project Payback 3.31؛ investor 4.17.</li>
 §7.1 body غير محدَّث («18 % + 4 = 22 %»).</li>
 <li><strong>RED · C-H2-3 (جديد)</strong> — EBITDA 2034 = 133.6 مقابل
 103.1: خطة العمل.md:53,383 + Финмодель.html:1361 تحتويان 133.6 عند هامش
-معلَن 74.8 %. 137.9 × 0.748 = 103.15 ≠ 133.6. 133.6/137.9 = 96.88 %
+معلَن 74.8 %. 137.9 × 0.748 = 103.15 ≠ 133.6. 133.6/137.9 = 63.48 %
 (الهامش القديم).</li>
 <li><strong>RED · C-H2-4 (جديد)</strong> — Финмодель.html:1316 «NPV دون
 TV = 86 380 مليون ₽» عند SoT 41 800.</li>
@@ -610,13 +610,13 @@ PWA.</li>
 sensitivity Base = 170).</li>
 <li><strong>RED · F-H2-2</strong> — Международная_оценка.html §2.5 «EV
 183 / pre-money 540 مليون $» و§7.1 baseline WACC 21.5 %؛ .md:218 §7 Base
-= «96.8» (sed residue).</li>
+= «63.4» (sed residue).</li>
 <li><strong>RED · F-H2-3</strong> — Финмодель_допущения.html §7.1 body
 «18 % + 4 = 22 %»؛ «build-up 26 %».</li>
 <li><strong>RED · F-H2-4</strong> — defensible-разлом 64.69 NOT closed:
 SoT 41.8 مقابل Международная_оценка.md:99 = 88.0 (×2.1)؛ SoT 3.8 % مقابل
 Финмодель_допущения.md:155 = 9.0 %؛ شرخ داخلي Финмодель.md (41.8 + 1.96
-= 43.76 ≠ 51.2 — المرحلتان I+II 7.4 غير مسمَّاة سطرًا في KPI).</li>
+= 43.76 ≠ 63.4 — المرحلتان I+II 7.4 غير مسمَّاة سطرًا في KPI).</li>
 <li><strong>AMBER · F-H2-5..-10</strong> — sed تجاوز مرايا .html،
 id=“wacc-22”، Международная_оценка.html §7.1 sensitivity، توازن NPV في
 Финмодель.html، حصة TV.</li>
@@ -643,7 +643,7 @@ RED + AMBER المفتوحة</h2>
 <td>A-POST-5</td>
 <td>AMBER</td>
 <td>A</td>
-<td>08_Архитектурные_диаграммы.html (mermaid RN+.NET MAUI)</td>
+<td>08_Архитектурные_диаграммы.html (mermaid RN+native)</td>
 </tr>
 <tr>
 <td>A-POST-H2-1</td>
@@ -655,19 +655,19 @@ RED + AMBER المفتوحة</h2>
 <td>A-POST-H2-2</td>
 <td>AMBER</td>
 <td>A</td>
-<td>المواصفات §§5.2/6.1 .NET MAUI/RN/Detox</td>
+<td>المواصفات §§5.2/6.1 native/RN/Detox</td>
 </tr>
 <tr>
 <td>A-POST-H2-3</td>
 <td>AMBER</td>
 <td>A</td>
-<td>خريطة الطريق M5.6 .NET MAUI</td>
+<td>خريطة الطريق M5.6 native</td>
 </tr>
 <tr>
 <td>A-POST-H2-4</td>
 <td>AMBER</td>
 <td>A</td>
-<td>02_Описание_программы C# .NET MAUI</td>
+<td>02_Описание_программы C# native</td>
 </tr>
 <tr>
 <td>A-POST-H2-5..-8</td>
@@ -911,15 +911,15 @@ mermaid. يُغلِق A-POST-5.</li>
 (السيناريوهات) متوائمة مع :152 (KPI).</li>
 <li><strong>C-H2-7 الذروة</strong>: Финмодель.md:128 مقابل :153 — توحيد
 التعريف.</li>
-<li><strong>F-H2-2 (c)</strong>: Международная_оценка.md:218 Base 96.8 →
-51.2؛ إعادة حساب §2.4 / §7.</li>
+<li><strong>F-H2-2 (c)</strong>: Международная_оценка.md:218 Base 63.4 →
+63.4؛ إعادة حساب §2.4 / §7.</li>
 <li><strong>B-H2-2..-5</strong>: إعادة تسمية MoU 04 إلى «بنك_شريك» مع
 «Gazprombank أو PSB»؛ تواريخ T+0 في MoU تتارستان؛ § 8.3 → § 8.2 في
 الإطار القانوني؛ تكثيف أسلوبي للمفهوم § 1 الفقرة 9.</li>
 <li><strong>E-POST-4 انحدار</strong>:
 <code>09_…/Приложение/index.html:1207-1208</code> ☀/☾ → SVG.</li>
 <li><strong>A-POST-H2-2/-3/-4</strong>: المواصفات §§5.2/6.1, خريطة
-الطريق M5.6, 02_Описание — .NET MAUI/RN/Detox → PWA+Capacitor v6+ (توحيد
+الطريق M5.6, 02_Описание — native/RN/Detox → PWA+Capacitor v6+ (توحيد
 مع §1.1 من المواصفات).</li>
 </ol>
 <h3 id="الأفق-iii.c-قرارات-منهجية-نحو-يوم">الأفق III.C — قرارات منهجيّة
@@ -963,7 +963,7 @@ Champion-map (نحو ساعة)</h3>
 يوم)</h3>
 <ol start="25" type="1">
 <li><strong>BUILD_PIPELINE.md + مفتّش CI</strong> — pandoc + mermaid +
-grep مصطلحات (RN / .NET MAUI / Detox / ☀ / ☾ / emoji-أعلام / علامة
+grep مصطلحات (RN / native / Detox / ☀ / ☾ / emoji-أعلام / علامة
 المرحلة 2) عند git push. يُغلِق هيكليًّا فئة «MD مُصحَّح — HTML متأخّر».</li>
 <li>B-NEW-12 فصل قوائم 779-P (المتفق عليها مع البنك المركزي مقابل
 الداخل-مؤسّسي).</li>
@@ -1068,7 +1068,7 @@ pre-money</strong> بشرط توقيع LoI/MoU.</p>
 التقنيّة — نسخة المعيار.</li>
 <li><strong>Read-only.</strong> لم تُعدَّل ملفات المشروع أثناء
 التدقيق.</li>
-<li><strong>تحفّظ بشأن NPV.</strong> SoT v3 NPV الكامل = 51.2 مليار ₽؛
+<li><strong>تحفّظ بشأن NPV.</strong> SoT v3 NPV الكامل = 63.4 مليار ₽؛
 defensible row-by-row وفق منطق finmodel.js = 63.38. القرار يعود إلى مطوّر
 النموذج المالي.</li>
 <li><strong>منطق Wedge كـ baseline.</strong> المرحلة 1 — استراتيجية

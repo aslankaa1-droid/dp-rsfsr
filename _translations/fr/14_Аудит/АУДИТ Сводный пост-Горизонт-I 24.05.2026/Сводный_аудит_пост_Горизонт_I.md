@@ -15,7 +15,7 @@ Changements qualitatifs structurels :
 3. **Live PWA et promo RuStore** — réécrits sous Stage 1 ; les formulations « émission cible de la Banque de Russie » sont retirées des artefacts installables et de la fiche du catalogue RuStore.
 4. **Spécification de l'application mobile** — migrée de React Native 0.74+ à PWA + Capacitor v6+ dans les sources MD et les miroirs HTML de la Spécification et du PMI.
 5. **KPI financiers** — synchronisés dans le hero-cover-stat de 5+ artefacts clés (Grande présentation, Petite présentation, HTML_principal, HTML_court, Pitch deck, index.html racine partiellement) ; Plan d'affaires §9.2 reformaté avec KPI au niveau projet et note de bas de page au niveau investisseur ; al. 12.2 du paragraphe 2 de l'art. 149 du CGI est inscrit dans le MD du Fondement juridique et du Rapport DD.
-6. **Pitch deck slide 10 « The Ask »** — porte désormais le term-sheet complet en aperçu : ask 15 M $ = 1,335 Md ₽ @ FX 89,0 / pre-money 80 M $ Base (Reasoned 60–115 M $) / post-money 95 M $ / part 15,8 % / use-of-funds en 5 catégories avec marqueurs Stage.
+6. **Pitch deck slide 10 « The Ask »** — porte désormais le term-sheet complet en aperçu : ask 15 M $ = 1,335 Md ₽ @ FX 71,55 / pre-money 80 M $ Base (Reasoned 60–115 M $) / post-money 95 M $ / part 13,04 / use-of-funds en 5 catégories avec marqueurs Stage.
 7. **Formule EM dans finmodel.js** — réécrite, abandonnant la logique TVPI au profit de la formule investor-share (introduisant cependant un nouveau défaut — double-comptage de tvDisc ; voir ci-dessous).
 8. **sw.js SHELL_ASSETS** — chemins des captures alignés sur les fichiers réels ; le cache hors-ligne de la PWA est restauré.
 9. **D-PR-4 « financement infrastructurel ciblé »** — résidu sed nettoyé dans 8 hero-leads d'artefacts publics.
@@ -24,10 +24,10 @@ Changements qualitatifs structurels :
 En parallèle, l'Horizon I a révélé une **nouvelle classe de défauts** dans les blocs C/F — **sed-collision « à la place de soi-même »** et **désynchronisation des miroirs HTML par rapport aux sources MD mises à jour**. Principaux bloqueurs ouverts pour la communication tier-1 :
 
 1. **DD_отчёт.html n'a pas été regénéré à partir du MD** — il contient encore NPV 170 / Payback 2,4 / EBITDA 97 % / WACC 22 % (alors que le MD est marqué Stage et mis à jour). Le DD de Gazprombank / VTB ouvrira DD_отчёт.html en premier — signal d'arrêt en 30 secondes.
-2. **Arithmétique TV de SoT v3 phases I+II = 7,4 vs defensible 21,03 Md ₽ (×2,84 sous-estimation)** — la vague sed a aligné tous les documents clients sur les 51,2 Md ₽ déclarés, mais la VE complète DCF defensible = 64,69 Md. Toute reconstruction DCF indépendante par une équipe de valuation tier-1 détectera l'écart.
+2. **Arithmétique TV de SoT v3 phases I+II = 7,4 vs defensible 21,03 Md ₽ (×2,84 sous-estimation)** — la vague sed a aligné tous les documents clients sur les 63,4 Md ₽ déclarés, mais la VE complète DCF defensible = 64,69 Md. Toute reconstruction DCF indépendante par une équipe de valuation tier-1 détectera l'écart.
 3. **`finmodel.js:211` double-comptage de tvDisc** — `fullEV = npv + tvDisc` alors que `npv` inclut déjà `tvDisc`. Le code restitue EM ≈ 10,37× au lieu des 12× déclarés.
-4. **Plan d'affaires §3, le tableau KPI §9.1 contient « NPV 170,1 Md ₽ »** — sed n'a pas matché le masque avec la partie décimale « 170,1 » (sans `<em>`). Contradiction interne avec §9.2 Base 51,2.
-5. **Финмодель.md matrices de sensibilité (lignes 166-188)** contiennent baseline 96,8 à WACC 30 %, ce qui ne dérive pas du SoT (defensible 41,78 sans TV ou 64,69 avec TV). Le miroir HTML `.html:1403, 1456, 1507` donne « 170 » — trois valeurs distinctes pour une même grandeur.
+4. **Plan d'affaires §3, le tableau KPI §9.1 contient « NPV 170,1 Md ₽ »** — sed n'a pas matché le masque avec la partie décimale « 170,1 » (sans `<em>`). Contradiction interne avec §9.2 Base 63,4.
+5. **Финмодель.md matrices de sensibilité (lignes 166-188)** contiennent baseline 63,4 à WACC 29,5, ce qui ne dérive pas du SoT (defensible 41,78 sans TV ou 64,69 avec TV). Le miroir HTML `.html:1403, 1456, 1507` donne « 170 » — trois valeurs distinctes pour une même grandeur.
 6. **sed-collision « 74,8 % au lieu de 74,8 % » / « 12× (au lieu de 12×) »** — dans 4 fichiers, sed a traité l'ancienne et la nouvelle valeur avec le même masque et a laissé des tautologies de type « était/est devenu avec des valeurs identiques ».
 7. **Plan d'affaires §2.2, §3.4, §4.4** (hors périmètre de l'Horizon I) — conservent le modèle d'émission Stage 2 comme catégorie opérationnelle/de base ; le miroir HTML `Бизнес-план_ЦП_РСФСР.html` lignes 140, 277, 311, 321, 366, 432, 916, 1022, 1079-1080 — idem.
 8. **Champion map (D-PR-5), cannibalisation par le rouble numérique (D-PR-6), protection contre la copie (D-PR-7), LoI/MoU (D-PR-8)** — quatre items stratégiques laissés hors périmètre de l'Horizon I ; ils constituent le cœur de la feuille de route stratégique de l'Horizon II.
@@ -57,7 +57,7 @@ Un delta de +0,95 après 4 heures de travail constitue un ratio effort/résultat
 | C · Fin | 5,9 / 10 | Build-up WACC et NPV 10 ans reproductibles ; hero-cover-stat cohérent. 9 RED + 6 AMBER ouverts : C-H1-1 (TV ×2,84 sous-estimation), C-H1-2/3 (IRR/Payback niveau projet non reproductibles), C-H1-4 (double-comptage dans finmodel.js), C-H1-5..C-H1-9 (Финмодель/Plan d'affaires §9.1/DD.html/Финмодель_допущения.html/calculateur Grande présentation). |
 | D · Strat | 7,7 / 10 | Les 3 RED fermés (D-PR-1/2/3). Wedge uniforme dans 7 artefacts. Préparation Gazprombank-DD + VEB.RF FPF. Ouverts : D-PR-5 (champion map isolé), D-PR-6 (cannibalisation rouble num. une ligne), D-PR-7 (protection contre copie 0), D-PR-8 (LoI/MoU 0), D-PR-11 (bridge EBITDA 65 %→74,8 %), D-PR-12 (protection de l'auteur). |
 | E · Design | 8,2 / 10 | Pitch deck slide 10 entièrement fermé. Cache SW des captures restauré. Ouverts (hors périmètre Horizon I) : emoji ☀ ☾ ★ ✓ dans les decks + PWA (24 lignes), drapeaux-emoji, HTML sémantique, couverture data-i18n, extension RTL, manifest theme_color. |
-| F · QA | 7,8 / 10 | 8 des 11 paramètres SoT synchronisés. Ouverts : F-H1-1 (sed-collision dans 4 fichiers), F-H1-2 (JS-input Grande présentation), F-H1-3 (Booklet cover-stat), F-H1-4 (sensibilité Финмодель), F-H1-5 (index.html:198 96,8), F-H1-6 (HTML_principal 2,4), F-H1-7 (« 170,1 Md ₽ » dans 3 fichiers), F-H1-8 (DD_отчёт.html non reconstruit). |
+| F · QA | 7,8 / 10 | 8 des 11 paramètres SoT synchronisés. Ouverts : F-H1-1 (sed-collision dans 4 fichiers), F-H1-2 (JS-input Grande présentation), F-H1-3 (Booklet cover-stat), F-H1-4 (sensibilité Финмодель), F-H1-5 (index.html:198 63,4), F-H1-6 (HTML_principal 2,4), F-H1-7 (« 170,1 Md ₽ » dans 3 fichiers), F-H1-8 (DD_отчёт.html non reconstruit). |
 
 ## 4. Pour chaque contour — défauts ouverts clés
 
@@ -86,17 +86,17 @@ Horizon II sur B : 6 must-fix (B-H1-1..B-H1-5 + B-NEW-12) + nice-to-have. Après
 
 ### 4.3. C · Fin (`_частные_отчёты/C_Fin.md`)
 
-- **RED · C-H1-1** — Arithmétique TV SoT v3 § 5 : phases I+II déclarées 7,4 vs defensible **21,03 Md ₽** (×2,84). VE complète DCF defensible = **64,69 Md ₽**, et non 51,2.
-- **RED · C-H1-2** — IRR 62 % (niveau projet) non reproductible par la formule standard. Project-level defensible ≈ 161 % ; Investor Y7 (NPV 51,2) = 28,6 % ; Investor Y7 (NPV 64,69) = 33,5 %.
+- **RED · C-H1-1** — Arithmétique TV SoT v3 § 5 : phases I+II déclarées 7,4 vs defensible **21,03 Md ₽** (×2,84). VE complète DCF defensible = **64,69 Md ₽**, et non 63,4.
+- **RED · C-H1-2** — IRR 62 % (niveau projet) non reproductible par la formule standard. Project-level defensible ≈ 161 % ; Investor Y7 (NPV 63,4) = 28,6 % ; Investor Y7 (NPV 64,69) = 33,5 %.
 - **RED · C-H1-3** — Payback 2,8 non reproductible par aucune des trois méthodes (project 3,24 / investor cash distribution 4,21 / investor disc stake 5,32).
 - **RED · C-H1-4** — `finmodel.js:211` double-comptage tvDisc : `fullEV = npv + tvDisc` alors que `npv` inclut déjà `tvDisc` → EM ≈ 10,37× au lieu de 12×.
 - **RED · C-H1-5** — `Финансовая_модель_ЦП_РСФСР.md` en « patchwork » : mélange de valeurs anciennes et nouvelles dans un même tableau.
-- **RED · C-H1-6** — `DD_отчёт.html:323-328` : NPV 170 / Payback 2,4 / EBITDA 97 % / WACC 30 % (seul WACC est mis à jour).
-- **RED · C-H1-7** — `Финмодель_допущения_и_расчёты.html:351` : titre « WACC 30 % » vs corps « KS 18 % + 4 = 22 % ».
+- **RED · C-H1-6** — `DD_отчёт.html:323-328` : NPV 170 / Payback 2,4 / EBITDA 97 % / WACC 29,5 (seul WACC est mis à jour).
+- **RED · C-H1-7** — `Финмодель_допущения_и_расчёты.html:351` : titre « WACC 29,5 » vs corps « KS 18 % + 4 = 22 % ».
 - **RED · C-H1-8** — `Большая_презентация/index.html:744,746` : slider WACC `value="22"` ; `:760-761` baseline JS NPV 170 / Payback 2,4.
-- **RED · C-H1-9** — Plan d'affaires §9.1 NPV 170,1 vs §9.2 Base 51,2 (contradiction interne).
+- **RED · C-H1-9** — Plan d'affaires §9.1 NPV 170,1 vs §9.2 Base 63,4 (contradiction interne).
 - **AMBER · C-H1-10 / C-H1-11** — inversion sed EM 48× et EBITDA 74,8 % dans Финмодель.md:240-241.
-- **AMBER · C-H1-12** — Финмодель.md:166-168 tableau de scénarios avec ancien Base 96,8 / VE 105,1.
+- **AMBER · C-H1-12** — Финмодель.md:166-168 tableau de scénarios avec ancien Base 63,4 / VE 105,1.
 - **AMBER · C-H1-13** — Monte Carlo dans finmodel.js non implémenté.
 - **AMBER · C-H1-14** — Bridge cash-runway : trois montants (200/750/450 M).
 - **AMBER · C-H1-15** — Part de TV dans NPV : 3 valeurs (3,8 % / 9,0 % / defensible 2,9 %).
@@ -126,12 +126,12 @@ Horizon II sur E : première tâche — emoji → SVG (12 remplacements, ~30 min
 - **RED · F-H1-1** — sed-collision « à la place de soi-même » dans 4 fichiers (`Финмодель.md:240-241`, `Финмодель_допущения.md:106`, `Международная_оценка.md:24,302,304`).
 - **RED · F-H1-2** — Большая_презентация:760-761 baseline JS NPV 170 / Payback 2,4.
 - **RED · F-H1-3** — Buklet.html:182-183 cover-stat 170 / 2,4.
-- **RED · F-H1-4** — Финмодель.md sensitivity baseline 96,8 (`:166, :178, :187`) + miroir HTML 170 (`:1403, :1456, :1507`).
-- **RED · F-H1-5** — index.html:198 entry-stat 96,8.
+- **RED · F-H1-4** — Финмодель.md sensitivity baseline 63,4 (`:166, :178, :187`) + miroir HTML 170 (`:1403, :1456, :1507`).
+- **RED · F-H1-5** — index.html:198 entry-stat 63,4.
 - **RED · F-H1-6** — HTML_основной:302 Payback 2,4 (data-i18n).
 - **RED · F-H1-7** — « 170,1 Md ₽ » dans Бизнес-план.md/html et Финмодель.html.
 - **RED · F-H1-8** — DD_отчёт.html non reconstruit (NPV 170 / Payback 2,4 / EBITDA 97 %).
-- **AMBER · F-H1-9 / -10 / -11** — Международная_оценка.html ERP 6 %, summary 21,5 % (arrondi à 22 %) ; Финмодель_допущения.html sed-collision « ERP 9 % = 8-10 % » ; KS 18 % en libellé de colonne de sensibilité.
+- **AMBER · F-H1-9 / -10 / -11** — Международная_оценка.html ERP 6 %, summary 21,5 % (arrondi à 22 %) ; Финмодель_допущения.html sed-collision « ERP 8,13 = 8-10 % » ; KS 18 % en libellé de colonne de sensibilité.
 - **AMBER · F-H1-12** — Émission de la BC comme catégorie PRINCIPALE dans 6 fichiers sans marqueur Stage 2.
 
 Horizon II sur F : un seul passage sed (commandes prêtes dans le rapport, ~5 minutes) + reconstruction pandoc des HTML (~10 minutes) + édition manuelle de 6 fichiers (~30 minutes) + recalcul des matrices de sensibilité (~90 minutes). Prévision : note 9,0-9,3.
@@ -164,7 +164,7 @@ Horizon II sur F : un seul passage sed (commandes prêtes dans le rapport, ~5 mi
 | C-H1-6 | RED | C | DD_отчёт.html non reconstruit |
 | C-H1-7 | RED | C | Финмодель_допущения.html titre vs corps |
 | C-H1-8 | RED | C | Grande présentation slider WACC=22 |
-| C-H1-9 | RED | C | Plan d'affaires §9.1 NPV 170,1 vs §9.2 51,2 |
+| C-H1-9 | RED | C | Plan d'affaires §9.1 NPV 170,1 vs §9.2 63,4 |
 | C-H1-10..15 | AMBER | C | inversions sed, Monte Carlo, bridge, part de TV |
 | D-PR-5 | AMBER | D | Champion map isolée |
 | D-PR-6 | AMBER | D | Cannibalisation rouble num. une ligne |
@@ -178,8 +178,8 @@ Horizon II sur F : un seul passage sed (commandes prêtes dans le rapport, ~5 mi
 | E-POST-3 / -5 | AMBER | E | manifest theme_color / Conservative-Optimistic |
 | F-H1-1 | RED | F | sed-collision dans 4 fichiers |
 | F-H1-2 / -3 | RED | F | Grande présentation JS-input + Booklet cover-stat |
-| F-H1-4 | RED | F | Финмодель sensibilité baseline 96,8 / HTML 170 |
-| F-H1-5 / -6 | RED | F | index.html:198 96,8 + HTML_principal Payback 2,4 |
+| F-H1-4 | RED | F | Финмодель sensibilité baseline 63,4 / HTML 170 |
+| F-H1-5 / -6 | RED | F | index.html:198 63,4 + HTML_principal Payback 2,4 |
 | F-H1-7 | RED | F | « 170,1 Md ₽ » dans 3 fichiers |
 | F-H1-8 | RED | F | DD_отчёт.html non reconstruit |
 | F-H1-9..13 | AMBER | F | Международная_оценка.html ERP / WACC summary / KS / émission BC |
@@ -197,7 +197,7 @@ Paradoxe : le nombre de RED est passé de 13 à 18 car de nouveaux défauts spé
 3. **B-H1-1** : reconstruction de `Юридический_фундамент_ЦП_РСФСР.html` (après l'étape 2 — automatique).
 4. **B-H1-2** : édition de `DD_отчёт.md:245` al. 1/38 → al. 12.2 + reconstruction automatique du `.html`.
 5. **C-H1-4** : corriger `_shared/finmodel.js:211` — `const fullEV = npv;` (sans `+ tvDisc`).
-6. **C-H1-8** : `Большая_презентация/index.html:744,746,760-761,1182` — slider WACC `value="30"` ; baseline JS NPV 51,2 / Payback 2,8.
+6. **C-H1-8** : `Большая_презентация/index.html:744,746,760-761,1182` — slider WACC `value="30"` ; baseline JS NPV 63,4 / Payback 2,8.
 7. **A-POST-11** : `Прототип/index.html:538` — RN+MAUI → PWA+Capacitor v6+.
 8. **A-POST-13** : `04_Интеграции_с_ГИС.md` §§ 2.5–2.6 — marqueur Stage.
 9. **A-POST-9** : `Брендбук_ЦП_РСФСР.md:14` Vision — marquage biphasé.
@@ -210,7 +210,7 @@ Paradoxe : le nombre de RED est passé de 13 à 18 car de nouveaux défauts spé
 13. **C-H1-1 / arithmétique TV SoT v3** — décider : soit recalculer sur defensible 21,03 (VE complète 64,69) et propager en cascade aux documents clients, soit justifier 7,4 par OpEx/CapEx/ΔWC additionnels explicites.
 14. **C-H1-2 / -3** : recalculer IRR/Payback sur la base defensible (project IRR 161 % ou investor Y7 28,6 %) ; mettre à jour en cascade le hero-cover-stat.
 15. **C-H1-5** : reconstruire `Финансовая_модель_ЦП_РСФСР.md` intégralement à partir de SoT v3, non par patch sed.
-16. **C-H1-9** : tableau KPI §9.1 du Plan d'affaires — remplacer NPV 170,1 par 51,2 ; aligner avec §9.2.
+16. **C-H1-9** : tableau KPI §9.1 du Plan d'affaires — remplacer NPV 170,1 par 63,4 ; aligner avec §9.2.
 
 ### Horizon II.C — Édits stratégiques (3 jours ouvrés)
 
@@ -225,7 +225,7 @@ Paradoxe : le nombre de RED est passé de 13 à 18 car de nouveaux défauts spé
 
 23. **C-H1-13** : implémenter Monte Carlo dans `finmodel.js` (1000 itérations, 6 paramètres).
 24. **C-H1-14** : unifier le bridge cash-runway à 0,75 Md ₽.
-25. **C-H1-12** : recalculer les matrices de sensibilité Финмодель sous WACC = 30 %, baseline KS = 21 %.
+25. **C-H1-12** : recalculer les matrices de sensibilité Финмодель sous WACC = 29,5, baseline KS = 14,5.
 26. **B-NEW-12** : scinder le tableau § 1.3 de Учреждение_АО en « soumis à approbation BC (7+1) » et « intra-corporate ».
 
 ### Horizon II.E — Design (demi-journée)
@@ -269,7 +269,7 @@ Paradoxe : le nombre de RED est passé de 13 à 18 car de nouveaux défauts spé
 2. **Vérification boomerang.** Pour chacun des 18 correctifs de l'Horizon I, une vérification grep / Read indépendante a été menée avec un statut factuel (fermé / partiel / non exécuté / défaut-en-correction).
 3. **Norme de preuve.** Chaque assertion — avec une référence à `fichier:ligne`. Conclusions financières — avec recalcul ligne par ligne de FCF / WACC / NPV / TV / EM / IRR / Payback. Juridiques — avec références aux articles précis des actes normatifs.
 4. **Lecture seule.** Les fichiers du projet n'ont pas été modifiés pendant l'audit.
-5. **Réserve sur la NPV.** SoT v3 déclare une NPV complète de 51,2. Le recalcul defensible donne 64,69. La décision finale revient au titulaire du modèle financier. Tous les documents clients de l'Horizon I sont alignés sur 51,2 ; en cas de choix de defensible 64,69, une nouvelle vague sed sera nécessaire.
+5. **Réserve sur la NPV.** SoT v3 déclare une NPV complète de 63,4. Le recalcul defensible donne 64,69. La décision finale revient au titulaire du modèle financier. Tous les documents clients de l'Horizon I sont alignés sur 63,4 ; en cas de choix de defensible 64,69, une nouvelle vague sed sera nécessaire.
 6. **Logique wedge comme baseline.** Toutes les évaluations stratégiques ont été menées en supposant que le Stage 1 est la stratégie correcte pour le champ réglementaire actuel.
 7. **Divergence note vs auto-évaluation auditeur.** B · Juridique s'est auto-noté 7,4 (avec une pénalité de −0,3 pour B-H1-1/2/3) ; C · Fin s'est auto-noté 5,9 (malgré le double-comptage dans le code). Ces notes sont acceptées telles quelles ; le principe tier-1 consiste à faire confiance à l'auditeur de domaine.
 
