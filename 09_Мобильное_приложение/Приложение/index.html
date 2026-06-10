@@ -102,7 +102,7 @@ body {
   display: none;
   flex: 1; overflow-y: auto; overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 80px;
+  padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
 }
 .screen.active {
   display: flex; flex-direction: column;
