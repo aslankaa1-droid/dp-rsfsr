@@ -1630,6 +1630,7 @@ function openAsset(id) {
   nav('asset-detail');
 }
 function renderAssetDetail() {
+  if (!curAsset) curAsset = (State.assets||[])[0];
   if (!curAsset) return;
   const a = curAsset;
   const root = document.getElementById('assetDetailContent');
@@ -1687,6 +1688,7 @@ function openCfa(id) {
   nav('cfa-detail');
 }
 function renderCfaDetail() {
+  if (!curCfa) curCfa = (State.cfas||[])[0];
   if (!curCfa) return;
   const c = curCfa;
   const root = document.getElementById('cfaDetailContent');
