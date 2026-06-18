@@ -13,15 +13,15 @@ window.CPFSR_AUTH = {
 
   // Активные PIN-коды Аслана (любой пропускает на сайт).
   PINS: [
-    { label: 'Аслан PIN 1', hash: '831f7756d9ceeeaf55c495a005261772fbc546b15704cfa7fd300f9947ceb775' }, // PIN: (redacted)
+    { label: 'Аслан PIN 1', hash: '3e4360471ed97c89d6c0ecb0ae0a888aa28a9576c4429c58f54c40176c1e2714' }, // PIN: (redacted)
     { label: 'Аслан PIN 2', hash: '0a44cd2cbce532cd9caae282721286ca5ee7d65f3fc119d9e1cd37341144615e' }, // PIN: (redacted)
-    { label: 'Аслан PIN 3', hash: '3e4360471ed97c89d6c0ecb0ae0a888aa28a9576c4429c58f54c40176c1e2714' }, // PIN: (redacted)
+    { label: 'Аслан PIN 3', hash: '831f7756d9ceeeaf55c495a005261772fbc546b15704cfa7fd300f9947ceb775' }, // PIN: (redacted)
     { label: 'Аслан PIN 4', hash: '0409eab7d375cb35eccaff5c0d58f1cbba07e1987ca60bcb9fb79ae09fd794d2' }, // PIN: (redacted)
-    { label: 'Аслан PIN 5', hash: '8b76a77156d3a40827e29704a590372f844872f961094a7cf774ef67a1be62e9' }  // PIN: (redacted)
+    { label: 'Аслан PIN 5', hash: '044abe5ecfd9dfb5d7ae0f99e46135f20ac0f3c74687d40a03573d60922b1c50' }  // PIN: (redacted)
   ],
 
   // (legacy alias — первый PIN из PINS, для совместимости с возможным старым кодом)
-  PIN_HASH: '831f7756d9ceeeaf55c495a005261772fbc546b15704cfa7fd300f9947ceb775',
+  PIN_HASH: '3e4360471ed97c89d6c0ecb0ae0a888aa28a9576c4429c58f54c40176c1e2714',
 
   // Сколько дней сессия живёт после успешного ввода PIN
   SESSION_DAYS: 30,
