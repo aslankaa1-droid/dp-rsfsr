@@ -30,7 +30,7 @@ This regime does not require amendments to 86-FZ or the Budget Code; it fits ent
 | **Starting partner bank** | Gazprombank or PSB (decided by MoU) |
 | **Starting insurer** | Sogor / Ingosstrakh / SOGAZ-SK (tender) |
 | **Source of targeted funding** | Infrastructure loans from VEB.RF (Project Finance Factory) under state guarantees |
-| **Regulatory base** | 259-FZ + 779-P + the regulatory sandbox under 258-FZ |
+| **Regulatory base** | 259-FZ + 779-P + the experimental legal regime under 258-FZ |
 | **Launch timing** | **Q3 2027 (T+18 months from incorporation of the JSC)** |
 
 ---
@@ -46,7 +46,7 @@ This regime does not require amendments to 86-FZ or the Budget Code; it fits ent
 | **Insurance company** | Coverage of the collateral pool | Tender among insurers licensed by the CBR |
 | **Ministry of Economic Development** | Political ally (national projects are their KPI) | Main entry channel; named sponsor |
 | **Ministry of Finance** | Approval of the tax position; reduction of pressure on the OFZ market | Request to the Ministry of Finance under Article 34.2 of the Tax Code; the "off-budget channel" case |
-| **Bank of Russia (supervisory regulator under Article 4 of 86-FZ)** | Regulatory sandbox, the register of IS DFA operators | Through a consolidated inter-agency position (not the first call) |
+| **Bank of Russia (supervisory regulator under Article 4 of 86-FZ)** | Experimental legal regime (ELR), the register of IS DFA operators | Through a consolidated inter-agency position (not the first call) |
 
 ### 3.1. Champion-map (by name, per the clarifying audit of 24.05.2026)
 
@@ -80,7 +80,7 @@ This regime does not require amendments to 86-FZ or the Budget Code; it fits ent
 ### Stage 2 — Regulatory clearances (T+9 to T+15 months)
 
 1. **Application for inclusion in the register of IS DFA operators** of the Bank of Russia (779-P).
-2. **Application for the CBR regulatory sandbox** (258-FZ).
+2. **Application for the CBR experimental legal regime** (258-FZ).
 3. **Approval of the IS rules** (Article 6 of 259-FZ).
 4. **Obtaining sectoral certifications** of FSTEC / FSB.
 5. **Ministry of Finance opinion** on the tax position (Article 34.2 of the Tax Code).
@@ -183,7 +183,7 @@ The principal advantage of the wedge: **the project does not approach the CBR wi
 | MoU with the pilot region | Signed | T+9 months |
 | MoU with the bank and the insurer | Signed | T+9 months |
 | Inclusion in the IS DFA operators register | Obtained | T+12 months |
-| Sandbox authorisation | Obtained | T+12 months |
+| Legal regime authorisation | Obtained | T+12 months |
 | First cycle of targeted DFA issuance | RUB 5 bn | T+18 months |
 | First targeted funding through VEB.RF | RUB 5 bn | T+19 months |
 | Expansion to 3 regions | Launch | T+24 months |

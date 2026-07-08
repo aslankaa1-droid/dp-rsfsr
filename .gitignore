@@ -30,3 +30,8 @@ package-lock.json
 # Temp Office locks + one-off helper
 ~$*
 _dpfsd_fix_www.ps1
+_arhiv/
+*.rar
+*.zip
+*.7z
+*.iso

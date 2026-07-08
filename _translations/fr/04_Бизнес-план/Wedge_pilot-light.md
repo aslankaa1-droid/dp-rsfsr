@@ -30,7 +30,7 @@ Ce régime ne nécessite pas d'amendements à 86-FZ ni au Code budgétaire ; il 
 | **Banque partenaire initiale** | Gazprombank ou PSB (déterminée par MoU) |
 | **Assureur initial** | Sogor / Ingosstrakh / SOGAZ-SK (appel d'offres) |
 | **Source de financement ciblé** | Crédits d'infrastructure VEB.RF (Fabrique de financement de projet) sous garanties d'État |
-| **Base réglementaire** | 259-FZ + 779-P + sandbox réglementaire 258-FZ |
+| **Base réglementaire** | 259-FZ + 779-P + régime juridique expérimental (RJE) 258-FZ |
 | **Timing de lancement** | **Q3 2027 (T+18 mois à compter de la constitution de la JSC)** |
 
 ---
@@ -46,7 +46,7 @@ Ce régime ne nécessite pas d'amendements à 86-FZ ni au Code budgétaire ; il 
 | **Compagnie d'assurance** | Couverture du pool de garanties | Appel d'offres parmi assureurs agréés BCR |
 | **Minéco** | Allié politique (les projets nationaux sont leur KPI) | Canal d'entrée principal ; named sponsor |
 | **MinFin** | Accord de la position fiscale ; baisse de pression sur les OFZ | Demande à MinFin selon l'art. 34.2 CI ; argument « canal extra-budgétaire » |
-| **Banque de Russie (régulateur prudentiel, art. 4 86-FZ)** | Sandbox réglementaire, registre des opérateurs SI DFA | Via la position interministérielle consolidée (pas en first call) |
+| **Banque de Russie (régulateur prudentiel, art. 4 86-FZ)** | Régime juridique expérimental, registre des opérateurs SI DFA | Via la position interministérielle consolidée (pas en first call) |
 
 ### 3.1. Champion-map (nominal, à l'issue de l'audit clarifiant du 24.05.2026)
 
@@ -80,7 +80,7 @@ Ce régime ne nécessite pas d'amendements à 86-FZ ni au Code budgétaire ; il 
 ### Étape 2 — Validations réglementaires (T+9…T+15 mois)
 
 1. **Demande au registre des opérateurs SI DFA** de la BCR (779-P).
-2. **Demande au sandbox réglementaire** de la BCR (258-FZ).
+2. **Demande au régime juridique expérimental** de la BCR (258-FZ).
 3. **Validation des règles SI** (art. 6 259-FZ).
 4. **Obtention des certifications FSTEC / FSB**.
 5. **Avis MinFin** sur la position fiscale (art. 34.2 CI).
@@ -183,7 +183,7 @@ Avantage principal du wedge : **le projet n'arrive pas à la BCR avec une demand
 | MoU avec la région pilote | Signé | T+9 mois |
 | MoU avec banque et assureur | Signé | T+9 mois |
 | Inscription au registre des opérateurs SI DFA | Obtenue | T+12 mois |
-| Autorisation du sandbox réglementaire | Obtenue | T+12 mois |
+| Autorisation du régime juridique expérimental | Obtenue | T+12 mois |
 | Premier cycle d'émission DFA ciblés | 5 Md ₽ | T+18 mois |
 | Premier financement ciblé via VEB.RF | 5 Md ₽ | T+19 mois |
 | Extension à 3 régions | Démarrage | T+24 mois |
