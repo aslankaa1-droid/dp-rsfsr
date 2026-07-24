@@ -54,7 +54,7 @@
         title_p1: 'Институциональный контур',
         title_em: 'финансирования социального развития',
         title_p2: ' на базе СЗПК и 259-ФЗ',
-        lead: 'Wedge через альянс ВЭБ.РФ / Газпромбанк / Минэк / Атомайз. Базовая оценка post-money 95 млн долл. США, IRR 62 %, NPV 51,2 млрд ₽. Двухстадийная архитектура: Pilot Light в действующем 259-ФЗ → целевой контур.',
+        lead: 'Wedge через альянс институт развития / банк-партнёр / профильное министерство / оператор 779-П. Базовая оценка post-money 95 млн долл. США, IRR 62 %, NPV 51,2 млрд ₽. Двухстадийная архитектура: Pilot Light в действующем 259-ФЗ → целевой контур.',
         cta_main: 'Презентация для инвесторов',
         cta_secondary: 'Доклад для Банка России'
       },
@@ -72,7 +72,7 @@
           title: 'Шестнадцать тематических блоков',
           lead: 'Полный документальный пакет — от технической документации до Governance Pack и Compliance Matrix',
           c01_title: 'Техническая документация', c01_desc: 'Концепт, функциональные и нефункциональные требования, DLT-реестр ЦФА, архитектурные диаграммы, дорожная карта',
-          c02_title: 'Юридический фундамент', c02_desc: '259-ФЗ wedge через ВЭБ.РФ / Газпромбанк / Минэк / Атомайз, Stage 1 / Stage 2, pre-meeting briefs, учреждение АО',
+          c02_title: 'Юридический фундамент', c02_desc: '259-ФЗ wedge через институт развития / банк-партнёр / профильное министерство / оператор 779-П, Stage 1 / Stage 2, pre-meeting briefs, учреждение АО',
           c03_title: 'Финансовая модель', c03_desc: 'SoT v3: NPV 51,2 / IRR 62 % / WACC 30 % / EM 12× / Payback 2,8. Monte Carlo, sensitivity, tornado, multi-stage TV',
           c04_title: 'Бизнес-план', c04_desc: 'Wedge-pilot-light, GTM-sequencing, Champion-map, unit-экономика, дорожная карта 2026-2034',
           c05_title: 'Бренд-бук', c05_desc: 'Палитра, типографика, логотип, применения, охранное поле',
@@ -90,15 +90,15 @@
           arrow: 'Открыть'
         },
         champion: {
-          eyebrow: 'Government Champions',
-          title: 'Champion-map · Stage 1',
-          lead: 'Шесть институциональных партнёров для wedge-старта через действующий 259-ФЗ',
-          c1_name: 'М. Г. Решетников', c1_role: 'Министр', c1_org: 'Минэкономразвития РФ · СЗПК-контур',
-          c2_name: 'В. В. Колычев', c2_role: 'Заместитель министра', c2_org: 'Минфин РФ · бюджетный контур',
-          c3_name: 'А. В. Сазанов', c3_role: 'Статс-секретарь — заместитель министра', c3_org: 'Минфин РФ · ЦФА и налоговый режим',
-          c4_name: 'А. Г. Аксаков', c4_role: 'Председатель комитета', c4_org: 'Госдума РФ · финансовые рынки',
-          c5_name: 'Р. Н. Минниханов', c5_role: 'Раис (глава)', c5_org: 'Республика Татарстан · пилот-регион',
-          c6_name: 'А. В. Моор', c6_role: 'Губернатор', c6_org: 'Тюменская область · пилот-регион'
+          eyebrow: 'Government Relations',
+          title: 'Карта согласований · Stage 1',
+          lead: 'Шесть институциональных контуров для wedge-старта через действующий 259-ФЗ',
+          c1_name: 'Минэкономразвития РФ', c1_role: 'Профильное министерство', c1_org: 'СЗПК-контур · нацпроекты',
+          c2_name: 'Минфин РФ', c2_role: 'Бюджетный блок', c2_org: 'Внебюджетный канал финансирования',
+          c3_name: 'Минфин РФ', c3_role: 'Налоговый блок', c3_org: 'Налоговый режим ЦФА',
+          c4_name: 'Госдума РФ', c4_role: 'Комитет по фин. рынку', c4_org: 'Законодательный контур 259-ФЗ',
+          c5_name: 'Пилотный регион', c5_role: 'Субъект РФ', c5_org: 'Первый пилот размещений',
+          c6_name: 'Пилотный регион', c6_role: 'Субъект РФ (резерв)', c6_org: 'Резервный пилот'
         },
         audit: {
           eyebrow: 'Сводный аудит',
@@ -165,7 +165,7 @@
         title_p1: 'An institutional rail for',
         title_em: 'social-development capital',
         title_p2: ' under SZPK and Federal Law 259-FZ',
-        lead: 'A wedge anchored by VEB.RF, Gazprombank, the Ministry of Economic Development, and Atomyze. Base post-money valuation of USD 95M, investor-level IRR of 62 %, NPV of RUB 51.2 bn. A two-stage architecture: a Pilot Light inside the existing 259-FZ framework, scaling into the target perimeter.',
+        lead: 'A wedge anchored by VEB.RF, partner bank, the Ministry of Economic Development, and Atomyze. Base post-money valuation of USD 95M, investor-level IRR of 62 %, NPV of RUB 51.2 bn. A two-stage architecture: a Pilot Light inside the existing 259-FZ framework, scaling into the target perimeter.',
         cta_main: 'Investor pitch deck',
         cta_secondary: 'Briefing for the Bank of Russia'
       },
@@ -183,7 +183,7 @@
           title: 'Sixteen thematic blocks',
           lead: 'A complete documentation pack — from technical specifications to a Governance Pack and a Compliance Matrix',
           c01_title: 'Technical Documentation', c01_desc: 'Concept, functional and non-functional requirements, DLT register of DFAs, architecture diagrams, development roadmap',
-          c02_title: 'Legal Foundation', c02_desc: '259-FZ wedge via VEB.RF / Gazprombank / MinEcon / Atomyze, Stage 1 / Stage 2, pre-meeting briefs, JSC incorporation',
+          c02_title: 'Legal Foundation', c02_desc: '259-FZ wedge via VEB.RF / partner bank / MinEcon / Atomyze, Stage 1 / Stage 2, pre-meeting briefs, JSC incorporation',
           c03_title: 'Financial Model', c03_desc: 'SoT v3: NPV 51.2 / IRR 62% / WACC 30% / EM 12× / Payback 2.8. Monte Carlo, sensitivity, tornado, multi-stage TV',
           c04_title: 'Business Plan', c04_desc: 'Wedge-pilot-light, GTM sequencing, Champion-map, unit economics, 2026-2034 roadmap',
           c05_title: 'Brand Book', c05_desc: 'Palette, typography, logo, applications, exclusion zone',
@@ -201,15 +201,15 @@
           arrow: 'Open'
         },
         champion: {
-          eyebrow: 'Government Champions',
-          title: 'Stage-1 Champion Map',
-          lead: 'Six institutional partners powering the wedge launch through the existing 259-FZ framework',
-          c1_name: 'M. G. Reshetnikov', c1_role: 'Minister', c1_org: 'Ministry of Economic Development of the RF · SZPK circuit',
-          c2_name: 'V. V. Kolychev', c2_role: 'Deputy Minister', c2_org: 'Ministry of Finance of the RF · budget circuit',
-          c3_name: 'A. V. Sazanov', c3_role: 'State Secretary — Deputy Minister', c3_org: 'Ministry of Finance of the RF · DFA and tax regime',
-          c4_name: 'A. G. Aksakov', c4_role: 'Committee Chairman', c4_org: 'State Duma of the RF · financial markets',
-          c5_name: 'R. N. Minnikhanov', c5_role: 'Rais (Head)', c5_org: 'Republic of Tatarstan · pilot region',
-          c6_name: 'A. V. Moor', c6_role: 'Governor', c6_org: 'Tyumen Region · pilot region'
+          eyebrow: 'Government Relations',
+          title: 'Stage-1 Approval Map',
+          lead: 'Six institutional circuits powering the wedge launch through the existing 259-FZ framework',
+          c1_name: 'Ministry of Economic Development', c1_role: 'Sectoral ministry', c1_org: 'SZPK circuit · national projects',
+          c2_name: 'Ministry of Finance', c2_role: 'Budget unit', c2_org: 'Off-budget financing channel',
+          c3_name: 'Ministry of Finance', c3_role: 'Tax unit', c3_org: 'CFA tax regime',
+          c4_name: 'State Duma', c4_role: 'Financial Market Committee', c4_org: '259-FZ legislative circuit',
+          c5_name: 'Pilot region', c5_role: 'RF subject', c5_org: 'First placement pilot',
+          c6_name: 'Pilot region', c6_role: 'RF subject (reserve)', c6_org: 'Reserve pilot'
         },
         audit: {
           eyebrow: 'Composite Audit',
@@ -276,7 +276,7 @@
         title_p1: 'Une infrastructure institutionnelle',
         title_em: 'pour le financement du développement social',
         title_p2: ' au titre des accords SZPK et de la loi fédérale 259-FZ',
-        lead: 'Un point d’entrée porté par l’alliance VEB.RF / Gazprombank / ministère du Développement économique / Atomyze. Valorisation post-money de référence : 95 M USD ; TRI investisseur de 62 % ; VAN de 51,2 Md ₽. Architecture en deux temps : un Pilot Light dans le cadre existant 259-FZ, montant ensuite vers le périmètre cible.',
+        lead: 'Un point d’entrée porté par l’alliance VEB.RF / partner bank / ministère du Développement économique / Atomyze. Valorisation post-money de référence : 95 M USD ; TRI investisseur de 62 % ; VAN de 51,2 Md ₽. Architecture en deux temps : un Pilot Light dans le cadre existant 259-FZ, montant ensuite vers le périmètre cible.',
         cta_main: 'Pitch deck investisseurs',
         cta_secondary: 'Note pour la Banque centrale de Russie'
       },
@@ -294,7 +294,7 @@
           title: 'Seize blocs thématiques',
           lead: 'Un dossier documentaire complet — des spécifications techniques au Governance Pack et à la matrice de conformité',
           c01_title: 'Documentation technique', c01_desc: "Concept, exigences fonctionnelles et non fonctionnelles, registre DLT des AFN, diagrammes d'architecture, feuille de route",
-          c02_title: 'Fondement juridique', c02_desc: 'Wedge FZ-259 via VEB.RF / Gazprombank / MinEco / Atomyze, étape 1 / 2, briefs pré-réunion, constitution SA',
+          c02_title: 'Fondement juridique', c02_desc: 'Wedge FZ-259 via VEB.RF / partner bank / MinEco / Atomyze, étape 1 / 2, briefs pré-réunion, constitution SA',
           c03_title: 'Modèle financier', c03_desc: 'SoT v3 : NPV 51,2 / IRR 62 % / WACC 30 % / EM 12× / Payback 2,8. Monte Carlo, sensibilité, tornado, TV multi-étapes',
           c04_title: "Plan d'affaires", c04_desc: 'Wedge-pilot-light, séquençage GTM, Champion-map, unit economics, feuille de route 2026-2034',
           c05_title: 'Brand book', c05_desc: "Palette, typographie, logo, applications, zone d'exclusion",
@@ -312,15 +312,15 @@
           arrow: 'Ouvrir'
         },
         champion: {
-          eyebrow: 'Champions gouvernementaux',
-          title: 'Carte des champions · Étape 1',
-          lead: 'Six partenaires institutionnels pour amorcer le wedge dans le cadre 259-FZ existant',
-          c1_name: 'M. G. Rechetnikov', c1_role: 'Ministre', c1_org: 'Ministère du Développement économique de la FR · circuit SZPK',
-          c2_name: 'V. V. Kolytchev', c2_role: 'Vice-ministre', c2_org: 'Ministère des Finances de la FR · circuit budgétaire',
-          c3_name: 'A. V. Sazanov', c3_role: "Secrétaire d'État — Vice-ministre", c3_org: 'Ministère des Finances de la FR · AFN et régime fiscal',
-          c4_name: 'A. G. Aksakov', c4_role: 'Président de la commission', c4_org: "Douma d'État de la FR · marchés financiers",
-          c5_name: 'R. N. Minnikhanov', c5_role: 'Raïs (Chef)', c5_org: 'République du Tatarstan · région pilote',
-          c6_name: 'A. V. Moor', c6_role: 'Gouverneur', c6_org: 'Région de Tioumen · région pilote'
+          eyebrow: 'Relations gouvernementales',
+          title: 'Carte des approbations · Étape 1',
+          lead: 'Six circuits institutionnels pour amorcer le wedge dans le cadre 259-FZ existant',
+          c1_name: 'Ministère du Développement économique', c1_role: 'Ministère sectoriel', c1_org: 'circuit SZPK · projets nationaux',
+          c2_name: 'Ministère des Finances', c2_role: 'Direction du budget', c2_org: 'canal de financement hors-budget',
+          c3_name: 'Ministère des Finances', c3_role: 'Direction fiscale', c3_org: 'régime fiscal AFN',
+          c4_name: "Douma d'État", c4_role: 'Commission du marché financier', c4_org: 'circuit législatif 259-FZ',
+          c5_name: 'Région pilote', c5_role: 'Sujet de la FR', c5_org: 'Premier pilote de placements',
+          c6_name: 'Région pilote', c6_role: 'Sujet de la FR (réserve)', c6_org: 'Pilote de réserve'
         },
         audit: {
           eyebrow: 'Audit consolidé',
@@ -405,7 +405,7 @@
           title: 'ست عشرة كتلة موضوعية',
           lead: 'حزمة وثائقية متكاملة — من المواصفات التقنية إلى حزمة الحوكمة ومصفوفة الامتثال',
           c01_title: 'الوثائق التقنية', c01_desc: 'المفهوم، المتطلبات الوظيفية وغير الوظيفية، سجل DLT لـ DFA، المخططات المعمارية، خارطة الطريق',
-          c02_title: 'الأساس القانوني', c02_desc: 'wedge FZ-259 عبر VEB.RF / Gazprombank / وزارة الاقتصاد / Atomyze، المرحلة 1 / 2، إحاطات قبل الاجتماع، تأسيس شركة مساهمة',
+          c02_title: 'الأساس القانوني', c02_desc: 'wedge FZ-259 عبر VEB.RF / partner bank / وزارة الاقتصاد / Atomyze، المرحلة 1 / 2، إحاطات قبل الاجتماع، تأسيس شركة مساهمة',
           c03_title: 'النموذج المالي', c03_desc: 'SoT v3: NPV 51,2 / IRR 62% / WACC 30% / EM 12× / Payback 2,8. Monte Carlo، الحساسية، tornado، TV متعدد المراحل',
           c04_title: 'خطة العمل', c04_desc: 'Wedge-pilot-light، تسلسل GTM، خريطة الرعاة، اقتصاديات الوحدة، خارطة الطريق 2026-2034',
           c05_title: 'دليل الهوية', c05_desc: 'لوحة الألوان، الطباعة، الشعار، التطبيقات، منطقة الحماية',
@@ -423,15 +423,15 @@
           arrow: 'فتح'
         },
         champion: {
-          eyebrow: 'الرعاة الحكوميون',
-          title: 'خريطة الرعاة · المرحلة 1',
-          lead: 'ستة شركاء مؤسسيين لانطلاق نقطة الدخول ضمن إطار 259-FZ القائم',
-          c1_name: 'م. غ. ريشيتنيكوف', c1_role: 'وزير', c1_org: 'وزارة التنمية الاقتصادية للاتحاد الروسي · دائرة SZPK',
-          c2_name: 'ف. ف. كولوتشيف', c2_role: 'نائب الوزير', c2_org: 'وزارة المالية للاتحاد الروسي · الدائرة الميزانية',
-          c3_name: 'أ. ف. سازانوف', c3_role: 'وزير الدولة — نائب الوزير', c3_org: 'وزارة المالية للاتحاد الروسي · DFA والنظام الضريبي',
-          c4_name: 'أ. غ. أكساكوف', c4_role: 'رئيس اللجنة', c4_org: 'مجلس الدوما للاتحاد الروسي · الأسواق المالية',
-          c5_name: 'ر. ن. منيخانوف', c5_role: 'الرئيس', c5_org: 'جمهورية تتارستان · المنطقة التجريبية',
-          c6_name: 'أ. ف. مور', c6_role: 'المحافظ', c6_org: 'منطقة تيومين · المنطقة التجريبية'
+          eyebrow: 'العلاقات الحكومية',
+          title: 'خريطة الموافقات · المرحلة 1',
+          lead: 'ستة مسارات مؤسسية لانطلاق نقطة الدخول ضمن إطار 259-FZ القائم',
+          c1_name: 'وزارة التنمية الاقتصادية', c1_role: 'وزارة قطاعية', c1_org: 'دائرة SZPK · المشاريع الوطنية',
+          c2_name: 'وزارة المالية', c2_role: 'إدارة الميزانية', c2_org: 'قناة تمويل خارج الميزانية',
+          c3_name: 'وزارة المالية', c3_role: 'الإدارة الضريبية', c3_org: 'النظام الضريبي للأصول الرقمية',
+          c4_name: 'مجلس الدوما', c4_role: 'لجنة السوق المالي', c4_org: 'الدائرة التشريعية 259-FZ',
+          c5_name: 'منطقة تجريبية', c5_role: 'أحد أقاليم الاتحاد', c5_org: 'أول تجربة إصدار',
+          c6_name: 'منطقة تجريبية', c6_role: 'أحد أقاليم الاتحاد (احتياطي)', c6_org: 'تجربة احتياطية'
         },
         audit: {
           eyebrow: 'التدقيق الموحَّد',

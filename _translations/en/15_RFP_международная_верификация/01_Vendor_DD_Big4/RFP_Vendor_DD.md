@@ -75,7 +75,7 @@ All deliverables — in Russian (primary) + English (executive summary + key fin
 
 - The signing Partner must be certified under one of the following systems: ACA (ICAEW), CPA, CFA Charter, ASA (American Society of Appraisers).
 - Team — minimum 4 persons: Engagement Partner + Senior Manager + 2 Analysts; CVs are mandatory.
-- Conflict-of-interest disclosure (mandatory): check engagements with any parties related to the project (Atomyze JSC, VEB.RF, Gazprombank, Promsvyazbank, Atomyze affiliates) over the last 36 months.
+- Conflict-of-interest disclosure (mandatory): check engagements with any parties related to the project (Atomyze JSC, VEB.RF, partner bank, Promsvyazbank, affiliated structures) over the last 36 months.
 - Insurance: Professional Indemnity Insurance coverage ≥ USD 5M.
 
 ## 5. Budget and timing

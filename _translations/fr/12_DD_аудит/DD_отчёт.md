@@ -34,7 +34,7 @@ Le rapport couvre les six domaines classiques de la Due Diligence et un domaine 
 ## 2. Commercial Due Diligence
 
 ### 2.1. Analyse produit
-CPFSR est une plateforme front-end / agent d'émission de DFA adossés à un gage d'actifs, opérant selon une architecture en deux phases. **Étape 1 (pilot-light 2026–2028) :** les placements sont réalisés via un partenariat technologique avec un opérateur en place du système d'information d'émission de DFA au titre de 779-P (JSC « Atomyze » ou autre entité du registre — la licence 779-P est individuelle et non transférable) ; le financement passe par la Fabrique de financement de projet VEB.RF (décret n° 158) et le Trésor fédéral dans le cadre du Code budgétaire. Aucune émission supplémentaire de la Banque de Russie n'est prévue en Étape 1 ; la BCR est le régulateur prudentiel général au titre de l'article 4 de la loi 86-FZ. **Étape 2 (horizon 2029+) :** élargissement du mandat vers le modèle d'émission garantie ciblée adossée à un pool de DFA gagés — horizon défendable, mis en œuvre après un track-record positif Étape 1 ≥ 12 mois et adoption du paquet de quatre lois fédérales. Aucun analogue à cette architecture en deux phases n'a été identifié dans les sources publiques, en FR ou sur les marchés internationaux.
+CPFSR est une plateforme front-end / agent d'émission de DFA adossés à un gage d'actifs, opérant selon une architecture en deux phases. **Étape 1 (pilot-light 2026–2028) :** les placements sont réalisés via un partenariat technologique avec un opérateur en place du système d'information d'émission de DFA au titre de 779-P (un opérateur 779-P en place — la licence 779-P est individuelle et non transférable) ; le financement passe par la Fabrique de financement de projet VEB.RF (décret n° 158) et le Trésor fédéral dans le cadre du Code budgétaire. Aucune émission supplémentaire de la Banque de Russie n'est prévue en Étape 1 ; la BCR est le régulateur prudentiel général au titre de l'article 4 de la loi 86-FZ. **Étape 2 (horizon 2029+) :** élargissement du mandat vers le modèle d'émission garantie ciblée adossée à un pool de DFA gagés — horizon défendable, mis en œuvre après un track-record positif Étape 1 ≥ 12 mois et adoption du paquet de quatre lois fédérales. Aucun analogue à cette architecture en deux phases n'a été identifié dans les sources publiques, en FR ou sur les marchés internationaux.
 
 ### 2.2. Analyse de marché
 - Valeur immobilière totale en FR — environ **507 000 Md ₽**.
@@ -57,15 +57,15 @@ Le séquencement GTM du projet est bâti sur la logique wedge : la BCR est l'ins
 
 | Étape | Personne / Autorité | Rôle dans l'entonnoir | Ancrage |
 |---|---|---|---|
-| T+30 | Minéco (M. Réchetnikov) | Named sponsor ; inclusion dans projets nationaux | Pitch_deck slide « Government Champions » |
+| T+30 | Minéco (M. the relevant official) | Named sponsor ; inclusion dans projets nationaux | Pitch_deck slide « Government Champions » |
 | T+30 | Cabinet du Gouvernement RF | Cadre architectural | Concept § 1-bis |
-| T+30 | JSC « Atomyze » | Partenaire technologique 779-P | LoI (Pre-meeting_briefs/01) |
-| T+90 | MinFin (I. Kolytchev) | Canal extra-budgétaire, pression OFZ | Modèle financier v3 |
-| T+90 | MinFin (V. Sazanov) | Position fiscale DFA | Cadre juridique § 5 |
+| T+30 | JSC « Atomyze » | Partenaire technologique 779-P | brouillon-cadre |
+| T+90 | MinFin (the relevant official) | Canal extra-budgétaire, pression OFZ | Modèle financier v3 |
+| T+90 | MinFin (the relevant official) | Position fiscale DFA | Cadre juridique § 5 |
 | T+90 | VEB.RF FPF | Lettre consultative selon décret 158 | Pre-meeting_briefs/02 |
-| T+90 | Gazprombank / PSB | MoU banque de règlement | Pre-meeting_briefs/04 |
-| T+180 | Tatarstan (R. Minnikhanov) | MoU régional (50–100 objets) | Pre-meeting_briefs/03 |
-| T+180 | Douma (A. Aksakov) | Consultation sur 259-FZ | Note pour BCR |
+| T+90 | banque partenaire | MoU banque de règlement | Pre-meeting_briefs/04 |
+| T+180 | Tatarstan (the relevant official) | MoU régional (50–100 objets) | Pre-meeting_briefs/03 |
+| T+180 | Douma (the relevant official) | Consultation sur 259-FZ | Note pour BCR |
 | T+180+ | Banque de Russie | Registre opérateurs SI DFA 779-P | Cadre juridique § 8.1 |
 
 **Signal de risque :** refus d'au moins un champion au niveau ministre / vice-ministre → retour à l'Étape 2 / horizon 2029+, perte d'environ 24 mois sur le paquet de 4 lois fédérales.

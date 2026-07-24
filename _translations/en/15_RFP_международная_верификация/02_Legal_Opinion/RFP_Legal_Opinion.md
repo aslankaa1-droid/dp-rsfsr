@@ -25,7 +25,7 @@ Obtaining an independent tier-1 legal opinion on the project in order to:
 - **Federal Law 259-FZ "On DFA"** — operational foundation.
 - **Federal Law 39-FZ** — boundary between DFA and securities for qualification purposes.
 
-Survey points: is it legal to structure the pilot-light through Atomyze JSC as the 779-P operator (sublease vs separate operator); is a separate register status required for the CPFSR front-end; deployment-ready configuration limits prior to formal amendments.
+Survey points: is it legal to structure the pilot-light through an incumbent 779-P operator (sublease vs separate operator); is a separate register status required for the CPFSR front-end; deployment-ready configuration limits prior to formal amendments.
 
 ### 2.2. Escrow construction
 

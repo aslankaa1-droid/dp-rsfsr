@@ -82,7 +82,7 @@ Matrice de mise en conformité du projet CPFSR avec les cadres réglementaires e
 | Norme | Applicabilité | Statut |
 |---|---|---|
 | **Bâle III** (BCBS) | Si CPFSR devient une banque (horizon Étape 2) | Non applicable en Étape 1 |
-| **Règlement BCR 779-P** | Fondamental (opérateur SI DFA) | Fondement ; via JSC Atomyze en Étape 1 |
+| **Règlement BCR 779-P** | Fondamental (opérateur SI DFA) | Fondement ; via un opérateur 779-P en place en Étape 1 |
 | **Directive BCR 4336-U** | Fondamentale (comptabilité des DFA) | Fondement |
 | **Code civil RF art. 860.7–860.10** (entiercement) | S'applique | Fondement |
 | **161-FZ « Sur le système national de paiement »** | Si payment rail | Stade feuille de route |

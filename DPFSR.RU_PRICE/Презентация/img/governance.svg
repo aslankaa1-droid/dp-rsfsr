@@ -33,25 +33,25 @@
     <g transform="translate(660, 130)">
       <rect width="200" height="72" rx="4" fill="#1F2733" stroke="#C9CED6" stroke-opacity="0.2"/>
       <text x="14" y="26">Минфин РФ</text>
-      <text x="14" y="52" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#8C95A4">Колычев · Сазанов</text>
+      <text x="14" y="52" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#8C95A4">Минфин РФ</text>
     </g>
     <!-- Минэк -->
     <g transform="translate(80, 270)">
       <rect width="200" height="72" rx="4" fill="#1F2733" stroke="#C9CED6" stroke-opacity="0.2"/>
       <text x="14" y="26">Минэкономразвития</text>
-      <text x="14" y="52" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#8C95A4">М. Г. Решетников</text>
+      <text x="14" y="52" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#8C95A4">Минэкономразвития РФ</text>
     </g>
     <!-- ВЭБ -->
     <g transform="translate(720, 270)">
       <rect width="200" height="72" rx="4" fill="#1F2733" stroke="#C9CED6" stroke-opacity="0.2"/>
-      <text x="14" y="26">ВЭБ.РФ + Газпромбанк</text>
+      <text x="14" y="26">ВЭБ.РФ + банк-партнёр</text>
       <text x="14" y="52" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#8C95A4">Каналы целевого фондирования</text>
     </g>
     <!-- Госдума -->
     <g transform="translate(140, 420)">
       <rect width="200" height="72" rx="4" fill="#1F2733" stroke="#C9CED6" stroke-opacity="0.2"/>
       <text x="14" y="26">Госдума · ФинКомитет</text>
-      <text x="14" y="52" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#8C95A4">А. Г. Аксаков</text>
+      <text x="14" y="52" font-family="Inter, sans-serif" font-weight="400" font-size="11" fill="#8C95A4">Госдума РФ</text>
     </g>
     <!-- Регионы -->
     <g transform="translate(660, 420)">

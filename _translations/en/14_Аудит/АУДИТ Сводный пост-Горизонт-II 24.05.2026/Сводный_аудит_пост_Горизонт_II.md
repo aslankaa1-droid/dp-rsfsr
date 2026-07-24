@@ -13,7 +13,7 @@ Structural qualitative changes:
 1. **Financial KPIs of the client-side perimeter are synchronised** with SoT v3: the F-H1 sed wave closed 12 of 13 key signatures (NPV 63.4 / IRR 62% / Payback 2.8 / WACC 29.5 / EM 12× / TV EBITDA 74.8% / RF 14.73 / ERP 8.13, post-money USD 115, Reasoned USD 70–140M). The Business Plan §3, §9.1 KPI block ("NPV 170.1 → 63.4") is closed; the JS baseline `kpiNpv/kpiPayback` in the Major Presentation is synchronised; the booklet cover-stat and the root index.html entry-stat are migrated to SoT v3.
 2. **The legal base is fully two-stage**: Legal Framework §§ 4.1/4.2 + § 8.1–8.4 in MD+HTML; sub-para 12.2 of the Tax Code in Legal Framework.html and DD_report.md/html; the consumer-law Article 16 EULA cap removed; the privacy policy with the Roskomnadzor disclaimer; the escrow agreement — CC Articles 860.7–860.10 + 395-1 without the non-existent enumeration.
 3. **Business Plan §§ 1, 2.2, 3.1, 3.2, 3.4, 4.4, 4.5 rewritten under Stage 1 / Stage 2** in MD and HTML. The internal seam "Business Plan on Stage 2" (Horizon I RED) is eliminated.
-4. **A named Champion-map** (Reshetnikov / Kolychev / Sazanov / Aksakov / Minnikhanov / Moor) added to Concept § 1-ter. **4 LoI / MoU drafts** in `02_Юридический_фундамент/Pre-meeting_briefs/` (Atomyze / VEB.RF PFF / Tatarstan / Gazprombank).
+4. **A named Champion-map** (the relevant official) added to Concept § 1-ter. **4 LoI / MoU drafts** in `02_Юридический_фундамент/Pre-meeting_briefs/` (Atomyze / VEB.RF PFF / Tatarstan / partner bank).
 5. **D-PR-6/7/11/12** — digital-ruble cannibalisation under 340-FZ (3 scenarios + 3 mitigations), defence against regulator copying (4 moat contours), the 65% → 74.8% EBITDA bridge (3 factors), Kagirov-author protection (4 Shareholders-Agreement mechanisms) — added to Business Plan § 10 / § 11.3 / § 11.4 and Concept § 1-quater.
 6. **finmodel.js:211 double-count** fixed: the EM formula now yields a mathematically correct investor TVPI = (0.158 × NPV) / 1.335.
 7. **The interactive calculator in the Major Presentation** — WACC slider value=22 → 30; range min=15 max=30 → min=15 max=40.
@@ -45,7 +45,7 @@ The third category — **point fixes**:
 - A-POST-H2-2/3/4: .NET MAUI / React Native / Detox in the Specification §§ 5.2, 6.1, the Development Roadmap M5.6, 02_Program_description (Horizon I under-coverage).
 - B-NEW-12: lists of 779-P officers in the JSC Incorporation document vs the Legal Framework (Horizon III).
 
-Communication readiness: **friendly + friendly VC + VEB.RF PFF — ready; friendly strategic investor — ready; Gazprombank-DD / PSB-DD — conditionally ready; tier-1 VC — withstands the initial screening and a 2-week data-room; the deep DD of weeks 3–4 requires the Horizon III pandoc pass + a methodological decision on C-H1-1**. Horizon III (≈ 4–6 hours of work) — forecast composite score **9.0–9.5 / 10**.
+Communication readiness: **friendly + friendly VC + VEB.RF PFF — ready; friendly strategic investor — ready; partner-bank DD / partner-bank DD — conditionally ready; tier-1 VC — withstands the initial screening and a 2-week data-room; the deep DD of weeks 3–4 requires the Horizon III pandoc pass + a methodological decision on C-H1-1**. Horizon III (≈ 4–6 hours of work) — forecast composite score **9.0–9.5 / 10**.
 
 ## 2. Weighted average score across the 6 contours
 
@@ -86,7 +86,7 @@ A delta of +0.65 after 6 hours of work is a high tempo. The largest shifts: F ·
 ### 4.2. B · Legal (`_частные_отчёты/B_Legal.md`)
 
 - **RED · B-H2-1** — `07_Презентации/Для_госструктур_ЦБ/Доклад_для_госструктур_и_ЦБ_РФ.html` not rebuilt. § 10 of the public version retains the pre-refactor "The Bank of Russia manages all escrow accounts of the targeted emission" without a Stage 2 marker; the § 10.1 / 10.2 split from the MD is not reflected.
-- **AMBER · B-H2-2** — Pre-meeting brief 04 (Gazprombank / PSB) — "Gazprombank / PSB" without "or" (CC Art. 432 — the parties must be defined).
+- **AMBER · B-H2-2** — Pre-meeting brief 04 (a partner bank) — "a partner bank" without "or" (CC Art. 432 — the parties must be defined).
 - **AMBER · B-H2-3** — Pre-meeting brief 03 (Tatarstan) — the dates T+0…T+24 do not account for JSC incorporation.
 - **AMBER · B-H2-4** — Legal_framework.html § 8.3 without § 8.2 (HTML renumbering).
 - **AMBER · B-H2-5** — Concept.md § 1 item 9 vs § 1-bis — double Stage-1 mention (style).
@@ -137,7 +137,7 @@ A delta of +0.65 after 6 hours of work is a high tempo. The largest shifts: F ·
 | A-POST-H2-4 | AMBER | A | 02_Program_description C# .NET MAUI |
 | A-POST-H2-5..-8 | AMBER | A | sitemap x-default / apple-touch-icon / DD tone / sepia |
 | B-H2-1 | RED | B | CBR_briefing.html § 10 not rebuilt |
-| B-H2-2 | AMBER | B | Pre-meeting brief 04 "Gazprombank/PSB" without "or" |
+| B-H2-2 | AMBER | B | Pre-meeting brief 04 "partner bank" without "or" |
 | B-H2-3 | AMBER | B | Pre-meeting brief 03 dates T+0 do not account for JSC incorporation |
 | B-H2-4 | AMBER | B | Legal_framework.html § 8.3 without § 8.2 |
 | B-H2-5 | AMBER | B | Concept § 1 item 9 vs § 1-bis (style) |
@@ -189,7 +189,7 @@ The qualitative change: **6 RED closed, 12 RED remain** (mostly repeats from the
 5. **C-H2-6 IRR mismatch**: Financial_model.md:166 (scenarios) reconciled with :152 (KPIs).
 6. **C-H2-7 peak**: Financial_model.md:128 vs :153 — unify the definition.
 7. **F-H2-2 (c)**: International_valuation.md:218 Base 63.4 → 63.4; recompute §2.4 / §7.
-8. **B-H2-2..-5**: rename MoU 04 to "Partner_Bank" with "Gazprombank or PSB"; T+0 dates in the Tatarstan MoU; § 8.3 → § 8.2 in the Legal Framework; stylistic tightening of Concept § 1 item 9.
+8. **B-H2-2..-5**: rename MoU 04 to "Partner_Bank" with "a partner bank"; T+0 dates in the Tatarstan MoU; § 8.3 → § 8.2 in the Legal Framework; stylistic tightening of Concept § 1 item 9.
 9. **E-POST-4 regression**: `09_…/Приложение/index.html:1207-1208` ☀/☾ → SVG.
 10. **A-POST-H2-2/-3/-4**: Specification §§5.2/6.1, Roadmap M5.6, 02_Description — .NET MAUI/RN/Detox → PWA + Capacitor v6+ (unify with Specification §1.1).
 
@@ -235,16 +235,16 @@ The qualitative change: **6 RED closed, 12 RED remain** (mostly repeats from the
 | Friendly / family capital | Ready | Ready | — |
 | Friendly strategic investor | Ready | Ready | No caveats |
 | VEB.RF PFF | Ready | Ready | Consultative letter draft 02 ready |
-| Gazprombank-DD / PSB-DD | Conditional | **Conditional** | DD_report.html rebuilt; Financial_model.html (H-III pandoc) |
+| partner-bank DD / partner-bank DD | Conditional | **Conditional** | DD_report.html rebuilt; Financial_model.html (H-III pandoc) |
 | Tier-1 VC | Conditional (screening) | **Conditional on screening + 2-week data-room; will not withstand a 3-4 week deep DD** | H-III.A (pandoc 6 HTML) + H-III.C (TV/IRR/Payback methodology) mandatory |
 | CBR register of IS DFA operators | Conditional | Conditional | JSC incorporation + CIP T+9…T+18; B-H2-1 (Briefing HTML) |
 | RuStore publication | Conditional | **Conditional** | E-POST-4 sidebar regression; A-POST-1/2 no regressions |
 
-**Defensible position "as is after Horizon II"**: friendly + friendly VC + VEB.RF PFF + Ministry of Economic Development + friendly strategic investor. **Gazprombank-DD conditionally ready**. Strategic ceiling: **USD 60–90M pre-money** via the wedge-pilot rationale.
+**Defensible position "as is after Horizon II"**: friendly + friendly VC + VEB.RF PFF + Ministry of Economic Development + friendly strategic investor. **partner-bank DD conditionally ready**. Strategic ceiling: **USD 60–90M pre-money** via the wedge-pilot rationale.
 
-**Defensible position after Horizons III.A–D (1–2 business days)**: Gazprombank / PSB DD pass / tier-1 VC seed-stage. Strategic ceiling: **USD 80–120M pre-money Base** (or USD 100–140M at the NPV-defensible 63.4 after the C-H1-1 decision).
+**Defensible position after Horizons III.A–D (1–2 business days)**: partner-bank DD pass / tier-1 VC seed-stage. Strategic ceiling: **USD 80–120M pre-money Base** (or USD 100–140M at the NPV-defensible 63.4 after the C-H1-1 decision).
 
-**Defensible position after Horizon III.C (methodological decision + Monte Carlo, 1 week)**: tier-1 VC Series A + VEB.RF Ventures + Gazprombank Capital. Strategic ceiling: **USD 120–180M pre-money** subject to LoI / MoU signing.
+**Defensible position after Horizon III.C (methodological decision + Monte Carlo, 1 week)**: tier-1 VC Series A + institutional investors. Strategic ceiling: **USD 120–180M pre-money** subject to LoI / MoU signing.
 
 ## 8. Methodology and caveats
 

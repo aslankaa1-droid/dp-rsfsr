@@ -2,7 +2,7 @@
 
 **Document:** the concept of a minimum viable contour ("wedge") of an IS DFA operator that does not require amendments to 86-FZ and to the legislation around the digital ruble.
 **Objective:** close RED flag D5 of the composite audit of 24.05.2026 ("a wedge / pilot-light version is missing").
-**Strategic logic:** do not approach the Bank of Russia at the first step with a construction requiring a package of four federal laws; enter through a wedge-pilot under the existing 259-FZ via the VEB.RF / Ministry of Economic Development / Gazprombank / Atomyze alliance; after 18–36 months of actual operation, open a dialogue with the CBR via a consolidated inter-agency position.
+**Strategic logic:** do not approach the Bank of Russia at the first step with a construction requiring a package of four federal laws; enter through a wedge-pilot under the existing 259-FZ via the VEB.RF / Ministry of Economic Development / partner bank / 779-P operator alliance; after 18–36 months of actual operation, open a dialogue with the CBR via a consolidated inter-agency position.
 **Date:** 24.05.2026.
 
 ---
@@ -12,7 +12,7 @@
 The wedge is the minimum platform configuration in which:
 - **The value proposition is preserved** (issuance of targeted DFA against pledged assets, with targeted use of proceeds for social development projects).
 - **The principal regulatory risk is removed** (abandoning the formulation "targeted issuance by the Bank of Russia").
-- **The source of targeted funding is replaced** — instead of CBR issuance, the existing channel of institutional financing through VEB.RF / Gazprombank / DOM.RF is used.
+- **The source of targeted funding is replaced** — instead of CBR issuance, the existing channel of institutional financing through development institution / partner bank / sectoral institution is used.
 - **A basic unit-economic contour is obtained** (revenue from issuance and servicing commissions).
 - **A negotiation artefact is created** for subsequent dialogue with the CBR through a consolidated inter-agency position.
 
@@ -27,7 +27,7 @@ This regime does not require amendments to 86-FZ or the Budget Code; it fits ent
 | **Pilot region** | Republic of Tatarstan or Tyumen Region (selected following negotiations with the regional government) |
 | **Type of pledged property** | Municipal and state real estate (no private individuals at the first stage — to minimise consumer risks) |
 | **First-year pool size** | RUB 5–10 bn (50–100 objects from the municipality) |
-| **Starting partner bank** | Gazprombank or PSB (decided by MoU) |
+| **Starting partner bank** | a partner bank (decided by MoU) |
 | **Starting insurer** | Sogor / Ingosstrakh / SOGAZ-SK (tender) |
 | **Source of targeted funding** | Infrastructure loans from VEB.RF (Project Finance Factory) under state guarantees |
 | **Regulatory base** | 259-FZ + 779-P + the experimental legal regime under 258-FZ |
@@ -41,8 +41,8 @@ This regime does not require amendments to 86-FZ or the Budget Code; it fits ent
 |---|---|---|
 | **Government of Tatarstan / Tyumen Region** | Customer of the pilot, supplier of the municipal collateral base | MoU; the case of "reducing pressure on the regional budget" |
 | **VEB.RF** | Source of institutional funding; removes the mandate conflict with the CBR | Direct channel through the Project Finance Factory; named sponsor — Deputy Minister of Economic Development |
-| **Gazprombank** | Settlement bank of the pilot; partner on DFA issuance | MoU on project financing |
-| **Atomyze** | Technology partnership: Atomyze — operator of the transaction under its existing 779-P licence (the IS DFA operator licence is individual and non-transferable, sublease is not permitted); CPFSR — front-end / agent of collateral onboarding and valuation, KYC, technological infrastructure | A bilateral technology partnership agreement; DLT-stack interoperability; sharing of functions and revenues |
+| **partner bank** | Settlement bank of the pilot; partner on DFA issuance | MoU on project financing |
+| **Atomyze** | Technology partnership: an incumbent 779-P operator — operator of the transaction under its licence (the IS DFA operator licence is individual and non-transferable, sublease is not permitted); CPFSR — front-end / agent of collateral onboarding and valuation, KYC, technological infrastructure | A bilateral technology partnership agreement; DLT-stack interoperability; sharing of functions and revenues |
 | **Insurance company** | Coverage of the collateral pool | Tender among insurers licensed by the CBR |
 | **Ministry of Economic Development** | Political ally (national projects are their KPI) | Main entry channel; named sponsor |
 | **Ministry of Finance** | Approval of the tax position; reduction of pressure on the OFZ market | Request to the Ministry of Finance under Article 34.2 of the Tax Code; the "off-budget channel" case |
@@ -52,12 +52,12 @@ This regime does not require amendments to 86-FZ or the Budget Code; it fits ent
 
 | Authority | Named champion | Role / interest | Contact priority |
 |---|---|---|---|
-| **Ministry of Economic Development** | **Maxim Reshetnikov**, Minister | Principal ally: KPIs on national projects, interested in tools to accelerate execution | T+1 to T+3 months (first point of entry) |
-| **Ministry of Finance** | **Ivan Kolychev**, Deputy Minister (external debt and debt policy) | Off-budget channel for infrastructure financing — relief of pressure on the OFZ market | T+3 to T+6 months |
-| **Ministry of Finance** | **Vladimir Sazanov**, Deputy Minister (tax policy) | Approval of the DFA tax position (Article 34.2 of the Tax Code) | T+3 to T+6 months |
-| **State Duma** | **Anatoly Aksakov**, Chair of the Financial Market Committee | Channel for legislation for the horizon phase (T+24+); advisory support on interpretation of 259-FZ | T+6 to T+12 months (for the horizon) |
+| **Ministry of Economic Development** | **the relevant official**, Minister | Principal ally: KPIs on national projects, interested in tools to accelerate execution | T+1 to T+3 months (first point of entry) |
+| **Ministry of Finance** | **the relevant official**, Deputy Minister (external debt and debt policy) | Off-budget channel for infrastructure financing — relief of pressure on the OFZ market | T+3 to T+6 months |
+| **Ministry of Finance** | **the relevant official**, Deputy Minister (tax policy) | Approval of the DFA tax position (Article 34.2 of the Tax Code) | T+3 to T+6 months |
+| **State Duma** | **the relevant official**, Chair of the Financial Market Committee | Channel for legislation for the horizon phase (T+24+); advisory support on interpretation of 259-FZ | T+6 to T+12 months (for the horizon) |
 | **VEB.RF** | Through the Project Finance Factory — specialised departments for infrastructure projects; LoI / consultative letter | Source of targeted funding (Project Finance Factory under Government Decree No. 158) | T+3 to T+6 months |
-| **Regional governments (pilot)** | **Tatarstan** — Rustam Minnikhanov / Rustam Babikov (digital transformation); **Tyumen Region** — Alexander Moor; **Bashkortostan** — reserve option | Suppliers of the municipal collateral base; political will for the pilot | T+6 to T+9 months (via MoU) |
+| **Regional governments (pilot)** | **Tatarstan** — the relevant official (digital transformation); **Tyumen Region** — the relevant official; **Bashkortostan** — reserve option | Suppliers of the municipal collateral base; political will for the pilot | T+6 to T+9 months (via MoU) |
 | **Bank of Russia (for the horizon phase)** | Through the consolidated inter-agency position of the Ministry of Economic Development + Ministry of Finance + State Duma | Inclusion of the targeted-issuance institute in the roadmap on T+24+ | Only after a wedge track record of ≥ 12 months |
 
 ---
@@ -74,7 +74,7 @@ This regime does not require amendments to 86-FZ or the Budget Code; it fits ent
 
 1. **Memo wrapper for the Ministry of Economic Development / Office of the Government:** positioning as a tool to accelerate national projects (not as a monetary reform). The formulation: "targeted funding through the institutional infrastructure of VEB.RF / Federal Treasury with the Bank of Russia acting as the supervisory regulator".
 2. **Champion search:** identify a political carrier (Deputy Minister of Economic Development / Adviser to the Chair of the Government). Without a champion the project will not move.
-3. **MoU with one bank** (Gazprombank or PSB) and one insurer.
+3. **MoU with one bank** (a partner bank) and one insurer.
 4. **MoU with the pilot region** (selection of Tatarstan / Tyumen Region).
 
 ### Stage 2 — Regulatory clearances (T+9 to T+15 months)
@@ -142,7 +142,7 @@ A starting round of USD 15M (RUB 1,335 mn) is allocated as:
 - RUB 24.6 mn — incorporation of the JSC and regulatory registration.
 - RUB 720 mn — CapEx for the first 18 months (platform, data centres, licences).
 - RUB 502 + 220 = 722 mn — Year-1 OpEx (including payroll for 40 persons).
-- **Cash-runway gap (2025–2026):** RUB −2,080 mn (taking into account Y1 FCF −1.02 + Y2 −1.06). A USD 15M round = RUB 1.335 bn closes 64% of the peak. **Bridge financing of RUB 0.75 bn** for 6–9 months via VEB.RF / Gazprombank against IP collateral — a single value across the project (synchronised with Financial_Model.md § 4.7 and International_Valuation.md § 8).
+- **Cash-runway gap (2025–2026):** RUB −2,080 mn (taking into account Y1 FCF −1.02 + Y2 −1.06). A USD 15M round = RUB 1.335 bn closes 64% of the peak. **Bridge financing of RUB 0.75 bn** for 6–9 months via VEB.RF / partner bank against IP collateral — a single value across the project (synchronised with Financial_Model.md § 4.7 and International_Valuation.md § 8).
 
 ---
 
@@ -152,11 +152,11 @@ Audit point D-2 noted competitors not reflected in the DD. The wedge strategy co
 
 | Competitor | Wedge strategy |
 |---|---|
-| **Atomyze, Masterchain, Lighthouse, Sber CFA, Alfa CFA** | Co-option through a consortium model. Atomyze is the strategic technology partner (operator of the transaction under its 779-P licence — the licence is non-transferable between legal entities; division of functions: CPFSR — front-end/agent, Atomyze — operator); the others are included in the roadmap as DLT-infrastructure suppliers or complementary services. |
+| **Atomyze, Masterchain, Lighthouse, Sber CFA, Alfa CFA** | Co-option through a consortium model. one of the incumbent 779-P operators (operator of the transaction under its 779-P licence — the licence is non-transferable between legal entities; division of functions: CPFSR — front-end/agent, Atomyze — operator); the others are included in the roadmap as DLT-infrastructure suppliers or complementary services. |
 | **Moscow Exchange / SPB Exchange** | Not a competitor in the wedge phase (they do not work with collateralised real estate). A partner on the secondary DFA market. |
 | **VEB.RF Platform "ROIV" and the "Project Finance Factory"** | **Not a competitor but a source of targeted funding** in the wedge. VEB.RF becomes the central ally. |
 | **DOM.RF** | Partner on real-estate tokenisation (specialisation on the residential sector). MoU after the pilot. |
-| **Atomyze + Nornickel** | Defence against a "killer" — an early technology partnership (transaction operator + interoperability agreement; without licence transfer). |
+| **действующий оператор 779-P** | Defence against a "killer" — an early technology partnership (transaction operator + interoperability agreement; without licence transfer). |
 | **Digital ruble (340-FZ)** | An architectural complement: CPFSR works with collateral; the digital ruble is a settlement instrument. Not a competitor. |
 
 ---

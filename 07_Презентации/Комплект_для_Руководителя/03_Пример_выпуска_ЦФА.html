@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Пример выпуска ЦФА под залоговый актив недвижимости · ЦП РСФСР</title>
+<style>
+  :root{--em:#0B2B5C;--em2:#163A75;--gold:#C5A572;--gold2:#E4C892;
+    --ink:#0F1419;--muted:#4A5568;--soft:#6B7785;--line:#D8DFE8;--soft-bg:#F5EFE2;--em-soft:#E6ECF5;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  @page{size:A4;margin:16mm 18mm}
+  html,body{background:#fff}
+  body{font-family:'Inter','Segoe UI',Roboto,Arial,sans-serif;color:var(--ink);
+    font-size:10.4pt;line-height:1.52;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  h1,h2,h3{font-family:'Inter Tight','Inter',sans-serif;color:var(--em);letter-spacing:-.01em}
+  p{margin:0 0 7px;text-align:justify}
+  strong{color:var(--em);font-weight:700}
+  .section-h{display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--line);
+    padding-bottom:5px;margin:16px 0 9px;break-after:avoid}
+  .section-h .num{font-family:'Inter Tight',sans-serif;font-weight:700;color:var(--gold);
+    filter:brightness(.82);font-size:12pt;min-width:22px}
+  .section-h h2{font-size:12.5pt}
+  .cover{text-align:center;padding:8mm 0 6mm;border-bottom:2px solid var(--em);margin-bottom:4mm}
+  .cover .logo{height:64px;margin-bottom:14px}
+  .cover .kicker{font-size:8.6pt;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);filter:brightness(.8);font-weight:700}
+  .cover h1{font-size:19pt;margin:8px auto 6px;max-width:16cm;line-height:1.16}
+  .cover .sub{font-size:10.2pt;color:var(--muted);max-width:15cm;margin:0 auto}
+  .cover .rule{width:60px;height:3px;background:var(--gold);margin:12px auto}
+  .cover .doc-meta{font-size:8.8pt;color:var(--soft);margin-top:6px}
+  .lead{background:var(--soft-bg);border-left:3px solid var(--gold);padding:11px 15px;border-radius:0 8px 8px 0;margin:6px 0 4px}
+  .lead p{margin:0;font-size:10.4pt}
+  .lead .obj{font-family:'Inter Tight','Inter',sans-serif;font-weight:700;color:var(--em);font-size:11pt;margin-bottom:4px}
+  .flow{display:flex;align-items:stretch;gap:5px;margin:10px 0;flex-wrap:nowrap}
+  .flow .node{flex:1;background:var(--em);color:#fff;border-radius:8px;padding:8px 6px;text-align:center;font-size:8.2pt;font-weight:600}
+  .flow .node b{display:block;color:var(--gold2);font-size:7.4pt;text-transform:uppercase;letter-spacing:.04em;margin-bottom:2px;font-weight:700}
+  .flow .arw{display:flex;align-items:center;color:var(--gold);font-size:15pt;font-weight:700}
+  ol.steps{counter-reset:s;margin:4px 0;padding:0;list-style:none}
+  ol.steps li{counter-increment:s;position:relative;padding:6px 0 6px 34px;border-bottom:1px dashed var(--line);font-size:9.8pt;line-height:1.45}
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{content:counter(s);position:absolute;left:0;top:6px;width:23px;height:23px;
+    background:var(--em);color:#fff;border-radius:6px;font-family:'Inter Tight',sans-serif;font-weight:700;
+    font-size:10pt;display:flex;align-items:center;justify-content:center}
+  ol.steps li b{color:var(--em)}
+  ol.steps li .who{display:inline-block;font-size:7.6pt;font-weight:700;text-transform:uppercase;letter-spacing:.04em;
+    color:var(--gold);filter:brightness(.8);margin-right:6px;vertical-align:1px}
+  table{width:100%;border-collapse:collapse;font-size:9.4pt;margin:6px 0}
+  th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}
+  th{background:var(--em-soft);color:var(--em);font-weight:700}
+  .res{border:2px solid var(--gold);background:var(--soft-bg);border-radius:10px;padding:13px 18px;margin:12px 0 4px;break-inside:avoid}
+  .res .rh{font-family:'Inter Tight','Inter',sans-serif;font-weight:700;color:var(--em);font-size:11.5pt;margin-bottom:7px}
+  .res ul{margin:0;padding-left:2px;list-style:none}
+  .res li{position:relative;padding:3px 0 3px 20px;font-size:9.8pt;color:var(--ink);line-height:1.42}
+  .res li::before{content:"";position:absolute;left:2px;top:8px;width:7px;height:7px;background:var(--gold);border-radius:50%}
+  .res li b{color:var(--em)}
+  footer{margin-top:14px;border-top:2px solid var(--em);padding-top:9px;font-size:8.6pt;color:var(--soft)}
+  footer .name{font-weight:700;color:var(--ink);font-size:10.4pt}
+  .contacts{display:flex;gap:16px;flex-wrap:wrap;margin-top:6px}.contacts span b{color:var(--em)}
+  .pb{break-before:page}
+</style>
+</head>
+<body>
+  <div class="cover">
+    <svg class="logo" viewBox="0 0 450 96" xmlns="http://www.w3.org/2000/svg" aria-label="ЦПФСР.РФ">
+      <defs><linearGradient id="em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B2B5C"/><stop offset="100%" stop-color="#163A75"/></linearGradient>
+      <linearGradient id="gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#C5A572"/><stop offset="100%" stop-color="#E4C892"/></linearGradient></defs>
+      <g transform="translate(8,8)"><rect x="0" y="0" width="80" height="80" rx="20" fill="url(#em)"/><rect x="7.5" y="7.5" width="65" height="65" rx="14" fill="none" stroke="url(#gd)" stroke-width="1.8"/><text x="40" y="42" text-anchor="middle" dominant-baseline="central" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="52" fill="#fff">Р</text></g>
+      <g transform="translate(98,0)" font-family="'Inter Tight','Inter',system-ui,sans-serif">
+        <text x="0" y="40" font-size="32" font-weight="700" letter-spacing="-0.5" fill="#0B2B5C">ЦПФСР.РФ</text>
+        <text x="2" y="62" font-size="10.5" font-weight="500" letter-spacing="1.6" fill="#0B2B5C" opacity=".62">ЦИФРОВАЯ ПЛАТФОРМА</text>
+        <text x="2" y="76" font-size="10.5" font-weight="500" letter-spacing="1.6" fill="#0B2B5C" opacity=".62">ФИНАНСИРОВАНИЯ СОЦИАЛЬНОГО РАЗВИТИЯ</text></g>
+    </svg>
+    <div class="kicker">Приложение · Пример выпуска</div>
+    <h1>Пример выпуска ЦФА под залоговый актив недвижимости</h1>
+    <p class="sub">Пошаговый пример на конкретном объекте недвижимости — от подачи объекта до мены и возврата собственнику</p>
+    <div class="rule"></div>
+    <div class="doc-meta">Москва · 16 июля 2026 г. · dpfsd.ru</div>
+  </div>
+
+  <div class="lead">
+    <div class="obj">Объект примера</div>
+    <p>Собственник владеет <strong>объектом недвижимости</strong> (например, коммерческим зданием), свободным от обременений. Он желает вовлечь объект в оборот и получать доход, <strong>сохранив право собственности</strong>. Ниже — последовательность выпуска ЦФА под этот объект и роли всех сторон. Суммы не приводятся: показан порядок действий.</p>
+  </div>
+
+  <div class="flow">
+    <div class="node"><b>Объект</b>Недвижимость собственника</div>
+    <div class="arw">→</div>
+    <div class="node"><b>Выпуск</b>ЦФА под объект</div>
+    <div class="arw">→</div>
+    <div class="node"><b>Эмиссия</b>Банк России</div>
+    <div class="arw">→</div>
+    <div class="node"><b>Проект</b>Гос. программа</div>
+    <div class="arw">→</div>
+    <div class="node"><b>Мена</b>Возврат объекта</div>
+  </div>
+
+  <section>
+    <div class="section-h"><span class="num">1</span><h2>Ход выпуска — шаг за шагом</h2></div>
+    <ol class="steps">
+      <li><span class="who">Собственник</span>Регистрируется в приложении и проходит идентификацию (ЕСИА / биометрия), затем подаёт объект недвижимости как залоговый актив.</li>
+      <li><span class="who">Оценщик</span>Независимый оценщик определяет рыночную стоимость объекта в соответствии с законодательством об оценочной деятельности (135&#8209;ФЗ).</li>
+      <li><span class="who">Страховая компания</span>Страхует объект на весь срок обращения ЦФА.</li>
+      <li><span class="who">Платформа-оператор</span>Накладывает временное обременение на объект (ГК РФ) — объект остаётся у собственника — и вместе с ОИС формирует параметры выпуска и смарт-контракт (срок, график выплат, условия мены и возврата).</li>
+      <li><span class="who">ОИС</span>Выпускает <b>ЦФА под залоговый объект</b> в реестре по 259&#8209;ФЗ; правила оператора согласованы с Банком России (ст. 6).</li>
+      <li><span class="who">Банк России</span>Проводит <b>денежную эмиссию</b> под обеспеченный ЦФА — в рублях либо в форме цифрового рубля.</li>
+      <li><span class="who">Государство</span>Эмитированные средства направляются на <b>исполнение государственной программы</b> и реализацию национального проекта.</li>
+      <li><span class="who">Проект</span>Финансируется строительство конкретного государственного объекта.</li>
+      <li><span class="who">Собственник</span>Получает <b>вознаграждение по установленному графику</b> в течение всего срока обращения ЦФА.</li>
+      <li><span class="who">Оценщик</span>По завершении построенный государственный объект оценивается; на него выпускается ЦФА.</li>
+      <li><span class="who">Мена</span>Происходит <b>мена ЦФА</b>: залог собственника замещается ЦФА на построенный государственный объект.</li>
+      <li><span class="who">Собственник</span><b>Возвращает недвижимость без обременения</b> и получает согласованное вознаграждение; возможна пролонгация и участие в новых проектах.</li>
+      <li><span class="who">Страховая компания</span>При наступлении страхового случая обеспечивает компенсацию через выпуск собственного ЦФА для мены.</li>
+    </ol>
+  </section>
+
+  <section class="pb">
+    <div class="section-h"><span class="num">2</span><h2>Роли сторон в примере</h2></div>
+    <table>
+      <thead><tr><th style="width:30%">Сторона</th><th>Что делает в этом примере</th></tr></thead>
+      <tbody>
+        <tr><td><b>Собственник-инвестор</b></td><td>Подаёт объект, сохраняет право собственности, получает вознаграждение, возвращает объект без обременения.</td></tr>
+        <tr><td><b>Независимый оценщик</b></td><td>Оценивает объект обеспечения и построенный государственный объект.</td></tr>
+        <tr><td><b>Страховая компания</b></td><td>Страхует объект на срок обращения ЦФА; при страховом случае обеспечивает компенсацию.</td></tr>
+        <tr><td><b>ОИС</b> (оператор информационной системы)</td><td>Выпускает ЦФА и ведёт реестр по 259&#8209;ФЗ; правила согласованы с Банком России.</td></tr>
+        <tr><td><b>Цифровая Платформа РСФСР</b></td><td>Приём заявки, структурирование, смарт-контракт и обслуживание выпуска до полного завершения расчётов.</td></tr>
+        <tr><td><b>Банк России</b></td><td>Проводит денежную эмиссию под обеспеченный ЦФА и осуществляет надзор на каждом этапе.</td></tr>
+        <tr><td><b>Государство</b></td><td>Получает целевое финансирование, реализует национальный проект и построенный объект.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="res">
+    <div class="rh">Итог примера</div>
+    <ul>
+      <li><b>Собственник</b> — получил вознаграждение и вернул объект недвижимости без обременения.</li>
+      <li><b>Государство</b> — получило внебюджетное финансирование и готовый объект национального проекта.</li>
+      <li><b>Банк России</b> — провёл полностью обеспеченную эмиссию под реальный оценённый актив.</li>
+      <li><b>Эмиссия</b> — на всём протяжении обеспечена реальным застрахованным активом, что исключает необеспеченную эмиссию.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <div class="name">Кагиров Абдул&#8209;Хаким Ахмадович — автор концепции и правообладатель</div>
+    <div>Свидетельство о депонировании № 4011265 от 19.12.2024 (ireg.pro, ГОСТ&#8209;Р 34.11&#8209;2012)</div>
+    <div class="contacts">
+      <span><b>Тел.:</b> +7 (969) 795&#8209;55&#8209;55</span>
+      <span><b>E&#8209;mail:</b> aslankaa@yandex.ru</span>
+      <span><b>Telegram:</b> @aslan_kaa</span>
+      <span><b>Сайт:</b> dpfsd.ru</span>
+    </div>
+  </footer>
+</body>
+</html>

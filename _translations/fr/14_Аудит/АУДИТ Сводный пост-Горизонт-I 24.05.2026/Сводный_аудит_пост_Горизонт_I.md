@@ -23,7 +23,7 @@ Changements qualitatifs structurels :
 
 En parallèle, l'Horizon I a révélé une **nouvelle classe de défauts** dans les blocs C/F — **sed-collision « à la place de soi-même »** et **désynchronisation des miroirs HTML par rapport aux sources MD mises à jour**. Principaux bloqueurs ouverts pour la communication tier-1 :
 
-1. **DD_отчёт.html n'a pas été regénéré à partir du MD** — il contient encore NPV 170 / Payback 2,4 / EBITDA 97 % / WACC 22 % (alors que le MD est marqué Stage et mis à jour). Le DD de Gazprombank / VTB ouvrira DD_отчёт.html en premier — signal d'arrêt en 30 secondes.
+1. **DD_отчёт.html n'a pas été regénéré à partir du MD** — il contient encore NPV 170 / Payback 2,4 / EBITDA 97 % / WACC 22 % (alors que le MD est marqué Stage et mis à jour). Le DD de partner bank / VTB ouvrira DD_отчёт.html en premier — signal d'arrêt en 30 secondes.
 2. **Arithmétique TV de SoT v3 phases I+II = 7,4 vs defensible 21,03 Md ₽ (×2,84 sous-estimation)** — la vague sed a aligné tous les documents clients sur les 63,4 Md ₽ déclarés, mais la VE complète DCF defensible = 64,69 Md. Toute reconstruction DCF indépendante par une équipe de valuation tier-1 détectera l'écart.
 3. **`finmodel.js:211` double-comptage de tvDisc** — `fullEV = npv + tvDisc` alors que `npv` inclut déjà `tvDisc`. Le code restitue EM ≈ 10,37× au lieu des 12× déclarés.
 4. **Plan d'affaires §3, le tableau KPI §9.1 contient « NPV 170,1 Md ₽ »** — sed n'a pas matché le masque avec la partie décimale « 170,1 » (sans `<em>`). Contradiction interne avec §9.2 Base 63,4.
@@ -32,7 +32,7 @@ En parallèle, l'Horizon I a révélé une **nouvelle classe de défauts** dans 
 7. **Plan d'affaires §2.2, §3.4, §4.4** (hors périmètre de l'Horizon I) — conservent le modèle d'émission Stage 2 comme catégorie opérationnelle/de base ; le miroir HTML `Бизнес-план_ЦП_РСФСР.html` lignes 140, 277, 311, 321, 366, 432, 916, 1022, 1079-1080 — idem.
 8. **Champion map (D-PR-5), cannibalisation par le rouble numérique (D-PR-6), protection contre la copie (D-PR-7), LoI/MoU (D-PR-8)** — quatre items stratégiques laissés hors périmètre de l'Horizon I ; ils constituent le cœur de la feuille de route stratégique de l'Horizon II.
 
-État de préparation à la communication : **friendly + VC amical + VEB.RF Fabrique de projets — prêts ; Gazprombank-DD — à la limite (cover-stat OK, rapport DD non) ; VC tier-1 — passera le screening initial, mais pas la DD approfondie des semaines 2 à 4**. Horizon II (vague sed + reconstruction pandoc des HTML + diffusion du champion-map + drafts LoI/MoU + édition manuelle de 6 fichiers d'émission) — 1-2 jours ouvrés et devrait porter la note consolidée à **8,5-9,0 / 10**.
+État de préparation à la communication : **friendly + VC amical + VEB.RF Fabrique de projets — prêts ; DD banque partenaire — à la limite (cover-stat OK, rapport DD non) ; VC tier-1 — passera le screening initial, mais pas la DD approfondie des semaines 2 à 4**. Horizon II (vague sed + reconstruction pandoc des HTML + diffusion du champion-map + drafts LoI/MoU + édition manuelle de 6 fichiers d'émission) — 1-2 jours ouvrés et devrait porter la note consolidée à **8,5-9,0 / 10**.
 
 ## 2. Note pondérée sur 6 contours
 
@@ -55,7 +55,7 @@ Un delta de +0,95 après 4 heures de travail constitue un ratio effort/résultat
 | A · Tech | 8,4 / 10 | Les trois RED sont levés. RuStore / FSTEC / Banque de Russie 779-P — « prêt sous conditions ». Ouverts : A-POST-5 (08_Архитектурные_диаграммы.html RN), A-POST-7 (hreflang 9/17), A-POST-9 (Brandbook Vision), A-POST-11 (Prototype RN+MAUI en pied), A-POST-12 (DD_отчёт.html non reconstruit), A-POST-13 (04_Интеграции sans marqueur Stage). |
 | B · Juridique | 7,4 / 10 | B-NEW-7 CLUF fermé. B-NEW-8 § 4 / § 15 fermé en MD. B-NEW-10 numérotation fermée. Ouverts : B-H1-1 (Юр.фундамент.html:619 al. 1/38), B-H1-2 (DD sur TVA), B-H1-3 (Plan d'affaires §§2.2, 3.4, 4.4 — émission comme base), B-H1-4 (Petite présentation slide 11), B-H1-5 (Rapport BC § 1, § 9). |
 | C · Fin | 5,9 / 10 | Build-up WACC et NPV 10 ans reproductibles ; hero-cover-stat cohérent. 9 RED + 6 AMBER ouverts : C-H1-1 (TV ×2,84 sous-estimation), C-H1-2/3 (IRR/Payback niveau projet non reproductibles), C-H1-4 (double-comptage dans finmodel.js), C-H1-5..C-H1-9 (Финмодель/Plan d'affaires §9.1/DD.html/Финмодель_допущения.html/calculateur Grande présentation). |
-| D · Strat | 7,7 / 10 | Les 3 RED fermés (D-PR-1/2/3). Wedge uniforme dans 7 artefacts. Préparation Gazprombank-DD + VEB.RF FPF. Ouverts : D-PR-5 (champion map isolé), D-PR-6 (cannibalisation rouble num. une ligne), D-PR-7 (protection contre copie 0), D-PR-8 (LoI/MoU 0), D-PR-11 (bridge EBITDA 65 %→74,8 %), D-PR-12 (protection de l'auteur). |
+| D · Strat | 7,7 / 10 | Les 3 RED fermés (D-PR-1/2/3). Wedge uniforme dans 7 artefacts. Préparation DD banque partenaire + VEB.RF FPF. Ouverts : D-PR-5 (champion map isolé), D-PR-6 (cannibalisation rouble num. une ligne), D-PR-7 (protection contre copie 0), D-PR-8 (LoI/MoU 0), D-PR-11 (bridge EBITDA 65 %→74,8 %), D-PR-12 (protection de l'auteur). |
 | E · Design | 8,2 / 10 | Pitch deck slide 10 entièrement fermé. Cache SW des captures restauré. Ouverts (hors périmètre Horizon I) : emoji ☀ ☾ ★ ✓ dans les decks + PWA (24 lignes), drapeaux-emoji, HTML sémantique, couverture data-i18n, extension RTL, manifest theme_color. |
 | F · QA | 7,8 / 10 | 8 des 11 paramètres SoT synchronisés. Ouverts : F-H1-1 (sed-collision dans 4 fichiers), F-H1-2 (JS-input Grande présentation), F-H1-3 (Booklet cover-stat), F-H1-4 (sensibilité Финмодель), F-H1-5 (index.html:198 63,4), F-H1-6 (HTML_principal 2,4), F-H1-7 (« 170,1 Md ₽ » dans 3 fichiers), F-H1-8 (DD_отчёт.html non reconstruit). |
 
@@ -82,7 +82,7 @@ Horizon II sur A : 30 minutes d'éditions ponctuelles + pipeline pandoc → note
 - **AMBER · B-NEW-12 / -13 / -14 / -15** — héritage post-refactor (listes 779-P, contrat d'entiercement, disclaimer DP, contrat opérateur-gageur sans 353-FZ).
 - **AMBER · B-H1-7** — écart T+18 (Wedge) vs T+24 (Учреждение_АО) de 6 mois.
 
-Horizon II sur B : 6 must-fix (B-H1-1..B-H1-5 + B-NEW-12) + nice-to-have. Après cela la note dépassera 8,5 et Gazprombank-DD sera prêt.
+Horizon II sur B : 6 must-fix (B-H1-1..B-H1-5 + B-NEW-12) + nice-to-have. Après cela la note dépassera 8,5 et DD banque partenaire sera prêt.
 
 ### 4.3. C · Fin (`_частные_отчёты/C_Fin.md`)
 
@@ -105,7 +105,7 @@ Horizon II sur C : 14 P0 + 7 P1 (1-2 jours ouvrés). Tâche principale — recal
 
 ### 4.4. D · Strat (`_частные_отчёты/D_Strat.md`)
 
-- **AMBER · D-PR-5** — Champion map (Réchetnikov / Kolytchev / Sazanov / Aksakov / Minnikhanov / Moor) isolée dans `Wedge_pilot-light.md:51-61` ; grep sur 8 artefacts clés — 0 occurrence.
+- **AMBER · D-PR-5** — Champion map (the relevant official) isolée dans `Wedge_pilot-light.md:51-61` ; grep sur 8 artefacts clés — 0 occurrence.
 - **AMBER · D-PR-6** — Cannibalisation par le rouble numérique 340-FZ — une seule ligne déclarative.
 - **AMBER · D-PR-7** — Protection contre la copie par le régulateur — 0 mention.
 - **AMBER · D-PR-8** — LoI / MoU / lettre consultative — 0 signées.
@@ -217,7 +217,7 @@ Paradoxe : le nombre de RED est passé de 13 à 18 car de nouveaux défauts spé
 17. **D-PR-5** : diffusion du champion map dans Concept.md (après §1-bis), Plan d'affaires.md (nouveau §13 « GTM »), DD_отчёт.md (§2.5), Pitch deck (nouveau slide). 6 pre-meeting briefs dans `02_Юридический_фундамент/Pre-meeting_briefs/`.
 18. **D-PR-6** : section « Rouble numérique 340-FZ » dans Plan d'affaires §10 + DD §3 + Rapport BC §9 (3 scénarios de cannibalisation).
 19. **D-PR-7** : section « Contours défensifs contre la copie » dans Plan d'affaires §22 + DD §3.4 (effets de réseau + portefeuille de PI + vitesse + moat contractuel avec Atomyze).
-20. **D-PR-8** : LoI avec Atomyze (exclusivité 3 ans) ; lettre consultative à VEB.RF FPF via le ministère du Développement économique ; MoU avec le Tatarstan ; MoU avec Gazprombank.
+20. **D-PR-8** : LoI/MoU — brouillons-cadres avec un opérateur 779-P en place (non signés) ; lettre consultative à VEB.RF FPF via le ministère du Développement économique ; MoU avec le Tatarstan ; MoU avec partner bank.
 21. **D-PR-11** : bridge EBITDA 65 %→74,8 % — ligne de transition dans Plan d'affaires §12 + Wedge §5.2 + DD §4.1.
 22. **D-PR-12** : protection de l'auteur A.Kh.A. Kagirov — Concept.md 1-ter + Plan d'affaires §11.2 (titulaire du savoir-faire + siège inaliénable au CA jusqu'à la Série B + covenants dans le Pacte d'actionnaires).
 
@@ -252,16 +252,16 @@ Paradoxe : le nombre de RED est passé de 13 à 18 car de nouveaux défauts spé
 | **Friendly / capital familial** | Prêt | Prêt | — |
 | **Investisseur stratégique amical** | Prêt sous conditions | **Prêt** | Sans réserves |
 | **VEB.RF FPF en co-investisseur** | Non prêt | **Prêt** | Lettre consultative via le canal du ministère du Développement économique |
-| **Gazprombank-DD / PSB-DD** | Non prêt | **Prêt sous conditions** | Cover-stat OK ; DD_отчёт.html à reconstruire (5 minutes) |
+| **DD banque partenaire / DD banque partenaire** | Non prêt | **Prêt sous conditions** | Cover-stat OK ; DD_отчёт.html à reconstruire (5 minutes) |
 | **VC tier-1 (a16z / Sequoia / Index)** | Non prêt | **Prêt sous conditions pour le screening initial ; ne tiendra pas la DD approfondie** | Horizon II.A + II.D + II.E obligatoires |
 | **Registre des opérateurs AFN de la Banque de Russie** | Non prêt | **Prêt sous conditions** | Constitution de la SA + CIPF T+9…T+18 (voie formelle) |
 | **Publication sur RuStore** | Non prêt | **Prêt sous conditions** | A-POST-1/2 fermés ; keystore de production + assetlinks.json requis (DevSecOps) |
 
 **Position défendable « telle quelle après Horizon I »** : friendly + VC amical + VEB.RF FPF + ministère du Développement économique. Plafond stratégique : **50-80 M $ pre-money** via la justification wedge-pilote.
 
-**Position défendable après Horizon II.A-F (5-7 jours ouvrés)** : Gazprombank / PSB DD / VC tier-1 seed-stage. Plafond stratégique : **80-120 M $ pre-money Base** (ou 100-140 M $ à NPV defensible 64,7 après résolution de C-H1-1).
+**Position défendable après Horizon II.A-F (5-7 jours ouvrés)** : DD banque partenaire / VC tier-1 seed-stage. Plafond stratégique : **80-120 M $ pre-money Base** (ou 100-140 M $ à NPV defensible 64,7 après résolution de C-H1-1).
 
-**Position défendable après Horizon II.C (LoI/MoU signés, champion map active, 3-6 mois)** : VC tier-1 Série A + VEB.RF Ventures + Gazprombank Capital. Plafond stratégique : **120-180 M $ pre-money** sous réserve de réunions T+30 / T+90 réussies.
+**Position défendable après Horizon II.C (LoI/MoU signés, champion map active, 3-6 mois)** : VC tier-1 Série A + investisseurs institutionnels. Plafond stratégique : **120-180 M $ pre-money** sous réserve de réunions T+30 / T+90 réussies.
 
 ## 8. Méthodologie et réserves
 

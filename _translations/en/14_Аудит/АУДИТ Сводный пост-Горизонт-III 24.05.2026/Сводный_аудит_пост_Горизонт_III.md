@@ -191,7 +191,7 @@ Out of 33 AMBERs from Post-Horizon II:
 | 3 | Launch of the 4 RFPs (DD + Legal + IT Cert + Market) | T+2 months post-Seed | RUB 26–73M aggregate |
 | 4 | Trademark + Software registration | T+3 months | RUB 50–200k |
 | 5 | D&O + PI + Cyber insurance | T+3–6 months | RUB 1–3M/year |
-| 6 | Registration in the CBR register (Stage 1 — via JSC Atomyze partnership) | T+8–12 months | inflight |
+| 6 | Registration in the CBR register (Stage 1 — via an incumbent 779-P operator) | T+8–12 months | inflight |
 | 7 | Pilot launch (5 regions, 50–100 objects) | T+18 months | within Use of Funds |
 | 8 | Series A roadshow | T+18–24 months | when AUM ≥ RUB 50 bn |
 

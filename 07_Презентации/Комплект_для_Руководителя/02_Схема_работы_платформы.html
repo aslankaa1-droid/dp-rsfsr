@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Схема работы и выгодность для участников · ЦП РСФСР</title>
+<style>
+  :root{--em:#0B2B5C;--em2:#163A75;--gold:#C5A572;--gold2:#E4C892;
+    --ink:#0F1419;--muted:#4A5568;--soft:#6B7785;--line:#D8DFE8;--soft-bg:#F5EFE2;--em-soft:#E6ECF5;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  @page{size:A4;margin:16mm 18mm}
+  html,body{background:#fff}
+  body{font-family:'Inter','Segoe UI',Roboto,Arial,sans-serif;color:var(--ink);
+    font-size:10.4pt;line-height:1.52;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  h1,h2,h3{font-family:'Inter Tight','Inter',sans-serif;color:var(--em);letter-spacing:-.01em}
+  p{margin:0 0 7px;text-align:justify}
+  strong{color:var(--em);font-weight:700}
+  .section-h{display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--line);
+    padding-bottom:5px;margin:16px 0 9px;break-after:avoid}
+  .section-h .num{font-family:'Inter Tight',sans-serif;font-weight:700;color:var(--gold);
+    filter:brightness(.82);font-size:12pt;min-width:22px}
+  .section-h h2{font-size:12.5pt}
+  .cover{text-align:center;padding:8mm 0 6mm;border-bottom:2px solid var(--em);margin-bottom:4mm}
+  .cover .logo{height:64px;margin-bottom:14px}
+  .cover .kicker{font-size:8.6pt;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);filter:brightness(.8);font-weight:700}
+  .cover h1{font-size:20pt;margin:8px auto 6px;max-width:16cm;line-height:1.16}
+  .cover .sub{font-size:10.2pt;color:var(--muted);max-width:15cm;margin:0 auto}
+  .cover .rule{width:60px;height:3px;background:var(--gold);margin:12px auto}
+  .cover .doc-meta{font-size:8.8pt;color:var(--soft);margin-top:6px}
+  .lead{background:var(--soft-bg);border-left:3px solid var(--gold);padding:11px 15px;border-radius:0 8px 8px 0;margin:6px 0 4px}
+  .lead p{margin:0;font-size:10.6pt}
+  .ask{background:var(--em);color:#fff;border-radius:10px;padding:14px 18px;margin:10px 0 4px}
+  .ask h2{color:#fff;font-size:13pt;margin-bottom:8px}
+  .ask ol{margin:0;padding-left:20px}
+  .ask li{margin:6px 0;color:#EAF1EE;font-size:10pt;line-height:1.42}
+  .ask li b{color:var(--gold2)}
+  table{width:100%;border-collapse:collapse;font-size:9.4pt;margin:6px 0}
+  th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}
+  th{background:var(--em-soft);color:var(--em);font-weight:700}
+  .parts{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0}
+  .part{flex:1 1 30%;min-width:31%;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:8px;padding:8px 11px}
+  .part .n{font-weight:700;color:var(--em);font-size:9.8pt}
+  .part .d{font-size:8.5pt;color:var(--muted);margin-top:2px;line-height:1.35}
+  ol.steps{counter-reset:s;margin:4px 0;padding:0;list-style:none}
+  ol.steps li{counter-increment:s;position:relative;padding:5px 0 5px 34px;border-bottom:1px dashed var(--line);font-size:9.8pt}
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{content:counter(s);position:absolute;left:0;top:5px;width:23px;height:23px;
+    background:var(--em);color:#fff;border-radius:6px;font-family:'Inter Tight',sans-serif;font-weight:700;
+    font-size:10pt;display:flex;align-items:center;justify-content:center}
+  ol.steps li b{color:var(--em)}
+  .flow{display:flex;align-items:stretch;gap:5px;margin:10px 0;flex-wrap:nowrap}
+  .flow .node{flex:1;background:var(--em);color:#fff;border-radius:8px;padding:8px 6px;text-align:center;font-size:8.2pt;font-weight:600}
+  .flow .node b{display:block;color:var(--gold2);font-size:7.4pt;text-transform:uppercase;letter-spacing:.04em;margin-bottom:2px;font-weight:700}
+  .flow .arw{display:flex;align-items:center;color:var(--gold);font-size:15pt;font-weight:700}
+  .note{background:var(--soft-bg);border-left:3px solid var(--gold);padding:9px 13px;border-radius:0 8px 8px 0;font-size:9.4pt;color:var(--muted);margin:8px 0}
+  .ben-intro{font-family:'Inter Tight','Inter',sans-serif;font-weight:600;color:var(--em);font-size:10.6pt;margin:2px 0 8px}
+  .card{border:1px solid var(--line);border-left:4px solid var(--em);border-radius:0 10px 10px 0;
+    padding:10px 16px;margin:8px 0;break-inside:avoid;display:flex;gap:14px;align-items:flex-start}
+  .card .who{font-family:'Inter Tight','Inter',sans-serif;font-weight:700;color:var(--em);font-size:10.6pt;
+    flex:0 0 33%;line-height:1.25;position:relative;padding-left:16px}
+  .card .who::before{content:"";position:absolute;left:0;top:5px;width:9px;height:9px;background:var(--gold);border-radius:2px;transform:rotate(45deg)}
+  .card .ben{flex:1;font-size:9.7pt;color:var(--muted);line-height:1.42;margin:0;padding-top:1px;text-align:left}
+  footer{margin-top:14px;border-top:2px solid var(--em);padding-top:9px;font-size:8.6pt;color:var(--soft)}
+  footer .name{font-weight:700;color:var(--ink);font-size:10.4pt}
+  .contacts{display:flex;gap:16px;flex-wrap:wrap;margin-top:6px}.contacts span b{color:var(--em)}
+  .pb{break-before:page}
+</style>
+</head>
+<body>
+  <div class="cover">
+    <svg class="logo" viewBox="0 0 450 96" xmlns="http://www.w3.org/2000/svg" aria-label="ЦПФСР.РФ">
+      <defs><linearGradient id="em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B2B5C"/><stop offset="100%" stop-color="#163A75"/></linearGradient>
+      <linearGradient id="gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#C5A572"/><stop offset="100%" stop-color="#E4C892"/></linearGradient></defs>
+      <g transform="translate(8,8)"><rect x="0" y="0" width="80" height="80" rx="20" fill="url(#em)"/><rect x="7.5" y="7.5" width="65" height="65" rx="14" fill="none" stroke="url(#gd)" stroke-width="1.8"/><text x="40" y="42" text-anchor="middle" dominant-baseline="central" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="52" fill="#fff">Р</text></g>
+      <g transform="translate(98,0)" font-family="'Inter Tight','Inter',system-ui,sans-serif">
+        <text x="0" y="40" font-size="32" font-weight="700" letter-spacing="-0.5" fill="#0B2B5C">ЦПФСР.РФ</text>
+        <text x="2" y="62" font-size="10.5" font-weight="500" letter-spacing="1.6" fill="#0B2B5C" opacity=".62">ЦИФРОВАЯ ПЛАТФОРМА</text>
+        <text x="2" y="76" font-size="10.5" font-weight="500" letter-spacing="1.6" fill="#0B2B5C" opacity=".62">ФИНАНСИРОВАНИЯ СОЦИАЛЬНОГО РАЗВИТИЯ</text></g>
+    </svg>
+    <div class="kicker">Приложение к письму Руководителю</div>
+    <h1>Схема работы и выгодность для участников</h1>
+    <p class="sub">Цифровая Платформа «Российский Сервис Финансирования Социального Развития» (ЦП&nbsp;РСФСР)</p>
+    <div class="rule"></div>
+    <div class="doc-meta">Москва · 16 июля 2026 г. · dpfsd.ru</div>
+  </div>
+
+  <div class="lead">
+    <p><strong>Суть.</strong> Под цифровой финансовый актив (ЦФА), обеспеченный недвижимостью собственника, <strong>Банк России проводит денежную эмиссию</strong> (в том числе в форме цифрового рубля). Средства направляются на строительство государственных объектов. Собственник получает выплаты по графику и по завершении возвращает недвижимость без обременения.</p>
+  </div>
+
+  <div class="ask">
+    <h2>О чём мы просим</h2>
+    <ol>
+      <li>Руководство Центрального Банка России — <b>оказать всестороннюю поддержку данной инициативы</b> и рассмотреть возможность применения ЦП&nbsp;РСФСР.</li>
+      <li><b>Выделить Куратора от ЦБ&nbsp;РФ</b> для проведения пилотного проекта ЦП&nbsp;РСФСР в экспериментальном правовом режиме (258&#8209;ФЗ).</li>
+      <li><b>Создать рабочую группу</b> для поэтапного и профессионального внедрения Цифровой Платформы РСФСР в нынешних непростых финансово&#8209;экономических условиях.</li>
+    </ol>
+  </div>
+
+  <section>
+    <div class="section-h"><span class="num">1</span><h2>Участники</h2></div>
+    <div class="parts">
+      <div class="part"><div class="n">Собственник-инвестор</div><div class="d">Гражданин или организация, передающая недвижимость в обеспечение; сохраняет право собственности.</div></div>
+      <div class="part"><div class="n">Платформа-оператор (ЦП РСФСР)</div><div class="d">Приём заявок, оценка, структурирование и обслуживание выпуска ЦФА.</div></div>
+      <div class="part"><div class="n">Банк России</div><div class="d">Регулятор и эмитент: проводит денежную эмиссию под обеспеченный ЦФА (рубль / цифровой рубль).</div></div>
+      <div class="part"><div class="n">Государство</div><div class="d">Получатель целевого финансирования на строительство государственных объектов.</div></div>
+      <div class="part"><div class="n">Независимый оценщик</div><div class="d">Рыночная оценка объекта обеспечения (135-ФЗ).</div></div>
+      <div class="part"><div class="n">Страховая организация</div><div class="d">Страхование объекта на весь срок обращения ЦФА.</div></div>
+    </div>
+  </section>
+
+  <section class="pb">
+    <div class="section-h"><span class="num">2</span><h2>Как работает схема</h2></div>
+    <div class="flow">
+      <div class="node"><b>Обеспечение</b>Недвижимость</div>
+      <div class="arw">→</div>
+      <div class="node"><b>Выпуск</b>ЦФА под объект</div>
+      <div class="arw">→</div>
+      <div class="node"><b>Эмиссия</b>Банк России</div>
+      <div class="arw">→</div>
+      <div class="node"><b>Финансирование</b>Гос. объекты</div>
+      <div class="arw">→</div>
+      <div class="node"><b>Мена</b>Возврат объекта</div>
+    </div>
+    <ol class="steps">
+      <li>Собственник регистрируется на платформе и проходит идентификацию (ЕСИА / биометрия).</li>
+      <li>Объект недвижимости <b>оценивается и страхуется</b>; накладывается временное обременение — объект остаётся у собственника.</li>
+      <li>Платформа-оператор выпускает <b>ЦФА под объект</b> на условиях смарт-контракта (срок, выплаты, условия мены и возврата).</li>
+      <li><b>Банк России проводит денежную эмиссию</b> под обеспеченный ЦФА — в рублях либо в форме цифрового рубля.</li>
+      <li>Эмитированные средства направляются на <b>исполнение государственных программ</b> и реализацию национальных проектов.</li>
+      <li>Собственник получает <b>выплаты по установленному графику</b> в течение срока обращения ЦФА.</li>
+      <li>По завершении проекта построенный государственный объект оценивается, на него выпускается ЦФА.</li>
+      <li>Происходит <b>мена ЦФА</b>: залог собственника замещается ЦФА на государственный объект; обременение с недвижимости снимается.</li>
+      <li>Собственник <b>возвращает недвижимость без обременения</b> и получает согласованное вознаграждение; возможна пролонгация.</li>
+      <li>При наступлении страхового случая компенсация обеспечивается страховой организацией.</li>
+    </ol>
+  </section>
+
+  <section class="pb">
+    <div class="section-h"><span class="num">3</span><h2>Выгодность для участников</h2></div>
+    <p class="ben-intro">Все участники данного проекта выигрывают от внедрения ЦП&nbsp;РСФСР и получают каждый свою выгоду:</p>
+    <div class="card"><div class="who">Собственник-инвестор</div><p class="ben">В течение всего срока обращения ЦФА получает вознаграждение.</p></div>
+    <div class="card"><div class="who">Оценочная компания</div><p class="ben">Получит вознаграждение за оценку актива.</p></div>
+    <div class="card"><div class="who">Страховая компания</div><p class="ben">Получит вознаграждение за страховку актива.</p></div>
+    <div class="card"><div class="who">ОИС</div><p class="ben">Получит вознаграждение за выпуск ЦФА.</p></div>
+    <div class="card"><div class="who">Цифровая Платформа РСФСР</div><p class="ben">Получит вознаграждение за технологические внедрения и предоставление своих решений.</p></div>
+    <div class="card"><div class="who">ЦБ РФ</div><p class="ben">Получит внебюджетное финансирование и внедрение цифрового рубля.</p></div>
+    <div class="card"><div class="who">Государство РФ</div><p class="ben">Получит реализацию национальных проектов и государственных программ, увеличение темпов развития экономики, высвобождение средств для обеспечения своих социальных и иных обязательств.</p></div>
+    <div class="card"><div class="who">Население</div><p class="ben">Обретёт уверенность в завтрашнем дне благодаря устойчивому росту экономики и гарантированно высокому уровню жизни.</p></div>
+  </section>
+
+  <section class="pb">
+    <div class="section-h"><span class="num">4</span><h2>Соответствие законам РФ и инструкциям Банка России</h2></div>
+    <p>Платформа работает исключительно в действующем правовом поле Российской Федерации:</p>
+    <table>
+      <thead><tr><th style="width:34%">Норма</th><th>Применение в схеме</th></tr></thead>
+      <tbody>
+        <tr><td><b>ФЗ № 259-ФЗ</b> «О цифровых финансовых активах»</td><td>Выпуск и обращение ЦФА; правила оператора информационной системы согласуются с Банком России (ст. 6).</td></tr>
+        <tr><td><b>ФЗ № 86-ФЗ</b> «О Банке России»</td><td>Денежная эмиссия и надзор на финансовом рынке отнесены к исключительной компетенции Банка России.</td></tr>
+        <tr><td><b>Законодательство о цифровом рубле</b></td><td>Эмиссия и расчёты могут производиться в форме цифрового рубля как национальной цифровой валюты.</td></tr>
+        <tr><td><b>Положения Банка России</b> об операторах ИС ЦФА</td><td>Требования к оператору, реестру, защите информации и собственным средствам.</td></tr>
+        <tr><td><b>ГК РФ</b> (залог, ст. 334–358)</td><td>Временное обременение недвижимости при сохранении её в собственности владельца.</td></tr>
+        <tr><td><b>ФЗ № 135-ФЗ</b> «Об оценочной деятельности»</td><td>Независимая рыночная оценка обеспечения.</td></tr>
+        <tr><td><b>Страховое законодательство</b> (гл. 48 ГК, № 4015-1)</td><td>Страхование объекта обеспечения на срок обращения ЦФА.</td></tr>
+        <tr><td><b>ФЗ № 258-ФЗ</b> об экспериментальных правовых режимах</td><td>Возможность отработки схемы в рамках экспериментального правового режима.</td></tr>
+      </tbody>
+    </table>
+    <div class="note"><b>Контроль инфляции.</b> Эмиссия производится строго под реальное, оценённое и застрахованное обеспечение и исключительно на цели государственных программ — необеспеченная эмиссия исключена.</div>
+  </section>
+
+  <section>
+    <div class="section-h"><span class="num">5</span><h2>Значение для страны</h2></div>
+    <p>Схема вовлекает в оборот «спящую» залоговую массу Российской Федерации (рынок недвижимого имущества оценивается порядка <strong>507&nbsp;трлн&nbsp;₽</strong>) и создаёт источник <strong>внебюджетного финансирования</strong> национальных и инфраструктурных проектов — без увеличения нагрузки на бюджет, при сохранении прав собственников и под полным надзором Банка России. Расчёты могут вестись в цифровом рубле, что укрепляет национальный расчётный контур.</p>
+  </section>
+
+  <footer>
+    <div class="name">Кагиров Абдул&#8209;Хаким Ахмадович — автор концепции и правообладатель</div>
+    <div>Свидетельство о депонировании № 4011265 от 19.12.2024 (ireg.pro, ГОСТ&#8209;Р 34.11&#8209;2012)</div>
+    <div class="contacts">
+      <span><b>Тел.:</b> +7 (969) 795&#8209;55&#8209;55</span>
+      <span><b>E&#8209;mail:</b> aslankaa@yandex.ru</span>
+      <span><b>Telegram:</b> @aslan_kaa</span>
+      <span><b>Сайт:</b> dpfsd.ru</span>
+    </div>
+  </footer>
+</body>
+</html>

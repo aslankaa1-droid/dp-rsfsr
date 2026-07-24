@@ -75,7 +75,7 @@
 
 - يجب أن يكون الـ Partner الموقِّع حائزًا على أحد الاعتمادات التالية: ACA (ICAEW)، CPA، CFA Charter، ASA (American Society of Appraisers).
 - الفريق — أربعة أشخاص كحد أدنى: Engagement Partner + Senior Manager + 2 Analysts؛ السيَر الذاتية إلزامية.
-- إفصاح تضارب المصالح (إلزامي): التحقق من أي ارتباطات بأطراف ذات صلة بالمشروع (JSC Atomyze، VEB.RF، Gazprombank، Promsvyazbank، الجهات التابعة لـ Atomyze) خلال الـ 36 شهرًا الماضية.
+- إفصاح تضارب المصالح (إلزامي): التحقق من أي ارتباطات بأطراف ذات صلة بالمشروع (JSC Atomyze، VEB.RF، partner bank، Promsvyazbank، الجهات التابعة لـ Atomyze) خلال الـ 36 شهرًا الماضية.
 - التأمين: Professional Indemnity Insurance بتغطية ≥ 5 ملايين دولار.
 
 ## 5. الميزانية والمدد

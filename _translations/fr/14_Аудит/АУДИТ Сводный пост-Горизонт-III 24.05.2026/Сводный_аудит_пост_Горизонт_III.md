@@ -191,7 +191,7 @@ Sur 33 AMBERs du post-Horizon II :
 | 3 | Lancement des 4 RFPs (DD + Legal + IT Cert + Market) | T+2 mois après Seed | 26–73 M ₽ au total |
 | 4 | Trademark + enregistrement du logiciel | T+3 mois | 50–200 k ₽ |
 | 5 | Assurance D&O + PI + Cyber | T+3–6 mois | 1–3 M ₽/an |
-| 6 | Inscription au registre BCR (Étape 1 — via partenariat JSC Atomyze) | T+8–12 mois | en cours |
+| 6 | Inscription au registre BCR (Étape 1 — via partenariat avec un opérateur 779-P en place) | T+8–12 mois | en cours |
 | 7 | Lancement pilote (5 régions, 50–100 objets) | T+18 mois | dans Use of Funds |
 | 8 | Roadshow Série A | T+18–24 mois | quand AUM ≥ 50 Md ₽ |
 

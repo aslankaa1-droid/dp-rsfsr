@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Доклад для государственных органов · ЦП РСФСР</title>
+<style>
+  :root{--em:#0B2B5C;--em2:#163A75;--gold:#C5A572;--gold2:#E4C892;
+    --ink:#0F1419;--muted:#4A5568;--soft:#6B7785;--line:#D8DFE8;--soft-bg:#F5EFE2;--em-soft:#E6ECF5;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  @page{size:A4;margin:16mm 18mm}
+  html,body{background:#fff}
+  body{font-family:'Inter','Segoe UI',Roboto,Arial,sans-serif;color:var(--ink);
+    font-size:10.4pt;line-height:1.52;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  h1,h2,h3{font-family:'Inter Tight','Inter',sans-serif;color:var(--em);letter-spacing:-.01em}
+  p{margin:0 0 7px;text-align:justify}
+  strong{color:var(--em);font-weight:700}
+  section{margin-bottom:12px}
+  .section-h{display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--line);
+    padding-bottom:5px;margin:16px 0 9px;break-after:avoid}
+  .section-h .num{font-family:'Inter Tight',sans-serif;font-weight:700;color:var(--gold);
+    filter:brightness(.82);font-size:12pt;min-width:22px}
+  .section-h h2{font-size:12.5pt}
+  /* ---- Cover ---- */
+  .cover{text-align:center;padding:8mm 0 6mm;border-bottom:2px solid var(--em);margin-bottom:4mm}
+  .cover .logo{height:64px;color:var(--em);margin-bottom:14px}
+  .cover .kicker{font-size:8.6pt;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);
+    filter:brightness(.8);font-weight:700}
+  .cover h1{font-size:20pt;margin:8px auto 6px;max-width:16cm;line-height:1.16}
+  .cover .sub{font-size:10.2pt;color:var(--muted);max-width:15cm;margin:0 auto}
+  .cover .rule{width:60px;height:3px;background:var(--gold);margin:12px auto}
+  .cover .doc-meta{font-size:8.8pt;color:var(--soft);margin-top:6px}
+  /* ---- Ask block ---- */
+  .ask{background:var(--em);color:#fff;border-radius:10px;padding:14px 18px;margin:6px 0 4px}
+  .ask h2{color:#fff;font-size:12.5pt;margin-bottom:6px}
+  .ask ol{margin:0;padding-left:18px}
+  .ask li{margin:4px 0;color:#EAF1EE;font-size:9.8pt}
+  .ask li b{color:var(--gold2)}
+  /* ---- KPI ---- */
+  .kpis{display:flex;gap:10px;margin:8px 0}
+  .kpi{flex:1;background:var(--soft-bg);border-radius:9px;padding:11px 12px;border-top:3px solid var(--gold)}
+  .kpi .v{font-family:'Inter Tight',sans-serif;font-size:16pt;font-weight:700;color:var(--em);line-height:1}
+  .kpi .l{font-size:8pt;color:var(--muted);margin-top:4px;line-height:1.3}
+  /* ---- table ---- */
+  table{width:100%;border-collapse:collapse;font-size:9.2pt;margin:6px 0}
+  th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}
+  th{background:var(--em-soft);color:var(--em);font-weight:700}
+  td.r,th.r{text-align:right;white-space:nowrap}
+  /* ---- two-col effect ---- */
+  .cols{display:flex;gap:12px}
+  .col{flex:1;background:#fff;border:1px solid var(--line);border-radius:9px;padding:10px 13px}
+  .col h3{font-size:10pt;margin-bottom:5px;display:flex;align-items:center;gap:6px}
+  .col h3::before{content:"";width:8px;height:8px;background:var(--gold);border-radius:2px;transform:rotate(45deg)}
+  .col ul{margin:0;padding-left:16px}
+  .col li{margin:3px 0;font-size:9pt;color:var(--muted)}
+  .col li b{color:var(--ink)}
+  ul.clean{margin:4px 0 4px;padding-left:0}
+  ul.clean li{list-style:none;position:relative;padding:2px 0 2px 20px}
+  ul.clean li::before{content:"";position:absolute;left:2px;top:8px;width:7px;height:7px;
+    background:var(--em);border-radius:2px;transform:rotate(45deg)}
+  .note{background:var(--soft-bg);border-left:3px solid var(--gold);padding:9px 13px;
+    border-radius:0 8px 8px 0;font-size:9.2pt;color:var(--muted);margin:8px 0}
+  .stage{border:1px solid var(--line);border-left:4px solid var(--em);border-radius:0 8px 8px 0;
+    padding:9px 13px;margin:7px 0}
+  .stage .tag{font-size:7.8pt;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--gold);filter:brightness(.8)}
+  .stage b{color:var(--em)}
+  footer{margin-top:14px;border-top:2px solid var(--em);padding-top:9px;font-size:8.6pt;color:var(--soft)}
+  footer .name{font-weight:700;color:var(--ink);font-size:10.4pt}
+  .contacts{display:flex;gap:16px;flex-wrap:wrap;margin-top:6px}
+  .contacts span b{color:var(--em)}
+  .pb{break-before:page}
+</style>
+</head>
+<body>
+  <div class="cover">
+    <svg class="logo" viewBox="0 0 450 96" xmlns="http://www.w3.org/2000/svg" aria-label="ЦПФСР.РФ">
+      <defs><linearGradient id="em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B2B5C"/><stop offset="100%" stop-color="#163A75"/></linearGradient>
+      <linearGradient id="gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#C5A572"/><stop offset="100%" stop-color="#E4C892"/></linearGradient></defs>
+      <g transform="translate(8,8)"><rect x="0" y="0" width="80" height="80" rx="20" fill="url(#em)"/><rect x="7.5" y="7.5" width="65" height="65" rx="14" fill="none" stroke="url(#gd)" stroke-width="1.8"/><text x="40" y="42" text-anchor="middle" dominant-baseline="central" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="52" fill="#fff">Р</text></g>
+      <g transform="translate(98,0)" font-family="'Inter Tight','Inter',system-ui,sans-serif">
+        <text x="0" y="40" font-size="32" font-weight="700" letter-spacing="-0.5" fill="#0B2B5C">ЦПФСР.РФ</text>
+        <text x="2" y="62" font-size="10.5" font-weight="500" letter-spacing="1.6" fill="#0B2B5C" opacity=".62">ЦИФРОВАЯ ПЛАТФОРМА</text>
+        <text x="2" y="76" font-size="10.5" font-weight="500" letter-spacing="1.6" fill="#0B2B5C" opacity=".62">ФИНАНСИРОВАНИЯ СОЦИАЛЬНОГО РАЗВИТИЯ</text></g>
+    </svg>
+    <div class="kicker">Доклад для государственных органов</div>
+    <h1>Цифровая Платформа «Российский Сервис Финансирования Социального Развития»</h1>
+    <p class="sub">Внебюджетное финансирование национальных и инфраструктурных проектов на базе цифровых финансовых активов под обеспечение залоговой массы граждан и организаций Российской Федерации</p>
+    <div class="rule"></div>
+    <div class="doc-meta">Москва · 16 июля 2026 г. · Автор концепции — Кагиров А.&#8209;Х. А. · dpfsd.ru</div>
+  </div>
+
+  <div class="ask">
+    <h2>О чём мы просим</h2>
+    <p style="color:#EAF1EE;margin-bottom:6px;font-size:9.8pt">Для перехода к следующему этапу реализации проекта просим профильные органы:</p>
+    <ol>
+      <li><b>Минэкономразвития России</b> — экспертная оценка концепции пилота Stage&nbsp;1 как инструмента ускорения нацпроектов; назначение координатора межведомственной позиции.</li>
+      <li><b>Минфин России</b> — оценка совместимости со Стратегией развития финансового рынка и Бюджетным кодексом; согласование механизма фондирования через Фабрику ВЭБ.РФ и Федеральное казначейство.</li>
+      <li><b>ВЭБ.РФ</b> — рассмотрение включения проектов в портфель Фабрики проектного финансирования (ПП РФ № 158); consultative letter.</li>
+      <li><b>Банк России</b> — консультативная экспертиза правил оператора по ст. 6 259&#8209;ФЗ; рассмотрение пилота в экспериментальном правовом режиме (258&#8209;ФЗ).</li>
+      <li><b>Минцифры России</b> — интеграция с ГИС и включение платформы в реестр российского ПО.</li>
+      <li><b>Аппарат Правительства РФ</b> — координатор межведомственной рабочей группы по пилоту Stage&nbsp;1.</li>
+    </ol>
+  </div>
+
+  <section>
+    <div class="section-h"><span class="num">1</span><h2>Платформа кратко</h2></div>
+    <p>ЦП&nbsp;РСФСР — операторская инфраструктура и клиентское приложение полного цикла выпуска и обслуживания <strong>цифровых финансовых активов (ЦФА)</strong>, номинированных под залог недвижимого и иного ликвидного имущества. Реализация двухстадийная:</p>
+    <div class="stage"><div class="tag">Stage 1 · 2026–2028 · без изменения законодательства</div>
+      <p style="margin:3px 0 0"><b>Пилот-режим.</b> Платформа работает как оператор/агент выпуска ЦФА по действующему 259&#8209;ФЗ в технологическом партнёрстве с лицензированным оператором информационной системы (779&#8209;П). Целевое фондирование — через Фабрику проектного финансирования ВЭБ.РФ (ПП РФ № 158) и Федеральное казначейство на эскроу&#8209;счета с целевым контролем. Банк России — общий надзорный регулятор (ст. 4 86&#8209;ФЗ).</p></div>
+    <div class="stage"><div class="tag">Stage 2 · горизонт 2029+ · defensible расширение мандата</div>
+      <p style="margin:3px 0 0"><b>Горизонт-видение.</b> После положительного track&#8209;record Stage&nbsp;1 ≥ 12 мес. и принятия пакета законодательных поправок под совокупный портфель залоговых ЦФА может быть рассмотрена целевая обеспеченная эмиссия Банка России (в перспективе — в форме цифрового рубля), направляемая через Казначейство на нацпроекты. По завершении проектов проводится мена ЦФА: залог собственника замещается активом на построенный государственный объект, обременение снимается, собственник получает вознаграждение.</p></div>
+    <div class="note"><b>Срок запуска платформы-оператора — от 18 месяцев.</b> Финансирование производится строго под оценённое и застрахованное обеспечение, что сохраняет режим контролируемой инфляции.</div>
+  </section>
+
+  <section>
+    <div class="section-h"><span class="num">2</span><h2>Проблема, которую решает проект</h2></div>
+    <p>Реализация национальных проектов ограничена одновременным действием факторов: бюджетное правило, высокая стоимость заёмного фондирования, ограничение доступа к внешним рынкам капитала, низкая монетизация частных активов. Возникает <strong>парадокс «богатой страны с дефицитом инвестиционной денежной массы»</strong>: национальное богатство велико, но его конвертация в источник развития остаётся непропорционально низкой.</p>
+    <ul class="clean">
+      <li>Совокупная стоимость недвижимого имущества РФ — порядка <strong>507 трлн ₽</strong>, подавляющая часть не вовлечена в финансовый оборот.</li>
+      <li>Консервативно активируемая залоговая масса — <strong>≈ 25 трлн ₽</strong> целевого внебюджетного ресурса.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-h"><span class="num">3</span><h2>Эффект для участников</h2></div>
+    <div class="cols">
+      <div class="col"><h3>Государство</h3><ul>
+        <li>Внебюджетный источник целевых средств на нацпроекты</li>
+        <li>Ускорение реализации программ без давления на ОФЗ</li>
+        <li>Финансовый суверенитет: замена внешнего долга внутренним ресурсом</li></ul></div>
+      <div class="col"><h3>Собственники и бизнес</h3><ul>
+        <li>Гарантированный доход при <b>сохранении объекта</b> в собственности</li>
+        <li>Прозрачное цифровое оформление и защита прав</li>
+        <li>Доступ к новому классу обеспеченных инструментов</li></ul></div>
+    </div>
+    <div class="cols" style="margin-top:10px">
+      <div class="col"><h3>Банк России</h3><ul>
+        <li>Контролируемый, полностью обеспеченный инструмент</li>
+        <li>Развитие индустрии ЦФА по 259&#8209;ФЗ</li>
+        <li>Надзорная роль на каждом этапе</li></ul></div>
+      <div class="col"><h3>Финансовый сектор</h3><ul>
+        <li>Новые сервисные доходы (банки, страховые, оценщики)</li>
+        <li>Расчётная и кастодиальная инфраструктура</li>
+        <li>Масштабируемый поток регулируемых выпусков</li></ul></div>
+    </div>
+  </section>
+
+  <section class="pb">
+    <div class="section-h"><span class="num">4</span><h2>Ключевые показатели (базовый сценарий)</h2></div>
+    <div class="kpis">
+      <div class="kpi"><div class="v">63,4 млрд ₽</div><div class="l">NPV (с терминальной стоимостью, g=4%)</div></div>
+      <div class="kpi"><div class="v">62%</div><div class="l">IRR (project&#8209;level)</div></div>
+      <div class="kpi"><div class="v">2,8 года</div><div class="l">Срок окупаемости</div></div>
+      <div class="kpi"><div class="v">1,3 млрд ₽</div><div class="l">Стартовое финансирование (CapEx + буфер, 18 мес.)</div></div>
+    </div>
+    <table>
+      <thead><tr><th>Параметр</th><th class="r">Значение</th><th>Комментарий</th></tr></thead>
+      <tbody>
+        <tr><td>Ставка дисконтирования (WACC)</td><td class="r">29,5%</td><td>Реконсилирована под текущую макросреду</td></tr>
+        <tr><td>CapEx за 18 месяцев</td><td class="r">850 млн ₽</td><td>Запуск операционной деятельности</td></tr>
+        <tr><td>Совокупный CapEx за 10 лет</td><td class="r">1 300 млн ₽</td><td>Полный горизонт</td></tr>
+        <tr><td>Комиссия за выпуск ЦФА</td><td class="r">0,5%</td><td>От номинала выпуска</td></tr>
+        <tr><td>Сервисная комиссия</td><td class="r">0,3%</td><td>От обращаемого объёма</td></tr>
+        <tr><td>Платформенный сбор</td><td class="r">0,15%</td><td>Оценка и страхование</td></tr>
+      </tbody>
+    </table>
+    <div class="note">Запрос финансирования: <b>1,3 млрд ₽</b> (CapEx и операционный буфер на 18 месяцев). Возврат — Payback 2,8 года (базовый сценарий). Якорь финансовых показателей — формальный отчёт об оценке проекта.</div>
+  </section>
+
+  <section>
+    <div class="section-h"><span class="num">5</span><h2>Правовой контур</h2></div>
+    <table>
+      <thead><tr><th>Стадия</th><th>Правовая база</th><th>Изменения законодательства</th></tr></thead>
+      <tbody>
+        <tr><td><b>Stage 1</b><br>2026–2028</td><td>259&#8209;ФЗ (ЦФА); 86&#8209;ФЗ ст.4 (надзор ЦБ); ПП РФ № 158 (Фабрика ВЭБ.РФ); Бюджетный кодекс; 258&#8209;ФЗ (ЭПР)</td><td><b>Не требуются.</b> Работа в действующем правовом поле через партнёрство с оператором 779&#8209;П</td></tr>
+        <tr><td><b>Stage 2</b><br>горизонт 2029+</td><td>Пакет законодательных поправок (расширение мандата целевой обеспеченной эмиссии) + подзаконные акты</td><td>Рассматривается <b>только после</b> положительного track&#8209;record Stage 1 ≥ 12 мес.</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:9pt;color:var(--muted);margin-top:4px">Ключевая особенность Stage 1 — не&#8209;публичный оборот ЦФА и контроль инфляции: эмиссия строго привязана к оценённому и застрахованному обеспечению.</p>
+  </section>
+
+  <section>
+    <div class="section-h"><span class="num">6</span><h2>Дорожная карта (Stage 1)</h2></div>
+    <table>
+      <thead><tr><th>Горизонт</th><th>Ключевые шаги</th></tr></thead>
+      <tbody>
+        <tr><td>T+30</td><td>Named sponsor в Минэке; архитектурный концепт в Аппарате Правительства; LoI о технологическом партнёрстве с оператором 779&#8209;П</td></tr>
+        <tr><td>T+90</td><td>Внебюджетный канал с Минфином; consultative letter ВЭБ.РФ (ПП № 158); MoU о расчётном банке пилота</td></tr>
+        <tr><td>T+180</td><td>MoU о региональном пилоте (50–100 объектов); консультация Госдумы по 259&#8209;ФЗ; консолидированная межведомственная позиция</td></tr>
+        <tr><td>T+180+</td><td>Включение оператора в реестр информационных систем ЦФА (779&#8209;П); старт промышленной эксплуатации</td></tr>
+      </tbody>
+    </table>
+    <div class="note" style="border-color:var(--em);background:var(--em-soft);color:var(--em)">Wedge&#8209;логика: Банк России — завершающая инстанция Stage 1, а не первая. Основные согласования проходят через Минэк → Минфин → ВЭБ.РФ → Госдума → регион → оператор реестра.</div>
+  </section>
+
+  <footer>
+    <div class="name">Кагиров Абдул&#8209;Хаким Ахмадович — автор концепции и правообладатель ноу&#8209;хау</div>
+    <div>Свидетельство о депонировании № 4011265 от 19.12.2024 (ireg.pro, ГОСТ&#8209;Р 34.11&#8209;2012)</div>
+    <div class="contacts">
+      <span><b>Тел.:</b> +7 (969) 795&#8209;55&#8209;55</span>
+      <span><b>E&#8209;mail:</b> aslankaa@yandex.ru</span>
+      <span><b>Telegram:</b> @aslan_kaa</span>
+      <span><b>Сайт:</b> dpfsd.ru</span>
+    </div>
+  </footer>
+</body>
+</html>

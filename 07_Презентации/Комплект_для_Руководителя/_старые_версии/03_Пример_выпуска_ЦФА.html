@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Пример выпуска ЦФА · ЦП РСФСР</title>
+<style>
+  :root{--em:#0B2B5C;--em2:#163A75;--gold:#C5A572;--gold2:#E4C892;
+    --ink:#0F1419;--muted:#4A5568;--soft:#6B7785;--line:#D8DFE8;--soft-bg:#F5EFE2;--em-soft:#E6ECF5;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  @page{size:A4;margin:16mm 18mm}
+  html,body{background:#fff}
+  body{font-family:'Inter','Segoe UI',Roboto,Arial,sans-serif;color:var(--ink);
+    font-size:10.4pt;line-height:1.52;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  h1,h2,h3{font-family:'Inter Tight','Inter',sans-serif;color:var(--em);letter-spacing:-.01em}
+  p{margin:0 0 7px;text-align:justify}
+  strong{color:var(--em);font-weight:700}
+  .section-h{display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--line);
+    padding-bottom:5px;margin:15px 0 9px;break-after:avoid}
+  .section-h .num{font-family:'Inter Tight',sans-serif;font-weight:700;color:var(--gold);
+    filter:brightness(.82);font-size:12pt;min-width:22px}
+  .section-h h2{font-size:12.5pt}
+  .cover{text-align:center;padding:8mm 0 6mm;border-bottom:2px solid var(--em);margin-bottom:4mm}
+  .cover .logo{height:64px;margin-bottom:14px}
+  .cover .kicker{font-size:8.6pt;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);filter:brightness(.8);font-weight:700}
+  .cover h1{font-size:20pt;margin:8px auto 6px;max-width:16cm;line-height:1.16}
+  .cover .sub{font-size:10.2pt;color:var(--muted);max-width:15cm;margin:0 auto}
+  .cover .rule{width:60px;height:3px;background:var(--gold);margin:12px auto}
+  .cover .doc-meta{font-size:8.8pt;color:var(--soft);margin-top:6px}
+  table{width:100%;border-collapse:collapse;font-size:9.2pt;margin:6px 0}
+  th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}
+  th{background:var(--em-soft);color:var(--em);font-weight:700}
+  td.r,th.r{text-align:right;white-space:nowrap}
+  .parts{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0}
+  .part{flex:1 1 30%;min-width:31%;border:1px solid var(--line);border-top:3px solid var(--gold);
+    border-radius:8px;padding:8px 11px}
+  .part .r{font-size:7.6pt;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);filter:brightness(.8);font-weight:700}
+  .part .n{font-weight:700;color:var(--em);font-size:9.6pt;margin-top:2px}
+  .part .d{font-size:8.3pt;color:var(--muted);margin-top:2px;line-height:1.35}
+  ol.steps{counter-reset:s;margin:4px 0;padding:0;list-style:none}
+  ol.steps li{counter-increment:s;position:relative;padding:5px 0 5px 34px;border-bottom:1px dashed var(--line);font-size:9.6pt}
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{content:counter(s);position:absolute;left:0;top:5px;width:23px;height:23px;
+    background:var(--em);color:#fff;border-radius:6px;font-family:'Inter Tight',sans-serif;font-weight:700;
+    font-size:10pt;display:flex;align-items:center;justify-content:center}
+  ol.steps li b{color:var(--em)}
+  .calc{background:var(--soft-bg);border-radius:10px;padding:4px 14px 8px;margin:8px 0;border-top:3px solid var(--gold)}
+  .flow{display:flex;align-items:stretch;gap:6px;margin:10px 0;flex-wrap:nowrap}
+  .flow .node{flex:1;background:var(--em);color:#fff;border-radius:8px;padding:9px 8px;text-align:center}
+  .flow .node .t{font-size:8.4pt;color:var(--gold2);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+  .flow .node .v{font-family:'Inter Tight',sans-serif;font-size:12pt;font-weight:700;margin-top:3px}
+  .flow .arw{display:flex;align-items:center;color:var(--gold);font-size:16pt;font-weight:700}
+  .cols{display:flex;gap:12px}
+  .col{flex:1;background:#fff;border:1px solid var(--line);border-radius:9px;padding:10px 13px}
+  .col h3{font-size:10pt;margin-bottom:5px;display:flex;align-items:center;gap:6px}
+  .col h3::before{content:"";width:8px;height:8px;background:var(--gold);border-radius:2px;transform:rotate(45deg)}
+  .col ul{margin:0;padding-left:16px}.col li{margin:3px 0;font-size:9pt;color:var(--muted)}.col li b{color:var(--ink)}
+  .note{background:var(--soft-bg);border-left:3px solid var(--gold);padding:9px 13px;border-radius:0 8px 8px 0;font-size:9.2pt;color:var(--muted);margin:8px 0}
+  footer{margin-top:14px;border-top:2px solid var(--em);padding-top:9px;font-size:8.6pt;color:var(--soft)}
+  footer .name{font-weight:700;color:var(--ink);font-size:10.4pt}
+  .contacts{display:flex;gap:16px;flex-wrap:wrap;margin-top:6px}.contacts span b{color:var(--em)}
+  .pb{break-before:page}
+  .disc{font-size:8.4pt;color:var(--soft);font-style:italic;margin-top:4px}
+</style>
+</head>
+<body>
+  <div class="cover">
+    <svg class="logo" viewBox="0 0 450 96" xmlns="http://www.w3.org/2000/svg" aria-label="ЦПФСР.РФ" height="64">
+      <defs><linearGradient id="em" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B2B5C"/><stop offset="100%" stop-color="#163A75"/></linearGradient>
+      <linearGradient id="gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#C5A572"/><stop offset="100%" stop-color="#E4C892"/></linearGradient></defs>
+      <g transform="translate(8,8)"><rect x="0" y="0" width="80" height="80" rx="20" fill="url(#em)"/><rect x="7.5" y="7.5" width="65" height="65" rx="14" fill="none" stroke="url(#gd)" stroke-width="1.8"/><text x="40" y="42" text-anchor="middle" dominant-baseline="central" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="52" fill="#fff">Р</text></g>
+      <g transform="translate(98,0)" font-family="'Inter Tight','Inter',system-ui,sans-serif">
+        <text x="0" y="40" font-size="32" font-weight="700" letter-spacing="-0.5" fill="#0B2B5C">ЦПФСР.РФ</text>
+        <text x="2" y="62" font-size="10.5" font-weight="500" letter-spacing="1.6" fill="#0B2B5C" opacity=".62">ЦИФРОВАЯ ПЛАТФОРМА</text>
+        <text x="2" y="76" font-size="10.5" font-weight="500" letter-spacing="1.6" fill="#0B2B5C" opacity=".62">ФИНАНСИРОВАНИЯ СОЦИАЛЬНОГО РАЗВИТИЯ</text></g>
+    </svg>
+    <div class="kicker">Пример выпуска цифрового финансового актива</div>
+    <h1>Как работает выпуск ЦФА и финансирование национального проекта</h1>
+    <p class="sub">Пошаговая иллюстративная модель Stage 1: от подачи актива собственником до целевого финансирования государственного проекта</p>
+    <div class="rule"></div>
+    <div class="doc-meta">Москва · 16 июля 2026 г. · Приложение 2 к докладу · dpfsd.ru</div>
+  </div>
+
+  <section>
+    <div class="section-h"><span class="num">1</span><h2>Участники</h2></div>
+    <div class="parts">
+      <div class="part"><div class="r">Инициатор</div><div class="n">Собственник актива</div><div class="d">Физическое или юридическое лицо, подающее имущество в залог через приложение.</div></div>
+      <div class="part"><div class="r">Front-end / агент</div><div class="n">ЦП РСФСР</div><div class="d">Операторская платформа: приём заявок, структурирование, обслуживание выпуска.</div></div>
+      <div class="part"><div class="r">Оператор реестра</div><div class="n">Лицензированный оператор ИС ЦФА (779&#8209;П)</div><div class="d">Технологический партнёр, ведущий реестр и выпуск ЦФА по 259&#8209;ФЗ.</div></div>
+      <div class="part"><div class="r">Оценка</div><div class="n">Независимый оценщик</div><div class="d">Рыночная оценка объекта обеспечения.</div></div>
+      <div class="part"><div class="r">Защита</div><div class="n">Страховщик</div><div class="d">Страхование объекта и рисков на срок обращения ЦФА.</div></div>
+      <div class="part"><div class="r">Расчёты</div><div class="n">Расчётный банк</div><div class="d">Эскроу&#8209;счета с целевым контролем движения средств.</div></div>
+      <div class="part"><div class="r">Фондирование</div><div class="n">ВЭБ.РФ + Федеральное казначейство</div><div class="d">Целевой канал финансирования проекта (Фабрика, ПП РФ № 158).</div></div>
+      <div class="part"><div class="r">Спрос</div><div class="n">Квалифицированные инвесторы</div><div class="d">Приобретатели обеспеченных регулируемых ЦФА.</div></div>
+      <div class="part"><div class="r">Надзор</div><div class="n">Банк России</div><div class="d">Общий надзорный регулятор финансового рынка (ст. 4 86&#8209;ФЗ).</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-h"><span class="num">2</span><h2>Суть модели — за 12 шагов</h2></div>
+    <ol class="steps">
+      <li><b>Подача актива.</b> Собственник загружает объект в приложение и подтверждает права.</li>
+      <li><b>Оценка и страхование.</b> Независимый оценщик определяет рыночную стоимость; объект страхуется.</li>
+      <li><b>Юридическая проверка.</b> Платформа проверяет права, обременения и чистоту титула.</li>
+      <li><b>Структурирование выпуска.</b> Определяются номинал ЦФА, срок, купон собственнику, коэффициент обеспечения.</li>
+      <li><b>Смарт&#8209;контракт.</b> Условия фиксируются в смарт&#8209;контракте; собственник подписывает электронно.</li>
+      <li><b>Выпуск ЦФА.</b> Актив выпускается в реестре лицензированного оператора ИС (779&#8209;П) по 259&#8209;ФЗ.</li>
+      <li><b>Размещение.</b> ЦФА размещаются среди квалифицированных инвесторов / целевого канала.</li>
+      <li><b>Эскроу.</b> Привлечённые средства поступают на эскроу&#8209;счёт с целевым контролем.</li>
+      <li><b>Фондирование проекта.</b> Средства направляются через Фабрику ВЭБ.РФ и Казначейство на государственный проект.</li>
+      <li><b>Реализация проекта.</b> Финансируется строительство инфраструктурного/социального объекта.</li>
+      <li><b>Обслуживание.</b> Собственник получает купон; ведётся прозрачная отчётность в приложении.</li>
+      <li><b>Мена и закрытие.</b> По завершении проекта залог замещается ЦФА на построенный госактив, обременение снимается, собственник получает вознаграждение.</li>
+    </ol>
+  </section>
+
+  <section class="pb">
+    <div class="section-h"><span class="num">3</span><h2>Объект и иллюстративный расчёт</h2></div>
+    <table>
+      <thead><tr><th>Параметр</th><th class="r">Значение</th></tr></thead>
+      <tbody>
+        <tr><td>Объект обеспечения (пример)</td><td class="r">Коммерческая недвижимость</td></tr>
+        <tr><td>Рыночная оценка объекта</td><td class="r">100 000 000 ₽</td></tr>
+        <tr><td>Коэффициент обеспечения (консервативный)</td><td class="r">70%</td></tr>
+        <tr><td><b>Номинал выпуска ЦФА</b></td><td class="r"><b>70 000 000 ₽</b></td></tr>
+        <tr><td>Срок обращения</td><td class="r">5 лет</td></tr>
+        <tr><td>Купон собственнику</td><td class="r">4,0% годовых</td></tr>
+        <tr><td>Годовой доход собственника</td><td class="r">2 800 000 ₽</td></tr>
+        <tr><td>Доход собственника за срок</td><td class="r">14 000 000 ₽</td></tr>
+      </tbody>
+    </table>
+    <div class="flow">
+      <div class="node"><div class="t">Объект</div><div class="v">100 млн ₽</div></div>
+      <div class="arw">→</div>
+      <div class="node"><div class="t">Выпуск ЦФА</div><div class="v">70 млн ₽</div></div>
+      <div class="arw">→</div>
+      <div class="node"><div class="t">Проект</div><div class="v">70 млн ₽</div></div>
+      <div class="arw">→</div>
+      <div class="node"><div class="t">Мена</div><div class="v">Госактив</div></div>
+    </div>
+    <p class="disc">Расчёт иллюстративный: значения приведены для наглядности механики и не являются офертой или прогнозом доходности. Параметры каждого выпуска определяются индивидуально по итогам оценки.</p>
+  </section>
+
+  <section>
+    <div class="section-h"><span class="num">4</span><h2>Экономика: как распределяется выпуск</h2></div>
+    <table>
+      <thead><tr><th>Направление</th><th class="r">Ставка</th><th class="r">Сумма (пример, ₽)</th><th>Назначение</th></tr></thead>
+      <tbody>
+        <tr><td>Целевое финансирование проекта</td><td class="r">—</td><td class="r">70 000 000</td><td>Через эскроу → Фабрика ВЭБ.РФ + Казначейство</td></tr>
+        <tr><td>Комиссия за выпуск ЦФА</td><td class="r">0,50%</td><td class="r">350 000</td><td>Платформа&#8209;оператор</td></tr>
+        <tr><td>Сервисная комиссия (в год)</td><td class="r">0,30%</td><td class="r">210 000</td><td>Обслуживание обращения</td></tr>
+        <tr><td>Платформенный сбор</td><td class="r">0,15%</td><td class="r">105 000</td><td>Оценка и страхование</td></tr>
+        <tr><td>Купон собственнику (в год)</td><td class="r">4,00%</td><td class="r">2 800 000</td><td>Доход владельца актива</td></tr>
+      </tbody>
+    </table>
+    <div class="note">Финансирование производится строго под <b>оценённое и застрахованное обеспечение</b> — это удерживает выпуск в режиме контролируемой инфляции и защищает всех участников.</div>
+  </section>
+
+  <section>
+    <div class="section-h"><span class="num">5</span><h2>Защита участников</h2></div>
+    <div class="cols">
+      <div class="col"><h3>Собственник</h3><ul>
+        <li><b>Сохраняет объект</b> в собственности на всём сроке</li>
+        <li>Гарантированный купонный доход</li>
+        <li>Мена на актив госпроекта и снятие обременения по завершении</li></ul></div>
+      <div class="col"><h3>Инвестор</h3><ul>
+        <li>Полное обеспечение реальным оценённым активом</li>
+        <li>Страховое покрытие объекта</li>
+        <li>Регулируемый инструмент по 259&#8209;ФЗ, реестр оператора 779&#8209;П</li></ul></div>
+    </div>
+    <div class="cols" style="margin-top:10px">
+      <div class="col"><h3>Государство</h3><ul>
+        <li>Целевой контроль средств через эскроу и Казначейство</li>
+        <li>Финансирование без роста бюджетной нагрузки</li>
+        <li>Надзор Банка России на каждом этапе</li></ul></div>
+      <div class="col"><h3>Система</h3><ul>
+        <li>Не&#8209;публичный оборот ЦФА в Stage 1</li>
+        <li>Привязка эмиссии к обеспечению — контроль инфляции</li>
+        <li>Прозрачность операций в смарт&#8209;контракте</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-h"><span class="num">6</span><h2>Интеллектуальная собственность</h2></div>
+    <p>Концепция платформы, модель выпуска и обслуживания ЦФА, а также клиентское приложение являются <strong>оригинальным авторским произведением</strong> и защищены свидетельством о депонировании.</p>
+    <table>
+      <tbody>
+        <tr><th>Правообладатель</th><td>Кагиров Абдул&#8209;Хаким Ахмадович</td></tr>
+        <tr><th>Свидетельство</th><td>№ 4011265 от 19.12.2024 (ireg.pro)</td></tr>
+        <tr><th>Хеш ГОСТ&#8209;Р 34.11&#8209;2012</th><td style="font-family:'JetBrains Mono',Consolas,monospace;font-size:7.6pt;word-break:break-all">a7d40971cbb5443e0f3d037ff054080dfb0064b59832cf1b89386078bf3de373</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <div class="name">Кагиров Абдул&#8209;Хаким Ахмадович — автор концепции и правообладатель ноу&#8209;хау</div>
+    <div>Свидетельство о депонировании № 4011265 от 19.12.2024 (ireg.pro, ГОСТ&#8209;Р 34.11&#8209;2012)</div>
+    <div class="contacts">
+      <span><b>Тел.:</b> +7 (969) 795&#8209;55&#8209;55</span>
+      <span><b>E&#8209;mail:</b> aslankaa@yandex.ru</span>
+      <span><b>Telegram:</b> @aslan_kaa</span>
+      <span><b>Сайт:</b> dpfsd.ru</span>
+    </div>
+  </footer>
+</body>
+</html>

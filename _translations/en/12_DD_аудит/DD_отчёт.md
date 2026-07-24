@@ -34,7 +34,7 @@ The report covers the six classic Due Diligence areas plus one additional (ESG /
 ## 2. Commercial Due Diligence
 
 ### 2.1. Product analysis
-CPFSR is a front-end / agent platform for the issuance of DFA against pledged assets, operating in a two-stage architecture. **Stage 1 (pilot-light 2026–2028):** placements are conducted through a technology partnership with an incumbent operator of the DFA information system under 779-P (Atomyze JSC or another register entity — the 779-P licence is individual and not transferable); funding flows through the VEB.RF Project Finance Factory (Government Decree No. 158) and the Federal Treasury under the Budget Code. Additional Bank of Russia issuance is not envisaged in Stage 1; the CBR is the supervisory regulator under Article 4 of Federal Law 86-FZ. **Stage 2 (2029+ horizon):** expansion of the mandate to a targeted secured-emission model against a pool of pledged DFA — a defensible horizon, implemented after a positive Stage 1 track record of ≥ 12 months and adoption of the package of four federal laws. No analogues with such a two-stage architecture have been identified in public sources in the Russian Federation or in international markets.
+CPFSR is a front-end / agent platform for the issuance of DFA against pledged assets, operating in a two-stage architecture. **Stage 1 (pilot-light 2026–2028):** placements are conducted through a technology partnership with an incumbent operator of the DFA information system under 779-P (an incumbent 779-P register entity — the 779-P licence is individual and not transferable); funding flows through the VEB.RF Project Finance Factory (Government Decree No. 158) and the Federal Treasury under the Budget Code. Additional Bank of Russia issuance is not envisaged in Stage 1; the CBR is the supervisory regulator under Article 4 of Federal Law 86-FZ. **Stage 2 (2029+ horizon):** expansion of the mandate to a targeted secured-emission model against a pool of pledged DFA — a defensible horizon, implemented after a positive Stage 1 track record of ≥ 12 months and adoption of the package of four federal laws. No analogues with such a two-stage architecture have been identified in public sources in the Russian Federation or in international markets.
 
 ### 2.2. Market analysis
 - Aggregate Russian real-estate value — approximately **RUB 507 tn**.
@@ -57,15 +57,15 @@ The GTM sequencing of the project is built on wedge logic: the CBR is the final 
 
 | Stage | Person / Authority | Role in the funnel | Anchor |
 |---|---|---|---|
-| T+30 | Ministry of Economic Development (M. Reshetnikov) | Named sponsor; inclusion in national projects | Pitch_deck slide "Government Champions" |
+| T+30 | Ministry of Economic Development (the relevant official) | Named sponsor; inclusion in national projects | Pitch_deck slide "Government Champions" |
 | T+30 | Office of the Government of the Russian Federation | Architectural framework | Concept § 1-bis |
-| T+30 | Atomyze JSC | Technology partner under 779-P | LoI (Pre-meeting_briefs/01) |
-| T+90 | Ministry of Finance (I. Kolychev) | Off-budget channel, OFZ pressure | Financial Model v3 |
-| T+90 | Ministry of Finance (V. Sazanov) | DFA tax position | Legal Framework § 5 |
+| T+30 | Incumbent CFA IS operator | technology provider under 779-P | framework draft (unsigned) |
+| T+90 | Ministry of Finance (the relevant official) | Off-budget channel, OFZ pressure | Financial Model v3 |
+| T+90 | Ministry of Finance (the relevant official) | DFA tax position | Legal Framework § 5 |
 | T+90 | VEB.RF Project Finance Factory | Consultative letter under Decree 158 | Pre-meeting_briefs/02 |
-| T+90 | Gazprombank / PSB | Settlement-bank MoU | Pre-meeting_briefs/04 |
-| T+180 | Tatarstan (R. Minnikhanov) | Regional MoU (50–100 objects) | Pre-meeting_briefs/03 |
-| T+180 | State Duma (A. Aksakov) | Consultation on 259-FZ | Briefing for the CBR |
+| T+90 | a partner bank | Settlement-bank MoU | Pre-meeting_briefs/04 |
+| T+180 | Tatarstan (the relevant official) | Regional MoU (50–100 objects) | Pre-meeting_briefs/03 |
+| T+180 | State Duma (the relevant official) | Consultation on 259-FZ | Briefing for the CBR |
 | T+180+ | Bank of Russia | Register of IS DFA operators under 779-P | Legal Framework § 8.1 |
 
 **Risk signal:** refusal of at least one champion at the minister / deputy-minister level → rollback to Stage 2 / horizon 2029+, loss of ≈ 24 months on the package of four federal laws.

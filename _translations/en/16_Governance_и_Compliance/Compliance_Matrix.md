@@ -82,7 +82,7 @@ A matrix of the CPFSR project's compliance with international regulatory and ind
 | Standard | Applicability | Status |
 |---|---|---|
 | **Basel III** (BCBS) | If CPFSR becomes a bank (Stage 2 horizon) | Not applicable in Stage 1 |
-| **CBR Regulation 779-P** | Foundational (IS DFA operator) | Foundation; via Atomyze JSC in Stage 1 |
+| **CBR Regulation 779-P** | Foundational (IS DFA operator) | Foundation; via an incumbent 779-P operator in Stage 1 |
 | **CBR Directive 4336-U** | Foundational (DFA accounting) | Foundation |
 | **Civil Code Articles 860.7–860.10** (escrow) | Applies | Foundation |
 | **161-FZ "On the National Payment System"** | If payment rail | Roadmap stage |

@@ -75,7 +75,7 @@
 
 - Партнёр-подписант должен быть сертифицирован в одной из следующих систем: ACA (ICAEW), CPA, CFA Charter, ASA (American Society of Appraisers).
 - Команда — минимум 4 человека: Engagement Partner + Senior Manager + 2 Analysts; CV — обязательны.
-- Conflict of interest disclosure (обязательно): проверить engagement с любыми связанными с проектом сторонами (АО «Атомайз», ВЭБ.РФ, Газпромбанк, ПСБ, Атомайз-аффилиаты) за последние 36 мес.
+- Conflict of interest disclosure (обязательно): проверить engagement с любыми связанными с проектом сторонами (АО «Атомайз», ВЭБ.РФ, банк-партнёр, резервный банк-партнёр, аффилированные структуры) за последние 36 мес.
 - Insurance: Professional Indemnity Insurance coverage ≥ $5M.
 
 ## 5. Бюджет и сроки

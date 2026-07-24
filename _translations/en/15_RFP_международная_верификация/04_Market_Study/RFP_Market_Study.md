@@ -38,7 +38,7 @@ Obtaining an independent market study from a tier-1 strategy firm, in order to:
 
 ### 2.2. Competitive landscape
 
-- **Atomyze JSC** — incumbent 779-P operator, technology partner in the wedge construction (LoI required per Pre-meeting_briefs/01).
+- **Incumbent CFA IS operator** — incumbent 779-P operator, technology partner in the wedge construction (LoI required per Pre-meeting_briefs/01).
 - **Sber CFA** — major player with a banking balance sheet.
 - **Alfa-Bank CFA** — focus on corporate DFA.
 - **SPB Exchange CFA** — focus on retail investors.
