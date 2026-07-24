@@ -11,6 +11,10 @@ _не_публиковать/
 _рабочее/
 _design-system/_logo_backup_2026-07-16/
 
+# MVP — отдельное приложение (backend+frontend), не часть статик-сайта dpfsd.ru.
+# Развёртывается своим сервером; в публичный репозиторий сайта не идёт.
+18_MVP/
+
 # Скрипты обёрток переводов (служебные)
 _translations/_batch7_wrap.ps1
 _translations/_batch8_wrap.ps1
