@@ -165,8 +165,8 @@
       },
       valuation: {
         eyebrow: "Международная оценка",
-        title: "Reasoned Value $60–115 млн · Base $80 млн pre-money",
-        lead: "Триангуляция четырёх методов оценки по международным стандартам IVS 2022, IFRS 13, ASA BV Standards. Base $80 млн pre-money; post-money $95 млн при раунде $25 млн (доля 15,8%). Refactor 24.05.2026 после сводного аудита.",
+        title: "Расчётная стоимость входа $248 млн · диапазон по сценариям $164–301 млн",
+        lead: "Свёртка четырёх подходов по стандартам IVS 2025. Расчётная стоимость входа $248 млн; post-money $273 млн при стартовом раунде $25 млн (1,8 млрд ₽), доля инвестора 9,21%. Разброс между подходами двенадцатикратный: подходы ранней стадии дают $20–35 млн. Расчёт от 07.09.2026.",
         dcf: "DCF (доходный)",
         multi: "Comparable Multiples",
         berkus: "Berkus / Risk-Adjusted",
@@ -366,8 +366,8 @@
       },
       valuation: {
         eyebrow: "International valuation",
-        title: "Reasoned Value $60–115 mn · Base $80 mn pre-money",
-        lead: "Triangulation of four valuation methods under IVS 2022, IFRS 13, ASA BV Standards. Base $80 mn pre-money; post-money $95 mn at $15 mn round (15.8% stake). Refactor 24.05.2026 after the consolidated audit.",
+        title: "Calculated entry value USD 248M · scenario range USD 164–301M",
+        lead: "Four valuation approaches weighted under IVS 2025. Calculated entry value USD 248M; post-money USD 273M at a starter round of USD 25M (RUB 1.8 bn), investor stake 9.21%. The spread between approaches is twelvefold: early-stage approaches give USD 20–35M. Calculation of 07.09.2026.",
         dcf: "DCF (income)",
         multi: "Comparable Multiples",
         berkus: "Berkus / Risk-Adjusted",
@@ -554,8 +554,8 @@
       },
       valuation: {
         eyebrow: "Évaluation internationale",
-        title: "Valeur raisonnée 60–115 M $ · Base 80 M $ pre-money",
-        lead: "Triangulation de quatre méthodes selon IVS 2022, IFRS 13, ASA BV Standards. Base 80 M $ pre-money ; post-money 95 M $ pour une levée de 15 M $ (part 15,8 %). Refactorisation 24.05.2026 après l'audit consolidé.",
+        title: "Valeur d'entrée calculée 248 M$ · fourchette par scénarios 164–301 M$",
+        lead: "Pondération de quatre approches selon IVS 2025. Valeur d'entrée calculée 248 M$ ; post-money 273 M$ pour un tour de démarrage de 25 M$ (1,8 Md ₽), part investisseur 9,21 %. L'écart entre approches est de douze fois : les approches de stade précoce donnent 20–35 M$. Calcul du 07.09.2026.",
         dcf: "DCF (revenu)", multi: "Multiples comparables",
         berkus: "Berkus / Ajusté", asset: "Actif / Remplacement", reasoned: "Raisonnée (pondérée)"
       },
@@ -736,8 +736,8 @@
       },
       valuation: {
         eyebrow: "التقييم الدولي",
-        title: "القيمة المعللة 60–115 مليون دولار · القاعدة 80 مليون دولار قبل المال",
-        lead: "تثليث أربع طرق تقييم وفق IVS 2022, IFRS 13, ASA BV Standards. القاعدة 80 مليون دولار قبل المال؛ بعد المال 95 مليون دولار في جولة 15 مليون دولار (حصة 15.8٪). إعادة هيكلة 24.05.2026 بعد التدقيق الموحد.",
+        title: "قيمة الدخول المحسوبة 248 مليون $ · النطاق حسب السيناريوهات 164–301 مليون $",
+        lead: "ترجيح أربعة مداخل للتقييم وفق IVS 2025. قيمة الدخول المحسوبة 248 مليون $؛ وبعد التمويل 273 مليون $ عند جولة أولى قدرها 25 مليون $ (1.8 مليار ₽)، وحصة المستثمر 9.21%. والفارق بين المداخل اثنا عشر ضعفًا: مداخل المرحلة المبكرة تعطي 20–35 مليون $. الحساب بتاريخ 07.09.2026.",
         dcf: "DCF (الدخل)", multi: "المضاعفات المقارنة",
         berkus: "بيركوس / المعدلة بالمخاطر", asset: "الأصول / الاستبدال",
         reasoned: "معللة (مرجحة)"

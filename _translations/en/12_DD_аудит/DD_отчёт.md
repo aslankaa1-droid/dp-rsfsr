@@ -1,6 +1,6 @@
 # Due Diligence Report
 
-> **Note.** This translation follows the Russian original. The financial section of the original was recalculated on 07.09.2026 (model v5): the figures and wording of this translation are still being brought in line. Until that is done the Russian version prevails in all cases.
+> **Note.** This translation follows the Russian original. The financial part of the original was recalculated on 07.09.2026 (model v5); the figures of this translation have been brought into line with that calculation. In case of any discrepancy in wording, the Russian version prevails.
 ## Digital Platform CPFSR
 
 **Standard of work:** Big Four-grade Due Diligence methodology (Deloitte / EY / KPMG / PwC). The document is prepared in the format of an internal DD report for the board of directors / investor.
@@ -156,7 +156,7 @@ A 10-year model, with BASE / CONSERVATIVE / OPTIMISTIC scenarios.
 - peak financing need = **RUB 1.70 bn** (end of 2028); the round of RUB 1.8 bn covers it with a cushion of RUB 99 mn;
 - Year-5 revenue (2031) = RUB 39.0 bn;
 - Year-10 revenue (2036) = RUB 142.6 bn;
-- TV EBITDA margin ≈ 74.8% (reflects the infrastructure nature, taking into account OpEx add-ons for compliance, cyber-security, legal support and a pool of appraisers/insurers).
+- Terminal-year EBITDA margin ≈ 75.1% (reflects the infrastructure nature, taking into account OpEx add-ons for compliance, cyber-security, legal support and a pool of appraisers/insurers).
 
 **Model assumptions:**
 - Share of the RUB 25 tn market grows from 0.4% in Year 2 to 18% in Year 10.

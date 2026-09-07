@@ -1,6 +1,6 @@
 # Rapport de Due Diligence
 
-> **Note.** Cette traduction suit l'original russe. La partie financière de l'original a été recalculée le 07.09.2026 (modèle v5) : les chiffres et la rédaction de cette traduction sont encore en cours de mise à jour. Jusque-là, la version russe fait foi en toutes circonstances.
+> **Note.** Cette traduction suit l'original russe. La partie financière de l'original a été recalculée le 07.09.2026 (modèle v5) ; les chiffres de cette traduction ont été alignés sur ce calcul. En cas de divergence de rédaction, la version russe fait foi.
 ## Plateforme numérique CPFSR
 
 **Standard de travail :** méthodologie Due Diligence de niveau Big Four (Deloitte / EY / KPMG / PwC). Le document est préparé au format d'un rapport DD interne pour le conseil d'administration / l'investisseur.
@@ -156,7 +156,7 @@ Modèle sur 10 ans, en scénarios BASE / CONSERVATEUR / OPTIMISTE.
 - pic de besoin de financement = **1,70 Md ₽** (fin 2028) ; le tour de 1,8 Md ₽ le couvre avec un coussin de 99 M ₽ ;
 - revenu année 5 (2031) = 39,0 Md ₽ ;
 - revenu année 10 (2036) = 142,6 Md ₽ ;
-- Marge EBITDA TV ≈ 74,8 % (reflète la nature infrastructure compte tenu des ajouts OpEx pour compliance, cybersécurité, juridique et pool évaluateurs/assureurs).
+- Marge EBITDA de l'année terminale ≈ 75,1 % (reflète la nature infrastructure compte tenu des ajouts OpEx pour compliance, cybersécurité, juridique et pool évaluateurs/assureurs).
 
 **Hypothèses du modèle :**
 - La part des 25 000 Md ₽ croît de 0,4 % en année 2 à 18 % en année 10.

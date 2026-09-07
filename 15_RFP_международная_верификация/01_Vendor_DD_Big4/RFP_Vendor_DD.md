@@ -10,7 +10,7 @@
 
 ## 1. Цель Engagement
 
-Получение независимого vendor due diligence заключения tier-1 уровня (Big-4) по проекту ЦП РСФСР с целью обеспечения инвестпривлекательности перед стратегическим Seed-раундом $15M (Pre-money $100M, Post-money $273M, доля инвестора 9,21%) и подготовки к Series A.
+Получение независимого vendor due diligence заключения tier-1 уровня (Big-4) по проекту ЦП РСФСР с целью обеспечения инвестпривлекательности перед стартовым раундом $25 млн / ₽1,8 млрд (pre-money $248 млн, post-money $273 млн, доля инвестора 9,21%) и подготовки к Series A.
 
 Заключение должно отвечать стандарту инвестиционных меморандумов tier-1 PE/VC сделок и быть приемлемым для следующих категорий участников:
 - Институциональные инвесторы РФ (НПФ, страховые, частные банки)
@@ -22,7 +22,7 @@
 
 ### 2.1. Financial Due Diligence
 
-- **Quality of Earnings (QoE):** анализ финансовой модели на горизонт 2025–2034 + multi-stage TV до 2045+. Identification of normalizations, one-offs, working capital adjustments.
+- **Quality of Earnings (QoE):** анализ финансовой модели на горизонт 2027–2036 + терминальная стоимость по модели Гордона. Identification of normalizations, one-offs, working capital adjustments.
 - **NPV / IRR / Payback verification:** независимый перерасчёт всех ключевых показателей (NPV полная 63,0 млрд ₽; IRR project-level 62%; Payback 2,73 года; EM 7–12×) на основе исходной финмодели в `03_Финансовая_модель/`.
 - **WACC validation:** проверка build-up структуры (RF 14,73% + ERP×β 9,35% + Stage premium 2,5% + Liquidity premium 3,0% = 29,5%) против Damodaran май 2026, КС ЦБ, биржевых данных ОФЗ.
 - **Sensitivity & scenario analysis:** независимый Monte Carlo (≥ 10 000 итераций), tornado-диаграмма по ≥ 8 драйверам, stress-testing cash-runway.
@@ -52,10 +52,10 @@
 ### 2.4. Fairness Opinion
 
 Независимое заключение «Fairness Opinion» в стандарте AICPA Statement on Standards for Valuation Services (SSVS-1) или IVSC International Valuation Standards 2026. Заключение должно явно адресовать:
-- Reasonableness of Pre-money $100M Base / Reasoned range $60–115M;
+- Обоснованность расчётной стоимости входа $248 млн при диапазоне по сценариям $164–301 млн и разбросе между подходами в двенадцать раз;
 - Cost of capital appropriateness (30% WACC RUB);
 - Going concern assumption по cash-runway (peak negative cumulative -2,1 млрд ₽);
-- Methodology choices (multi-stage TV vs Gordon, NPV vs comparable multiples, WACC build-up vs CAPM).
+- Methodology choices (Gordon terminal value, DCF vs comparable multiples, WACC build-up vs CAPM).
 
 ## 3. Deliverables
 

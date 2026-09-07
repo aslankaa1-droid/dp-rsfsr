@@ -1,6 +1,6 @@
 # RFP — Vendor Due Diligence (Big-4)
 
-> **Note.** Cette traduction suit l'original russe. La partie financière de l'original a été recalculée le 07.09.2026 (modèle v5) : les chiffres et la rédaction de cette traduction sont encore en cours de mise à jour. Jusque-là, la version russe fait foi en toutes circonstances.
+> **Note.** Cette traduction suit l'original russe. La partie financière de l'original a été recalculée le 07.09.2026 (modèle v5) ; les chiffres de cette traduction ont été alignés sur ce calcul. En cas de divergence de rédaction, la version russe fait foi.
 
 **Projet :** Plateforme numérique CPFSR — opérateur DFA adossé à des garanties immobilières avec émissions destinées aux projets nationaux
 **Client :** Abdoul-Khakim Akhmadovitch Kaguirov (Center Group Company) — titulaire unique du concept (certificat de dépôt n° 4011265 du 19.12.2024)
