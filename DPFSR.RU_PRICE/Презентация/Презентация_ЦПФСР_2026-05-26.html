@@ -751,6 +751,24 @@ img.fit {
   .card--gold::after { display: none; }
   .card::before { display: none; }
 }
+
+@media (max-width: 900px) {
+  /* Узкий экран: слайды в одну колонку, подписи читаемые */
+  .slide, .slide__inner { padding-inline: 16px; }
+  .slide__brand, .slide__kicker, .card__label, .slide__footer, .chip,
+  .hint, th, .tbl th, table th
+    { font-size: 12px !important; }
+  .grid, .grid-2, .grid-3, .grid-4, .cols, .two, .three {
+    grid-template-columns: minmax(0, 1fr) !important; }
+  .grid > *, .cols > * { min-width: 0; }
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 12px; }
+  img, svg { max-width: 100%; height: auto; }
+}
+@media (max-width: 520px) {
+  .slide, .slide__inner { padding-inline: 12px; }
+  .slide h1 { font-size: clamp(1.6rem, 1.1rem + 3vw, 2.4rem); }
+  .slide h2 { font-size: clamp(1.25rem, 1rem + 2vw, 1.9rem); }
+}
 </style>
 </head>
 <body>
