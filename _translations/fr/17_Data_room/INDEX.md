@@ -132,11 +132,11 @@
 
 | ID | Document | Source | Niveau | État |
 |---|---|---|---|---|
-| 10.01 | Police d'assurance D&O | Feuille de route | full | T+3 mois |
-| 10.02 | Assurance responsabilité civile professionnelle | Feuille de route | full | T+6 mois |
-| 10.03 | Cyber-assurance | Feuille de route | full | T+6 mois |
-| 10.04 | Assurance E&O | Feuille de route | full | T+6 mois |
-| 10.05 | Assurance perte d'exploitation | Feuille de route | full | T+12 mois |
+| 10,01 | Police d'assurance D&O | Feuille de route | full | T+3 mois |
+| 10,02 | Assurance responsabilité civile professionnelle | Feuille de route | full | T+6 mois |
+| 10,03 | Cyber-assurance | Feuille de route | full | T+6 mois |
+| 10,04 | Assurance E&O | Feuille de route | full | T+6 mois |
+| 10,05 | Assurance perte d'exploitation | Feuille de route | full | T+12 mois |
 
 ---
 

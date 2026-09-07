@@ -109,9 +109,9 @@ Tous les livrables — en russe (principal) + anglais (executive summary + key f
 
 | Critère | Poids |
 |---|---:|
-| Capacité technique et track-record sur deals comparables (≥ 3 VDD DFA sur 24 mois) | 50 % |
-| Partner et équipe (≥ 10 ans d'expérience, certifications CFA/ACA/CPA) | 30 % |
-| Prix et délais | 20 % |
+| Capacité technique et track-record sur deals comparables (≥ 3 VDD DFA sur 24 mois) | 50 % |
+| Partner et équipe (≥ 10 ans d'expérience, certifications CFA/ACA/CPA) | 30 % |
+| Prix et délais | 20 % |
 
 ## 9. Dépôt des offres
 
