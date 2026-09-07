@@ -10,7 +10,7 @@ Horizon II (≈ 6 hours of work across 30+ fixes) produced a **weighted score up
 
 Structural qualitative changes:
 
-1. **Financial KPIs of the client-side perimeter are synchronised** with SoT v3: the F-H1 sed wave closed 12 of 13 key signatures (NPV 63.4 / IRR 62% / Payback 2.8 / WACC 29.5 / EM 12× / TV EBITDA 74.8% / RF 14.73 / ERP 8.13, post-money USD 115, Reasoned USD 70–140M). The Business Plan §3, §9.1 KPI block ("NPV 170.1 → 63.4") is closed; the JS baseline `kpiNpv/kpiPayback` in the Major Presentation is synchronised; the booklet cover-stat and the root index.html entry-stat are migrated to SoT v3.
+1. **Financial KPIs of the client-side perimeter are synchronised** with SoT v3: the F-H1 sed wave closed 12 of 13 key signatures (NPV 63.4 / IRR 62% / Payback 2.8 / WACC 29.5% / EM 12× / TV EBITDA 74.8% / RF 14.73% / ERP 8.13%, post-money USD 115%, Reasoned USD 70–140M). The Business Plan §3, §9.1 KPI block ("NPV 170.1 → 63.4") is closed; the JS baseline `kpiNpv/kpiPayback` in the Major Presentation is synchronised; the booklet cover-stat and the root index.html entry-stat are migrated to SoT v3.
 2. **The legal base is fully two-stage**: Legal Framework §§ 4.1/4.2 + § 8.1–8.4 in MD+HTML; sub-para 12.2 of the Tax Code in Legal Framework.html and DD_report.md/html; the consumer-law Article 16 EULA cap removed; the privacy policy with the Roskomnadzor disclaimer; the escrow agreement — CC Articles 860.7–860.10 + 395-1 without the non-existent enumeration.
 3. **Business Plan §§ 1, 2.2, 3.1, 3.2, 3.4, 4.4, 4.5 rewritten under Stage 1 / Stage 2** in MD and HTML. The internal seam "Business Plan on Stage 2" (Horizon I RED) is eliminated.
 4. **A named Champion-map** (the relevant official) added to Concept § 1-ter. **4 LoI / MoU drafts** in `02_Юридический_фундамент/Pre-meeting_briefs/` (Atomyze / VEB.RF PFF / Tatarstan / partner bank).
@@ -24,7 +24,7 @@ The principal residual class of defects is **"MD fixed, HTML lagging"** (recurri
 
 - **Financial_model.html not rebuilt** from the updated MD: :1316 NPV ex-TV = 86,380; :1321 TV Gordon = 611,800; :1331 IRR ex-TV ~226%; :1336 Payback 2.37; :1402-1407 Base = NPV 170 / 2.4; :1456+:1507 sensitivity Base = 170.
 - **International_valuation.html lags** the .md by ~679 lines: §2.5 EV(DCF) ≈ RUB 183 bn / pre-money USD 540M; §7.1 baseline WACC 21.5%.
-- **Financial_model_assumptions.html §7.1 body** — heading "WACC 29.5", body "key rate 18%+4=22%"; "build-up 26%".
+- **Financial_model_assumptions.html §7.1 body** — heading "WACC 29.5%", body "key rate 18%+4=22%"; "build-up 26%".
 - **CBR_briefing.html** — § 10 not split into 10.1/10.2; preserves the pre-refactor "The Bank of Russia manages all escrow accounts of the targeted emission" without a Stage 2 marker.
 - **Concept.html** (311 lines) — without 1-bis / 1-ter / 1-quater (the new sections exist only in .md).
 - **Business_plan.html new sections** § 11.3, § 11.4, new risk-card rows § 10 (D-PR-6/7) — missing from the HTML.

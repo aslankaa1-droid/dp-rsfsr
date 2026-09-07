@@ -12,7 +12,7 @@
 
 ## 1. Objectif de l'engagement
 
-Obtention d'un avis indépendant de Vendor Due Diligence tier-1 (Big-4) sur le projet CPFSR afin de sécuriser l'attrait pour un tour Seed stratégique de 15 M USD (Pre-money 80 M USD, Post-money 95 M USD, participation investisseur 13,04) et de préparer la Série A.
+Obtention d'un avis indépendant de Vendor Due Diligence tier-1 (Big-4) sur le projet CPFSR afin de sécuriser l'attrait pour un tour Seed stratégique de 25 M USD (pre-money 248 M USD, post-money 273 M USD, participation investisseur 9,21 %) et de préparer la Série A.
 
 L'avis doit répondre au standard des mémorandums d'investissement des opérations PE/VC tier-1 et être acceptable pour les catégories suivantes :
 - Investisseurs institutionnels de la Fédération de Russie (fonds de pension, assureurs, banques privées)
@@ -24,10 +24,10 @@ L'avis doit répondre au standard des mémorandums d'investissement des opérati
 
 ### 2.1. Financial Due Diligence
 
-- **Quality of Earnings (QoE) :** analyse du modèle financier sur l'horizon 2025–2034 + valeur terminale multi-phases jusqu'à 2045+. Identification des normalisations, éléments non récurrents, ajustements du besoin en fonds de roulement.
-- **Vérification VAN / TRI / Payback :** recalcul indépendant de tous les indicateurs clés (VAN complète 63,0 Md ₽ ; TRI project-level 62 % ; Payback 2,73 ans ; EM 12×) à partir du modèle source dans `03_Финансовая_модель/`.
-- **Validation du CMPC :** vérification du build-up (RF 14,73 + ERP×β 10,35 % + Stage premium 1,5 % + Liquidity premium 2,5 % = 30 %) par rapport à Damodaran mai 2026, taux directeur BCR, données de marché OFZ.
-- **Analyse de sensibilité et de scénarios :** Monte-Carlo indépendant (≥ 10 000 itérations), diagramme tornado couvrant ≥ 8 drivers, stress-test de la trésorerie.
+- **Quality of Earnings (QoE) :** analyse du modèle financier sur l’horizon 2027–2036 + valeur terminale de Gordon sur un flux normalisé. Identification des normalisations, éléments non récurrents, ajustements du besoin en fonds de roulement.
+- **Vérification VAN / TRI / Payback :** recalcul indépendant de tous les indicateurs clés (valeur d’entreprise 63,0 Md ₽ ; récupération 2,73 ans en simple et 3,05 ans en actualisé ; multiple pour l’investisseur 18,4×) à partir du modèle source dans `03_Финансовая_модель/`.
+- **Validation du CMPC :** vérification du build-up (RF 14,73% + ERP×β 10,35 % + Stage premium 1,5 % + Liquidity premium 2,5 % = 30 %) par rapport à Damodaran mai 2026, taux directeur BCR, données de marché OFZ.
+- **Analyse de sensibilité et de scénarios :** une simulation indépendante (≥ 10 000 itérations), diagramme tornado couvrant ≥ 8 drivers, stress-test de la trésorerie.
 - **Transactions comparables :** triangulation de la valorisation via Comparable Multiples (EV/Revenue, EV/EBITDA, EV/AUM) à partir de PitchBook / Crunchbase / Refinitiv sur 10+ deals comparables dans les segments DFA / opérateurs fintech / places de marché financières.
 - **Opinion d'audit :** sur la fiabilité des données sources et de la méthodologie, non sur la juste valeur absolue.
 
@@ -54,10 +54,10 @@ L'avis doit répondre au standard des mémorandums d'investissement des opérati
 ### 2.4. Fairness Opinion
 
 Opinion indépendante de Fairness Opinion selon l'AICPA Statement on Standards for Valuation Services (SSVS-1) ou IVSC International Valuation Standards 2026. Doit traiter explicitement :
-- la raisonnabilité du Pre-money 80 M USD Base / fourchette raisonnée 60–115 M USD ;
+- la raisonnabilité du pre-money calculé de 248 M USD / fourchette selon les scénarios 164–301 M USD ;
 - l'adéquation du coût du capital (CMPC 29,5 % RUB) ;
 - l'hypothèse de continuité d'exploitation sur la trésorerie (creux négatif cumulé −2,1 Md ₽) ;
-- les choix méthodologiques (TV multi-phases vs Gordon, VAN vs multiples comparables, build-up du CMPC vs CAPM).
+- les choix méthodologiques (valeur terminale de Gordon sur un flux normalisé, VAN vs multiples comparables, build-up du CMPC vs CAPM).
 
 ## 3. Livrables
 

@@ -26,12 +26,12 @@
 
 | ID | Document | Source | Tier | Readiness |
 |---|---|---|---|---|
-| 02.01 | Financial model (10Y + multi-stage TV) | `03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.md` | restricted | Ready |
+| 02.01 | Financial model (10 years + Gordon terminal value) | `03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.md` | restricted | Ready |
 | 02.02 | Assumptions and calculations | `03_Финансовая_модель/Финмодель_допущения_и_расчёты.md` | restricted | Ready |
 | 02.03 | Unified metrics (Source of Truth v3) | `_Мастер/Единые_показатели_v2.md` | full | Ready |
 | 02.04 | Interactive financial-model calculator (HTML) | `_shared/finmodel.js` | restricted | Ready |
 | 02.05 | International valuation | `11_Оценка/Международная_оценка_проекта.md` | restricted | Ready |
-| 02.06 | Scenarios and Monte Carlo | `03_Финансовая_модель/` (Sensitivity section) | restricted | Ready |
+| 02.06 | Scenarios and simulation | `03_Финансовая_модель/` (Sensitivity section) | restricted | Ready |
 | 02.07 | Cash-runway stress test | `03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.md` § Cash-runway | restricted | Ready |
 | 02.08 | Use of Funds — Stage 1 | `07_Презентации/Для_партнёров_инвесторов/Pitch_deck.html` slide 10 | full | Ready |
 | 02.09 | Bridge financing schedule | New | restricted | Roadmap T+3 months |

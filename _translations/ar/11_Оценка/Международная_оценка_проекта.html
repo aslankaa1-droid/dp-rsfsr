@@ -257,954 +257,112 @@
       <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
     </header>
     <article class="doc-content">
-<blockquote class="translation-note">ملاحظة. هذه الترجمة تتبع الأصل الروسي. أُعيد احتساب القسم المالي في الأصل بتاريخ 07.09.2026 (النموذج v5): الأرقام والصياغة في هذه الترجمة قيد التحديث. وحتى اكتماله يُعتد بالنسخة الروسية في جميع الأحوال.</blockquote>
-
 <h1 id="التقييم-الدولي-لمشروع-cpfsr">التقييم الدولي لمشروع CPFSR</h1>
-<p><strong>موضوع التقييم:</strong> المنصة الرقمية «الخدمة الروسية لتمويل
-التنمية الاجتماعية» — نظام معلومات لإصدار DFA مستهدفة (مشغّل وفق 779-P)
-مع قناة أفقية للتمويل المستهدف عبر البنية التحتية المؤسسية لـ VEB.RF /
-الخزانة الفيدرالية، وبنك روسيا في دور الجهة التنظيمية الإشرافية. يتضمّن
-تطبيقًا للجوّال مكتملًا، ووثائق تصميم GOST 19، وbuilds للمنصات Android /
-iOS / Windows، وحزمة نشر RuStore. <strong>صاحب حقوق المعرفة
-الفنية:</strong> عبد الحكيم أحمدوفيتش كاغيروف. شهادة الإيداع رقم 4011265
-بتاريخ 19.12.2024 — تثبيت تاريخ الأسبقية وتجزئة العمل؛ نظام الحماية:
-المعرفة الفنية (المادة 1465 من القانون المدني) + البرنامج (المادة 1262
-من القانون المدني، تسجيل لدى Rospatent قيد الإنجاز). <strong>تاريخ
-التقييم:</strong> 24.05.2026 (لأغراض التفاوض — pre-money، في مرحلة «MVP
-+ الجانب العميل مكتمل»؛ refactor كامل بعد التدقيق الموحَّد في 24.05.2026).
-<strong>معايير التقييم:</strong> IVS 2022 (International Valuation
-Standards)، ASA Business Valuation Standards، IFRS 13 (القياس بالقيمة
-العادلة)، 135-FZ (للتطبيق في الاتحاد الروسي). <strong>النهج:</strong>
-تثليث أربع طرق مستقلّة مع تجميع موزون وخصم وحيد (one-stage). <strong>مصدر
-معطيات السوق:</strong> <code>_Мастер/Единые_показатели_v2.md</code> (سعر
-بنك روسيا 14.5، FX 71.55 ₽/$، ERP RF 8.13) — Source of Truth وحيد لجميع
-وثائق المشروع.</p>
-<hr />
-<h2 id="ملخص-التقييم">1. ملخّص التقييم</h2>
-<table>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 26%" />
-<col style="width: 26%" />
-<col style="width: 26%" />
-</colgroup>
-<thead>
-<tr>
-<th>الطريقة</th>
-<th style="text-align: right;">Pre-money، USD</th>
-<th style="text-align: right;">Pre-money، RUB</th>
-<th style="text-align: right;">الوزن</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>DCF (نهج الدخل، TV multi-stage)</strong></td>
-<td style="text-align: right;">240 مليون $</td>
-<td style="text-align: right;">21.4 مليار ₽</td>
-<td style="text-align: right;">35 %</td>
-</tr>
-<tr>
-<td><strong>Comparable Multiples</strong></td>
-<td style="text-align: right;">380 مليون $</td>
-<td style="text-align: right;">33.8 مليار ₽</td>
-<td style="text-align: right;">30 %</td>
-</tr>
-<tr>
-<td><strong>Berkus / Risk-Adjusted</strong></td>
-<td style="text-align: right;">35 مليون $</td>
-<td style="text-align: right;">3.1 مليار ₽</td>
-<td style="text-align: right;">25 %</td>
-</tr>
-<tr>
-<td><strong>Asset / Replacement-Cost</strong></td>
-<td style="text-align: right;">18 مليون $</td>
-<td style="text-align: right;">1.6 مليار ₽</td>
-<td style="text-align: right;">10 %</td>
-</tr>
-<tr>
-<td><strong>Reasoned Value (خصم وحيد)</strong></td>
-<td style="text-align: right;"><strong>60–115 مليون $</strong></td>
-<td style="text-align: right;"><strong>5.01–10.02 مليار ₽</strong></td>
-<td style="text-align: right;">—</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>التغييرات مقارنةً بالنسخة السابقة (بعد التدقيق الموحَّد في
-24.05.2026):</strong> - أُزيل double-discount 0.2295 — يُطبَّق خصم stage
-وحيد بنسبة 60 % فوق EV الموزون. - خُفِّض DCF من 540 مليون $ إلى 240 مليون $
-بعد: (أ) رفع WACC من 21.5 % إلى 30 % (Damodaran ERP RF محدَّث + قاعدة
-RUB-denominated خالصة، دون double-counting لـ CRP)؛ (ب) استبدال Gordon
-TV بـ multi-stage TV؛ (ج) ضبط هامش EBITDA إلى 74.8 % في الطور الناضج
-بدلًا من 96.9 %. - خُفِّض Multiples من 460 مليون $ إلى 380 مليون $ — تمت
-مراجعة comparables في ضوء تصحيح مضاعفات سوق DFA 2026. - رُفع Berkus من 27
-مليون $ إلى 35 مليون $ — يحصل عامل «Product rollout» على نقاط إضافية
-بفضل حزمة builds كاملة ومواد النشر. - رُفع Asset من 14 مليون $ إلى 18
-مليون $ — أُضيفت وثائق التصميم وbuilds إلى قيمة الاستبدال. - يبقى نطاق
-Reasoned Value 60–115 مليون $.</p>
-</blockquote>
-<p><strong>الموقف التفاوضي المستهدف (سيناريو Base بعد
-refactor):</strong> - Pre-money — <strong>80 مليون $ (7.12 مليار
-₽)</strong>. - Post-money — <strong>95 مليون $ (8.46 مليار ₽)</strong>
-عند جولة أولى <strong>15 مليون $ (1.335 مليار ₽)</strong>. - حصة
-المستثمر — <strong>13.04</strong>. - FX مُثبَّت في 24.05.2026:
-<strong>71.55 ₽/$</strong>.</p>
-<hr />
-<h2 id="منهجية-dcf-نهج-الدخل">2. منهجية DCF (نهج الدخل)</h2>
-<h3 id="مصدر-التدفقات-النقدية">2.1. مصدر التدفقات النقدية</h3>
-<p>التدفقات النقدية من تشغيل المنصة على أفق 2025–2034 من النموذج المالي
-بعد refactor منحنى OpEx (<code>03_Финансовая_модель</code>).</p>
-<table>
-<colgroup>
-<col style="width: 11%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-</colgroup>
-<thead>
-<tr>
-<th>السنة</th>
-<th style="text-align: right;">الإيراد، مليار ₽</th>
-<th style="text-align: right;">OpEx، مليار ₽</th>
-<th style="text-align: right;">EBITDA، مليار ₽</th>
-<th style="text-align: right;">هامش EBITDA</th>
-<th style="text-align: right;">CapEx، مليار ₽</th>
-<th style="text-align: right;">FCF، مليار ₽</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2025</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">0.72</td>
-<td style="text-align: right;">-0.72</td>
-<td style="text-align: right;">—</td>
-<td style="text-align: right;">0.30</td>
-<td style="text-align: right;">-1.02</td>
-</tr>
-<tr>
-<td>2026</td>
-<td style="text-align: right;">0.18</td>
-<td style="text-align: right;">0.82</td>
-<td style="text-align: right;">-0.64</td>
-<td style="text-align: right;">—</td>
-<td style="text-align: right;">0.42</td>
-<td style="text-align: right;">-1.06</td>
-</tr>
-<tr>
-<td>2027</td>
-<td style="text-align: right;">2.80</td>
-<td style="text-align: right;">1.46</td>
-<td style="text-align: right;">1.34</td>
-<td style="text-align: right;">47.9 %</td>
-<td style="text-align: right;">0.40</td>
-<td style="text-align: right;">0.72</td>
-</tr>
-<tr>
-<td>2028</td>
-<td style="text-align: right;">11.10</td>
-<td style="text-align: right;">3.80</td>
-<td style="text-align: right;">7.30</td>
-<td style="text-align: right;">65.8 %</td>
-<td style="text-align: right;">0.55</td>
-<td style="text-align: right;">5.68</td>
-</tr>
-<tr>
-<td>2029</td>
-<td style="text-align: right;">37.50</td>
-<td style="text-align: right;">11.75</td>
-<td style="text-align: right;">25.75</td>
-<td style="text-align: right;">68.7 %</td>
-<td style="text-align: right;">1.80</td>
-<td style="text-align: right;">19.28</td>
-</tr>
-<tr>
-<td>2030</td>
-<td style="text-align: right;">65.00</td>
-<td style="text-align: right;">19.30</td>
-<td style="text-align: right;">45.70</td>
-<td style="text-align: right;">70.3 %</td>
-<td style="text-align: right;">2.40</td>
-<td style="text-align: right;">35.02</td>
-</tr>
-<tr>
-<td>2031</td>
-<td style="text-align: right;">91.30</td>
-<td style="text-align: right;">26.40</td>
-<td style="text-align: right;">64.90</td>
-<td style="text-align: right;">71.1 %</td>
-<td style="text-align: right;">1.60</td>
-<td style="text-align: right;">50.80</td>
-</tr>
-<tr>
-<td>2032</td>
-<td style="text-align: right;">110.40</td>
-<td style="text-align: right;">30.80</td>
-<td style="text-align: right;">79.60</td>
-<td style="text-align: right;">72.1 %</td>
-<td style="text-align: right;">1.80</td>
-<td style="text-align: right;">62.50</td>
-</tr>
-<tr>
-<td>2033</td>
-<td style="text-align: right;">125.80</td>
-<td style="text-align: right;">33.90</td>
-<td style="text-align: right;">91.90</td>
-<td style="text-align: right;">73.1 %</td>
-<td style="text-align: right;">2.30</td>
-<td style="text-align: right;">71.80</td>
-</tr>
-<tr>
-<td>2034</td>
-<td style="text-align: right;">137.90</td>
-<td style="text-align: right;">34.80</td>
-<td style="text-align: right;">103.10</td>
-<td style="text-align: right;">74.8 %</td>
-<td style="text-align: right;">2.00</td>
-<td style="text-align: right;">81.30</td>
-</tr>
-<tr>
-<td><strong>مجموع FCF 2025–2034</strong></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"><strong>325.02</strong></td>
-</tr>
-</tbody>
-</table>
-<p><strong>تغييرات منحنى OpEx (مقارنة بالنموذج قبل refactor):</strong> -
-+30 % لكتلة الامتثال (نموّ متطلبات 779-P وAML/KYC). - +25 % للأمن
-السيبراني (KII-1، SOC على مدار الساعة، اختبارات الاختراق، تدوير
-المفاتيح). - +40 % للكتلة القانونية (الحزمة التعاقدية، الدعم التنظيمي،
-الملكية الفكرية). - استُحدثت كتلة «المقيّمون وشركات التأمين» — 0.8 % من
-حجم إصدار DFA.</p>
-<p>يقترب هامش EBITDA في الطور الناضج من <strong>74.8 %</strong> (بعد
-refactor، استبدالًا للنسبة غير الواقعية السابقة 96.9 %) — ضمن نطاق مشغّلي
-fintech tier-1 (Visa 67 %، بورصة موسكو 75 %، جهات الإيداع 50–65 %).</p>
-<h3 id="معدل-الخصم-wacc">2.2. معدل الخصم (WACC)</h3>
-<p><strong>تعديل التدقيق:</strong> أُزيل double-counting (CRP غير لازم في
-RUB-denominated RF)؛ ERP رُفعت من 6 % إلى 9 % (Damodaran مايو 2026)؛ β
-عند 1.15 (Damodaran fintech).</p>
-<table>
-<thead>
-<tr>
-<th>المكوّن</th>
-<th style="text-align: right;">القيمة</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Risk-free rate (OFZ 10 سنوات، RUB، 24.05.2026)</td>
-<td style="text-align: right;">14.73</td>
-</tr>
-<tr>
-<td>ERP × β (RF مايو 2026، β 1.15)</td>
-<td style="text-align: right;">9.0 % × 1.15 = 10.35 %</td>
-</tr>
-<tr>
-<td>Stage premium (MVP جاهز)</td>
-<td style="text-align: right;">1.5 %</td>
-</tr>
-<tr>
-<td>Liquidity premium</td>
-<td style="text-align: right;">2.5 %</td>
-</tr>
-<tr>
-<td><strong>WACC (RUB) — المجموع</strong></td>
-<td style="text-align: right;"><strong>29.85 % → 30 %</strong></td>
-</tr>
-</tbody>
-</table>
-<p>WACC بديل عبر comparables عالمية (USD-denominated): 16.75 %. يستخدم
-DCF قيمة RUB-WACC 29.5.</p>
-<h3 id="القيمة-النهائية-multi-stage">2.3. القيمة النهائية
-Multi-stage</h3>
-<p><strong>استبدال Gordon TV بنموذج ثلاثي المراحل</strong> (وفق بند
-التدقيق C4):</p>
-<table style="width:100%;">
-<colgroup>
-<col style="width: 14.5" />
-<col style="width: 14.5" />
-<col style="width: 28%" />
-<col style="width: 28%" />
-</colgroup>
-<thead>
-<tr>
-<th>الطور</th>
-<th>السنوات</th>
-<th style="text-align: right;">معدل النمو g</th>
-<th style="text-align: right;">هامش EBITDA</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>المرحلة I — النضج</td>
-<td>2035–2039</td>
-<td style="text-align: right;">6 % → 4 %</td>
-<td style="text-align: right;">75 % → 70 %</td>
-</tr>
-<tr>
-<td>المرحلة II — الاستقرار</td>
-<td>2040–2044</td>
-<td style="text-align: right;">3.5 % → 2.5 %</td>
-<td style="text-align: right;">70 % → 65 %</td>
-</tr>
-<tr>
-<td>المرحلة III — perpetuity</td>
-<td>2045+</td>
-<td style="text-align: right;">2.0 % (= نصف هدف بنك روسيا)</td>
-<td style="text-align: right;">60 %</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>TV₂₀₄₅ (perpetuity) = FCF₂₀₄₅ × 0.60 / (0.30 − 0.02) = 72.6 / 0.28 =
-302 مليار ₽.</li>
-<li>مخصومة إلى 2025 (20 سنة، العامل 0.00521): <strong>≈ 20.5 مليار
-₽</strong>.</li>
-<li>مجموع FCF المخصومة للمرحلة I+II (2035–2044): ≈ 7.4 مليار ₽.</li>
-<li><strong>حصة TV من NPV الكلي = ~32%</strong> (بدلًا من 49 % سابقًا —
-الحدّ الحرج أُزيل).</li>
-</ul>
-<h3 id="ناتج-dcf-متزامن-مع-sot-v3-للنموذج-المالي">2.4. ناتج DCF (متزامن
-مع SoT v4 للنموذج المالي)</h3>
-<table>
-<colgroup>
-<col style="width: 42%" />
-<col style="width: 57%" />
-</colgroup>
-<thead>
-<tr>
-<th>المكوّن</th>
-<th style="text-align: right;">مليار ₽</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>مجموع FCF المخصومة (2025–2034، WACC 29.5)</td>
-<td style="text-align: right;">43.0</td>
-</tr>
-<tr>
-<td>TV multi-stage مخصومة (المراحل I+II 2035–2044 + perpetuity
-2045+)</td>
-<td style="text-align: right;">20.5</td>
-</tr>
-<tr>
-<td>أثر انتقال المراحل واستقرار EBITDA (74.8 % → 65 %)</td>
-<td style="text-align: right;">7.44</td>
-</tr>
-<tr>
-<td><strong>Enterprise Value (DCF) — قاعدة قابلة للدفاع</strong></td>
-<td style="text-align: right;"><strong>63.0</strong></td>
-</tr>
-<tr>
-<td>تقييم بديل قابل للدفاع بـ TV موسَّع (g = 4 %، EBITDA 70 %)</td>
-<td style="text-align: right;">63.38</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>جميع المكوّنات متوافقة مع <code>_Мастер/Единые_показатели_v2.md</code>
-(SoT v4، نسخة 24.05.2026). عامل الخصم للسنة 2034 بـ WACC 29.5 يساوي ≈
-0.094؛ الأثر التكاملي على FCF لعشر سنوات يبلغ 43.0 مليار ₽.</p>
-</blockquote>
-<h3 id="pre-money-dcf-sot-v3">2.5. Pre-money DCF (SoT v4)</h3>
-<p>في مرحلة «MVP + الجانب العميل مكتمل» يُطبَّق <strong>خصم stage وحيد
-بنسبة 60 %</strong> (دون double-counting): - المخاطرة التنظيمية (الطابع
-الثنائي لتعديلات 86-FZ — مُخفَّفة في بنية wedge للمرحلة 1 عبر Atomyze /
-VEB.RF)؛ - مخاطر التنفيذ مخفَّضة؛ المخاطر التكنولوجية للجانب العميل —
-مُزالة (التطبيق جاهز)؛ - مكوّن exit-discount مُدرَج.</p>
-<p><strong>DCF pre-money = 63.0 مليار ₽ × 0.40 (1 − خصم stage 60 %) +
-uplift لـ MVP جاهز ≈ 21.4 مليار ₽ ≈ 240 مليون $.</strong> (حدّ أعلى قابل
-للدفاع مع TV الموسَّع: 280 مليون $.)</p>
-<hr />
-<h2 id="comparable-multiples-نهج-السوق">3. Comparable Multiples (نهج
-السوق)</h2>
-<h3 id="شركات-وصفقات-مقارنة-2026">3.1. شركات وصفقات مقارنة (2026)</h3>
-<table>
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 19%" />
-<col style="width: 19%" />
-<col style="width: 19%" />
-</colgroup>
-<thead>
-<tr>
-<th>الشركة / الصفقة</th>
-<th>القطاع</th>
-<th>المرحلة</th>
-<th style="text-align: right;">EV، مليون $</th>
-<th style="text-align: right;">الإيراد، مليون $</th>
-<th style="text-align: right;">EV/Revenue</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Securitize (تورين RWA، الولايات المتحدة)</td>
-<td>RWA</td>
-<td>Series C</td>
-<td style="text-align: right;">980</td>
-<td style="text-align: right;">60</td>
-<td style="text-align: right;">16.3×</td>
-</tr>
-<tr>
-<td>Polymath / Tokeny</td>
-<td>Security Tokens</td>
-<td>Late-stage</td>
-<td style="text-align: right;">280</td>
-<td style="text-align: right;">18</td>
-<td style="text-align: right;">15.6×</td>
-</tr>
-<tr>
-<td>HQLAx (DLT-collateral)</td>
-<td>DLT-collateral</td>
-<td>Late-stage</td>
-<td style="text-align: right;">180</td>
-<td style="text-align: right;">14</td>
-<td style="text-align: right;">12.9×</td>
-</tr>
-<tr>
-<td>Atomyze (RU)</td>
-<td>مشغّل DFA</td>
-<td>Series A</td>
-<td style="text-align: right;">~85</td>
-<td style="text-align: right;">~6</td>
-<td style="text-align: right;">14.2×</td>
-</tr>
-<tr>
-<td>Sber CFA (تقدير خبير)</td>
-<td>مشغّل DFA</td>
-<td>Mature</td>
-<td style="text-align: right;">~230</td>
-<td style="text-align: right;">~22</td>
-<td style="text-align: right;">10.5×</td>
-</tr>
-<tr>
-<td><strong>الوسيط 2026</strong></td>
-<td></td>
-<td></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"><strong>14.2×</strong></td>
-</tr>
-</tbody>
-</table>
-<h3 id="تطبيق-المضاعف">3.2. تطبيق المضاعف</h3>
-<ul>
-<li>الإيراد المستهدف للسنة 5 (2029) — 421 مليون $ (37.5 مليار ₽ عند FX
-71.55).</li>
-<li>EV/Revenue لخمس سنوات = 14.2× × 421 مليون $ = 5.98 مليار $.</li>
-<li>خصم إلى pre-money (5 سنوات، WACC 29.5) = 1 / 1.30⁵ ≈ 27 %.</li>
-<li>Pre-money بالمضاعف = 5.98 مليار $ × 0.27 ≈ 1.61 مليار $.</li>
-</ul>
-<p>مع خصم early-stage لمرحلة «MVP + الجانب العميل مكتمل» (76 %):
-<strong>Pre-money بـ Comparable Multiples ≈ 380 مليون $ (33.8 مليار
-₽).</strong></p>
-<hr />
-<h2 id="طريقة-berkus-risk-adjusted">4. طريقة Berkus / Risk-Adjusted</h2>
-<table>
-<colgroup>
-<col style="width: 14.5" />
-<col style="width: 28%" />
-<col style="width: 28%" />
-<col style="width: 14.5" />
-</colgroup>
-<thead>
-<tr>
-<th>العامل</th>
-<th style="text-align: right;">الحد الأقصى</th>
-<th style="text-align: right;">التقدير الحالي</th>
-<th>المسوّغ</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Sound idea</td>
-<td style="text-align: right;">0.5 مليون $</td>
-<td style="text-align: right;">0.5 مليون $</td>
-<td>مفهوم فريد، مودَع.</td>
-</tr>
-<tr>
-<td>Prototype</td>
-<td style="text-align: right;">0.5 مليون $</td>
-<td style="text-align: right;">0.5 مليون $</td>
-<td>PWA مكتمل، 23 شاشة، SW offline، manifest، screenshots.</td>
-</tr>
-<tr>
-<td>Quality management team</td>
-<td style="text-align: right;">0.5 مليون $</td>
-<td style="text-align: right;">0.35 مليون $</td>
-<td>المؤلف + الفريق الأولي؛ التوظيف الصناعي قادم.</td>
-</tr>
-<tr>
-<td>Strategic relationships</td>
-<td style="text-align: right;">0.5 مليون $</td>
-<td style="text-align: right;">0.4 مليون $</td>
-<td>عزم العمل مع وزارة التنمية الاقتصادية / المالية / VEB.RF / بنك
-روسيا.</td>
-</tr>
-<tr>
-<td>Product rollout or sales</td>
-<td style="text-align: right;">0.5 مليون $</td>
-<td style="text-align: right;">0.3 مليون $</td>
-<td>حزمة جاهزة للتقديم في RuStore + builds Capacitor.</td>
-</tr>
-<tr>
-<td><strong>مجموع Berkus</strong></td>
-<td style="text-align: right;">2.5 مليون $</td>
-<td style="text-align: right;"><strong>2.05 مليون $</strong></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>نظرًا للنطاق الروسي والطابع الحكومي وجاهزية pilot-light (wedge في
-259-FZ القائم) يُطبَّق معامل Risk-Adjusted Berkus <strong>×17</strong>:
-<strong>Berkus pre-money = 35 مليون $ (≈ 3.1 مليار ₽).</strong></p>
-<hr />
-<h2 id="asset-replacement-cost">5. Asset / Replacement-Cost</h2>
-<h3 id="كلفة-الاستبدال-الإجمالية">5.1. كلفة الاستبدال الإجمالية</h3>
-<table>
-<colgroup>
-<col style="width: 42%" />
-<col style="width: 57%" />
-</colgroup>
-<thead>
-<tr>
-<th>القسم</th>
-<th style="text-align: right;">مليون ₽</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>الجانب الخادم (تطوير، تراخيص، اعتماد FSTEC/FSB، الدعم القانوني، OpEx
-لـ 18 شهرًا)</td>
-<td style="text-align: right;">645</td>
-</tr>
-<tr>
-<td>الجانب العميل PWA + builds Capacitor + التعريب بأربع لغات</td>
-<td style="text-align: right;">68</td>
-</tr>
-<tr>
-<td>وثائق التصميم وفق GOST 19 (13 وثيقة)</td>
-<td style="text-align: right;">10</td>
-</tr>
-<tr>
-<td>حزمة نشر RuStore + ترويج + screenshots + feature graphic</td>
-<td style="text-align: right;">6</td>
-</tr>
-<tr>
-<td>المواد التسويقية (العرض الكبير، الموجز، الموقع، الكتيّب، Pitch Deck،
-المذكّرة)</td>
-<td style="text-align: right;">22</td>
-</tr>
-<tr>
-<td>العلامة (دليل الهوية، دليل التصميم، الشعارات، رموز التصميم)</td>
-<td style="text-align: right;">12</td>
-</tr>
-<tr>
-<td>التقييم، تدقيق DD، رأي الخبير، التدقيق الموحَّد</td>
-<td style="text-align: right;">22</td>
-</tr>
-<tr>
-<td>النموذج المالي، خطة العمل، وثيقة wedge</td>
-<td style="text-align: right;">12</td>
-</tr>
-<tr>
-<td>الأساس القانوني + مسودة النظام الأساسي للشركة المشغِّلة</td>
-<td style="text-align: right;">18</td>
-</tr>
-<tr>
-<td><strong>إجمالي الاستبدال (دون الملكية الفكرية)</strong></td>
-<td style="text-align: right;"><strong>815</strong></td>
-</tr>
-</tbody>
-</table>
-<h3 id="علاوة-الملكية-الفكرية-المحمية">5.2. علاوة الملكية الفكرية
-المحميَّة</h3>
-<p>تثبت الشهادة رقم 4011265 تاريخ الأسبقية وتجزئة العمل. ويُحمى المفهوم
-في إطار المعرفة الفنية (المادة 1465 من القانون المدني) والبرنامج (المادة
-1262 من القانون المدني، تسجيل في Rospatent قيد الإنجاز لأربعة مكوّنات).
-يُطبَّق معامل 1.75:</p>
-<p><strong>Pre-money على نهج الأصول ≈ 815 مليون ₽ × 1.75 / 71.55 = 16
-مليون $، مقربًا إلى 18 مليون $.</strong></p>
+<blockquote><p><strong>ملاحظة.</strong> هذه الترجمة تتبع الأصل الروسي. أُعيد احتساب القسم المالي في الأصل بتاريخ 07.09.2026 (النموذج v5): الأرقام والصياغة في هذه الترجمة قيد التحديث. وحتى اكتماله يُعتد بالنسخة الروسية في جميع الأحوال.</p></blockquote>
+<p><strong>موضوع التقييم:</strong> المنصة الرقمية «الخدمة الروسية لتمويل التنمية الاجتماعية» — نظام معلومات لإصدار DFA مستهدفة (مشغّل وفق 779-P) مع قناة أفقية للتمويل المستهدف عبر البنية التحتية المؤسسية لـ VEB.RF / الخزانة الفيدرالية، وبنك روسيا في دور الجهة التنظيمية الإشرافية. يتضمّن تطبيقًا للجوّال مكتملًا، ووثائق تصميم GOST 19، وbuilds للمنصات Android / iOS / Windows، وحزمة نشر RuStore. <strong>صاحب حقوق المعرفة الفنية:</strong> عبد الحكيم أحمدوفيتش كاغيروف. شهادة الإيداع رقم 4011265 بتاريخ 19.12.2024 — تثبيت تاريخ الأسبقية وتجزئة العمل؛ نظام الحماية: المعرفة الفنية (المادة 1465 من القانون المدني) + البرنامج (المادة 1262 من القانون المدني، تسجيل لدى Rospatent قيد الإنجاز). <strong>تاريخ التقييم:</strong> 24.05.2026 (لأغراض التفاوض — pre-money، في مرحلة «MVP + الجانب العميل مكتمل»؛ refactor كامل بعد التدقيق الموحَّد في 24.05.2026). <strong>معايير التقييم:</strong> IVS 2022 (International Valuation Standards)، ASA Business Valuation Standards، IFRS 13 (القياس بالقيمة العادلة)، 135-FZ (للتطبيق في الاتحاد الروسي). <strong>النهج:</strong> تثليث أربع طرق مستقلّة مع تجميع موزون وخصم وحيد (one-stage). <strong>مصدر معطيات السوق:</strong> <code>_Мастер/Единые_показатели_v2.md</code> (سعر بنك روسيا 14.5%، FX 71.55 ₽/$، ERP RF 8.13%) — Source of Truth وحيد لجميع وثائق المشروع.</p>
+<hr>
+<h2 id="1-ملخص-التقييم">1. ملخّص التقييم</h2>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">الطريقة</th><th style="text-align:right">Pre-money، USD</th><th style="text-align:right">Pre-money، RUB</th><th style="text-align:right">الوزن</th></tr></thead><tbody><tr><td style="text-align:left"><strong>مدخل الدخل (DCF، قيمة نهائية بطريقة غوردون)</strong></td><td style="text-align:right">352 مليون $</td><td style="text-align:right">25.19 مليار ₽</td><td style="text-align:right">35 %</td></tr><tr><td style="text-align:left"><strong>Comparable Multiples</strong></td><td style="text-align:right">380 مليون $</td><td style="text-align:right">33.8 مليار ₽</td><td style="text-align:right">30 %</td></tr><tr><td style="text-align:left"><strong>Berkus / Risk-Adjusted</strong></td><td style="text-align:right">35 مليون $</td><td style="text-align:right">3.1 مليار ₽</td><td style="text-align:right">25 %</td></tr><tr><td style="text-align:left"><strong>Asset / Replacement-Cost</strong></td><td style="text-align:right">18 مليون $</td><td style="text-align:right">1.6 مليار ₽</td><td style="text-align:right">10 %</td></tr><tr><td style="text-align:left"><strong>قيمة الدخول المحسوبة (خصم المرحلة مطبَّق مرة واحدة)</strong></td><td style="text-align:right"><strong>164–301 مليون $</strong></td><td style="text-align:right"><strong>11.74–21.56 مليار ₽</strong></td><td style="text-align:right">—</td></tr></tbody></table></div>
+<blockquote><p><strong>التغييرات مقارنةً بالنسخة السابقة (بعد التدقيق الموحَّد في 24.05.2026):</strong></p>
+<ul><li>أُزيل double-discount 0.2295 — يُطبَّق خصم stage وحيد بنسبة 60 % فوق EV الموزون.</li><li>أُعيد بناء النموذج المالي؛ وأُزيح الأفق إلى 2027–2036. وأصبح إجمالي الإيرادات مجموع بنوده؛ وأُخرجت خدمات التقييم والتأمين العابرة من الإيراد.</li><li>رُفع معدل ضريبة الأرباح إلى المعدل الساري — 25 % (القانون الاتحادي 176-FZ بتاريخ 12.07.2024).</li><li>رُفع Berkus من 27 مليون $ إلى 35 مليون $ — يحصل عامل «Product rollout» على نقاط إضافية بفضل حزمة builds كاملة ومواد النشر.</li><li>رُفع Asset من 14 مليون $ إلى 18 مليون $ — أُضيفت وثائق التصميم وbuilds إلى قيمة الاستبدال.</li><li>يُطبَّق خصم المرحلة البالغ 60 % مرة واحدة؛ وفي الإصدار السابق طُبِّق مرتين، فبُخست قيمة الدخول نحو النصف. ويعطي مدخل الدخل 352 مليون $ (قيمة المشروع 62.97 مليار ₽ × 0.40 عند سعر 71.55). والنطاق المحسوب لقيمة الدخول حسب السيناريوهات 164–301 مليون $.</li></ul></blockquote>
+<p><strong>الموقف المحسوب (السيناريو الأساسي):</strong></p>
+<ul><li>Pre-money — <strong>248 مليون $ (17.74 مليار ₽)</strong>.</li><li>Post-money — <strong>273 مليون $ (19.54 مليار ₽)</strong> عند جولة أولى <strong>25 مليون $ (1.8 مليار ₽)</strong>.</li><li>حصة المستثمر — <strong>9.21 %</strong>.</li></ul>
+<blockquote><p>الفارق بين مداخل التقييم اثنا عشر ضعفًا: فمداخل المرحلة المبكرة تعطي 20–35 مليون $، ومدخل الدخل 352 مليون $. والقيمة المحسوبة هي الحد الأعلى لما يمكن تبريره لا سعرًا سوقيًّا. وقرار سعر التفاوض يعود إلى مالك المشروع.</p></blockquote>
+<ul><li>FX مُثبَّت في 24.05.2026: <strong>71.55 ₽/$</strong>.</li></ul>
+<hr>
+<h2 id="2-منهجية-dcf-نهج-الدخل">2. منهجية DCF (نهج الدخل)</h2>
+<h3 id="21-مصدر-التدفقات-النقدية">2.1. مصدر التدفقات النقدية</h3>
+<p>التدفقات النقدية من تشغيل المنصة على أفق 2027–2036 مأخوذة من النموذج المالي المُعاد حسابه (<code>03_Финансовая_модель/Модель</code>). والتدفقات مقوَّمة بالروبل.</p>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">السنة</th><th style="text-align:right">الإيراد، مليار ₽</th><th style="text-align:right">OpEx، مليار ₽</th><th style="text-align:right">EBITDA، مليار ₽</th><th style="text-align:right">هامش EBITDA</th><th style="text-align:right">CapEx، مليار ₽</th><th style="text-align:right">FCF، مليار ₽</th></tr></thead><tbody><tr><td style="text-align:left">2027</td><td style="text-align:right">0.00</td><td style="text-align:right">0.72</td><td style="text-align:right">−0.72</td><td style="text-align:right">—</td><td style="text-align:right">0.30</td><td style="text-align:right">−1.02</td></tr><tr><td style="text-align:left">2028</td><td style="text-align:right">1.31</td><td style="text-align:right">1.50</td><td style="text-align:right">−0.19</td><td style="text-align:right">—</td><td style="text-align:right">0.42</td><td style="text-align:right">−0.68</td></tr><tr><td style="text-align:left">2029</td><td style="text-align:right">6.52</td><td style="text-align:right">2.96</td><td style="text-align:right">3.56</td><td style="text-align:right">54.6 %</td><td style="text-align:right">0.40</td><td style="text-align:right">2.31</td></tr><tr><td style="text-align:left">2030</td><td style="text-align:right">17.79</td><td style="text-align:right">5.78</td><td style="text-align:right">12.01</td><td style="text-align:right">67.5 %</td><td style="text-align:right">0.55</td><td style="text-align:right">7.95</td></tr><tr><td style="text-align:left">2031</td><td style="text-align:right">39.02</td><td style="text-align:right">10.83</td><td style="text-align:right">28.19</td><td style="text-align:right">72.3 %</td><td style="text-align:right">1.80</td><td style="text-align:right">18.41</td></tr><tr><td style="text-align:left">2032</td><td style="text-align:right">56.86</td><td style="text-align:right">15.09</td><td style="text-align:right">41.77</td><td style="text-align:right">73.5 %</td><td style="text-align:right">2.40</td><td style="text-align:right">28.24</td></tr><tr><td style="text-align:left">2033</td><td style="text-align:right">76.69</td><td style="text-align:right">19.83</td><td style="text-align:right">56.86</td><td style="text-align:right">74.1 %</td><td style="text-align:right">1.60</td><td style="text-align:right">40.32</td></tr><tr><td style="text-align:left">2034</td><td style="text-align:right">98.35</td><td style="text-align:right">25.01</td><td style="text-align:right">73.34</td><td style="text-align:right">74.6 %</td><td style="text-align:right">1.80</td><td style="text-align:right">52.44</td></tr><tr><td style="text-align:left">2035</td><td style="text-align:right">120.87</td><td style="text-align:right">30.33</td><td style="text-align:right">90.55</td><td style="text-align:right">74.9 %</td><td style="text-align:right">2.30</td><td style="text-align:right">64.87</td></tr><tr><td style="text-align:left">2036</td><td style="text-align:right">142.61</td><td style="text-align:right">35.50</td><td style="text-align:right">107.11</td><td style="text-align:right">75.1 %</td><td style="text-align:right">2.00</td><td style="text-align:right">77.69</td></tr><tr><td style="text-align:left"><strong>مجموع التدفق 2027–2036</strong></td><td style="text-align:right"></td><td style="text-align:right"></td><td style="text-align:right"></td><td style="text-align:right"></td><td style="text-align:right"></td><td style="text-align:right"><strong>290.54</strong></td></tr></tbody></table></div>
+<p><strong>تغييرات منحنى OpEx (مقارنة بالنموذج قبل refactor):</strong></p>
+<ul><li>+30 % لكتلة الامتثال (نموّ متطلبات 779-P وAML/KYC).</li><li>+25 % للأمن السيبراني (KII-1، SOC على مدار الساعة، اختبارات الاختراق، تدوير المفاتيح).</li><li>+40 % للكتلة القانونية (الحزمة التعاقدية، الدعم التنظيمي، الملكية الفكرية).</li><li>استُحدثت كتلة «المقيّمون وشركات التأمين» — 0.8 % من حجم إصدار DFA.</li></ul>
+<p>يقترب هامش EBITDA في الطور الناضج من <strong>74.8 %</strong> (بعد refactor، استبدالًا للنسبة غير الواقعية السابقة 96.9 %) — ضمن نطاق مشغّلي fintech tier-1 (Visa 67 %، بورصة موسكو 75 %، جهات الإيداع 50–65 %).</p>
+<h3 id="22-معدل-الخصم-wacc">2.2. معدل الخصم (WACC)</h3>
+<p><strong>تعديل التدقيق:</strong> أُزيل double-counting (CRP غير لازم في RUB-denominated RF)؛ ERP رُفعت من 6 % إلى 9 % (Damodaran مايو 2026)؛ β عند 1.15 (Damodaran fintech).</p>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">المكوّن</th><th style="text-align:right">القيمة</th></tr></thead><tbody><tr><td style="text-align:left">Risk-free rate (OFZ 10 سنوات، RUB، 24.05.2026)</td><td style="text-align:right">14.73%</td></tr><tr><td style="text-align:left">ERP × β (RF مايو 2026، β 1.15)</td><td style="text-align:right">9.0 % × 1.15 = 10.35 %</td></tr><tr><td style="text-align:left">Stage premium (MVP جاهز)</td><td style="text-align:right">1.5 %</td></tr><tr><td style="text-align:left">Liquidity premium</td><td style="text-align:right">2.5 %</td></tr><tr><td style="text-align:left"><strong>WACC (RUB) — المجموع</strong></td><td style="text-align:right"><strong>29.58% → 30 %</strong></td></tr></tbody></table></div>
+<p>WACC بديل عبر comparables عالمية (USD-denominated): 16.75 %. يستخدم DCF قيمة RUB-WACC 29.5%.</p>
+<h3 id="23-القيمة-النهائية">2.3. القيمة النهائية</h3>
+<p>طريقة واحدة — نموذج غوردون على تدفق مُطبَّع (النفقات الرأسمالية مساوية للإهلاك، والزيادة في رأس المال العامل تساوي g × رأس المال العامل).</p>
+<ul><li>التدفق المُطبَّع — <strong>78.71 مليار ₽</strong>؛ ومعدل النمو طويل الأجل g = 4 % (اسمي، مساوٍ لمستهدف التضخم).</li><li>القيمة النهائية في نهاية 2036 = 78.71 × 1.04 / (0.2958 − 0.04) ≈ <strong>320.0 مليار ₽</strong>.</li><li>مخصومة إلى تاريخ التقييم (× 0.0749) — <strong>23.98 مليار ₽</strong>؛ وحصتها من قيمة المشروع <strong>38 %</strong>.</li></ul>
+<blockquote><p>استخدمت الإصدارات السابقة ثلاثة مداخل غير متوافقة في آنٍ واحد (غوردون بمعدل 2 %، ونموذجًا ثلاثي المراحل، ومعدل 4 % في خطة العمل). وأُبقي على واحد.</p></blockquote>
+<h3 id="24-ناتج-مدخل-الدخل">2.4. ناتج مدخل الدخل</h3>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">المكوّن</th><th style="text-align:right">مليار ₽</th></tr></thead><tbody><tr><td style="text-align:left">مجموع التدفقات المخصومة 2027–2036 (المعدل 29.58 %)</td><td style="text-align:right">38.99</td></tr><tr><td style="text-align:left">القيمة النهائية المخصومة (غوردون، g = 4 %)</td><td style="text-align:right">23.98</td></tr><tr><td style="text-align:left"><strong>Enterprise Value (DCF) — قاعدة قابلة للدفاع</strong></td><td style="text-align:right"><strong>63.0</strong></td></tr></tbody></table></div>
+<blockquote><p>تُشتق سلسلة التدفقات من قائمة الأرباح والخسائر وتُتحقق برمجيًّا. ولم تكن كذلك في الإصدار السابق: إذ تجاهلت رأس المال العامل واحتوت على بواقٍ غير مفسَّرة.</p></blockquote>
+<h3 id="25-pre-money-dcf-sot-v4">2.5. Pre-money DCF (SoT v4)</h3>
+<p>في مرحلة «MVP + الجانب العميل مكتمل» يُطبَّق <strong>خصم stage وحيد بنسبة 60 %</strong> (دون double-counting):</p>
+<ul><li>المخاطرة التنظيمية (الطابع الثنائي لتعديلات 86-FZ — مُخفَّفة في بنية wedge للمرحلة 1 عبر Atomyze / VEB.RF)؛</li><li>مخاطر التنفيذ مخفَّضة؛ المخاطر التكنولوجية للجانب العميل — مُزالة (التطبيق جاهز)؛</li><li>مكوّن exit-discount مُدرَج.</li></ul>
+<p><strong>DCF pre-money = 63.0 مليار ₽ × 0.40 (1 − خصم stage 60 %) + uplift لـ MVP جاهز ≈ 21.4 مليار ₽ ≈ 240 مليون $.</strong> (حدّ أعلى قابل للدفاع مع TV الموسَّع: 280 مليون $.)</p>
+<hr>
+<h2 id="3-comparable-multiples-نهج-السوق">3. Comparable Multiples (نهج السوق)</h2>
+<h3 id="31-شركات-وصفقات-مقارنة-2026">3.1. شركات وصفقات مقارنة (2026)</h3>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">الشركة / الصفقة</th><th style="text-align:left">القطاع</th><th style="text-align:left">المرحلة</th><th style="text-align:right">EV، مليون $</th><th style="text-align:right">الإيراد، مليون $</th><th style="text-align:right">EV/Revenue</th></tr></thead><tbody><tr><td style="text-align:left">Securitize (تورين RWA، الولايات المتحدة)</td><td style="text-align:left">RWA</td><td style="text-align:left">Series C</td><td style="text-align:right">980</td><td style="text-align:right">60</td><td style="text-align:right">16.3×</td></tr><tr><td style="text-align:left">Polymath / Tokeny</td><td style="text-align:left">Security Tokens</td><td style="text-align:left">Late-stage</td><td style="text-align:right">280</td><td style="text-align:right">18</td><td style="text-align:right">15.6×</td></tr><tr><td style="text-align:left">HQLAx (DLT-collateral)</td><td style="text-align:left">DLT-collateral</td><td style="text-align:left">Late-stage</td><td style="text-align:right">180</td><td style="text-align:right">14</td><td style="text-align:right">12.9×</td></tr><tr><td style="text-align:left">Atomyze (RU)</td><td style="text-align:left">مشغّل DFA</td><td style="text-align:left">Series A</td><td style="text-align:right">~85</td><td style="text-align:right">~6</td><td style="text-align:right">14.2×</td></tr><tr><td style="text-align:left">Sber CFA (تقدير خبير)</td><td style="text-align:left">مشغّل DFA</td><td style="text-align:left">Mature</td><td style="text-align:right">~230</td><td style="text-align:right">~22</td><td style="text-align:right">10.5×</td></tr><tr><td style="text-align:left"><strong>الوسيط 2026</strong></td><td style="text-align:left"></td><td style="text-align:left"></td><td style="text-align:right"></td><td style="text-align:right"></td><td style="text-align:right"><strong>14.2×</strong></td></tr></tbody></table></div>
+<h3 id="32-تطبيق-المضاعف">3.2. تطبيق المضاعف</h3>
+<ul><li>الإيراد المستهدف للسنة 5 (2029) — 421 مليون $ (37.5 مليار ₽ عند FX 71.55).</li><li>EV/Revenue لخمس سنوات = 14.2× × 421 مليون $ = 5.98 مليار $.</li><li>خصم إلى pre-money (5 سنوات، WACC 29.5%) = 1 / 1.30⁵ ≈ 27 %.</li><li>Pre-money بالمضاعف = 5.98 مليار $ × 0.27 ≈ 1.61 مليار $.</li></ul>
+<p>مع خصم early-stage لمرحلة «MVP + الجانب العميل مكتمل» (76 %): <strong>Pre-money بـ Comparable Multiples ≈ 380 مليون $ (33.8 مليار ₽).</strong></p>
+<hr>
+<h2 id="4-طريقة-berkus-risk-adjusted">4. طريقة Berkus / Risk-Adjusted</h2>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">العامل</th><th style="text-align:right">الحد الأقصى</th><th style="text-align:right">التقدير الحالي</th><th style="text-align:left">المسوّغ</th></tr></thead><tbody><tr><td style="text-align:left">Sound idea</td><td style="text-align:right">0.5 مليون $</td><td style="text-align:right">0.5 مليون $</td><td style="text-align:left">مفهوم فريد، مودَع.</td></tr><tr><td style="text-align:left">Prototype</td><td style="text-align:right">0.5 مليون $</td><td style="text-align:right">0.5 مليون $</td><td style="text-align:left">PWA مكتمل، 23 شاشة، SW offline، manifest، screenshots.</td></tr><tr><td style="text-align:left">Quality management team</td><td style="text-align:right">0.5 مليون $</td><td style="text-align:right">0.35 مليون $</td><td style="text-align:left">المؤلف + الفريق الأولي؛ التوظيف الصناعي قادم.</td></tr><tr><td style="text-align:left">Strategic relationships</td><td style="text-align:right">0.5 مليون $</td><td style="text-align:right">0.4 مليون $</td><td style="text-align:left">عزم العمل مع وزارة التنمية الاقتصادية / المالية / VEB.RF / بنك روسيا.</td></tr><tr><td style="text-align:left">Product rollout or sales</td><td style="text-align:right">0.5 مليون $</td><td style="text-align:right">0.3 مليون $</td><td style="text-align:left">حزمة جاهزة للتقديم في RuStore + builds Capacitor.</td></tr><tr><td style="text-align:left"><strong>مجموع Berkus</strong></td><td style="text-align:right">2.5 مليون $</td><td style="text-align:right"><strong>2.05 مليون $</strong></td><td style="text-align:left"></td></tr></tbody></table></div>
+<p>نظرًا للنطاق الروسي والطابع الحكومي وجاهزية pilot-light (wedge في 259-FZ القائم) يُطبَّق معامل Risk-Adjusted Berkus <strong>×17</strong>: <strong>Berkus pre-money = 35 مليون $ (≈ 3.1 مليار ₽).</strong></p>
+<hr>
+<h2 id="5-asset-replacement-cost">5. Asset / Replacement-Cost</h2>
+<h3 id="51-كلفة-الاستبدال-الإجمالية">5.1. كلفة الاستبدال الإجمالية</h3>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">القسم</th><th style="text-align:right">مليون ₽</th></tr></thead><tbody><tr><td style="text-align:left">الجانب الخادم (تطوير، تراخيص، اعتماد FSTEC/FSB، الدعم القانوني، OpEx لـ 18 شهرًا)</td><td style="text-align:right">645</td></tr><tr><td style="text-align:left">الجانب العميل PWA + builds Capacitor + التعريب بأربع لغات</td><td style="text-align:right">68</td></tr><tr><td style="text-align:left">وثائق التصميم وفق GOST 19 (13 وثيقة)</td><td style="text-align:right">10</td></tr><tr><td style="text-align:left">حزمة نشر RuStore + ترويج + screenshots + feature graphic</td><td style="text-align:right">6</td></tr><tr><td style="text-align:left">المواد التسويقية (العرض الكبير، الموجز، الموقع، الكتيّب، Pitch Deck، المذكّرة)</td><td style="text-align:right">22</td></tr><tr><td style="text-align:left">العلامة (دليل الهوية، دليل التصميم، الشعارات، رموز التصميم)</td><td style="text-align:right">12</td></tr><tr><td style="text-align:left">التقييم، تدقيق DD، رأي الخبير، التدقيق الموحَّد</td><td style="text-align:right">22</td></tr><tr><td style="text-align:left">النموذج المالي، خطة العمل، وثيقة wedge</td><td style="text-align:right">12</td></tr><tr><td style="text-align:left">الأساس القانوني + مسودة النظام الأساسي للشركة المشغِّلة</td><td style="text-align:right">18</td></tr><tr><td style="text-align:left"><strong>إجمالي الاستبدال (دون الملكية الفكرية)</strong></td><td style="text-align:right"><strong>815</strong></td></tr></tbody></table></div>
+<h3 id="52-علاوة-الملكية-الفكرية-المحمية">5.2. علاوة الملكية الفكرية المحميَّة</h3>
+<p>تثبت الشهادة رقم 4011265 تاريخ الأسبقية وتجزئة العمل. ويُحمى المفهوم في إطار المعرفة الفنية (المادة 1465 من القانون المدني) والبرنامج (المادة 1262 من القانون المدني، تسجيل في Rospatent قيد الإنجاز لأربعة مكوّنات). يُطبَّق معامل 1.75:</p>
+<p><strong>Pre-money على نهج الأصول ≈ 815 مليون ₽ × 1.75 / 71.55 = 16 مليون $، مقربًا إلى 18 مليون $.</strong></p>
 <p>يقدّم نهج الكلفة الحدّ الأدنى لمنطقة التفاوض.</p>
-<hr />
-<h2 id="التثليث-وreasoned-value-خصم-وحيد">6. التثليث وReasoned Value
-(خصم وحيد)</h2>
-<h3 id="الحساب-دون-double-counting">6.1. الحساب دون double-counting</h3>
-<p>أُزيل double-discount السابق 0.2295 (الذي طُبِّق ضمن DCF وفوق التجميع).
-المنطق الجديد — خصم stage وحيد فوق EV الموزون.</p>
-<table>
-<thead>
-<tr>
-<th>الطريقة</th>
-<th style="text-align: right;">Pre-money، مليون $</th>
-<th style="text-align: right;">الوزن</th>
-<th style="text-align: right;">المساهمة، مليون $</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>DCF</td>
-<td style="text-align: right;">240</td>
-<td style="text-align: right;">35 %</td>
-<td style="text-align: right;">84</td>
-</tr>
-<tr>
-<td>Multiples</td>
-<td style="text-align: right;">380</td>
-<td style="text-align: right;">30 %</td>
-<td style="text-align: right;">114</td>
-</tr>
-<tr>
-<td>Berkus</td>
-<td style="text-align: right;">35</td>
-<td style="text-align: right;">25 %</td>
-<td style="text-align: right;">8.75</td>
-</tr>
-<tr>
-<td>Asset</td>
-<td style="text-align: right;">18</td>
-<td style="text-align: right;">10 %</td>
-<td style="text-align: right;">1.8</td>
-</tr>
-<tr>
-<td><strong>EV الموزون</strong></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"><strong>≈ 249</strong></td>
-</tr>
-</tbody>
-</table>
-<h3 id="خصم-stage-وحيد-فوق-التجميع">6.2. خصم stage (وحيد، فوق
-التجميع)</h3>
-<p>نظرًا لمرحلة «MVP + الجانب العميل مكتمل» والمخاطرة التنظيمية الثنائية
-يُعتمد خصم stage وحيد <strong>60 %</strong>: - المخاطرة التنظيمية
-(تعديلات 86-FZ، T+24…T+36 شهرًا)؛ - exit-discount؛ - مخاطر التخفيف
-early-stage.</p>
-<p><strong>Reasoned Value pre-money = 249 مليون $ × 0.40 ≈ 99.6 مليون
-$ → مقربًا إلى Base 80 مليون $.</strong></p>
-<h3 id="منطقة-التفاوض">6.3. منطقة التفاوض</h3>
-<ul>
-<li><strong>الحدّ الأدنى (الحد الرشيد):</strong> 60 مليون $ (5.34 مليار
-₽).</li>
-<li><strong>Reasoned base:</strong> 80 مليون $ (7.12 مليار ₽).</li>
-<li><strong>الحدّ الأقصى (موقف طموح):</strong> 115 مليون $ (10.24 مليار
-₽).</li>
-</ul>
-<hr />
-<h2 id="السيناريوهات-بأوزان-وقيمة-متوقعة-sot-v3">7. السيناريوهات بأوزان
-وقيمة متوقعة (SoT v4)</h2>
-<table>
-<thead>
-<tr>
-<th>السيناريو</th>
-<th style="text-align: right;">الاحتمال</th>
-<th style="text-align: right;">Pre-money مليون $</th>
-<th style="text-align: right;">NPV مليار ₽</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Optimistic (حزمة T+24، حصة 25 %)</td>
-<td style="text-align: right;">30 %</td>
-<td style="text-align: right;">115</td>
-<td style="text-align: right;">82</td>
-</tr>
-<tr>
-<td>Base (حزمة T+36، حصة 18 %، wedge-pilot)</td>
-<td style="text-align: right;">55 %</td>
-<td style="text-align: right;">80</td>
-<td style="text-align: right;"><strong>63.0</strong></td>
-</tr>
-<tr>
-<td>Conservative (259-FZ فقط، حصة 7 %، دون تعديلات)</td>
-<td style="text-align: right;">15 %</td>
-<td style="text-align: right;">60</td>
-<td style="text-align: right;">22</td>
-</tr>
-<tr>
-<td><strong>Expected Value</strong></td>
-<td style="text-align: right;">100 %</td>
-<td style="text-align: right;"><strong>88 مليون $</strong></td>
-<td style="text-align: right;"><strong>55.8 مليار ₽</strong></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>NPV متزامنة مع <code>_Мастер/Единые_показатели_v2.md</code> (SoT v4):
-WACC 29.5، multi-stage TV، NPV Base الكامل 63.0 مليار ₽ (= NPV دون TV
-43.0 + multi-stage TV مخصومة 20.5 + فترات إضافية لمراحل الاستقرار).
-المرجع القابل للدفاع لـ NPV Base ≤ 63.38 مليار ₽ (مع TV بمفهوم
-أوسع).</p>
-</blockquote>
-<p>Reasoned Base 80 مليون $ &lt; Expected 88 مليون $ — يوفر حدًّا أدنى
-تفاوضيًّا قابلًا للدفاع.</p>
-<hr />
-<h2 id="تحليل-حساسية-موسع">8. تحليل حساسية موسَّع</h2>
-<h3 id="تجاه-wacc-dcf">8.1. تجاه WACC (DCF)</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">WACC</th>
-<th style="text-align: right;">Pre-money DCF، مليون $</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;">25 %</td>
-<td style="text-align: right;">340</td>
-</tr>
-<tr>
-<td style="text-align: right;">28 %</td>
-<td style="text-align: right;">285</td>
-</tr>
-<tr>
-<td style="text-align: right;"><strong>30 % (base)</strong></td>
-<td style="text-align: right;"><strong>240</strong></td>
-</tr>
-<tr>
-<td style="text-align: right;">32 %</td>
-<td style="text-align: right;">205</td>
-</tr>
-<tr>
-<td style="text-align: right;">35 %</td>
-<td style="text-align: right;">165</td>
-</tr>
-</tbody>
-</table>
-<h3 id="تجاه-حصة-السوق-من-25.5-تريليون-من-قاعدة-الضمانات">8.2. تجاه حصة
-السوق (% من 25.5 تريليون ₽ من قاعدة الضمانات)</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">حصة السنة 10</th>
-<th style="text-align: right;">Pre-money Reasoned، مليون $</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;">10 % (محافظ)</td>
-<td style="text-align: right;">52</td>
-</tr>
-<tr>
-<td style="text-align: right;">18 % (Base)</td>
-<td style="text-align: right;">80</td>
-</tr>
-<tr>
-<td style="text-align: right;">25 % (متفائل)</td>
-<td style="text-align: right;">115</td>
-</tr>
-</tbody>
-</table>
-<h3 id="تجاه-منحنى-opex-موعد-الإطلاق-53-جديد">8.3. تجاه منحنى OpEx ×
-موعد الإطلاق (5×3، جديد)</h3>
-<table>
-<thead>
-<tr>
-<th>موعد الإطلاق  زيادة OpEx</th>
-<th style="text-align: right;">−10 %</th>
-<th style="text-align: right;">0 %</th>
-<th style="text-align: right;">+10 %</th>
-<th style="text-align: right;">+20 %</th>
-<th style="text-align: right;">+30 %</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>−6 أشهر</strong></td>
-<td style="text-align: right;">110</td>
-<td style="text-align: right;">102</td>
-<td style="text-align: right;">94</td>
-<td style="text-align: right;">86</td>
-<td style="text-align: right;">78</td>
-</tr>
-<tr>
-<td><strong>0 (base)</strong></td>
-<td style="text-align: right;">95</td>
-<td style="text-align: right;">88</td>
-<td style="text-align: right;">80</td>
-<td style="text-align: right;">72</td>
-<td style="text-align: right;">64</td>
-</tr>
-<tr>
-<td><strong>+6 أشهر</strong></td>
-<td style="text-align: right;">75</td>
-<td style="text-align: right;">68</td>
-<td style="text-align: right;">61</td>
-<td style="text-align: right;">54</td>
-<td style="text-align: right;">47</td>
-</tr>
-</tbody>
-</table>
-<h3 id="مخطط-tornado-أعلى-7-حساسيات-بالقيمة-المطلقة-على-npv">8.4. مخطط
-tornado (أعلى 7 حساسيات بالقيمة المطلقة على NPV)</h3>
-<table>
-<thead>
-<tr>
-<th>المحرّك</th>
-<th style="text-align: right;">الأثر، ± مليار ₽ NPV</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>موعد إقرار التشريعات (T+24 مقابل T+36)</td>
-<td style="text-align: right;">± 54</td>
-</tr>
-<tr>
-<td>حصة السوق في السنة 10 (18 % ± 7 نقطة مئوية)</td>
-<td style="text-align: right;">± 38</td>
-</tr>
-<tr>
-<td>WACC (29.5 ± 3 نقاط مئوية)</td>
-<td style="text-align: right;">± 22</td>
-</tr>
-<tr>
-<td>زيادة OpEx (±20 %)</td>
-<td style="text-align: right;">± 18</td>
-</tr>
-<tr>
-<td>العمولة التعرفيّة (15 bps ± 4)</td>
-<td style="text-align: right;">± 16</td>
-</tr>
-<tr>
-<td>موعد الإطلاق (±6 أشهر)</td>
-<td style="text-align: right;">± 14</td>
-</tr>
-<tr>
-<td>هامش EBITDA في TV (74.8 % ± 5 نقاط مئوية)</td>
-<td style="text-align: right;">± 11</td>
-</tr>
-</tbody>
-</table>
-<h3 id="مونتي-كارلو-مبسط-1-000-تكرار-على-6-معطيات">8.5. مونتي كارلو
-(مبسّط، 1 000 تكرار على 6 معطيات)</h3>
-<ul>
-<li>الوسيط NPV = 91 مليار ₽.</li>
-<li>P10–P90 = 38–162 مليار ₽.</li>
-<li>P5 = 24 مليار ₽؛ P95 = 184 مليار ₽.</li>
-<li>P(NPV &gt; 50 مليار ₽) = 73 %.</li>
-<li>P(NPV &lt; 0) = 4.8 %.</li>
-</ul>
-<h3 id="اختبار-إجهاد-السيولة">8.6. اختبار إجهاد السيولة</h3>
-<ul>
-<li>FCF تراكمي 2025–2026 = −2 080 مليون ₽.</li>
-<li>جولة 15 مليون $ (1.335 مليار ₽) تغلق 64 % من الذروة.</li>
-<li>تأخير التجربة +6 أشهر — فجوة إضافية 0.38 مليار ₽.</li>
-<li><strong>التوصية:</strong> إمّا جولة 20 مليون $ (post-money 115 مليون
-$، حصة 17.4 %)، أو <strong>تمويل bridge بقيمة 0.75 مليار ₽</strong> لـ
-6–9 أشهر عبر VEB.RF / partner bank مقابل رهن الملكية الفكرية — قيمة موحَّدة
-على مستوى المشروع (متزامنة مع Финансовая_модель.md § 4.7 و
-Wedge_pilot-light.md § 5).</li>
-</ul>
-<hr />
-<h2 id="مقارنة-مع-المراجع-الدولية-2026">9. مقارنة مع المراجع الدولية
-(2026)</h2>
-<table>
-<thead>
-<tr>
-<th>المشروع</th>
-<th>الولاية القضائية</th>
-<th style="text-align: right;">Pre-money في مرحلة مماثلة، مليون $</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Securitize (Series C، 2026)</td>
-<td>الولايات المتحدة</td>
-<td style="text-align: right;">980</td>
-</tr>
-<tr>
-<td>Tokeny (Series A، 2025)</td>
-<td>لوكسمبورغ</td>
-<td style="text-align: right;">60</td>
-</tr>
-<tr>
-<td>Polymath (Series A، 2025)</td>
-<td>كندا / بربادوس</td>
-<td style="text-align: right;">75</td>
-</tr>
-<tr>
-<td>HQLAx (Series B، 2026)</td>
-<td>سويسرا</td>
-<td style="text-align: right;">180</td>
-</tr>
-<tr>
-<td>Atomyze</td>
-<td>روسيا</td>
-<td style="text-align: right;">~85</td>
-</tr>
-<tr>
-<td><strong>Reasoned CPFSR (مع MVP)</strong></td>
-<td>روسيا</td>
-<td style="text-align: right;"><strong>80</strong></td>
-</tr>
-</tbody>
-</table>
-<p>تقع قيمة Reasoned Value منطقيًّا ضمن نطاق صفقات Series A لمنصات تورين
-الأصول التي تتوفّر فيها جاهزية الجانب العميل.</p>
-<hr />
-<h2 id="القابلية-للدفاع-أمام-dd-من-tier-1">10. القابلية للدفاع أمام DD
-من tier-1</h2>
-<p>بعد refactor النموذج المالي والتقييم (وفق التدقيق): - أُزيل
-double-counting لـ CRP في WACC. - منحنى EBITDA واقعي (74.8 % مقابل 96.9
-%). - multi-stage TV (~32% من NPV مقابل 49 %). - Equity Multiple 12×
-(exit-on-multiple) — مرجع علوي قابل للدفاع ضمن نطاق fintech tier-1 8–12×
-(تُعتبر صفقات comparable الطموحة 25–50× upside ولا تُدرج في القاعدة). -
-Tornado وMonte Carlo وإجهاد السيولة وتحليل break-even — مُضافة. - خصم
-stage وحيد دون double-counting. - جميع المؤشّرات الرقمية متزامنة عبر
-<code>_Мастер/Единые_показатели_v2.md</code>.</p>
-<p>ارتفع مستوى جاهزية محيط التقييم لـ DD من 4/10 إلى
-<strong>8/10</strong>.</p>
-<hr />
-<h2 id="القيود-والتحفظات">11. القيود والتحفّظات</h2>
-<ol type="1">
-<li><strong>معيار IVS 2022</strong>: أُجري التقييم باعتماد نهج IVS
-105–106.</li>
-<li><strong>التاريخ المرجعي</strong>: 24.05.2026. يخضع Pre-money
-للمراجعة عند تغيّر سعر بنك روسيا الأساسي أو سعر الصرف أو النظام
-التنظيمي.</li>
-<li><strong>الاعتماد التنظيمي</strong>: قد يحرّك العامل الثنائي لإقرار
-الحزمة التشريعية (أفق T+36…T+60 شهرًا) قيمة Reasoned Value مضاعفيًّا (من
-×0.15 إلى ×1.5).</li>
-<li><strong>استقلالية المقيّم</strong>: أُعدّت الوثيقة ضمن حزمة المشروع ولا
-تُعدّ تقريرًا مستقلًّا للتقييم وفق 135-FZ. للحصول على تقييم رسمي يلزم تعيين
-مقيّم مستقلّ منتسب لـ SRO.</li>
-<li><strong>نمط wedge</strong>: يمتلك المشروع تهيئة pilot-light سارية
-ضمن 259-FZ القائم (دون تعديلات على 86-FZ) — انظر
-<code>04_Бизнес-план/Wedge_pilot-light.md</code>.</li>
-</ol>
-<hr />
-<h2 id="الخلاصة-النهائية">12. الخلاصة النهائية</h2>
-<p><strong>Reasoned Value pre-money لـ CPFSR في مرحلة «MVP + الجانب
-العميل مكتمل» (24.05.2026):</strong></p>
-<ul>
-<li><strong>منطقة الأساس:</strong> 80 مليون $ (≈ 7.12 مليار ₽).</li>
-<li><strong>نطاق التفاوض:</strong> 60–115 مليون $ (5.01–10.02 مليار
-₽).</li>
-<li><strong>القيمة المتوقعة على نموذج ثلاثي السيناريوهات:</strong> 88
-مليون $.</li>
-<li><strong>الإمكان عند النجاح الكامل:</strong> 240 مليون $ (DCF، الطور
-الاستثماري الناضج).</li>
-</ul>
-<p>عند جولة أولى 15 مليون $ (1.335 مليار ₽)، الهيكل الموصى به للصفقة —
-<strong>13.04 للمستثمر</strong> بـ post-money 95 مليون $ (8.46 مليار
-₽).</p>
-<p><strong>مستوى جاهزية المشروع (TRL/IRL):</strong> - العمل المفاهيمي
-والقانوني والمالي والتقني والتصميمي — مكتمل. - Wedge pilot-light ضمن
-259-FZ القائم — مُهيكَل. - تطبيق الجوّال للعميل PWA — جاهز للنشر (Service
-Worker + offline.html + أيقونات PNG 192/512/1024 + mipmap + screenshots
-+ feature graphic). - وثائق التصميم وفق GOST 19 (13 وثيقة بترقيم صحيح) —
-مكتملة. - builds المنصات (Android / iOS / Windows) — جاهزة. - حزمة النشر
-RuStore — مجمَّعة؛ إزالة الإعلان عن خدمة مرخَّصة. - الجانب الخادم — قيد
-التطوير (12–18 شهرًا حتى الإطلاق الصناعي).</p>
+<hr>
+<h2 id="6-التثليث-وreasoned-value-خصم-وحيد">6. التثليث وReasoned Value (خصم وحيد)</h2>
+<h3 id="61-الحساب-دون-double-counting">6.1. الحساب دون double-counting</h3>
+<p>أُزيل double-discount السابق 0.2295 (الذي طُبِّق ضمن DCF وفوق التجميع). المنطق الجديد — خصم stage وحيد فوق EV الموزون.</p>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">الطريقة</th><th style="text-align:right">Pre-money، مليون $</th><th style="text-align:right">الوزن</th><th style="text-align:right">المساهمة، مليون $</th></tr></thead><tbody><tr><td style="text-align:left">DCF</td><td style="text-align:right">240</td><td style="text-align:right">35 %</td><td style="text-align:right">84</td></tr><tr><td style="text-align:left">مدخل السوق (المضاعفات)</td><td style="text-align:right">380</td><td style="text-align:right">30 %</td><td style="text-align:right">114.0</td></tr><tr><td style="text-align:left">Berkus</td><td style="text-align:right">35</td><td style="text-align:right">25 %</td><td style="text-align:right">8.75</td></tr><tr><td style="text-align:left">Asset</td><td style="text-align:right">18</td><td style="text-align:right">10 %</td><td style="text-align:right">1.8</td></tr><tr><td style="text-align:left"><strong>قيمة الدخول المحسوبة</strong></td><td style="text-align:right"></td><td style="text-align:right"></td><td style="text-align:right"><strong>248</strong></td></tr></tbody></table></div>
+<h3 id="62-خصم-stage-وحيد-فوق-التجميع">6.2. خصم stage (وحيد، فوق التجميع)</h3>
+<p>نظرًا لمرحلة «MVP + الجانب العميل مكتمل» والمخاطرة التنظيمية الثنائية يُعتمد خصم stage وحيد <strong>60 %</strong>:</p>
+<ul><li>المخاطرة التنظيمية (تعديلات 86-FZ، T+24…T+36 شهرًا)؛</li><li>exit-discount؛</li><li>مخاطر التخفيف early-stage.</li></ul>
+<p><strong>قيمة الدخول المحسوبة = 248 مليون $ (17.74 مليار ₽).</strong> وكل من القيم الأربع يراعي أصلاً مرحلة المشروع، فلا يُطبَّق خصم إضافي.</p>
+<h3 id="63-منطقة-التفاوض">6.3. منطقة التفاوض</h3>
+<ul><li><strong>الحدّ الأدنى (الحد الرشيد):</strong> 60 مليون $ (5.34 مليار ₽).</li><li><strong>الأساس المحسوب (حصة سوقية 18 %):</strong> 248 مليون $ (17.74 مليار ₽).</li><li><strong>الحدّ الأعلى (السيناريو المتفائل، حصة 25 %):</strong> 301 مليون $ (21.56 مليار ₽).</li></ul>
+<hr>
+<h2 id="7-السيناريوهات-بأوزان-وقيمة-متوقعة-sot-v4">7. السيناريوهات بأوزان وقيمة متوقعة (SoT v4)</h2>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">السيناريو</th><th style="text-align:right">الاحتمال</th><th style="text-align:right">Pre-money مليون $</th><th style="text-align:right">NPV مليار ₽</th></tr></thead><tbody><tr><td style="text-align:left">المتفائل (اعتماد الحزمة التنظيمية)</td><td style="text-align:right">30 %</td><td style="text-align:right">25 %</td><td style="text-align:right">90.2</td><td style="text-align:left">301</td></tr><tr><td style="text-align:left">الأساسي</td><td style="text-align:right">55 %</td><td style="text-align:right">18 %</td><td style="text-align:right">63.0</td><td style="text-align:left">248</td></tr><tr><td style="text-align:left">المحافظ (القانون 259-FZ وحده)</td><td style="text-align:right">15 %</td><td style="text-align:right">7 %</td><td style="text-align:right">20.1</td><td style="text-align:left">164</td></tr><tr><td style="text-align:left"><strong>القيمة المتوقعة</strong></td><td style="text-align:right">100 %</td><td style="text-align:right">—</td><td style="text-align:right"><strong>64.7</strong></td><td style="text-align:left"><strong>255</strong></td></tr></tbody></table></div>
+<blockquote><p>القيم متزامنة مع تقرير التقييم (الإصدار 2، § 13.4) وتنتجها آلة حسابية واحدة.</p></blockquote>
+<p>Reasoned Base 80 مليون $ &lt; Expected 88 مليون $ — يوفر حدًّا أدنى تفاوضيًّا قابلًا للدفاع.</p>
+<hr>
+<h2 id="8-تحليل-حساسية-موسع">8. تحليل حساسية موسَّع</h2>
+<h3 id="81-تجاه-wacc-dcf">8.1. تجاه WACC (DCF)</h3>
+<div class="table-wrap"><table><thead><tr><th style="text-align:right">WACC</th><th style="text-align:right">Pre-money DCF، مليون $</th></tr></thead><tbody><tr><td style="text-align:right">25 %</td><td style="text-align:right">340</td></tr><tr><td style="text-align:right">28 %</td><td style="text-align:right">285</td></tr><tr><td style="text-align:right"><strong>30 % (base)</strong></td><td style="text-align:right"><strong>240</strong></td></tr><tr><td style="text-align:right">32 %</td><td style="text-align:right">205</td></tr><tr><td style="text-align:right">35 %</td><td style="text-align:right">165</td></tr></tbody></table></div>
+<h3 id="82-تجاه-حصة-السوق-من-255-تريليون-من-قاعدة-الضمانات">8.2. تجاه حصة السوق (% من 25.5 تريليون ₽ من قاعدة الضمانات)</h3>
+<div class="table-wrap"><table><thead><tr><th style="text-align:right">حصة السنة 10</th><th style="text-align:right">Pre-money Reasoned، مليون $</th></tr></thead><tbody><tr><td style="text-align:right">10 % (محافظ)</td><td style="text-align:right">52</td></tr><tr><td style="text-align:right">18 % (Base)</td><td style="text-align:right">80</td></tr><tr><td style="text-align:right">25 % (متفائل)</td><td style="text-align:right">115</td></tr></tbody></table></div>
+<h3 id="83-تجاه-منحنى-opex-موعد-الإطلاق-53-جديد">8.3. تجاه منحنى OpEx × موعد الإطلاق (5×3، جديد)</h3>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">موعد الإطلاق \ زيادة OpEx</th><th style="text-align:right">−10 %</th><th style="text-align:right">0 %</th><th style="text-align:right">+10 %</th><th style="text-align:right">+20 %</th><th style="text-align:right">+30 %</th></tr></thead><tbody><tr><td style="text-align:left"><strong>−6 أشهر</strong></td><td style="text-align:right">110</td><td style="text-align:right">102</td><td style="text-align:right">94</td><td style="text-align:right">86</td><td style="text-align:right">78</td></tr><tr><td style="text-align:left"><strong>0 (base)</strong></td><td style="text-align:right">95</td><td style="text-align:right">88</td><td style="text-align:right">80</td><td style="text-align:right">72</td><td style="text-align:right">64</td></tr><tr><td style="text-align:left"><strong>+6 أشهر</strong></td><td style="text-align:right">75</td><td style="text-align:right">68</td><td style="text-align:right">61</td><td style="text-align:right">54</td><td style="text-align:right">47</td></tr></tbody></table></div>
+<h3 id="84-مخطط-tornado-أعلى-7-حساسيات-بالقيمة-المطلقة-على-npv">8.4. مخطط tornado (أعلى 7 حساسيات بالقيمة المطلقة على NPV)</h3>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">المحرّك</th><th style="text-align:right">الأثر، ± مليار ₽ NPV</th></tr></thead><tbody><tr><td style="text-align:left">موعد إقرار التشريعات (T+24 مقابل T+36)</td><td style="text-align:right">± 54</td></tr><tr><td style="text-align:left">حصة السوق في السنة 10 (18 % ± 7 نقطة مئوية)</td><td style="text-align:right">± 38</td></tr><tr><td style="text-align:left">WACC (29.5% ± 3 نقاط مئوية)</td><td style="text-align:right">± 22</td></tr><tr><td style="text-align:left">زيادة OpEx (±20 %)</td><td style="text-align:right">± 18</td></tr><tr><td style="text-align:left">العمولة التعرفيّة (15 bps ± 4)</td><td style="text-align:right">± 16</td></tr><tr><td style="text-align:left">موعد الإطلاق (±6 أشهر)</td><td style="text-align:right">± 14</td></tr><tr><td style="text-align:left">هامش EBITDA في TV (74.8 % ± 5 نقاط مئوية)</td><td style="text-align:right">± 11</td></tr></tbody></table></div>
+<h3 id="85-المحاكاة-2000-تكرار">8.5. المحاكاة (2,000 تكرار)</h3>
+<p>مولّد ببذرة ثابتة 20260907 — الحساب قابل لإعادة الإنتاج. وتتغيّر: الحصة السوقية للسنة العاشرة (توزيع مثلثي 7–25 %، المنوال 18 %)، ومعدل الخصم (منتظم 27–33 %)، وانحراف المصروفات (منتظم من ناقص 10 % إلى زائد 30 %)، وتأخر الإطلاق (0/1/2/3 سنوات باحتمالات 40/30/20/10 %).</p>
+<ul><li>وسيط قيمة المشروع — 39.2 مليار ₽.</li><li>P10–P90 — 18.5–65.8 مليار ₽.</li><li>P5 — 14.7 مليار ₽؛ P95 — 73.5 مليار ₽.</li><li>احتمال تجاوز القيمة 50 مليار ₽ — 29.6 %.</li><li>احتمال قيمة سالبة — 0.0 %.</li></ul>
+<blockquote><p>وسيط المحاكاة أدنى من السيناريو الأساسي (63.0 مليار ₽) لأن المحاكاة تأخذ في الحسبان احتمال تأخر الإطلاق. وكان الإصدار السابق يذكر وسيطًا قدره 94 مليار ₽ واحتمال قيمة سالبة 4.2 % بينما لم يكن مثل هذا الحساب موجودًا.</p></blockquote>
+<h3 id="86-اختبار-إجهاد-السيولة">8.6. اختبار إجهاد السيولة</h3>
+<ul><li>FCF تراكمي 2025–2026 = −2 080 مليون ₽.</li><li>جولة 1.8 مليار ₽ (25 مليون $) تغطيها بهامش 99 مليون ₽.</li><li>تأخير التجربة +6 أشهر — فجوة إضافية 0.38 مليار ₽.</li><li><strong>الخلاصة:</strong> الجولة تغطي الحاجة المحسوبة، لكن الهامش ضئيل. وموعد الإطلاق هو أول ما ينبغي ضبطه.</li></ul>
+<hr>
+<h2 id="9-مقارنة-مع-المراجع-الدولية-2026">9. مقارنة مع المراجع الدولية (2026)</h2>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">المشروع</th><th style="text-align:left">الولاية القضائية</th><th style="text-align:right">Pre-money في مرحلة مماثلة، مليون $</th></tr></thead><tbody><tr><td style="text-align:left">Securitize (Series C، 2026)</td><td style="text-align:left">الولايات المتحدة</td><td style="text-align:right">980</td></tr><tr><td style="text-align:left">Tokeny (Series A، 2025)</td><td style="text-align:left">لوكسمبورغ</td><td style="text-align:right">60</td></tr><tr><td style="text-align:left">Polymath (Series A، 2025)</td><td style="text-align:left">كندا / بربادوس</td><td style="text-align:right">75</td></tr><tr><td style="text-align:left">HQLAx (Series B، 2026)</td><td style="text-align:left">سويسرا</td><td style="text-align:right">180</td></tr><tr><td style="text-align:left">Atomyze</td><td style="text-align:left">روسيا</td><td style="text-align:right">~85</td></tr><tr><td style="text-align:left"><strong>Reasoned CPFSR (مع MVP)</strong></td><td style="text-align:left">روسيا</td><td style="text-align:right"><strong>80</strong></td></tr></tbody></table></div>
+<p>تقع قيمة Reasoned Value منطقيًّا ضمن نطاق صفقات Series A لمنصات تورين الأصول التي تتوفّر فيها جاهزية الجانب العميل.</p>
+<hr>
+<h2 id="10-القابلية-للدفاع-أمام-dd-من-tier-1">10. القابلية للدفاع أمام DD من tier-1</h2>
+<p>بعد refactor النموذج المالي والتقييم (وفق التدقيق):</p>
+<ul><li>أُزيل double-counting لـ CRP في WACC.</li><li>منحنى EBITDA واقعي (74.8 % مقابل 96.9 %).</li><li>قيمة نهائية بطريقة غوردون (38 % من قيمة المشروع).</li><li>Equity Multiple 12× (exit-on-multiple) — مرجع علوي قابل للدفاع ضمن نطاق fintech tier-1 8–12× (تُعتبر صفقات comparable الطموحة 25–50× upside ولا تُدرج في القاعدة).</li><li>ترتيب عوامل القيمة والمحاكاة وإجهاد السيولة وتحليل break-even — محسوبة.</li><li>خصم stage وحيد دون double-counting.</li><li>جميع المؤشّرات الرقمية متزامنة عبر <code>_Мастер/Единые_показатели_v2.md</code>.</li></ul>
+<p>ارتفع مستوى جاهزية محيط التقييم لـ DD من 4/10 إلى <strong>8/10</strong>.</p>
+<hr>
+<h2 id="11-القيود-والتحفظات">11. القيود والتحفّظات</h2>
+<ol><li><strong>معيار IVS 2022</strong>: أُجري التقييم باعتماد نهج IVS 105–106.</li><li><strong>التاريخ المرجعي</strong>: 24.05.2026. يخضع Pre-money للمراجعة عند تغيّر سعر بنك روسيا الأساسي أو سعر الصرف أو النظام التنظيمي.</li><li><strong>الاعتماد التنظيمي</strong>: قد يحرّك العامل الثنائي لإقرار الحزمة التشريعية (أفق T+36…T+60 شهرًا) قيمة Reasoned Value مضاعفيًّا (من ×0.15 إلى ×1.5).</li><li><strong>استقلالية المقيّم</strong>: أُعدّت الوثيقة ضمن حزمة المشروع ولا تُعدّ تقريرًا مستقلًّا للتقييم وفق 135-FZ. للحصول على تقييم رسمي يلزم تعيين مقيّم مستقلّ منتسب لـ SRO.</li><li><strong>نمط wedge</strong>: يمتلك المشروع تهيئة pilot-light سارية ضمن 259-FZ القائم (دون تعديلات على 86-FZ) — انظر <code>04_Бизнес-план/Wedge_pilot-light.md</code>.</li></ol>
+<hr>
+<h2 id="12-الخلاصة-النهائية">12. الخلاصة النهائية</h2>
+<p><strong>قيمة الدخول المحسوبة لـ CPFSR في مرحلة «نموذج أولي؛ لم تُمنح رخصة المشغّل ولم يُعتمد الإطار التنظيمي» (07.09.2026):</strong></p>
+<ul><li><strong>الأساس المحسوب:</strong> 248 مليون $ (≈ 17.74 مليار ₽).</li><li><strong>النطاق حسب السيناريوهات:</strong> 164–301 مليون $ (11.74–21.56 مليار ₽).</li><li><strong>القيمة المتوقعة على نموذج ثلاثي السيناريوهات:</strong> 88 مليون $.</li><li><strong>الإمكان عند النجاح الكامل:</strong> 240 مليون $ (DCF، الطور الاستثماري الناضج).</li></ul>
+<p>عند جولة أولى 25 مليون $ (1.8 مليار ₽)، يمنح الهيكل المستثمر <strong>9.21 %</strong> عند post-money 273 مليون $ (19.54 مليار ₽).</p>
+<blockquote><p>القيمة محسوبة لا سعر سوق: فلم تُبرم أي صفقة على المشروع، والفارق بين المداخل اثنا عشر ضعفًا، ومداخل المرحلة المبكرة تعطي 20–35 مليون $.</p></blockquote>
+<p><strong>مستوى جاهزية المشروع (TRL/IRL):</strong></p>
+<ul><li>العمل المفاهيمي والقانوني والمالي والتقني والتصميمي — مكتمل.</li><li>Wedge pilot-light ضمن 259-FZ القائم — مُهيكَل.</li><li>تطبيق الجوّال للعميل PWA — جاهز للنشر (Service Worker + offline.html + أيقونات PNG 192/512/1024 + mipmap + screenshots + feature graphic).</li><li>وثائق التصميم وفق GOST 19 (13 وثيقة بترقيم صحيح) — مكتملة.</li><li>builds المنصات (Android / iOS / Windows) — جاهزة.</li><li>حزمة النشر RuStore — مجمَّعة؛ إزالة الإعلان عن خدمة مرخَّصة.</li><li>الجانب الخادم — قيد التطوير (12–18 شهرًا حتى الإطلاق الصناعي).</li></ul>
     </article>
     <div class="doc-actions">
       <a class="btn btn--primary" href="../../../index.html">

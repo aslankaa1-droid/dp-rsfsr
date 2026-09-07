@@ -210,7 +210,7 @@ Out of 33 AMBERs from Post-Horizon II:
 | ESG score (ready) | 4.2/10 → 7.8/10 (T+18) | 6.0 | 8.5 |
 | Governance independence | 60% (target) | 33–50% | 60% |
 
-The CPFSR metrics for the Base scenario sit at the 75th percentile of tier-1 fintech, which explains the defensibility of pre-money Base USD 100 and the Reasoned range of USD 70–140M.
+The CPFSR metrics for the Base scenario sit at the 75th percentile of tier-1 fintech, which explains the defensibility of pre-money Base USD 100% and the Reasoned range of USD 70–140M.
 
 ---
 
@@ -251,7 +251,7 @@ Forecast composite score after Horizon IV: **9.5–9.8 / 10** — international 
 
 - **Auditors:** A·Tech / B·Legal / C·Fin / D·Strat / E·Design / F·QA (as in Horizons I–II) + the new G·International
 - **Weights:** 0.17 / 0.17 / 0.17 / 0.13 / 0.10 / 0.11 / 0.15 = 1.00 (re-weighted to introduce G)
-- **Invariant:** SoT v3 (NPV 63.4 / IRR 62% / EM 12× / WACC 29.5 / Payback 2.8 / FX 71.55 / post-money USD 115)
+- **Invariant:** SoT v3 (NPV 63.4 / IRR 62% / EM 12× / WACC 29.5% / Payback 2.8 / FX 71.55 / post-money USD 115%)
 - **CI:** 29 / 29 invariants passing
 - **Snapshots:** pre-horizon3 (7.02 MB) + post-horizon3 (7.09 MB)
 

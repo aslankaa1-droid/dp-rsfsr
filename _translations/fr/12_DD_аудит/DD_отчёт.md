@@ -150,16 +150,16 @@ La plateforme s'appuie sur :
 Modèle sur 10 ans, en scénarios BASE / CONSERVATEUR / OPTIMISTE.
 
 **KPI clés (BASE) :**
-- VAN @ CMPC 29,5 % = **63,0 Md ₽** ;
-- TRI ≈ 62 % (avec TV) ;
-- Payback = **2,73 ans** ;
-- Pic de besoin de financement = **1,3 Md ₽** (tour initial) ;
-- Revenu année 5 = 37 Md ₽ ;
-- Revenu année 10 = 138 Md ₽ ;
+- Valeur d’entreprise au taux de 29,58 % = **63,0 Md ₽** ;
+- taux de rendement interne du projet — 182 % (inutilisable en négociation : le modèle ne reflète pas le coût complet d’entrée sur le marché) ;
+- récupération **2,73 ans** en simple, **3,05 ans** en actualisé ;
+- pic de besoin de financement = **1,70 Md ₽** (fin 2028) ; le tour de 1,8 Md ₽ le couvre avec un coussin de 99 M ₽ ;
+- revenu année 5 (2031) = 39,0 Md ₽ ;
+- revenu année 10 (2036) = 142,6 Md ₽ ;
 - Marge EBITDA TV ≈ 74,8 % (reflète la nature infrastructure compte tenu des ajouts OpEx pour compliance, cybersécurité, juridique et pool évaluateurs/assureurs).
 
 **Hypothèses du modèle :**
-- Part des 25 500 Md ₽ croît de 0,5 % en année 2 à 20 % en année 10.
+- La part des 25 000 Md ₽ croît de 0,4 % en année 2 à 18 % en année 10.
 - Commission moyenne d'émission DFA : 0,5 % du nominal.
 - Commission de servicing : 0,3 % par an des DFA en circulation.
 - CapEx : 850 M ₽ sur 18 mois ; OpEx : 380 M ₽/an avec indexation +10 %/an.
@@ -168,7 +168,7 @@ Modèle sur 10 ans, en scénarios BASE / CONSERVATEUR / OPTIMISTE.
 ### 4.2. Sensibilité
 - CMPC ±3 pp → VAN ±25 % ;
 - Part de marché ×0,5 → VAN −27 % ;
-- Commission ±20 % → VAN ±14,5.
+- Commission ±20 % → VAN ±14,5%.
 
 La sensibilité est asymétrique : même les scénarios conservateurs (part ×0,5 ; CMPC 25 %) donnent **VAN ~57 Md ₽** — le modèle est résilient.
 
@@ -272,9 +272,9 @@ Les opérations DFA sont régies par :
 - Rosfinmonitoring : sans frais spéciaux.
 
 ### 7.3. Charge fiscale du modèle
-- Taux effectif IS : 20 % (standard).
+- Taux effectif d’impôt sur les bénéfices : 25 % (en vigueur depuis le 01.01.2025, loi fédérale 176-FZ du 12.07.2024) ; plus faible les premières années bénéficiaires grâce au report des pertes.
 - Cotisations sociales : 30 %.
-- TVA : applicabilité par opération à préciser.
+- TVA : les opérations sur actifs financiers numériques ne sont pas soumises à la TVA — ces actifs relèvent des valeurs mobilières (sous-clause 12, clause 2, art. 149 du Code des impôts).
 
 ### Résultat : 🟡 Amber
 
@@ -337,9 +337,9 @@ Le projet est **recommandé pour un financement initial** sous condition de :
 4. Sélection CEO et CTO dans les 60 premiers jours.
 5. PoC de deux fournisseurs DLT dans les 90 premiers jours.
 
-**Tour cible :** 15 M USD (1,335 Md ₽ au taux 71,55) au post-money de 95 M USD (8,455 Md ₽) sur le scénario Base (pre-money 80 M USD) ; part investisseur — 13,04. Fourchette raisonnée de 60–115 M USD post-money.
+**Tour cible :** 1,8 Md ₽ (25 M USD) — le besoin de pointe calculé est de 1,70 Md ₽ auquel s’ajoute une réserve. À une valeur d’entrée calculée de 248 M USD (17,74 Md ₽) et un tour de 25 M USD, la part de l’investisseur est de 9,21 %, post-money 273 M USD. La fourchette de valeur d’entrée selon les scénarios est de 164–301 M USD.
 
-**Argument principal :** le ratio « besoin / potentiel » = 1 : 20 000. Même le scénario conservateur donne une VAN de plusieurs dizaines de Md ₽. Le risque réglementaire est le seul significatif et reste binaire avec une mitigation claire.
+**Argument principal :** même le scénario conservateur donne une valeur d’entreprise de 20,1 Md ₽ pour un besoin de financement de 2,28 Md ₽. Deux risques doivent être nommés franchement : le risque réglementaire (binaire) et le risque de calendrier — chaque année de retard au lancement retire environ un quart de la valeur et double à peu près le besoin de trésorerie.
 
 ---
 

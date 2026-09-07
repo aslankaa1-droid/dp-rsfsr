@@ -150,25 +150,25 @@ At the DD date there are no formal agreements with the CBR, Ministry of Finance,
 A 10-year model, with BASE / CONSERVATIVE / OPTIMISTIC scenarios.
 
 **Key KPIs (BASE):**
-- NPV @ WACC 29.5 = **RUB 63.0 bn**;
-- IRR ≈ 62% (with TV);
-- Payback = **2.73 years**;
-- Peak financing need = **RUB 1.3 bn** (starter round);
-- Year-5 revenue = RUB 37 bn;
-- Year-10 revenue = RUB 138 bn;
+- Enterprise value at a rate of 29.58% = **RUB 63.0 bn**;
+- project internal rate of return — 182% (unusable in negotiations: the model does not reflect the full cost of entering the market);
+- payback **2.73 years** simple, **3.05 years** discounted;
+- peak financing need = **RUB 1.70 bn** (end of 2028); the round of RUB 1.8 bn covers it with a cushion of RUB 99 mn;
+- Year-5 revenue (2031) = RUB 39.0 bn;
+- Year-10 revenue (2036) = RUB 142.6 bn;
 - TV EBITDA margin ≈ 74.8% (reflects the infrastructure nature, taking into account OpEx add-ons for compliance, cyber-security, legal support and a pool of appraisers/insurers).
 
 **Model assumptions:**
-- Share of the RUB 25.5 tn market grows from 0.5% in Year 2 to 20% in Year 10.
+- Share of the RUB 25 tn market grows from 0.4% in Year 2 to 18% in Year 10.
 - Average DFA issuance commission: 0.5% of nominal.
 - Servicing commission: 0.3% per annum on outstanding DFA.
 - CapEx: RUB 850 mn over 18 months; OpEx: RUB 380 mn/year with +10%/year indexation.
-- WACC: 29.5 (based on 10Y OFZ + risk premium).
+- WACC: 29.5% (based on 10Y OFZ + risk premium).
 
 ### 4.2. Sensitivity
 - WACC ±3 p.p. → NPV ±25%;
 - Market share ×0.5 → NPV –27%;
-- Commission ±20% → NPV ±14.5.
+- Commission ±20% → NPV ±14.5%.
 
 The sensitivity is asymmetric: even conservative scenarios (share ×0.5; WACC 25%) yield an **NPV of ~RUB 57 bn** — the model is resilient.
 
@@ -272,7 +272,7 @@ DFA transactions are governed by:
 - Rosfinmonitoring: no special fees.
 
 ### 7.3. Tax burden under the model
-- Effective profit tax rate: 20% (standard).
+- Effective profit tax rate: 25% (the rate in force from 01.01.2025 under Federal Law 176-FZ of 12.07.2024); lower in the first profitable years owing to loss carry-forward.
 - Social contributions: 30%.
 - VAT: applicability across operations to be clarified.
 
@@ -337,9 +337,9 @@ The project is **recommended for starter financing** subject to:
 4. Selection of a CEO and CTO in the first 60 days.
 5. A PoC of two DLT providers in the first 90 days.
 
-**Target starter round:** USD 15M (RUB 1.335 bn at the rate of 71.55) at a post-money of USD 115 (RUB 8.455 bn) under the Base scenario (pre-money USD 100); investor stake — 13.04. Reasoned range of USD 70–140M post-money.
+**Target starter round:** RUB 1.8 bn (USD 25M) — the calculated peak requirement is RUB 1.70 bn plus a reserve. At a calculated entry value of USD 248M (RUB 17.74 bn) and a round of USD 25M the investor stake is 9.21%, post-money USD 273M. The range of entry value across scenarios is USD 164–301M.
 
-**Main argument:** the "need-to-potential" ratio = 1 : 20,000. Even the conservative scenario yields an NPV in the tens of billions of rubles. The regulatory risk is the only significant one and it is binary with a clear mitigation plan.
+**Main argument:** even the conservative scenario gives an enterprise value of RUB 20.1 bn against a financing requirement of RUB 2.28 bn. Two risks should be named outright: the regulatory one (binary) and the schedule risk — every year of launch delay removes roughly a quarter of the value and roughly doubles the cash requirement.
 
 ---
 

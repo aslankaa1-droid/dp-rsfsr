@@ -33,7 +33,7 @@ Ce régime ne nécessite pas d'amendements à 86-FZ ni au Code budgétaire ; il 
 | **Assureur initial** | Sogor / Ingosstrakh / SOGAZ-SK (appel d'offres) |
 | **Source de financement ciblé** | Crédits d'infrastructure VEB.RF (Fabrique de financement de projet) sous garanties d'État |
 | **Base réglementaire** | 259-FZ + 779-P + régime juridique expérimental (RJE) 258-FZ |
-| **Timing de lancement** | **Q3 2027 (T+18 mois à compter de la constitution de la JSC)** |
+| **Timing de lancement** | **Q3 2028 (T+18 mois à compter de la constitution de la JSC)** |
 
 ---
 
@@ -144,7 +144,7 @@ Le tour initial de 15 M $ (1 335 M ₽) est alloué :
 - 24,6 M ₽ — constitution de la JSC et enregistrement réglementaire.
 - 720 M ₽ — CapEx premiers 18 mois (plateforme, data centers, licences).
 - 502 + 220 = 722 M ₽ — OpEx année 1 (y compris masse salariale pour 40 personnes).
-- **Cash-runway gap (2025–2026) :** −2 080 M ₽ (avec FCF Y1 −1,02 + Y2 −1,06). Tour 15 M $ = 1,335 Md ₽ ferme 64 % du pic. **Financement-bridge de 0,75 Md ₽** sur 6–9 mois via VEB.RF / partner bank contre gage IP — valeur unique au niveau du projet (synchronisée avec Modèle_financier.md § 4.7 et Évaluation_internationale.md § 8).
+**Besoin de financement.** Dans le scénario de base, le pic survient fin 2028 et s’élève à 1 701 M ₽ ; dans le scénario conservateur (wedge), à 2 277 M ₽, le chiffre d’affaires croissant plus lentement à charges égales. Le tour annoncé de 1,8 Md ₽ couvre le scénario de base avec un coussin et le conservateur à 79 % ; le solde est comblé par une tranche intermédiaire.
 
 ---
 
@@ -173,7 +173,7 @@ Avantage principal du wedge : **le projet n'arrive pas à la BCR avec une demand
 | Émission de roubles contre collatéral illiquide — QE avec risque de crédit caché | Dans le wedge — financement via VEB.RF sous garanties régionales ; risque de crédit au bilan VEB.RF, pas BCR |
 | Double-comptage du collatéral | Dans le wedge — absent : VEB.RF accorde un vrai crédit contre un vrai gage ; les DFA sont des instruments de règlement |
 | Binarité réglementaire (10 NPA — projet politique) | Dans le wedge — aucun amendement à la législation en vigueur ; uniquement validations au sein de 259-FZ et 258-FZ |
-| Délai jusqu'à première émission de DFA | Dans le wedge — **T+18 mois à compter de la constitution de la JSC** (timing unique : voir § 2 Q3 2027) ; étapes § 4 calibrées sur ce KPI. Phase horizon avec paquet NPA — T+36…T+60 mois réaliste |
+| Délai jusqu'à première émission de DFA | Dans le wedge — **T+18 mois à compter de la constitution de la JSC** (timing unique : voir § 2 Q3 2028) ; étapes § 4 calibrées sur ce KPI. Phase horizon avec paquet NPA — T+36…T+60 mois réaliste |
 
 ---
 
@@ -196,10 +196,10 @@ Avantage principal du wedge : **le projet n'arrive pas à la BCR avec une demand
 ## 9. Ce que le wedge-pilot modifie dans le modèle financier
 
 Le **modèle financier** (`03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.md`) prend en compte le régime wedge dans le scénario Conservateur :
-- Part de marché année 10 — 7 % (vs 18 % en Base).
-- VAN ≈ 22 Md ₽ (vs 63,0 Md ₽ en Base, CMPC 29,5 % — voir SoT v3).
-- TRI ≈ 38 % (vs 62 % en Base).
-- Equity Multiple ≈ 5–6× (vs 12× en Base, exit-on-multiple).
+- Part de marché année 10 — 7 % (contre 18 % dans le scénario de base).
+- Valeur d’entreprise — 20,1 Md ₽ (contre 63,0 Md ₽ dans le scénario de base).
+- Récupération — 3,94 ans (contre 2,73 dans le scénario de base).
+- Pic de besoin de financement — 2 277 M ₽ (contre 1 701 M ₽).
 
 **Le scénario Conservateur wedge est le floor**, en deçà duquel le projet ne descend pas même en cas de refus total du paquet législatif.
 
@@ -210,7 +210,7 @@ Le **modèle financier** (`03_Финансовая_модель/Финансов
 Wedge / pilot-light sous 259-FZ existant — **pivot stratégique nécessaire** à l'issue du point d'audit D5. Rend le projet :
 - **Réglementairement réaliste** (pas besoin d'un paquet de 4 lois fédérales pour démarrer).
 - **Politiquement neutre** (ne menace pas le mandat BCR).
-- **Financièrement défendu** (VAN Conservateur 41 Md ₽ même en cas de refus des amendements).
+- **Financièrement défendu** (valeur d’entreprise 20,1 Md ₽ même en cas de refus du paquet d’amendements).
 - **Négociationnellement fort** (au bout de 24 mois d'exploitation effective — position consolidée pour entrer à la BCR avec le paquet NPA).
 
 C'est l'artefact final qui clôt le drapeau RED stratégique D5.

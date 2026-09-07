@@ -33,7 +33,7 @@ This regime does not require amendments to 86-FZ or the Budget Code; it fits ent
 | **Starting insurer** | Sogor / Ingosstrakh / SOGAZ-SK (tender) |
 | **Source of targeted funding** | Infrastructure loans from VEB.RF (Project Finance Factory) under state guarantees |
 | **Regulatory base** | 259-FZ + 779-P + the experimental legal regime under 258-FZ |
-| **Launch timing** | **Q3 2027 (T+18 months from incorporation of the JSC)** |
+| **Launch timing** | **Q3 2028 (T+18 months from incorporation of the JSC)** |
 
 ---
 
@@ -140,11 +140,11 @@ This regime does not require amendments to 86-FZ or the Budget Code; it fits ent
 
 ### 5.3. Cash-runway of the pilot
 
-A starting round of USD 15M (RUB 1,335 mn) is allocated as:
+The starter financing is allocated as:
 - RUB 24.6 mn — incorporation of the JSC and regulatory registration.
 - RUB 720 mn — CapEx for the first 18 months (platform, data centres, licences).
 - RUB 502 + 220 = 722 mn — Year-1 OpEx (including payroll for 40 persons).
-- **Cash-runway gap (2025–2026):** RUB −2,080 mn (taking into account Y1 FCF −1.02 + Y2 −1.06). A USD 15M round = RUB 1.335 bn closes 64% of the peak. **Bridge financing of RUB 0.75 bn** for 6–9 months via VEB.RF / partner bank against IP collateral — a single value across the project (synchronised with Financial_Model.md § 4.7 and International_Valuation.md § 8).
+**Financing requirement.** In the base scenario the peak falls at the end of 2028 and amounts to RUB 1,701 mn; in the conservative (wedge) scenario RUB 2,277 mn, because revenue grows more slowly against the same costs. The stated round of RUB 1.8 bn covers the base scenario with a cushion and the conservative one by 79%; the remainder is closed by an interim tranche.
 
 ---
 
@@ -173,7 +173,7 @@ The principal advantage of the wedge: **the project does not approach the CBR wi
 | Ruble issuance against illiquid collateral — QE with hidden credit risk | In the wedge — funding via VEB.RF under regional state guarantees; credit risk on the VEB.RF balance sheet, not on the CBR's |
 | Double-counting of collateral | In the wedge — none: VEB.RF extends a real loan against real collateral; DFA is a settlement instrument |
 | Regulatory binary nature (10 sub-legislative acts — a political project) | In the wedge — no amendments to current legislation are required; only clearances within 259-FZ and 258-FZ |
-| Time to first DFA issuance | In the wedge — **T+18 months from incorporation of the JSC** (single timeframe: see § 2 header Q3 2027); the steps in § 4 are calibrated to this KPI. The horizon phase with the legislative package — T+36 to T+60 months realistic |
+| Time to first DFA issuance | In the wedge — **T+18 months from incorporation of the JSC** (single timeframe: see § 2 header Q3 2028); the steps in § 4 are calibrated to this KPI. The horizon phase with the legislative package — T+36 to T+60 months realistic |
 
 ---
 
@@ -196,10 +196,10 @@ The principal advantage of the wedge: **the project does not approach the CBR wi
 ## 9. What the wedge-pilot changes in the financial model
 
 The **Financial Model** (`03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.md`) accounts for the wedge regime in the Conservative scenario:
-- Year-10 market share — 7% (vs 18% in Base).
-- NPV ≈ RUB 22 bn (vs RUB 63.0 bn in Base, WACC 29.5 — see SoT v3).
-- IRR ≈ 38% (vs 62% in Base).
-- Equity Multiple ≈ 5–6× (vs 12× in Base, exit-on-multiple).
+- Year-10 market share — 7% (against 18% in the base scenario).
+- Enterprise value — RUB 20.1 bn (against RUB 63.0 bn in the base scenario).
+- Payback — 3.94 years (against 2.73 in the base scenario).
+- Peak financing requirement — RUB 2,277M (against RUB 1,701M).
 
 **The Conservative wedge scenario is the floor**, below which the project does not fall even under a complete refusal of the legislative package.
 
@@ -210,7 +210,7 @@ The **Financial Model** (`03_Финансовая_модель/Финансов�
 The wedge / pilot-light under the existing 259-FZ is **a necessary strategic pivot** following audit point D5. It renders the project:
 - **Regulatorily realistic** (it does not require a package of four federal laws to launch).
 - **Politically neutral** (it does not threaten the CBR mandate).
-- **Financially defended** (Conservative NPV RUB 41 bn even under a refusal of amendments).
+- **Financially defended** (enterprise value RUB 20.1 bn even if the package of amendments is refused).
 - **Negotiationally strong** (after 24 months of actual operation — a consolidated position for entering the CBR with the legislative package).
 
 This is the final artefact that closes strategic RED flag D5.

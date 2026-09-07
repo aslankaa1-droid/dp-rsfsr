@@ -251,7 +251,7 @@
 
 - **المدقّقون:** A·Tech / B·Legal / C·Fin / D·Strat / E·Design / F·QA (كما في الأفقَين I–II) + المحور الجديد G·International
 - **الأوزان:** 0.17 / 0.17 / 0.17 / 0.13 / 0.10 / 0.11 / 0.15 = 1.00 (أُعيد ترجيحها لإدخال G)
-- **Invariant:** SoT v3 (NPV 63.4 / IRR 62 % / EM 12× / WACC 29.5 / Payback 2.8 / FX 71.55 / post-money 95 مليون $)
+- **Invariant:** SoT v3 (NPV 63.4 / IRR 62 % / EM 12× / WACC 29.5% / Payback 2.8 / FX 71.55 / post-money 95 مليون $)
 - **CI:** 29 / 29 invariants passing
 - **اللقطات:** pre-horizon3 (7.02 ميغابايت) + post-horizon3 (7.09 ميغابايت)
 

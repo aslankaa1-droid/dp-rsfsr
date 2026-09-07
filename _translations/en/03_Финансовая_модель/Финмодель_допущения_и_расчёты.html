@@ -257,521 +257,89 @@
       <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
     </header>
     <article class="doc-content">
-<blockquote class="translation-note">Note. This translation follows the Russian original. The financial section of the original was recalculated on 07.09.2026 (model v5): the figures and wording of this translation are still being brought in line. Until that is done the Russian version prevails in all cases.</blockquote>
-
-<h1
-id="cpfsr-financial-model-notes-on-assumptions-and-calculations">CPFSR
-Financial Model — notes on assumptions and calculations</h1>
-<p><strong>Document:</strong> accompanying note to the financial model.
-<strong>Related file:</strong>
-<code>Финансовая_модель_ЦП_РСФСР.md</code> (horizon 2025–2034 +
-multi-stage TV to 2045+). <strong>Concept author:</strong> A.-Kh. A.
-Kagirov, deposit certificate No. 4011265 of 19.12.2024 — fixation of the
-priority date and the hash; protection regime — know-how (Article 1465
-CC) + software (Article 1262 CC). <strong>Reference date:</strong>
-24.05.2026 (refactor following the composite audit; single SoT —
-<code>_Мастер/Единые_показатели_v2.md</code>).</p>
-<p>The purpose is to disclose the source of each figure and identify
-constraints, so that any tier-1 DD auditor can walk through the model
-with full understanding of the logic.</p>
-<hr />
-<h2 id="market-and-platform-share">1. Market and platform share</h2>
-<h3 id="collateral-capacity-rub-25-tn">1.1. Collateral capacity RUB 25
-tn</h3>
-<p>Source: author’s concept (РСФСР_6.pptx, slide 9).</p>
-<table>
-<thead>
-<tr>
-<th>Segment</th>
-<th style="text-align: right;">Volume, RUB tn</th>
-<th style="text-align: right;">Conservative (10% × 50%), RUB tn</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Residential stock (4.7 bn m² × RUB 85,000/m²)</td>
-<td style="text-align: right;">400</td>
-<td style="text-align: right;">20.0</td>
-</tr>
-<tr>
-<td>Commercial real estate</td>
-<td style="text-align: right;">45</td>
-<td style="text-align: right;">2.5</td>
-</tr>
-<tr>
-<td>Land plots</td>
-<td style="text-align: right;">62</td>
-<td style="text-align: right;">3.0</td>
-</tr>
-<tr>
-<td><strong>TOTAL</strong></td>
-<td style="text-align: right;"><strong>507</strong></td>
-<td style="text-align: right;"><strong>25.5</strong> ≈ 25</td>
-</tr>
-</tbody>
-</table>
-<p>Conservatism logic: only 10% of assets are engaged in the DFA system
-over a 10-year horizon, and the appraisal value for collateral purposes
-is 50% of market value (consistent with Basel LTV practice).</p>
-<h3 id="market-indexation-of-4-p.a.">1.2. Market indexation of 4%
-p.a.</h3>
-<p>The principal directional indicator of the Bank of Russia monetary
-policy.</p>
-<h3 id="platform-share-trajectory-post-refactor">1.3. Platform share —
-trajectory (post-refactor)</h3>
-<table style="width:100%;">
-<colgroup>
-<col style="width: 6%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-</colgroup>
-<thead>
-<tr>
-<th>Year</th>
-<th style="text-align: right;">1</th>
-<th style="text-align: right;">2</th>
-<th style="text-align: right;">3</th>
-<th style="text-align: right;">4</th>
-<th style="text-align: right;">5</th>
-<th style="text-align: right;">6</th>
-<th style="text-align: right;">7</th>
-<th style="text-align: right;">8</th>
-<th style="text-align: right;">9</th>
-<th style="text-align: right;">10</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Share (Base)</td>
-<td style="text-align: right;">0%</td>
-<td style="text-align: right;">0.4%</td>
-<td style="text-align: right;">1.8%</td>
-<td style="text-align: right;">4.4%</td>
-<td style="text-align: right;">8.8%</td>
-<td style="text-align: right;">10.8%</td>
-<td style="text-align: right;">12.6%</td>
-<td style="text-align: right;">14.4%</td>
-<td style="text-align: right;">16.2%</td>
-<td style="text-align: right;"><strong>18%</strong></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>The Year 10 target has been reduced from 20% to 18% (more
-defensible). Conservative scenario — 7%, Optimistic — 25%.</p>
-</blockquote>
-<h3 id="dfa-stack-outstanding-volume">1.4. DFA stack (outstanding
-volume)</h3>
-<p>Formula: stack(t) = sum of issuances over years (t−4)…t. Average DFA
-life = 5 years (infrastructure cycles).</p>
-<hr />
-<h2 id="operator-tariffs">2. Operator tariffs</h2>
-<table>
-<colgroup>
-<col style="width: 30%" />
-<col style="width: 40%" />
-<col style="width: 30%" />
-</colgroup>
-<thead>
-<tr>
-<th>Line</th>
-<th style="text-align: right;">Rate</th>
-<th>Market benchmark</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Issuance commission</td>
-<td style="text-align: right;">0.50%</td>
-<td>Russian DFA operators: 0.1–1%.</td>
-</tr>
-<tr>
-<td>Servicing commission on stack</td>
-<td style="text-align: right;">0.30%</td>
-<td>Depositories 0.05–0.15%; PE funds 1–2%.</td>
-</tr>
-<tr>
-<td>Platform fee (automated valuation)</td>
-<td style="text-align: right;">0.15%</td>
-<td>Appraisal companies 0.1–0.5%; insurance premiums 0.3–0.8%.</td>
-</tr>
-<tr>
-<td>B2B2G licences (max Year 10)</td>
-<td style="text-align: right;">0.15%</td>
-<td>Linear growth from 0 to 0.15%.</td>
-</tr>
-<tr>
-<td>Appraiser / insurer services (NEW)</td>
-<td style="text-align: right;">0.80%</td>
-<td>Pass-through; 85% — offsetting costs.</td>
-</tr>
-<tr>
-<td>Technical integrations (fixed)</td>
-<td style="text-align: right;">RUB 50–1,150 mn/yr</td>
-<td>RUB 10–50 mn per partner connection.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="capex-refactor-per-audit-explicit-capex-waves">3. CapEx
-(refactor per audit: explicit CapEx waves)</h2>
-<h3 id="first-18-months-rub-720-mn">3.1. First 18 months — RUB 720
-mn</h3>
-<table>
-<thead>
-<tr>
-<th>Item</th>
-<th style="text-align: right;">RUB mn</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Platform (core + ABS modules)</td>
-<td style="text-align: right;">450</td>
-</tr>
-<tr>
-<td>Data centres (redundancy + geo-replication)</td>
-<td style="text-align: right;">170</td>
-</tr>
-<tr>
-<td>CBR licences + compliance</td>
-<td style="text-align: right;">100</td>
-</tr>
-<tr>
-<td><strong>TOTAL (2025+2026)</strong></td>
-<td style="text-align: right;"><strong>720</strong></td>
-</tr>
-</tbody>
-</table>
-<h3 id="capex-waves-20272034">3.2. CapEx waves 2027–2034</h3>
-<table>
-<colgroup>
-<col style="width: 30%" />
-<col style="width: 40%" />
-<col style="width: 30%" />
-</colgroup>
-<thead>
-<tr>
-<th>Year</th>
-<th style="text-align: right;">RUB mn</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2027</td>
-<td style="text-align: right;">400</td>
-<td>Platform maturity, legal regime infrastructure</td>
-</tr>
-<tr>
-<td>2028</td>
-<td style="text-align: right;">550</td>
-<td>IS DFA register deployment (779-P)</td>
-</tr>
-<tr>
-<td><strong>2029</strong></td>
-<td style="text-align: right;"><strong>1,800</strong></td>
-<td><strong>Full-functional FSTEC/FSB certification + second data
-centre</strong></td>
-</tr>
-<tr>
-<td><strong>2030</strong></td>
-<td style="text-align: right;"><strong>2,400</strong></td>
-<td><strong>Scaling: third data centre + next-generation cryptographic
-modules</strong></td>
-</tr>
-<tr>
-<td>2031</td>
-<td style="text-align: right;">1,600</td>
-<td>Recurring modernisation</td>
-</tr>
-<tr>
-<td>2032</td>
-<td style="text-align: right;">1,800</td>
-<td>DLT vendor upgrade, smart-contract v2</td>
-</tr>
-<tr>
-<td><strong>2033</strong></td>
-<td style="text-align: right;"><strong>2,300</strong></td>
-<td><strong>Data-centre infrastructure expansion against a RUB 20 tn
-stack</strong></td>
-</tr>
-<tr>
-<td>2034</td>
-<td style="text-align: right;">2,000</td>
-<td>Recurring</td>
-</tr>
-</tbody>
-</table>
-<p>CapEx depreciation rate of 1/7 per year → platform useful life ~7
-years.</p>
-<hr />
-<h2 id="opex-refactor-per-audit-c3">4. OpEx (refactor per audit C3)</h2>
-<h3 id="starting-opex-excl.-payroll-rub-502-mn-was-380">4.1. Starting
-OpEx (excl. payroll) — RUB 502 mn (was 380)</h3>
-<p>Audit-driven increases: - <strong>+30% on the compliance
-block</strong> (growth in 779-P, AML/KYC, CFT requirements). -
-<strong>+25% on cyber-security</strong> (CII-1, 24/7 SOC, penetration
-tests, key rotation). - <strong>+40% on the legal block</strong>
-(contract pack, regulatory support, IP). - <strong>An
-“appraisers/insurers” block introduced</strong> — 0.8% of issuance
-volume (pass-through, 85% offsetting costs).</p>
-<p>Decomposition of the starting year 2025:</p>
-<table>
-<colgroup>
-<col style="width: 30%" />
-<col style="width: 40%" />
-<col style="width: 30%" />
-</colgroup>
-<thead>
-<tr>
-<th>Item</th>
-<th style="text-align: right;">RUB mn</th>
-<th>Logic</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Infrastructure</td>
-<td style="text-align: right;">117</td>
-<td>Hosting, connectivity, IS — for two data centres; +30% per
-audit</td>
-</tr>
-<tr>
-<td>Software licences</td>
-<td style="text-align: right;">50</td>
-<td>DBMS, monitoring</td>
-</tr>
-<tr>
-<td>Marketing</td>
-<td style="text-align: right;">60</td>
-<td>Conferences, sector activity</td>
-</tr>
-<tr>
-<td>Legal and audit</td>
-<td style="text-align: right;">70</td>
-<td>+40% per audit</td>
-</tr>
-<tr>
-<td>Cyber-security</td>
-<td style="text-align: right;">50</td>
-<td>SOC, pentests, key rotation (new item)</td>
-</tr>
-<tr>
-<td>B2B2G integrators</td>
-<td style="text-align: right;">95</td>
-<td>Contractors for the partner network</td>
-</tr>
-<tr>
-<td>Other</td>
-<td style="text-align: right;">60</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Total</strong></td>
-<td style="text-align: right;"><strong>502</strong></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>The OpEx curve in the mature phase delivers an EBITDA margin of 74.8%
-(vs 96.9% in the pre-refactor model).</p>
-<hr />
-<h2 id="payroll">5. Payroll</h2>
-<p>Headcount 40→370; average gross salary RUB 350k/month in Year 1,
-indexation 6% p.a.; social contributions 30%.</p>
-<hr />
-<h2 id="taxes">6. Taxes</h2>
-<ul>
-<li><strong>Profit tax 20%</strong> (Tax Code, Chapter 25). With IT
-accreditation + ≥ 70% IT revenue → 5% until 31.12.2030 (separate
-scenario: +25–30% to NPV).</li>
-<li><strong>VAT:</strong> DFA transactions — sub-para 12.2 of para 2 of
-Article 149 of the Tax Code (exemption); operator services — general
-rate of 20%.</li>
-<li><strong>Social contributions 30%</strong> (Tax Code, Chapter
-34).</li>
-</ul>
-<hr />
-<h2 id="wacc-refactor-per-audit-c5">7. WACC (refactor per audit C5)</h2>
-<p>Adjustment: removal of CRP double-counting in RUB-denominated RF; ERP
-raised from 6% to 9% (Damodaran May 2026); β set at 1.15.</p>
-<table>
-<thead>
-<tr>
-<th>Component</th>
-<th style="text-align: right;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Risk-free rate (10Y OFZ, 24.05.2026)</td>
-<td style="text-align: right;">14.73</td>
-</tr>
-<tr>
-<td>ERP × β (RF May 2026, β = 1.15)</td>
-<td style="text-align: right;">9% × 1.15 = 10.35%</td>
-</tr>
-<tr>
-<td>Stage premium (MVP ready)</td>
-<td style="text-align: right;">1.5%</td>
-</tr>
-<tr>
-<td>Liquidity premium</td>
-<td style="text-align: right;">2.5%</td>
-</tr>
-<tr>
-<td><strong>WACC (RUB) total</strong></td>
-<td style="text-align: right;"><strong>29.58 → 30.0%</strong></td>
-</tr>
-</tbody>
-</table>
-<p>Alternative methods: - CAPM (RUB): 15.5 + 1.15 × 9 = 25.85% — lower
-bound of the range. - Build-up: 15.5 + 6 + 2.5 + 3 = 27% — inside the
-range. - CBR rate + spread: 14.5 + 9 = 30% — matches.</p>
-<p>Defensible range: 27–32%. The Base case uses 30%.</p>
-<hr />
-<h2 id="multi-stage-tv-refactor-per-audit-c4">8. Multi-stage TV
-(refactor per audit C4)</h2>
-<p>Replacement of the single-stage Gordon TV with a 3-stage model with
-an explicit fade phase for growth rate and EBITDA margin:</p>
-<table>
-<thead>
-<tr>
-<th>Phase</th>
-<th>Years</th>
-<th style="text-align: right;">g</th>
-<th style="text-align: right;">EBITDA margin</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I — maturity</td>
-<td>2035–2039</td>
-<td style="text-align: right;">6% → 4%</td>
-<td style="text-align: right;">75% → 70%</td>
-</tr>
-<tr>
-<td>II — stability</td>
-<td>2040–2044</td>
-<td style="text-align: right;">3.5% → 2.5%</td>
-<td style="text-align: right;">70% → 65%</td>
-</tr>
-<tr>
-<td>III — perpetuity</td>
-<td>2045+</td>
-<td style="text-align: right;">2.0% (½ of CBR target)</td>
-<td style="text-align: right;">60%</td>
-</tr>
-</tbody>
-</table>
-<p>TV share in full NPV = <strong>9.0%</strong> (was 49%) — the critical
-threshold has been removed.</p>
-<hr />
-<h2 id="sensitivities-extended-set">9. Sensitivities (extended set)</h2>
-<p>Added per audit C9–C11: - WACC × Market share (5×5, existing). -
-Commissions × Inflation (3×5, existing). - <strong>OpEx curve × Launch
-timing</strong> (5×3, new). - <strong>FTE × Average salary</strong>
-(5×5, new). - <strong>TV EBITDA margin × g</strong> (3×3, new). -
-<strong>Tornado diagram</strong> top-10. - <strong>Simplified Monte
-Carlo</strong> (1,000 iterations, NPV median = RUB 91 bn, P10–P90 =
-38–162). - <strong>Break-even analysis</strong> (revenue at NPV = 0: RUB
-22.8 bn in 2030). - <strong>Cash-runway stress test</strong> (a +6-month
-delay → +RUB 0.38 bn cash gap; recommendation — USD 20M round).</p>
-<hr />
-<h2 id="working-capital">10. Working capital</h2>
-<p>5% of revenue — a standard assumption for fintech operators (Russian
-payment systems: 3–7%, depositories: 5–10%).</p>
-<hr />
-<h2 id="what-is-not-accounted-for-in-the-base-model-and-why">11. What is
-not accounted for in the base model (and why)</h2>
-<ol type="1">
-<li><strong>Government subsidies</strong> (RFRIT, Ministry of Digital
-Development) — upside, not included.</li>
-<li><strong>Debt financing</strong> — the model is equity-only; a mixed
-structure would deliver an additional tax shield.</li>
-<li><strong>FX risk</strong> — all flows are in rubles; no FX
-exposure.</li>
-<li><strong>Competition for collateral</strong> — Base assumes a unique
-category over the first 5 years; covered in the Conservative
-scenario.</li>
-<li><strong>Regulatory risk of rejection</strong> — disclosed in
-<code>04_Бизнес-план/Wedge_pilot-light.md</code>: should the legislative
-package not be adopted, the project operates in pilot-light mode under
-the existing 259-FZ (Conservative scenario — NPV RUB 41 bn).</li>
-</ol>
-<hr />
-<h2 id="consistency-with-the-interactive-finmodel.js">12. Consistency
-with the interactive finmodel.js</h2>
-<p>After audit point C9, synchronisation of
-<code>_shared/finmodel.js</code> v2 ↔︎ the MD model is achieved: payroll,
-CapEx waves, working capital, depreciation, tax shield and the
-multi-stage TV are all accounted for. The calculator in the major
-presentation produces NPV/IRR identical to the calculations in this
-document at the same slider settings.</p>
-<hr />
-<h2 id="sources">13. Sources</h2>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr>
-<th>Data type</th>
-<th>Source</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Collateral capacity</td>
-<td>Author’s concept (РСФСР_6.pptx, slide 9)</td>
-</tr>
-<tr>
-<td>Tax rates</td>
-<td>Tax Code of the Russian Federation</td>
-</tr>
-<tr>
-<td>Inflation target</td>
-<td>CBR Monetary Policy Guidelines</td>
-</tr>
-<tr>
-<td>CBR rate 14.5 on 24.05.2026</td>
-<td>Decision of the CBR Board of 24.04.2026</td>
-</tr>
-<tr>
-<td>FX RUB/USD 71.55</td>
-<td>Official Bank of Russia rate on 24.05.2026</td>
-</tr>
-<tr>
-<td>Russian housing stock</td>
-<td>Rosstat (form No. 1-zhilfond)</td>
-</tr>
-<tr>
-<td>Salary benchmarks</td>
-<td>HeadHunter, Habr Career 2024–2026</td>
-</tr>
-<tr>
-<td>ERP RF 8.13</td>
-<td>Damodaran Online ERP May 2026</td>
-</tr>
-<tr>
-<td>Platform CapEx benchmarks</td>
-<td>Public presentations of Russian fintech projects</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<p><strong>Date:</strong> 24.05.2026 (refactor following the composite
-audit) <strong>Prepared:</strong> within the CPFSR project.</p>
+<h1 id="financial-model-of-cp-rsfsr-basis-of-the-assumptions">Financial model of CP RSFSR — basis of the assumptions</h1>
+<blockquote><p><strong>Note.</strong> This is a translation of the Russian original. In case of any discrepancy in wording, the Russian version prevails. All figures are taken from the same calculation engine.</p></blockquote>
+<p><strong>Document:</strong> explanatory note accompanying the financial model. <strong>Related files:</strong> <code>Финансовая_модель_ЦП_РСФСР.md</code> (the calculation itself), <code>Модель/assumptions.json</code> (all input values), <code>Модель/Выгрузка/*.csv</code> (machine-readable export). <strong>Author of the concept:</strong> Kagirov A.-Kh.A., deposit certificate No. 4011265 of 19.12.2024 — fixing the priority date and the hash; protection regime — know-how (Art. 1465 Civil Code) plus computer programme (Art. 1262 Civil Code). <strong>Edition:</strong> v5 of 07.09.2026.</p>
+<p>The purpose of this note is to show where every value comes from, and to name honestly what rests on nothing but the author's design.</p>
+<blockquote><p><strong>The calculation is separated from the text.</strong> The figures live in <code>Модель/assumptions.json</code> and are computed by the engine <code>Модель/model.py</code>. Documents are assembled from the engine. This was done deliberately: in earlier editions the figures were stored separately in each document and drifted apart.</p></blockquote>
+<hr>
+<h2 id="1-the-market">1. The market</h2>
+<h3 id="11-collateral-capacity-of-rub-25-tn">1.1. Collateral capacity of RUB 25 tn</h3>
+<p>Source — the author's concept.</p>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">Segment</th><th style="text-align:right">Volume, RUB tn</th><th style="text-align:right">Part drawn in (10% of assets × 50% of value), RUB tn</th></tr></thead><tbody><tr><td style="text-align:left">Housing stock (4.7 bn m² × RUB 85,000 per m²)</td><td style="text-align:right">400</td><td style="text-align:right">20.0</td></tr><tr><td style="text-align:left">Commercial real estate</td><td style="text-align:right">45</td><td style="text-align:right">2.3</td></tr><tr><td style="text-align:left">Land plots</td><td style="text-align:right">62</td><td style="text-align:right">3.1</td></tr><tr><td style="text-align:left"><strong>Total</strong></td><td style="text-align:right"><strong>507</strong></td><td style="text-align:right"><strong>25.4 ≈ 25</strong></td></tr></tbody></table></div>
+<p>The logic of the constraint: only 10% of assets are drawn into the system, and for collateral purposes value is taken at 50% of market value — which corresponds to the practice of collateral haircuts.</p>
+<p><strong>What this is not.</strong> It is an estimate of potential capacity, not of demand. The project contains no evidence that owners are willing to pledge property on these terms. Verifying demand is the first thing that should be done before any conversation about money.</p>
+<h3 id="12-capacity-indexation-of-4-a-year">1.2. Capacity indexation of 4% a year</h3>
+<p>The Bank of Russia inflation target. There is no real market growth in the model — only revaluation.</p>
+<h3 id="13-trajectory-of-the-platforms-share">1.3. Trajectory of the platform's share</h3>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">Model year</th><th style="text-align:right">1</th><th style="text-align:right">2</th><th style="text-align:right">3</th><th style="text-align:right">4</th><th style="text-align:right">5</th><th style="text-align:right">6</th><th style="text-align:right">7</th><th style="text-align:right">8</th><th style="text-align:right">9</th><th style="text-align:right">10</th></tr></thead><tbody><tr><td style="text-align:left">Calendar year</td><td style="text-align:right">2027</td><td style="text-align:right">2028</td><td style="text-align:right">2029</td><td style="text-align:right">2030</td><td style="text-align:right">2031</td><td style="text-align:right">2032</td><td style="text-align:right">2033</td><td style="text-align:right">2034</td><td style="text-align:right">2035</td><td style="text-align:right">2036</td></tr><tr><td style="text-align:left">Market share</td><td style="text-align:right">0%</td><td style="text-align:right">0.4%</td><td style="text-align:right">1.8%</td><td style="text-align:right">4.4%</td><td style="text-align:right">8.8%</td><td style="text-align:right">10.8%</td><td style="text-align:right">12.6%</td><td style="text-align:right">14.4%</td><td style="text-align:right">16.2%</td><td style="text-align:right"><strong>18%</strong></td></tr></tbody></table></div>
+<p>The author lowered the year-ten target from 20% to 18% following the 2026 audit. The conservative scenario is 7%, the optimistic one 25%.</p>
+<p><strong>This is the model's principal unverified assumption.</strong> It rests on no pilot, no contracts and no comparable project. All the remaining arithmetic is derived from this line. In a discussion with an investor the conversation should start here, not with the resulting value.</p>
+<h3 id="14-the-horizon-starts-in-2027">1.4. The horizon starts in 2027</h3>
+<p>The previous edition counted from 2025 and assumed CFA issuance of RUB 104 bn as early as 2026. At the date of this edition there is no information-system operator licence, no adopted regulatory framework and no issue at all. The horizon has therefore been shifted: 2027 for preparation, 2028 for the first issues.</p>
+<p>The price of that shift is visible in the calculation: every year of delay removes roughly a quarter of enterprise value.</p>
+<h3 id="15-the-circulating-stack">1.5. The circulating stack</h3>
+<p>Stack of year t = the sum of issues over years t−4 … t. The average life of an issue is 5 years, which corresponds to the length of infrastructure cycles.</p>
+<hr>
+<h2 id="2-tariffs">2. Tariffs</h2>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">Line</th><th style="text-align:right">Rate</th><th style="text-align:left">Market benchmark</th></tr></thead><tbody><tr><td style="text-align:left">Issuance fee</td><td style="text-align:right">0.50%</td><td style="text-align:left">CFA operators in Russia: 0.1–1%</td></tr><tr><td style="text-align:left">Servicing fee on the stack</td><td style="text-align:right">0.30%</td><td style="text-align:left">depositories 0.05–0.15%; management companies 1–2%</td></tr><tr><td style="text-align:left">Platform fee (automated valuation)</td><td style="text-align:right">0.15%</td><td style="text-align:left">valuation firms 0.1–0.5%</td></tr><tr><td style="text-align:left">B2B2G licences</td><td style="text-align:right">from 0 to 0.15%</td><td style="text-align:left">linear growth over the years</td></tr><tr><td style="text-align:left">Technology integrations</td><td style="text-align:right">RUB 50–1,150 mn per year</td><td style="text-align:left">RUB 10–50 mn per partner connection</td></tr><tr><td style="text-align:left">Appraisal and insurance, gross tariff</td><td style="text-align:right">0.80%</td><td style="text-align:left">insurance premiums 0.3–0.8%</td></tr></tbody></table></div>
+<h3 id="21-why-appraisal-and-insurance-are-recognised-net">2.1. Why appraisal and insurance are recognised net</h3>
+<p>In this line the platform acts as an agent: it collects 0.8% of volume and passes 85% of that on to appraisers and insurers. Its own margin is 0.12% of volume. Only that margin enters revenue; gross billings are shown on a separate memorandum line.</p>
+<p>In the previous edition the whole 0.8% was counted as platform revenue. In 2034 that produced RUB 51,240 mn — more than a third of all stated revenue — while the offsetting costs never reached the cost side. The note "pass-through, 85% offsetting costs" was present in the memorandum to the model but was never carried into the calculation.</p>
+<h3 id="22-tariffs-are-not-indexed">2.2. Tariffs are not indexed</h3>
+<p>A deliberate simplification in favour of conservatism: revenue growth comes solely from volume growth.</p>
+<hr>
+<h2 id="3-capital-expenditure">3. Capital expenditure</h2>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">Year</th><th style="text-align:right">RUB mn</th><th style="text-align:left">Purpose</th></tr></thead><tbody><tr><td style="text-align:left">2027</td><td style="text-align:right">300</td><td style="text-align:left">Platform core, valuation and encumbrance-registration modules</td></tr><tr><td style="text-align:left">2028</td><td style="text-align:right">420</td><td style="text-align:left">Data centres, licences, launch</td></tr><tr><td style="text-align:left">2029</td><td style="text-align:right">400</td><td style="text-align:left">Platform maturity, infrastructure of the legal regime</td></tr><tr><td style="text-align:left">2030</td><td style="text-align:right">550</td><td style="text-align:left">Deployment of the register of information-system operators (Regulation 779-P)</td></tr><tr><td style="text-align:left">2031</td><td style="text-align:right">1,800</td><td style="text-align:left">FSTEC/FSB certification, second data centre</td></tr><tr><td style="text-align:left">2032</td><td style="text-align:right">2,400</td><td style="text-align:left">Scaling: third data centre, new-generation crypto modules</td></tr><tr><td style="text-align:left">2033</td><td style="text-align:right">1,600</td><td style="text-align:left">Scheduled modernisation</td></tr><tr><td style="text-align:left">2034</td><td style="text-align:right">1,800</td><td style="text-align:left">Distributed-ledger platform upgrade</td></tr><tr><td style="text-align:left">2035</td><td style="text-align:right">2,300</td><td style="text-align:left">Infrastructure expansion for a stack above RUB 20 tn</td></tr><tr><td style="text-align:left">2036</td><td style="text-align:right">2,000</td><td style="text-align:left">Scheduled modernisation</td></tr><tr><td style="text-align:left"><strong>Total</strong></td><td style="text-align:right"><strong>13,570</strong></td><td style="text-align:left"></td></tr></tbody></table></div>
+<p>For the first 18 months — RUB 720 mn. Depreciation over 7 years, straight line.</p>
+<blockquote><p>The previous edition of the business plan stated "total CapEx over 10 years — RUB 1,300 mn", while the model's own table gave RUB 13,570 mn. An error of exactly ten times.</p></blockquote>
+<hr>
+<h2 id="4-operating-costs">4. Operating costs</h2>
+<p>Costs are assembled from two parts.</p>
+<p><strong>Payroll</strong> = year-end headcount × average salary × 12 × 1.30 (social contributions of 30%). Headcount 40 → 370, first-year salary RUB 350 thousand per month, indexed at 6% a year.</p>
+<p><strong>Other costs</strong> = a base of RUB 502 mn indexed at 4% a year + a variable part of 22% of revenue.</p>
+<p>The first-year base breaks down as follows:</p>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">Item</th><th style="text-align:right">RUB mn</th></tr></thead><tbody><tr><td style="text-align:left">Infrastructure (hosting, communications, information security)</td><td style="text-align:right">117</td></tr><tr><td style="text-align:left">Software licences</td><td style="text-align:right">50</td></tr><tr><td style="text-align:left">Marketing</td><td style="text-align:right">60</td></tr><tr><td style="text-align:left">Legal support and audit</td><td style="text-align:right">70</td></tr><tr><td style="text-align:left">Cybersecurity (monitoring centre, penetration testing)</td><td style="text-align:right">50</td></tr><tr><td style="text-align:left">Integrators</td><td style="text-align:right">95</td></tr><tr><td style="text-align:left">Other</td><td style="text-align:right">60</td></tr><tr><td style="text-align:left"><strong>Total</strong></td><td style="text-align:right"><strong>502</strong></td></tr></tbody></table></div>
+<p>The variable 22% of revenue covers acquiring, infrastructure under load, compliance, legal support of volume and customer acquisition. The level is calibrated so that the mature-year margin sits within the range of comparable infrastructure operators (65–75%). The result is 75.1% in 2036.</p>
+<blockquote><p>In the previous edition payroll was not derived from headcount: the 2029 line corresponded to roughly twice the stated headcount, and the 2026 line to roughly half of it. At the same time the total costs of the second year (RUB 820 mn) did not even cover the payroll of the stated 120 people (RUB 695 mn), leaving RUB 125 mn for everything else against RUB 502 mn a year earlier.</p></blockquote>
+<p><strong>What the costs do not contain.</strong> No separate line for customer acquisition; no capital requirements for an information-system operator; no reserves. That is a limitation of the model, not a conclusion that such costs will not arise.</p>
+<hr>
+<h2 id="5-taxes">5. Taxes</h2>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">Parameter</th><th style="text-align:right">Value</th><th style="text-align:left">Basis</th></tr></thead><tbody><tr><td style="text-align:left">Profit tax</td><td style="text-align:right">25%</td><td style="text-align:left">Federal Law 176-FZ of 12.07.2024, in force from 01.01.2025</td></tr><tr><td style="text-align:left">Carry-forward of prior-year losses</td><td style="text-align:right">up to 50% of the tax base</td><td style="text-align:left">Art. 283 of the Tax Code</td></tr><tr><td style="text-align:left">Social contributions</td><td style="text-align:right">30%</td><td style="text-align:left">Ch. 34 of the Tax Code</td></tr></tbody></table></div>
+<p>Earlier editions used a rate of 20% — it ceased to apply from 2025.</p>
+<p>The profit-tax relief for accredited IT organisations and the reduced social contributions are <strong>not</strong> built into the base case: that is upside, not an assumption.</p>
+<p><strong>VAT.</strong> Transactions in digital financial assets are not subject to value added tax: such assets are classified as securities, and the sale of securities is VAT-exempt (sub-clause 12, clause 2, Art. 149 of the Tax Code). The position was confirmed by the owner of the project on 07.09.2026.</p>
+<hr>
+<h2 id="6-the-discount-rate">6. The discount rate</h2>
+<p>The method of construction is a build-up of risk premiums on top of the rouble risk-free rate.</p>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">Component</th><th style="text-align:right">Value</th><th style="text-align:left">Source</th></tr></thead><tbody><tr><td style="text-align:left">Risk-free rate (10-year OFZ)</td><td style="text-align:right">14.73%</td><td style="text-align:left">market data as at 21.05.2026</td></tr><tr><td style="text-align:left">Equity risk premium × beta (8.13% × 1.15)</td><td style="text-align:right">9.35%</td><td style="text-align:left">Damodaran</td></tr><tr><td style="text-align:left">Stage premium</td><td style="text-align:right">2.50%</td><td style="text-align:left">IPEV Guidelines</td></tr><tr><td style="text-align:left">Illiquidity premium</td><td style="text-align:right">3.00%</td><td style="text-align:left">IPEV Guidelines</td></tr><tr><td style="text-align:left"><strong>Total</strong></td><td style="text-align:right"><strong>29.58%</strong></td><td style="text-align:left"></td></tr></tbody></table></div>
+<p>A country risk premium is not added separately: it is already contained in the rouble risk-free rate. Adding it as a second layer would be double counting.</p>
+<p>The defensible interval is 27–33%; it is used as the sensitivity range.</p>
+<blockquote><p>In the previous edition the same calculation appeared in two documents with different components (2.5% + 3.0% against 1.5% + 2.5%) and with a different equity risk premium (8.13% against 9%), while one passage stated outright that "the base case uses 30%". The resulting figure was nevertheless quoted everywhere as 29.5%.</p></blockquote>
+<hr>
+<h2 id="7-terminal-value">7. Terminal value</h2>
+<p>A single method — the Gordon model on a normalised cash flow:</p>
+<ul><li>in the steady state capital expenditure is set equal to depreciation;</li><li>the increase in working capital equals the growth rate multiplied by working capital;</li><li>the growth rate g = 4% is nominal, equal to the inflation target, that is zero real growth.</li></ul>
+<p>The share of terminal value in the valuation is 38%. That is within the normal range for a growing infrastructure company but at its upper edge; in a discussion with an investor this share should be stated openly.</p>
+<blockquote><p>Earlier editions used three incompatible approaches at once: a single-stage Gordon model with g=2% in the financial model, a three-stage model in the calculation table, and g=4% in the business plan. The review of 10.06.2026 acknowledged that terminal value had been understated roughly threefold, but the correction was made only in the text, not in the calculation.</p></blockquote>
+<hr>
+<h2 id="8-working-capital">8. Working capital</h2>
+<p>5% of revenue — a usual assumption for financial operators (payment systems in Russia 3–7%, depositories 5–10%).</p>
+<hr>
+<h2 id="9-sensitivity-and-simulation">9. Sensitivity and simulation</h2>
+<p>Computed programmatically:</p>
+<ul><li>discount rate × market share (a 5 × 5 grid);</li><li>deviation of operating costs from −10% to +30%;</li><li>launch delay of 0/1/2/3 years;</li><li>simulation, 2,000 iterations, generator with a fixed seed — the result is reproducible.</li></ul>
+<p>The principal conclusion of the sensitivity analysis: costs barely affect value (a 30% increase changes it by 8%), while timing is decisive (a year of delay costs a quarter of the value).</p>
+<blockquote><p>Earlier editions quoted results of a simulation — a median of RUB 94 bn, a P10–P90 interval of RUB 42–168 bn, a probability of negative value of 4.2% — while no such calculation existed; in two documents the same figures differed (a median of 91 against 94). The simulation is now genuinely performed, and its median is RUB 39.2 bn: it allows for the probability of a launch delay, which earlier estimates did not.</p></blockquote>
+<hr>
+<h2 id="10-what-the-model-does-not-include-and-why">10. What the model does not include, and why</h2>
+<ol><li><strong>State subsidies</strong> — upside, not an assumption.</li><li><strong>Debt financing</strong> — the model is equity-only; a mixed structure would add an interest tax shield.</li><li><strong>Currency risk</strong> — all flows are in roubles.</li><li><strong>Competition for collateral</strong> — the base case assumes the category is unique in the early years; the risk is covered by the conservative scenario.</li><li><strong>A refusal by the regulator</strong> — disclosed in <code>04_Бизнес-план/Wedge_pilot-light.md</code>; in that case the conservative scenario applies (enterprise value RUB 20.1 bn).</li><li><strong>Capital requirements for an information-system operator</strong> — not modelled; they require verification against Federal Law 259-FZ and the regulations of the Bank of Russia.</li><li><strong>Customer acquisition cost</strong> — not shown as a separate line.</li></ol>
+<hr>
+<h2 id="11-sources">11. Sources</h2>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">Data</th><th style="text-align:left">Source</th></tr></thead><tbody><tr><td style="text-align:left">Collateral capacity</td><td style="text-align:left">the author's concept</td></tr><tr><td style="text-align:left">Russian housing stock</td><td style="text-align:left">Rosstat, form No. 1-жилфонд</td></tr><tr><td style="text-align:left">Tax rates</td><td style="text-align:left">Tax Code; Federal Law 176-FZ of 12.07.2024</td></tr><tr><td style="text-align:left">Inflation target</td><td style="text-align:left">Monetary Policy Guidelines of the Bank of Russia</td></tr><tr><td style="text-align:left">Key rate 14.0%</td><td style="text-align:left">decision of the Board of Directors of the Bank of Russia</td></tr><tr><td style="text-align:left">Rate of RUB 71.55/USD</td><td style="text-align:left">official rate of the Bank of Russia as at 26.05.2026</td></tr><tr><td style="text-align:left">Equity risk premium, beta</td><td style="text-align:left">Damodaran Online</td></tr><tr><td style="text-align:left">Salary benchmarks</td><td style="text-align:left">open labour-market surveys 2024–2026</td></tr><tr><td style="text-align:left">Capital expenditure benchmarks</td><td style="text-align:left">open presentations of Russian financial platforms</td></tr></tbody></table></div>
+<p>The 10-year OFZ yield and the exchange rate are fixed as at May 2026 and require updating at the date of negotiations.</p>
+<hr>
+<p><strong>Edition v5 · 07.09.2026.</strong></p>
     </article>
     <div class="doc-actions">
       <a class="btn btn--primary" href="../../../index.html">

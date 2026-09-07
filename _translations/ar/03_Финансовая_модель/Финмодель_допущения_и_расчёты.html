@@ -257,505 +257,89 @@
       <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
     </header>
     <article class="doc-content">
-<blockquote class="translation-note">ملاحظة. هذه الترجمة تتبع الأصل الروسي. أُعيد احتساب القسم المالي في الأصل بتاريخ 07.09.2026 (النموذج v5): الأرقام والصياغة في هذه الترجمة قيد التحديث. وحتى اكتماله يُعتد بالنسخة الروسية في جميع الأحوال.</blockquote>
-
-<h1 id="النموذج-المالي-لـ-cpfsr-شروح-الفرضيات-والحسابات">النموذج المالي
-لـ CPFSR — شروح الفرضيات والحسابات</h1>
-<p><strong>الوثيقة:</strong> مذكّرة مرافقة للنموذج المالي. <strong>الملف
-المرتبط:</strong> <code>Финансовая_модель_ЦП_РСФСР.md</code> (أفق
-2025–2034 + TV multi-stage حتى 2045+). <strong>مؤلف المفهوم:</strong>
-أ.-خ. أ. كاغيروف، شهادة الإيداع رقم 4011265 بتاريخ 19.12.2024 — تثبيت
-تاريخ الأسبقية والتجزئة؛ نظام الحماية: المعرفة الفنية (المادة 1465 من
-القانون المدني) + البرنامج (المادة 1262 من القانون المدني).
-<strong>التاريخ المرجعي:</strong> 24.05.2026 (refactor بعد التدقيق
-الموحَّد؛ SoT وحيد — <code>_Мастер/Единые_показатели_v2.md</code>).</p>
-<p>الهدف — الإفصاح عن مصدر كل رقم وبيان القيود، بحيث يستطيع أي مدقّق DD
-من tier-1 المرور بالنموذج بفهم تامّ للمنطق.</p>
-<hr />
-<h2 id="السوق-وحصة-المنصة">1. السوق وحصة المنصة</h2>
-<h3 id="قاعدة-الضمانات-25-تريليون">1.1. قاعدة الضمانات 25 تريليون ₽</h3>
-<p>المصدر: مفهوم المؤلف (РСФСР_6.pptx، الشريحة 9).</p>
-<table>
-<thead>
-<tr>
-<th>القطاع</th>
-<th style="text-align: right;">الحجم، تريليون ₽</th>
-<th style="text-align: right;">محافظ (10 % × 50 %)، تريليون ₽</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>المخزون السكني (4.7 مليار م² × 85 000 ₽/م²)</td>
-<td style="text-align: right;">400</td>
-<td style="text-align: right;">20.0</td>
-</tr>
-<tr>
-<td>العقارات التجارية</td>
-<td style="text-align: right;">45</td>
-<td style="text-align: right;">2.5</td>
-</tr>
-<tr>
-<td>قطع الأراضي</td>
-<td style="text-align: right;">62</td>
-<td style="text-align: right;">3.0</td>
-</tr>
-<tr>
-<td><strong>المجموع</strong></td>
-<td style="text-align: right;"><strong>507</strong></td>
-<td style="text-align: right;"><strong>25.5</strong> ≈ 25</td>
-</tr>
-</tbody>
-</table>
-<p>منطق التحفّظ: لا تُشغَّل سوى 10 % من الأصول ضمن منظومة DFA على أفق عشر
-سنوات، وتُحتسب قيمة التقييم لأغراض الضمان بنسبة 50 % من القيمة السوقية
-(تتسق مع نسب LTV البازلية).</p>
-<h3 id="مفهرسة-السوق-بنسبة-4-سنويا">1.2. مَفهرسة السوق بنسبة 4 %
-سنويًّا</h3>
-<p>المؤشّر التوجيهي الأساس لسياسة بنك روسيا النقدية.</p>
-<h3 id="حصة-المنصة-المسار-بعد-refactor">1.3. حصة المنصة — المسار (بعد
-refactor)</h3>
-<table style="width:100%;">
-<colgroup>
-<col style="width: 6%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-</colgroup>
-<thead>
-<tr>
-<th>السنة</th>
-<th style="text-align: right;">1</th>
-<th style="text-align: right;">2</th>
-<th style="text-align: right;">3</th>
-<th style="text-align: right;">4</th>
-<th style="text-align: right;">5</th>
-<th style="text-align: right;">6</th>
-<th style="text-align: right;">7</th>
-<th style="text-align: right;">8</th>
-<th style="text-align: right;">9</th>
-<th style="text-align: right;">10</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>الحصة (Base)</td>
-<td style="text-align: right;">0 %</td>
-<td style="text-align: right;">0.4 %</td>
-<td style="text-align: right;">1.8 %</td>
-<td style="text-align: right;">4.4 %</td>
-<td style="text-align: right;">8.8 %</td>
-<td style="text-align: right;">10.8 %</td>
-<td style="text-align: right;">12.6 %</td>
-<td style="text-align: right;">14.4 %</td>
-<td style="text-align: right;">16.2 %</td>
-<td style="text-align: right;"><strong>18 %</strong></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>خُفِّض هدف السنة 10 من 20 % إلى 18 % (أكثر قابلية للدفاع). السيناريو
-المحافظ — 7 %، والمتفائل — 25 %.</p>
-</blockquote>
-<h3 id="stack-dfa-الحجم-المتداول">1.4. stack DFA (الحجم المتداول)</h3>
-<p>الصيغة: stack(t) = مجموع الإصدارات للسنوات (t−4)…t. متوسط عمر DFA = 5
-سنوات (دورات البنية التحتية).</p>
-<hr />
-<h2 id="تعرفة-المشغل">2. تعرفة المشغّل</h2>
-<table>
-<colgroup>
-<col style="width: 30%" />
-<col style="width: 40%" />
-<col style="width: 30%" />
-</colgroup>
-<thead>
-<tr>
-<th>الخطّ</th>
-<th style="text-align: right;">المعدّل</th>
-<th>مرجعية السوق</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>عمولة الإصدار</td>
-<td style="text-align: right;">0.50 %</td>
-<td>مشغّلو DFA في الاتحاد الروسي: 0.1–1 %.</td>
-</tr>
-<tr>
-<td>عمولة الخدمة على الـ stack</td>
-<td style="text-align: right;">0.30 %</td>
-<td>جهات الإيداع 0.05–0.15 %؛ صناديق PE 1–2 %.</td>
-</tr>
-<tr>
-<td>رسم المنصة (تقييم آلي)</td>
-<td style="text-align: right;">0.15 %</td>
-<td>شركات التقييم 0.1–0.5 %؛ أقساط التأمين 0.3–0.8 %.</td>
-</tr>
-<tr>
-<td>رخص B2B2G (الحد الأقصى للسنة 10)</td>
-<td style="text-align: right;">0.15 %</td>
-<td>نموّ خطي من 0 إلى 0.15 %.</td>
-</tr>
-<tr>
-<td>خدمات المقيّمين/التأمين (جديد)</td>
-<td style="text-align: right;">0.80 %</td>
-<td>Pass-through؛ 85 % منها تكاليف مقابلة.</td>
-</tr>
-<tr>
-<td>التكاملات التقنية (ثابت)</td>
-<td style="text-align: right;">50–1 150 مليون ₽/سنة</td>
-<td>10–50 مليون ₽ لكل وصل شريك.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="capex-refactor-وفق-التدقيق-موجات-capex-صريحة">3. CapEx (refactor
-وفق التدقيق: موجات CapEx صريحة)</h2>
-<h3 id="الـ-18-شهرا-الأولى-720-مليون">3.1. الـ 18 شهرًا الأولى — 720
-مليون ₽</h3>
-<table>
-<thead>
-<tr>
-<th>البند</th>
-<th style="text-align: right;">مليون ₽</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>المنصة (النواة + وحدات ABS)</td>
-<td style="text-align: right;">450</td>
-</tr>
-<tr>
-<td>مراكز البيانات (احتياط + تكرار جغرافي)</td>
-<td style="text-align: right;">170</td>
-</tr>
-<tr>
-<td>رخص بنك روسيا + الامتثال</td>
-<td style="text-align: right;">100</td>
-</tr>
-<tr>
-<td><strong>المجموع (2025+2026)</strong></td>
-<td style="text-align: right;"><strong>720</strong></td>
-</tr>
-</tbody>
-</table>
-<h3 id="موجات-capex-20272034">3.2. موجات CapEx 2027–2034</h3>
-<table>
-<colgroup>
-<col style="width: 30%" />
-<col style="width: 40%" />
-<col style="width: 30%" />
-</colgroup>
-<thead>
-<tr>
-<th>السنة</th>
-<th style="text-align: right;">مليون ₽</th>
-<th>الغرض</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2027</td>
-<td style="text-align: right;">400</td>
-<td>نضج المنصة، بنية sandbox</td>
-</tr>
-<tr>
-<td>2028</td>
-<td style="text-align: right;">550</td>
-<td>نشر سجل نظام معلومات DFA (779-P)</td>
-</tr>
-<tr>
-<td><strong>2029</strong></td>
-<td style="text-align: right;"><strong>1 800</strong></td>
-<td><strong>اعتماد FSTEC/FSB كامل + مركز بيانات ثانٍ</strong></td>
-</tr>
-<tr>
-<td><strong>2030</strong></td>
-<td style="text-align: right;"><strong>2 400</strong></td>
-<td><strong>التوسّع: مركز بيانات ثالث + وحدات تشفير من الجيل
-التالي</strong></td>
-</tr>
-<tr>
-<td>2031</td>
-<td style="text-align: right;">1 600</td>
-<td>تحديث متكرر</td>
-</tr>
-<tr>
-<td>2032</td>
-<td style="text-align: right;">1 800</td>
-<td>ترقية مزوّد DLT، smart-contract v2</td>
-</tr>
-<tr>
-<td><strong>2033</strong></td>
-<td style="text-align: right;"><strong>2 300</strong></td>
-<td><strong>توسيع بنية مراكز البيانات في ظلّ stack بقيمة 20 تريليون
-₽</strong></td>
-</tr>
-<tr>
-<td>2034</td>
-<td style="text-align: right;">2 000</td>
-<td>متكرر</td>
-</tr>
-</tbody>
-</table>
-<p>معدل إطفاء CapEx 1/7 سنويًّا → عمر مفيد للمنصة ~7 سنوات.</p>
-<hr />
-<h2 id="opex-refactor-وفق-التدقيق-c3">4. OpEx (refactor وفق التدقيق
-C3)</h2>
-<h3 id="opex-ابتدائي-دون-الرواتب-502-مليون-كانت-380">4.1. OpEx ابتدائي
-(دون الرواتب) — 502 مليون ₽ (كانت 380)</h3>
-<p>زيادات فرضها التدقيق: - <strong>+30 % لكتلة الامتثال</strong> (نموّ
-متطلبات 779-P وAML/KYC وCFT). - <strong>+25 % للأمن السيبراني</strong>
-(KII-1، SOC على مدار الساعة، اختبارات الاختراق، تدوير المفاتيح). -
-<strong>+40 % للكتلة القانونية</strong> (الحزمة التعاقدية، الدعم
-التنظيمي، الملكية الفكرية). - <strong>استُحدثت كتلة «المقيّمون/شركات
-التأمين»</strong> — 0.8 % من حجم الإصدار (pass-through، 85 % تكاليف
-مقابلة).</p>
-<p>تفكيك سنة الانطلاق 2025:</p>
-<table>
-<colgroup>
-<col style="width: 30%" />
-<col style="width: 40%" />
-<col style="width: 30%" />
-</colgroup>
-<thead>
-<tr>
-<th>البند</th>
-<th style="text-align: right;">مليون ₽</th>
-<th>المنطق</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>البنية التحتية</td>
-<td style="text-align: right;">117</td>
-<td>استضافة، اتصال، أمن معلومات — لمركزَي بيانات؛ +30 % وفق التدقيق</td>
-</tr>
-<tr>
-<td>تراخيص البرمجيات</td>
-<td style="text-align: right;">50</td>
-<td>DBMS، الرصد</td>
-</tr>
-<tr>
-<td>التسويق</td>
-<td style="text-align: right;">60</td>
-<td>مؤتمرات، نشاط قطاعي</td>
-</tr>
-<tr>
-<td>القانوني والتدقيق</td>
-<td style="text-align: right;">70</td>
-<td>+40 % وفق التدقيق</td>
-</tr>
-<tr>
-<td>الأمن السيبراني</td>
-<td style="text-align: right;">50</td>
-<td>SOC، اختبارات الاختراق، تدوير المفاتيح (بند جديد)</td>
-</tr>
-<tr>
-<td>مكاملو B2B2G</td>
-<td style="text-align: right;">95</td>
-<td>مقاولو الشبكة الشريكة</td>
-</tr>
-<tr>
-<td>أخرى</td>
-<td style="text-align: right;">60</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>الإجمالي</strong></td>
-<td style="text-align: right;"><strong>502</strong></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>يكفل منحنى OpEx في طور النضج هامش EBITDA بنسبة 74.8 % (مقابل 96.9 %
-في النموذج قبل refactor).</p>
-<hr />
-<h2 id="الرواتب">5. الرواتب</h2>
-<p>العدد 40→370؛ متوسط الراتب الإجمالي 350 ألف ₽/شهر في السنة 1، مَفهرسة
-6 % سنويًّا؛ مساهمات تأمين 30 %.</p>
-<hr />
-<h2 id="الضرائب">6. الضرائب</h2>
-<ul>
-<li><strong>ضريبة الأرباح 20 %</strong> (قانون الضرائب، الفصل 25). مع
-اعتماد IT + إيرادات IT ≥ 70 % → 5 % حتى 31.12.2030 (سيناريو مستقل:
-+25–30 % على NPV).</li>
-<li><strong>ضريبة القيمة المضافة:</strong> عمليات DFA — الفقرة 12.2 من
-البند 2 من المادة 149 (إعفاء)؛ خدمات المشغّل — المعدل العام 20 %.</li>
-<li><strong>مساهمات تأمين 30 %</strong> (قانون الضرائب، الفصل 34).</li>
-</ul>
-<hr />
-<h2 id="wacc-refactor-وفق-التدقيق-c5">7. WACC (refactor وفق التدقيق
-C5)</h2>
-<p>التعديل: إزالة double-counting لـ CRP في RUB-denominated RF؛ رُفعت ERP
-من 6 % إلى 9 % (Damodaran مايو 2026)؛ β عند 1.15.</p>
-<table>
-<thead>
-<tr>
-<th>المكوّن</th>
-<th style="text-align: right;">القيمة</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Risk-free rate (OFZ 10 سنوات، 24.05.2026)</td>
-<td style="text-align: right;">14.73</td>
-</tr>
-<tr>
-<td>ERP × β (RF مايو 2026، β = 1.15)</td>
-<td style="text-align: right;">9 % × 1.15 = 10.35 %</td>
-</tr>
-<tr>
-<td>Stage premium (MVP جاهز)</td>
-<td style="text-align: right;">1.5 %</td>
-</tr>
-<tr>
-<td>Liquidity premium</td>
-<td style="text-align: right;">2.5 %</td>
-</tr>
-<tr>
-<td><strong>WACC (RUB) المجموع</strong></td>
-<td style="text-align: right;"><strong>29.58 → 30.0 %</strong></td>
-</tr>
-</tbody>
-</table>
-<p>طرق بديلة: - CAPM (RUB): 15.5 + 1.15 × 9 = 25.85 % — الحدّ الأدنى
-للنطاق. - Build-up: 15.5 + 6 + 2.5 + 3 = 27 % — داخل النطاق. - معدل بنك
-روسيا + spread: 14.5 + 9 = 30 % — مطابق.</p>
-<p>النطاق القابل للدفاع: 27–32 %. تستخدم Base قيمة 30 %.</p>
-<hr />
-<h2 id="multi-stage-tv-refactor-وفق-التدقيق-c4">8. Multi-stage TV
-(refactor وفق التدقيق C4)</h2>
-<p>استبدال Gordon TV ذات المرحلة الواحدة بنموذج ثلاثي المراحل مع طور
-تلاشٍ صريح لمعدل النمو وهامش EBITDA:</p>
-<table>
-<thead>
-<tr>
-<th>الطور</th>
-<th>السنوات</th>
-<th style="text-align: right;">g</th>
-<th style="text-align: right;">هامش EBITDA</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I — النضج</td>
-<td>2035–2039</td>
-<td style="text-align: right;">6 % → 4 %</td>
-<td style="text-align: right;">75 % → 70 %</td>
-</tr>
-<tr>
-<td>II — الاستقرار</td>
-<td>2040–2044</td>
-<td style="text-align: right;">3.5 % → 2.5 %</td>
-<td style="text-align: right;">70 % → 65 %</td>
-</tr>
-<tr>
-<td>III — perpetuity</td>
-<td>2045+</td>
-<td style="text-align: right;">2.0 % (نصف هدف بنك روسيا)</td>
-<td style="text-align: right;">60 %</td>
-</tr>
-</tbody>
-</table>
-<p>حصة TV من NPV الكلي = <strong>9.0 %</strong> (كانت 49 %) — الحد الحرج
-أُزيل.</p>
-<hr />
-<h2 id="الحساسيات-مجموعة-موسعة">9. الحساسيات (مجموعة موسَّعة)</h2>
-<p>أُضيفت وفق التدقيق C9–C11: - WACC × الحصة السوقية (5×5، قائمة). -
-العمولات × التضخم (3×5، قائمة). - <strong>منحنى OpEx × موعد
-الإطلاق</strong> (5×3، جديد). - <strong>FTE × متوسط الراتب</strong>
-(5×5، جديد). - <strong>هامش EBITDA TV × g</strong> (3×3، جديد). -
-<strong>مخطط tornado</strong> أعلى 10. - <strong>مونتي كارلو
-مبسّط</strong> (1 000 تكرار، وسيط NPV = 91 مليار ₽، P10–P90 = 38–162). -
-<strong>تحليل break-even</strong> (الإيراد عند NPV = 0 = 22.8 مليار ₽ في
-2030). - <strong>اختبار إجهاد السيولة</strong> (تأخير +6 أشهر ← فجوة
-+0.38 مليار ₽؛ التوصية — جولة 20 مليون دولار).</p>
-<hr />
-<h2 id="رأس-المال-العامل">10. رأس المال العامل</h2>
-<p>5 % من الإيراد — افتراض معياري لمشغّلي fintech (أنظمة الدفع الروسية:
-3–7 %، جهات الإيداع: 5–10 %).</p>
-<hr />
-<h2 id="ما-لم-يحسب-في-النموذج-الأساسي-ولماذا">11. ما لم يُحسب في النموذج
-الأساسي (ولماذا)</h2>
-<ol type="1">
-<li><strong>الدعم الحكومي</strong> (RFRIT، وزارة التطوير الرقمي) —
-upside، غير مُدرَج.</li>
-<li><strong>التمويل بالدَّين</strong> — نموذج equity-only؛ يضيف هيكل مختلط
-درعًا ضريبيًّا.</li>
-<li><strong>مخاطر العملة</strong> — جميع التدفقات بالروبل؛ لا تعرّض
-FX.</li>
-<li><strong>المنافسة على الضمانات</strong> — يفترض Base فئة فريدة في
-السنوات الخمس الأولى؛ مُغطّى في السيناريو المحافظ.</li>
-<li><strong>مخاطر الرفض التنظيمي</strong> — مُفصَح عنه في
-<code>04_Бизнес-план/Wedge_pilot-light.md</code>: في حال عدم إقرار
-الحزمة التشريعية يعمل المشروع بنمط pilot-light ضمن 259-FZ القائم
-(السيناريو المحافظ NPV 41 مليار ₽).</li>
-</ol>
-<hr />
-<h2 id="التوافق-مع-finmodel.js-التفاعلي">12. التوافق مع finmodel.js
-التفاعلي</h2>
-<p>بعد بند التدقيق C9 تمّت مواءمة <code>_shared/finmodel.js</code> v2 ↔︎
-النموذج MD: تُحتسب الرواتب وموجات CapEx ورأس المال العامل والإطفاء والدرع
-الضريبي وTV multi-stage. تُنتج الحاسبة في العرض الكبير NPV/IRR مطابقة
-للحسابات في هذه الوثيقة عند أوضاع المنزلقات نفسها.</p>
-<hr />
-<h2 id="المصادر">13. المصادر</h2>
-<table>
-<thead>
-<tr>
-<th>نوع البيانات</th>
-<th>المصدر</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>قاعدة الضمانات</td>
-<td>مفهوم المؤلف (РСФСР_6.pptx، الشريحة 9)</td>
-</tr>
-<tr>
-<td>المعدلات الضريبية</td>
-<td>قانون الضرائب RF</td>
-</tr>
-<tr>
-<td>هدف التضخم</td>
-<td>الاتجاهات الرئيسية لسياسة بنك روسيا النقدية</td>
-</tr>
-<tr>
-<td>سعر بنك روسيا 14.5 في 24.05.2026</td>
-<td>قرار مجلس بنك روسيا في 24.04.2026</td>
-</tr>
-<tr>
-<td>FX 71.55 ₽/$</td>
-<td>السعر الرسمي لبنك روسيا في 24.05.2026</td>
-</tr>
-<tr>
-<td>المخزون السكني RF</td>
-<td>Rosstat (نموذج رقم 1-zhilfond)</td>
-</tr>
-<tr>
-<td>مرجعيات الرواتب</td>
-<td>HeadHunter، Habr Career 2024–2026</td>
-</tr>
-<tr>
-<td>ERP RF 8.13</td>
-<td>Damodaran Online ERP مايو 2026</td>
-</tr>
-<tr>
-<td>مرجعيات CapEx للمنصات</td>
-<td>عروض علنية لمشاريع fintech الروسية</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<p><strong>التاريخ:</strong> 24.05.2026 (refactor بعد التدقيق الموحَّد)
-<strong>أُعدّ:</strong> ضمن مشروع CPFSR.</p>
+<h1 id="النموذج-المالي-لـ-cp-rsfsr-أساس-الافتراضات">النموذج المالي لـ CP RSFSR — أساس الافتراضات</h1>
+<blockquote><p><strong>ملاحظة.</strong> هذه ترجمة عن الأصل الروسي. وعند أي اختلاف في الصياغة يُعتد بالنسخة الروسية. وجميع الأرقام مأخوذة من المحرك الحسابي نفسه.</p></blockquote>
+<p><strong>الوثيقة:</strong> مذكّرة إيضاحية مرافقة للنموذج المالي. <strong>الملفات ذات الصلة:</strong> <code>Финансовая_модель_ЦП_РСФСР.md</code> (الحساب نفسه)، <code>Модель/assumptions.json</code> (جميع قيم الإدخال)، <code>Модель/Выгрузка/*.csv</code> (التصدير الآلي). <strong>مؤلف المفهوم:</strong> كاغيروف أ.-خ.أ.، شهادة إيداع رقم 4011265 بتاريخ 19.12.2024 — تثبيت تاريخ الأولوية والبصمة؛ نظام الحماية: معرفة فنية (المادة 1465 من القانون المدني) وبرنامج حاسوب (المادة 1262 من القانون المدني). <strong>الإصدار:</strong> v5 بتاريخ 07.09.2026.</p>
+<p>الغرض من هذه المذكّرة بيان مصدر كل قيمة، والتسمية الصريحة لما لا يستند إلا إلى تصوّر المؤلف.</p>
+<blockquote><p><strong>الحساب مفصول عن النص.</strong> الأرقام موجودة في <code>Модель/assumptions.json</code> ويحسبها المحرك <code>Модель/model.py</code>. وتُجمَّع الوثائق من المحرك. وقد جرى ذلك عن قصد: ففي الإصدارات السابقة كانت الأرقام تُخزَّن في كل وثيقة على حدة فتباعدت.</p></blockquote>
+<hr>
+<h2 id="1-السوق">1. السوق</h2>
+<h3 id="11-الطاقة-الرهنية-البالغة-25-تريليون-روبل">1.1. الطاقة الرهنية البالغة 25 تريليون روبل</h3>
+<p>المصدر — مفهوم المؤلف.</p>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">القطاع</th><th style="text-align:right">الحجم، تريليون روبل</th><th style="text-align:right">الجزء المُدرج (10% من الأصول × 50% من القيمة)، تريليون روبل</th></tr></thead><tbody><tr><td style="text-align:left">المساكن (4.7 مليار م² × 85,000 روبل/م²)</td><td style="text-align:right">400</td><td style="text-align:right">20.0</td></tr><tr><td style="text-align:left">العقارات التجارية</td><td style="text-align:right">45</td><td style="text-align:right">2.3</td></tr><tr><td style="text-align:left">قطع الأراضي</td><td style="text-align:right">62</td><td style="text-align:right">3.1</td></tr><tr><td style="text-align:left"><strong>الإجمالي</strong></td><td style="text-align:right"><strong>507</strong></td><td style="text-align:right"><strong>25.4 ≈ 25</strong></td></tr></tbody></table></div>
+<p>منطق التحفّظ: لا يُدرَج في النظام سوى 10% من الأصول، ولأغراض الرهن تُؤخذ القيمة عند 50% من القيمة السوقية — بما يوافق الممارسة المتبعة في خصومات الرهن.</p>
+<p><strong>ما ليس هذا التقدير.</strong> إنه تقدير للطاقة الكامنة لا للطلب. ولا يتضمن المشروع أي دليل على استعداد المالكين لرهن ممتلكاتهم بهذه الشروط. والتحقق من الطلب هو أول ما ينبغي فعله قبل أي حديث عن المال.</p>
+<h3 id="12-فهرسة-الطاقة-بنسبة-4-سنويا">1.2. فهرسة الطاقة بنسبة 4% سنوياً</h3>
+<p>مستهدف التضخم لدى بنك روسيا. ولا يتضمن النموذج نمواً حقيقياً للسوق — بل إعادة تقييم فقط.</p>
+<h3 id="13-مسار-حصة-المنصة">1.3. مسار حصة المنصة</h3>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">سنة النموذج</th><th style="text-align:right">1</th><th style="text-align:right">2</th><th style="text-align:right">3</th><th style="text-align:right">4</th><th style="text-align:right">5</th><th style="text-align:right">6</th><th style="text-align:right">7</th><th style="text-align:right">8</th><th style="text-align:right">9</th><th style="text-align:right">10</th></tr></thead><tbody><tr><td style="text-align:left">السنة الميلادية</td><td style="text-align:right">2027</td><td style="text-align:right">2028</td><td style="text-align:right">2029</td><td style="text-align:right">2030</td><td style="text-align:right">2031</td><td style="text-align:right">2032</td><td style="text-align:right">2033</td><td style="text-align:right">2034</td><td style="text-align:right">2035</td><td style="text-align:right">2036</td></tr><tr><td style="text-align:left">الحصة السوقية</td><td style="text-align:right">0%</td><td style="text-align:right">0.4%</td><td style="text-align:right">1.8%</td><td style="text-align:right">4.4%</td><td style="text-align:right">8.8%</td><td style="text-align:right">10.8%</td><td style="text-align:right">12.6%</td><td style="text-align:right">14.4%</td><td style="text-align:right">16.2%</td><td style="text-align:right"><strong>18%</strong></td></tr></tbody></table></div>
+<p>خفّض المؤلف مستهدف السنة العاشرة من 20% إلى 18% بعد تدقيق عام 2026. والسيناريو المحافظ 7%، والمتفائل 25%.</p>
+<p><strong>هذا هو الافتراض الرئيسي غير المتحقق منه في النموذج.</strong> فهو لا يستند إلى تجربة رائدة ولا عقود ولا مشروع مماثل. وكل الحساب المتبقي مشتق من هذا السطر. وعند التحاور مع مستثمر ينبغي أن يبدأ النقاش من هنا لا من القيمة النهائية.</p>
+<h3 id="14-يبدأ-الأفق-من-2027">1.4. يبدأ الأفق من 2027</h3>
+<p>كان الإصدار السابق يحسب ابتداءً من 2025 ويفترض إصداراً للأصول المالية الرقمية بقيمة 104 مليار روبل في 2026. وفي تاريخ هذا الإصدار لا توجد رخصة مشغّل نظام معلومات ولا إطار تنظيمي معتمد ولا إصدار واحد. لذلك أُزيح الأفق: 2027 للتحضير، و2028 لأول الإصدارات.</p>
+<p>وثمن هذه الإزاحة ظاهر في الحساب: كل سنة تأخير تزيل نحو ربع قيمة المشروع.</p>
+<h3 id="15-الرصيد-المتداول">1.5. الرصيد المتداول</h3>
+<p>رصيد السنة t = مجموع إصدارات السنوات t−4 … t. ومتوسط عمر الإصدار 5 سنوات، بما يوافق طول دورات البنية التحتية.</p>
+<hr>
+<h2 id="2-التعرفة">2. التعرفة</h2>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">البند</th><th style="text-align:right">المعدل</th><th style="text-align:left">المرجع السوقي</th></tr></thead><tbody><tr><td style="text-align:left">عمولة الإصدار</td><td style="text-align:right">0.50%</td><td style="text-align:left">مشغّلو الأصول الرقمية في روسيا: 0.1–1%</td></tr><tr><td style="text-align:left">عمولة الخدمة على الرصيد</td><td style="text-align:right">0.30%</td><td style="text-align:left">جهات الإيداع 0.05–0.15%؛ شركات الإدارة 1–2%</td></tr><tr><td style="text-align:left">رسم المنصة (التقييم الآلي)</td><td style="text-align:right">0.15%</td><td style="text-align:left">شركات التقييم 0.1–0.5%</td></tr><tr><td style="text-align:left">تراخيص B2B2G</td><td style="text-align:right">من 0 إلى 0.15%</td><td style="text-align:left">نمو خطي على مدى السنوات</td></tr><tr><td style="text-align:left">التكاملات التقنية</td><td style="text-align:right">50–1,150 مليون روبل سنوياً</td><td style="text-align:left">10–50 مليون روبل لكل ربط شريك</td></tr><tr><td style="text-align:left">التقييم والتأمين، التعرفة الإجمالية</td><td style="text-align:right">0.80%</td><td style="text-align:left">أقساط التأمين 0.3–0.8%</td></tr></tbody></table></div>
+<h3 id="21-لماذا-يقيد-التقييم-والتأمين-بالصافي">2.1. لماذا يُقيَّد التقييم والتأمين بالصافي</h3>
+<p>في هذا البند تعمل المنصة بصفة وكيل: تحصّل 0.8% من الحجم وتحوّل 85% منها إلى المقيّمين وشركات التأمين. وهامشها الخاص 0.12% من الحجم. وهذا الهامش وحده يدخل في الإيراد؛ أما المتحصلات الإجمالية فتُعرض في سطر مستقل للعلم.</p>
+<p>في الإصدار السابق كانت نسبة 0.8% كاملة تُحتسب إيراداً للمنصة. وفي 2034 بلغ ذلك 51,240 مليون روبل — أكثر من ثلث كامل الإيراد المعلن — بينما لم تصل التكاليف المقابلة إلى جانب المصروفات قط. وكانت عبارة «عابرة، 85% تكاليف مقابلة» موجودة في مذكّرة النموذج لكنها لم تُنقل إلى الحساب.</p>
+<h3 id="22-التعرفة-غير-مفهرسة">2.2. التعرفة غير مفهرسة</h3>
+<p>تبسيط مقصود لمصلحة التحفّظ: نمو الإيراد يأتي من نمو الأحجام وحده.</p>
+<hr>
+<h2 id="3-النفقات-الرأسمالية">3. النفقات الرأسمالية</h2>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">السنة</th><th style="text-align:right">مليون روبل</th><th style="text-align:left">الغرض</th></tr></thead><tbody><tr><td style="text-align:left">2027</td><td style="text-align:right">300</td><td style="text-align:left">نواة المنصة، ووحدتا التقييم وتسجيل الرهون</td></tr><tr><td style="text-align:left">2028</td><td style="text-align:right">420</td><td style="text-align:left">مراكز البيانات، والتراخيص، والإطلاق</td></tr><tr><td style="text-align:left">2029</td><td style="text-align:right">400</td><td style="text-align:left">نضج المنصة، والبنية التحتية للنظام القانوني</td></tr><tr><td style="text-align:left">2030</td><td style="text-align:right">550</td><td style="text-align:left">إنشاء سجل مشغّلي أنظمة المعلومات (اللائحة 779-P)</td></tr><tr><td style="text-align:left">2031</td><td style="text-align:right">1,800</td><td style="text-align:left">اعتماد FSTEC/FSB، ومركز بيانات ثانٍ</td></tr><tr><td style="text-align:left">2032</td><td style="text-align:right">2,400</td><td style="text-align:left">التوسّع: مركز ثالث، ووحدات تشفير من جيل جديد</td></tr><tr><td style="text-align:left">2033</td><td style="text-align:right">1,600</td><td style="text-align:left">تحديث مجدول</td></tr><tr><td style="text-align:left">2034</td><td style="text-align:right">1,800</td><td style="text-align:left">ترقية منصة السجل الموزّع</td></tr><tr><td style="text-align:left">2035</td><td style="text-align:right">2,300</td><td style="text-align:left">توسيع البنية التحتية لرصيد يتجاوز 20 تريليون روبل</td></tr><tr><td style="text-align:left">2036</td><td style="text-align:right">2,000</td><td style="text-align:left">تحديث مجدول</td></tr><tr><td style="text-align:left"><strong>الإجمالي</strong></td><td style="text-align:right"><strong>13,570</strong></td><td style="text-align:left"></td></tr></tbody></table></div>
+<p>لأول 18 شهراً — 720 مليون روبل. الإهلاك على 7 سنوات بالقسط الثابت.</p>
+<blockquote><p>أشار الإصدار السابق من خطة العمل إلى «إجمالي النفقات الرأسمالية على عشر سنوات — 1,300 مليون روبل»، بينما أعطى جدول النموذج نفسه 13,570 مليون روبل. خطأ بمقدار عشرة أضعاف بالضبط.</p></blockquote>
+<hr>
+<h2 id="4-المصروفات-التشغيلية">4. المصروفات التشغيلية</h2>
+<p>تتألف المصروفات من جزأين.</p>
+<p><strong>الأجور</strong> = عدد الموظفين في نهاية السنة × متوسط الراتب × 12 × 1.30 (اشتراكات تأمين 30%). العدد 40 ← 370، وراتب السنة الأولى 350 ألف روبل شهرياً بفهرسة 6% سنوياً.</p>
+<p><strong>المصروفات الأخرى</strong> = أساس قدره 502 مليون روبل بفهرسة 4% سنوياً + جزء متغير قدره 22% من الإيراد.</p>
+<p>ويتوزّع أساس السنة الأولى كما يلي:</p>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">البند</th><th style="text-align:right">مليون روبل</th></tr></thead><tbody><tr><td style="text-align:left">البنية التحتية (الاستضافة، الاتصالات، أمن المعلومات)</td><td style="text-align:right">117</td></tr><tr><td style="text-align:left">تراخيص البرمجيات</td><td style="text-align:right">50</td></tr><tr><td style="text-align:left">التسويق</td><td style="text-align:right">60</td></tr><tr><td style="text-align:left">الدعم القانوني والتدقيق</td><td style="text-align:right">70</td></tr><tr><td style="text-align:left">الأمن السيبراني (مركز المراقبة، اختبارات الاختراق)</td><td style="text-align:right">50</td></tr><tr><td style="text-align:left">المُكاملون</td><td style="text-align:right">95</td></tr><tr><td style="text-align:left">أخرى</td><td style="text-align:right">60</td></tr><tr><td style="text-align:left"><strong>الإجمالي</strong></td><td style="text-align:right"><strong>502</strong></td></tr></tbody></table></div>
+<p>ويغطي الجزء المتغير البالغ 22% من الإيراد المدفوعات، والبنية التحتية تحت الحمل، والامتثال، والدعم القانوني للحجم، واستقطاب العملاء. وقد عُوير المستوى بحيث يقع هامش سنة النضج ضمن نطاق مشغّلي البنية التحتية المماثلين (65–75%). والنتيجة 75.1% في 2036.</p>
+<blockquote><p>في الإصدار السابق لم تكن الأجور مشتقة من عدد الموظفين: فسطر 2029 كان يوافق نحو ضعف العدد المعلن، وسطر 2026 نحو نصفه. وفي الوقت نفسه لم يكن إجمالي مصروفات السنة الثانية (820 مليون روبل) يغطي حتى أجور الأشخاص المعلَنين البالغ عددهم 120 (695 مليون روبل)، فلم يتبقَّ لكل ما عداها سوى 125 مليون روبل مقابل 502 مليون روبل في السنة السابقة.</p></blockquote>
+<p><strong>ما لا تتضمنه المصروفات.</strong> لا سطر مستقل لاستقطاب العملاء؛ ولا متطلبات رأسمال لمشغّل نظام المعلومات؛ ولا احتياطيات. وهذا قيد في النموذج لا استنتاج بأن هذه التكاليف لن تنشأ.</p>
+<hr>
+<h2 id="5-الضرائب">5. الضرائب</h2>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">المعطى</th><th style="text-align:right">القيمة</th><th style="text-align:left">الأساس</th></tr></thead><tbody><tr><td style="text-align:left">ضريبة الأرباح</td><td style="text-align:right">25%</td><td style="text-align:left">القانون الاتحادي 176-FZ بتاريخ 12.07.2024، ساري من 01.01.2025</td></tr><tr><td style="text-align:left">ترحيل خسائر السنوات السابقة</td><td style="text-align:right">حتى 50% من الوعاء الضريبي</td><td style="text-align:left">المادة 283 من قانون الضرائب</td></tr><tr><td style="text-align:left">اشتراكات التأمين</td><td style="text-align:right">30%</td><td style="text-align:left">الفصل 34 من قانون الضرائب</td></tr></tbody></table></div>
+<p>استخدمت الإصدارات السابقة معدل 20% — وقد توقّف سريانه اعتباراً من 2025.</p>
+<p>أما الإعفاء الضريبي لمنظمات تقنية المعلومات المعتمدة والاشتراكات المخفّضة فغير مُدرجَين في السيناريو الأساسي: فهما إمكانية لا افتراض.</p>
+<p><strong>ضريبة القيمة المضافة.</strong> لا تخضع العمليات على الأصول المالية الرقمية لضريبة القيمة المضافة: إذ تُصنَّف هذه الأصول ضمن الأوراق المالية، وبيع الأوراق المالية معفى (البند الفرعي 12 من الفقرة 2 من المادة 149 من قانون الضرائب). وقد أكّد مالك المشروع هذا الموقف بتاريخ 07.09.2026.</p>
+<hr>
+<h2 id="6-معدل-الخصم">6. معدل الخصم</h2>
+<p>طريقة البناء هي تراكم علاوات المخاطر فوق المعدل الخالي من المخاطر بالروبل.</p>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">المكوّن</th><th style="text-align:right">القيمة</th><th style="text-align:left">المصدر</th></tr></thead><tbody><tr><td style="text-align:left">المعدل الخالي من المخاطر (OFZ لعشر سنوات)</td><td style="text-align:right">14.73%</td><td style="text-align:left">بيانات السوق بتاريخ 21.05.2026</td></tr><tr><td style="text-align:left">علاوة مخاطر الأسهم × بيتا (8.13% × 1.15)</td><td style="text-align:right">9.35%</td><td style="text-align:left">Damodaran</td></tr><tr><td style="text-align:left">علاوة المرحلة</td><td style="text-align:right">2.50%</td><td style="text-align:left">IPEV Guidelines</td></tr><tr><td style="text-align:left">علاوة عدم السيولة</td><td style="text-align:right">3.00%</td><td style="text-align:left">IPEV Guidelines</td></tr><tr><td style="text-align:left"><strong>الإجمالي</strong></td><td style="text-align:right"><strong>29.58%</strong></td><td style="text-align:left"></td></tr></tbody></table></div>
+<p>ولا تُضاف علاوة مخاطر قُطرية على حدة: فهي متضمَّنة أصلاً في المعدل الخالي من المخاطر بالروبل، وإضافتها طبقةً ثانية ازدواج في الحساب.</p>
+<p>والنطاق القابل للدفاع 27–33%؛ وهو المعتمد نطاقاً للحساسية.</p>
+<blockquote><p>في الإصدار السابق ورد الحساب نفسه في وثيقتين بمكوّنات مختلفة (2.5% + 3.0% مقابل 1.5% + 2.5%) وبعلاوة مخاطر أسهم مختلفة (8.13% مقابل 9%)، بينما ذكر موضع واحد صراحةً أن «السيناريو الأساسي يستخدم 30%». ومع ذلك ذُكر الرقم النهائي في كل مكان بأنه 29.5%.</p></blockquote>
+<hr>
+<h2 id="7-القيمة-النهائية">7. القيمة النهائية</h2>
+<p>طريقة واحدة — نموذج غوردون على تدفق نقدي مُطبَّع:</p>
+<ul><li>في الحالة المستقرة تُساوى النفقات الرأسمالية بالإهلاك؛</li><li>الزيادة في رأس المال العامل تساوي معدل النمو مضروباً في رأس المال العامل؛</li><li>معدل النمو g = 4% اسمي، مساوٍ لمستهدف التضخم، أي نمو حقيقي صفري.</li></ul>
+<p>وحصة القيمة النهائية من التقييم 38%. وهذا ضمن المعتاد لمنشأة بنية تحتية نامية، لكنه عند الحد الأعلى؛ وعند التحاور مع مستثمر ينبغي ذكر هذه الحصة صراحةً.</p>
+<blockquote><p>استخدمت الإصدارات السابقة ثلاثة مداخل غير متوافقة في آنٍ واحد: نموذج غوردون أحادي المرحلة بمعدل نمو 2% في النموذج المالي، ونموذجاً ثلاثي المراحل في جدول الحساب، ومعدل 4% في خطة العمل. وقد أقرّ تحليل 10.06.2026 بأن القيمة النهائية كانت مبخوسة نحو ثلاثة أضعاف، لكن التصحيح أُدخل في النص فقط لا في الحساب.</p></blockquote>
+<hr>
+<h2 id="8-رأس-المال-العامل">8. رأس المال العامل</h2>
+<p>5% من الإيراد — افتراض معتاد للمشغّلين الماليين (أنظمة الدفع في روسيا 3–7%، وجهات الإيداع 5–10%).</p>
+<hr>
+<h2 id="9-الحساسية-والمحاكاة">9. الحساسية والمحاكاة</h2>
+<p>تُحسبان برمجياً:</p>
+<ul><li>معدل الخصم × الحصة السوقية (شبكة 5 × 5)؛</li><li>انحراف المصروفات التشغيلية من −10% إلى +30%؛</li><li>تأخر الإطلاق 0/1/2/3 سنوات؛</li><li>المحاكاة، 2,000 تكرار، مولّد ببذرة ثابتة — النتيجة قابلة لإعادة الإنتاج.</li></ul>
+<p>الخلاصة الرئيسية لتحليل الحساسية: المصروفات لا تكاد تؤثر في القيمة (ارتفاعها 30% يغيّرها 8%)، بينما المواعيد حاسمة (سنة تأخير تكلّف ربع القيمة).</p>
+<blockquote><p>ذكرت الإصدارات السابقة نتائج محاكاة — وسيطاً قدره 94 مليار روبل، ونطاق P10–P90 من 42 إلى 168 مليار روبل، واحتمال قيمة سالبة 4.2% — بينما لم يكن مثل هذا الحساب موجوداً؛ وفي وثيقتين اختلفت القيم ذاتها (وسيط 91 مقابل 94). أما الآن فالمحاكاة تُنفَّذ فعلاً، ووسيطها 39.2 مليار روبل: إذ تأخذ في الحسبان احتمال تأخر الإطلاق، وهو ما لم يكن في التقديرات السابقة.</p></blockquote>
+<hr>
+<h2 id="10-ما-لا-يتضمنه-النموذج-ولماذا">10. ما لا يتضمنه النموذج ولماذا</h2>
+<ol><li><strong>الإعانات الحكومية</strong> — إمكانية لا افتراض.</li><li><strong>التمويل بالدين</strong> — النموذج على حقوق الملكية فقط؛ والهيكل المختلط يمنح درعاً ضريبياً.</li><li><strong>مخاطر العملة</strong> — جميع التدفقات بالروبل.</li><li><strong>المنافسة على الرهن</strong> — يفترض السيناريو الأساسي تفرّد الفئة في السنوات الأولى؛ والمخاطرة مغطاة بالسيناريو المحافظ.</li><li><strong>رفض الجهة التنظيمية</strong> — مبيّن في <code>04_Бизнес-план/Wedge_pilot-light.md</code>؛ وفي هذه الحالة يُطبَّق السيناريو المحافظ (قيمة المشروع 20.1 مليار روبل).</li><li><strong>متطلبات رأسمال مشغّل نظام المعلومات</strong> — غير مُنمذَجة، وتحتاج إلى تحقق وفق القانون الاتحادي 259-FZ ولوائح بنك روسيا.</li><li><strong>تكلفة استقطاب العميل</strong> — غير مفردة في سطر مستقل.</li></ol>
+<hr>
+<h2 id="11-المصادر">11. المصادر</h2>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">البيانات</th><th style="text-align:left">المصدر</th></tr></thead><tbody><tr><td style="text-align:left">الطاقة الرهنية</td><td style="text-align:left">مفهوم المؤلف</td></tr><tr><td style="text-align:left">المخزون السكني الروسي</td><td style="text-align:left">Rosstat، النموذج رقم 1-жилфонд</td></tr><tr><td style="text-align:left">معدلات الضرائب</td><td style="text-align:left">قانون الضرائب؛ القانون الاتحادي 176-FZ بتاريخ 12.07.2024</td></tr><tr><td style="text-align:left">مستهدف التضخم</td><td style="text-align:left">التوجهات الأساسية للسياسة النقدية لبنك روسيا</td></tr><tr><td style="text-align:left">سعر الفائدة الرئيسي 14.0%</td><td style="text-align:left">قرار مجلس إدارة بنك روسيا</td></tr><tr><td style="text-align:left">سعر 71.55 روبل/دولار</td><td style="text-align:left">السعر الرسمي لبنك روسيا بتاريخ 26.05.2026</td></tr><tr><td style="text-align:left">علاوة مخاطر الأسهم، بيتا</td><td style="text-align:left">Damodaran Online</td></tr><tr><td style="text-align:left">مراجع الرواتب</td><td style="text-align:left">استقصاءات سوق العمل المفتوحة 2024–2026</td></tr><tr><td style="text-align:left">مراجع النفقات الرأسمالية</td><td style="text-align:left">عروض علنية لمنصات مالية روسية</td></tr></tbody></table></div>
+<p>عائد سندات OFZ لعشر سنوات وسعر الصرف مثبتان على مايو 2026 ويحتاجان إلى تحديث بتاريخ المفاوضات.</p>
+<hr>
+<p><strong>الإصدار v5 · 07.09.2026.</strong></p>
     </article>
     <div class="doc-actions">
       <a class="btn btn--primary" href="../../../index.html">
