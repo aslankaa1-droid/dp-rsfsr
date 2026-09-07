@@ -36,7 +36,7 @@ The report covers the six classic Due Diligence areas plus one additional (ESG /
 ## 2. Commercial Due Diligence
 
 ### 2.1. Product analysis
-CPFSR is a front-end / agent platform for the issuance of DFA against pledged assets, operating in a two-stage architecture. **Stage 1 (pilot-light 2026–2028):** placements are conducted through a technology partnership with an incumbent operator of the DFA information system under 779-P (an incumbent 779-P register entity — the 779-P licence is individual and not transferable); funding flows through the VEB.RF Project Finance Factory (Government Decree No. 158) and the Federal Treasury under the Budget Code. Additional Bank of Russia issuance is not envisaged in Stage 1; the CBR is the supervisory regulator under Article 4 of Federal Law 86-FZ. **Stage 2 (2029+ horizon):** expansion of the mandate to a targeted secured-emission model against a pool of pledged DFA — a defensible horizon, implemented after a positive Stage 1 track record of ≥ 12 months and adoption of the package of four federal laws. No analogues with such a two-stage architecture have been identified in public sources in the Russian Federation or in international markets.
+CPFSR is a front-end / agent platform for the issuance of DFA against pledged assets, operating in a two-stage architecture. **Stage 1 (pilot-light 2028–2029):** placements are conducted through a technology partnership with an incumbent operator of the DFA information system under 779-P (an incumbent 779-P register entity — the 779-P licence is individual and not transferable); funding flows through the VEB.RF Project Finance Factory (Government Decree No. 158) and the Federal Treasury under the Budget Code. Additional Bank of Russia issuance is not envisaged in Stage 1; the CBR is the supervisory regulator under Article 4 of Federal Law 86-FZ. **Stage 2 (2029+ horizon):** expansion of the mandate to a targeted secured-emission model against a pool of pledged DFA — a defensible horizon, implemented after a positive Stage 1 track record of ≥ 12 months and adoption of the package of four federal laws. No analogues with such a two-stage architecture have been identified in public sources in the Russian Federation or in international markets.
 
 ### 2.2. Market analysis
 - Aggregate Russian real-estate value — approximately **RUB 507 tn**.
@@ -105,7 +105,7 @@ The platform relies on:
 
 ### 3.3. Required regulatory actions
 
-**Stage 1 (2026–2028) — no amendments to federal laws.** Launch of the near contour is possible within the current legal framework:
+**Stage 1 (2028–2029) — no amendments to federal laws.** Launch of the near contour is possible within the current legal framework:
 - 259-FZ + CBR Regulation 779-P / Directive 4336-U — operator via technology partnership;
 - Government Decree No. 158 of 15.02.2018 — funding through the VEB.RF Project Finance Factory;
 - the Budget Code of the Russian Federation — settlements through the Federal Treasury;

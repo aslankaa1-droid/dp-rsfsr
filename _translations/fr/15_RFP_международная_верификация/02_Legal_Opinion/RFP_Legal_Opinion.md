@@ -12,7 +12,7 @@
 
 Obtention d'un avis juridique indépendant de niveau tier-1 sur le projet afin de :
 - Lever le risk-flag réglementaire pour les investisseurs institutionnels tier-1 et les Limited Partners ;
-- Confirmer la défendabilité juridique de la construction wedge (Étape 1 wedge-pilot 2026–2028 sans amendement à 86-FZ vs Étape 2 horizon 2029+ avec paquet de 4 lois fédérales) ;
+- Confirmer la défendabilité juridique de la construction wedge (Étape 1 пилот 2028–2029 sans amendement à 86-FZ vs Étape 2 horizon 2029+ avec paquet de 4 lois fédérales) ;
 - Obtenir un sign-off formel sur la maturité du dispositif d'entiercement et du pack contractuel pour un lancement commercial.
 
 ## 2. Périmètre de la revue juridique

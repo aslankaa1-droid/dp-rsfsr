@@ -12,7 +12,7 @@
 
 Obtaining an independent tier-1 legal opinion on the project in order to:
 - Lift the regulatory risk flag for tier-1 institutional investors and Limited Partners;
-- Confirm the legal defensibility of the wedge construction (Stage 1 wedge-pilot 2026–2028 without amendments to 86-FZ vs Stage 2 horizon 2029+ with the package of four federal laws);
+- Confirm the legal defensibility of the wedge construction (Stage 1 пилот 2028–2029 without amendments to 86-FZ vs Stage 2 horizon 2029+ with the package of four federal laws);
 - Obtain a formal sign-off on the readiness of the escrow scheme and the contract pack for a commercial launch.
 
 ## 2. Scope of legal review

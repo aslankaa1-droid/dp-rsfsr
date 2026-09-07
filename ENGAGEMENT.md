@@ -40,7 +40,7 @@
 | Payback | 2,73 года |
 | FX (USD/RUB) | 71,55 |
 | Доля раунда | 15,8 % |
-| Post-money (Base) | $263M |
+| Post-money (Base) | $273M |
 | Pre-money (Base) | $100M |
 | Раунд | $15M |
 

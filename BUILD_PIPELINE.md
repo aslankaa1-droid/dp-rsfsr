@@ -137,7 +137,7 @@ Pandoc-template содержит:
 - WACC = 29,5% (build-up: RF 15,5 + ERP×β 10,35 + stage 1,5 + liq 2,5)
 - Equity Multiple = 12× (защитимый верхний ориентир)
 - FX = 71,55 ₽/$
-- Pre-money Base = $100M; Post-money = $263M; Доля инвестора = 5,70%
+- Pre-money Base = $100M; Post-money = $273M; Доля инвестора = 9,21%
 
 ---
 

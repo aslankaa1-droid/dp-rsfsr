@@ -43,3 +43,7 @@ _arhiv/
 *.zip
 *.7z
 *.iso
+
+# Кэш Python расчётного движка
+__pycache__/
+*.pyc

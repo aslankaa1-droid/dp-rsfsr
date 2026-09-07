@@ -144,7 +144,7 @@
       econ: {
         eyebrow: "Экономика проекта",
         title: "63,0 млрд ₽ при стартовом капитале 1,335 млрд ₽ (WACC 29,58%)",
-        lead: "10-летняя модель: окупаемость 2,73 года в базовом сценарии (WACC 29,58%); даже консервативный сценарий даёт стоимость ≈ 20,1 млрд ₽. Соотношение «потребность к ёмкости» — 1 : 20 000. multiple 19x.",
+        lead: "10-летняя модель: окупаемость 2,73 года в базовом сценарии (WACC 29,58%); даже консервативный сценарий даёт стоимость ≈ 20,1 млрд ₽. Соотношение «потребность к ёмкости» — 1 : 20 000. multiple 18.4x.",
         chartTitle: "Выручка и EBITDA, млрд ₽",
         labelRev: "Выручка",
         labelEbi: "EBITDA"
@@ -166,7 +166,7 @@
       valuation: {
         eyebrow: "Международная оценка",
         title: "Reasoned Value $60–115 млн · Base $80 млн pre-money",
-        lead: "Триангуляция четырёх методов оценки по международным стандартам IVS 2022, IFRS 13, ASA BV Standards. Base $80 млн pre-money; post-money $95 млн при раунде $15 млн (доля 15,8%). Refactor 24.05.2026 после сводного аудита.",
+        lead: "Триангуляция четырёх методов оценки по международным стандартам IVS 2022, IFRS 13, ASA BV Standards. Base $80 млн pre-money; post-money $95 млн при раунде $25 млн (доля 15,8%). Refactor 24.05.2026 после сводного аудита.",
         dcf: "DCF (доходный)",
         multi: "Comparable Multiples",
         berkus: "Berkus / Risk-Adjusted",
@@ -345,7 +345,7 @@
       econ: {
         eyebrow: "Economics",
         title: "NPV ₽51.2 bn on a ₽1.335 bn starting capital (WACC 29,58%)",
-        lead: "A 10-year model: 2.8-year payback in the base case (WACC 29,58%); even the conservative case yields NPV ≈ ₽22 bn. The need-to-capacity ratio — 1 : 20,000. multiple 19x.",
+        lead: "A 10-year model: 2.8-year payback in the base case (WACC 29,58%); even the conservative case yields NPV ≈ ₽22 bn. The need-to-capacity ratio — 1 : 20,000. multiple 18.4x.",
         chartTitle: "Revenue & EBITDA, bn ₽",
         labelRev: "Revenue",
         labelEbi: "EBITDA"
@@ -448,7 +448,7 @@
         eyebrow: "Plateforme numérique · AFN · Infrastructure de gage",
         title: "Financement hors-budget des projets nationaux",
         subtitle: "Service russe de financement du développement social",
-        lead: "Plateforme-opérateur d'émission d'AFN gagés sur les biens des citoyens et organisations. En pilot-light 2026–2028, le financement ciblé transite par la Fabrique de financement de projets VEB.RF et le Trésor fédéral ; la Banque de Russie agit en superviseur général au titre de l'art. 4 de la LF 86.",
+        lead: "Plateforme-opérateur d'émission d'AFN gagés sur les biens des citoyens et organisations. En pilot-light 2028–2029, le financement ciblé transite par la Fabrique de financement de projets VEB.RF et le Trésor fédéral ; la Banque de Russie agit en superviseur général au titre de l'art. 4 de la LF 86.",
         ctaPrimary: "Comment ça marche",
         ctaSecondary: "Documents du projet"
       },
@@ -476,7 +476,7 @@
       solution: {
         eyebrow: "Solution",
         title: "Plateforme-opérateur d'émission d'AFN sur garantie",
-        lead: "Face au pool d'AFN gagés, le pilot-light 2026–2028 organise un financement ciblé via la Fabrique de financement de projets VEB.RF et le Trésor fédéral sur un compte séquestre spécial. Les fonds vont aux projets nationaux. Horizon 2029+ : élargissement du mandat (émission ciblée garantie par la Banque de Russie) après un historique positif et l'adoption du paquet réglementaire.",
+        lead: "Face au pool d'AFN gagés, le pilot-light 2028–2029 organise un financement ciblé via la Fabrique de financement de projets VEB.RF et le Trésor fédéral sur un compte séquestre spécial. Les fonds vont aux projets nationaux. Horizon 2029+ : élargissement du mandat (émission ciblée garantie par la Banque de Russie) après un historique positif et l'adoption du paquet réglementaire.",
         b1: "Gage", b1d: "Le bien reste au propriétaire ; servitude temporaire. Évaluation automatisée.",
         b2: "Émission d'AFN", b2d: "Partenariat technologique avec un opérateur SI AFN agréé selon la LF 779-P (Art. 5 LF n°259).",
         b3: "Financement ciblé", b3d: "Pilot-light : FFP VEB.RF + Trésor. Compte séquestre ciblé. Horizon 2029+ : élargissement du mandat avec soutien du régulateur.",
@@ -533,7 +533,7 @@
       econ: {
         eyebrow: "Économie",
         title: "VAN 51,2 Mds ₽ pour un capital initial de 1,335 Mds ₽ (CMPC 30%)",
-        lead: "Modèle sur 10 ans : retour sur investissement de 2,73 ans dans le scénario de base (CMPC 30%) ; même le scénario prudent donne une VAN ≈ 22 Mds ₽. multiple 19x.",
+        lead: "Modèle sur 10 ans : retour sur investissement de 2,73 ans dans le scénario de base (CMPC 30%) ; même le scénario prudent donne une VAN ≈ 22 Mds ₽. multiple 18.4x.",
         chartTitle: "CA et EBITDA, Mds ₽",
         labelRev: "Chiffre d'affaires",
         labelEbi: "EBITDA"
@@ -630,7 +630,7 @@
         eyebrow: "منصة رقمية · أصول مالية رقمية · بنية تحتية للضمان",
         title: "تمويل المشاريع الوطنية خارج الميزانية",
         subtitle: "الخدمة الروسية لتمويل التنمية الاجتماعية",
-        lead: "منصة مشغّل لإصدار الأصول المالية الرقمية (DFA) بضمان عقارات المواطنين والمنظمات. في وضع pilot-light 2026–2028، يتدفق التمويل المستهدف عبر مصنع تمويل المشاريع VEB.RF والخزانة الفيدرالية؛ بنك روسيا — منظم رقابي عام بموجب المادة 4 من القانون الفيدرالي 86.",
+        lead: "منصة مشغّل لإصدار الأصول المالية الرقمية (DFA) بضمان عقارات المواطنين والمنظمات. في وضع pilot-light 2028–2029، يتدفق التمويل المستهدف عبر مصنع تمويل المشاريع VEB.RF والخزانة الفيدرالية؛ بنك روسيا — منظم رقابي عام بموجب المادة 4 من القانون الفيدرالي 86.",
         ctaPrimary: "كيف تعمل المنصة",
         ctaSecondary: "وثائق المشروع"
       },
@@ -658,7 +658,7 @@
       solution: {
         eyebrow: "الحل",
         title: "منصة مشغّل لإصدار الأصول المالية الرقمية مقابل ضمانات",
-        lead: "مقابل مجموعة الأصول المالية الرقمية المرهونة، ينظّم pilot-light 2026–2028 تمويلاً مستهدفاً عبر مصنع تمويل المشاريع VEB.RF والخزانة الفيدرالية إلى حساب ضمان خاص. تتدفق الأموال إلى المشاريع الوطنية. أفق 2029+: توسيع التفويض (إصدار مضمون مستهدف من بنك روسيا) بعد سجل أداء إيجابي واعتماد الحزمة التنظيمية.",
+        lead: "مقابل مجموعة الأصول المالية الرقمية المرهونة، ينظّم pilot-light 2028–2029 تمويلاً مستهدفاً عبر مصنع تمويل المشاريع VEB.RF والخزانة الفيدرالية إلى حساب ضمان خاص. تتدفق الأموال إلى المشاريع الوطنية. أفق 2029+: توسيع التفويض (إصدار مضمون مستهدف من بنك روسيا) بعد سجل أداء إيجابي واعتماد الحزمة التنظيمية.",
         b1: "الضمان", b1d: "العقار يبقى لدى المالك؛ الرهن مؤقت. تقييم آلي.",
         b2: "إصدار الأصول", b2d: "شراكة تكنولوجية مع مشغّل نظام معلوماتي مرخّص للأصول المالية الرقمية بموجب 779-P (المادة 5 القانون 259).",
         b3: "تمويل مستهدف", b3d: "Pilot-light: مصنع تمويل المشاريع VEB.RF + الخزانة. حساب ضمان مستهدف. أفق 2029+: توسيع التفويض بدعم المنظم.",
