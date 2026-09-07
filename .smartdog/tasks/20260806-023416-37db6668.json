@@ -1,0 +1,542 @@
+{
+  "project": "DPFSD.RU",
+  "tasks": [
+    {
+      "id": "T-0001",
+      "risk_id": "SEC-001",
+      "action": "REMOVE_SECRET",
+      "target": "18_MVP/frontend/index.html",
+      "priority": "P0",
+      "decision": "FIX_NOW",
+      "automation": "ASSISTED",
+      "executable": false,
+      "status": "BLOCKED",
+      "title": "REMOVE_SECRET → 18_MVP/frontend/index.html",
+      "reason": "Security exposure is never postponed",
+      "occurrences": 3,
+      "risk_ids": [
+        "SEC-001"
+      ],
+      "risk_fingerprints": [
+        "f8a6d66618336739",
+        "032f68d983bbf41e",
+        "b0e9764e52e09536"
+      ],
+      "blocked_reason": "нет обработчика для действия REMOVE_SECRET",
+      "details": {
+        "source": "risk_id",
+        "line": 356
+      }
+    },
+    {
+      "id": "T-0002",
+      "risk_id": "SEC-011",
+      "action": "ADD_TO_GITIGNORE",
+      "target": "09_Мобильное_приложение/Сборки/common/.env.example",
+      "priority": "P0",
+      "decision": "FIX_NOW",
+      "automation": "AUTOMATIC",
+      "executable": true,
+      "status": "SKIPPED",
+      "title": "ADD_TO_GITIGNORE → 09_Мобильное_приложение/Сборки/common/.env.example",
+      "reason": "Security exposure is never postponed",
+      "risk_fingerprints": [
+        "6e821ab725f05bfc"
+      ],
+      "details": {
+        "source": "risk_id"
+      }
+    },
+    {
+      "id": "T-0003",
+      "risk_id": "SEC-012",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html",
+      "priority": "P1",
+      "decision": "FIX_NOW",
+      "automation": "ASSISTED",
+      "executable": false,
+      "status": "BLOCKED",
+      "title": "REMOVE_SECRET → _translations/en/02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html",
+      "reason": "Security exposure is never postponed",
+      "risk_fingerprints": [
+        "4b8912c27b041d7a"
+      ],
+      "blocked_reason": "нет обработчика для действия REMOVE_SECRET",
+      "details": {
+        "source": "category",
+        "line": 831
+      }
+    },
+    {
+      "id": "T-0004",
+      "risk_id": "SEC-012",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/07_Презентации/Для_госструктур_ЦБ/Доклад_для_госструктур_и_ЦБ_РФ.html",
+      "priority": "P1",
+      "decision": "FIX_NOW",
+      "automation": "ASSISTED",
+      "executable": false,
+      "status": "BLOCKED",
+      "title": "REMOVE_SECRET → _translations/en/07_Презентации/Для_госструктур_ЦБ/Доклад_для_госструктур_и_ЦБ_РФ.html",
+      "reason": "Security exposure is never postponed",
+      "occurrences": 2,
+      "risk_ids": [
+        "SEC-012"
+      ],
+      "risk_fingerprints": [
+        "a3d2449a0fd425d2",
+        "d9e1bdbbe4565825"
+      ],
+      "blocked_reason": "нет обработчика для действия REMOVE_SECRET",
+      "details": {
+        "source": "category",
+        "line": 430
+      }
+    },
+    {
+      "id": "T-0005",
+      "risk_id": "SEC-012",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/12_DD_аудит/DD_отчёт.html",
+      "priority": "P1",
+      "decision": "FIX_NOW",
+      "automation": "ASSISTED",
+      "executable": false,
+      "status": "BLOCKED",
+      "title": "REMOVE_SECRET → _translations/en/12_DD_аудит/DD_отчёт.html",
+      "reason": "Security exposure is never postponed",
+      "risk_fingerprints": [
+        "11bb5c4f2181ac0d"
+      ],
+      "blocked_reason": "нет обработчика для действия REMOVE_SECRET",
+      "details": {
+        "source": "category",
+        "line": 743
+      }
+    },
+    {
+      "id": "T-0006",
+      "risk_id": "SEC-012",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/14_Аудит/АУДИТ Сводный пост-рефактор 24.05.2026/Сводный_аудит_пост_рефактор.html",
+      "priority": "P1",
+      "decision": "FIX_NOW",
+      "automation": "ASSISTED",
+      "executable": false,
+      "status": "BLOCKED",
+      "title": "REMOVE_SECRET → _translations/en/14_Аудит/АУДИТ Сводный пост-рефактор 24.05.2026/Сводный_аудит_пост_рефактор.html",
+      "reason": "Security exposure is never postponed",
+      "risk_fingerprints": [
+        "d8baea22edcacb40"
+      ],
+      "blocked_reason": "нет обработчика для действия REMOVE_SECRET",
+      "details": {
+        "source": "category",
+        "line": 945
+      }
+    },
+    {
+      "id": "T-0007",
+      "risk_id": "SEC-012",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/14_Аудит/АУДИТ Сводный уточняющий 24.05.2026/Сводный_аудит_уточняющий.html",
+      "priority": "P1",
+      "decision": "FIX_NOW",
+      "automation": "ASSISTED",
+      "executable": false,
+      "status": "BLOCKED",
+      "title": "REMOVE_SECRET → _translations/en/14_Аудит/АУДИТ Сводный уточняющий 24.05.2026/Сводный_аудит_уточняющий.html",
+      "reason": "Security exposure is never postponed",
+      "risk_fingerprints": [
+        "c1ec2800ca606871"
+      ],
+      "blocked_reason": "нет обработчика для действия REMOVE_SECRET",
+      "details": {
+        "source": "category",
+        "line": 1127
+      }
+    },
+    {
+      "id": "T-0008",
+      "risk_id": "SEC-012",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/fr/02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html",
+      "priority": "P1",
+      "decision": "FIX_NOW",
+      "automation": "ASSISTED",
+      "executable": false,
+      "status": "BLOCKED",
+      "title": "REMOVE_SECRET → _translations/fr/02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html",
+      "reason": "Security exposure is never postponed",
+      "occurrences": 2,
+      "risk_ids": [
+        "SEC-012"
+      ],
+      "risk_fingerprints": [
+        "675091b27d62a337",
+        "c886740cc4d13d64"
+      ],
+      "blocked_reason": "нет обработчика для действия REMOVE_SECRET",
+      "details": {
+        "source": "category",
+        "line": 638
+      }
+    },
+    {
+      "id": "T-0009",
+      "risk_id": "SEC-012",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/fr/14_Аудит/АУДИТ Сводный уточняющий 24.05.2026/Сводный_аудит_уточняющий.html",
+      "priority": "P1",
+      "decision": "FIX_NOW",
+      "automation": "ASSISTED",
+      "executable": false,
+      "status": "BLOCKED",
+      "title": "REMOVE_SECRET → _translations/fr/14_Аудит/АУДИТ Сводный уточняющий 24.05.2026/Сводный_аудит_уточняющий.html",
+      "reason": "Security exposure is never postponed",
+      "risk_fingerprints": [
+        "eb5aeb743341c8b9"
+      ],
+      "blocked_reason": "нет обработчика для действия REMOVE_SECRET",
+      "details": {
+        "source": "category",
+        "line": 1077
+      }
+    },
+    {
+      "id": "T-0010",
+      "risk_id": "DEP-002",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "priority": "P1",
+      "decision": "CREATE_TASK",
+      "automation": "ASSISTED",
+      "executable": false,
+      "status": "BLOCKED",
+      "title": "PIN_DEPENDENCY → 09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "occurrences": 21,
+      "risk_ids": [
+        "DEP-002"
+      ],
+      "risk_fingerprints": [
+        "c34b7208f9dd76a8"
+      ],
+      "blocked_reason": "нет обработчика для действия PIN_DEPENDENCY",
+      "details": {
+        "source": "risk_id",
+        "package": "@capacitor/android"
+      }
+    },
+    {
+      "id": "T-0011",
+      "risk_id": "DEP-002",
+      "action": "PIN_DEPENDENCY",
+      "target": "18_MVP/backend/requirements.txt",
+      "priority": "P1",
+      "decision": "CREATE_TASK",
+      "automation": "ASSISTED",
+      "executable": false,
+      "status": "BLOCKED",
+      "title": "PIN_DEPENDENCY → 18_MVP/backend/requirements.txt",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "occurrences": 5,
+      "risk_ids": [
+        "DEP-002"
+      ],
+      "risk_fingerprints": [
+        "e69e73d834702aba",
+        "1316876543c49b50",
+        "a439d8c9be6e1372",
+        "d48d41d75b9ae43e",
+        "7999df6be9704e2e"
+      ],
+      "blocked_reason": "нет обработчика для действия PIN_DEPENDENCY",
+      "details": {
+        "source": "risk_id",
+        "line": 1,
+        "package": "fastapi"
+      }
+    },
+    {
+      "id": "T-0012",
+      "risk_id": "STR-001",
+      "action": "ADD_FILE",
+      "target": "README.md",
+      "priority": "P1",
+      "decision": "CREATE_TASK",
+      "automation": "ASSISTED",
+      "executable": true,
+      "status": "PLANNED",
+      "title": "ADD_FILE → README.md",
+      "reason": "High impact — must be scheduled as a task",
+      "risk_fingerprints": [
+        "53add9419c2b6713"
+      ],
+      "details": {
+        "source": "risk_id"
+      }
+    },
+    {
+      "id": "T-0013",
+      "risk_id": "STR-002",
+      "action": "CREATE_DIRECTORY",
+      "target": "docs",
+      "priority": "P1",
+      "decision": "CREATE_TASK",
+      "automation": "AUTOMATIC",
+      "executable": true,
+      "status": "PLANNED",
+      "title": "CREATE_DIRECTORY → docs",
+      "reason": "High impact — must be scheduled as a task",
+      "risk_fingerprints": [
+        "2d6f16719c0d4a24"
+      ],
+      "details": {
+        "source": "risk_id"
+      }
+    },
+    {
+      "id": "T-0014",
+      "risk_id": "STR-004",
+      "action": "REMOVE_FILE",
+      "target": "_Мастер/Единые_показатели_v2.md",
+      "priority": "P1",
+      "decision": "CREATE_TASK",
+      "automation": "ASSISTED",
+      "executable": true,
+      "status": "PLANNED",
+      "title": "REMOVE_FILE → _Мастер/Единые_показатели_v2.md",
+      "reason": "High impact — must be scheduled as a task",
+      "risk_fingerprints": [
+        "17452ae19ace214e"
+      ],
+      "details": {
+        "source": "risk_id",
+        "size": 13762
+      }
+    },
+    {
+      "id": "T-0015",
+      "risk_id": "QLT-006",
+      "action": "ADD_TESTS",
+      "target": ".",
+      "priority": "P2",
+      "decision": "CREATE_TASK",
+      "automation": "ASSISTED",
+      "executable": true,
+      "status": "PLANNED",
+      "title": "ADD_TESTS → .",
+      "reason": "Without tests a result cannot be verified (Rule No.1)",
+      "risk_fingerprints": [
+        "788a8ac3bb523bbc"
+      ],
+      "details": {
+        "source": "risk_id"
+      }
+    },
+    {
+      "id": "T-0016",
+      "risk_id": "ART-002",
+      "action": "MOVE_FILE",
+      "target": "DPFSR.RU_PRICE/Презентация/Презентация_ЦПФСР_2026-05-26.pptx",
+      "priority": "P2",
+      "decision": "CREATE_TASK",
+      "automation": "ASSISTED",
+      "executable": false,
+      "status": "BLOCKED",
+      "title": "MOVE_FILE → DPFSR.RU_PRICE/Презентация/Презентация_ЦПФСР_2026-05-26.pptx",
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task",
+      "risk_fingerprints": [
+        "cde838b5dd8f1113"
+      ],
+      "blocked_reason": "нет обработчика для действия MOVE_FILE",
+      "details": {
+        "source": "risk_id",
+        "occurrences": 6
+      }
+    },
+    {
+      "id": "T-0017",
+      "risk_id": "ART-003",
+      "action": "REMOVE_FILE",
+      "target": "_arhiv/ЦПФСР.РФ.rar",
+      "priority": "P2",
+      "decision": "CREATE_TASK",
+      "automation": "ASSISTED",
+      "executable": true,
+      "status": "FAILED",
+      "title": "REMOVE_FILE → _arhiv/ЦПФСР.РФ.rar",
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task",
+      "risk_fingerprints": [
+        "f0f07b966271e30f"
+      ],
+      "details": {
+        "source": "risk_id",
+        "occurrences": 15
+      }
+    },
+    {
+      "id": "T-0018",
+      "risk_id": "QLT-001",
+      "action": "REFACTOR",
+      "target": "18_MVP/backend/app/reporting.py",
+      "priority": "P2",
+      "decision": "CREATE_TASK",
+      "automation": "MANUAL",
+      "executable": false,
+      "status": "BLOCKED",
+      "title": "REFACTOR → 18_MVP/backend/app/reporting.py",
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task",
+      "risk_fingerprints": [
+        "77527a3f124f44a5"
+      ],
+      "blocked_reason": "действие требует человека (MANUAL) — автоматически не выполняется",
+      "details": {
+        "source": "risk_id",
+        "line": 61,
+        "occurrences": 13
+      }
+    },
+    {
+      "id": "T-0019",
+      "risk_id": "QLT-002",
+      "action": "REFACTOR",
+      "target": "18_MVP/backend/app/main.py",
+      "priority": "P2",
+      "decision": "CREATE_TASK",
+      "automation": "MANUAL",
+      "executable": false,
+      "status": "BLOCKED",
+      "title": "REFACTOR → 18_MVP/backend/app/main.py",
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task",
+      "occurrences": 2,
+      "risk_ids": [
+        "QLT-002",
+        "QLT-018"
+      ],
+      "risk_fingerprints": [
+        "3761fd42f6ed69fc",
+        "8f926c18364da6ef"
+      ],
+      "blocked_reason": "действие требует человека (MANUAL) — автоматически не выполняется",
+      "details": {
+        "source": "risk_id",
+        "line": 147,
+        "occurrences": 14
+      }
+    },
+    {
+      "id": "T-0020",
+      "risk_id": "QLT-005",
+      "action": "DEDUPLICATE",
+      "target": "09_Мобильное_приложение/Приложение/icons/apple-touch-icon.png",
+      "priority": "P2",
+      "decision": "CREATE_TASK",
+      "automation": "ASSISTED",
+      "executable": true,
+      "status": "SKIPPED",
+      "title": "DEDUPLICATE → 09_Мобильное_приложение/Приложение/icons/apple-touch-icon.png",
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task",
+      "risk_fingerprints": [
+        "8b76200a3a373db7"
+      ],
+      "details": {
+        "source": "risk_id",
+        "occurrences": 8
+      }
+    },
+    {
+      "id": "T-0021",
+      "risk_id": "QLT-010",
+      "action": "REFACTOR",
+      "target": "_design-system/gate.js",
+      "priority": "P2",
+      "decision": "CREATE_TASK",
+      "automation": "MANUAL",
+      "executable": false,
+      "status": "BLOCKED",
+      "title": "REFACTOR → _design-system/gate.js",
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task",
+      "risk_fingerprints": [
+        "2395c198369aff4d"
+      ],
+      "blocked_reason": "действие требует человека (MANUAL) — автоматически не выполняется",
+      "details": {
+        "source": "category",
+        "line": 34,
+        "occurrences": 14
+      }
+    },
+    {
+      "id": "T-0022",
+      "risk_id": "QLT-014",
+      "action": "REFACTOR",
+      "target": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "priority": "P2",
+      "decision": "CREATE_TASK",
+      "automation": "MANUAL",
+      "executable": false,
+      "status": "BLOCKED",
+      "title": "REFACTOR → 09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task",
+      "risk_fingerprints": [
+        "261d887e7a1e0115"
+      ],
+      "blocked_reason": "действие требует человека (MANUAL) — автоматически не выполняется",
+      "details": {
+        "source": "category",
+        "line": 79,
+        "occurrences": 15
+      }
+    },
+    {
+      "id": "T-0023",
+      "risk_id": "QLT-015",
+      "action": "REFACTOR",
+      "target": "09_Мобильное_приложение/Приложение/screenshots/generate_screens.py",
+      "priority": "P2",
+      "decision": "CREATE_TASK",
+      "automation": "MANUAL",
+      "executable": false,
+      "status": "BLOCKED",
+      "title": "REFACTOR → 09_Мобильное_приложение/Приложение/screenshots/generate_screens.py",
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task",
+      "risk_fingerprints": [
+        "60bbbab93888a071"
+      ],
+      "blocked_reason": "действие требует человека (MANUAL) — автоматически не выполняется",
+      "details": {
+        "source": "category",
+        "line": 57,
+        "occurrences": 14
+      }
+    }
+  ],
+  "summary": {
+    "READY": 0,
+    "BLOCKED": 16,
+    "PLANNED": 4,
+    "DONE": 0,
+    "FAILED": 1,
+    "SKIPPED": 2,
+    "ROLLED_BACK": 0
+  },
+  "totals": {
+    "tasks": 23,
+    "actionable": 0,
+    "blocked": 16,
+    "by_automation": {
+      "ASSISTED": 16,
+      "AUTOMATIC": 2,
+      "MANUAL": 5
+    }
+  },
+  "schema_version": "1.0",
+  "factory_version": "1.0.0",
+  "project_path": "D:\\DPFSD.RU",
+  "source_run": "20260806-023416-37db6668",
+  "duration_ms": 0.525,
+  "errors": []
+}

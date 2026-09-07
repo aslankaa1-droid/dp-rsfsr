@@ -1,0 +1,5782 @@
+{
+  "project": "DPFSD.RU",
+  "project_path": "D:\\DPFSD.RU",
+  "run_id": "20260806-023416-37db6668",
+  "generated_at": 1785972892.7973733,
+  "schema_version": "1.0",
+  "builder_version": "1.0.0",
+  "snapshot": {
+    "hash": "71e0ef3748c1c1e02711f6591c5eb8dc6542bb51653bceec65007682cb8dfd7f",
+    "files": 1362,
+    "size": 568511090,
+    "size_human": "542.17 MB",
+    "project_type": "static_web",
+    "language": "HTML",
+    "timestamp": 1785972884.0596135,
+    "duration_ms": 27648.765,
+    "by_extension": {
+      ".txt": 494,
+      ".md": 315,
+      ".html": 281,
+      ".png": 87,
+      ".pdf": 48,
+      ".docx": 37,
+      ".zip": 29,
+      ".svg": 18,
+      ".py": 12,
+      ".js": 11,
+      ".json": 7,
+      ".css": 6,
+      "<none>": 4,
+      ".ps1": 4,
+      ".jpg": 1,
+      ".example": 1,
+      ".bat": 1,
+      ".db": 1,
+      ".pptx": 1,
+      ".csv": 1,
+      ".rar": 1,
+      ".sh": 1,
+      ".xml": 1
+    },
+    "largest_files": [
+      {
+        "path": "_arhiv/ЦПФСР.РФ.rar",
+        "size": 249367212,
+        "size_human": "237.82 MB"
+      },
+      {
+        "path": "_снапшоты/2026-06-10_translations-reconciled.zip",
+        "size": 21941467,
+        "size_human": "20.93 MB"
+      },
+      {
+        "path": "_снапшоты/2026-06-10_SoT-v4-stanceA-FINAL.zip",
+        "size": 15782664,
+        "size_human": "15.05 MB"
+      },
+      {
+        "path": "_снапшоты/2026-06-10_SoT-v4-FULL-reconcile.zip",
+        "size": 15693384,
+        "size_human": "14.97 MB"
+      },
+      {
+        "path": "DPFSR.RU_PRICE/Презентация/Презентация_ЦПФСР_2026-05-26.pptx",
+        "size": 10578696,
+        "size_human": "10.09 MB"
+      }
+    ],
+    "excluded_dirs": 4,
+    "foreign_state_dirs": [],
+    "generated_files_skipped": 0,
+    "generated_files": [],
+    "truncated_rules": {
+      "ART-003": {
+        "shown": 15,
+        "total": 30
+      },
+      "QLT-014": {
+        "shown": 15,
+        "total": 504
+      },
+      "QLT-018": {
+        "shown": 15,
+        "total": 22
+      }
+    },
+    "unread_files": {
+      "binary": {
+        "count": 206,
+        "files": [
+          "01_Техническая_документация/01_Концепция_архитектуры.docx",
+          "01_Техническая_документация/01_Концепция_архитектуры.pdf",
+          "01_Техническая_документация/02_Функциональные_требования.docx",
+          "01_Техническая_документация/02_Функциональные_требования.pdf",
+          "01_Техническая_документация/03_Нефункциональные_требования.docx",
+          "01_Техническая_документация/03_Нефункциональные_требования.pdf",
+          "01_Техническая_документация/04_Интеграции_с_ГИС.docx",
+          "01_Техническая_документация/04_Интеграции_с_ГИС.pdf",
+          "01_Техническая_документация/05_Безопасность_и_КИИ.docx",
+          "01_Техническая_документация/05_Безопасность_и_КИИ.pdf",
+          "01_Техническая_документация/06_DLT_реестр_ЦФА.docx",
+          "01_Техническая_документация/06_DLT_реестр_ЦФА.pdf",
+          "01_Техническая_документация/07_Дорожная_карта_разработки.docx",
+          "01_Техническая_документация/07_Дорожная_карта_разработки.pdf",
+          "01_Техническая_документация/08_Архитектурные_диаграммы.docx",
+          "01_Техническая_документация/08_Архитектурные_диаграммы.pdf",
+          "02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.docx",
+          "02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.pdf",
+          "03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.docx",
+          "03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.pdf",
+          "03_Финансовая_модель/Финмодель_допущения_и_расчёты.docx",
+          "03_Финансовая_модель/Финмодель_допущения_и_расчёты.pdf",
+          "04_Бизнес-план/Бизнес-план_ЦП_РСФСР.docx",
+          "04_Бизнес-план/Бизнес-план_ЦП_РСФСР.pdf",
+          "05_Бренд-бук/Logo_rsfsr.jpg",
+          "05_Бренд-бук/Бренд-бук_ЦП_РСФСР.docx",
+          "05_Бренд-бук/Бренд-бук_ЦП_РСФСР.pdf",
+          "07_Презентации/Для_госструктур_ЦБ/Доклад_для_госструктур_и_ЦБ_РФ.docx",
+          "07_Презентации/Для_госструктур_ЦБ/Доклад_для_госструктур_и_ЦБ_РФ.pdf",
+          "07_Презентации/Комплект_для_Руководителя/01_Письмо_Руководителю.pdf",
+          "07_Презентации/Комплект_для_Руководителя/02_Схема_работы_платформы.pdf",
+          "07_Презентации/Комплект_для_Руководителя/03_Пример_выпуска_ЦФА.pdf",
+          "07_Презентации/Комплект_для_Руководителя/_старые_версии/02_Доклад_для_госорганов.pdf",
+          "07_Презентации/Комплект_для_Руководителя/_старые_версии/03_Выгодность_для_участников.pdf",
+          "07_Презентации/Комплект_для_Руководителя/_старые_версии/03_Пример_выпуска_ЦФА.pdf",
+          "09_Мобильное_приложение/Конструкторская_документация/01_Техническое_задание.docx",
+          "09_Мобильное_приложение/Конструкторская_документация/01_Техническое_задание.pdf",
+          "09_Мобильное_приложение/Конструкторская_документация/02_Описание_программы.docx",
+          "09_Мобильное_приложение/Конструкторская_документация/02_Описание_программы.pdf",
+          "09_Мобильное_приложение/Конструкторская_документация/03_Описание_применения.docx",
+          "09_Мобильное_приложение/Конструкторская_документация/03_Описание_применения.pdf",
+          "09_Мобильное_приложение/Конструкторская_документация/04_Руководство_пользователя.docx",
+          "09_Мобильное_приложение/Конструкторская_документация/04_Руководство_пользователя.pdf",
+          "09_Мобильное_приложение/Конструкторская_документация/05_Руководство_по_установке.docx",
+          "09_Мобильное_приложение/Конструкторская_документация/05_Руководство_по_установке.pdf",
+          "09_Мобильное_приложение/Конструкторская_документация/06_Описание_архитектуры.docx",
+          "09_Мобильное_приложение/Конструкторская_документация/06_Описание_архитектуры.pdf",
+          "09_Мобильное_приложение/Конструкторская_документация/07_API_и_интеграции.docx",
+          "09_Мобильное_приложение/Конструкторская_документация/07_API_и_интеграции.pdf",
+          "09_Мобильное_приложение/Конструкторская_документация/08_Модель_данных.docx"
+        ]
+      }
+    },
+    "suppressed_findings": {},
+    "unused_allow_entries": [],
+    "test_files": 1,
+    "suppressed_in_tests": {
+      "QLT-014": 7,
+      "QLT-018": 1
+    }
+  },
+  "health": {
+    "score": 0,
+    "grade": "F",
+    "start": 100,
+    "caps": {
+      "P0": 50.0,
+      "P1": 40.0,
+      "P2": 20.0,
+      "P3": 10.0
+    },
+    "rates": {
+      "P0": 0.5,
+      "P1": 0.375,
+      "P2": 0.35,
+      "P3": 0.2
+    },
+    "counts": {
+      "P0": 4,
+      "P1": 38,
+      "P2": 636,
+      "P3": 3
+    },
+    "penalties": {
+      "P0": 47,
+      "P1": 40,
+      "P2": 20,
+      "P3": 5
+    },
+    "total_penalty": 112,
+    "floored_at_zero": true,
+    "hidden": {
+      "P2": 511
+    },
+    "undefined": false,
+    "summary": {
+      "critical": 4,
+      "high": 38,
+      "medium": 125,
+      "low": 3
+    },
+    "explain": [
+      "Start: 100",
+      "P0 x4 -> -47",
+      "P1 x38 -> -40",
+      "P2 x636 (из них 511 скрыты обрезом) -> -20",
+      "P3 x3 -> -5",
+      "Health: 0 (F)"
+    ],
+    "analyzers": [
+      {
+        "name": "security",
+        "priority": "P0",
+        "category": "SECURITY",
+        "risks": 16,
+        "duration_ms": 6198.941
+      },
+      {
+        "name": "integrity",
+        "priority": "P0",
+        "category": "INTEGRITY",
+        "risks": 0,
+        "duration_ms": 6.49
+      },
+      {
+        "name": "structure",
+        "priority": "P1",
+        "category": "STRUCTURE",
+        "risks": 3,
+        "duration_ms": 100.977
+      },
+      {
+        "name": "dependency",
+        "priority": "P1",
+        "category": "DEPENDENCY",
+        "risks": 26,
+        "duration_ms": 2.465
+      },
+      {
+        "name": "quality",
+        "priority": "P2",
+        "category": "QUALITY",
+        "risks": 103,
+        "duration_ms": 879.322
+      },
+      {
+        "name": "artifact",
+        "priority": "P2",
+        "category": "ARTIFACT",
+        "risks": 22,
+        "duration_ms": 1284.943
+      },
+      {
+        "name": "performance",
+        "priority": "P3",
+        "category": "PERFORMANCE",
+        "risks": 0,
+        "duration_ms": 0.833
+      },
+      {
+        "name": "documentation",
+        "priority": "P3",
+        "category": "DOCUMENTATION",
+        "risks": 3,
+        "duration_ms": 63.534
+      }
+    ]
+  },
+  "risks": [
+    {
+      "id": "SEC-001",
+      "priority": "P0",
+      "severity": "CRITICAL",
+      "category": "SECURITY",
+      "title": "Secret detected",
+      "description": "Hardcoded secret in an assignment — 18_MVP/frontend/index.html:356",
+      "recommendation": "Remove the secret from the code, move it to a local environment variable and rotate the key",
+      "file": "18_MVP/frontend/index.html",
+      "line": 356,
+      "evidence": "Пар*ль",
+      "fingerprint": "f8a6d66618336739",
+      "size_human": null,
+      "details": {
+        "rule": "SEC-001"
+      }
+    },
+    {
+      "id": "SEC-001",
+      "priority": "P0",
+      "severity": "CRITICAL",
+      "category": "SECURITY",
+      "title": "Secret detected",
+      "description": "Hardcoded secret in an assignment — 18_MVP/frontend/index.html:413",
+      "recommendation": "Remove the secret from the code, move it to a local environment variable and rotate the key",
+      "file": "18_MVP/frontend/index.html",
+      "line": 413,
+      "evidence": "Pas***rd",
+      "fingerprint": "032f68d983bbf41e",
+      "size_human": null,
+      "details": {
+        "rule": "SEC-001"
+      }
+    },
+    {
+      "id": "SEC-001",
+      "priority": "P0",
+      "severity": "CRITICAL",
+      "category": "SECURITY",
+      "title": "Secret detected",
+      "description": "Hardcoded secret in an assignment — 18_MVP/frontend/index.html:509",
+      "recommendation": "Remove the secret from the code, move it to a local environment variable and rotate the key",
+      "file": "18_MVP/frontend/index.html",
+      "line": 509,
+      "evidence": "dem***34",
+      "fingerprint": "b0e9764e52e09536",
+      "size_human": null,
+      "details": {
+        "rule": "SEC-001",
+        "occurrences": 4,
+        "duplicate_locations": [
+          {
+            "file": "18_MVP/frontend/index.html",
+            "line": 509
+          },
+          {
+            "file": "18_MVP/frontend/index.html",
+            "line": 510
+          },
+          {
+            "file": "18_MVP/frontend/index.html",
+            "line": 511
+          },
+          {
+            "file": "18_MVP/frontend/index.html",
+            "line": 512
+          }
+        ]
+      }
+    },
+    {
+      "id": "SEC-011",
+      "priority": "P0",
+      "severity": "CRITICAL",
+      "category": "SECURITY",
+      "title": "Environment file is not ignored",
+      "description": "09_Мобильное_приложение/Сборки/common/.env.example не исключён через .gitignore — секреты попадут в историю версий",
+      "recommendation": "Add the environment file to .gitignore and remove it from version control",
+      "file": "09_Мобильное_приложение/Сборки/common/.env.example",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "6e821ab725f05bfc",
+      "size_human": null,
+      "details": {}
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: @capacitor/android объявлен как «^6.1.0» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "@capacitor/android",
+        "spec": "^6.1.0",
+        "block": "dependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: @capacitor/app объявлен как «^6.0.0» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "@capacitor/app",
+        "spec": "^6.0.0",
+        "block": "dependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: @capacitor/biometric-auth объявлен как «^6.0.0» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "@capacitor/biometric-auth",
+        "spec": "^6.0.0",
+        "block": "dependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: @capacitor/camera объявлен как «^6.1.0» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "@capacitor/camera",
+        "spec": "^6.1.0",
+        "block": "dependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: @capacitor/clipboard объявлен как «^6.0.0» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "@capacitor/clipboard",
+        "spec": "^6.0.0",
+        "block": "dependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: @capacitor/core объявлен как «^6.1.0» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "@capacitor/core",
+        "spec": "^6.1.0",
+        "block": "dependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: @capacitor/device объявлен как «^6.0.0» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "@capacitor/device",
+        "spec": "^6.0.0",
+        "block": "dependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: @capacitor/filesystem объявлен как «^6.0.0» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "@capacitor/filesystem",
+        "spec": "^6.0.0",
+        "block": "dependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: @capacitor/ios объявлен как «^6.1.0» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "@capacitor/ios",
+        "spec": "^6.1.0",
+        "block": "dependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: @capacitor/keyboard объявлен как «^6.0.0» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "@capacitor/keyboard",
+        "spec": "^6.0.0",
+        "block": "dependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: @capacitor/local-notifications объявлен как «^6.0.0» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "@capacitor/local-notifications",
+        "spec": "^6.0.0",
+        "block": "dependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: @capacitor/network объявлен как «^6.0.0» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "@capacitor/network",
+        "spec": "^6.0.0",
+        "block": "dependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: @capacitor/preferences объявлен как «^6.0.0» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "@capacitor/preferences",
+        "spec": "^6.0.0",
+        "block": "dependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: @capacitor/push-notifications объявлен как «^6.0.0» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "@capacitor/push-notifications",
+        "spec": "^6.0.0",
+        "block": "dependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: @capacitor/share объявлен как «^6.0.0» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "@capacitor/share",
+        "spec": "^6.0.0",
+        "block": "dependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: @capacitor/splash-screen объявлен как «^6.0.0» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "@capacitor/splash-screen",
+        "spec": "^6.0.0",
+        "block": "dependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: @capacitor/status-bar объявлен как «^6.0.0» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "@capacitor/status-bar",
+        "spec": "^6.0.0",
+        "block": "dependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: capacitor-secure-storage-plugin объявлен как «^0.10.0» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "capacitor-secure-storage-plugin",
+        "spec": "^0.10.0",
+        "block": "dependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: @capacitor/cli объявлен как «^6.1.0» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "@capacitor/cli",
+        "spec": "^6.1.0",
+        "block": "devDependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: @capacitor/assets объявлен как «^3.0.5» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "@capacitor/assets",
+        "spec": "^3.0.5",
+        "block": "devDependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "09_Мобильное_приложение/Сборки/common/package.json: typescript объявлен как «^5.4.0» — версия плавающая",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "09_Мобильное_приложение/Сборки/common/package.json",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c34b7208f9dd76a8",
+      "size_human": null,
+      "details": {
+        "package": "typescript",
+        "spec": "^5.4.0",
+        "block": "devDependencies"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "18_MVP/backend/requirements.txt:1 — fastapi без точной версии (fastapi>=0.110)",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "18_MVP/backend/requirements.txt",
+      "line": 1,
+      "evidence": null,
+      "fingerprint": "e69e73d834702aba",
+      "size_human": null,
+      "details": {
+        "package": "fastapi",
+        "spec": ">=0.110"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "18_MVP/backend/requirements.txt:2 — uvicorn без точной версии (uvicorn>=0.27)",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "18_MVP/backend/requirements.txt",
+      "line": 2,
+      "evidence": null,
+      "fingerprint": "1316876543c49b50",
+      "size_human": null,
+      "details": {
+        "package": "uvicorn",
+        "spec": ">=0.27"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "18_MVP/backend/requirements.txt:3 — sqlalchemy без точной версии (sqlalchemy>=2.0)",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "18_MVP/backend/requirements.txt",
+      "line": 3,
+      "evidence": null,
+      "fingerprint": "a439d8c9be6e1372",
+      "size_human": null,
+      "details": {
+        "package": "sqlalchemy",
+        "spec": ">=2.0"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "18_MVP/backend/requirements.txt:4 — pydantic без точной версии (pydantic[email]>=2.6)",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "18_MVP/backend/requirements.txt",
+      "line": 4,
+      "evidence": null,
+      "fingerprint": "d48d41d75b9ae43e",
+      "size_human": null,
+      "details": {
+        "package": "pydantic",
+        "spec": "[email]>=2.6"
+      }
+    },
+    {
+      "id": "DEP-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "DEPENDENCY",
+      "title": "Dependency version is not pinned",
+      "description": "18_MVP/backend/requirements.txt:5 — python-multipart без точной версии (python-multipart>=0.0.9)",
+      "recommendation": "Pin the version explicitly: a floating version makes builds non-reproducible",
+      "file": "18_MVP/backend/requirements.txt",
+      "line": 5,
+      "evidence": null,
+      "fingerprint": "7999df6be9704e2e",
+      "size_human": null,
+      "details": {
+        "package": "python-multipart",
+        "spec": ">=0.0.9"
+      }
+    },
+    {
+      "id": "SEC-012",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "SECURITY",
+      "title": "High-entropy string (possible secret)",
+      "description": "High-entropy value that looks like a generated secret — _translations/en/02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html:831",
+      "recommendation": "Verify whether this is a real secret; if so, move it out of the code and rotate it",
+      "file": "_translations/en/02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html",
+      "line": 831,
+      "evidence": "nea********ts",
+      "fingerprint": "4b8912c27b041d7a",
+      "size_human": null,
+      "details": {
+        "rule": "SEC-012",
+        "entropy": 4.28
+      }
+    },
+    {
+      "id": "SEC-012",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "SECURITY",
+      "title": "High-entropy string (possible secret)",
+      "description": "High-entropy value that looks like a generated secret — _translations/en/07_Презентации/Для_госструктур_ЦБ/Доклад_для_госструктур_и_ЦБ_РФ.html:430",
+      "recommendation": "Verify whether this is a real secret; if so, move it out of the code and rotate it",
+      "file": "_translations/en/07_Презентации/Для_госструктур_ЦБ/Доклад_для_госструктур_и_ЦБ_РФ.html",
+      "line": 430,
+      "evidence": "sta********on",
+      "fingerprint": "a3d2449a0fd425d2",
+      "size_human": null,
+      "details": {
+        "rule": "SEC-012",
+        "entropy": 4.21
+      }
+    },
+    {
+      "id": "SEC-012",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "SECURITY",
+      "title": "High-entropy string (possible secret)",
+      "description": "High-entropy value that looks like a generated secret — _translations/en/07_Презентации/Для_госструктур_ЦБ/Доклад_для_госструктур_и_ЦБ_РФ.html:609",
+      "recommendation": "Verify whether this is a real secret; if so, move it out of the code and rotate it",
+      "file": "_translations/en/07_Презентации/Для_госструктур_ЦБ/Доклад_для_госструктур_и_ЦБ_РФ.html",
+      "line": 609,
+      "evidence": "sta********ts",
+      "fingerprint": "d9e1bdbbe4565825",
+      "size_human": null,
+      "details": {
+        "rule": "SEC-012",
+        "entropy": 4.26
+      }
+    },
+    {
+      "id": "SEC-012",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "SECURITY",
+      "title": "High-entropy string (possible secret)",
+      "description": "High-entropy value that looks like a generated secret — _translations/en/12_DD_аудит/DD_отчёт.html:743",
+      "recommendation": "Verify whether this is a real secret; if so, move it out of the code and rotate it",
+      "file": "_translations/en/12_DD_аудит/DD_отчёт.html",
+      "line": 743,
+      "evidence": "amb********ng",
+      "fingerprint": "11bb5c4f2181ac0d",
+      "size_human": null,
+      "details": {
+        "rule": "SEC-012",
+        "entropy": 4.26
+      }
+    },
+    {
+      "id": "SEC-012",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "SECURITY",
+      "title": "High-entropy string (possible secret)",
+      "description": "High-entropy value that looks like a generated secret — _translations/en/14_Аудит/АУДИТ Сводный пост-рефактор 24.05.2026/Сводный_аудит_пост_рефактор.html:945",
+      "recommendation": "Verify whether this is a real secret; if so, move it out of the code and rotate it",
+      "file": "_translations/en/14_Аудит/АУДИТ Сводный пост-рефактор 24.05.2026/Сводный_аудит_пост_рефактор.html",
+      "line": 945,
+      "evidence": "hor********al",
+      "fingerprint": "d8baea22edcacb40",
+      "size_human": null,
+      "details": {
+        "rule": "SEC-012",
+        "entropy": 4.24
+      }
+    },
+    {
+      "id": "SEC-012",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "SECURITY",
+      "title": "High-entropy string (possible secret)",
+      "description": "High-entropy value that looks like a generated secret — _translations/en/14_Аудит/АУДИТ Сводный уточняющий 24.05.2026/Сводный_аудит_уточняющий.html:1127",
+      "recommendation": "Verify whether this is a real secret; if so, move it out of the code and rotate it",
+      "file": "_translations/en/14_Аудит/АУДИТ Сводный уточняющий 24.05.2026/Сводный_аудит_уточняющий.html",
+      "line": 1127,
+      "evidence": "hor********ys",
+      "fingerprint": "c1ec2800ca606871",
+      "size_human": null,
+      "details": {
+        "rule": "SEC-012",
+        "entropy": 4.25
+      }
+    },
+    {
+      "id": "SEC-012",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "SECURITY",
+      "title": "High-entropy string (possible secret)",
+      "description": "High-entropy value that looks like a generated secret — _translations/fr/02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html:638",
+      "recommendation": "Verify whether this is a real secret; if so, move it out of the code and rotate it",
+      "file": "_translations/fr/02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html",
+      "line": 638,
+      "evidence": "sta********28",
+      "fingerprint": "675091b27d62a337",
+      "size_human": null,
+      "details": {
+        "rule": "SEC-012",
+        "entropy": 4.3
+      }
+    },
+    {
+      "id": "SEC-012",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "SECURITY",
+      "title": "High-entropy string (possible secret)",
+      "description": "High-entropy value that looks like a generated secret — _translations/fr/02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html:853",
+      "recommendation": "Verify whether this is a real secret; if so, move it out of the code and rotate it",
+      "file": "_translations/fr/02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html",
+      "line": 853,
+      "evidence": "con********fz",
+      "fingerprint": "c886740cc4d13d64",
+      "size_human": null,
+      "details": {
+        "rule": "SEC-012",
+        "entropy": 4.28
+      }
+    },
+    {
+      "id": "SEC-012",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "SECURITY",
+      "title": "High-entropy string (possible secret)",
+      "description": "High-entropy value that looks like a generated secret — _translations/fr/14_Аудит/АУДИТ Сводный уточняющий 24.05.2026/Сводный_аудит_уточняющий.html:1077",
+      "recommendation": "Verify whether this is a real secret; if so, move it out of the code and rotate it",
+      "file": "_translations/fr/14_Аудит/АУДИТ Сводный уточняющий 24.05.2026/Сводный_аудит_уточняющий.html",
+      "line": 1077,
+      "evidence": "hor********il",
+      "fingerprint": "eb5aeb743341c8b9",
+      "size_human": null,
+      "details": {
+        "rule": "SEC-012",
+        "entropy": 4.2
+      }
+    },
+    {
+      "id": "STR-001",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "STRUCTURE",
+      "title": "Required root file is missing",
+      "description": "В корне проекта нет README.md",
+      "recommendation": "Add the file: it is part of the mandatory project layout",
+      "file": "README.md",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "53add9419c2b6713",
+      "size_human": null,
+      "details": {
+        "expected": "README.md"
+      }
+    },
+    {
+      "id": "STR-002",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "STRUCTURE",
+      "title": "Expected directory is missing",
+      "description": "Для проекта типа «static_web» ожидается каталог docs/",
+      "recommendation": "Create the directory and move the corresponding files into it",
+      "file": "docs",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "2d6f16719c0d4a24",
+      "size_human": null,
+      "details": {
+        "project_type": "static_web"
+      }
+    },
+    {
+      "id": "STR-004",
+      "priority": "P1",
+      "severity": "HIGH",
+      "category": "STRUCTURE",
+      "title": "Draft or backup file in the repository",
+      "description": "_Мастер/Единые_показатели_v2.md выглядит как черновик или резервная копия",
+      "recommendation": "Remove the draft copy or move it into a versioned archive",
+      "file": "_Мастер/Единые_показатели_v2.md",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "17452ae19ace214e",
+      "size_human": "13.44 KB",
+      "details": {}
+    },
+    {
+      "id": "ART-001",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Excluded directory takes significant space",
+      "description": ".git занимает 290.99 MB (2494 файлов) — каталог исключён из аудита, но лежит внутри проекта",
+      "recommendation": "Clean up the build artifacts or move them outside the project",
+      "file": ".git",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "2d8f077cc8e3b8ea",
+      "size_human": "290.99 MB",
+      "details": {
+        "files": 2494,
+        "threshold": 104857600,
+        "mode": "excluded_dir"
+      }
+    },
+    {
+      "id": "ART-002",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Large file in the repository",
+      "description": "DPFSR.RU_PRICE/Презентация/Презентация_ЦПФСР_2026-05-26.pptx весит 10.09 MB",
+      "recommendation": "Move the large file out of the repository or into external storage",
+      "file": "DPFSR.RU_PRICE/Презентация/Презентация_ЦПФСР_2026-05-26.pptx",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "cde838b5dd8f1113",
+      "size_human": "10.09 MB",
+      "details": {
+        "threshold": 10485760
+      }
+    },
+    {
+      "id": "ART-002",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Large file in the repository",
+      "description": "_arhiv/ЦПФСР.РФ.rar весит 237.82 MB",
+      "recommendation": "Move the large file out of the repository or into external storage",
+      "file": "_arhiv/ЦПФСР.РФ.rar",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "546ef4a8210a0a54",
+      "size_human": "237.82 MB",
+      "details": {
+        "threshold": 10485760
+      }
+    },
+    {
+      "id": "ART-002",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Large file in the repository",
+      "description": "_снапшоты/2026-06-10_SoT-v4-FULL-reconcile.zip весит 14.97 MB",
+      "recommendation": "Move the large file out of the repository or into external storage",
+      "file": "_снапшоты/2026-06-10_SoT-v4-FULL-reconcile.zip",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "3391afbc5955e214",
+      "size_human": "14.97 MB",
+      "details": {
+        "threshold": 10485760
+      }
+    },
+    {
+      "id": "ART-002",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Large file in the repository",
+      "description": "_снапшоты/2026-06-10_SoT-v4-stanceA-FINAL.zip весит 15.05 MB",
+      "recommendation": "Move the large file out of the repository or into external storage",
+      "file": "_снапшоты/2026-06-10_SoT-v4-stanceA-FINAL.zip",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "099e11aca16b1042",
+      "size_human": "15.05 MB",
+      "details": {
+        "threshold": 10485760
+      }
+    },
+    {
+      "id": "ART-002",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Large file in the repository",
+      "description": "_снапшоты/2026-06-10_translations-reconciled.zip весит 20.93 MB",
+      "recommendation": "Move the large file out of the repository or into external storage",
+      "file": "_снапшоты/2026-06-10_translations-reconciled.zip",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c1d86dc96d8b76b5",
+      "size_human": "20.93 MB",
+      "details": {
+        "threshold": 10485760
+      }
+    },
+    {
+      "id": "ART-002",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Large file in the repository",
+      "description": "_снапшоты/cpfsr-rf_batch8-COMPLETE_23of23_2026-05-26_17-21.zip весит 10.03 MB",
+      "recommendation": "Move the large file out of the repository or into external storage",
+      "file": "_снапшоты/cpfsr-rf_batch8-COMPLETE_23of23_2026-05-26_17-21.zip",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c459651e6737666c",
+      "size_human": "10.03 MB",
+      "details": {
+        "threshold": 10485760
+      }
+    },
+    {
+      "id": "ART-003",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Archive stored in the repository",
+      "description": "_arhiv/ЦПФСР.РФ.rar — архив на 237.82 MB в дереве исходников",
+      "recommendation": "Remove the archive: keep releases in a release storage, not in the source tree",
+      "file": "_arhiv/ЦПФСР.РФ.rar",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "f0f07b966271e30f",
+      "size_human": "237.82 MB",
+      "details": {}
+    },
+    {
+      "id": "ART-003",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Archive stored in the repository",
+      "description": "_снапшоты/2026-06-10_SoT-v4-FULL-reconcile.zip — архив на 14.97 MB в дереве исходников",
+      "recommendation": "Remove the archive: keep releases in a release storage, not in the source tree",
+      "file": "_снапшоты/2026-06-10_SoT-v4-FULL-reconcile.zip",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "929a83e69733ea86",
+      "size_human": "14.97 MB",
+      "details": {}
+    },
+    {
+      "id": "ART-003",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Archive stored in the repository",
+      "description": "_снапшоты/2026-06-10_SoT-v4-macro-reconcile.zip — архив на 1.52 MB в дереве исходников",
+      "recommendation": "Remove the archive: keep releases in a release storage, not in the source tree",
+      "file": "_снапшоты/2026-06-10_SoT-v4-macro-reconcile.zip",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "a98195b50b03adb6",
+      "size_human": "1.52 MB",
+      "details": {}
+    },
+    {
+      "id": "ART-003",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Archive stored in the repository",
+      "description": "_снапшоты/2026-06-10_SoT-v4-stanceA-FINAL.zip — архив на 15.05 MB в дереве исходников",
+      "recommendation": "Remove the archive: keep releases in a release storage, not in the source tree",
+      "file": "_снапшоты/2026-06-10_SoT-v4-stanceA-FINAL.zip",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "2e20a9f644e4da6d",
+      "size_human": "15.05 MB",
+      "details": {}
+    },
+    {
+      "id": "ART-003",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Archive stored in the repository",
+      "description": "_снапшоты/2026-06-10_flagship-translations-polished.zip — архив на 3.46 MB в дереве исходников",
+      "recommendation": "Remove the archive: keep releases in a release storage, not in the source tree",
+      "file": "_снапшоты/2026-06-10_flagship-translations-polished.zip",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "e902ef7298ec7992",
+      "size_human": "3.46 MB",
+      "details": {}
+    },
+    {
+      "id": "ART-003",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Archive stored in the repository",
+      "description": "_снапшоты/2026-06-10_translations-FINAL.zip — архив на 2.70 MB в дереве исходников",
+      "recommendation": "Remove the archive: keep releases in a release storage, not in the source tree",
+      "file": "_снапшоты/2026-06-10_translations-FINAL.zip",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "82f385e597d4859c",
+      "size_human": "2.70 MB",
+      "details": {}
+    },
+    {
+      "id": "ART-003",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Archive stored in the repository",
+      "description": "_снапшоты/2026-06-10_translations-reconciled.zip — архив на 20.93 MB в дереве исходников",
+      "recommendation": "Remove the archive: keep releases in a release storage, not in the source tree",
+      "file": "_снапшоты/2026-06-10_translations-reconciled.zip",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "f54696f8c2f06f5e",
+      "size_human": "20.93 MB",
+      "details": {}
+    },
+    {
+      "id": "ART-003",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Archive stored in the repository",
+      "description": "_снапшоты/cpfsr-rf_batch7-complete_2026-05-26_16-09.zip — архив на 9.22 MB в дереве исходников",
+      "recommendation": "Remove the archive: keep releases in a release storage, not in the source tree",
+      "file": "_снапшоты/cpfsr-rf_batch7-complete_2026-05-26_16-09.zip",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "b64b2c4ae6e0fb93",
+      "size_human": "9.22 MB",
+      "details": {}
+    },
+    {
+      "id": "ART-003",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Archive stored in the repository",
+      "description": "_снапшоты/cpfsr-rf_batch8-COMPLETE_23of23_2026-05-26_17-21.zip — архив на 10.03 MB в дереве исходников",
+      "recommendation": "Remove the archive: keep releases in a release storage, not in the source tree",
+      "file": "_снапшоты/cpfsr-rf_batch8-COMPLETE_23of23_2026-05-26_17-21.zip",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "ce06d0d5c1aeaf33",
+      "size_human": "10.03 MB",
+      "details": {}
+    },
+    {
+      "id": "ART-003",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Archive stored in the repository",
+      "description": "_снапшоты/cpfsr-rf_batch8-partial-11of23_2026-05-26_16-49.zip — архив на 9.64 MB в дереве исходников",
+      "recommendation": "Remove the archive: keep releases in a release storage, not in the source tree",
+      "file": "_снапшоты/cpfsr-rf_batch8-partial-11of23_2026-05-26_16-49.zip",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "5fbef2f42abbf49f",
+      "size_human": "9.64 MB",
+      "details": {}
+    },
+    {
+      "id": "ART-003",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Archive stored in the repository",
+      "description": "_снапшоты/cpfsr-rf_batch8-progress-9of23_2026-05-26_16-40.zip — архив на 9.55 MB в дереве исходников",
+      "recommendation": "Remove the archive: keep releases in a release storage, not in the source tree",
+      "file": "_снапшоты/cpfsr-rf_batch8-progress-9of23_2026-05-26_16-40.zip",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "a7cae1830466bf84",
+      "size_human": "9.55 MB",
+      "details": {}
+    },
+    {
+      "id": "ART-003",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Archive stored in the repository",
+      "description": "_снапшоты/cpfsr-rf_design-system-foundation_2026-05-25_21-25.zip — архив на 7.15 MB в дереве исходников",
+      "recommendation": "Remove the archive: keep releases in a release storage, not in the source tree",
+      "file": "_снапшоты/cpfsr-rf_design-system-foundation_2026-05-25_21-25.zip",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "66f810bc128e8f58",
+      "size_human": "7.15 MB",
+      "details": {}
+    },
+    {
+      "id": "ART-003",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Archive stored in the repository",
+      "description": "_снапшоты/cpfsr-rf_full-content-translations-batch1_2026-05-25_23-57.zip — архив на 7.43 MB в дереве исходников",
+      "recommendation": "Remove the archive: keep releases in a release storage, not in the source tree",
+      "file": "_снапшоты/cpfsr-rf_full-content-translations-batch1_2026-05-25_23-57.zip",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "7848b895fad704f2",
+      "size_human": "7.43 MB",
+      "details": {}
+    },
+    {
+      "id": "ART-003",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Archive stored in the repository",
+      "description": "_снапшоты/cpfsr-rf_i18n-4langs-inline_2026-05-25_22-40.zip — архив на 7.30 MB в дереве исходников",
+      "recommendation": "Remove the archive: keep releases in a release storage, not in the source tree",
+      "file": "_снапшоты/cpfsr-rf_i18n-4langs-inline_2026-05-25_22-40.zip",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "0b1a4a5c568733c4",
+      "size_human": "7.30 MB",
+      "details": {}
+    },
+    {
+      "id": "ART-003",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "ARTIFACT",
+      "title": "Archive stored in the repository",
+      "description": "_снапшоты/cpfsr-rf_links-fixed_2026-05-25_22-10.zip — архив на 7.24 MB в дереве исходников",
+      "recommendation": "Remove the archive: keep releases in a release storage, not in the source tree",
+      "file": "_снапшоты/cpfsr-rf_links-fixed_2026-05-25_22-10.zip",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "8415e716839779b0",
+      "size_human": "7.24 MB",
+      "details": {}
+    },
+    {
+      "id": "QLT-001",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Function is too long",
+      "description": "18_MVP/backend/app/reporting.py: функция build_report_html() занимает 151 строк при пороге 60",
+      "recommendation": "Split the function into smaller units with a single responsibility",
+      "file": "18_MVP/backend/app/reporting.py",
+      "line": 61,
+      "evidence": null,
+      "fingerprint": "77527a3f124f44a5",
+      "size_human": null,
+      "details": {
+        "function": "build_report_html",
+        "lines": 151
+      }
+    },
+    {
+      "id": "QLT-001",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Function is too long",
+      "description": "18_MVP/backend/demo_scenario.py: функция main() занимает 79 строк при пороге 60",
+      "recommendation": "Split the function into smaller units with a single responsibility",
+      "file": "18_MVP/backend/demo_scenario.py",
+      "line": 190,
+      "evidence": null,
+      "fingerprint": "5067cd415454521f",
+      "size_human": null,
+      "details": {
+        "function": "main",
+        "lines": 79
+      }
+    },
+    {
+      "id": "QLT-001",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Function is too long",
+      "description": "18_MVP/backend/smoke_load.py: функция main() занимает 134 строк при пороге 60",
+      "recommendation": "Split the function into smaller units with a single responsibility",
+      "file": "18_MVP/backend/smoke_load.py",
+      "line": 180,
+      "evidence": null,
+      "fingerprint": "e1e1fc38d1dc1d7d",
+      "size_human": null,
+      "details": {
+        "function": "main",
+        "lines": 134
+      }
+    },
+    {
+      "id": "QLT-001",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Function is too long",
+      "description": "_design-system/i18n-data.js: функция (anonymous)() занимает 450 строк при пороге 60",
+      "recommendation": "Split the function into smaller units with a single responsibility",
+      "file": "_design-system/i18n-data.js",
+      "line": 6,
+      "evidence": null,
+      "fingerprint": "a7dae54a188f7a9e",
+      "size_human": null,
+      "details": {
+        "function": "(anonymous)",
+        "lines": 450,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-001",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Function is too long",
+      "description": "_design-system/i18n.js: функция (anonymous)() занимает 158 строк при пороге 60",
+      "recommendation": "Split the function into smaller units with a single responsibility",
+      "file": "_design-system/i18n.js",
+      "line": 6,
+      "evidence": null,
+      "fingerprint": "89aeaf9e9bf0bdd5",
+      "size_human": null,
+      "details": {
+        "function": "(anonymous)",
+        "lines": 158,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-001",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Function is too long",
+      "description": "_design-system/theme-switcher.js: функция (anonymous)() занимает 69 строк при пороге 60",
+      "recommendation": "Split the function into smaller units with a single responsibility",
+      "file": "_design-system/theme-switcher.js",
+      "line": 5,
+      "evidence": null,
+      "fingerprint": "01abc2754343257e",
+      "size_human": null,
+      "details": {
+        "function": "(anonymous)",
+        "lines": 69,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-001",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Function is too long",
+      "description": "_design-system/ticker.js: функция (anonymous)() занимает 144 строк при пороге 60",
+      "recommendation": "Split the function into smaller units with a single responsibility",
+      "file": "_design-system/ticker.js",
+      "line": 9,
+      "evidence": null,
+      "fingerprint": "64419fbff4fb7686",
+      "size_human": null,
+      "details": {
+        "function": "(anonymous)",
+        "lines": 144,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-001",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Function is too long",
+      "description": "_design-system/ui.js: функция (anonymous)() занимает 77 строк при пороге 60",
+      "recommendation": "Split the function into smaller units with a single responsibility",
+      "file": "_design-system/ui.js",
+      "line": 4,
+      "evidence": null,
+      "fingerprint": "53def05a649af582",
+      "size_human": null,
+      "details": {
+        "function": "(anonymous)",
+        "lines": 77,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-001",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Function is too long",
+      "description": "_design-system/ui.js: функция (anonymous)() занимает 67 строк при пороге 60",
+      "recommendation": "Split the function into smaller units with a single responsibility",
+      "file": "_design-system/ui.js",
+      "line": 13,
+      "evidence": null,
+      "fingerprint": "d0929fe31a545179",
+      "size_human": null,
+      "details": {
+        "function": "(anonymous)",
+        "lines": 67,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-001",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Function is too long",
+      "description": "_shared/app.js: функция (anonymous)() занимает 194 строк при пороге 60",
+      "recommendation": "Split the function into smaller units with a single responsibility",
+      "file": "_shared/app.js",
+      "line": 12,
+      "evidence": null,
+      "fingerprint": "90ddd02786606e3d",
+      "size_human": null,
+      "details": {
+        "function": "(anonymous)",
+        "lines": 194,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-001",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Function is too long",
+      "description": "_shared/finmodel.js: функция (anonymous)() занимает 364 строк при пороге 60",
+      "recommendation": "Split the function into smaller units with a single responsibility",
+      "file": "_shared/finmodel.js",
+      "line": 24,
+      "evidence": null,
+      "fingerprint": "5feae55010f14653",
+      "size_human": null,
+      "details": {
+        "function": "(anonymous)",
+        "lines": 364,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-001",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Function is too long",
+      "description": "_shared/finmodel.js: функция model() занимает 167 строк при пороге 60",
+      "recommendation": "Split the function into smaller units with a single responsibility",
+      "file": "_shared/finmodel.js",
+      "line": 83,
+      "evidence": null,
+      "fingerprint": "d0494fac3170c493",
+      "size_human": null,
+      "details": {
+        "function": "model",
+        "lines": 167,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-001",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Function is too long",
+      "description": "_shared/i18n.js: функция (anonymous)() занимает 825 строк при пороге 60",
+      "recommendation": "Split the function into smaller units with a single responsibility",
+      "file": "_shared/i18n.js",
+      "line": 9,
+      "evidence": null,
+      "fingerprint": "cdd2df60448c8700",
+      "size_human": null,
+      "details": {
+        "function": "(anonymous)",
+        "lines": 825,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-002",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Cyclomatic complexity is too high",
+      "description": "18_MVP/backend/app/main.py: сложность get_project() = 18 при пороге 12",
+      "recommendation": "Reduce branching: extract helpers, use early returns or a lookup table",
+      "file": "18_MVP/backend/app/main.py",
+      "line": 147,
+      "evidence": null,
+      "fingerprint": "3761fd42f6ed69fc",
+      "size_human": null,
+      "details": {
+        "function": "get_project",
+        "complexity": 18
+      }
+    },
+    {
+      "id": "QLT-002",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Cyclomatic complexity is too high",
+      "description": "18_MVP/backend/app/reporting.py: сложность build_report_html() = 18 при пороге 12",
+      "recommendation": "Reduce branching: extract helpers, use early returns or a lookup table",
+      "file": "18_MVP/backend/app/reporting.py",
+      "line": 61,
+      "evidence": null,
+      "fingerprint": "0237949b49408762",
+      "size_human": null,
+      "details": {
+        "function": "build_report_html",
+        "complexity": 18
+      }
+    },
+    {
+      "id": "QLT-002",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Cyclomatic complexity is too high",
+      "description": "18_MVP/backend/demo_scenario.py: сложность main() = 19 при пороге 12",
+      "recommendation": "Reduce branching: extract helpers, use early returns or a lookup table",
+      "file": "18_MVP/backend/demo_scenario.py",
+      "line": 190,
+      "evidence": null,
+      "fingerprint": "1e3d549ed62c1fde",
+      "size_human": null,
+      "details": {
+        "function": "main",
+        "complexity": 19
+      }
+    },
+    {
+      "id": "QLT-002",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Cyclomatic complexity is too high",
+      "description": "18_MVP/backend/smoke_load.py: сложность main() = 33 при пороге 12",
+      "recommendation": "Reduce branching: extract helpers, use early returns or a lookup table",
+      "file": "18_MVP/backend/smoke_load.py",
+      "line": 180,
+      "evidence": null,
+      "fingerprint": "883717f75f7340c9",
+      "size_human": null,
+      "details": {
+        "function": "main",
+        "complexity": 33
+      }
+    },
+    {
+      "id": "QLT-002",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Cyclomatic complexity is too high",
+      "description": "_design-system/gate.js: сложность (anonymous)() = 17 при пороге 12",
+      "recommendation": "Reduce branching: extract helpers, use early returns or a lookup table",
+      "file": "_design-system/gate.js",
+      "line": 2,
+      "evidence": null,
+      "fingerprint": "6767d10a0de2c2c7",
+      "size_human": null,
+      "details": {
+        "function": "(anonymous)",
+        "complexity": 17,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-002",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Cyclomatic complexity is too high",
+      "description": "_design-system/i18n.js: сложность (anonymous)() = 50 при пороге 12",
+      "recommendation": "Reduce branching: extract helpers, use early returns or a lookup table",
+      "file": "_design-system/i18n.js",
+      "line": 6,
+      "evidence": null,
+      "fingerprint": "8e79e4e91ca69424",
+      "size_human": null,
+      "details": {
+        "function": "(anonymous)",
+        "complexity": 50,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-002",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Cyclomatic complexity is too high",
+      "description": "_design-system/theme-switcher.js: сложность (anonymous)() = 16 при пороге 12",
+      "recommendation": "Reduce branching: extract helpers, use early returns or a lookup table",
+      "file": "_design-system/theme-switcher.js",
+      "line": 5,
+      "evidence": null,
+      "fingerprint": "a9d1ecc98d0edfbf",
+      "size_human": null,
+      "details": {
+        "function": "(anonymous)",
+        "complexity": 16,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-002",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Cyclomatic complexity is too high",
+      "description": "_design-system/ticker.js: сложность (anonymous)() = 29 при пороге 12",
+      "recommendation": "Reduce branching: extract helpers, use early returns or a lookup table",
+      "file": "_design-system/ticker.js",
+      "line": 9,
+      "evidence": null,
+      "fingerprint": "8219f40d55db920c",
+      "size_human": null,
+      "details": {
+        "function": "(anonymous)",
+        "complexity": 29,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-002",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Cyclomatic complexity is too high",
+      "description": "_design-system/ui.js: сложность (anonymous)() = 17 при пороге 12",
+      "recommendation": "Reduce branching: extract helpers, use early returns or a lookup table",
+      "file": "_design-system/ui.js",
+      "line": 4,
+      "evidence": null,
+      "fingerprint": "12c5cdca369d0fdd",
+      "size_human": null,
+      "details": {
+        "function": "(anonymous)",
+        "complexity": 17,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-002",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Cyclomatic complexity is too high",
+      "description": "_design-system/ui.js: сложность (anonymous)() = 16 при пороге 12",
+      "recommendation": "Reduce branching: extract helpers, use early returns or a lookup table",
+      "file": "_design-system/ui.js",
+      "line": 13,
+      "evidence": null,
+      "fingerprint": "a9e4e1cba7cff573",
+      "size_human": null,
+      "details": {
+        "function": "(anonymous)",
+        "complexity": 16,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-002",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Cyclomatic complexity is too high",
+      "description": "_shared/app.js: сложность (anonymous)() = 34 при пороге 12",
+      "recommendation": "Reduce branching: extract helpers, use early returns or a lookup table",
+      "file": "_shared/app.js",
+      "line": 12,
+      "evidence": null,
+      "fingerprint": "88f8f234dcd3f22b",
+      "size_human": null,
+      "details": {
+        "function": "(anonymous)",
+        "complexity": 34,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-002",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Cyclomatic complexity is too high",
+      "description": "_shared/finmodel.js: сложность (anonymous)() = 42 при пороге 12",
+      "recommendation": "Reduce branching: extract helpers, use early returns or a lookup table",
+      "file": "_shared/finmodel.js",
+      "line": 24,
+      "evidence": null,
+      "fingerprint": "0257630a9ebf15c1",
+      "size_human": null,
+      "details": {
+        "function": "(anonymous)",
+        "complexity": 42,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-002",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Cyclomatic complexity is too high",
+      "description": "_shared/finmodel.js: сложность model() = 24 при пороге 12",
+      "recommendation": "Reduce branching: extract helpers, use early returns or a lookup table",
+      "file": "_shared/finmodel.js",
+      "line": 83,
+      "evidence": null,
+      "fingerprint": "d71e7ca64e6f0edb",
+      "size_human": null,
+      "details": {
+        "function": "model",
+        "complexity": 24,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-002",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Cyclomatic complexity is too high",
+      "description": "_shared/i18n.js: сложность (anonymous)() = 15 при пороге 12",
+      "recommendation": "Reduce branching: extract helpers, use early returns or a lookup table",
+      "file": "_shared/i18n.js",
+      "line": 9,
+      "evidence": null,
+      "fingerprint": "4323bbea22fcba21",
+      "size_human": null,
+      "details": {
+        "function": "(anonymous)",
+        "complexity": 15,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-003",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Module is too large",
+      "description": "_shared/i18n.js: 833 строк при пороге 800",
+      "recommendation": "Split the module by responsibility",
+      "file": "_shared/i18n.js",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "dacce9138ebe092f",
+      "size_human": null,
+      "details": {
+        "lines": 833,
+        "limit": 800,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-004",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Function has too many arguments",
+      "description": "09_Мобильное_приложение/Приложение/screenshots/generate_screens.py: card() принимает 7 аргументов при пороге 6",
+      "recommendation": "Group parameters into a dataclass or configuration object",
+      "file": "09_Мобильное_приложение/Приложение/screenshots/generate_screens.py",
+      "line": 36,
+      "evidence": null,
+      "fingerprint": "40a7989c18a32a72",
+      "size_human": null,
+      "details": {
+        "function": "card",
+        "arguments": 7
+      }
+    },
+    {
+      "id": "QLT-004",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Function has too many arguments",
+      "description": "09_Мобильное_приложение/Приложение/screenshots/generate_screens.py: label() принимает 7 аргументов при пороге 6",
+      "recommendation": "Group parameters into a dataclass or configuration object",
+      "file": "09_Мобильное_приложение/Приложение/screenshots/generate_screens.py",
+      "line": 44,
+      "evidence": null,
+      "fingerprint": "8c2e90fe5437b58d",
+      "size_human": null,
+      "details": {
+        "function": "label",
+        "arguments": 7
+      }
+    },
+    {
+      "id": "QLT-004",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Function has too many arguments",
+      "description": "18_MVP/backend/app/main.py: _chain_hash() принимает 7 аргументов при пороге 6",
+      "recommendation": "Group parameters into a dataclass or configuration object",
+      "file": "18_MVP/backend/app/main.py",
+      "line": 28,
+      "evidence": null,
+      "fingerprint": "01386e7c8ee81fa5",
+      "size_human": null,
+      "details": {
+        "function": "_chain_hash",
+        "arguments": 7
+      }
+    },
+    {
+      "id": "QLT-004",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Function has too many arguments",
+      "description": "18_MVP/backend/smoke_load.py: call() принимает 7 аргументов при пороге 6",
+      "recommendation": "Group parameters into a dataclass or configuration object",
+      "file": "18_MVP/backend/smoke_load.py",
+      "line": 51,
+      "evidence": null,
+      "fingerprint": "d4408357e3249dc3",
+      "size_human": null,
+      "details": {
+        "function": "call",
+        "arguments": 7
+      }
+    },
+    {
+      "id": "QLT-005",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicate files",
+      "description": "2 одинаковых файлов (SHA256 c377d0994127): 09_Мобильное_приложение/Приложение/icons/apple-touch-icon.png, 09_Мобильное_приложение/Сборки/ios/AppIcon.appiconset/icon-180.png",
+      "recommendation": "Keep one copy and import it, delete the duplicates",
+      "file": "09_Мобильное_приложение/Приложение/icons/apple-touch-icon.png",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "8b76200a3a373db7",
+      "size_human": "726 B",
+      "details": {
+        "copies": [
+          "09_Мобильное_приложение/Приложение/icons/apple-touch-icon.png",
+          "09_Мобильное_приложение/Сборки/ios/AppIcon.appiconset/icon-180.png"
+        ],
+        "sha256": "c377d09941273ae0db48abf554b4c425e2314805d0fed2812eeb418fc68a5503"
+      }
+    },
+    {
+      "id": "QLT-005",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicate files",
+      "description": "2 одинаковых файлов (SHA256 3cc70e812b30): 09_Мобильное_приложение/Приложение/icons/icon-1024.png, 09_Мобильное_приложение/Сборки/ios/AppIcon.appiconset/icon-1024.png",
+      "recommendation": "Keep one copy and import it, delete the duplicates",
+      "file": "09_Мобильное_приложение/Приложение/icons/icon-1024.png",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "1e805c03477043d7",
+      "size_human": "6.82 KB",
+      "details": {
+        "copies": [
+          "09_Мобильное_приложение/Приложение/icons/icon-1024.png",
+          "09_Мобильное_приложение/Сборки/ios/AppIcon.appiconset/icon-1024.png"
+        ],
+        "sha256": "3cc70e812b309edb91d5eb3bde4186fbf776919917bb643103f6a2c522450717"
+      }
+    },
+    {
+      "id": "QLT-005",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicate files",
+      "description": "3 одинаковых файлов (SHA256 8cbc13622a8f): 09_Мобильное_приложение/Приложение/icons/icon-192-maskable.png, 09_Мобильное_приложение/Сборки/android/res/mipmap-xxxhdpi/ic_launcher_foreground.png, 09_Мобильное_приложение/Сборки/android/res/mipmap-xxxhdpi/ic_launcher_round.png",
+      "recommendation": "Keep one copy and import it, delete the duplicates",
+      "file": "09_Мобильное_приложение/Приложение/icons/icon-192-maskable.png",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "0cb034a7e7bff13e",
+      "size_human": "1.01 KB",
+      "details": {
+        "copies": [
+          "09_Мобильное_приложение/Приложение/icons/icon-192-maskable.png",
+          "09_Мобильное_приложение/Сборки/android/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+          "09_Мобильное_приложение/Сборки/android/res/mipmap-xxxhdpi/ic_launcher_round.png"
+        ],
+        "sha256": "8cbc13622a8f066adfb885edb23df6d8a85349221cef0c163b726e95f7bc6664"
+      }
+    },
+    {
+      "id": "QLT-005",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicate files",
+      "description": "2 одинаковых файлов (SHA256 d208b8950f96): 09_Мобильное_приложение/Приложение/icons/icon-192.png, 09_Мобильное_приложение/Сборки/android/res/mipmap-xxxhdpi/ic_launcher.png",
+      "recommendation": "Keep one copy and import it, delete the duplicates",
+      "file": "09_Мобильное_приложение/Приложение/icons/icon-192.png",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "c94b90cb70ce1e6e",
+      "size_human": "779 B",
+      "details": {
+        "copies": [
+          "09_Мобильное_приложение/Приложение/icons/icon-192.png",
+          "09_Мобильное_приложение/Сборки/android/res/mipmap-xxxhdpi/ic_launcher.png"
+        ],
+        "sha256": "d208b8950f965311f578bf9c99887b81a55d963906ddc26610b1adac548a2d7c"
+      }
+    },
+    {
+      "id": "QLT-005",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicate files",
+      "description": "2 одинаковых файлов (SHA256 5afa63bfb17b): 09_Мобильное_приложение/Сборки/android/res/mipmap-hdpi/ic_launcher_foreground.png, 09_Мобильное_приложение/Сборки/android/res/mipmap-hdpi/ic_launcher_round.png",
+      "recommendation": "Keep one copy and import it, delete the duplicates",
+      "file": "09_Мобильное_приложение/Сборки/android/res/mipmap-hdpi/ic_launcher_foreground.png",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "b16144af0fff30db",
+      "size_human": "238 B",
+      "details": {
+        "copies": [
+          "09_Мобильное_приложение/Сборки/android/res/mipmap-hdpi/ic_launcher_foreground.png",
+          "09_Мобильное_приложение/Сборки/android/res/mipmap-hdpi/ic_launcher_round.png"
+        ],
+        "sha256": "5afa63bfb17b12b5952401cfcc61e96854cfc3c969f0095aa0cc407606e46ea1"
+      }
+    },
+    {
+      "id": "QLT-005",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicate files",
+      "description": "2 одинаковых файлов (SHA256 f5ad4e080211): 09_Мобильное_приложение/Сборки/android/res/mipmap-xhdpi/ic_launcher_foreground.png, 09_Мобильное_приложение/Сборки/android/res/mipmap-xhdpi/ic_launcher_round.png",
+      "recommendation": "Keep one copy and import it, delete the duplicates",
+      "file": "09_Мобильное_приложение/Сборки/android/res/mipmap-xhdpi/ic_launcher_foreground.png",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "1e46b23b945f7826",
+      "size_human": "282 B",
+      "details": {
+        "copies": [
+          "09_Мобильное_приложение/Сборки/android/res/mipmap-xhdpi/ic_launcher_foreground.png",
+          "09_Мобильное_приложение/Сборки/android/res/mipmap-xhdpi/ic_launcher_round.png"
+        ],
+        "sha256": "f5ad4e080211b80a13a85bc0484b47a6785ee5782dd630443dded228cff3d83f"
+      }
+    },
+    {
+      "id": "QLT-005",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicate files",
+      "description": "2 одинаковых файлов (SHA256 70c17e077dcc): 09_Мобильное_приложение/Сборки/android/res/mipmap-xxhdpi/ic_launcher_foreground.png, 09_Мобильное_приложение/Сборки/android/res/mipmap-xxhdpi/ic_launcher_round.png",
+      "recommendation": "Keep one copy and import it, delete the duplicates",
+      "file": "09_Мобильное_приложение/Сборки/android/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "e2db5bcea87cfe3f",
+      "size_human": "400 B",
+      "details": {
+        "copies": [
+          "09_Мобильное_приложение/Сборки/android/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+          "09_Мобильное_приложение/Сборки/android/res/mipmap-xxhdpi/ic_launcher_round.png"
+        ],
+        "sha256": "70c17e077dccd4ff9325e5792e25a75c48c53a36446bc7faaf6ad29d0e2afade"
+      }
+    },
+    {
+      "id": "QLT-005",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicate files",
+      "description": "2 одинаковых файлов (SHA256 e99f25a601fb): 18_MVP/docs/mvp_verify_pass_ru.png, 18_MVP/docs/mvp_verify_warning_ru.png",
+      "recommendation": "Keep one copy and import it, delete the duplicates",
+      "file": "18_MVP/docs/mvp_verify_pass_ru.png",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "88c3507422cbade6",
+      "size_human": "170.69 KB",
+      "details": {
+        "copies": [
+          "18_MVP/docs/mvp_verify_pass_ru.png",
+          "18_MVP/docs/mvp_verify_warning_ru.png"
+        ],
+        "sha256": "e99f25a601fbf2f0f74bb0a100e6f8048d7e516ec5148cf26cf07859390ccf80"
+      }
+    },
+    {
+      "id": "QLT-006",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Test coverage of the source tree is insufficient",
+      "description": "Тестовых файлов 1 из 29 (3%) при минимуме 15%",
+      "recommendation": "Add tests: at minimum for the public surface of every module",
+      "file": ".",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "788a8ac3bb523bbc",
+      "size_human": null,
+      "details": {
+        "test_files": 1,
+        "source_files": 29,
+        "ratio": 0.034
+      }
+    },
+    {
+      "id": "QLT-010",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Empty catch block swallows errors",
+      "description": "_design-system/gate.js:34 — пустой catch скрывает ошибку",
+      "recommendation": "Handle or log the error; an empty catch hides failures",
+      "file": "_design-system/gate.js",
+      "line": 34,
+      "evidence": null,
+      "fingerprint": "2395c198369aff4d",
+      "size_human": null,
+      "details": {}
+    },
+    {
+      "id": "QLT-010",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Empty catch block swallows errors",
+      "description": "_design-system/gate.js:41 — пустой catch скрывает ошибку",
+      "recommendation": "Handle or log the error; an empty catch hides failures",
+      "file": "_design-system/gate.js",
+      "line": 41,
+      "evidence": null,
+      "fingerprint": "f28c5d4a59d70f97",
+      "size_human": null,
+      "details": {}
+    },
+    {
+      "id": "QLT-010",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Empty catch block swallows errors",
+      "description": "_design-system/gate.js:44 — пустой catch скрывает ошибку",
+      "recommendation": "Handle or log the error; an empty catch hides failures",
+      "file": "_design-system/gate.js",
+      "line": 44,
+      "evidence": null,
+      "fingerprint": "015eeb6d667e72c0",
+      "size_human": null,
+      "details": {}
+    },
+    {
+      "id": "QLT-010",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Empty catch block swallows errors",
+      "description": "_design-system/i18n.js:17 — пустой catch скрывает ошибку",
+      "recommendation": "Handle or log the error; an empty catch hides failures",
+      "file": "_design-system/i18n.js",
+      "line": 17,
+      "evidence": null,
+      "fingerprint": "2b9c3390707b5601",
+      "size_human": null,
+      "details": {}
+    },
+    {
+      "id": "QLT-010",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Empty catch block swallows errors",
+      "description": "_design-system/theme-switcher.js:14 — пустой catch скрывает ошибку",
+      "recommendation": "Handle or log the error; an empty catch hides failures",
+      "file": "_design-system/theme-switcher.js",
+      "line": 14,
+      "evidence": null,
+      "fingerprint": "0208045071330f3a",
+      "size_human": null,
+      "details": {}
+    },
+    {
+      "id": "QLT-010",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Empty catch block swallows errors",
+      "description": "_design-system/ticker.js:48 — пустой catch скрывает ошибку",
+      "recommendation": "Handle or log the error; an empty catch hides failures",
+      "file": "_design-system/ticker.js",
+      "line": 48,
+      "evidence": null,
+      "fingerprint": "3839b34c466ef31a",
+      "size_human": null,
+      "details": {}
+    },
+    {
+      "id": "QLT-010",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Empty catch block swallows errors",
+      "description": "_shared/app.js:21 — пустой catch скрывает ошибку",
+      "recommendation": "Handle or log the error; an empty catch hides failures",
+      "file": "_shared/app.js",
+      "line": 21,
+      "evidence": null,
+      "fingerprint": "f2d2d03948f4911d",
+      "size_human": null,
+      "details": {}
+    },
+    {
+      "id": "QLT-010",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Empty catch block swallows errors",
+      "description": "_shared/app.js:25 — пустой catch скрывает ошибку",
+      "recommendation": "Handle or log the error; an empty catch hides failures",
+      "file": "_shared/app.js",
+      "line": 25,
+      "evidence": null,
+      "fingerprint": "81c7e60cef2bfcbe",
+      "size_human": null,
+      "details": {}
+    },
+    {
+      "id": "QLT-010",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Empty catch block swallows errors",
+      "description": "_shared/app.js:41 — пустой catch скрывает ошибку",
+      "recommendation": "Handle or log the error; an empty catch hides failures",
+      "file": "_shared/app.js",
+      "line": 41,
+      "evidence": null,
+      "fingerprint": "d6c5b42f1c1a8cd0",
+      "size_human": null,
+      "details": {}
+    },
+    {
+      "id": "QLT-010",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Empty catch block swallows errors",
+      "description": "_shared/app.js:54 — пустой catch скрывает ошибку",
+      "recommendation": "Handle or log the error; an empty catch hides failures",
+      "file": "_shared/app.js",
+      "line": 54,
+      "evidence": null,
+      "fingerprint": "45d3b253a534ef0a",
+      "size_human": null,
+      "details": {}
+    },
+    {
+      "id": "QLT-010",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Empty catch block swallows errors",
+      "description": "_shared/i18n.js:796 — пустой catch скрывает ошибку",
+      "recommendation": "Handle or log the error; an empty catch hides failures",
+      "file": "_shared/i18n.js",
+      "line": 796,
+      "evidence": null,
+      "fingerprint": "45b42b35ac26dbc6",
+      "size_human": null,
+      "details": {}
+    },
+    {
+      "id": "QLT-010",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Empty catch block swallows errors",
+      "description": "_shared/i18n.js:821 — пустой catch скрывает ошибку",
+      "recommendation": "Handle or log the error; an empty catch hides failures",
+      "file": "_shared/i18n.js",
+      "line": 821,
+      "evidence": null,
+      "fingerprint": "f85666d96616bbd7",
+      "size_human": null,
+      "details": {}
+    },
+    {
+      "id": "QLT-010",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Empty catch block swallows errors",
+      "description": "_tools/ci_invariants.ps1:31 — обработчик исключения ничего не делает: ошибка теряется молча",
+      "recommendation": "Handle or log the error; an empty catch hides failures",
+      "file": "_tools/ci_invariants.ps1",
+      "line": 31,
+      "evidence": null,
+      "fingerprint": "2ffb72f2bf13cf2c",
+      "size_human": null,
+      "details": {
+        "language": "powershell"
+      }
+    },
+    {
+      "id": "QLT-010",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Empty catch block swallows errors",
+      "description": "_tools/ci_invariants.ps1:70 — обработчик исключения ничего не делает: ошибка теряется молча",
+      "recommendation": "Handle or log the error; an empty catch hides failures",
+      "file": "_tools/ci_invariants.ps1",
+      "line": 70,
+      "evidence": null,
+      "fingerprint": "cd316802e9d0214b",
+      "size_human": null,
+      "details": {
+        "language": "powershell"
+      }
+    },
+    {
+      "id": "QLT-013",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Function nesting is too deep",
+      "description": "_design-system/gate.js: (anonymous)() — вложенность 5 при пороге 4",
+      "recommendation": "Flatten the logic: extract helpers, use early returns or guard clauses",
+      "file": "_design-system/gate.js",
+      "line": 2,
+      "evidence": null,
+      "fingerprint": "41d96600cd9a7f89",
+      "size_human": null,
+      "details": {
+        "function": "(anonymous)",
+        "nesting": 5,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-013",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Function nesting is too deep",
+      "description": "_design-system/ui.js: (anonymous)() — вложенность 5 при пороге 4",
+      "recommendation": "Flatten the logic: extract helpers, use early returns or guard clauses",
+      "file": "_design-system/ui.js",
+      "line": 4,
+      "evidence": null,
+      "fingerprint": "383c894685e80dc4",
+      "size_human": null,
+      "details": {
+        "function": "(anonymous)",
+        "nesting": 5,
+        "language": "js/ts"
+      }
+    },
+    {
+      "id": "QLT-014",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Magic number",
+      "description": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py:79 — «магическое число» 192 вне именованной константы",
+      "recommendation": "Replace the literal with a named constant that explains its meaning",
+      "file": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "line": 79,
+      "evidence": null,
+      "fingerprint": "261d887e7a1e0115",
+      "size_human": null,
+      "details": {
+        "value": 192,
+        "language": "python"
+      }
+    },
+    {
+      "id": "QLT-014",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Magic number",
+      "description": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py:79 — «магическое число» 512 вне именованной константы",
+      "recommendation": "Replace the literal with a named constant that explains its meaning",
+      "file": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "line": 79,
+      "evidence": null,
+      "fingerprint": "261d887e7a1e0115",
+      "size_human": null,
+      "details": {
+        "value": 512,
+        "language": "python"
+      }
+    },
+    {
+      "id": "QLT-014",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Magic number",
+      "description": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py:79 — «магическое число» 1024 вне именованной константы",
+      "recommendation": "Replace the literal with a named constant that explains its meaning",
+      "file": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "line": 79,
+      "evidence": null,
+      "fingerprint": "261d887e7a1e0115",
+      "size_human": null,
+      "details": {
+        "value": 1024,
+        "language": "python"
+      }
+    },
+    {
+      "id": "QLT-014",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Magic number",
+      "description": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py:84 — «магическое число» 192 вне именованной константы",
+      "recommendation": "Replace the literal with a named constant that explains its meaning",
+      "file": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "line": 84,
+      "evidence": null,
+      "fingerprint": "d24f56e909195530",
+      "size_human": null,
+      "details": {
+        "value": 192,
+        "language": "python"
+      }
+    },
+    {
+      "id": "QLT-014",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Magic number",
+      "description": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py:84 — «магическое число» 512 вне именованной константы",
+      "recommendation": "Replace the literal with a named constant that explains its meaning",
+      "file": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "line": 84,
+      "evidence": null,
+      "fingerprint": "d24f56e909195530",
+      "size_human": null,
+      "details": {
+        "value": 512,
+        "language": "python"
+      }
+    },
+    {
+      "id": "QLT-014",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Magic number",
+      "description": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py:89 — «магическое число» 192 вне именованной константы",
+      "recommendation": "Replace the literal with a named constant that explains its meaning",
+      "file": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "line": 89,
+      "evidence": null,
+      "fingerprint": "159f324954604c93",
+      "size_human": null,
+      "details": {
+        "value": 192,
+        "language": "python"
+      }
+    },
+    {
+      "id": "QLT-014",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Magic number",
+      "description": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py:89 — «магическое число» 512 вне именованной константы",
+      "recommendation": "Replace the literal with a named constant that explains its meaning",
+      "file": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "line": 89,
+      "evidence": null,
+      "fingerprint": "159f324954604c93",
+      "size_human": null,
+      "details": {
+        "value": 512,
+        "language": "python"
+      }
+    },
+    {
+      "id": "QLT-014",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Magic number",
+      "description": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py:106 — «магическое число» 40 вне именованной константы",
+      "recommendation": "Replace the literal with a named constant that explains its meaning",
+      "file": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "line": 106,
+      "evidence": null,
+      "fingerprint": "71c5d6f308789f55",
+      "size_human": null,
+      "details": {
+        "value": 40,
+        "language": "python"
+      }
+    },
+    {
+      "id": "QLT-014",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Magic number",
+      "description": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py:106 — «магическое число» 60 вне именованной константы",
+      "recommendation": "Replace the literal with a named constant that explains its meaning",
+      "file": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "line": 106,
+      "evidence": null,
+      "fingerprint": "71c5d6f308789f55",
+      "size_human": null,
+      "details": {
+        "value": 60,
+        "language": "python"
+      }
+    },
+    {
+      "id": "QLT-014",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Magic number",
+      "description": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py:106 — «магическое число» 58 вне именованной константы",
+      "recommendation": "Replace the literal with a named constant that explains its meaning",
+      "file": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "line": 106,
+      "evidence": null,
+      "fingerprint": "71c5d6f308789f55",
+      "size_human": null,
+      "details": {
+        "value": 58,
+        "language": "python"
+      }
+    },
+    {
+      "id": "QLT-014",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Magic number",
+      "description": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py:106 — «магическое число» 87 вне именованной константы",
+      "recommendation": "Replace the literal with a named constant that explains its meaning",
+      "file": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "line": 106,
+      "evidence": null,
+      "fingerprint": "71c5d6f308789f55",
+      "size_human": null,
+      "details": {
+        "value": 87,
+        "language": "python"
+      }
+    },
+    {
+      "id": "QLT-014",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Magic number",
+      "description": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py:106 — «магическое число» 80 вне именованной константы",
+      "recommendation": "Replace the literal with a named constant that explains its meaning",
+      "file": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "line": 106,
+      "evidence": null,
+      "fingerprint": "71c5d6f308789f55",
+      "size_human": null,
+      "details": {
+        "value": 80,
+        "language": "python"
+      }
+    },
+    {
+      "id": "QLT-014",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Magic number",
+      "description": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py:106 — «магическое число» 120 вне именованной константы",
+      "recommendation": "Replace the literal with a named constant that explains its meaning",
+      "file": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "line": 106,
+      "evidence": null,
+      "fingerprint": "71c5d6f308789f55",
+      "size_human": null,
+      "details": {
+        "value": 120,
+        "language": "python"
+      }
+    },
+    {
+      "id": "QLT-014",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Magic number",
+      "description": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py:106 — «магическое число» 180 вне именованной константы",
+      "recommendation": "Replace the literal with a named constant that explains its meaning",
+      "file": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "line": 106,
+      "evidence": null,
+      "fingerprint": "71c5d6f308789f55",
+      "size_human": null,
+      "details": {
+        "value": 180,
+        "language": "python"
+      }
+    },
+    {
+      "id": "QLT-014",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Magic number",
+      "description": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py:106 — «магическое число» 76 вне именованной константы",
+      "recommendation": "Replace the literal with a named constant that explains its meaning",
+      "file": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "line": 106,
+      "evidence": null,
+      "fingerprint": "71c5d6f308789f55",
+      "size_human": null,
+      "details": {
+        "value": 76,
+        "language": "python"
+      }
+    },
+    {
+      "id": "QLT-015",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Line is too long",
+      "description": "09_Мобильное_приложение/Приложение/screenshots/generate_screens.py: 1 строк длиннее 120 символов (первая — строка 57, самая длинная 152)",
+      "recommendation": "Wrap or refactor the line to stay within the configured width",
+      "file": "09_Мобильное_приложение/Приложение/screenshots/generate_screens.py",
+      "line": 57,
+      "evidence": null,
+      "fingerprint": "60bbbab93888a071",
+      "size_human": null,
+      "details": {
+        "count": 1,
+        "limit": 120,
+        "longest": 152
+      }
+    },
+    {
+      "id": "QLT-015",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Line is too long",
+      "description": "09_Мобильное_приложение/Приложение/sw.js: 1 строк длиннее 120 символов (первая — строка 115, самая длинная 131)",
+      "recommendation": "Wrap or refactor the line to stay within the configured width",
+      "file": "09_Мобильное_приложение/Приложение/sw.js",
+      "line": 115,
+      "evidence": null,
+      "fingerprint": "ddad65480672308c",
+      "size_human": null,
+      "details": {
+        "count": 1,
+        "limit": 120,
+        "longest": 131
+      }
+    },
+    {
+      "id": "QLT-015",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Line is too long",
+      "description": "18_MVP/backend/demo_scenario.py: 3 строк длиннее 120 символов (первая — строка 103, самая длинная 125)",
+      "recommendation": "Wrap or refactor the line to stay within the configured width",
+      "file": "18_MVP/backend/demo_scenario.py",
+      "line": 103,
+      "evidence": null,
+      "fingerprint": "9e79a227726b9fda",
+      "size_human": null,
+      "details": {
+        "count": 3,
+        "limit": 120,
+        "longest": 125
+      }
+    },
+    {
+      "id": "QLT-015",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Line is too long",
+      "description": "_design-system/gate.js: 4 строк длиннее 120 символов (первая — строка 9, самая длинная 204)",
+      "recommendation": "Wrap or refactor the line to stay within the configured width",
+      "file": "_design-system/gate.js",
+      "line": 9,
+      "evidence": null,
+      "fingerprint": "5168ad60be486aaa",
+      "size_human": null,
+      "details": {
+        "count": 4,
+        "limit": 120,
+        "longest": 204
+      }
+    },
+    {
+      "id": "QLT-015",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Line is too long",
+      "description": "_design-system/i18n-data.js: 59 строк длиннее 120 символов (первая — строка 57, самая длинная 339)",
+      "recommendation": "Wrap or refactor the line to stay within the configured width",
+      "file": "_design-system/i18n-data.js",
+      "line": 57,
+      "evidence": null,
+      "fingerprint": "147d7a89f5fe4c65",
+      "size_human": null,
+      "details": {
+        "count": 59,
+        "limit": 120,
+        "longest": 339
+      }
+    },
+    {
+      "id": "QLT-015",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Line is too long",
+      "description": "_design-system/ticker.js: 18 строк длиннее 120 символов (первая — строка 20, самая длинная 163)",
+      "recommendation": "Wrap or refactor the line to stay within the configured width",
+      "file": "_design-system/ticker.js",
+      "line": 20,
+      "evidence": null,
+      "fingerprint": "909f8b75ff287e4b",
+      "size_human": null,
+      "details": {
+        "count": 18,
+        "limit": 120,
+        "longest": 163
+      }
+    },
+    {
+      "id": "QLT-015",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Line is too long",
+      "description": "_design-system/translations-registry.js: 1 строк длиннее 120 символов (первая — строка 86, самая длинная 123)",
+      "recommendation": "Wrap or refactor the line to stay within the configured width",
+      "file": "_design-system/translations-registry.js",
+      "line": 86,
+      "evidence": null,
+      "fingerprint": "fb5b8499a28aeac2",
+      "size_human": null,
+      "details": {
+        "count": 1,
+        "limit": 120,
+        "longest": 123
+      }
+    },
+    {
+      "id": "QLT-015",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Line is too long",
+      "description": "_design-system/ui.js: 4 строк длиннее 120 символов (первая — строка 47, самая длинная 153)",
+      "recommendation": "Wrap or refactor the line to stay within the configured width",
+      "file": "_design-system/ui.js",
+      "line": 47,
+      "evidence": null,
+      "fingerprint": "ec6fa2a31a18fca7",
+      "size_human": null,
+      "details": {
+        "count": 4,
+        "limit": 120,
+        "longest": 153
+      }
+    },
+    {
+      "id": "QLT-015",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Line is too long",
+      "description": "_shared/finmodel.js: 1 строк длиннее 120 символов (первая — строка 117, самая длинная 124)",
+      "recommendation": "Wrap or refactor the line to stay within the configured width",
+      "file": "_shared/finmodel.js",
+      "line": 117,
+      "evidence": null,
+      "fingerprint": "1e0b17609e6b76c9",
+      "size_human": null,
+      "details": {
+        "count": 1,
+        "limit": 120,
+        "longest": 124
+      }
+    },
+    {
+      "id": "QLT-015",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Line is too long",
+      "description": "_shared/i18n.js: 63 строк длиннее 120 символов (первая — строка 22, самая длинная 398)",
+      "recommendation": "Wrap or refactor the line to stay within the configured width",
+      "file": "_shared/i18n.js",
+      "line": 22,
+      "evidence": null,
+      "fingerprint": "f9c1c0805151f321",
+      "size_human": null,
+      "details": {
+        "count": 63,
+        "limit": 120,
+        "longest": 398
+      }
+    },
+    {
+      "id": "QLT-015",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Line is too long",
+      "description": "_tools/build_html.sh: 16 строк длиннее 120 символов (первая — строка 30, самая длинная 281)",
+      "recommendation": "Wrap or refactor the line to stay within the configured width",
+      "file": "_tools/build_html.sh",
+      "line": 30,
+      "evidence": null,
+      "fingerprint": "54f9e3ac989a8ef2",
+      "size_human": null,
+      "details": {
+        "count": 16,
+        "limit": 120,
+        "longest": 281
+      }
+    },
+    {
+      "id": "QLT-015",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Line is too long",
+      "description": "_tools/ci_invariants.ps1: 12 строк длиннее 120 символов (первая — строка 83, самая длинная 197)",
+      "recommendation": "Wrap or refactor the line to stay within the configured width",
+      "file": "_tools/ci_invariants.ps1",
+      "line": 83,
+      "evidence": null,
+      "fingerprint": "fbf4a874136450b1",
+      "size_human": null,
+      "details": {
+        "count": 12,
+        "limit": 120,
+        "longest": 197
+      }
+    },
+    {
+      "id": "QLT-015",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Line is too long",
+      "description": "_translations/_batch7_wrap.ps1: 12 строк длиннее 120 символов (первая — строка 36, самая длинная 197)",
+      "recommendation": "Wrap or refactor the line to stay within the configured width",
+      "file": "_translations/_batch7_wrap.ps1",
+      "line": 36,
+      "evidence": null,
+      "fingerprint": "4ac21858d7c2ee52",
+      "size_human": null,
+      "details": {
+        "count": 12,
+        "limit": 120,
+        "longest": 197
+      }
+    },
+    {
+      "id": "QLT-015",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Line is too long",
+      "description": "_translations/_batch8_wrap.ps1: 5 строк длиннее 120 символов (первая — строка 49, самая длинная 142)",
+      "recommendation": "Wrap or refactor the line to stay within the configured width",
+      "file": "_translations/_batch8_wrap.ps1",
+      "line": 49,
+      "evidence": null,
+      "fingerprint": "7fc0a68ed908d9a7",
+      "size_human": null,
+      "details": {
+        "count": 5,
+        "limit": 120,
+        "longest": 142
+      }
+    },
+    {
+      "id": "QLT-017",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Empty control-flow block",
+      "description": "_tools/ci_invariants.ps1:137 — пустой блок управляющей конструкции",
+      "recommendation": "Remove the empty block or implement it; an empty if/for/while/else body is usually forgotten work",
+      "file": "_tools/ci_invariants.ps1",
+      "line": 137,
+      "evidence": null,
+      "fingerprint": "c7655cacdb6b2a65",
+      "size_human": null,
+      "details": {
+        "language": "powershell"
+      }
+    },
+    {
+      "id": "QLT-017",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Empty control-flow block",
+      "description": "_tools/ci_invariants.ps1:137 — пустой блок управляющей конструкции",
+      "recommendation": "Remove the empty block or implement it; an empty if/for/while/else body is usually forgotten work",
+      "file": "_tools/ci_invariants.ps1",
+      "line": 137,
+      "evidence": null,
+      "fingerprint": "c7655cacdb6b2a65",
+      "size_human": null,
+      "details": {
+        "language": "powershell"
+      }
+    },
+    {
+      "id": "QLT-018",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicated string literal",
+      "description": "18_MVP/backend/app/main.py: строка \"Проект не найден\" повторяется 7 раз(а) — вынесите в именованную константу",
+      "recommendation": "Extract the repeated string literal into a named constant",
+      "file": "18_MVP/backend/app/main.py",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "8f926c18364da6ef",
+      "size_human": null,
+      "details": {
+        "count": 7,
+        "length": 16,
+        "sample": "Проект не найден"
+      }
+    },
+    {
+      "id": "QLT-018",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicated string literal",
+      "description": "18_MVP/backend/app/main.py: строка \"PROJECT_OWNER\" повторяется 7 раз(а) — вынесите в именованную константу",
+      "recommendation": "Extract the repeated string literal into a named constant",
+      "file": "18_MVP/backend/app/main.py",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "8f926c18364da6ef",
+      "size_human": null,
+      "details": {
+        "count": 7,
+        "length": 13,
+        "sample": "PROJECT_OWNER"
+      }
+    },
+    {
+      "id": "QLT-018",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicated string literal",
+      "description": "18_MVP/backend/app/main.py: строка \"APPROVED\" повторяется 5 раз(а) — вынесите в именованную константу",
+      "recommendation": "Extract the repeated string literal into a named constant",
+      "file": "18_MVP/backend/app/main.py",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "8f926c18364da6ef",
+      "size_human": null,
+      "details": {
+        "count": 5,
+        "length": 8,
+        "sample": "APPROVED"
+      }
+    },
+    {
+      "id": "QLT-018",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicated string literal",
+      "description": "18_MVP/backend/app/models.py: строка \"users.id\" повторяется 5 раз(а) — вынесите в именованную константу",
+      "recommendation": "Extract the repeated string literal into a named constant",
+      "file": "18_MVP/backend/app/models.py",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "488b4358da524cbd",
+      "size_human": null,
+      "details": {
+        "count": 5,
+        "length": 8,
+        "sample": "users.id"
+      }
+    },
+    {
+      "id": "QLT-018",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicated string literal",
+      "description": "18_MVP/backend/app/models.py: строка \"projects.id\" повторяется 4 раз(а) — вынесите в именованную константу",
+      "recommendation": "Extract the repeated string literal into a named constant",
+      "file": "18_MVP/backend/app/models.py",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "488b4358da524cbd",
+      "size_human": null,
+      "details": {
+        "count": 4,
+        "length": 11,
+        "sample": "projects.id"
+      }
+    },
+    {
+      "id": "QLT-018",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicated string literal",
+      "description": "18_MVP/backend/demo_scenario.py: строка \"demo1234\" повторяется 8 раз(а) — вынесите в именованную константу",
+      "recommendation": "Extract the repeated string literal into a named constant",
+      "file": "18_MVP/backend/demo_scenario.py",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "cc611bb2360cad25",
+      "size_human": null,
+      "details": {
+        "count": 8,
+        "length": 8,
+        "sample": "demo1234"
+      }
+    },
+    {
+      "id": "QLT-018",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicated string literal",
+      "description": "18_MVP/backend/demo_scenario.py: строка \"APPROVED\" повторяется 5 раз(а) — вынесите в именованную константу",
+      "recommendation": "Extract the repeated string literal into a named constant",
+      "file": "18_MVP/backend/demo_scenario.py",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "cc611bb2360cad25",
+      "size_human": null,
+      "details": {
+        "count": 5,
+        "length": 8,
+        "sample": "APPROVED"
+      }
+    },
+    {
+      "id": "QLT-018",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicated string literal",
+      "description": "18_MVP/backend/demo_scenario.py: строка \"VERIFICATION\" повторяется 4 раз(а) — вынесите в именованную константу",
+      "recommendation": "Extract the repeated string literal into a named constant",
+      "file": "18_MVP/backend/demo_scenario.py",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "cc611bb2360cad25",
+      "size_human": null,
+      "details": {
+        "count": 4,
+        "length": 12,
+        "sample": "VERIFICATION"
+      }
+    },
+    {
+      "id": "QLT-018",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicated string literal",
+      "description": "18_MVP/backend/seed.py: строка \"demo1234\" повторяется 4 раз(а) — вынесите в именованную константу",
+      "recommendation": "Extract the repeated string literal into a named constant",
+      "file": "18_MVP/backend/seed.py",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "d6d1415dfd24145c",
+      "size_human": null,
+      "details": {
+        "count": 4,
+        "length": 8,
+        "sample": "demo1234"
+      }
+    },
+    {
+      "id": "QLT-018",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicated string literal",
+      "description": "18_MVP/backend/smoke_load.py: строка \"demo1234\" повторяется 7 раз(а) — вынесите в именованную константу",
+      "recommendation": "Extract the repeated string literal into a named constant",
+      "file": "18_MVP/backend/smoke_load.py",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "fe5efe4232ea2101",
+      "size_human": null,
+      "details": {
+        "count": 7,
+        "length": 8,
+        "sample": "demo1234"
+      }
+    },
+    {
+      "id": "QLT-018",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicated string literal",
+      "description": "18_MVP/backend/smoke_load.py: строка \"APPROVED\" повторяется 4 раз(а) — вынесите в именованную константу",
+      "recommendation": "Extract the repeated string literal into a named constant",
+      "file": "18_MVP/backend/smoke_load.py",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "fe5efe4232ea2101",
+      "size_human": null,
+      "details": {
+        "count": 4,
+        "length": 8,
+        "sample": "APPROVED"
+      }
+    },
+    {
+      "id": "QLT-018",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicated string literal",
+      "description": "18_MVP/backend/smoke_load.py: строка \"VERIFICATION\" повторяется 3 раз(а) — вынесите в именованную константу",
+      "recommendation": "Extract the repeated string literal into a named constant",
+      "file": "18_MVP/backend/smoke_load.py",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "fe5efe4232ea2101",
+      "size_human": null,
+      "details": {
+        "count": 3,
+        "length": 12,
+        "sample": "VERIFICATION"
+      }
+    },
+    {
+      "id": "QLT-018",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicated string literal",
+      "description": "_design-system/i18n-data.js: строка \"Data room\" повторяется 5 раз(а) — вынесите в именованную константу",
+      "recommendation": "Extract the repeated string literal into a named constant",
+      "file": "_design-system/i18n-data.js",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "848e07991c716ce4",
+      "size_human": null,
+      "details": {
+        "count": 5,
+        "length": 9,
+        "sample": "Data room"
+      }
+    },
+    {
+      "id": "QLT-018",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicated string literal",
+      "description": "_design-system/i18n-data.js: строка \"CPFSR.RF\" повторяется 3 раз(а) — вынесите в именованную константу",
+      "recommendation": "Extract the repeated string literal into a named constant",
+      "file": "_design-system/i18n-data.js",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "848e07991c716ce4",
+      "size_human": null,
+      "details": {
+        "count": 3,
+        "length": 8,
+        "sample": "CPFSR.RF"
+      }
+    },
+    {
+      "id": "QLT-018",
+      "priority": "P2",
+      "severity": "MEDIUM",
+      "category": "QUALITY",
+      "title": "Duplicated string literal",
+      "description": "_design-system/ui.js: строка \"aria-expanded\" повторяется 3 раз(а) — вынесите в именованную константу",
+      "recommendation": "Extract the repeated string literal into a named constant",
+      "file": "_design-system/ui.js",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "d46b2a373686014e",
+      "size_human": null,
+      "details": {
+        "count": 3,
+        "length": 13,
+        "sample": "aria-expanded"
+      }
+    },
+    {
+      "id": "DOC-001",
+      "priority": "P3",
+      "severity": "LOW",
+      "category": "DOCUMENTATION",
+      "title": "Expected document is missing",
+      "description": "В проекте нет CHANGELOG.md",
+      "recommendation": "Add the document: it is part of the minimal project documentation",
+      "file": "CHANGELOG.md",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "37c8679d38e968e9",
+      "size_human": null,
+      "details": {
+        "expected": "CHANGELOG.md"
+      }
+    },
+    {
+      "id": "DOC-001",
+      "priority": "P3",
+      "severity": "LOW",
+      "category": "DOCUMENTATION",
+      "title": "Expected document is missing",
+      "description": "В проекте нет LICENSE",
+      "recommendation": "Add the document: it is part of the minimal project documentation",
+      "file": "LICENSE",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "95429ee54179086e",
+      "size_human": null,
+      "details": {
+        "expected": "LICENSE"
+      }
+    },
+    {
+      "id": "DOC-004",
+      "priority": "P3",
+      "severity": "LOW",
+      "category": "DOCUMENTATION",
+      "title": "Low docstring coverage",
+      "description": "Докстринги есть у 19 из 79 публичных объектов (24%) при минимуме 50%",
+      "recommendation": "Document modules and public functions",
+      "file": ".",
+      "line": null,
+      "evidence": null,
+      "fingerprint": "18a61b3750ac9cc5",
+      "size_human": null,
+      "details": {
+        "documented": 19,
+        "total": 79,
+        "ratio": 0.241
+      }
+    }
+  ],
+  "risks_by_priority": {
+    "P0": 4,
+    "P1": 38,
+    "P2": 125,
+    "P3": 3
+  },
+  "recommendations": [
+    "[P0] Remove hardcoded secrets and rotate the affected keys (4)",
+    "[P1] Pin and update dependencies, commit the lockfile (26)",
+    "[P1] Remove hardcoded secrets and rotate the affected keys (9)",
+    "[P1] Reorganise the repository layout (src / tests / docs / config) (3)",
+    "[P2] Clean up build artifacts and large files (22)",
+    "[P2] Improve code quality: split large units, remove duplicates, increase test coverage (103)",
+    "[P3] Complete the documentation (README, license, architecture) (3)"
+  ],
+  "decisions": [
+    {
+      "risk_id": "SEC-001",
+      "decision": "FIX_NOW",
+      "priority": "P0",
+      "confidence": 0.98,
+      "action": "REMOVE_SECRET",
+      "automation": "ASSISTED",
+      "target": "18_MVP/frontend/index.html",
+      "reason": "Security exposure is never postponed"
+    },
+    {
+      "risk_id": "SEC-001",
+      "decision": "FIX_NOW",
+      "priority": "P0",
+      "confidence": 0.98,
+      "action": "REMOVE_SECRET",
+      "automation": "ASSISTED",
+      "target": "18_MVP/frontend/index.html",
+      "reason": "Security exposure is never postponed"
+    },
+    {
+      "risk_id": "SEC-001",
+      "decision": "FIX_NOW",
+      "priority": "P0",
+      "confidence": 0.98,
+      "action": "REMOVE_SECRET",
+      "automation": "ASSISTED",
+      "target": "18_MVP/frontend/index.html",
+      "reason": "Security exposure is never postponed"
+    },
+    {
+      "risk_id": "SEC-011",
+      "decision": "FIX_NOW",
+      "priority": "P0",
+      "confidence": 0.95,
+      "action": "ADD_TO_GITIGNORE",
+      "automation": "AUTOMATIC",
+      "target": "09_Мобильное_приложение/Сборки/common/.env.example",
+      "reason": "Security exposure is never postponed"
+    },
+    {
+      "risk_id": "SEC-012",
+      "decision": "FIX_NOW",
+      "priority": "P1",
+      "confidence": 0.88,
+      "action": "REMOVE_SECRET",
+      "automation": "ASSISTED",
+      "target": "_translations/en/02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html",
+      "reason": "Security exposure is never postponed"
+    },
+    {
+      "risk_id": "SEC-012",
+      "decision": "FIX_NOW",
+      "priority": "P1",
+      "confidence": 0.88,
+      "action": "REMOVE_SECRET",
+      "automation": "ASSISTED",
+      "target": "_translations/en/07_Презентации/Для_госструктур_ЦБ/Доклад_для_госструктур_и_ЦБ_РФ.html",
+      "reason": "Security exposure is never postponed"
+    },
+    {
+      "risk_id": "SEC-012",
+      "decision": "FIX_NOW",
+      "priority": "P1",
+      "confidence": 0.88,
+      "action": "REMOVE_SECRET",
+      "automation": "ASSISTED",
+      "target": "_translations/en/07_Презентации/Для_госструктур_ЦБ/Доклад_для_госструктур_и_ЦБ_РФ.html",
+      "reason": "Security exposure is never postponed"
+    },
+    {
+      "risk_id": "SEC-012",
+      "decision": "FIX_NOW",
+      "priority": "P1",
+      "confidence": 0.88,
+      "action": "REMOVE_SECRET",
+      "automation": "ASSISTED",
+      "target": "_translations/en/12_DD_аудит/DD_отчёт.html",
+      "reason": "Security exposure is never postponed"
+    },
+    {
+      "risk_id": "SEC-012",
+      "decision": "FIX_NOW",
+      "priority": "P1",
+      "confidence": 0.88,
+      "action": "REMOVE_SECRET",
+      "automation": "ASSISTED",
+      "target": "_translations/en/14_Аудит/АУДИТ Сводный пост-рефактор 24.05.2026/Сводный_аудит_пост_рефактор.html",
+      "reason": "Security exposure is never postponed"
+    },
+    {
+      "risk_id": "SEC-012",
+      "decision": "FIX_NOW",
+      "priority": "P1",
+      "confidence": 0.88,
+      "action": "REMOVE_SECRET",
+      "automation": "ASSISTED",
+      "target": "_translations/en/14_Аудит/АУДИТ Сводный уточняющий 24.05.2026/Сводный_аудит_уточняющий.html",
+      "reason": "Security exposure is never postponed"
+    },
+    {
+      "risk_id": "SEC-012",
+      "decision": "FIX_NOW",
+      "priority": "P1",
+      "confidence": 0.88,
+      "action": "REMOVE_SECRET",
+      "automation": "ASSISTED",
+      "target": "_translations/fr/02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html",
+      "reason": "Security exposure is never postponed"
+    },
+    {
+      "risk_id": "SEC-012",
+      "decision": "FIX_NOW",
+      "priority": "P1",
+      "confidence": 0.88,
+      "action": "REMOVE_SECRET",
+      "automation": "ASSISTED",
+      "target": "_translations/fr/02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html",
+      "reason": "Security exposure is never postponed"
+    },
+    {
+      "risk_id": "SEC-012",
+      "decision": "FIX_NOW",
+      "priority": "P1",
+      "confidence": 0.88,
+      "action": "REMOVE_SECRET",
+      "automation": "ASSISTED",
+      "target": "_translations/fr/14_Аудит/АУДИТ Сводный уточняющий 24.05.2026/Сводный_аудит_уточняющий.html",
+      "reason": "Security exposure is never postponed"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "18_MVP/backend/requirements.txt",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "18_MVP/backend/requirements.txt",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "18_MVP/backend/requirements.txt",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "18_MVP/backend/requirements.txt",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.85,
+      "action": "PIN_DEPENDENCY",
+      "automation": "ASSISTED",
+      "target": "18_MVP/backend/requirements.txt",
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc"
+    },
+    {
+      "risk_id": "STR-001",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.82,
+      "action": "ADD_FILE",
+      "automation": "ASSISTED",
+      "target": "README.md",
+      "reason": "High impact — must be scheduled as a task"
+    },
+    {
+      "risk_id": "STR-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.82,
+      "action": "CREATE_DIRECTORY",
+      "automation": "AUTOMATIC",
+      "target": "docs",
+      "reason": "High impact — must be scheduled as a task"
+    },
+    {
+      "risk_id": "STR-004",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "confidence": 0.82,
+      "action": "REMOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_Мастер/Единые_показатели_v2.md",
+      "reason": "High impact — must be scheduled as a task"
+    },
+    {
+      "risk_id": "QLT-006",
+      "decision": "CREATE_TASK",
+      "priority": "P2",
+      "confidence": 0.78,
+      "action": "ADD_TESTS",
+      "automation": "ASSISTED",
+      "target": ".",
+      "reason": "Without tests a result cannot be verified (Rule No.1)"
+    },
+    {
+      "risk_id": "ART-002",
+      "decision": "CREATE_TASK",
+      "priority": "P2",
+      "confidence": 0.67,
+      "action": "MOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "DPFSR.RU_PRICE/Презентация/Презентация_ЦПФСР_2026-05-26.pptx",
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task"
+    },
+    {
+      "risk_id": "ART-003",
+      "decision": "CREATE_TASK",
+      "priority": "P2",
+      "confidence": 0.67,
+      "action": "REMOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_arhiv/ЦПФСР.РФ.rar",
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task"
+    },
+    {
+      "risk_id": "QLT-001",
+      "decision": "CREATE_TASK",
+      "priority": "P2",
+      "confidence": 0.67,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "18_MVP/backend/app/reporting.py",
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task"
+    },
+    {
+      "risk_id": "QLT-002",
+      "decision": "CREATE_TASK",
+      "priority": "P2",
+      "confidence": 0.67,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "18_MVP/backend/app/main.py",
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task"
+    },
+    {
+      "risk_id": "QLT-005",
+      "decision": "CREATE_TASK",
+      "priority": "P2",
+      "confidence": 0.67,
+      "action": "DEDUPLICATE",
+      "automation": "ASSISTED",
+      "target": "09_Мобильное_приложение/Приложение/icons/apple-touch-icon.png",
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task"
+    },
+    {
+      "risk_id": "QLT-010",
+      "decision": "CREATE_TASK",
+      "priority": "P2",
+      "confidence": 0.67,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_design-system/gate.js",
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task"
+    },
+    {
+      "risk_id": "QLT-014",
+      "decision": "CREATE_TASK",
+      "priority": "P2",
+      "confidence": 0.67,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task"
+    },
+    {
+      "risk_id": "QLT-015",
+      "decision": "CREATE_TASK",
+      "priority": "P2",
+      "confidence": 0.67,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "09_Мобильное_приложение/Приложение/screenshots/generate_screens.py",
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task"
+    },
+    {
+      "risk_id": "QLT-018",
+      "decision": "CREATE_TASK",
+      "priority": "P2",
+      "confidence": 0.67,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "18_MVP/backend/app/main.py",
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task"
+    },
+    {
+      "risk_id": "ART-001",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "CLEANUP_ARTIFACTS",
+      "automation": "ASSISTED",
+      "target": ".git",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "ART-002",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "MOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_arhiv/ЦПФСР.РФ.rar",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "ART-002",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "MOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_снапшоты/2026-06-10_SoT-v4-FULL-reconcile.zip",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "ART-002",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "MOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_снапшоты/2026-06-10_SoT-v4-stanceA-FINAL.zip",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "ART-002",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "MOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_снапшоты/2026-06-10_translations-reconciled.zip",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "ART-002",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "MOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_снапшоты/cpfsr-rf_batch8-COMPLETE_23of23_2026-05-26_17-21.zip",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "ART-003",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REMOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_снапшоты/2026-06-10_SoT-v4-FULL-reconcile.zip",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "ART-003",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REMOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_снапшоты/2026-06-10_SoT-v4-macro-reconcile.zip",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "ART-003",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REMOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_снапшоты/2026-06-10_SoT-v4-stanceA-FINAL.zip",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "ART-003",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REMOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_снапшоты/2026-06-10_flagship-translations-polished.zip",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "ART-003",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REMOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_снапшоты/2026-06-10_translations-FINAL.zip",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "ART-003",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REMOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_снапшоты/2026-06-10_translations-reconciled.zip",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "ART-003",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REMOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_снапшоты/cpfsr-rf_batch7-complete_2026-05-26_16-09.zip",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "ART-003",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REMOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_снапшоты/cpfsr-rf_batch8-COMPLETE_23of23_2026-05-26_17-21.zip",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "ART-003",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REMOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_снапшоты/cpfsr-rf_batch8-partial-11of23_2026-05-26_16-49.zip",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "ART-003",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REMOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_снапшоты/cpfsr-rf_batch8-progress-9of23_2026-05-26_16-40.zip",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "ART-003",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REMOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_снапшоты/cpfsr-rf_design-system-foundation_2026-05-25_21-25.zip",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "ART-003",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REMOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_снапшоты/cpfsr-rf_full-content-translations-batch1_2026-05-25_23-57.zip",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "ART-003",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REMOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_снапшоты/cpfsr-rf_i18n-4langs-inline_2026-05-25_22-40.zip",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "ART-003",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REMOVE_FILE",
+      "automation": "ASSISTED",
+      "target": "_снапшоты/cpfsr-rf_links-fixed_2026-05-25_22-10.zip",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-001",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "18_MVP/backend/demo_scenario.py",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-001",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "18_MVP/backend/smoke_load.py",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-001",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_design-system/i18n-data.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-001",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_design-system/i18n.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-001",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_design-system/theme-switcher.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-001",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_design-system/ticker.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-001",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_design-system/ui.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-001",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_design-system/ui.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-001",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_shared/app.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-001",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_shared/finmodel.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-001",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_shared/finmodel.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-001",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_shared/i18n.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-002",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "18_MVP/backend/app/reporting.py",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-002",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "18_MVP/backend/demo_scenario.py",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-002",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "18_MVP/backend/smoke_load.py",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-002",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_design-system/gate.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-002",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_design-system/i18n.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-002",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_design-system/theme-switcher.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-002",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_design-system/ticker.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-002",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_design-system/ui.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-002",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_design-system/ui.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-002",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_shared/app.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-002",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_shared/finmodel.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-002",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_shared/finmodel.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-002",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "_shared/i18n.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-003",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "SPLIT_FILE",
+      "automation": "MANUAL",
+      "target": "_shared/i18n.js",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-004",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "09_Мобильное_приложение/Приложение/screenshots/generate_screens.py",
+      "reason": "Medium impact — keep under observation"
+    },
+    {
+      "risk_id": "QLT-004",
+      "decision": "MONITOR",
+      "priority": "P2",
+      "confidence": 0.72,
+      "action": "REFACTOR",
+      "automation": "MANUAL",
+      "target": "09_Мобильное_приложение/Приложение/screenshots/generate_screens.py",
+      "reason": "Medium impact — keep under observation"
+    }
+  ],
+  "execution_plan": [
+    {
+      "order": 1,
+      "risk_id": "SEC-001",
+      "decision": "FIX_NOW",
+      "priority": "P0",
+      "action": "REMOVE_SECRET",
+      "target": "18_MVP/frontend/index.html",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Security exposure is never postponed",
+      "risk_fingerprint": "f8a6d66618336739",
+      "params": {
+        "source": "risk_id",
+        "line": 356
+      }
+    },
+    {
+      "order": 2,
+      "risk_id": "SEC-001",
+      "decision": "FIX_NOW",
+      "priority": "P0",
+      "action": "REMOVE_SECRET",
+      "target": "18_MVP/frontend/index.html",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Security exposure is never postponed",
+      "risk_fingerprint": "032f68d983bbf41e",
+      "params": {
+        "source": "risk_id",
+        "line": 413
+      }
+    },
+    {
+      "order": 3,
+      "risk_id": "SEC-001",
+      "decision": "FIX_NOW",
+      "priority": "P0",
+      "action": "REMOVE_SECRET",
+      "target": "18_MVP/frontend/index.html",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Security exposure is never postponed",
+      "risk_fingerprint": "b0e9764e52e09536",
+      "params": {
+        "source": "risk_id",
+        "line": 509,
+        "duplicate_locations": [
+          {
+            "file": "18_MVP/frontend/index.html",
+            "line": 509
+          },
+          {
+            "file": "18_MVP/frontend/index.html",
+            "line": 510
+          },
+          {
+            "file": "18_MVP/frontend/index.html",
+            "line": 511
+          },
+          {
+            "file": "18_MVP/frontend/index.html",
+            "line": 512
+          }
+        ],
+        "occurrences": 4
+      }
+    },
+    {
+      "order": 4,
+      "risk_id": "SEC-011",
+      "decision": "FIX_NOW",
+      "priority": "P0",
+      "action": "ADD_TO_GITIGNORE",
+      "target": "09_Мобильное_приложение/Сборки/common/.env.example",
+      "automation": "AUTOMATIC",
+      "executable": true,
+      "reason": "Security exposure is never postponed",
+      "risk_fingerprint": "6e821ab725f05bfc",
+      "params": {
+        "source": "risk_id"
+      }
+    },
+    {
+      "order": 5,
+      "risk_id": "SEC-012",
+      "decision": "FIX_NOW",
+      "priority": "P1",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Security exposure is never postponed",
+      "risk_fingerprint": "4b8912c27b041d7a",
+      "params": {
+        "source": "category",
+        "line": 831
+      }
+    },
+    {
+      "order": 6,
+      "risk_id": "SEC-012",
+      "decision": "FIX_NOW",
+      "priority": "P1",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/07_Презентации/Для_госструктур_ЦБ/Доклад_для_госструктур_и_ЦБ_РФ.html",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Security exposure is never postponed",
+      "risk_fingerprint": "a3d2449a0fd425d2",
+      "params": {
+        "source": "category",
+        "line": 430
+      }
+    },
+    {
+      "order": 7,
+      "risk_id": "SEC-012",
+      "decision": "FIX_NOW",
+      "priority": "P1",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/07_Презентации/Для_госструктур_ЦБ/Доклад_для_госструктур_и_ЦБ_РФ.html",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Security exposure is never postponed",
+      "risk_fingerprint": "d9e1bdbbe4565825",
+      "params": {
+        "source": "category",
+        "line": 609
+      }
+    },
+    {
+      "order": 8,
+      "risk_id": "SEC-012",
+      "decision": "FIX_NOW",
+      "priority": "P1",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/12_DD_аудит/DD_отчёт.html",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Security exposure is never postponed",
+      "risk_fingerprint": "11bb5c4f2181ac0d",
+      "params": {
+        "source": "category",
+        "line": 743
+      }
+    },
+    {
+      "order": 9,
+      "risk_id": "SEC-012",
+      "decision": "FIX_NOW",
+      "priority": "P1",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/14_Аудит/АУДИТ Сводный пост-рефактор 24.05.2026/Сводный_аудит_пост_рефактор.html",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Security exposure is never postponed",
+      "risk_fingerprint": "d8baea22edcacb40",
+      "params": {
+        "source": "category",
+        "line": 945
+      }
+    },
+    {
+      "order": 10,
+      "risk_id": "SEC-012",
+      "decision": "FIX_NOW",
+      "priority": "P1",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/14_Аудит/АУДИТ Сводный уточняющий 24.05.2026/Сводный_аудит_уточняющий.html",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Security exposure is never postponed",
+      "risk_fingerprint": "c1ec2800ca606871",
+      "params": {
+        "source": "category",
+        "line": 1127
+      }
+    },
+    {
+      "order": 11,
+      "risk_id": "SEC-012",
+      "decision": "FIX_NOW",
+      "priority": "P1",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/fr/02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Security exposure is never postponed",
+      "risk_fingerprint": "675091b27d62a337",
+      "params": {
+        "source": "category",
+        "line": 638
+      }
+    },
+    {
+      "order": 12,
+      "risk_id": "SEC-012",
+      "decision": "FIX_NOW",
+      "priority": "P1",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/fr/02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Security exposure is never postponed",
+      "risk_fingerprint": "c886740cc4d13d64",
+      "params": {
+        "source": "category",
+        "line": 853
+      }
+    },
+    {
+      "order": 13,
+      "risk_id": "SEC-012",
+      "decision": "FIX_NOW",
+      "priority": "P1",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/fr/14_Аудит/АУДИТ Сводный уточняющий 24.05.2026/Сводный_аудит_уточняющий.html",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Security exposure is never postponed",
+      "risk_fingerprint": "eb5aeb743341c8b9",
+      "params": {
+        "source": "category",
+        "line": 1077
+      }
+    },
+    {
+      "order": 14,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "@capacitor/android"
+      }
+    },
+    {
+      "order": 15,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "@capacitor/app"
+      }
+    },
+    {
+      "order": 16,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "@capacitor/biometric-auth"
+      }
+    },
+    {
+      "order": 17,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "@capacitor/camera"
+      }
+    },
+    {
+      "order": 18,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "@capacitor/clipboard"
+      }
+    },
+    {
+      "order": 19,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "@capacitor/core"
+      }
+    },
+    {
+      "order": 20,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "@capacitor/device"
+      }
+    },
+    {
+      "order": 21,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "@capacitor/filesystem"
+      }
+    },
+    {
+      "order": 22,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "@capacitor/ios"
+      }
+    },
+    {
+      "order": 23,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "@capacitor/keyboard"
+      }
+    },
+    {
+      "order": 24,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "@capacitor/local-notifications"
+      }
+    },
+    {
+      "order": 25,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "@capacitor/network"
+      }
+    },
+    {
+      "order": 26,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "@capacitor/preferences"
+      }
+    },
+    {
+      "order": 27,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "@capacitor/push-notifications"
+      }
+    },
+    {
+      "order": 28,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "@capacitor/share"
+      }
+    },
+    {
+      "order": 29,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "@capacitor/splash-screen"
+      }
+    },
+    {
+      "order": 30,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "@capacitor/status-bar"
+      }
+    },
+    {
+      "order": 31,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "capacitor-secure-storage-plugin"
+      }
+    },
+    {
+      "order": 32,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "@capacitor/cli"
+      }
+    },
+    {
+      "order": 33,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "@capacitor/assets"
+      }
+    },
+    {
+      "order": 34,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "c34b7208f9dd76a8",
+      "params": {
+        "source": "risk_id",
+        "package": "typescript"
+      }
+    },
+    {
+      "order": 35,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "18_MVP/backend/requirements.txt",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "e69e73d834702aba",
+      "params": {
+        "source": "risk_id",
+        "line": 1,
+        "package": "fastapi"
+      }
+    },
+    {
+      "order": 36,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "18_MVP/backend/requirements.txt",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "1316876543c49b50",
+      "params": {
+        "source": "risk_id",
+        "line": 2,
+        "package": "uvicorn"
+      }
+    },
+    {
+      "order": 37,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "18_MVP/backend/requirements.txt",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "a439d8c9be6e1372",
+      "params": {
+        "source": "risk_id",
+        "line": 3,
+        "package": "sqlalchemy"
+      }
+    },
+    {
+      "order": 38,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "18_MVP/backend/requirements.txt",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "d48d41d75b9ae43e",
+      "params": {
+        "source": "risk_id",
+        "line": 4,
+        "package": "pydantic"
+      }
+    },
+    {
+      "order": 39,
+      "risk_id": "DEP-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "PIN_DEPENDENCY",
+      "target": "18_MVP/backend/requirements.txt",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Dependency risk is fixed in a controlled change, not ad hoc",
+      "risk_fingerprint": "7999df6be9704e2e",
+      "params": {
+        "source": "risk_id",
+        "line": 5,
+        "package": "python-multipart"
+      }
+    },
+    {
+      "order": 40,
+      "risk_id": "STR-001",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "ADD_FILE",
+      "target": "README.md",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "High impact — must be scheduled as a task",
+      "risk_fingerprint": "53add9419c2b6713",
+      "params": {
+        "source": "risk_id"
+      }
+    },
+    {
+      "order": 41,
+      "risk_id": "STR-002",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "CREATE_DIRECTORY",
+      "target": "docs",
+      "automation": "AUTOMATIC",
+      "executable": true,
+      "reason": "High impact — must be scheduled as a task",
+      "risk_fingerprint": "2d6f16719c0d4a24",
+      "params": {
+        "source": "risk_id"
+      }
+    },
+    {
+      "order": 42,
+      "risk_id": "STR-004",
+      "decision": "CREATE_TASK",
+      "priority": "P1",
+      "action": "REMOVE_FILE",
+      "target": "_Мастер/Единые_показатели_v2.md",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "High impact — must be scheduled as a task",
+      "risk_fingerprint": "17452ae19ace214e",
+      "params": {
+        "source": "risk_id",
+        "size": 13762
+      }
+    },
+    {
+      "order": 43,
+      "risk_id": "QLT-006",
+      "decision": "CREATE_TASK",
+      "priority": "P2",
+      "action": "ADD_TESTS",
+      "target": ".",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Without tests a result cannot be verified (Rule No.1)",
+      "risk_fingerprint": "788a8ac3bb523bbc",
+      "params": {
+        "source": "risk_id"
+      }
+    },
+    {
+      "order": 44,
+      "risk_id": "ART-002",
+      "decision": "CREATE_TASK",
+      "priority": "P2",
+      "action": "MOVE_FILE",
+      "target": "DPFSR.RU_PRICE/Презентация/Презентация_ЦПФСР_2026-05-26.pptx",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task",
+      "risk_fingerprint": "cde838b5dd8f1113",
+      "params": {
+        "source": "risk_id",
+        "occurrences": 6
+      }
+    },
+    {
+      "order": 45,
+      "risk_id": "ART-003",
+      "decision": "CREATE_TASK",
+      "priority": "P2",
+      "action": "REMOVE_FILE",
+      "target": "_arhiv/ЦПФСР.РФ.rar",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task",
+      "risk_fingerprint": "f0f07b966271e30f",
+      "params": {
+        "source": "risk_id",
+        "occurrences": 15
+      }
+    },
+    {
+      "order": 46,
+      "risk_id": "QLT-001",
+      "decision": "CREATE_TASK",
+      "priority": "P2",
+      "action": "REFACTOR",
+      "target": "18_MVP/backend/app/reporting.py",
+      "automation": "MANUAL",
+      "executable": false,
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task",
+      "risk_fingerprint": "77527a3f124f44a5",
+      "params": {
+        "source": "risk_id",
+        "line": 61,
+        "occurrences": 13
+      }
+    },
+    {
+      "order": 47,
+      "risk_id": "QLT-002",
+      "decision": "CREATE_TASK",
+      "priority": "P2",
+      "action": "REFACTOR",
+      "target": "18_MVP/backend/app/main.py",
+      "automation": "MANUAL",
+      "executable": false,
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task",
+      "risk_fingerprint": "3761fd42f6ed69fc",
+      "params": {
+        "source": "risk_id",
+        "line": 147,
+        "occurrences": 14
+      }
+    },
+    {
+      "order": 48,
+      "risk_id": "QLT-005",
+      "decision": "CREATE_TASK",
+      "priority": "P2",
+      "action": "DEDUPLICATE",
+      "target": "09_Мобильное_приложение/Приложение/icons/apple-touch-icon.png",
+      "automation": "ASSISTED",
+      "executable": true,
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task",
+      "risk_fingerprint": "8b76200a3a373db7",
+      "params": {
+        "source": "risk_id",
+        "occurrences": 8
+      }
+    },
+    {
+      "order": 49,
+      "risk_id": "QLT-010",
+      "decision": "CREATE_TASK",
+      "priority": "P2",
+      "action": "REFACTOR",
+      "target": "_design-system/gate.js",
+      "automation": "MANUAL",
+      "executable": false,
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task",
+      "risk_fingerprint": "2395c198369aff4d",
+      "params": {
+        "source": "category",
+        "line": 34,
+        "occurrences": 14
+      }
+    },
+    {
+      "order": 50,
+      "risk_id": "QLT-014",
+      "decision": "CREATE_TASK",
+      "priority": "P2",
+      "action": "REFACTOR",
+      "target": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "automation": "MANUAL",
+      "executable": false,
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task",
+      "risk_fingerprint": "261d887e7a1e0115",
+      "params": {
+        "source": "category",
+        "line": 79,
+        "occurrences": 15
+      }
+    },
+    {
+      "order": 51,
+      "risk_id": "QLT-015",
+      "decision": "CREATE_TASK",
+      "priority": "P2",
+      "action": "REFACTOR",
+      "target": "09_Мобильное_приложение/Приложение/screenshots/generate_screens.py",
+      "automation": "MANUAL",
+      "executable": false,
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task",
+      "risk_fingerprint": "60bbbab93888a071",
+      "params": {
+        "source": "category",
+        "line": 57,
+        "occurrences": 14
+      }
+    },
+    {
+      "order": 52,
+      "risk_id": "QLT-018",
+      "decision": "CREATE_TASK",
+      "priority": "P2",
+      "action": "REFACTOR",
+      "target": "18_MVP/backend/app/main.py",
+      "automation": "MANUAL",
+      "executable": false,
+      "reason": "Repeated finding of the same rule — accumulated debt requires a task",
+      "risk_fingerprint": "8f926c18364da6ef",
+      "params": {
+        "source": "category",
+        "occurrences": 15
+      }
+    }
+  ],
+  "automation": {
+    "tasks_total": 23,
+    "blocked": 16,
+    "task_summary": {
+      "READY": 0,
+      "BLOCKED": 16,
+      "PLANNED": 4,
+      "DONE": 0,
+      "FAILED": 1,
+      "SKIPPED": 2,
+      "ROLLED_BACK": 0
+    },
+    "mode": "DRY_RUN",
+    "dry_run": true,
+    "execution_summary": {
+      "PLANNED": 4,
+      "EXECUTED": 0,
+      "SKIPPED": 16,
+      "FAILED": 1,
+      "NO_CHANGE": 2
+    },
+    "changes_total": 5,
+    "touched_disk": false,
+    "backup_dir": "D:\\DPFSD.RU\\.smartdog\\backups\\20260806-023416-37db6668",
+    "quarantine_dir": "D:\\DPFSD.RU\\.smartdog\\quarantine\\20260806-023416-37db6668",
+    "verification_summary": {
+      "CONFIRMED": 0,
+      "FAILED": 0,
+      "NOT_APPLICABLE": 23,
+      "ROLLED_BACK": 0
+    },
+    "all_confirmed": true,
+    "confirmed": 0
+  },
+  "blocked_tasks": [
+    {
+      "id": "T-0001",
+      "action": "REMOVE_SECRET",
+      "target": "18_MVP/frontend/index.html",
+      "priority": "P0",
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "id": "T-0003",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html",
+      "priority": "P1",
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "id": "T-0004",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/07_Презентации/Для_госструктур_ЦБ/Доклад_для_госструктур_и_ЦБ_РФ.html",
+      "priority": "P1",
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "id": "T-0005",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/12_DD_аудит/DD_отчёт.html",
+      "priority": "P1",
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "id": "T-0006",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/14_Аудит/АУДИТ Сводный пост-рефактор 24.05.2026/Сводный_аудит_пост_рефактор.html",
+      "priority": "P1",
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "id": "T-0007",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/14_Аудит/АУДИТ Сводный уточняющий 24.05.2026/Сводный_аудит_уточняющий.html",
+      "priority": "P1",
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "id": "T-0008",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/fr/02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html",
+      "priority": "P1",
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "id": "T-0009",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/fr/14_Аудит/АУДИТ Сводный уточняющий 24.05.2026/Сводный_аудит_уточняющий.html",
+      "priority": "P1",
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "id": "T-0010",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "priority": "P1",
+      "reason": "нет обработчика для действия PIN_DEPENDENCY"
+    },
+    {
+      "id": "T-0011",
+      "action": "PIN_DEPENDENCY",
+      "target": "18_MVP/backend/requirements.txt",
+      "priority": "P1",
+      "reason": "нет обработчика для действия PIN_DEPENDENCY"
+    },
+    {
+      "id": "T-0016",
+      "action": "MOVE_FILE",
+      "target": "DPFSR.RU_PRICE/Презентация/Презентация_ЦПФСР_2026-05-26.pptx",
+      "priority": "P2",
+      "reason": "нет обработчика для действия MOVE_FILE"
+    },
+    {
+      "id": "T-0018",
+      "action": "REFACTOR",
+      "target": "18_MVP/backend/app/reporting.py",
+      "priority": "P2",
+      "reason": "действие требует человека (MANUAL) — автоматически не выполняется"
+    },
+    {
+      "id": "T-0019",
+      "action": "REFACTOR",
+      "target": "18_MVP/backend/app/main.py",
+      "priority": "P2",
+      "reason": "действие требует человека (MANUAL) — автоматически не выполняется"
+    },
+    {
+      "id": "T-0021",
+      "action": "REFACTOR",
+      "target": "_design-system/gate.js",
+      "priority": "P2",
+      "reason": "действие требует человека (MANUAL) — автоматически не выполняется"
+    },
+    {
+      "id": "T-0022",
+      "action": "REFACTOR",
+      "target": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "priority": "P2",
+      "reason": "действие требует человека (MANUAL) — автоматически не выполняется"
+    },
+    {
+      "id": "T-0023",
+      "action": "REFACTOR",
+      "target": "09_Мобильное_приложение/Приложение/screenshots/generate_screens.py",
+      "priority": "P2",
+      "reason": "действие требует человека (MANUAL) — автоматически не выполняется"
+    }
+  ],
+  "changes": [
+    {
+      "task_id": "T-0012",
+      "risk_id": "STR-001",
+      "action": "ADD_FILE",
+      "outcome": "PLANNED",
+      "type": "CREATE_FILE",
+      "path": "README.md",
+      "detail": "137 байт по шаблону"
+    },
+    {
+      "task_id": "T-0013",
+      "risk_id": "STR-002",
+      "action": "CREATE_DIRECTORY",
+      "outcome": "PLANNED",
+      "type": "CREATE_DIR",
+      "path": "docs",
+      "detail": "создать каталог"
+    },
+    {
+      "task_id": "T-0013",
+      "risk_id": "STR-002",
+      "action": "CREATE_DIRECTORY",
+      "outcome": "PLANNED",
+      "type": "CREATE_FILE",
+      "path": "docs/.gitkeep",
+      "detail": "файл-заглушка"
+    },
+    {
+      "task_id": "T-0014",
+      "risk_id": "STR-004",
+      "action": "REMOVE_FILE",
+      "outcome": "PLANNED",
+      "type": "QUARANTINE",
+      "path": "_Мастер/Единые_показатели_v2.md",
+      "detail": "перенос в карантин, 13762 байт"
+    },
+    {
+      "task_id": "T-0015",
+      "risk_id": "QLT-006",
+      "action": "ADD_TESTS",
+      "outcome": "PLANNED",
+      "type": "CREATE_FILE",
+      "path": "tests/test_smartdog_stub.py",
+      "detail": "заготовка теста, 390 байт"
+    }
+  ],
+  "verification": [
+    {
+      "task_id": "T-0001",
+      "risk_id": "SEC-001",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "нет обработчика для действия REMOVE_SECRET",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0002",
+      "risk_id": "SEC-011",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "все каталоги артефактов уже закрыты в .gitignore",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0003",
+      "risk_id": "SEC-012",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "нет обработчика для действия REMOVE_SECRET",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0004",
+      "risk_id": "SEC-012",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "нет обработчика для действия REMOVE_SECRET",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0005",
+      "risk_id": "SEC-012",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "нет обработчика для действия REMOVE_SECRET",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0006",
+      "risk_id": "SEC-012",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "нет обработчика для действия REMOVE_SECRET",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0007",
+      "risk_id": "SEC-012",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "нет обработчика для действия REMOVE_SECRET",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0008",
+      "risk_id": "SEC-012",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "нет обработчика для действия REMOVE_SECRET",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0009",
+      "risk_id": "SEC-012",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "нет обработчика для действия REMOVE_SECRET",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0010",
+      "risk_id": "DEP-002",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "нет обработчика для действия PIN_DEPENDENCY",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0011",
+      "risk_id": "DEP-002",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "нет обработчика для действия PIN_DEPENDENCY",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0012",
+      "risk_id": "STR-001",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "dry-run: изменений не вносилось, проверять нечего",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0013",
+      "risk_id": "STR-002",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "dry-run: изменений не вносилось, проверять нечего",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0014",
+      "risk_id": "STR-004",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "dry-run: изменений не вносилось, проверять нечего",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0015",
+      "risk_id": "QLT-006",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "dry-run: изменений не вносилось, проверять нечего",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0016",
+      "risk_id": "ART-002",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "нет обработчика для действия MOVE_FILE",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0017",
+      "risk_id": "ART-003",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "SafetyError: Файл превышает лимит изменения (limit=5242880, path='_arhiv/ЦПФСР.РФ.rar', size=249367212)",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0018",
+      "risk_id": "QLT-001",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "действие требует человека (MANUAL) — автоматически не выполняется",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0019",
+      "risk_id": "QLT-002",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "действие требует человека (MANUAL) — автоматически не выполняется",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0020",
+      "risk_id": "QLT-005",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "нет списка дубликатов для дедупликации",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0021",
+      "risk_id": "QLT-010",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "действие требует человека (MANUAL) — автоматически не выполняется",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0022",
+      "risk_id": "QLT-014",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "действие требует человека (MANUAL) — автоматически не выполняется",
+      "checks": 0
+    },
+    {
+      "task_id": "T-0023",
+      "risk_id": "QLT-015",
+      "status": "NOT_APPLICABLE",
+      "evidence": "",
+      "reason": "действие требует человека (MANUAL) — автоматически не выполняется",
+      "checks": 0
+    }
+  ],
+  "history": {
+    "project": "DPFSD.RU",
+    "runs": 2,
+    "last_run": {
+      "run_id": "20260806-023416-37db6668",
+      "project": "DPFSD.RU",
+      "project_path": "D:\\DPFSD.RU",
+      "status": "completed",
+      "snapshot_hash": "71e0ef3748c1c1e02711f6591c5eb8dc6542bb51653bceec65007682cb8dfd7f",
+      "project_type": "static_web",
+      "files": 1362,
+      "size": 568511090,
+      "health_score": 0,
+      "health_grade": "F",
+      "risks": {
+        "total": 170,
+        "P0": 4,
+        "P1": 38,
+        "P2": 125,
+        "P3": 3
+      },
+      "decisions_total": 170,
+      "fix_now": 13,
+      "tasks_total": 23,
+      "executed": 0,
+      "confirmed": 0,
+      "rolled_back": 0,
+      "dry_run": true,
+      "duration_ms": 36286.496,
+      "recorded_at": 1785972892.7629929,
+      "recorded_at_iso": "2026-08-06T02:34:52"
+    },
+    "health_score": 0,
+    "health_delta": 0,
+    "open_risks": 130,
+    "open_by_priority": {
+      "P0": 4,
+      "P1": 18,
+      "P2": 105,
+      "P3": 3
+    },
+    "resolved_risks": 14,
+    "regressions": 0,
+    "oldest_open": [
+      {
+        "fingerprint": "f8a6d66618336739",
+        "project": "DPFSD.RU",
+        "risk_id": "SEC-001",
+        "status": "open",
+        "priority": "P0",
+        "category": "SECURITY",
+        "title": "Secret detected",
+        "file": "18_MVP/frontend/index.html",
+        "first_seen_run": "20260803-130306-3a747dee",
+        "first_seen_at_iso": "2026-08-03T13:03:46",
+        "last_seen_run": "20260806-023416-37db6668",
+        "last_seen_at_iso": "2026-08-06T02:34:52",
+        "resolved_run": null,
+        "resolved_at_iso": null,
+        "occurrences": 2,
+        "reopened": 0,
+        "is_regression": false
+      },
+      {
+        "fingerprint": "032f68d983bbf41e",
+        "project": "DPFSD.RU",
+        "risk_id": "SEC-001",
+        "status": "open",
+        "priority": "P0",
+        "category": "SECURITY",
+        "title": "Secret detected",
+        "file": "18_MVP/frontend/index.html",
+        "first_seen_run": "20260803-130306-3a747dee",
+        "first_seen_at_iso": "2026-08-03T13:03:46",
+        "last_seen_run": "20260806-023416-37db6668",
+        "last_seen_at_iso": "2026-08-06T02:34:52",
+        "resolved_run": null,
+        "resolved_at_iso": null,
+        "occurrences": 2,
+        "reopened": 0,
+        "is_regression": false
+      },
+      {
+        "fingerprint": "b0e9764e52e09536",
+        "project": "DPFSD.RU",
+        "risk_id": "SEC-001",
+        "status": "open",
+        "priority": "P0",
+        "category": "SECURITY",
+        "title": "Secret detected",
+        "file": "18_MVP/frontend/index.html",
+        "first_seen_run": "20260803-130306-3a747dee",
+        "first_seen_at_iso": "2026-08-03T13:03:46",
+        "last_seen_run": "20260806-023416-37db6668",
+        "last_seen_at_iso": "2026-08-06T02:34:52",
+        "resolved_run": null,
+        "resolved_at_iso": null,
+        "occurrences": 2,
+        "reopened": 0,
+        "is_regression": false
+      },
+      {
+        "fingerprint": "6e821ab725f05bfc",
+        "project": "DPFSD.RU",
+        "risk_id": "SEC-011",
+        "status": "open",
+        "priority": "P0",
+        "category": "SECURITY",
+        "title": "Environment file is not ignored",
+        "file": "09_Мобильное_приложение/Сборки/common/.env.example",
+        "first_seen_run": "20260803-130306-3a747dee",
+        "first_seen_at_iso": "2026-08-03T13:03:46",
+        "last_seen_run": "20260806-023416-37db6668",
+        "last_seen_at_iso": "2026-08-06T02:34:52",
+        "resolved_run": null,
+        "resolved_at_iso": null,
+        "occurrences": 2,
+        "reopened": 0,
+        "is_regression": false
+      },
+      {
+        "fingerprint": "c34b7208f9dd76a8",
+        "project": "DPFSD.RU",
+        "risk_id": "DEP-002",
+        "status": "open",
+        "priority": "P1",
+        "category": "DEPENDENCY",
+        "title": "Dependency version is not pinned",
+        "file": "09_Мобильное_приложение/Сборки/common/package.json",
+        "first_seen_run": "20260803-130306-3a747dee",
+        "first_seen_at_iso": "2026-08-03T13:03:46",
+        "last_seen_run": "20260806-023416-37db6668",
+        "last_seen_at_iso": "2026-08-06T02:34:52",
+        "resolved_run": null,
+        "resolved_at_iso": null,
+        "occurrences": 2,
+        "reopened": 0,
+        "is_regression": false
+      }
+    ]
+  },
+  "trend": [
+    {
+      "run_id": "20260803-130306-3a747dee",
+      "recorded_at_iso": "2026-08-03T13:03:46",
+      "health_score": 0,
+      "health_grade": "F",
+      "risks_total": 184,
+      "p0": 4,
+      "delta": null,
+      "direction": "first"
+    },
+    {
+      "run_id": "20260806-023416-37db6668",
+      "recorded_at_iso": "2026-08-06T02:34:52",
+      "health_score": 0,
+      "health_grade": "F",
+      "risks_total": 170,
+      "p0": 4,
+      "delta": 0,
+      "direction": "same"
+    }
+  ],
+  "stages": [],
+  "modules": {
+    "F03_Scanner": "1.0.0",
+    "F04_Analyzer": "1.0.0",
+    "F07_AI": "1.1.0",
+    "F09_Automation": "1.0.0"
+  },
+  "warnings": [
+    "execute: режим DRY_RUN — изменения не применялись"
+  ],
+  "section_limits": {
+    "decisions": {
+      "shown": 100,
+      "total": 170
+    }
+  },
+  "sections_present": [
+    "snapshot",
+    "health",
+    "risks",
+    "decisions",
+    "automation",
+    "verification",
+    "history"
+  ]
+}

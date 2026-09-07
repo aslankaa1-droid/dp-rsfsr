@@ -1,5 +1,7 @@
 # RFP — Vendor Due Diligence (Big-4)
 
+> **Note.** Cette traduction suit l'original russe. La partie financière de l'original a été recalculée le 07.09.2026 (modèle v5) : les chiffres sont mis à jour, la rédaction environnante est en cours de révision. En cas de divergence, la version russe fait foi.
+
 **Projet :** Plateforme numérique CPFSR — opérateur DFA adossé à des garanties immobilières avec émissions destinées aux projets nationaux
 **Client :** Abdoul-Khakim Akhmadovitch Kaguirov (Center Group Company) — titulaire unique du concept (certificat de dépôt n° 4011265 du 19.12.2024)
 **Référence engagement :** RSFSR-DD-2026
@@ -23,7 +25,7 @@ L'avis doit répondre au standard des mémorandums d'investissement des opérati
 ### 2.1. Financial Due Diligence
 
 - **Quality of Earnings (QoE) :** analyse du modèle financier sur l'horizon 2025–2034 + valeur terminale multi-phases jusqu'à 2045+. Identification des normalisations, éléments non récurrents, ajustements du besoin en fonds de roulement.
-- **Vérification VAN / TRI / Payback :** recalcul indépendant de tous les indicateurs clés (VAN complète 63,4 Md ₽ ; TRI project-level 62 % ; Payback 2,8 ans ; EM 12×) à partir du modèle source dans `03_Финансовая_модель/`.
+- **Vérification VAN / TRI / Payback :** recalcul indépendant de tous les indicateurs clés (VAN complète 63,0 Md ₽ ; TRI project-level 62 % ; Payback 2,73 ans ; EM 12×) à partir du modèle source dans `03_Финансовая_модель/`.
 - **Validation du CMPC :** vérification du build-up (RF 14,73 + ERP×β 10,35 % + Stage premium 1,5 % + Liquidity premium 2,5 % = 30 %) par rapport à Damodaran mai 2026, taux directeur BCR, données de marché OFZ.
 - **Analyse de sensibilité et de scénarios :** Monte-Carlo indépendant (≥ 10 000 itérations), diagramme tornado couvrant ≥ 8 drivers, stress-test de la trésorerie.
 - **Transactions comparables :** triangulation de la valorisation via Comparable Multiples (EV/Revenue, EV/EBITDA, EV/AUM) à partir de PitchBook / Crunchbase / Refinitiv sur 10+ deals comparables dans les segments DFA / opérateurs fintech / places de marché financières.

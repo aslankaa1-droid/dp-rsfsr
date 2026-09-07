@@ -1,24 +1,22 @@
 /* ============================================================
-   Интерактивная финансовая модель ЦП РСФСР · v2 (24.05.2026)
+   Интерактивная финансовая модель ЦП РСФСР · v5 (07.09.2026)
 
-   Полный синтез после рефактора по итогам сводного аудита + реконсиляция
-   под реальную макру (SoT v4, 10.06.2026): КС ЦБ 14,5% (24.04.2026), FX 71,55.
-   - WACC 29,5% (build-up под КС 14,5%; RF=ОФЗ 14,73% + β·ERP + stage + liquidity)
-   - дисконтирование full-year (консервативная конвенция)
-   - СТОЙКА A (консервативная, выбрана 10.06.2026): realizationFactor 0,78 приводит
-     базовый NPV движка к канону ~63,7 млрд ₽ (выручка Y10 ~138). См.
-     03_Финансовая_модель/Методология_DCF_диагноз_2026-06-10.md
-   - OpEx-кривая с реалистичным ростом (комплаенс +30%, кибербез +25%,
-     юр. +40%, оценщики/страховщики 0,8% от объёма)
-   - EBITDA-маржа в TV сходится к 74,8% (вместо 96,9%)
-   - Multi-stage TV (фазы I+II+perpetuity) вместо одностадийного Gordon
-   - Доля рынка год 10 в Base = 18% (вместо 20%)
-   - ФОТ, CapEx-волны 2029/2030/2033, рабочий капитал, амортизация,
-     налоговый щит — учтены явно
-   - Единый SoT: _Мастер/Единые_показатели_v2.md
+   Точный перенос расчётного движка 03_Финансовая_модель/Модель/model.py.
+   Виджет и документы считают по одним и тем же формулам и допущениям;
+   подгоночных коэффициентов нет.
 
-   Возвращает: NPV, IRR, выручка год 10, EBITDA год 10, EBITDA-маржа,
-   Payback, Equity Multiple, cash-runway-пик.
+   - горизонт 2027–2036 (год 1 = 2027), дисконтирование на конец года
+   - ставка дисконтирования 29,58% (ОФЗ 14,73 + бета×ERP 9,35 + стадия 2,5 + неликвидность 3,0)
+   - налог на прибыль 25% (176-ФЗ от 12.07.2024) с переносом убытков (предел 50% базы)
+   - услуги оценщиков и страховщиков учтены НЕТТО: 0,12% объёма (валовый тариф 0,80%,
+     встречные издержки 85%)
+   - расходы = ФОТ (численность × оклад × 12 × 1,30) + база 0,502 млрд ₽ с индексацией 4%
+     + 22% выручки
+   - терминальная стоимость: модель Гордона на нормализованном потоке, g = 4%
+   - итог выручки равен сумме строк по построению
+
+   Возвращает: npv (стоимость бизнеса), tvDisc, irr (проекта), выручку и EBITDA года 10,
+   маржу, окупаемость, кратность для инвестора, пик отрицательного накопленного потока.
    ============================================================ */
 
 (function(global) {
@@ -26,49 +24,44 @@
   // Базовые допущения (соответствуют 03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.md)
   const BASE = {
     capacityTrn: 25.0,         // трлн ₽ — залоговая ёмкость на 2025
-    capacityGrowth: 0.04,      // индексация по таргету ЦБ
-    shareYr10: 0.18,           // 18% доля к году 10 (Base; conservative 7%, optim 25%)
-    realizationFactor: 0.78,   // стойка A (консервативная): реализация валовой тарифной выручки
-                               // (рамп-ап, отток, скидки, неплатящие) — приводит выручку Y10 ~175→~138
-                               // и базовый NPV к консервативному канону ~63 млрд ₽
+    capacityGrowth: 0.04,      // индексация по целевой инфляции
+    firstYear: 2027,           // год 1 модели
+    shareYr10: 0.18,           // доля к году 10 (база; консервативный 7%, оптимистичный 25%)
+    shareCurveBase: [0, 0.004, 0.018, 0.044, 0.088, 0.108, 0.126, 0.144, 0.162, 0.18],
     feeIssue: 0.0050,          // комиссия за выпуск
     feeService: 0.0030,        // сервисная комиссия от стека
     feePlatform: 0.0015,       // платформенный сбор
-    feeB2BMax: 0.0015,         // максимум по году 10
-    feeAppraisal: 0.0080,      // услуги оценщиков и страховщиков (новое после аудита)
-    wacc: 0.295,               // 29,5% — WACC под КС 14,5% (SoT v4, build-up валюации §9.1)
-    opexBase: 0.502,           // млрд ₽ базовый OpEx (без ФОТ) — рост за счёт +30% комплаенс
-    opexGrowth: 0.10,          // +10%/год до 2029, далее затухание
-    fteStart: 40,
-    fteYr10: 370,
+    feeB2BMax: 0.0015,         // лицензии B2B2G, максимум к году 10
+    feeB2BCurve: [0, 0.0005, 0.0007, 0.0009, 0.0010, 0.0011, 0.0012, 0.0013, 0.0014, 0.0015],
+    integrations: [0, 0.05, 0.18, 0.35, 0.52, 0.65, 0.78, 0.90, 1.02, 1.15], // млрд ₽
+    feeAppraisalGross: 0.0080, // валовый тариф оценки и страхования
+    appraisalPassThrough: 0.85,// доля встречных издержек (в выручку не попадает)
+    wacc: 0.29578,             // ставка дисконтирования
+    opexBase: 0.502,           // млрд ₽ — базовая часть прочих расходов, год 1
+    opexIndex: 0.04,           // индексация базовой части
+    opexVarShare: 0.22,        // переменная часть, доля выручки
+    fteCurve: [40, 120, 160, 200, 240, 270, 300, 330, 350, 370],
     salaryGrossStart: 350,     // тыс. ₽/мес
-    salaryGrowth: 0.06,        // 6% индексация
+    salaryGrowth: 0.06,
     socialTax: 0.30,
-    taxProfit: 0.20,
+    taxProfit: 0.25,
+    lossCarryCap: 0.50,        // предел переноса убытков, доля налоговой базы
     capexSchedule: [0.30, 0.42, 0.40, 0.55, 1.80, 2.40, 1.60, 1.80, 2.30, 2.00], // млрд ₽
     workingCapital: 0.05,
-    cfaLifetime: 5,            // лет
-    amortYears: 7,             // линейная амортизация
-    g_phase1_start: 0.06,      // 2035 → 2039: 6% → 4%
-    g_phase1_end: 0.04,
-    g_phase2_start: 0.035,     // 2040 → 2044: 3.5% → 2.5%
-    g_phase2_end: 0.025,
-    g_perpetuity: 0.02,        // 2045+
-    margin_phase1_start: 0.75,
-    margin_phase1_end: 0.70,
-    margin_phase2_start: 0.70,
-    margin_phase2_end: 0.65,
-    margin_perpetuity: 0.60,
+    cfaLifetime: 5,
+    amortYears: 7,
+    gTerminal: 0.04,           // темп роста в терминальном периоде
+    investorShare: 0.0570,   // доля инвестора при раунде $15 млн и стоимости входа $248 млн
+    exitYearNo: 7,           // год выхода инвестора     // доля инвестора при раунде $15 млн и стоимости входа $248 млн
+    startRound: 1.073,         // млрд ₽
     years: 10
   };
 
-  // S-curve проникновения
-  function shareCurve(yr, target) {
-    const t = (yr - 1) / 9;
-    const s = 1 / (1 + Math.exp(-6 * (t - 0.5)));
-    const s0 = 1 / (1 + Math.exp(-6 * (-0.5)));
-    const s1 = 1 / (1 + Math.exp(-6 * (0.5)));
-    return target * (s - s0) / (s1 - s0);
+  // Траектория доли рынка: табличная кривая, масштабированная к целевой доле года 10
+  function shareCurve(yr, target, curve) {
+    const c = curve || BASE.shareCurveBase;
+    const k = c[c.length - 1] ? target / c[c.length - 1] : 0;
+    return (c[yr - 1] || 0) * k;
   }
 
   // Стек ЦФА: сумма выпусков за последние cfaLifetime лет
@@ -85,11 +78,12 @@
     const issues = [];
     const stocks = [];
     const years = [];
+    let lossCarry = 0;
 
     // Расчёт выпусков, стека, выручки
     for (let y = 1; y <= p.years; y++) {
-      const cap = p.capacityTrn * Math.pow(1 + p.capacityGrowth, y - 1) * 1000; // млрд ₽
-      const share = shareCurve(y, p.shareYr10);
+      const cap = p.capacityTrn * Math.pow(1 + p.capacityGrowth, (p.firstYear - 2025) + y - 1) * 1000; // млрд ₽ (база 25 трлн на 2025)
+      const share = shareCurve(y, p.shareYr10, p.shareCurveBase);
       const issue = cap * share;
       issues.push(issue);
       const stock = stockCalc(issues, y, p.cfaLifetime);
@@ -99,43 +93,45 @@
       const r1 = issue * p.feeIssue;
       const r2 = stock * p.feeService;
       const r3 = issue * p.feePlatform;
-      const r4 = issue * p.feeB2BMax * Math.min(1, y / 10);
-      const r5 = 0.05 + (y - 1) * 0.12; // тех.интеграции
-      const r6 = issue * p.feeAppraisal;
-      const rev = (r1 + r2 + r3 + r4 + r5 + r6) * p.realizationFactor;
+      const r4 = issue * (p.feeB2BCurve[y - 1] || 0);
+      const r5 = p.integrations[y - 1] || 0;
+      const r6 = issue * p.feeAppraisalGross * (1 - p.appraisalPassThrough);
+      const rev = r1 + r2 + r3 + r4 + r5 + r6;
+      const grossBillings = rev + issue * p.feeAppraisalGross * p.appraisalPassThrough;
 
-      // FTE и ФОТ
-      const fte = p.fteStart + (p.fteYr10 - p.fteStart) * (y - 1) / 9;
+      const fte = p.fteCurve[y - 1] || 0;
       const salary = p.salaryGrossStart * Math.pow(1 + p.salaryGrowth, y - 1);
       const payroll = fte * salary * 12 / 1e6 * (1 + p.socialTax); // млрд ₽
 
-      // OpEx (без ФОТ) — рост с замедлением после 2029
-      const growthFactor = y <= 5 ? Math.pow(1 + p.opexGrowth, y - 1) : Math.pow(1.10, 4) * Math.pow(1.07, y - 5);
-      // дополнительная составляющая от оценщиков-страховщиков уже в выручке как pass-through;
-      // но требует встречного OpEx
-      const opexFixed = p.opexBase * growthFactor;
-      const opexAppraisal = issue * p.feeAppraisal * 0.85 * p.realizationFactor; // pass-through, масштабируется реализацией
-      const opex = opexFixed + opexAppraisal + payroll;
+      const opexFixed = p.opexBase * Math.pow(1 + p.opexIndex, y - 1);
+      const opexVar = p.opexVarShare * rev;
+      const opex = (opexFixed + opexVar + payroll) * (1 + (p.opexUplift || 0));
 
       const ebitda = rev - opex;
       const ebitdaMargin = rev > 0 ? ebitda / rev : 0;
 
       const capex = p.capexSchedule[y - 1] || 0;
-
-      // Амортизация (упрощённо, линейно от накопленного CapEx за amortYears)
       let amort = 0;
       for (let i = Math.max(0, y - p.amortYears); i <= y - 1; i++) {
         amort += (p.capexSchedule[i] || 0) / p.amortYears;
       }
 
       const ebit = ebitda - amort;
-      const tax = ebit > 0 ? ebit * p.taxProfit : 0;
-      const dWc = y > 1 ? (rev - (years[y - 2]?.rev || 0)) * p.workingCapital : rev * p.workingCapital;
-      const fcf = ebitda - tax - capex - dWc;
+      let tax = 0;
+      if (ebit <= 0) {
+        lossCarry += -ebit;
+      } else {
+        const used = Math.min(lossCarry, ebit * p.lossCarryCap);
+        lossCarry -= used;
+        tax = (ebit - used) * p.taxProfit;
+      }
+      const dWc = y > 1 ? (rev - (years[y - 2] ? years[y - 2].rev : 0)) * p.workingCapital
+                        : rev * p.workingCapital;
+      const fcf = ebitda - tax - dWc - capex;
 
       years.push({
-        y, share, stock, issue, rev,
-        opex, opexFixed, opexAppraisal, payroll,
+        y, share, stock, issue, rev, grossBillings,
+        opex, opexFixed, opexVar, payroll,
         ebitda, ebitdaMargin,
         amort, ebit, tax, capex, dWc, fcf
       });
@@ -156,81 +152,53 @@
       }
     });
 
-    // Multi-stage TV: фаза I (5 лет, m1, g1) → фаза II (5 лет, m2, g2) → perpetuity (m3, g3)
-    let tvDisc = 0;
-    let lastFCF = years[years.length - 1].fcf;
-    let lastRev = years[years.length - 1].rev;
-    let yearOffset = p.years;
-
-    // Phase I: 5 лет линейного затухания g и маржи
-    for (let i = 1; i <= 5; i++) {
-      const t = i / 5;
-      const gP = p.g_phase1_start + (p.g_phase1_end - p.g_phase1_start) * t;
-      const mP = p.margin_phase1_start + (p.margin_phase1_end - p.margin_phase1_start) * t;
-      lastRev = lastRev * (1 + gP);
-      const fcfP = lastRev * mP * (1 - p.taxProfit);
-      tvDisc += fcfP / Math.pow(1 + p.wacc, yearOffset + i);
-    }
-    yearOffset += 5;
-    // Phase II
-    for (let i = 1; i <= 5; i++) {
-      const t = i / 5;
-      const gP = p.g_phase2_start + (p.g_phase2_end - p.g_phase2_start) * t;
-      const mP = p.margin_phase2_start + (p.margin_phase2_end - p.margin_phase2_start) * t;
-      lastRev = lastRev * (1 + gP);
-      const fcfP = lastRev * mP * (1 - p.taxProfit);
-      tvDisc += fcfP / Math.pow(1 + p.wacc, yearOffset + i);
-    }
-    yearOffset += 5;
-    // Perpetuity (Gordon)
-    const fcfPerp = lastRev * (1 + p.g_perpetuity) * p.margin_perpetuity * (1 - p.taxProfit);
-    const tv = fcfPerp / (p.wacc - p.g_perpetuity);
-    tvDisc += tv / Math.pow(1 + p.wacc, yearOffset);
+    // Терминальная стоимость: модель Гордона на нормализованном потоке.
+    // В стационарном состоянии капитальные вложения равны амортизации,
+    // прирост оборотного капитала равен g x оборотный капитал.
+    const last = years[years.length - 1];
+    const ebitN = last.ebitda - last.amort;
+    const taxN = Math.max(0, ebitN) * p.taxProfit;
+    const wcN = last.rev * p.workingCapital;
+    const fcfNorm = last.ebitda - taxN - wcN * p.gTerminal - last.amort;
+    const tv = fcfNorm * (1 + p.gTerminal) / (p.wacc - p.gTerminal);
+    const tvDisc = tv / Math.pow(1 + p.wacc, p.years);
 
     npv += tvDisc;
 
-    // IRR investor-level — рассчитан под точку зрения seed-инвестора:
-    //   - инвестиция: -1,073 млрд ₽ (раунд $15 млн × FX 71,55) в год 0;
-    //   - cash distribution: investorShare (13,04%) × positive FCF проекта по годам 2–10;
-    //   - exit: investorShare × (EBITDA Y10 × 8 fintech-exit-multiple) в год 10.
-    // SoT v4 § 6: Investor-level IRR Base при доле 13,04% (NPV полная ≈ 63,45 / round 1,073).
-    const investorShare_IRR = 0.1304;
-    const round_IRR = 1.073;
+    // Внутренняя норма доходности проекта: на потоках проекта, терминальная
+    // стоимость добавлена к потоку последнего года.
     function npvAt(rate) {
-      let n = -round_IRR; // год 0
-      years.forEach(yr => {
-        const dist = yr.fcf > 0 ? yr.fcf * investorShare_IRR : 0;
-        n += dist / Math.pow(1 + rate, yr.y);
-      });
-      // Exit на год 10: investorShare × EBITDA × 8× fintech multiple
-      const exitEBITDA = years[years.length - 1].ebitda;
-      const exitValue = exitEBITDA * 8 * investorShare_IRR;
-      n += exitValue / Math.pow(1 + rate, p.years);
+      let n = 0;
+      years.forEach(yr => { n += yr.fcf / Math.pow(1 + rate, yr.y); });
+      n += tv / Math.pow(1 + rate, p.years);
       return n;
     }
-    let irr = 0.40;
-    for (let it = 0; it < 80; it++) {
-      const v = npvAt(irr);
-      const d = (npvAt(irr + 0.001) - v) / 0.001;
-      if (Math.abs(d) < 1e-9) break;
-      irr -= v / d;
-      if (irr < -0.99) irr = -0.5;
-      if (irr > 5) irr = 2;
-      if (Math.abs(v) < 0.001) break;
+    let lo = -0.99, hi = 10.0, irr = 0;
+    if (npvAt(lo) * npvAt(hi) <= 0) {
+      for (let it = 0; it < 200; it++) {
+        const mid = (lo + hi) / 2;
+        if (npvAt(lo) * npvAt(mid) < 0) hi = mid; else lo = mid;
+      }
+      irr = (lo + hi) / 2;
     }
 
-    // Equity Multiple для seed-инвестора:
-    // exit-on-multiple = (доля × полная DCF EV) / стартовая инвестиция.
-    // SoT v4: доля 13,04%, post-money $115M, раунд $15M = 1,073 млрд ₽ при FX 71,55.
-    // Полная EV (npv) уже включает sum_disc_fcf 10y + tvDisc (multi-stage TV) — см. строку 182.
-    // Защищаемый ориентир — 7–12×: нижняя граница exit-on-multiple под NPV ≈63,45; верхняя — Series B path.
-    const startRound = 1.073; // млрд ₽ — раунд $15 млн при FX 71,55
-    const investorShare = 0.1304; // 13,04% после Seed
-    const fullEV = npv; // npv уже = sum_disc_fcf_10y + tvDisc; без double-count tvDisc
-    const equityMultiple = (investorShare * fullEV) / startRound;
-    // total project return — справочная метрика, не TVPI инвестора
-    const projectTotalReturn = years.reduce((s, y) => s + Math.max(0, y.fcf), 0) + tvDisc;
-    const projectMOIC = projectTotalReturn / startRound;
+    // Кратность возврата для инвестора: выход на 7-м году модели.
+    // Стоимость капитала на выходе = дисконтированные потоки оставшихся лет
+    // + терминальная стоимость + накопленные деньги.
+    const startRound = p.startRound;
+    const investorShare = p.investorShare;
+    const kExit = (p.exitYearNo || 7) - 1;
+    let evAtExit = 0;
+    for (let j = kExit + 1; j < years.length; j++) {
+      evAtExit += years[j].fcf / Math.pow(1 + p.wacc, j - kExit);
+    }
+    evAtExit += tv / Math.pow(1 + p.wacc, p.years - 1 - kExit);
+    let cumToExit = 0;
+    for (let j = 0; j <= kExit; j++) cumToExit += years[j].fcf;
+    const equityAtExit = evAtExit + cumToExit + startRound;
+    const equityMultiple = (investorShare * equityAtExit) / startRound;
+    const investorIrr = Math.pow(equityMultiple, 1 / (kExit + 1)) - 1;
+    const projectMOIC = (years.reduce((s2, y2) => s2 + Math.max(0, y2.fcf), 0) + tvDisc) / startRound;
 
     return {
       years,
@@ -243,6 +211,7 @@
       payback: payback ?? p.years,
       peakNegCum,
       equityMultiple,
+      investorIrr,
       projectMOIC,
       params: p
     };
@@ -346,9 +315,10 @@
 
   // 3 сценария Base / Conservative / Optimistic
   function scenariosCalc() {
-    const conservative = model({ shareYr10: 0.07, feeIssue: 0.0040, opexBase: 0.577, wacc: 0.315 });
+    // Сценарии различаются только целевой долей рынка года 10 — как в расчётном движке.
+    const conservative = model({ shareYr10: 0.07 });
     const base = model({});
-    const optimistic = model({ shareYr10: 0.25, feeIssue: 0.0060, opexBase: 0.452, wacc: 0.275 });
+    const optimistic = model({ shareYr10: 0.25 });
     const ev = 0.55 * base.npv + 0.30 * optimistic.npv + 0.15 * conservative.npv;
     return {
       conservative: { npv: conservative.npv, irr: conservative.irr, payback: conservative.payback, weight: 0.15 },
@@ -363,13 +333,14 @@
     const baseRes = model({});
     const baseNpv = baseRes.npv;
     const tests = [
-      { name: 'WACC ±3 п.п.', low: { wacc: 0.265 }, high: { wacc: 0.325 } },
       { name: 'Доля рынка год 10 ±7 п.п.', low: { shareYr10: 0.11 }, high: { shareYr10: 0.25 } },
-      { name: 'Комиссия выпуска ±0,1 п.п.', low: { feeIssue: 0.0040 }, high: { feeIssue: 0.0060 } },
-      { name: 'OpEx-уплифт ±20%', low: { opexBase: 0.402 }, high: { opexBase: 0.602 } },
-      { name: 'Рост ёмкости ±1,5 п.п.', low: { capacityGrowth: 0.025 }, high: { capacityGrowth: 0.055 } },
-      { name: 'Маржа perpetuity ±5 п.п.', low: { margin_perpetuity: 0.55 }, high: { margin_perpetuity: 0.65 } },
-      { name: 'CFA lifetime ±1 год', low: { cfaLifetime: 4 }, high: { cfaLifetime: 6 } }
+      { name: 'Ставка дисконтирования ±3 п.п.', low: { wacc: 0.32578 }, high: { wacc: 0.26578 } },
+      { name: 'Тарифы платформы ±20%',
+        low:  { feeIssue: 0.0040, feeService: 0.0024, feePlatform: 0.0012, feeB2BCurve: BASE.feeB2BCurve.map(x => x * 0.8) },
+        high: { feeIssue: 0.0060, feeService: 0.0036, feePlatform: 0.0018, feeB2BCurve: BASE.feeB2BCurve.map(x => x * 1.2) } },
+      { name: 'Операционные расходы ±20%', low: { opexUplift: -0.20 }, high: { opexUplift: 0.20 } },
+      { name: 'Темп роста в терминальном периоде ±2 п.п.', low: { gTerminal: 0.02 }, high: { gTerminal: 0.06 } },
+      { name: 'Срок жизни выпуска ±1 год', low: { cfaLifetime: 4 }, high: { cfaLifetime: 6 } }
     ];
     return tests.map(t => {
       const lowNpv = model(t.low).npv;

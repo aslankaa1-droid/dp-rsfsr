@@ -1,5 +1,7 @@
 # Wedge / Pilot-light sous le 259-FZ existant
 
+> **Note.** Cette traduction suit l'original russe. La partie financière de l'original a été recalculée le 07.09.2026 (modèle v5) : les chiffres sont mis à jour, la rédaction environnante est en cours de révision. En cas de divergence, la version russe fait foi.
+
 **Document :** concept du contour minimal viable (« wedge ») de l'opérateur SI DFA, ne nécessitant pas d'amendements à 86-FZ ni à la législation rouble numérique.
 **Objectif :** clôturer le drapeau RED D5 de l'audit consolidé du 24.05.2026 (« version wedge / pilot-light absente »).
 **Logique stratégique :** ne pas se présenter devant la BCR au premier pas avec une construction exigeant un paquet de quatre lois fédérales ; entrer via un wedge-pilot sous le 259-FZ existant grâce à l'alliance VEB.RF / Minéco / partner bank / 779-P operator ; après 18–36 mois d'exploitation effective — ouvrir le dialogue avec la BCR via une position interministérielle consolidée.
@@ -195,7 +197,7 @@ Avantage principal du wedge : **le projet n'arrive pas à la BCR avec une demand
 
 Le **modèle financier** (`03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.md`) prend en compte le régime wedge dans le scénario Conservateur :
 - Part de marché année 10 — 7 % (vs 18 % en Base).
-- VAN ≈ 22 Md ₽ (vs 63,4 Md ₽ en Base, CMPC 29,5 % — voir SoT v3).
+- VAN ≈ 22 Md ₽ (vs 63,0 Md ₽ en Base, CMPC 29,5 % — voir SoT v3).
 - TRI ≈ 38 % (vs 62 % en Base).
 - Equity Multiple ≈ 5–6× (vs 12× en Base, exit-on-multiple).
 

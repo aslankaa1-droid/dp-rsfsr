@@ -1,5 +1,7 @@
 # RFP — Vendor Due Diligence (Big-4)
 
+> **Note.** This translation follows the Russian original. The financial section of the original was recalculated on 07.09.2026 (model v5): figures here are updated to the new calculation, the surrounding wording is being revised. In case of any discrepancy the Russian version prevails.
+
 **Project:** Digital Platform CPFSR — DFA operator backed by real-estate collateral with issuance for national projects
 **Client:** Abdul-Khakim Akhmadovich Kagirov (Center Group Company) — sole rightsholder of the concept (deposit certificate No. 4011265 of 19.12.2024)
 **Engagement reference:** RSFSR-DD-2026
@@ -23,7 +25,7 @@ The opinion must meet the standard of investor memoranda used in tier-1 PE/VC tr
 ### 2.1. Financial Due Diligence
 
 - **Quality of Earnings (QoE):** review of the financial model over the 2025–2034 horizon plus multi-stage Terminal Value to 2045+. Identification of normalisations, one-offs, working-capital adjustments.
-- **NPV / IRR / Payback verification:** independent recomputation of all key metrics (full NPV RUB 63.4 bn; project-level IRR 62%; Payback 2.8 years; EM 12×) based on the source model in `03_Финансовая_модель/`.
+- **NPV / IRR / Payback verification:** independent recomputation of all key metrics (full NPV RUB 63.0 bn; project-level окупаемость 2,73 года; Payback 2.73 years; EM 12×) based on the source model in `03_Финансовая_модель/`.
 - **WACC validation:** verification of the build-up structure (RF 14.73 + ERP×β 10.35% + Stage premium 1.5% + Liquidity premium 2.5% = 30%) against Damodaran May 2026, the CBR key rate, and OFZ market data.
 - **Sensitivity & scenario analysis:** independent Monte Carlo (≥ 10,000 iterations), tornado diagram covering ≥ 8 drivers, cash-runway stress testing.
 - **Comparable transactions:** triangulation of the valuation via Comparable Multiples (EV/Revenue, EV/EBITDA, EV/AUM) using PitchBook / Crunchbase / Refinitiv on 10+ comparable deals across DFA / fintech-operator / financial-marketplace segments.

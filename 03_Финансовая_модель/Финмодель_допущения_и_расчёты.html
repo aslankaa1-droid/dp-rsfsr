@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#FAFBFC">
   <meta name="cpfsr-root" content="../">
-  <title>Финмодель — допущения и расчёты · ЦПФСР.РФ</title>
-  <meta name="description" content="Финмодель — допущения и расчёты — Финансовая модель · сопровождение. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
+  <title>Обоснование допущений финмодели · ЦПФСР.РФ</title>
+  <meta name="description" content="Обоснование допущений финмодели — Финансовая модель. ЦПФСР.РФ · Цифровая Платформа Финансирования Социального Развития.">
 
   <link rel="icon" type="image/svg+xml" href="../_design-system/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -246,520 +246,98 @@
       <li class="breadcrumb__sep">/</li>
       <li><a href="../site-map.html" data-i18n="nav.sitemap">Карта сайта</a></li>
       <li class="breadcrumb__sep">/</li>
-      <li class="breadcrumb__current">Финансовая модель · сопровождение</li>
+      <li class="breadcrumb__current">Финансовая модель</li>
     </ol>
   </nav>
 
   <div class="doc-wrap">
     <header class="doc-header">
-      <span class="doc-header__eyebrow">Финансовая модель · сопровождение</span>
-      <h1>Финмодель — допущения и расчёты</h1>
+      <span class="doc-header__eyebrow">Финансовая модель</span>
+      <h1>Обоснование допущений финмодели</h1>
       <p class="doc-header__meta">Автор: Кагиров А.-Х.А. · Свидетельство о депонировании №4011265 от 19.12.2024 · Center Group Company · Engagement: CPFSR-RF-DESIGN-2026</p>
     </header>
     <article class="doc-content">
-<h1
-id="финансовая-модель-цп-рсфср-пояснения-к-допущениям-и-расчётам">Финансовая
-модель ЦП РСФСР — пояснения к допущениям и расчётам</h1>
-<p><strong>Документ:</strong> сопровождающая записка к финансовой
-модели. <strong>Связанный файл:</strong>
-<code>Финансовая_модель_ЦП_РСФСР.md</code> (горизонт 2025–2034 +
-multi-stage TV до 2045+). <strong>Автор концепта:</strong> Кагиров
-А.-Х.А., свид. №4011265 от 19.12.2024 — фиксация даты приоритета и хеша;
-режим охраны — ноу-хау (ст. 1465 ГК) + программа для ЭВМ (ст. 1262 ГК).
-<strong>Дата актуальности:</strong> 24.05.2026 (refactor после сводного
-аудита; единый SoT — <code>_Мастер/Единые_показатели_v2.md</code>).</p>
-<p>Цель — раскрыть источник каждой цифры, обозначить ограничения, чтобы
-любой tier-1 DD-аудитор прошёл по модели с пониманием логики.</p>
-<hr />
-<h2 id="рынок-и-доля-платформы">1. Рынок и доля платформы</h2>
-<h3 id="залоговая-ёмкость-25-трлн">1.1. Залоговая ёмкость 25 трлн ₽</h3>
-<p>Источник: концепт автора (РСФСР_6.pptx, слайд 9).</p>
-<table>
-<thead>
-<tr>
-<th>Сегмент</th>
-<th style="text-align: right;">Объём, трлн ₽</th>
-<th style="text-align: right;">Консервативно (10% × 50%), трлн ₽</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Жилой фонд (4,7 млрд м² × 85 000 ₽/м²)</td>
-<td style="text-align: right;">400</td>
-<td style="text-align: right;">20,0</td>
-</tr>
-<tr>
-<td>Коммерческая недвижимость</td>
-<td style="text-align: right;">45</td>
-<td style="text-align: right;">2,5</td>
-</tr>
-<tr>
-<td>Земельные участки</td>
-<td style="text-align: right;">62</td>
-<td style="text-align: right;">3,0</td>
-</tr>
-<tr>
-<td><strong>ИТОГО</strong></td>
-<td style="text-align: right;"><strong>507</strong></td>
-<td style="text-align: right;"><strong>25,5</strong> ≈ 25</td>
-</tr>
-</tbody>
-</table>
-<p>Логика консерватизма: только 10% активов вовлечены в систему ЦФА на
-горизонте 10 лет, оценочная стоимость для целей залога составит 50%
-рыночной (соответствует базельским LTV).</p>
-<h3 id="индексация-рынка-4-в-год">1.2. Индексация рынка 4% в год</h3>
-<p>Основной направленный показатель ДКП Банка России.</p>
-<h3 id="доля-платформы-траектория-после-рефактора">1.3. Доля платформы —
-траектория (после рефактора)</h3>
-<table style="width:100%;">
-<colgroup>
-<col style="width: 6%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-<col style="width: 9%" />
-</colgroup>
-<thead>
-<tr>
-<th>Год</th>
-<th style="text-align: right;">1</th>
-<th style="text-align: right;">2</th>
-<th style="text-align: right;">3</th>
-<th style="text-align: right;">4</th>
-<th style="text-align: right;">5</th>
-<th style="text-align: right;">6</th>
-<th style="text-align: right;">7</th>
-<th style="text-align: right;">8</th>
-<th style="text-align: right;">9</th>
-<th style="text-align: right;">10</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Доля (Base)</td>
-<td style="text-align: right;">0%</td>
-<td style="text-align: right;">0,4%</td>
-<td style="text-align: right;">1,8%</td>
-<td style="text-align: right;">4,4%</td>
-<td style="text-align: right;">8,8%</td>
-<td style="text-align: right;">10,8%</td>
-<td style="text-align: right;">12,6%</td>
-<td style="text-align: right;">14,4%</td>
-<td style="text-align: right;">16,2%</td>
-<td style="text-align: right;"><strong>18%</strong></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>Цель год 10 снижена с 20% до 18% (more defensible).
-Conservative-сценарий — 7%, optimistic — 25%.</p>
-</blockquote>
-<h3 id="стек-цфа-обращаемый-объём">1.4. Стек ЦФА (обращаемый объём)</h3>
-<p>Формула: стек(t) = сумма выпусков за годы (t−4)…t. Средний срок жизни
-ЦФА = 5 лет (инфраструктурные циклы).</p>
-<hr />
-<h2 id="тарифы-оператора">2. Тарифы оператора</h2>
-<table>
-<colgroup>
-<col style="width: 30%" />
-<col style="width: 40%" />
-<col style="width: 30%" />
-</colgroup>
-<thead>
-<tr>
-<th>Линия</th>
-<th style="text-align: right;">Ставка</th>
-<th>Сравнение с рынком</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Комиссия за выпуск</td>
-<td style="text-align: right;">0,50%</td>
-<td>ЦФА-операторы РФ: 0,1–1%.</td>
-</tr>
-<tr>
-<td>Сервисная комиссия от стека</td>
-<td style="text-align: right;">0,30%</td>
-<td>Депозитарии 0,05–0,15%; PE-фонды 1–2%.</td>
-</tr>
-<tr>
-<td>Платформенный сбор (автомат. оценка)</td>
-<td style="text-align: right;">0,15%</td>
-<td>Оценочные компании 0,1–0,5%; страховые премии 0,3–0,8%.</td>
-</tr>
-<tr>
-<td>Лицензии B2B2G (max year 10)</td>
-<td style="text-align: right;">0,15%</td>
-<td>Линейный рост от 0 до 0,15%.</td>
-</tr>
-<tr>
-<td>Услуги оценщиков/страховщиков (НОВОЕ)</td>
-<td style="text-align: right;">0,80%</td>
-<td>Pass-through; 85% — встречные издержки.</td>
-</tr>
-<tr>
-<td>Тех. интеграции (фикс)</td>
-<td style="text-align: right;">50–1 150 млн ₽/год</td>
-<td>10–50 млн ₽ за подключение партнёра.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="capex-refactor-по-аудиту-capex-волны-явные">3. CapEx (refactor
-по аудиту: CapEx-волны явные)</h2>
-<h3 id="первые-18-мес.-720-млн">3.1. Первые 18 мес. — 720 млн ₽</h3>
-<table>
-<thead>
-<tr>
-<th>Статья</th>
-<th style="text-align: right;">млн ₽</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Платформа (ядро + АБС-модули)</td>
-<td style="text-align: right;">450</td>
-</tr>
-<tr>
-<td>ЦОДы (резерв + гео-репликация)</td>
-<td style="text-align: right;">170</td>
-</tr>
-<tr>
-<td>Лицензии ЦБ РФ + комплаенс</td>
-<td style="text-align: right;">100</td>
-</tr>
-<tr>
-<td><strong>ИТОГО (2025+2026)</strong></td>
-<td style="text-align: right;"><strong>720</strong></td>
-</tr>
-</tbody>
-</table>
-<h3 id="capex-волны-20272034">3.2. CapEx-волны 2027–2034</h3>
-<table>
-<colgroup>
-<col style="width: 30%" />
-<col style="width: 40%" />
-<col style="width: 30%" />
-</colgroup>
-<thead>
-<tr>
-<th>Год</th>
-<th style="text-align: right;">млн ₽</th>
-<th>Назначение</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2027</td>
-<td style="text-align: right;">400</td>
-<td>Платформенная зрелость, legal regime-инфраструктура</td>
-</tr>
-<tr>
-<td>2028</td>
-<td style="text-align: right;">550</td>
-<td>Развёртывание реестра ОИС ЦФА (779-П)</td>
-</tr>
-<tr>
-<td><strong>2029</strong></td>
-<td style="text-align: right;"><strong>1 800</strong></td>
-<td><strong>Полнофункциональная сертификация ФСТЭК/ФСБ + второй
-ЦОД</strong></td>
-</tr>
-<tr>
-<td><strong>2030</strong></td>
-<td style="text-align: right;"><strong>2 400</strong></td>
-<td><strong>Scaling: третий ЦОД + криптомодули нового
-поколения</strong></td>
-</tr>
-<tr>
-<td>2031</td>
-<td style="text-align: right;">1 600</td>
-<td>Recurring модернизация</td>
-</tr>
-<tr>
-<td>2032</td>
-<td style="text-align: right;">1 800</td>
-<td>DLT-вендор upgrade, smart-contract v2</td>
-</tr>
-<tr>
-<td><strong>2033</strong></td>
-<td style="text-align: right;"><strong>2 300</strong></td>
-<td><strong>Расширение ЦОД-инфраструктуры на фоне ₽ 20 трлн
-стека</strong></td>
-</tr>
-<tr>
-<td>2034</td>
-<td style="text-align: right;">2 000</td>
-<td>Recurring</td>
-</tr>
-</tbody>
-</table>
-<p>Норма амортизации 1/7 в год → срок полезного использования платформы
-~7 лет.</p>
-<hr />
-<h2 id="opex-refactor-по-аудиту-c3">4. OpEx (refactor по аудиту C3)</h2>
-<h3 id="стартовый-opex-без-фот-502-млн-было-380">4.1. Стартовый OpEx
-(без ФОТ) — 502 млн ₽ (было 380)</h3>
-<p>Увеличение по аудиту: - <strong>+30% к комплаенс-блоку</strong> (рост
-требований 779-П, AML/KYC, ПОД/ФТ). - <strong>+25% к
-кибербезопасности</strong> (КИИ-1, SOC 24/7, пентесты, ротация ключей).
-- <strong>+40% к юридическому блоку</strong> (договорный пакет,
-регуляторное сопровождение, ОИС). - <strong>Введён блок
-оценщики/страховщики</strong> — 0,8% от объёма выпуска (pass-through,
-85% — встречные издержки).</p>
-<p>Декомпозиция стартового года 2025:</p>
-<table>
-<colgroup>
-<col style="width: 30%" />
-<col style="width: 40%" />
-<col style="width: 30%" />
-</colgroup>
-<thead>
-<tr>
-<th>Статья</th>
-<th style="text-align: right;">млн ₽</th>
-<th>Логика</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Инфраструктура</td>
-<td style="text-align: right;">117</td>
-<td>Хостинг, связь, ИБ — для двух ЦОДов; +30% по аудиту</td>
-</tr>
-<tr>
-<td>Лицензии ПО</td>
-<td style="text-align: right;">50</td>
-<td>СУБД, мониторинг</td>
-</tr>
-<tr>
-<td>Маркетинг</td>
-<td style="text-align: right;">60</td>
-<td>Конференции, отраслевая активность</td>
-</tr>
-<tr>
-<td>Юр. и аудит</td>
-<td style="text-align: right;">70</td>
-<td>+40% по аудиту</td>
-</tr>
-<tr>
-<td>Кибербезопасность</td>
-<td style="text-align: right;">50</td>
-<td>SOC, пентесты, ротация ключей (новая статья)</td>
-</tr>
-<tr>
-<td>Интеграторы B2B2G</td>
-<td style="text-align: right;">95</td>
-<td>Подрядчики по партнёрской сети</td>
-</tr>
-<tr>
-<td>Прочее</td>
-<td style="text-align: right;">60</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Итого</strong></td>
-<td style="text-align: right;"><strong>502</strong></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>OpEx-кривая в зрелой фазе обеспечивает EBITDA-маржу 74,8% (вместо
-96,9% в до-рефакторной модели).</p>
-<hr />
-<h2 id="фот">5. ФОТ</h2>
-<p>Численность 40→370 чел.; средняя ЗП 350 тыс. ₽/мес gross в год 1,
-индексация 6%/год; страховые 30%.</p>
-<hr />
-<h2 id="налоги">6. Налоги</h2>
-<ul>
-<li><strong>Налог на прибыль 20%</strong> (НК РФ, гл. 25). При
-ИТ-аккредитации + ≥70% ИТ-выручки → 5% до 31.12.2030 (отдельный
-сценарий: +25–30% к NPV).</li>
-<li><strong>НДС:</strong> операции с ЦФА — пп. 12.2 п. 2 ст. 149 НК
-(освобождение); услуги оператора — общая ставка 20%.</li>
-<li><strong>Страховые взносы 30%</strong> (НК РФ, гл. 34).</li>
-</ul>
-<hr />
-<h2 id="wacc-refactor-по-аудиту-c5">7. WACC (refactor по аудиту C5)</h2>
-<p>Корректировка: убран double-counting CRP в RUB-номинированном RF; ERP
-повышен с 6% до 9% (Damodaran май 2026); β установлен 1,15.</p>
-<table>
-<thead>
-<tr>
-<th>Компонента</th>
-<th style="text-align: right;">Значение</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Risk-free rate (10Y ОФЗ, 21.05.2026)</td>
-<td style="text-align: right;">14,73%</td>
-</tr>
-<tr>
-<td>ERP × β (РФ май 2026, β=1,15)</td>
-<td style="text-align: right;">9% × 1,15 = 9,35%</td>
-</tr>
-<tr>
-<td>Stage premium (готовый MVP)</td>
-<td style="text-align: right;">1,5%</td>
-</tr>
-<tr>
-<td>Liquidity premium</td>
-<td style="text-align: right;">2,5%</td>
-</tr>
-<tr>
-<td><strong>WACC (RUB) итог</strong></td>
-<td style="text-align: right;"><strong>29,58% → 29,5%</strong></td>
-</tr>
-</tbody>
-</table>
-<p>Альтернативные методы: - CAPM (RUB): 15,5 + 1,15 × 9 = 25,85% —
-нижняя граница диапазона. - Build-up: 15,5 + 6 + 2,5 + 3 = 27% — внутри
-диапазона. - КС ЦБ + спред: 21% + 9 = 30% — совпадает.</p>
-<p>Защитимый интервал: 27–32%. В Base используется 30%.</p>
-<hr />
-<h2 id="multi-stage-tv-refactor-по-аудиту-c4">8. Multi-stage TV
-(refactor по аудиту C4)</h2>
-<p>Замена одностадийного Gordon TV на 3-stage модель с явной фазой
-затухания темпа роста и EBITDA-маржи:</p>
-<table>
-<thead>
-<tr>
-<th>Фаза</th>
-<th>Годы</th>
-<th style="text-align: right;">g</th>
-<th style="text-align: right;">EBITDA-маржа</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I — зрелость</td>
-<td>2035–2039</td>
-<td style="text-align: right;">6% → 4%</td>
-<td style="text-align: right;">75% → 70%</td>
-</tr>
-<tr>
-<td>II — стабильность</td>
-<td>2040–2044</td>
-<td style="text-align: right;">3,5% → 2,5%</td>
-<td style="text-align: right;">70% → 65%</td>
-</tr>
-<tr>
-<td>III — perpetuity</td>
-<td>2045+</td>
-<td style="text-align: right;">2,0% (½ от таргета ЦБ)</td>
-<td style="text-align: right;">60%</td>
-</tr>
-</tbody>
-</table>
-<p>Доля TV в полной NPV = <strong>~32%</strong> (было 49%) —
-критическая граница устранена.</p>
-<hr />
-<h2 id="чувствительности-расширенный-набор">9. Чувствительности
-(расширенный набор)</h2>
-<p>Добавлены по аудиту C9–C11: - WACC × Доля рынка (5×5, было). -
-Комиссии × Инфляция (3×5, было). - <strong>OpEx-кривая × Срок
-запуска</strong> (5×3, new). - <strong>FTE × Авг. ЗП</strong> (5×5,
-new). - <strong>EBITDA-маржа в TV × g</strong> (3×3, new). -
-<strong>Tornado-диаграмма</strong> топ-10. - <strong>Monte
-Carlo</strong> упрощённый (1 000 итераций, mediana NPV = 91 млрд ₽,
-P10–P90 = 38–162). - <strong>Break-even анализ</strong> (выручка для NPV
-= 0 = ₽ 22,8 млрд в 2030). - <strong>Cash-runway-стресс</strong>
-(задержка +6 мес → +0,38 млрд cash gap; рекомендация — раунд $20
-млн).</p>
-<hr />
-<h2 id="рабочий-капитал">10. Рабочий капитал</h2>
-<p>5% от выручки — стандартное допущение для финтех-операторов
-(платёжные системы РФ: 3–7%, депозитарии: 5–10%).</p>
-<hr />
-<h2 id="что-не-учтено-в-базовой-модели-и-почему">11. Что не учтено в
-базовой модели (и почему)</h2>
-<ol type="1">
-<li><strong>Государственные субсидии</strong> (РФРИТ, Минцифры) —
-upside, не закладываются.</li>
-<li><strong>Долговое финансирование</strong> — модель equity-only;
-смешанная структура даёт +налоговый щит.</li>
-<li><strong>Курсовые риски</strong> — все потоки в рублях; FX-экспозиция
-отсутствует.</li>
-<li><strong>Конкуренция за залог</strong> — Base предполагает уникальную
-категорию первые 5 лет; покрыто в conservative-сценарии.</li>
-<li><strong>Регуляторный риск отказа</strong> — раскрыт в
-<code>04_Бизнес-план/Wedge_pilot-light.md</code>: в случае непринятия
-пакета ФЗ проект функционирует в pilot-light режиме на действующем
-259-ФЗ (conservative-сценарий ₽ 41 млрд NPV).</li>
-</ol>
-<hr />
-<h2 id="соответствие-интерактивной-finmodel.js">12. Соответствие
-интерактивной finmodel.js</h2>
-<p>После аудита C9 синхронизация <code>_shared/finmodel.js</code> v2 ↔︎
-MD-модель достигнута: учтены ФОТ, CapEx-волны, рабочий капитал,
-амортизация, налоговый щит, multi-stage TV. Калькулятор в большой
-презентации выдаёт NPV/IRR, идентичные расчётам в этом документе при
-равных ползунках.</p>
-<hr />
-<h2 id="источники">13. Источники</h2>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr>
-<th>Тип данных</th>
-<th>Источник</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Залоговая ёмкость</td>
-<td>Концепт автора (РСФСР_6.pptx, слайд 9)</td>
-</tr>
-<tr>
-<td>Налоговые ставки</td>
-<td>НК РФ</td>
-</tr>
-<tr>
-<td>Таргет инфляции</td>
-<td>Основные направления ДКП ЦБ РФ</td>
-</tr>
-<tr>
-<td>КС ЦБ 14,5% на 24.05.2026</td>
-<td>Решение Совета директоров ЦБ от 24.04.2026</td>
-</tr>
-<tr>
-<td>FX 71,55 ₽/$</td>
-<td>Официальный курс ЦБ на 24.05.2026</td>
-</tr>
-<tr>
-<td>Жилфонд РФ</td>
-<td>Росстат (форма №1-жилфонд)</td>
-</tr>
-<tr>
-<td>Бенчмарки ЗП</td>
-<td>HeadHunter, Хабр Карьера 2024–2026</td>
-</tr>
-<tr>
-<td>ERP РФ 8,13%</td>
-<td>Damodaran Online ERP май 2026</td>
-</tr>
-<tr>
-<td>Бенчмарки CapEx платформ</td>
-<td>Открытые презентации российских финтех-проектов</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<p><strong>Дата:</strong> 24.05.2026 (refactor после сводного аудита)
-<strong>Подготовлено:</strong> в рамках проекта ЦП РСФСР.</p>
+<h1 id="финансовая-модель-цп-рсфср-обоснование-допущений">Финансовая модель ЦП РСФСР — обоснование допущений</h1>
+<p><strong>Документ:</strong> сопроводительная записка к финансовой модели. <strong>Связанные файлы:</strong> <code>Финансовая_модель_ЦП_РСФСР.md</code> (сам расчёт), <code>Модель/assumptions.json</code> (все входные величины), <code>Модель/Выгрузка/*.csv</code> (машинная выгрузка). <strong>Автор концепта:</strong> Кагиров А.-Х.А., свид. №4011265 от 19.12.2024 — фиксация даты приоритета и хеша; режим охраны — ноу-хау (ст. 1465 ГК) + программа для ЭВМ (ст. 1262 ГК). <strong>Редакция:</strong> v5 от 07.09.2026.</p>
+<p>Задача записки — показать, откуда взята каждая величина, и честно назвать то, что не обосновано ничем, кроме замысла автора.</p>
+<blockquote><p><strong>Расчёт отделён от текста.</strong> Числа живут в <code>Модель/assumptions.json</code> и считаются движком <code>Модель/model.py</code>. Документы собираются из движка. Это сделано специально: в прежних редакциях цифры хранились в каждом документе отдельно и разошлись между собой.</p></blockquote>
+<hr>
+<h2 id="1-рынок">1. Рынок</h2>
+<h3 id="11-залоговая-ёмкость-25-трлн">1.1. Залоговая ёмкость 25 трлн ₽</h3>
+<p>Источник — концепт автора.</p>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">Сегмент</th><th style="text-align:right">Объём, трлн ₽</th><th style="text-align:right">Вовлекаемая часть (10% активов × 50% стоимости), трлн ₽</th></tr></thead><tbody><tr><td style="text-align:left">Жилой фонд (4,7 млрд м² × 85 000 ₽/м²)</td><td style="text-align:right">400</td><td style="text-align:right">20,0</td></tr><tr><td style="text-align:left">Коммерческая недвижимость</td><td style="text-align:right">45</td><td style="text-align:right">2,3</td></tr><tr><td style="text-align:left">Земельные участки</td><td style="text-align:right">62</td><td style="text-align:right">3,1</td></tr><tr><td style="text-align:left"><strong>Итого</strong></td><td style="text-align:right"><strong>507</strong></td><td style="text-align:right"><strong>25,4 ≈ 25</strong></td></tr></tbody></table></div>
+<p>Логика ограничения: в систему вовлекается только 10% активов, а для целей залога стоимость принимается на уровне 50% рыночной — это соответствует практике залоговых дисконтов.</p>
+<p><strong>Чем это не является.</strong> Это оценка потенциальной ёмкости, а не спроса. Ни одного подтверждения, что собственники готовы закладывать имущество на этих условиях, в проекте нет. Проверка спроса — первое, что следует сделать до любых переговоров о деньгах.</p>
+<h3 id="12-индексация-ёмкости-4-в-год">1.2. Индексация ёмкости 4% в год</h3>
+<p>Целевой ориентир Банка России по инфляции. Реального роста рынка в модели нет — только переоценка.</p>
+<h3 id="13-траектория-доли-платформы">1.3. Траектория доли платформы</h3>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">Год модели</th><th style="text-align:right">1</th><th style="text-align:right">2</th><th style="text-align:right">3</th><th style="text-align:right">4</th><th style="text-align:right">5</th><th style="text-align:right">6</th><th style="text-align:right">7</th><th style="text-align:right">8</th><th style="text-align:right">9</th><th style="text-align:right">10</th></tr></thead><tbody><tr><td style="text-align:left">Календарный год</td><td style="text-align:right">2027</td><td style="text-align:right">2028</td><td style="text-align:right">2029</td><td style="text-align:right">2030</td><td style="text-align:right">2031</td><td style="text-align:right">2032</td><td style="text-align:right">2033</td><td style="text-align:right">2034</td><td style="text-align:right">2035</td><td style="text-align:right">2036</td></tr><tr><td style="text-align:left">Доля рынка</td><td style="text-align:right">0%</td><td style="text-align:right">0,4%</td><td style="text-align:right">1,8%</td><td style="text-align:right">4,4%</td><td style="text-align:right">8,8%</td><td style="text-align:right">10,8%</td><td style="text-align:right">12,6%</td><td style="text-align:right">14,4%</td><td style="text-align:right">16,2%</td><td style="text-align:right"><strong>18%</strong></td></tr></tbody></table></div>
+<p>Целевая доля года 10 снижена автором с 20% до 18% по итогам аудита 2026 года. Консервативный сценарий — 7%, оптимистичный — 25%.</p>
+<p><strong>Это главное непроверенное допущение модели.</strong> Оно не опирается ни на пилот, ни на договоры, ни на сопоставимый проект. Вся остальная арифметика — производная от этой строки. При обсуждении с инвестором разговор должен начинаться отсюда, а не с итоговой стоимости.</p>
+<h3 id="14-начало-горизонта-2027-год">1.4. Начало горизонта — 2027 год</h3>
+<p>Прежняя редакция начинала отсчёт с 2025 года и предполагала выпуск ЦФА на 104 млрд ₽ уже в 2026 году. На дату настоящей редакции нет ни лицензии оператора информационной системы, ни принятой нормативной базы, ни одного выпуска. Поэтому горизонт сдвинут: 2027 — подготовка, 2028 — первые выпуски.</p>
+<p>Цена этого сдвига видна в расчёте: каждый год задержки убирает около четверти стоимости бизнеса.</p>
+<h3 id="15-обращаемый-стек">1.5. Обращаемый стек</h3>
+<p>Стек года t = сумма выпусков за годы t−4…t. Средний срок жизни выпуска — 5 лет, что соответствует длительности инфраструктурных циклов.</p>
+<hr>
+<h2 id="2-тарифы">2. Тарифы</h2>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">Линия</th><th style="text-align:right">Ставка</th><th style="text-align:left">Ориентир рынка</th></tr></thead><tbody><tr><td style="text-align:left">Комиссия за выпуск</td><td style="text-align:right">0,50%</td><td style="text-align:left">операторы ЦФА в РФ: 0,1–1%</td></tr><tr><td style="text-align:left">Сервисная комиссия от стека</td><td style="text-align:right">0,30%</td><td style="text-align:left">депозитарии 0,05–0,15%; управляющие компании 1–2%</td></tr><tr><td style="text-align:left">Платформенный сбор (автоматическая оценка)</td><td style="text-align:right">0,15%</td><td style="text-align:left">оценочные компании 0,1–0,5%</td></tr><tr><td style="text-align:left">Лицензии B2B2G</td><td style="text-align:right">от 0 до 0,15%</td><td style="text-align:left">линейный рост по годам</td></tr><tr><td style="text-align:left">Технологические интеграции</td><td style="text-align:right">50–1 150 млн ₽/год</td><td style="text-align:left">10–50 млн ₽ за подключение партнёра</td></tr><tr><td style="text-align:left">Оценка и страхование, валовый тариф</td><td style="text-align:right">0,80%</td><td style="text-align:left">страховые премии 0,3–0,8%</td></tr></tbody></table></div>
+<h3 id="21-почему-оценка-и-страхование-учтены-нетто">2.1. Почему оценка и страхование учтены нетто</h3>
+<p>Платформа в этой линии выступает агентом: собирает 0,8% от объёма и передаёт оценщикам и страховщикам 85% собранного. Собственная маржа — 0,12% от объёма. Именно она попадает в выручку; валовые сборы показаны отдельной справочной строкой.</p>
+<p>В прежней редакции вся сумма 0,8% числилась выручкой платформы. В 2034 году это давало 51 240 млн ₽ — больше трети всей заявленной выручки — при том, что встречные издержки в расходы не попадали. Пометка «pass-through, 85% — встречные издержки» в записке к модели была, но в расчёт не переносилась.</p>
+<h3 id="22-тарифы-не-индексируются">2.2. Тарифы не индексируются</h3>
+<p>Сознательное упрощение в пользу консерватизма: рост выручки обеспечивается только ростом объёмов.</p>
+<hr>
+<h2 id="3-капитальные-вложения">3. Капитальные вложения</h2>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">Год</th><th style="text-align:right">млн ₽</th><th style="text-align:left">Назначение</th></tr></thead><tbody><tr><td style="text-align:left">2027</td><td style="text-align:right">300</td><td style="text-align:left">Ядро платформы, модули оценки и регистрации обременения</td></tr><tr><td style="text-align:left">2028</td><td style="text-align:right">420</td><td style="text-align:left">Центры обработки данных, лицензии, запуск</td></tr><tr><td style="text-align:left">2029</td><td style="text-align:right">400</td><td style="text-align:left">Платформенная зрелость, инфраструктура правового режима</td></tr><tr><td style="text-align:left">2030</td><td style="text-align:right">550</td><td style="text-align:left">Развёртывание реестра операторов информационных систем (779-П)</td></tr><tr><td style="text-align:left">2031</td><td style="text-align:right">1 800</td><td style="text-align:left">Сертификация ФСТЭК/ФСБ, второй центр обработки данных</td></tr><tr><td style="text-align:left">2032</td><td style="text-align:right">2 400</td><td style="text-align:left">Масштабирование: третий центр, криптомодули нового поколения</td></tr><tr><td style="text-align:left">2033</td><td style="text-align:right">1 600</td><td style="text-align:left">Плановая модернизация</td></tr><tr><td style="text-align:left">2034</td><td style="text-align:right">1 800</td><td style="text-align:left">Обновление платформы распределённого реестра</td></tr><tr><td style="text-align:left">2035</td><td style="text-align:right">2 300</td><td style="text-align:left">Расширение инфраструктуры под стек свыше 20 трлн ₽</td></tr><tr><td style="text-align:left">2036</td><td style="text-align:right">2 000</td><td style="text-align:left">Плановая модернизация</td></tr><tr><td style="text-align:left"><strong>Итого</strong></td><td style="text-align:right"><strong>13 570</strong></td><td style="text-align:left"></td></tr></tbody></table></div>
+<p>За первые 18 месяцев — 720 млн ₽. Срок амортизации 7 лет, линейно.</p>
+<blockquote><p>В прежней редакции бизнес-плана указывалось «совокупный CapEx за 10 лет — 1 300 млн ₽» при том, что таблица самой модели давала 13 570 млн ₽. Ошибка ровно в десять раз.</p></blockquote>
+<hr>
+<h2 id="4-операционные-расходы">4. Операционные расходы</h2>
+<p>Расходы собираются из двух частей.</p>
+<p><strong>Фонд оплаты труда</strong> = численность на конец года × средний оклад × 12 × 1,30 (страховые взносы 30%). Численность 40 → 370 человек, оклад первого года 350 тыс. ₽ в месяц, индексация 6% в год.</p>
+<p><strong>Прочие расходы</strong> = базовая часть 502 млн ₽ с индексацией 4% в год + переменная часть 22% выручки.</p>
+<p>Базовая часть первого года разложена так:</p>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">Статья</th><th style="text-align:right">млн ₽</th></tr></thead><tbody><tr><td style="text-align:left">Инфраструктура (хостинг, связь, информационная безопасность)</td><td style="text-align:right">117</td></tr><tr><td style="text-align:left">Лицензии программного обеспечения</td><td style="text-align:right">50</td></tr><tr><td style="text-align:left">Маркетинг</td><td style="text-align:right">60</td></tr><tr><td style="text-align:left">Юридическое сопровождение и аудит</td><td style="text-align:right">70</td></tr><tr><td style="text-align:left">Кибербезопасность (центр мониторинга, тесты на проникновение)</td><td style="text-align:right">50</td></tr><tr><td style="text-align:left">Интеграторы</td><td style="text-align:right">95</td></tr><tr><td style="text-align:left">Прочее</td><td style="text-align:right">60</td></tr><tr><td style="text-align:left"><strong>Итого</strong></td><td style="text-align:right"><strong>502</strong></td></tr></tbody></table></div>
+<p>Переменные 22% выручки покрывают эквайринг, инфраструктуру под нагрузкой, комплаенс, юридическое сопровождение объёма и привлечение клиентов. Величина подобрана так, чтобы маржа зрелого года легла на уровень сопоставимых инфраструктурных операторов (65–75%). Итог — 75,1% в 2036 году.</p>
+<blockquote><p>В прежней редакции фонд оплаты труда не выводился из численности: строка 2029 года соответствовала штату примерно вдвое больше заявленного, а строка 2026 года — вдвое меньше. При этом общая сумма расходов второго года (820 млн ₽) не покрывала даже фонд оплаты труда заявленных 120 человек (695 млн ₽), оставляя на всё остальное 125 млн ₽ против 502 млн ₽ годом ранее.</p></blockquote>
+<p><strong>Чего в расходах нет.</strong> Отдельной строки на привлечение клиента; требований к собственным средствам оператора информационной системы; резервов. Это ограничение модели, а не вывод о том, что таких расходов не будет.</p>
+<hr>
+<h2 id="5-налоги">5. Налоги</h2>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">Параметр</th><th style="text-align:right">Значение</th><th style="text-align:left">Основание</th></tr></thead><tbody><tr><td style="text-align:left">Налог на прибыль</td><td style="text-align:right">25%</td><td style="text-align:left">176-ФЗ от 12.07.2024, действует с 01.01.2025</td></tr><tr><td style="text-align:left">Перенос убытков прошлых лет</td><td style="text-align:right">до 50% налоговой базы</td><td style="text-align:left">ст. 283 НК РФ</td></tr><tr><td style="text-align:left">Страховые взносы</td><td style="text-align:right">30%</td><td style="text-align:left">гл. 34 НК РФ</td></tr></tbody></table></div>
+<p>Прежние редакции использовали ставку 20% — она перестала действовать с 2025 года.</p>
+<p>Льгота по налогу на прибыль для аккредитованных ИТ-организаций и пониженные страховые взносы в базовый сценарий <strong>не заложены</strong>: это потенциал, а не допущение. Освобождение операций с ЦФА от НДС требует подтверждения налоговым консультантом на дату сделки — в модели оно принято, но самостоятельной проверкой не подкреплено.</p>
+<hr>
+<h2 id="6-ставка-дисконтирования">6. Ставка дисконтирования</h2>
+<p>Метод построения — суммирование премий за риск к безрисковой ставке в рублях.</p>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">Компонента</th><th style="text-align:right">Значение</th><th style="text-align:left">Источник</th></tr></thead><tbody><tr><td style="text-align:left">Безрисковая ставка (10Y ОФЗ)</td><td style="text-align:right">14,73%</td><td style="text-align:left">рыночные данные на 21.05.2026</td></tr><tr><td style="text-align:left">Премия за рыночный риск × бета (8,13% × 1,15)</td><td style="text-align:right">9,35%</td><td style="text-align:left">Damodaran</td></tr><tr><td style="text-align:left">Премия за стадию проекта</td><td style="text-align:right">2,50%</td><td style="text-align:left">IPEV Guidelines</td></tr><tr><td style="text-align:left">Премия за неликвидность</td><td style="text-align:right">3,00%</td><td style="text-align:left">IPEV Guidelines</td></tr><tr><td style="text-align:left"><strong>Итого</strong></td><td style="text-align:right"><strong>29,58%</strong></td><td style="text-align:left"></td></tr></tbody></table></div>
+<p>Страновая премия отдельно не добавляется: она уже содержится в рублёвой безрисковой ставке. Добавление её вторым слоем было бы двойным счётом.</p>
+<p>Защитимый интервал — 27–33%; он и взят в качестве диапазона чувствительности.</p>
+<blockquote><p>В прежней редакции этот же расчёт приводился в двух документах с разными компонентами (2,5% + 3,0% против 1,5% + 2,5%) и с разной премией за рыночный риск (8,13% против 9%), а в одном месте прямо говорилось «в базовом сценарии используется 30%». Итоговая цифра при этом везде указывалась как 29,5%.</p></blockquote>
+<hr>
+<h2 id="7-терминальная-стоимость">7. Терминальная стоимость</h2>
+<p>Один метод — модель Гордона на нормализованном денежном потоке:</p>
+<ul><li>капитальные вложения в стационарном состоянии приравнены к амортизации;</li><li>прирост оборотного капитала равен темпу роста, умноженному на оборотный капитал;</li><li>темп роста g = 4% — номинальный, равный целевой инфляции, то есть нулевой реальный рост.</li></ul>
+<p>Доля терминальной стоимости в оценке — 38%. Это в пределах нормы для растущей инфраструктурной компании, но у верхней границы; при обсуждении с инвестором эту долю следует называть прямо.</p>
+<blockquote><p>Прежние редакции использовали одновременно три несовместимых подхода: одностадийную модель Гордона с g=2% в финмодели, трёхстадийную модель в расчётной таблице и g=4% в бизнес-плане. Разбор от 10.06.2026 признал, что терминальная стоимость была занижена примерно втрое, но исправление внесли только в текст, а не в расчёт.</p></blockquote>
+<hr>
+<h2 id="8-оборотный-капитал">8. Оборотный капитал</h2>
+<p>5% от выручки — обычное допущение для финансовых операторов (платёжные системы в РФ 3–7%, депозитарии 5–10%).</p>
+<hr>
+<h2 id="9-чувствительность-и-имитация">9. Чувствительность и имитация</h2>
+<p>Рассчитываются программно:</p>
+<ul><li>ставка дисконтирования × доля рынка (сетка 5 × 5);</li><li>отклонение операционных расходов от −10% до +30%;</li><li>задержка запуска на 0/1/2/3 года;</li><li>имитационное моделирование, 2 000 итераций, генератор с фиксированным зерном — результат воспроизводим.</li></ul>
+<p>Главный вывод чувствительности: расходы почти не влияют на стоимость (рост на 30% меняет её на 8%), а сроки влияют решающе (год задержки — минус четверть стоимости).</p>
+<blockquote><p>Прежние редакции приводили результаты имитационного моделирования — медиану 94 млрд ₽, интервал P10–P90 42–168 млрд ₽, вероятность отрицательной стоимости 4,2% — при том, что расчёта не существовало; в двух документах эти же величины отличались (медиана 91 против 94). Теперь имитация действительно выполняется, и её медиана составляет 39,2 млрд ₽: она учитывает вероятность задержки запуска, которой в прежних оценках не было.</p></blockquote>
+<hr>
+<h2 id="10-что-в-модели-не-учтено-и-почему">10. Что в модели не учтено и почему</h2>
+<ol><li><strong>Государственные субсидии</strong> — потенциал, не допущение.</li><li><strong>Долговое финансирование</strong> — модель только на акционерном капитале; смешанная структура дала бы налоговый щит.</li><li><strong>Валютный риск</strong> — все потоки в рублях.</li><li><strong>Конкуренция за залог</strong> — базовый сценарий предполагает уникальность категории в первые годы; риск покрыт консервативным сценарием.</li><li><strong>Отказ регулятора</strong> — раскрыт в <code>04_Бизнес-план/Wedge_pilot-light.md</code>; в этом случае применим консервативный сценарий (стоимость бизнеса 20,1 млрд ₽).</li><li><strong>Требования к собственным средствам оператора информационной системы</strong> — не смоделированы, требуют проверки по 259-ФЗ и нормативным актам Банка России.</li><li><strong>Стоимость привлечения клиента</strong> — не выделена отдельной строкой.</li></ol>
+<hr>
+<h2 id="11-источники">11. Источники</h2>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">Данные</th><th style="text-align:left">Источник</th></tr></thead><tbody><tr><td style="text-align:left">Залоговая ёмкость</td><td style="text-align:left">концепт автора</td></tr><tr><td style="text-align:left">Жилой фонд РФ</td><td style="text-align:left">Росстат, форма №1-жилфонд</td></tr><tr><td style="text-align:left">Налоговые ставки</td><td style="text-align:left">НК РФ, 176-ФЗ от 12.07.2024</td></tr><tr><td style="text-align:left">Целевая инфляция</td><td style="text-align:left">Основные направления денежно-кредитной политики Банка России</td></tr><tr><td style="text-align:left">Ключевая ставка 14,5%</td><td style="text-align:left">решение Совета директоров Банка России от 24.04.2026</td></tr><tr><td style="text-align:left">Курс 71,55 ₽/$</td><td style="text-align:left">официальный курс Банка России на 26.05.2026</td></tr><tr><td style="text-align:left">Премия за рыночный риск, бета</td><td style="text-align:left">Damodaran Online</td></tr><tr><td style="text-align:left">Ориентиры окладов</td><td style="text-align:left">открытые обзоры рынка труда 2024–2026</td></tr><tr><td style="text-align:left">Ориентиры капитальных вложений</td><td style="text-align:left">открытые презентации российских финансовых платформ</td></tr></tbody></table></div>
+<p>Макроэкономический блок зафиксирован на май 2026 года и требует обновления на дату переговоров.</p>
+<hr>
+<p><strong>Редакция v5 · 07.09.2026.</strong></p>
     </article>
     <div class="doc-actions">
       <a class="btn btn--primary" href="../index.html">

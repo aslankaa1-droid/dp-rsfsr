@@ -33,14 +33,14 @@
 
 | Показатель | Значение |
 |
-| NPV (Base) | 63,4 млрд ₽ |
+| NPV (Base) | 63,0 млрд ₽ |
 | IRR investor-level | 62 % |
 | WACC дисконт | 30 % |
 | EM (Base) | 12× |
-| Payback | 2,8 года |
+| Payback | 2,73 года |
 | FX (USD/RUB) | 71,55 |
 | Доля раунда | 15,8 % |
-| Post-money (Base) | $115M |
+| Post-money (Base) | $263M |
 | Pre-money (Base) | $100M |
 | Раунд | $15M |
 

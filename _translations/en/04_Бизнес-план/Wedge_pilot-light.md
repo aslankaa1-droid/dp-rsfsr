@@ -1,5 +1,7 @@
 # Wedge / Pilot-light under the existing 259-FZ
 
+> **Note.** This translation follows the Russian original. The financial section of the original was recalculated on 07.09.2026 (model v5): figures here are updated to the new calculation, the surrounding wording is being revised. In case of any discrepancy the Russian version prevails.
+
 **Document:** the concept of a minimum viable contour ("wedge") of an IS DFA operator that does not require amendments to 86-FZ and to the legislation around the digital ruble.
 **Objective:** close RED flag D5 of the composite audit of 24.05.2026 ("a wedge / pilot-light version is missing").
 **Strategic logic:** do not approach the Bank of Russia at the first step with a construction requiring a package of four federal laws; enter through a wedge-pilot under the existing 259-FZ via the VEB.RF / Ministry of Economic Development / partner bank / 779-P operator alliance; after 18–36 months of actual operation, open a dialogue with the CBR via a consolidated inter-agency position.
@@ -195,7 +197,7 @@ The principal advantage of the wedge: **the project does not approach the CBR wi
 
 The **Financial Model** (`03_Финансовая_модель/Финансовая_модель_ЦП_РСФСР.md`) accounts for the wedge regime in the Conservative scenario:
 - Year-10 market share — 7% (vs 18% in Base).
-- NPV ≈ RUB 22 bn (vs RUB 63.4 bn in Base, WACC 29.5 — see SoT v3).
+- NPV ≈ RUB 22 bn (vs RUB 63.0 bn in Base, WACC 29.5 — see SoT v3).
 - IRR ≈ 38% (vs 62% in Base).
 - Equity Multiple ≈ 5–6× (vs 12× in Base, exit-on-multiple).
 

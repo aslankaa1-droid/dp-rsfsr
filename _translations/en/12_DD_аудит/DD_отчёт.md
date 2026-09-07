@@ -1,4 +1,6 @@
 # Due Diligence Report
+
+> **Note.** This translation follows the Russian original. The financial section of the original was recalculated on 07.09.2026 (model v5): figures here are updated to the new calculation, the surrounding wording is being revised. In case of any discrepancy the Russian version prevails.
 ## Digital Platform CPFSR
 
 **Standard of work:** Big Four-grade Due Diligence methodology (Deloitte / EY / KPMG / PwC). The document is prepared in the format of an internal DD report for the board of directors / investor.
@@ -148,9 +150,9 @@ At the DD date there are no formal agreements with the CBR, Ministry of Finance,
 A 10-year model, with BASE / CONSERVATIVE / OPTIMISTIC scenarios.
 
 **Key KPIs (BASE):**
-- NPV @ WACC 29.5 = **RUB 63.4 bn**;
+- NPV @ WACC 29.5 = **RUB 63.0 bn**;
 - IRR ≈ 62% (with TV);
-- Payback = **2.8 years**;
+- Payback = **2.73 years**;
 - Peak financing need = **RUB 1.3 bn** (starter round);
 - Year-5 revenue = RUB 37 bn;
 - Year-10 revenue = RUB 138 bn;

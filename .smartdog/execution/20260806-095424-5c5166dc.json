@@ -1,0 +1,351 @@
+{
+  "project": "DPFSD.RU",
+  "mode": "DRY_RUN",
+  "dry_run": true,
+  "summary": {
+    "PLANNED": 4,
+    "EXECUTED": 0,
+    "SKIPPED": 16,
+    "FAILED": 1,
+    "NO_CHANGE": 2
+  },
+  "records": [
+    {
+      "task_id": "T-0001",
+      "risk_id": "SEC-001",
+      "action": "REMOVE_SECRET",
+      "target": "18_MVP/frontend/index.html",
+      "outcome": "SKIPPED",
+      "mode": "DRY_RUN",
+      "changes": [],
+      "expectations": [],
+      "duration_ms": 0.013,
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "task_id": "T-0002",
+      "risk_id": "SEC-011",
+      "action": "ADD_TO_GITIGNORE",
+      "target": "09_Мобильное_приложение/Сборки/common/.env.example",
+      "outcome": "NO_CHANGE",
+      "mode": "DRY_RUN",
+      "changes": [],
+      "expectations": [],
+      "duration_ms": 3.133,
+      "reason": "все каталоги артефактов уже закрыты в .gitignore"
+    },
+    {
+      "task_id": "T-0003",
+      "risk_id": "SEC-012",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html",
+      "outcome": "SKIPPED",
+      "mode": "DRY_RUN",
+      "changes": [],
+      "expectations": [],
+      "duration_ms": 0.002,
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "task_id": "T-0004",
+      "risk_id": "SEC-012",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/07_Презентации/Для_госструктур_ЦБ/Доклад_для_госструктур_и_ЦБ_РФ.html",
+      "outcome": "SKIPPED",
+      "mode": "DRY_RUN",
+      "changes": [],
+      "expectations": [],
+      "duration_ms": 0.001,
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "task_id": "T-0005",
+      "risk_id": "SEC-012",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/12_DD_аудит/DD_отчёт.html",
+      "outcome": "SKIPPED",
+      "mode": "DRY_RUN",
+      "changes": [],
+      "expectations": [],
+      "duration_ms": 0.001,
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "task_id": "T-0006",
+      "risk_id": "SEC-012",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/14_Аудит/АУДИТ Сводный пост-рефактор 24.05.2026/Сводный_аудит_пост_рефактор.html",
+      "outcome": "SKIPPED",
+      "mode": "DRY_RUN",
+      "changes": [],
+      "expectations": [],
+      "duration_ms": 0.001,
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "task_id": "T-0007",
+      "risk_id": "SEC-012",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/en/14_Аудит/АУДИТ Сводный уточняющий 24.05.2026/Сводный_аудит_уточняющий.html",
+      "outcome": "SKIPPED",
+      "mode": "DRY_RUN",
+      "changes": [],
+      "expectations": [],
+      "duration_ms": 0.001,
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "task_id": "T-0008",
+      "risk_id": "SEC-012",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/fr/02_Юридический_фундамент/Юридический_фундамент_ЦП_РСФСР.html",
+      "outcome": "SKIPPED",
+      "mode": "DRY_RUN",
+      "changes": [],
+      "expectations": [],
+      "duration_ms": 0.001,
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "task_id": "T-0009",
+      "risk_id": "SEC-012",
+      "action": "REMOVE_SECRET",
+      "target": "_translations/fr/14_Аудит/АУДИТ Сводный уточняющий 24.05.2026/Сводный_аудит_уточняющий.html",
+      "outcome": "SKIPPED",
+      "mode": "DRY_RUN",
+      "changes": [],
+      "expectations": [],
+      "duration_ms": 0.001,
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "task_id": "T-0010",
+      "risk_id": "DEP-002",
+      "action": "PIN_DEPENDENCY",
+      "target": "09_Мобильное_приложение/Сборки/common/package.json",
+      "outcome": "SKIPPED",
+      "mode": "DRY_RUN",
+      "changes": [],
+      "expectations": [],
+      "duration_ms": 0.001,
+      "reason": "нет обработчика для действия PIN_DEPENDENCY"
+    },
+    {
+      "task_id": "T-0011",
+      "risk_id": "DEP-002",
+      "action": "PIN_DEPENDENCY",
+      "target": "18_MVP/backend/requirements.txt",
+      "outcome": "SKIPPED",
+      "mode": "DRY_RUN",
+      "changes": [],
+      "expectations": [],
+      "duration_ms": 0.001,
+      "reason": "нет обработчика для действия PIN_DEPENDENCY"
+    },
+    {
+      "task_id": "T-0012",
+      "risk_id": "STR-001",
+      "action": "ADD_FILE",
+      "target": "README.md",
+      "outcome": "PLANNED",
+      "mode": "DRY_RUN",
+      "changes": [
+        {
+          "type": "CREATE_FILE",
+          "path": "README.md",
+          "detail": "137 байт по шаблону",
+          "preview": "# DPFSD.RU\n\n<!-- SmartDOG: заготовка создана автоматически, заполните описание проекта -->\n\n## Установка\n\n## Использование\n\n## Структура\n"
+        }
+      ],
+      "expectations": [
+        {
+          "kind": "path_exists",
+          "path": "README.md"
+        }
+      ],
+      "duration_ms": 0.962
+    },
+    {
+      "task_id": "T-0013",
+      "risk_id": "STR-002",
+      "action": "CREATE_DIRECTORY",
+      "target": "docs",
+      "outcome": "PLANNED",
+      "mode": "DRY_RUN",
+      "changes": [
+        {
+          "type": "CREATE_DIR",
+          "path": "docs",
+          "detail": "создать каталог"
+        },
+        {
+          "type": "CREATE_FILE",
+          "path": "docs/.gitkeep",
+          "detail": "файл-заглушка"
+        }
+      ],
+      "expectations": [
+        {
+          "kind": "dir_exists",
+          "path": "docs"
+        }
+      ],
+      "duration_ms": 0.915
+    },
+    {
+      "task_id": "T-0014",
+      "risk_id": "STR-004",
+      "action": "REMOVE_FILE",
+      "target": "_Мастер/Единые_показатели_v2.md",
+      "outcome": "PLANNED",
+      "mode": "DRY_RUN",
+      "changes": [
+        {
+          "type": "QUARANTINE",
+          "path": "_Мастер/Единые_показатели_v2.md",
+          "detail": "перенос в карантин, 13762 байт"
+        }
+      ],
+      "expectations": [
+        {
+          "kind": "path_absent",
+          "path": "_Мастер/Единые_показатели_v2.md"
+        }
+      ],
+      "duration_ms": 1.27
+    },
+    {
+      "task_id": "T-0015",
+      "risk_id": "QLT-006",
+      "action": "ADD_TESTS",
+      "target": ".",
+      "outcome": "PLANNED",
+      "mode": "DRY_RUN",
+      "changes": [
+        {
+          "type": "CREATE_FILE",
+          "path": "tests/test_smartdog_stub.py",
+          "detail": "заготовка теста, 390 байт",
+          "preview": "\"\"\"ЗАГЛУШКА теста, созданная SmartDOG для проекта DPFSD.RU.\n\nТестов в проекте недостаточно (QLT-006). Это НЕ настоящий тест — замените\nего реальными тестами публичной поверхности модулей.\n\"\"\"\n\nimport unittest\n\n\nclass TestSmartDOGStub(unittest.TestCase):\n    @unittest.skip(\"SmartDOG stub — замените настоящим тестом\")\n    def test_placeholder(self):\n        self.fail(\"Тест не реализован\")\n"
+        }
+      ],
+      "expectations": [
+        {
+          "kind": "path_exists",
+          "path": "tests/test_smartdog_stub.py"
+        }
+      ],
+      "duration_ms": 1.216
+    },
+    {
+      "task_id": "T-0016",
+      "risk_id": "ART-002",
+      "action": "MOVE_FILE",
+      "target": "DPFSR.RU_PRICE/Презентация/Презентация_ЦПФСР_2026-05-26.pptx",
+      "outcome": "SKIPPED",
+      "mode": "DRY_RUN",
+      "changes": [],
+      "expectations": [],
+      "duration_ms": 0.002,
+      "reason": "нет обработчика для действия MOVE_FILE"
+    },
+    {
+      "task_id": "T-0017",
+      "risk_id": "ART-003",
+      "action": "REMOVE_FILE",
+      "target": "_arhiv/ЦПФСР.РФ.rar",
+      "outcome": "FAILED",
+      "mode": "DRY_RUN",
+      "changes": [],
+      "expectations": [],
+      "duration_ms": 0.927,
+      "reason": "операция запрещена контуром безопасности",
+      "error": "SafetyError: Файл превышает лимит изменения (limit=5242880, path='_arhiv/ЦПФСР.РФ.rar', size=249367212)"
+    },
+    {
+      "task_id": "T-0018",
+      "risk_id": "QLT-001",
+      "action": "REFACTOR",
+      "target": "18_MVP/backend/app/reporting.py",
+      "outcome": "SKIPPED",
+      "mode": "DRY_RUN",
+      "changes": [],
+      "expectations": [],
+      "duration_ms": 0.002,
+      "reason": "действие требует человека (MANUAL) — автоматически не выполняется"
+    },
+    {
+      "task_id": "T-0019",
+      "risk_id": "QLT-002",
+      "action": "REFACTOR",
+      "target": "18_MVP/backend/app/main.py",
+      "outcome": "SKIPPED",
+      "mode": "DRY_RUN",
+      "changes": [],
+      "expectations": [],
+      "duration_ms": 0.001,
+      "reason": "действие требует человека (MANUAL) — автоматически не выполняется"
+    },
+    {
+      "task_id": "T-0020",
+      "risk_id": "QLT-005",
+      "action": "DEDUPLICATE",
+      "target": "09_Мобильное_приложение/Приложение/icons/apple-touch-icon.png",
+      "outcome": "NO_CHANGE",
+      "mode": "DRY_RUN",
+      "changes": [],
+      "expectations": [],
+      "duration_ms": 0.022,
+      "reason": "нет списка дубликатов для дедупликации"
+    },
+    {
+      "task_id": "T-0021",
+      "risk_id": "QLT-010",
+      "action": "REFACTOR",
+      "target": "_design-system/gate.js",
+      "outcome": "SKIPPED",
+      "mode": "DRY_RUN",
+      "changes": [],
+      "expectations": [],
+      "duration_ms": 0.001,
+      "reason": "действие требует человека (MANUAL) — автоматически не выполняется"
+    },
+    {
+      "task_id": "T-0022",
+      "risk_id": "QLT-014",
+      "action": "REFACTOR",
+      "target": "09_Мобильное_приложение/Приложение/icons/generate_pngs.py",
+      "outcome": "SKIPPED",
+      "mode": "DRY_RUN",
+      "changes": [],
+      "expectations": [],
+      "duration_ms": 0.001,
+      "reason": "действие требует человека (MANUAL) — автоматически не выполняется"
+    },
+    {
+      "task_id": "T-0023",
+      "risk_id": "QLT-015",
+      "action": "REFACTOR",
+      "target": "09_Мобильное_приложение/Приложение/screenshots/generate_screens.py",
+      "outcome": "SKIPPED",
+      "mode": "DRY_RUN",
+      "changes": [],
+      "expectations": [],
+      "duration_ms": 0.001,
+      "reason": "действие требует человека (MANUAL) — автоматически не выполняется"
+    }
+  ],
+  "totals": {
+    "records": 23,
+    "executed": 0,
+    "planned": 4,
+    "changes": 5,
+    "touched_disk": false
+  },
+  "project_path": "D:\\DPFSD.RU",
+  "backup_dir": "D:\\DPFSD.RU\\.smartdog\\backups\\20260806-095424-5c5166dc",
+  "quarantine_dir": "D:\\DPFSD.RU\\.smartdog\\quarantine\\20260806-095424-5c5166dc",
+  "executor_version": "1.0.0",
+  "duration_ms": 8.69,
+  "errors": []
+}

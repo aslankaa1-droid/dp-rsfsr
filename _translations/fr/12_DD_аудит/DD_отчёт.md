@@ -1,4 +1,6 @@
 # Rapport de Due Diligence
+
+> **Note.** Cette traduction suit l'original russe. La partie financière de l'original a été recalculée le 07.09.2026 (modèle v5) : les chiffres sont mis à jour, la rédaction environnante est en cours de révision. En cas de divergence, la version russe fait foi.
 ## Plateforme numérique CPFSR
 
 **Standard de travail :** méthodologie Due Diligence de niveau Big Four (Deloitte / EY / KPMG / PwC). Le document est préparé au format d'un rapport DD interne pour le conseil d'administration / l'investisseur.
@@ -148,9 +150,9 @@ La plateforme s'appuie sur :
 Modèle sur 10 ans, en scénarios BASE / CONSERVATEUR / OPTIMISTE.
 
 **KPI clés (BASE) :**
-- VAN @ CMPC 29,5 % = **63,4 Md ₽** ;
+- VAN @ CMPC 29,5 % = **63,0 Md ₽** ;
 - TRI ≈ 62 % (avec TV) ;
-- Payback = **2,8 ans** ;
+- Payback = **2,73 ans** ;
 - Pic de besoin de financement = **1,3 Md ₽** (tour initial) ;
 - Revenu année 5 = 37 Md ₽ ;
 - Revenu année 10 = 138 Md ₽ ;

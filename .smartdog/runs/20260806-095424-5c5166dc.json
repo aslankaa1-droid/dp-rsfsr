@@ -1,0 +1,95 @@
+{
+  "run_id": "20260806-095424-5c5166dc",
+  "project_path": "D:\\DPFSD.RU",
+  "status": "completed",
+  "started_at": 1785999264.0745316,
+  "finished_at": 1785999350.840754,
+  "duration_ms": 86766.222,
+  "error": null,
+  "stages": {
+    "SCAN": {
+      "name": "SCAN",
+      "status": "completed",
+      "started_at": 1785999264.0745316,
+      "finished_at": 1785999324.8077755,
+      "duration_ms": 60733.244,
+      "error": null,
+      "details": {
+        "implementation": "ScannerEngine",
+        "version": "1.0.0"
+      }
+    },
+    "ANALYZE": {
+      "name": "ANALYZE",
+      "status": "completed",
+      "started_at": 1785999324.8077755,
+      "finished_at": 1785999350.7263424,
+      "duration_ms": 25918.567,
+      "error": null,
+      "details": {
+        "implementation": "AnalyzerEngine",
+        "version": "1.0.0"
+      }
+    },
+    "AI_DECISION": {
+      "name": "AI_DECISION",
+      "status": "completed",
+      "started_at": 1785999350.7263424,
+      "finished_at": 1785999350.745535,
+      "duration_ms": 19.192,
+      "error": null,
+      "details": {
+        "implementation": "DecisionAPI",
+        "version": "1.1.0"
+      }
+    },
+    "TASK_CREATE": {
+      "name": "TASK_CREATE",
+      "status": "completed",
+      "started_at": 1785999350.745535,
+      "finished_at": 1785999350.7477071,
+      "duration_ms": 2.172,
+      "error": null,
+      "details": {
+        "implementation": "TaskCreatorAPI",
+        "version": "1.0.0"
+      }
+    },
+    "EXECUTE": {
+      "name": "EXECUTE",
+      "status": "completed",
+      "started_at": 1785999350.7477071,
+      "finished_at": 1785999350.759147,
+      "duration_ms": 11.44,
+      "error": null,
+      "details": {
+        "implementation": "ExecutorAPI",
+        "version": "1.0.0"
+      }
+    },
+    "VERIFY": {
+      "name": "VERIFY",
+      "status": "completed",
+      "started_at": 1785999350.759147,
+      "finished_at": 1785999350.7625356,
+      "duration_ms": 3.389,
+      "error": null,
+      "details": {
+        "implementation": "VerifierAPI",
+        "version": "1.0.0"
+      }
+    },
+    "REPORT": {
+      "name": "REPORT",
+      "status": "completed",
+      "started_at": 1785999350.7625356,
+      "finished_at": 1785999350.840754,
+      "duration_ms": 78.218,
+      "error": null,
+      "details": {
+        "implementation": "ReporterAPI",
+        "version": "1.0.0"
+      }
+    }
+  }
+}

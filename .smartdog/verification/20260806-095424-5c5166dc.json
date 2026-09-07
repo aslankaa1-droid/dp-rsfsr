@@ -1,0 +1,183 @@
+{
+  "project": "DPFSD.RU",
+  "summary": {
+    "CONFIRMED": 0,
+    "FAILED": 0,
+    "NOT_APPLICABLE": 23,
+    "ROLLED_BACK": 0
+  },
+  "records": [
+    {
+      "task_id": "T-0001",
+      "risk_id": "SEC-001",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "task_id": "T-0002",
+      "risk_id": "SEC-011",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "все каталоги артефактов уже закрыты в .gitignore"
+    },
+    {
+      "task_id": "T-0003",
+      "risk_id": "SEC-012",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "task_id": "T-0004",
+      "risk_id": "SEC-012",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "task_id": "T-0005",
+      "risk_id": "SEC-012",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "task_id": "T-0006",
+      "risk_id": "SEC-012",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "task_id": "T-0007",
+      "risk_id": "SEC-012",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "task_id": "T-0008",
+      "risk_id": "SEC-012",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "task_id": "T-0009",
+      "risk_id": "SEC-012",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "нет обработчика для действия REMOVE_SECRET"
+    },
+    {
+      "task_id": "T-0010",
+      "risk_id": "DEP-002",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "нет обработчика для действия PIN_DEPENDENCY"
+    },
+    {
+      "task_id": "T-0011",
+      "risk_id": "DEP-002",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "нет обработчика для действия PIN_DEPENDENCY"
+    },
+    {
+      "task_id": "T-0012",
+      "risk_id": "STR-001",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "dry-run: изменений не вносилось, проверять нечего"
+    },
+    {
+      "task_id": "T-0013",
+      "risk_id": "STR-002",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "dry-run: изменений не вносилось, проверять нечего"
+    },
+    {
+      "task_id": "T-0014",
+      "risk_id": "STR-004",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "dry-run: изменений не вносилось, проверять нечего"
+    },
+    {
+      "task_id": "T-0015",
+      "risk_id": "QLT-006",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "dry-run: изменений не вносилось, проверять нечего"
+    },
+    {
+      "task_id": "T-0016",
+      "risk_id": "ART-002",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "нет обработчика для действия MOVE_FILE"
+    },
+    {
+      "task_id": "T-0017",
+      "risk_id": "ART-003",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "SafetyError: Файл превышает лимит изменения (limit=5242880, path='_arhiv/ЦПФСР.РФ.rar', size=249367212)"
+    },
+    {
+      "task_id": "T-0018",
+      "risk_id": "QLT-001",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "действие требует человека (MANUAL) — автоматически не выполняется"
+    },
+    {
+      "task_id": "T-0019",
+      "risk_id": "QLT-002",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "действие требует человека (MANUAL) — автоматически не выполняется"
+    },
+    {
+      "task_id": "T-0020",
+      "risk_id": "QLT-005",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "нет списка дубликатов для дедупликации"
+    },
+    {
+      "task_id": "T-0021",
+      "risk_id": "QLT-010",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "действие требует человека (MANUAL) — автоматически не выполняется"
+    },
+    {
+      "task_id": "T-0022",
+      "risk_id": "QLT-014",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "действие требует человека (MANUAL) — автоматически не выполняется"
+    },
+    {
+      "task_id": "T-0023",
+      "risk_id": "QLT-015",
+      "status": "NOT_APPLICABLE",
+      "checks": [],
+      "reason": "действие требует человека (MANUAL) — автоматически не выполняется"
+    }
+  ],
+  "all_confirmed": true,
+  "dry_run": true,
+  "totals": {
+    "records": 23,
+    "confirmed": 0,
+    "failed": 0
+  },
+  "project_path": "D:\\DPFSD.RU",
+  "verifier_version": "1.0.0",
+  "duration_ms": 1.657,
+  "errors": []
+}
