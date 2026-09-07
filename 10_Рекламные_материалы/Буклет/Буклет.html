@@ -144,7 +144,37 @@ p{font-size:9.5pt; line-height:1.5; color:var(--n700); margin-bottom:3mm}
 <body>
 
 <a href="../../07_Презентации/Большая_презентация/index.html" style="position:fixed;top:14px;left:14px;z-index:99;background:#0B2B5C;color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.3)" class="no-print">← На главную</a>
-<style>@media print { .no-print { display:none !important; } }</style>
+<style>@media print { .no-print { display:none !important; } }
+/* Экран телефона: печатный лист A4 разворачивается в столбец.
+   Печать не затрагивается — правила только для экрана. */
+@media screen and (max-width: 900px) {
+  .page {
+    width: 100%; height: auto; min-height: 0;
+    grid-template-columns: 1fr;
+    box-shadow: none;
+  }
+  .page::before, .page::after { display: none; }
+  .panel {
+    padding: 20px 16px;
+    border-bottom: 1px solid rgba(108,114,128,.18);
+  }
+  .panel:last-child { border-bottom: none; }
+  .cover-stats, .sg-2 { grid-template-columns: 1fr 1fr; gap: 10px; }
+  /* Печатный кегль в пунктах слишком мелок для экрана телефона */
+  .tag, .cover-foot, .cover-foot b, .cover-stat-l, .nlist li::before, .s-l,
+  .benef li, .chip, .chip code, .chip span, .step-n, .step-t, .tm-p,
+  .tm-c li, .cta-foot { font-size: 12px !important; }
+  .tag, .mono, .cover-foot, .cover-stat-l, .s-l, b, strong,
+  li, p, td, th, .step-t, .step-d, .note { font-size: 12px !important; line-height: 1.5; }
+  h1 { font-size: 22px !important; } h2 { font-size: 18px !important; }
+  h3 { font-size: 15px !important; }
+  img, svg { max-width: 100%; height: auto; }
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 12px; }
+}
+@media screen and (max-width: 480px) {
+  .cover-stats, .sg-2 { grid-template-columns: 1fr; }
+}
+</style>
 
 
 <!-- PAGE 1 — outside of tri-fold (back cover | front cover | inner-left-back) -->

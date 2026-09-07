@@ -56,6 +56,22 @@
   footer .name{font-weight:700;color:var(--ink);font-size:10.4pt}
   .contacts{display:flex;gap:16px;flex-wrap:wrap;margin-top:6px}.contacts span b{color:var(--em)}
   .pb{break-before:page}
+
+@media (max-width: 900px) {
+  /* Схема и таблица помещаются в экран телефона */
+  .scheme, .flow, .nodes { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 12px; }
+  svg { max-width: 100%; height: auto; }
+  svg text { font-size: 12px; }
+  /* Печатный кегль в пунктах слишком мелок для экрана телефона */
+  .cover .kicker, .cover .doc-meta, .part .r, .part .d, .flow .node .t,
+  footer, .disc, .contacts { font-size: 12px !important; }
+  body { overflow-x: hidden; }
+  .kicker, .doc-meta, .d, .lbl, .r, .disc, td, th, li, .t, .v
+    { font-size: 12px !important; }
+  .wrap, .doc-wrap, .page { max-width: 100%; overflow-x: hidden; }
+  .node { min-width: 0; }
+}
 </style>
 </head>
 <body>
