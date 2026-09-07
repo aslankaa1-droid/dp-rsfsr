@@ -1,6 +1,6 @@
 # RFP — Vendor Due Diligence (Big-4)
 
-> **Note.** This translation follows the Russian original. The financial section of the original was recalculated on 07.09.2026 (model v5): figures here are updated to the new calculation, the surrounding wording is being revised. In case of any discrepancy the Russian version prevails.
+> **Note.** This translation follows the Russian original. The financial section of the original was recalculated on 07.09.2026 (model v5): the figures and wording of this translation are still being brought in line. Until that is done the Russian version prevails in all cases.
 
 **Project:** Digital Platform CPFSR — DFA operator backed by real-estate collateral with issuance for national projects
 **Client:** Abdul-Khakim Akhmadovich Kagirov (Center Group Company) — sole rightsholder of the concept (deposit certificate No. 4011265 of 19.12.2024)

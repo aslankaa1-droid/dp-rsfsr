@@ -81,12 +81,12 @@
         lead: "Под пул залоговых ЦФА в pilot-light режиме 2028–2029 организуется целевое фондирование через Фабрику проектного финансирования ВЭБ.РФ и Федеральное казначейство — на специальный эскроу-счёт. Средства идут на финансирование нацпроектов. На горизонте 2029+ возможно расширение мандата (модель целевой обеспеченной эмиссии Банка России) после положительного track-record и пакета НПА.",
         b1: "Залог", b1d: "Имущество остаётся у собственника; обременение временное. Оценка автоматизирована.",
         b2: "Выпуск ЦФА", b2d: "Технологическое партнёрство с лицензированным оператором ИС ЦФА по 779-П (статья 5 №259-ФЗ).",
-        b3: "Целевое фондирование", b3d: "Pilot-light: ФПФ ВЭБ.РФ + Казначейство. Целевой эскроу-счёт. Горизонт 2029+: расширение мандата при поддержке регулятора.",
+        b3: "Целевое фондирование", b3d: "Pilot-light: ФПФ ВЭБ.РФ + Казначейство. Целевой эскроу-счёт. Горизонт 2031+: расширение мандата при поддержке регулятора.",
         b4: "Мена ЦФА", b4d: "Новый объект становится новым ЦФА в портфеле оператора; собственник получает доход."
       },
       potential: {
         eyebrow: "Потенциал",
-        title: "Залоговая ёмкость — 25,5 трлн ₽",
+        title: "Залоговая ёмкость — 25 трлн ₽",
         lead: "Консервативный расчёт авторской концепции: 10% активов × 50% стоимости из совокупной стоимости недвижимости РФ 507 трлн ₽. Даже 5% проникновения = 1,3 трлн ₽ внебюджетного финансирования.",
         sJil: "Жилой фонд РФ",
         sCom: "Коммерческая недвижимость",
@@ -143,7 +143,7 @@
       },
       econ: {
         eyebrow: "Экономика проекта",
-        title: "63,0 млрд ₽ при стартовом капитале 1,335 млрд ₽ (WACC 29,58%)",
+        title: "63,0 млрд ₽ при стартовом капитале 1,8 млрд ₽ (WACC 29,58%)",
         lead: "10-летняя модель: окупаемость 2,73 года в базовом сценарии (WACC 29,58%); даже консервативный сценарий даёт стоимость ≈ 20,1 млрд ₽. Соотношение «потребность к ёмкости» — 1 : 20 000. multiple 18.4x.",
         chartTitle: "Выручка и EBITDA, млрд ₽",
         labelRev: "Выручка",
@@ -153,7 +153,7 @@
         eyebrow: "Интерактивная финмодель",
         title: "Подсчитать сценарий вашего интереса",
         lead: "Меняйте ключевые параметры — модель пересчитывается в реальном времени. Все ключевые KPI обновляются автоматически.",
-        share: "Доля от залоговой ёмкости (25,5 трлн ₽) к году 10",
+        share: "Доля от залоговой ёмкости (25 трлн ₽) к году 10",
         fee: "Совокупная комиссия оператора",
         wacc: "Ставка дисконтирования (WACC)",
         opex: "Операционные расходы (множитель)",
@@ -279,10 +279,10 @@
       solution: {
         eyebrow: "Solution",
         title: "Operator platform for issuing DFA against pledged property",
-        lead: "Against the pool of collateral DFA, the 2026–2028 pilot-light arranges targeted funding via VEB.RF Project Finance Factory and the Federal Treasury into a special escrow account. Funds flow into national projects. Horizon 2029+ allows expansion of mandate (targeted secured issuance by the Bank of Russia) after a positive track record and adoption of the regulatory package.",
+        lead: "Against the pool of collateral DFA, the 2026–2028 pilot-light arranges targeted funding via VEB.RF Project Finance Factory and the Federal Treasury into a special escrow account. Funds flow into national projects. Horizon 2031+ allows expansion of mandate (targeted secured issuance by the Bank of Russia) after a positive track record and adoption of the regulatory package.",
         b1: "Pledge", b1d: "Property remains with the owner; encumbrance is temporary. Automated valuation.",
         b2: "DFA issuance", b2d: "Technological partnership with a licensed DFA IS operator under FL 779-P (Art. 5 of FL №259).",
-        b3: "Targeted funding", b3d: "Pilot-light: VEB.RF PFF + Treasury. Targeted escrow account. Horizon 2029+: expansion of mandate with regulator support.",
+        b3: "Targeted funding", b3d: "Pilot-light: VEB.RF PFF + Treasury. Targeted escrow account. Horizon 2031+: expansion of mandate with regulator support.",
         b4: "DFA exchange", b4d: "New asset becomes new DFA in the operator's portfolio; the owner gets income."
       },
       potential: {
@@ -476,10 +476,10 @@
       solution: {
         eyebrow: "Solution",
         title: "Plateforme-opérateur d'émission d'AFN sur garantie",
-        lead: "Face au pool d'AFN gagés, le pilot-light 2028–2029 organise un financement ciblé via la Fabrique de financement de projets VEB.RF et le Trésor fédéral sur un compte séquestre spécial. Les fonds vont aux projets nationaux. Horizon 2029+ : élargissement du mandat (émission ciblée garantie par la Banque de Russie) après un historique positif et l'adoption du paquet réglementaire.",
+        lead: "Face au pool d'AFN gagés, le pilot-light 2028–2029 organise un financement ciblé via la Fabrique de financement de projets VEB.RF et le Trésor fédéral sur un compte séquestre spécial. Les fonds vont aux projets nationaux. Horizon 2031+ : élargissement du mandat (émission ciblée garantie par la Banque de Russie) après un historique positif et l'adoption du paquet réglementaire.",
         b1: "Gage", b1d: "Le bien reste au propriétaire ; servitude temporaire. Évaluation automatisée.",
         b2: "Émission d'AFN", b2d: "Partenariat technologique avec un opérateur SI AFN agréé selon la LF 779-P (Art. 5 LF n°259).",
-        b3: "Financement ciblé", b3d: "Pilot-light : FFP VEB.RF + Trésor. Compte séquestre ciblé. Horizon 2029+ : élargissement du mandat avec soutien du régulateur.",
+        b3: "Financement ciblé", b3d: "Pilot-light : FFP VEB.RF + Trésor. Compte séquestre ciblé. Horizon 2031+ : élargissement du mandat avec soutien du régulateur.",
         b4: "Échange d'AFN", b4d: "Nouveau bien devient nouvel AFN dans le portefeuille de l'opérateur ; le propriétaire reçoit un revenu."
       },
       potential: {
@@ -532,7 +532,7 @@
       },
       econ: {
         eyebrow: "Économie",
-        title: "VAN 51,2 Mds ₽ pour un capital initial de 1,335 Mds ₽ (CMPC 30%)",
+        title: "VAN 51,2 Mds ₽ pour un capital initial de 1,8 Mds ₽ (CMPC 30%)",
         lead: "Modèle sur 10 ans : retour sur investissement de 2,73 ans dans le scénario de base (CMPC 30%) ; même le scénario prudent donne une VAN ≈ 22 Mds ₽. multiple 18.4x.",
         chartTitle: "CA et EBITDA, Mds ₽",
         labelRev: "Chiffre d'affaires",

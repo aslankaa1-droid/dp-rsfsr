@@ -1,6 +1,6 @@
 # Due Diligence Report
 
-> **Note.** This translation follows the Russian original. The financial section of the original was recalculated on 07.09.2026 (model v5): figures here are updated to the new calculation, the surrounding wording is being revised. In case of any discrepancy the Russian version prevails.
+> **Note.** This translation follows the Russian original. The financial section of the original was recalculated on 07.09.2026 (model v5): the figures and wording of this translation are still being brought in line. Until that is done the Russian version prevails in all cases.
 ## Digital Platform CPFSR
 
 **Standard of work:** Big Four-grade Due Diligence methodology (Deloitte / EY / KPMG / PwC). The document is prepared in the format of an internal DD report for the board of directors / investor.

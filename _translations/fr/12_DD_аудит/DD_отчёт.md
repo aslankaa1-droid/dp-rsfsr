@@ -1,6 +1,6 @@
 # Rapport de Due Diligence
 
-> **Note.** Cette traduction suit l'original russe. La partie financière de l'original a été recalculée le 07.09.2026 (modèle v5) : les chiffres sont mis à jour, la rédaction environnante est en cours de révision. En cas de divergence, la version russe fait foi.
+> **Note.** Cette traduction suit l'original russe. La partie financière de l'original a été recalculée le 07.09.2026 (modèle v5) : les chiffres et la rédaction de cette traduction sont encore en cours de mise à jour. Jusque-là, la version russe fait foi en toutes circonstances.
 ## Plateforme numérique CPFSR
 
 **Standard de travail :** méthodologie Due Diligence de niveau Big Four (Deloitte / EY / KPMG / PwC). Le document est préparé au format d'un rapport DD interne pour le conseil d'administration / l'investisseur.

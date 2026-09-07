@@ -412,6 +412,7 @@
 /* ============ Breadcrumbs ============ */
 .breadcrumb {
   display: flex; align-items: center; gap: var(--space-2);
+  list-style: none; margin: 0; padding-inline-start: 0;
   padding: var(--space-3) 0;
   font-size: var(--fs-sm);
   color: var(--color-text-soft);

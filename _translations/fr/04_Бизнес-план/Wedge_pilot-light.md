@@ -1,6 +1,6 @@
 # Wedge / Pilot-light sous le 259-FZ existant
 
-> **Note.** Cette traduction suit l'original russe. La partie financière de l'original a été recalculée le 07.09.2026 (modèle v5) : les chiffres sont mis à jour, la rédaction environnante est en cours de révision. En cas de divergence, la version russe fait foi.
+> **Note.** Cette traduction suit l'original russe. La partie financière de l'original a été recalculée le 07.09.2026 (modèle v5) : les chiffres et la rédaction de cette traduction sont encore en cours de mise à jour. Jusque-là, la version russe fait foi en toutes circonstances.
 
 **Document :** concept du contour minimal viable (« wedge ») de l'opérateur SI DFA, ne nécessitant pas d'amendements à 86-FZ ni à la législation rouble numérique.
 **Objectif :** clôturer le drapeau RED D5 de l'audit consolidé du 24.05.2026 (« version wedge / pilot-light absente »).
