@@ -654,6 +654,11 @@ body {
   outline-offset: 2px;
   box-shadow: 0 0 0 5px rgba(255,255,255,.6);
 }
+
+@media (max-width: 768px) {
+  /* Подписи полей и метки — 12 px, читаемо с телефона */
+  .lsec-h h4, .it-val em, .field label, .field-hint { font-size: 12px; }
+}
 </style>
 </head>
 
@@ -1980,6 +1985,6 @@ else document.addEventListener('DOMContentLoaded', init);
 </script>
 
 <!-- Auth (PIN) — единый протокол сайта -->
-<script defer src="../../_design-system/gate.js?v=20260627"></script>
+<script defer src="../../_design-system/gate.js?v=20260907"></script>
 </body>
 </html>

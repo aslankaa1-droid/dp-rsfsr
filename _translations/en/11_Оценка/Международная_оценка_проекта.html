@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="../../../_design-system/rtl.css">
   <link rel="stylesheet" href="../../../_design-system/print.css">
 
-  <script defer src="../../../_design-system/gate.js?v=20260627"></script>
+  <script defer src="../../../_design-system/gate.js?v=20260907"></script>
   <script defer src="../../../_design-system/theme-switcher.js"></script>
   <script defer src="../../../_design-system/i18n-data.js"></script>
   <script defer src="../../../_design-system/translations-registry.js"></script>
@@ -142,6 +142,26 @@
       display: flex; gap: var(--space-3); margin-top: var(--space-9);
       padding-top: var(--space-6); border-top: 1px solid var(--color-border);
       flex-wrap: wrap;
+    }
+
+    /* Чтение с телефона */
+    @media (max-width: 768px) {
+      .doc-wrap { padding: var(--space-6) var(--space-5) var(--space-9); }
+      .doc-header { padding-bottom: var(--space-5); margin-bottom: var(--space-6); }
+      .doc-content h1 { margin-top: var(--space-8); }
+      .doc-content h2 { margin-top: var(--space-7); }
+      .doc-content h3 { margin-top: var(--space-6); }
+      .doc-content p { max-width: none; }
+      .doc-content blockquote { padding: var(--space-4); margin: var(--space-5) 0; }
+      .doc-content ul, .doc-content ol { padding-inline-start: var(--space-5); }
+      .doc-content table { font-size: var(--fs-xs); }
+      .doc-content table code { font-size: 1em; }
+      .doc-content table th, .doc-content table td { padding: var(--space-2) var(--space-3); }
+      .doc-actions { margin-top: var(--space-7); }
+    }
+    @media (max-width: 480px) {
+      .doc-wrap { padding: var(--space-5) var(--space-4) var(--space-8); }
+      .doc-content pre { font-size: var(--fs-xs); padding: var(--space-3); }
     }
   </style>
 </head>

@@ -84,6 +84,35 @@ body { padding-top: 80px; }
 .totop:hover { transform: translateY(-2px); }
 .totop.show { display: grid; place-items: center; }
 [dir="rtl"] .totop { right: auto; left: 24px; }
+
+/* Узкие экраны — дописано */
+@media (max-width: 900px) {
+  .topbar-nav { display: none; }
+  .topbar-inner { padding-inline: 16px; gap: 12px; }
+}
+@media (max-width: 768px) {
+  .doc-wrap { padding: 28px 16px 64px; }
+  .doc-header { margin-bottom: 28px; }
+  .doc-content table { font-size: 12px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .doc-content pre { overflow-x: auto; font-size: 12px; }
+  .doc-content code { overflow-wrap: anywhere; }
+  .topbar-actions { gap: 6px; flex-wrap: wrap; }
+  .topbar-brand small { display: none; }
+  .tbtn { min-height: 40px; padding-inline: 10px; }
+  .totop { bottom: 16px; right: 16px; }
+  .slide, .slide .inner { padding-inline: 16px; }
+  .slide h1 { font-size: clamp(1.6rem, 1.1rem + 3vw, 2.6rem); }
+  .slide h2 { font-size: clamp(1.3rem, 1rem + 2.2vw, 2rem); }
+  .ask-grid, .cgrid, .grid-2, .grid-3, .two-col { grid-template-columns: 1fr !important; }
+  .ask-n { font-size: clamp(1.8rem, 1.2rem + 4vw, 3rem); }
+  table { max-width: 100%; }
+}
+@media (max-width: 480px) {
+  .doc-wrap { padding: 20px 12px 56px; }
+  .topbar-inner { padding-inline: 12px; }
+  .tbtn-grp { flex-wrap: wrap; }
+}
+img, svg, video, iframe { max-width: 100%; height: auto; }
 </style>
 </head>
 <body>
@@ -606,6 +635,6 @@ window.addEventListener('scroll', () => {
 });
 </script>
 <!-- Auth (PIN) — единый протокол сайта -->
-<script defer src="../../_design-system/gate.js?v=20260627"></script>
+<script defer src="../../_design-system/gate.js?v=20260907"></script>
 </body>
 </html>

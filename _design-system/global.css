@@ -195,9 +195,13 @@ button { cursor: pointer; }
 .text-cap { text-transform: uppercase; letter-spacing: var(--tracking-cap); font-size: var(--fs-xs); font-weight: var(--fw-semi); }
 .font-mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
 
-/* ---- Скрытие до загрузки темы (anti-FOUC) ---- */
-html.theme-loading body { opacity: 0; }
-html:not(.theme-loading) body { opacity: 1; transition: opacity 0.2s ease-out, background-color var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out); }
+/* ---- Скрытие до загрузки темы (anti-FOUC) ----
+   Страница спрятана, пока не выбрана тема, но не дольше 1,2 с: если скрипт
+   темы не загрузился (медленная сеть, блокировка), содержимое всё равно
+   появится, а не останется белым экраном. */
+html.theme-loading body { opacity: 0; animation: fouc-safety 0s linear 1.2s forwards; }
+@keyframes fouc-safety { to { opacity: 1; } }
+html:not(.theme-loading) body { opacity: 1; animation: none; transition: opacity 0.2s ease-out, background-color var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out); }
 
 /* ---- Page transitions ---- */
 @keyframes fade-up {
@@ -209,3 +213,61 @@ html:not(.theme-loading) body { opacity: 1; transition: opacity 0.2s ease-out, b
 .fade-in-up.delay-2 { animation-delay: 160ms; }
 .fade-in-up.delay-3 { animation-delay: 240ms; }
 .fade-in-up.delay-4 { animation-delay: 320ms; }
+
+/* =====================================================================
+   Узкие экраны — базовый слой
+   Телефоны от 320 px, планшеты, альбомная ориентация. Правила ниже
+   касаются только базовой типографики и потока; компоненты — в
+   components.css.
+   ===================================================================== */
+
+/* ---- Широкие таблицы прокручиваются внутри себя, а не тянут страницу ---- */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  margin: var(--space-5) 0;
+  border-radius: var(--r-md);
+}
+.table-wrap > table { margin: 0; min-width: max-content; }
+.table-wrap:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+/* ---- Длинные пути, ссылки и формулы не выталкивают вёрстку ---- */
+code, kbd, samp { overflow-wrap: anywhere; word-break: break-word; }
+a { overflow-wrap: anywhere; }
+pre { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* ---- Медиа не выходит за край ---- */
+img, svg, video, canvas, iframe, table { max-width: 100%; }
+iframe { border: 0; }
+
+/* ---- Отступы контейнеров на узких экранах ---- */
+@media (max-width: 768px) {
+  .container, .container-narrow, .container-wide, .container-max {
+    padding-inline: var(--space-5);
+  }
+}
+@media (max-width: 480px) {
+  .container, .container-narrow, .container-wide, .container-max {
+    padding-inline: var(--space-4);
+  }
+  html { scroll-padding-top: calc(var(--header-h) + 8px); }
+  table { font-size: var(--fs-xs); }
+  th, td { padding: var(--space-2) var(--space-3); }
+}
+
+/* ---- Крупные пальцы, мелкие экраны ---- */
+@media (pointer: coarse) {
+  a, button, [role="button"], summary { -webkit-tap-highlight-color: rgba(0,0,0,.06); }
+  input, select, textarea { font-size: 16px; }   /* iOS не увеличивает страницу */
+}
+
+/* ---- Альбомная ориентация телефона: шапка не съедает экран ---- */
+@media (max-height: 480px) and (orientation: landscape) {
+  :root { --topbar-h: 52px; --ticker-h: 28px; }
+}
+
+/* Страховка от бокового сдвига: если какой-то блок всё же окажется на
+   несколько пикселей шире экрана, страница не будет ездить вбок */
+@media (max-width: 900px) { body { overflow-x: hidden; } }

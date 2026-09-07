@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="./_design-system/rtl.css">
   <link rel="stylesheet" href="./_design-system/print.css">
 
-  <script defer src="./_design-system/gate.js?v=20260627"></script>
+  <script defer src="./_design-system/gate.js?v=20260907"></script>
   <script defer src="./_design-system/theme-switcher.js"></script>
   <script defer src="./_design-system/i18n-data.js"></script>
   <script defer src="./_design-system/translations-registry.js"></script>
@@ -107,6 +107,12 @@
     @media (max-width: 768px) {
       .audit-banner { grid-template-columns: 1fr; padding: var(--space-7); }
       .audit-banner__visual { order: -1; }
+    }
+    @media (max-width: 480px) {
+      .audit-banner { padding: var(--space-6); border-radius: var(--r-xl); }
+      .audit-banner p { margin-bottom: var(--space-4); }
+      .champion-grid { grid-template-columns: 1fr; }
+      .block-card { padding: var(--space-4); }
     }
 
     .champion-grid {
@@ -309,7 +315,7 @@
         <div class="audit-banner__visual">
           <div class="audit-score">63,0<sub>млрд ₽</sub></div>
           <span class="audit-score__label">Стоимость бизнеса · базовый сценарий</span>
-          <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 20px; font-family: var(--font-mono); font-size: 11px; color: rgba(255,255,255,0.74);">
+          <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 20px; font-family: var(--font-mono); font-size: 12px; color: rgba(255,255,255,0.74);">
             <span>потоки 39,0</span><span>терминальная 24,0</span><span>доля TV 38 %</span><span>окупаемость 2,73</span><span>пик 1,70 млрд ₽</span>
           </div>
         </div>

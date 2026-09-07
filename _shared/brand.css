@@ -605,3 +605,99 @@ a:hover { color: var(--accent); }
   body { background: white !important; color: black !important; }
   .section { padding: 24px 0; page-break-inside: avoid; }
 }
+
+/* =====================================================================
+   Узкие экраны
+   Лист общий для слайд-презентаций и конструкторской документации,
+   поэтому правила касаются шапки, сеток, героя, таблиц и модальных окон.
+   ===================================================================== */
+
+img, svg, video, iframe { max-width: 100%; height: auto; }
+code, pre { overflow-wrap: anywhere; }
+pre { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+@media (max-width: 900px) {
+  .container, .container--narrow, .container--wide { padding-inline: 20px; }
+  .section { padding: 64px 0; }
+  .section--tight { padding: 44px 0; }
+
+  /* Управление языком, темой и размером шрифта переносится на вторую строку,
+     а не уезжает за край экрана */
+  .topbar-inner { flex-wrap: wrap; row-gap: 8px; padding: 10px 16px; }
+  .topbar-actions { flex-shrink: 1; min-width: 0; flex-wrap: wrap; justify-content: flex-end; }
+  .topbar-brand span:not(.brand-mark) { font-size: .95rem; }
+
+  .hero { padding: 112px 0 64px; }
+  .hero-panel { padding: 24px; }
+  .s-head { margin-bottom: 36px; }
+}
+
+@media (max-width: 640px) {
+  .container, .container--narrow, .container--wide { padding-inline: 16px; }
+  .section { padding: 48px 0; }
+  .section--tight { padding: 32px 0; }
+
+  .tbtn { padding: 8px 9px; font-size: .78rem; min-height: 40px; }
+  .tbtn-grp .tbtn { padding: 8px 8px; }
+  .topbar-actions { gap: 6px; }
+
+  .hero { padding: 96px 0 48px; }
+  .stat-val { font-size: 1.9rem; }
+  .card { padding: 20px; }
+  .step { gap: 12px; }
+
+  /* Таблицы прокручиваются внутри себя */
+  .tbl-wrap, .table-wrap { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .tbl, table { font-size: .8125rem; }
+  .tbl th, .tbl td, table th, table td { padding: 8px 10px; }
+
+  .modal { width: calc(100% - 24px); height: calc(100% - 96px); }
+  .foot-bottom { justify-content: flex-start; }
+}
+
+@media (max-width: 420px) {
+  .container, .container--narrow, .container--wide { padding-inline: 12px; }
+  .hero { padding: 84px 0 40px; }
+  .btn { padding: 12px 16px; width: 100%; justify-content: center; }
+  .tbtn-grp { flex-wrap: nowrap; }
+}
+
+/* Палец, а не курсор */
+@media (pointer: coarse) {
+  .tbtn, .btn, .topbar-nav a, .foot a { min-height: 40px; }
+  .topbar-nav a { display: flex; align-items: center; }
+}
+
+/* Страховка от бокового сдвига: если какой-то блок всё же окажется на
+   несколько пикселей шире экрана, страница не будет ездить вбок */
+@media (max-width: 900px) { body { overflow-x: hidden; } }
+
+/* Ползунки и свёрнутое меню на телефоне */
+@media (max-width: 900px) {
+  .topbar-nav a { min-height: 44px; display: flex; align-items: center; }
+}
+@media (max-width: 640px) {
+  input[type="range"], .slider { height: 24px; background-clip: content-box;
+    padding-block: 5px; }
+  .c-hash, .tag, .lead small { font-size: .75rem; }
+}
+
+/* Ссылки в шапке и подвале — цель не меньше 40 px на узких экранах */
+@media (max-width: 900px) {
+  .foot a, .foot-grid a, .foot-bottom a,
+  .topbar-nav a, .toc-item, .hub-item-title {
+    display: inline-flex; align-items: center; min-height: 40px;
+  }
+  .foot-grid li { margin-bottom: 0; }
+  input[type="range"], .slider { height: 32px; }
+}
+
+/* Планшет: графики и кнопки списка документов */
+@media (max-width: 900px) {
+  .chart-box, .chart-wrap { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .chart-box canvas, .chart-box svg { max-width: 100%; height: auto; }
+  .hub-item { flex-wrap: wrap; }
+  .hub-act { min-height: 40px; font-size: .8125rem; padding: 8px 12px; }
+  .bignum-cap b, .stat b, .lead b { font-size: inherit; }
+  b, strong { font-size: inherit; }
+}

@@ -93,6 +93,62 @@ html { scroll-snap-type: y mandatory; }
 .slide--dark .bignum-cap { color: rgba(255,255,255,.85); }
 .slide--gold .bignum-cap { color: var(--brand-primary-dark); }
 
+
+/* Узкие экраны — дописано */
+@media (max-width: 900px) {
+  .topbar-nav { display: none; }
+  .topbar-inner { padding-inline: 16px; gap: 12px; }
+}
+@media (max-width: 768px) {
+  .doc-wrap { padding: 28px 16px 64px; }
+  .doc-header { margin-bottom: 28px; }
+  .doc-content table { font-size: 12px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .doc-content pre { overflow-x: auto; font-size: 12px; }
+  .doc-content code { overflow-wrap: anywhere; }
+  .topbar-actions { gap: 6px; flex-wrap: wrap; }
+  .topbar-brand small { display: none; }
+  .tbtn { min-height: 40px; padding-inline: 10px; }
+  .totop { bottom: 16px; right: 16px; }
+  .slide, .slide .inner { padding-inline: 16px; }
+  .slide h1 { font-size: clamp(1.6rem, 1.1rem + 3vw, 2.6rem); }
+  .slide h2 { font-size: clamp(1.3rem, 1rem + 2.2vw, 2rem); }
+  .ask-grid, .cgrid, .grid-2, .grid-3, .two-col { grid-template-columns: 1fr !important; }
+  .ask-n { font-size: clamp(1.8rem, 1.2rem + 4vw, 3rem); }
+  table { max-width: 100%; }
+}
+@media (max-width: 480px) {
+  .doc-wrap { padding: 20px 12px 56px; }
+  .topbar-inner { padding-inline: 12px; }
+  .tbtn-grp { flex-wrap: wrap; }
+}
+img, svg, video, iframe { max-width: 100%; height: auto; }
+
+@media (max-width: 640px) {
+  /* Крупные числа не должны распирать колонку */
+  .stat-val, .bignum, .kpi-val, .ask-n { word-break: break-word; overflow-wrap: anywhere; }
+  .stat { min-width: 0; }
+  /* minmax(0,1fr): колонка может стать уже своего содержимого,
+     иначе широкий блок распирает сетку за край экрана */
+  .row, .row-2, .row-3, .row-4, .row-6, .toc-grid, .form-row {
+    grid-template-columns: minmax(0, 1fr) !important; }
+  .row > *, .toc-grid > *, .form-row > * { min-width: 0; }
+  .stat { padding: 18px 16px; }
+  .bignum-cap { max-width: none; }
+
+  /* Ползунки финмодели: полоса шире, ползунок крупнее */
+  .slider { height: 14px; }
+  .slider::-webkit-slider-thumb { width: 28px; height: 28px; }
+  .slider::-moz-range-thumb { width: 28px; height: 28px; }
+
+  /* Кнопки в списке документов — под палец и в столбик */
+  .hub-item { flex-wrap: wrap; }
+  .hub-actions { width: 100%; }
+  .hub-act { flex: 1 1 auto; min-height: 40px; font-size: .8125rem; padding: 8px 10px; }
+
+  /* Подписи не мельче 12 px */
+  .eyebrow, .tag, .cover-meta b, .hub-item-meta, .stat-lbl { font-size: .75rem; }
+  .gtm-table, .gtm-table td, .gtm-table th { font-size: .75rem; }
+}
 </style>
 </head>
 <body>
@@ -424,7 +480,7 @@ html { scroll-snap-type: y mandatory; }
 </main>
 
 <!-- Auth (PIN) — единый протокол сайта -->
-<script defer src="../../_design-system/gate.js?v=20260627"></script>
+<script defer src="../../_design-system/gate.js?v=20260907"></script>
 <script src="../../_shared/i18n.js"></script>
 <script src="../../_shared/app.js"></script>
 </body>

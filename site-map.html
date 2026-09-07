@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="./_design-system/components.css">
   <link rel="stylesheet" href="./_design-system/rtl.css">
   <link rel="stylesheet" href="./_design-system/print.css">
-  <script defer src="./_design-system/gate.js?v=20260627"></script>
+  <script defer src="./_design-system/gate.js?v=20260907"></script>
   <script defer src="./_design-system/theme-switcher.js"></script>
   <script defer src="./_design-system/i18n-data.js"></script>
   <script defer src="./_design-system/translations-registry.js"></script>
@@ -32,6 +32,12 @@
     .sitemap-block a { display: flex; align-items: center; gap: var(--space-2); border: none; color: var(--color-text); }
     .sitemap-block a:hover { color: var(--color-accent); border: none; }
     .sitemap-block a svg { width: 14px; height: 14px; opacity: 0.5; flex-shrink: 0; }
+    @media (max-width: 768px) {
+      .sitemap-grid { grid-template-columns: 1fr; gap: var(--space-4); }
+      .sitemap-block { padding: var(--space-4); }
+      .sitemap-block li { padding: 0; }
+      .sitemap-block a { min-height: 40px; }
+    }
   </style>
 </head>
 <body>

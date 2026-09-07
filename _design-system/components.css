@@ -498,3 +498,116 @@
   transition: transform var(--dur-base) var(--ease-spring);
 }
 .modal-bg.open .modal { transform: scale(1); }
+
+/* =====================================================================
+   Узкие экраны — компоненты
+   Порядок: планшет (1024) → большой телефон (768) → телефон (560) →
+   малый телефон (400) → очень узкий (360). Выше — только то, что
+   действительно ломалось на замерах.
+   ===================================================================== */
+
+/* Шапка на всех размерах: логотип не тянет строку за край экрана */
+.top-bar__inner { min-width: 0; }
+.top-bar__brand { min-width: 0; flex-shrink: 1; }
+.top-bar__brand-text { min-width: 0; overflow: hidden; }
+.top-bar__brand-text strong,
+.top-bar__brand-text small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+@media (max-width: 1024px) {
+  .top-bar__inner { padding-inline: var(--space-5); gap: var(--space-4); }
+  .hero { padding: var(--space-10) 0 var(--space-9); }
+  .section { padding: var(--space-9) 0; }
+}
+
+@media (max-width: 768px) {
+  .top-bar__inner { padding-inline: var(--space-4); gap: var(--space-3); }
+  .top-bar__brand svg { width: 30px; height: 30px; }
+  .top-bar__brand { font-size: var(--fs-base); }
+  .top-bar__brand-text small { font-size: 11px; max-width: 44vw; }
+
+  .ticker__item { padding-inline: var(--space-4); }
+  .ticker__stamp { display: none; }
+
+  .hero { padding: var(--space-9) 0 var(--space-8); }
+  .hero__lead { font-size: var(--fs-base); }
+  .hero__meta { margin-top: var(--space-7); padding-top: var(--space-6); gap: var(--space-4);
+                grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
+  .hero__meta-value { font-size: var(--fs-xl); }
+  .hero__cta .btn { flex: 1 1 auto; justify-content: center; }
+
+  .kpi-strip { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+  .kpi-cell { padding: var(--space-5); }
+  .kpi-cell__value { font-size: var(--fs-xl); }
+
+  .section__head { margin-bottom: var(--space-7); }
+  .modal { width: calc(100% - var(--space-8)); padding: var(--space-6); }
+}
+
+/* Телефон: подпись бренда мешает — прячем, шапка становится компактной */
+@media (max-width: 560px) {
+  :root { --topbar-h: 56px; }
+  .top-bar__brand-text small { display: none; }
+  .top-bar__brand-text strong { font-size: var(--fs-base); }
+  .top-bar__brand svg { width: 28px; height: 28px; }
+  .top-bar__actions { gap: var(--space-1); }
+
+  .ticker { font-size: 11px; }
+  .ticker__label { padding-inline: var(--space-3); font-size: 9px; }
+  .ticker__label span { display: none; }
+  .ticker__item { padding-inline: var(--space-3); gap: var(--space-1); }
+
+  .hero { padding: var(--space-8) 0 var(--space-7); }
+  .hero__eyebrow::before { width: 20px; }
+  .hero__meta { grid-template-columns: 1fr 1fr; }
+  .hero__cta { gap: var(--space-2); }
+  .hero__cta .btn { flex: 1 1 100%; }
+
+  .kpi-strip { grid-template-columns: 1fr 1fr; }
+  .kpi-cell { padding: var(--space-4); }
+  .kpi-cell:nth-child(2n) { border-inline-end: none; }
+  .kpi-cell__value { font-size: var(--fs-lg); }
+
+  .footer__grid { grid-template-columns: 1fr 1fr; gap: var(--space-6); }
+  .footer__bottom { justify-content: flex-start; gap: var(--space-2); }
+  .breadcrumb { font-size: var(--fs-xs); }
+  .back-to-top { inset-inline-end: var(--space-4); bottom: var(--space-4); }
+}
+
+/* Малый телефон: одна колонка везде */
+@media (max-width: 400px) {
+  .hero__meta { grid-template-columns: 1fr; gap: var(--space-3); }
+  .kpi-strip { grid-template-columns: 1fr; }
+  .kpi-cell { border-inline-end: none; }
+  .footer__grid { grid-template-columns: 1fr; }
+  .drawer { width: 100vw; }
+  .top-bar__actions .icon-btn:not(.burger):not(.theme-toggle) { display: none; }
+}
+
+/* Пальцем по кнопке: цель не меньше 40 px */
+@media (pointer: coarse) {
+  .icon-btn { width: 42px; height: 42px; }
+  .nav-link { padding: var(--space-3) var(--space-4); }
+  .menu__item { min-height: 42px; }
+  .footer__col a, .breadcrumb a { display: inline-block; padding-block: 4px; }
+  .ticker:hover .ticker__strip { animation-play-state: running; }
+}
+
+/* Бегущая строка на телефоне идёт быстрее: короче экран — короче цикл */
+@media (max-width: 560px) {
+  .ticker__strip { animation-duration: 60s; }
+}
+
+/* Цели нажатия и читаемость подписей на телефоне */
+@media (max-width: 768px) {
+  .badge { font-size: 12px; padding: 3px 10px; }
+  .top-bar__brand { min-height: 44px; }
+  .footer__col a,
+  .drawer__nav a,
+  .breadcrumb a { display: inline-flex; align-items: center; min-height: 36px; }
+  .footer__col li { margin-bottom: 0; }
+  .doc-actions .btn { flex: 1 1 auto; justify-content: center; }
+}
+@media (max-width: 480px) {
+  .btn { min-height: 44px; }
+  .icon-btn { width: 44px; height: 44px; }
+}

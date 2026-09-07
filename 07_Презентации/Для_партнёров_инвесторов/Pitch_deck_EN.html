@@ -41,6 +41,33 @@ table td{padding:8px 12px; border-bottom:1px solid var(--border-soft)}
 .slide--dark table td{border-bottom-color:rgba(255,255,255,.1)}
 .footer-meta{position:absolute; bottom:20px; left:7vmin; font-size:10px; opacity:.4; font-family:'JetBrains Mono',monospace; letter-spacing:.08em}
 @media print{ .slide{page-break-after:always; border:none} }
+
+@media (max-width: 640px) {
+  /* Крупные числа не должны распирать колонку */
+  .stat-val, .bignum, .kpi-val, .ask-n { word-break: break-word; overflow-wrap: anywhere; }
+  .stat { min-width: 0; }
+  /* minmax(0,1fr): колонка может стать уже своего содержимого,
+     иначе широкий блок распирает сетку за край экрана */
+  .row, .row-2, .row-3, .row-4, .row-6, .toc-grid, .form-row {
+    grid-template-columns: minmax(0, 1fr) !important; }
+  .row > *, .toc-grid > *, .form-row > * { min-width: 0; }
+  .stat { padding: 18px 16px; }
+  .bignum-cap { max-width: none; }
+
+  /* Ползунки финмодели: полоса шире, ползунок крупнее */
+  .slider { height: 14px; }
+  .slider::-webkit-slider-thumb { width: 28px; height: 28px; }
+  .slider::-moz-range-thumb { width: 28px; height: 28px; }
+
+  /* Кнопки в списке документов — под палец и в столбик */
+  .hub-item { flex-wrap: wrap; }
+  .hub-actions { width: 100%; }
+  .hub-act { flex: 1 1 auto; min-height: 40px; font-size: .8125rem; padding: 8px 10px; }
+
+  /* Подписи не мельче 12 px */
+  .eyebrow, .tag, .cover-meta b, .hub-item-meta, .stat-lbl { font-size: .75rem; }
+  .gtm-table, .gtm-table td, .gtm-table th { font-size: .75rem; }
+}
 </style>
 </head>
 <body>
@@ -320,6 +347,6 @@ table td{padding:8px 12px; border-bottom:1px solid var(--border-soft)}
 </section>
 
 <!-- Auth (PIN) — единый протокол сайта -->
-<script defer src="../../_design-system/gate.js?v=20260627"></script>
+<script defer src="../../_design-system/gate.js?v=20260907"></script>
 </body>
 </html>
