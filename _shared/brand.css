@@ -708,11 +708,27 @@ pre { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }
 .foot { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
 .totop { bottom: max(16px, calc(env(safe-area-inset-bottom) + 8px)); }
-.topbar, .topbar-inner { max-width: 100%; overflow-x: clip; }
+/* Обрезать шапку нельзя: свёрнутое меню раскрывается абсолютом под ней */
+.topbar, .topbar-inner { max-width: 100%; }
 @media (max-width: 400px) {
   html { font-size: 17px; }
   .container, .container--narrow, .container--wide {
     padding-inline: max(12px, env(safe-area-inset-left))
                     max(12px, env(safe-area-inset-right));
   }
+}
+
+/* Длинные слова в заголовках: переносим по слогам, а не обрезаем */
+h1, h2, h3, .slide h1, .slide h2, .hero h1 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+@media (max-width: 480px) {
+  .hero h1 { font-size: clamp(1.6rem, 1.1rem + 3vw, 2.4rem); letter-spacing: -0.02em; }
+  .btn { white-space: normal; text-align: center; }
+}
+@media (max-width: 360px) {
+  html { font-size: 16.5px; }
+  .hero h1 { font-size: clamp(1.5rem, 1rem + 2.6vw, 2rem); }
 }

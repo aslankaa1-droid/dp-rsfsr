@@ -621,5 +621,8 @@
 .back-to-top { bottom: max(var(--space-6), calc(env(safe-area-inset-bottom) + var(--space-3))); }
 .footer { padding-bottom: max(var(--space-7), env(safe-area-inset-bottom)); }
 
-/* Шапка не должна округляться шире экрана */
-.top-bar, .top-bar__inner, .ticker { max-width: 100%; overflow-x: clip; }
+/* Шапка не должна округляться шире экрана.
+   Обрезку ставим только бегущей строке: в самой шапке лежат выпадающие
+   меню языка и темы — их обрезать нельзя. */
+.top-bar, .top-bar__inner { max-width: 100%; }
+.ticker { max-width: 100%; overflow: hidden; }
