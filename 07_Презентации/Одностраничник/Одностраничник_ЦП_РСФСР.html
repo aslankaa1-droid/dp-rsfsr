@@ -13,85 +13,138 @@ body {
 }
 
 /* ---- лист: содержимое занимает верхние ~72% высоты страницы ---- */
-.sheet { width:210mm; padding:10mm 15mm 0 15mm; position:relative; }
+.sheet { width:210mm; padding:8mm 15mm 0 15mm; position:relative; }
 
 /* ---- шапка ---- */
 .kicker {
-  font-size:6.5pt; letter-spacing:.28em; text-transform:uppercase;
-  color:#8A6B2E; margin:0 0 2.6mm 0;
+  font-size:6.3pt; letter-spacing:.28em; text-transform:uppercase;
+  color:#8A6B2E; margin:0 0 2.2mm 0;
 }
-.rule-top { height:.8mm; background:#0B2B5C; margin:0 0 4mm 0; }
+.rule-top { height:.8mm; background:#0B2B5C; margin:0 0 3.2mm 0; }
 h1 {
   font-family:Georgia,"Times New Roman",serif; font-weight:400;
-  font-size:24pt; line-height:1.02; margin:0 0 1.4mm 0; color:#0B2B5C;
+  font-size:21.5pt; line-height:1.02; margin:0 0 1.2mm 0; color:#0B2B5C;
   letter-spacing:-.008em;
 }
 .sub {
-  font-family:Georgia,serif; font-size:9.4pt; color:#5B6472; font-style:italic;
-  margin:0 0 3.6mm 0;
+  font-family:Georgia,serif; font-size:8.8pt; color:#5B6472; font-style:italic;
+  margin:0 0 3mm 0;
 }
 
 /* ---- лид ---- */
-.lead { display:flex; gap:6mm; align-items:center; margin:0 0 3.4mm 0; }
+.lead { display:flex; gap:5.5mm; align-items:center; margin:0 0 2.4mm 0; }
 .lead .big {
-  flex:0 0 44mm; text-align:right; padding-top:.4mm; white-space:nowrap;
+  flex:0 0 39mm; text-align:right; padding-top:.4mm; white-space:nowrap;
   border-right:.5mm solid #C5A572; padding-right:5.5mm;
 }
 .lead .big .n {
-  font-family:Georgia,serif; font-size:20pt; color:#0B2B5C; line-height:1; display:block;
+  font-family:Georgia,serif; font-size:18pt; color:#0B2B5C; line-height:1; display:block;
 }
 .lead .big .c {
   font-size:6.6pt; letter-spacing:.10em; text-transform:uppercase; color:#8A6B2E;
   display:block; margin-top:1.2mm; white-space:normal;
 }
-.lead p { margin:0; font-size:8.8pt; line-height:1.46; }
+.lead p { margin:0; font-size:8.3pt; line-height:1.42; }
 
 /* ---- три адресата ---- */
-.who { display:flex; gap:0; margin:0 0 3.6mm 0; border-top:.25mm solid #DFE3E9; border-bottom:.25mm solid #DFE3E9; }
-.who div { flex:1; padding:2.4mm 4.5mm 2.4mm 0; }
-.who div + div { padding-left:4.5mm; border-left:.25mm solid #DFE3E9; }
+.who { display:flex; gap:0; margin:0 0 2.2mm 0; border-top:.25mm solid #DFE3E9; border-bottom:.25mm solid #DFE3E9; }
+.who > div { flex:1; padding:1.3mm 4.5mm 1.3mm 0; }
+.who > div + div { padding-left:4.5mm; border-left:.25mm solid #DFE3E9; }
 .who b {
   display:block; font-size:7.2pt; letter-spacing:.14em; text-transform:uppercase;
-  color:#0B2B5C; margin-bottom:1mm;
+  color:#0B2B5C; margin-bottom:.7mm;
 }
-.who span { color:#3D4653; font-size:8.1pt; line-height:1.38; display:block; }
+.who span { color:#3D4653; font-size:8pt; line-height:1.36; display:block; }
 
 /* ---- как это работает ---- */
 h2 {
   font-size:6.8pt; letter-spacing:.18em; text-transform:uppercase; color:#5B6472;
-  margin:0 0 2mm 0; font-weight:600;
+  margin:0 0 1.4mm 0; font-weight:600;
 }
-.stages { display:flex; gap:5mm; margin:0 0 3.6mm 0; }
-.stage { flex:1; padding:2.6mm 3.4mm; background:#F7F8FA; border-left:.9mm solid #0B2B5C; }
-.stage.two { background:#FBF7EF; border-left-color:#C5A572; }
-.stage .t { font-weight:650; color:#0B2B5C; font-size:8.3pt; margin-bottom:1mm; }
-.stage.two .t { color:#7A5E20; }
-.stage p { margin:0; font-size:7.8pt; line-height:1.40; color:#3D4653; }
+/* ---- схема потока ---- */
+.flow { display:flex; align-items:stretch; margin:0 0 1.8mm 0; }
+.node { flex:1 1 0; min-width:0; padding:1.7mm 2.2mm; background:#F7F8FA; border-top:.7mm solid #0B2B5C; }
+.node .num {
+  display:inline-block; font-family:Georgia,serif; font-size:7.4pt; color:#8A6B2E;
+  border-bottom:.3mm solid #C5A572; padding-bottom:.2mm; margin-bottom:1.1mm;
+}
+.node .nt { font-weight:650; color:#0B2B5C; font-size:7.6pt; line-height:1.18; margin-bottom:.9mm; }
+.node .nd { font-size:6.6pt; line-height:1.29; color:#4A5462; }
+.arw { flex:0 0 5.4mm; display:flex; align-items:center; justify-content:center; }
+.arw svg { display:block; }
+.under { display:flex; gap:5mm; margin:0 0 2.6mm 0; align-items:stretch; }
+.under .ut {
+  font-size:6.6pt; letter-spacing:.13em; text-transform:uppercase; font-weight:650;
+  color:#0B2B5C; margin-bottom:1mm;
+}
+.src { flex:1.62; padding:1.8mm 3mm; background:#F7F8FA; border-left:.9mm solid #0B2B5C; }
+.src p { margin:0; font-size:6.7pt; line-height:1.30; color:#4A5462; }
+.src p.hz { margin-top:1.1mm; padding-top:1.1mm; border-top:.2mm solid #DFE3E9; }
+.src b { color:#12171F; }
+.ret {
+  flex:1; display:flex; align-items:flex-start; gap:2.2mm;
+  background:#FBF7EF; border-left:.9mm solid #C5A572; padding:1.8mm 3mm;
+}
+.ret .rl { flex:0 0 auto; padding-top:1mm; }
+.ret p { margin:0; font-size:6.7pt; line-height:1.30; color:#4A5462; }
+.ret b { color:#12171F; }
+
+/* ---- нормы ---- */
+.norms { margin:0 0 2.6mm 0; }
+.norms > div { display:flex; gap:3mm; padding:1.15mm 0; border-bottom:.2mm solid #EDEFF3; }
+.norms > div:last-child { border-bottom:0; }
+.norms .g {
+  flex:0 0 40mm; font-size:6.9pt; font-weight:650; color:#0B2B5C; line-height:1.26;
+}
+.norms .l { flex:1; font-size:6.9pt; line-height:1.30; color:#4A5462; }
+.norms .l b { color:#12171F; font-weight:650; }
 
 /* ---- полоса чисел ---- */
-.nums { display:flex; border-top:.8mm solid #0B2B5C; border-bottom:.25mm solid #DFE3E9; margin:0 0 2.4mm 0; }
-.nums div { flex:1; padding:2.8mm 3.5mm 2.6mm 0; }
-.nums div + div { padding-left:3.5mm; border-left:.25mm solid #DFE3E9; }
-.nums .v { font-family:Georgia,serif; font-size:13.4pt; color:#0B2B5C; line-height:1.05; white-space:nowrap; margin-bottom:1.4mm; }
+.nums { display:flex; border-top:.8mm solid #0B2B5C; border-bottom:.25mm solid #DFE3E9; margin:0 0 2mm 0; }
+.nums > div { flex:1; padding:2mm 3.5mm 1.8mm 0; }
+.nums > div + div { padding-left:3.5mm; border-left:.25mm solid #DFE3E9; }
+.nums .v { font-family:Georgia,serif; font-size:12.6pt; color:#0B2B5C; line-height:1.05; white-space:nowrap; margin-bottom:1.1mm; }
 .nums .v i { font-style:normal; font-size:8.4pt; color:#5B6472; }
-.nums .k { font-size:6.6pt; line-height:1.30; color:#5B6472; margin-top:0; }
+.nums .k { font-size:6.6pt; line-height:1.28; color:#5B6472; margin-top:.4mm; }
 .claim {
-  font-size:8.2pt; color:#3D4653; margin:0 0 3.6mm 0; padding-left:3.4mm;
+  font-size:7.7pt; color:#3D4653; margin:0 0 2.4mm 0; padding-left:3.4mm;
   border-left:.5mm solid #C5A572;
 }
 .claim b { color:#12171F; }
 
 /* ---- низ: экономика + честная стадия ---- */
-.foot2 { display:flex; gap:6mm; margin:0 0 3.4mm 0; }
+.foot2 { display:flex; gap:6mm; margin:0 0 2.4mm 0; }
 .foot2 > div { flex:1; }
-.foot2 p { margin:0; font-size:7.8pt; line-height:1.41; color:#3D4653; }
+.foot2 p { margin:0; font-size:7.7pt; line-height:1.40; color:#3D4653; }
 .foot2 b { color:#12171F; }
 
 /* ---- подвал ---- */
-.close { border-top:.25mm solid #DFE3E9; padding-top:2.6mm; }
-.close .line1 { font-size:8.4pt; color:#0B2B5C; font-weight:650; margin-bottom:1.1mm; }
+.close { border-top:.25mm solid #DFE3E9; padding-top:1.9mm; }
+.close .line1 { font-size:8pt; color:#0B2B5C; font-weight:650; margin-bottom:.9mm; }
 .close .line1 span { color:#8A6B2E; font-weight:400; }
-.close .small { font-size:6.4pt; line-height:1.40; color:#7A828E; }
+.close .small { font-size:6.4pt; line-height:1.38; color:#7A828E; }
+
+/* Экран телефона: печатный лист A4 подгоняется по ширине.
+   Печать не затрагивается — правила только для экрана. */
+@media screen and (max-width: 900px) {
+  .sheet, .page, .a4 {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 20px 16px !important;
+    box-shadow: none;
+  }
+  .sheet *, .page * { max-width: 100%; }
+  .head-right, .footer-meta, .kicker, .sub, .doc-meta,
+  .sheet, .lead, .big, .k, .v i, .tag { font-size: 12px !important; }
+  .nums, .cols, .two-col, .grid, .kpi-row { grid-template-columns: 1fr !important;
+    display: block !important; }
+  .kpi, .node, .card { width: auto !important; min-width: 0 !important; }
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch;
+    font-size: 12px; }
+  svg { max-width: 100%; height: auto; }
+}
 </style></head>
 <body>
 <div class="sheet">
@@ -109,30 +162,45 @@ h2 {
     </div>
     <p>Имущество в стране есть — работать оно не может. Нет инструмента, который превратил бы
     залог в целевые деньги, не отбирая объект у собственника. <b>ЦП РСФСР — платформа полного
-    цикла выпуска и обслуживания цифровых финансовых активов под залог недвижимого и иного
-    имущества.</b></p>
+    цикла выпуска и обслуживания цифровых финансовых активов под залог имущества.</b></p>
   </div>
 
   <div class="who">
-    <div><b>Государство</b><span>Целевые средства на нацпроекты без роста нагрузки на бюджет.</span></div>
-    <div><b>Собственник</b><span>Доход от имущества без его продажи — объект остаётся в собственности.</span></div>
+    <div><b>Государство</b><span>Целевые средства на нацпроекты без нагрузки на бюджет.</span></div>
+    <div><b>Собственник</b><span>Доход от имущества без его продажи.</span></div>
     <div><b>Инвестор</b><span>Новый класс обеспеченных регулируемых инструментов.</span></div>
   </div>
 
   <h2>Как это работает</h2>
-  <div class="stages">
-    <div class="stage">
-      <div class="t">Этап 1 · 2028–2029 · в действующем праве</div>
-      <p>Размещения через технологическое партнёрство с действующим оператором информационной
-      системы по 779-П. Фондирование — Фабрика проектного финансирования ВЭБ.РФ и Федеральное
-      казначейство. Дополнительная эмиссия не предусмотрена: новых норм не требуется.</p>
+  <div class="flow"><div class="node"><div class="num">1</div><div class="nt">Собственник</div><div class="nd">Объект в залог. Право собственности сохраняется.</div></div><div class="arw"><svg width="14" height="10" viewBox="0 0 14 10"><path d="M0 5 H10" stroke="#C5A572" stroke-width="1.1"/><path d="M9 1.4 L13.4 5 L9 8.6 Z" fill="#C5A572"/></svg></div><div class="node"><div class="num">2</div><div class="nt">Оценка и обременение</div><div class="nd">Оценщик, страховщик, запись о залоге в реестре.</div></div><div class="arw"><svg width="14" height="10" viewBox="0 0 14 10"><path d="M0 5 H10" stroke="#C5A572" stroke-width="1.1"/><path d="M9 1.4 L13.4 5 L9 8.6 Z" fill="#C5A572"/></svg></div><div class="node"><div class="num">3</div><div class="nt">Выпуск ЦФА</div><div class="nd">Смарт-контракт; выпуск в системе оператора по 779-П.</div></div><div class="arw"><svg width="14" height="10" viewBox="0 0 14 10"><path d="M0 5 H10" stroke="#C5A572" stroke-width="1.1"/><path d="M9 1.4 L13.4 5 L9 8.6 Z" fill="#C5A572"/></svg></div><div class="node"><div class="num">4</div><div class="nt">Инвесторы</div><div class="nd">Покупают актив, обеспеченный залогом.</div></div><div class="arw"><svg width="14" height="10" viewBox="0 0 14 10"><path d="M0 5 H10" stroke="#C5A572" stroke-width="1.1"/><path d="M9 1.4 L13.4 5 L9 8.6 Z" fill="#C5A572"/></svg></div><div class="node"><div class="num">5</div><div class="nt">Фондирование и эскроу</div><div class="nd">Раскрытие только по событиям смарт-контракта.</div></div></div>
+  <div class="under">
+    <div class="src">
+      <div class="ut">Откуда деньги</div>
+      <p><b>Действующий контур.</b> Фабрика проектного финансирования ВЭБ.РФ (ПП РФ № 158)
+      и Федеральное казначейство. Эмиссия Банка России не задействована — платформа работает
+      в существующих нормах.</p>
+      <p class="hz"><b>Целевая модель — требует согласования.</b> Пул залоговых ЦФА передаётся
+      под обеспеченную целевую эмиссию Банка России: эскроу-агент — Банк России, бенефициар —
+      Российская Федерация, расчёт возможен в цифровом рубле, свободный оборот средств запрещён.
+      Требует пакета из четырёх федеральных законов; в расчёты настоящего листа не заложена.</p>
     </div>
-    <div class="stage two">
-      <div class="t">Этап 2 · с 2031 · расширение мандата</div>
-      <p>Переход к модели целевой обеспеченной эмиссии Банка России. Запускается только после
-      положительного результата первого этапа не менее 12 месяцев и принятия пакета поправок.
-      Это предложение, требующее согласования, а не данность.</p>
+    <div class="ret">
+      <div class="rl"><svg width="15" height="10" viewBox="0 0 15 10">
+        <path d="M15 5 H5" stroke="#C5A572" stroke-width="1.1"/>
+        <path d="M6 1.4 L1.6 5 L6 8.6 Z" fill="#C5A572"/></svg></div>
+      <div><div class="ut">Обратный ход</div>
+      <p>Вознаграждение собственнику, погашение ЦФА инвесторам, снятие обременения — объект
+      возвращается в свободное распоряжение. Порядок каждого шага зашит в существенные условия
+      смарт-контракта.</p></div>
     </div>
+  </div>
+
+  <h2>Нормы, которые соблюдаем</h2>
+  <div class="norms">
+    <div><div class="g">Выпуск и обращение ЦФА</div><div class="l"><b>259-ФЗ</b> ст. 4–8, 14 · Положения Банка России <b>779-П</b>, <b>780-П</b> · правила системы согласуются с Банком России по ст. 6</div></div>
+    <div><div class="g">Залог, оценка, страхование</div><div class="l"><b>ГК РФ</b> ст. 334–358, 358.1–358.8, 421, 339.1 · <b>102-ФЗ</b> · <b>218-ФЗ</b> · <b>135-ФЗ</b> · Закон <b>4015-1</b></div></div>
+    <div><div class="g">Целевое расходование, расчёты</div><div class="l"><b>ГК РФ</b> ст. 860.7–860.10, 926.1–926.8 · <b>Бюджетный кодекс</b> · <b>ПП РФ № 158</b> · <b>340-ФЗ</b> · <b>161-ФЗ</b></div></div>
+    <div><div class="g">Надзор, комплаенс, защита данных</div><div class="l"><b>86-ФЗ</b> ст. 4, 75 · <b>115-ФЗ</b> · <b>152-ФЗ</b> · <b>187-ФЗ</b> · <b>ГОСТ Р 57580.1–4</b>, целевой уровень защиты — четвёртый, максимальный</div></div>
   </div>
 
   <h2>Экономика проекта</h2>
@@ -143,15 +211,14 @@ h2 {
     <div><div class="v">1,8 <i>млрд ₽</i></div><div class="k">Размер раунда<br>на 24 месяца</div></div>
   </div>
   <div class="claim">Даже консервативный сценарий, <b>не требующий ни одной новой нормы</b>, даёт
-  одиннадцатикратный запас к размеру раунда. Ожидаемое значение по трём сценариям — 64,7 млрд ₽.</div>
+  одиннадцатикратный запас к размеру раунда.</div>
 
   <div class="foot2">
     <div>
       <h2>На чём зарабатывает</h2>
       <p>Комиссия за выпуск <b>0,5%</b> · сервисная <b>0,3%</b> · платформенный сбор <b>0,15%</b> ·
       лицензии партнёрам до <b>0,15%</b>. Выручка десятого года — <b>142,6 млрд ₽</b>,
-      EBITDA <b>107,1 млрд ₽</b> при марже <b>75,1%</b>: платформа берёт процент с оборота,
-      а не строит баланс.</p>
+      EBITDA <b>107,1 млрд ₽</b>, маржа <b>75,1%</b>.</p>
     </div>
     <div>
       <h2>Что есть и чего ещё нет</h2>
@@ -165,7 +232,7 @@ h2 {
   <div class="close">
     <div class="line1">Цифровая Платформа РСФСР &nbsp;<span>·</span>&nbsp; dpfsd.ru &nbsp;<span>·</span>&nbsp; aslankaa@yandex.ru</div>
     <div class="small">Автор концепта и правообладатель ноу-хау — Кагиров Абдул-Хаким Ахмадович. Свидетельство о депонировании № 4011265 от 19.12.2024.<br>
-    Документ носит информационный характер, не является офертой, приглашением делать оферты или инвестиционной рекомендацией. Прогнозные показатели — расчётные оценки на основе допущений финансовой модели проекта и не являются гарантией результата.</div>
+    Документ информационный, не является офертой или инвестиционной рекомендацией. Прогнозные показатели — расчётные оценки по допущениям финансовой модели и не являются гарантией результата.</div>
   </div>
 
 </div>

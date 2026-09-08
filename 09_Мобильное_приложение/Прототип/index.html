@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ЦП РСФСР · Прототип мобильного приложения</title>
 <meta name="theme-color" content="#0B2B5C">
-<link rel="stylesheet" href="../../_shared/brand.css?v=20260908">
+<link rel="stylesheet" href="../../_shared/brand.css?v=2026090803">
 <style>
 :root{
   --primary:#0B2B5C; --primary-dark:#061A3A; --primary-light:#1F4A8F;
@@ -196,6 +196,11 @@ body{
   .tbtn-grp { flex-wrap: wrap; }
 }
 img, svg, video, iframe { max-width: 100%; height: auto; }
+@media (max-width: 768px) {
+  /* макет телефона вписывается в экран */
+  .app, .phone, .device { max-width: 100%; }
+  .bal-lbl, .list-header, .phone-cap { font-size: 12px; }
+}
 </style>
 </head>
 <body style="padding-top:64px">
@@ -567,9 +572,9 @@ img, svg, video, iframe { max-width: 100%; height: auto; }
     <span style="font-family:'JetBrains Mono',monospace">Прототип · iOS / Android / Windows · PWA + Capacitor v6+</span>
   </footer>
 </div>
-<script src="../../_shared/i18n.js?v=20260908"></script>
-<script src="../../_shared/app.js?v=20260908"></script>
+<script src="../../_shared/i18n.js?v=2026090803"></script>
+<script src="../../_shared/app.js?v=2026090803"></script>
 <!-- Auth (PIN) — единый протокол сайта -->
-<script defer src="../../_design-system/gate.js?v=20260908"></script>
+<script defer src="../../_design-system/gate.js?v=2026090803"></script>
 </body>
 </html>

@@ -34,6 +34,28 @@
   footer{margin-top:16px;border-top:2px solid var(--em);padding-top:9px;font-size:8.6pt;color:var(--soft)}
   footer .name{font-weight:700;color:var(--ink);font-size:10.4pt}
   .contacts{display:flex;gap:16px;flex-wrap:wrap;margin-top:6px}.contacts span b{color:var(--em)}
+
+/* Экран телефона: печатный лист A4 подгоняется по ширине.
+   Печать не затрагивается — правила только для экрана. */
+@media screen and (max-width: 900px) {
+  .sheet, .page, .a4 {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 20px 16px !important;
+    box-shadow: none;
+  }
+  .sheet *, .page * { max-width: 100%; }
+  .head-right, .footer-meta, .kicker, .sub, .doc-meta,
+  .tag, .l, .v, .node, footer, .who { font-size: 12px !important; }
+  .cols, .two-col, .grid, .kpi-row { grid-template-columns: 1fr !important;
+    display: block !important; }
+  .kpi, .node, .card { width: auto !important; min-width: 0 !important; }
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch;
+    font-size: 12px; }
+  svg { max-width: 100%; height: auto; }
+}
 </style>
 </head>
 <body>

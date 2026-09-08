@@ -314,3 +314,52 @@ h1, h2, h3, h4, .hero__title, .section__title, .doc-header h1 {
   :root { --fs-display: clamp(1.6rem, 1rem + 3vw, 2.1rem); }
   html { font-size: 16.5px; }
 }
+
+/* Широкая таблица без контейнера прокрутки — прокручивается сама.
+   Нужно для страниц, собранных до появления `.table-wrap`: иначе на
+   узком экране их содержимое обрезалось краем. */
+@media (max-width: 768px) {
+  .doc-content table,
+  main > table, article > table, section > table {
+    display: block;
+    width: max-content;
+    min-width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+  }
+  .doc-content .table-wrap > table { width: max-content; }
+}
+
+/* Флажки чек-листов и подсветка кода на телефоне */
+@media (max-width: 768px) {
+  input[type="checkbox"], input[type="radio"] {
+    width: 20px; height: 20px; vertical-align: -4px;
+    accent-color: var(--color-accent);
+  }
+  li input[type="checkbox"] { margin-inline-end: 8px; }
+
+  /* подсветка кода: строки и лексемы не мельче 12 px */
+  code, pre, pre code,
+  code.sourceCode, pre.sourceCode, .sourceCode span { font-size: 12px; }
+
+  /* длинные имена файлов в выделении не распирают строку */
+  strong, b, em { overflow-wrap: anywhere; }
+}
+
+/* Длинные ссылки и пути в тексте переносятся, а не уезжают за край */
+p, li, td, th, dd, dt, figcaption, blockquote, .doc-content li {
+  overflow-wrap: break-word;
+}
+
+/* Подсветка кода в тексте документа: правило `code` перебивалось более
+   точным `.doc-content code`, поэтому кегль задаётся здесь же */
+@media (max-width: 768px) {
+  .doc-content code,
+  .doc-content pre,
+  .doc-content pre code,
+  .doc-content .sourceCode,
+  .doc-content .sourceCode span,
+  code.sourceCode, pre.sourceCode { font-size: 12px; }
+}

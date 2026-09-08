@@ -64,6 +64,17 @@
   footer .name{font-weight:700;color:var(--ink);font-size:10.4pt}
   .contacts{display:flex;gap:16px;flex-wrap:wrap;margin-top:6px}.contacts span b{color:var(--em)}
   .pb{break-before:page}
+
+/* Схема на телефоне: узлы в столбик, стрелки поворачиваются */
+@media screen and (max-width: 900px) {
+  .flow, .scheme, .chain { display: block !important; }
+  .node, .kpi { width: auto !important; min-width: 0 !important; margin-bottom: 10px; }
+  .arw { display: block; text-align: center; transform: rotate(90deg); margin: 6px 0; }
+  .head-right, .kicker, .doc-meta, .l, .v, .d, .node, .who, .tag,
+  footer { font-size: 12px !important; }
+  svg { max-width: 100%; height: auto; }
+  svg text { font-size: 11px; }
+}
 </style>
 </head>
 <body>
