@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ru"><head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta charset="utf-8">
+<title>ЦП РСФСР — одностраничник</title>
+<style>
+@page { size: 210mm 297mm; margin: 0; }
+* { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+html, body { margin:0; padding:0; }
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color:#12171F; background:#fff;
+  font-size:8.5pt; line-height:1.40;
+}
+
+/* ---- лист: содержимое занимает верхние ~72% высоты страницы ---- */
+.sheet { width:210mm; padding:10mm 15mm 0 15mm; position:relative; }
+
+/* ---- шапка ---- */
+.kicker {
+  font-size:6.5pt; letter-spacing:.28em; text-transform:uppercase;
+  color:#8A6B2E; margin:0 0 2.6mm 0;
+}
+.rule-top { height:.8mm; background:#0B2B5C; margin:0 0 4mm 0; }
+h1 {
+  font-family:Georgia,"Times New Roman",serif; font-weight:400;
+  font-size:24pt; line-height:1.02; margin:0 0 1.4mm 0; color:#0B2B5C;
+  letter-spacing:-.008em;
+}
+.sub {
+  font-family:Georgia,serif; font-size:9.4pt; color:#5B6472; font-style:italic;
+  margin:0 0 3.6mm 0;
+}
+
+/* ---- лид ---- */
+.lead { display:flex; gap:6mm; align-items:center; margin:0 0 3.4mm 0; }
+.lead .big {
+  flex:0 0 44mm; text-align:right; padding-top:.4mm; white-space:nowrap;
+  border-right:.5mm solid #C5A572; padding-right:5.5mm;
+}
+.lead .big .n {
+  font-family:Georgia,serif; font-size:20pt; color:#0B2B5C; line-height:1; display:block;
+}
+.lead .big .c {
+  font-size:6.6pt; letter-spacing:.10em; text-transform:uppercase; color:#8A6B2E;
+  display:block; margin-top:1.2mm; white-space:normal;
+}
+.lead p { margin:0; font-size:8.8pt; line-height:1.46; }
+
+/* ---- три адресата ---- */
+.who { display:flex; gap:0; margin:0 0 3.6mm 0; border-top:.25mm solid #DFE3E9; border-bottom:.25mm solid #DFE3E9; }
+.who div { flex:1; padding:2.4mm 4.5mm 2.4mm 0; }
+.who div + div { padding-left:4.5mm; border-left:.25mm solid #DFE3E9; }
+.who b {
+  display:block; font-size:7.2pt; letter-spacing:.14em; text-transform:uppercase;
+  color:#0B2B5C; margin-bottom:1mm;
+}
+.who span { color:#3D4653; font-size:8.1pt; line-height:1.38; display:block; }
+
+/* ---- как это работает ---- */
+h2 {
+  font-size:6.8pt; letter-spacing:.18em; text-transform:uppercase; color:#5B6472;
+  margin:0 0 2mm 0; font-weight:600;
+}
+.stages { display:flex; gap:5mm; margin:0 0 3.6mm 0; }
+.stage { flex:1; padding:2.6mm 3.4mm; background:#F7F8FA; border-left:.9mm solid #0B2B5C; }
+.stage.two { background:#FBF7EF; border-left-color:#C5A572; }
+.stage .t { font-weight:650; color:#0B2B5C; font-size:8.3pt; margin-bottom:1mm; }
+.stage.two .t { color:#7A5E20; }
+.stage p { margin:0; font-size:7.8pt; line-height:1.40; color:#3D4653; }
+
+/* ---- полоса чисел ---- */
+.nums { display:flex; border-top:.8mm solid #0B2B5C; border-bottom:.25mm solid #DFE3E9; margin:0 0 2.4mm 0; }
+.nums div { flex:1; padding:2.8mm 3.5mm 2.6mm 0; }
+.nums div + div { padding-left:3.5mm; border-left:.25mm solid #DFE3E9; }
+.nums .v { font-family:Georgia,serif; font-size:13.4pt; color:#0B2B5C; line-height:1.05; white-space:nowrap; margin-bottom:1.4mm; }
+.nums .v i { font-style:normal; font-size:8.4pt; color:#5B6472; }
+.nums .k { font-size:6.6pt; line-height:1.30; color:#5B6472; margin-top:0; }
+.claim {
+  font-size:8.2pt; color:#3D4653; margin:0 0 3.6mm 0; padding-left:3.4mm;
+  border-left:.5mm solid #C5A572;
+}
+.claim b { color:#12171F; }
+
+/* ---- низ: экономика + честная стадия ---- */
+.foot2 { display:flex; gap:6mm; margin:0 0 3.4mm 0; }
+.foot2 > div { flex:1; }
+.foot2 p { margin:0; font-size:7.8pt; line-height:1.41; color:#3D4653; }
+.foot2 b { color:#12171F; }
+
+/* ---- подвал ---- */
+.close { border-top:.25mm solid #DFE3E9; padding-top:2.6mm; }
+.close .line1 { font-size:8.4pt; color:#0B2B5C; font-weight:650; margin-bottom:1.1mm; }
+.close .line1 span { color:#8A6B2E; font-weight:400; }
+.close .small { font-size:6.4pt; line-height:1.40; color:#7A828E; }
+</style></head>
+<body>
+<div class="sheet">
+
+  <div class="kicker">Цифровые финансовые активы под залог имущества · материал для партнёра</div>
+  <div class="rule-top"></div>
+
+  <h1>Цифровая Платформа РСФСР</h1>
+  <div class="sub">Российский Сервис Финансирования Социального Развития</div>
+
+  <div class="lead">
+    <div class="big">
+      <span class="n">25 трлн ₽</span>
+      <span class="c">спящей залоговой массы</span>
+    </div>
+    <p>Имущество в стране есть — работать оно не может. Нет инструмента, который превратил бы
+    залог в целевые деньги, не отбирая объект у собственника. <b>ЦП РСФСР — платформа полного
+    цикла выпуска и обслуживания цифровых финансовых активов под залог недвижимого и иного
+    имущества.</b></p>
+  </div>
+
+  <div class="who">
+    <div><b>Государство</b><span>Целевые средства на нацпроекты без роста нагрузки на бюджет.</span></div>
+    <div><b>Собственник</b><span>Доход от имущества без его продажи — объект остаётся в собственности.</span></div>
+    <div><b>Инвестор</b><span>Новый класс обеспеченных регулируемых инструментов.</span></div>
+  </div>
+
+  <h2>Как это работает</h2>
+  <div class="stages">
+    <div class="stage">
+      <div class="t">Этап 1 · 2028–2029 · в действующем праве</div>
+      <p>Размещения через технологическое партнёрство с действующим оператором информационной
+      системы по 779-П. Фондирование — Фабрика проектного финансирования ВЭБ.РФ и Федеральное
+      казначейство. Дополнительная эмиссия не предусмотрена: новых норм не требуется.</p>
+    </div>
+    <div class="stage two">
+      <div class="t">Этап 2 · с 2031 · расширение мандата</div>
+      <p>Переход к модели целевой обеспеченной эмиссии Банка России. Запускается только после
+      положительного результата первого этапа не менее 12 месяцев и принятия пакета поправок.
+      Это предложение, требующее согласования, а не данность.</p>
+    </div>
+  </div>
+
+  <h2>Экономика проекта</h2>
+  <div class="nums">
+    <div><div class="v">63,0 <i>млрд ₽</i></div><div class="k">Стоимость бизнеса,<br>базовый сценарий</div></div>
+    <div><div class="v">20,1 <i>млрд ₽</i></div><div class="k">Консервативный сценарий:<br>только действующий закон</div></div>
+    <div><div class="v">2,73 <i>года</i></div><div class="k">Окупаемость<br>(дисконтированная — 3,05)</div></div>
+    <div><div class="v">1,8 <i>млрд ₽</i></div><div class="k">Размер раунда<br>на 24 месяца</div></div>
+  </div>
+  <div class="claim">Даже консервативный сценарий, <b>не требующий ни одной новой нормы</b>, даёт
+  одиннадцатикратный запас к размеру раунда. Ожидаемое значение по трём сценариям — 64,7 млрд ₽.</div>
+
+  <div class="foot2">
+    <div>
+      <h2>На чём зарабатывает</h2>
+      <p>Комиссия за выпуск <b>0,5%</b> · сервисная <b>0,3%</b> · платформенный сбор <b>0,15%</b> ·
+      лицензии партнёрам до <b>0,15%</b>. Выручка десятого года — <b>142,6 млрд ₽</b>,
+      EBITDA <b>107,1 млрд ₽</b> при марже <b>75,1%</b>: платформа берёт процент с оборота,
+      а не строит баланс.</p>
+    </div>
+    <div>
+      <h2>Что есть и чего ещё нет</h2>
+      <p>Готовы MVP, проверенный нагрузкой, бизнес-план, финансовая модель, отчёт об оценке,
+      юридический фундамент. <b>Лицензии нет, соглашение с оператором по 779-П не заключено,
+      выпусков не проводилось.</b> Главный риск — сроки: сдвиг первого выпуска на год снижает
+      стоимость бизнеса с 63,0 до 46,4 млрд ₽.</p>
+    </div>
+  </div>
+
+  <div class="close">
+    <div class="line1">Цифровая Платформа РСФСР &nbsp;<span>·</span>&nbsp; dpfsd.ru &nbsp;<span>·</span>&nbsp; aslankaa@yandex.ru</div>
+    <div class="small">Автор концепта и правообладатель ноу-хау — Кагиров Абдул-Хаким Ахмадович. Свидетельство о депонировании № 4011265 от 19.12.2024.<br>
+    Документ носит информационный характер, не является офертой, приглашением делать оферты или инвестиционной рекомендацией. Прогнозные показатели — расчётные оценки на основе допущений финансовой модели проекта и не являются гарантией результата.</div>
+  </div>
+
+</div>
+</body></html>

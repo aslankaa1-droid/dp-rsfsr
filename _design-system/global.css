@@ -271,3 +271,30 @@ iframe { border: 0; }
 /* Страховка от бокового сдвига: если какой-то блок всё же окажется на
    несколько пикселей шире экрана, страница не будет ездить вбок */
 @media (max-width: 900px) { body { overflow-x: hidden; } }
+
+/* =====================================================================
+   Телефоны с узким экраном и панелью браузера
+   Замерено на Galaxy S25 Ultra: ширина экрана 338 CSS-пикселей, браузер
+   раскладывает страницу на 375 и показывает в масштабе 0,902.
+   ===================================================================== */
+
+/* Высота экрана без панели браузера: dvh там, где он есть */
+body { min-height: 100vh; }
+@supports (height: 100dvh) {
+  body { min-height: 100dvh; }
+}
+
+/* Безопасные зоны: скруглённые углы, вырез камеры, жестовая полоса */
+body {
+  padding-inline: env(safe-area-inset-left) env(safe-area-inset-right);
+}
+
+@media (max-width: 400px) {
+  /* Браузер уменьшает страницу, чтобы уложить 375 в 338 — возвращаем
+     кегль к задуманному размеру */
+  html { font-size: 17px; }
+  .container, .container-narrow, .container-wide, .container-max {
+    padding-inline: max(var(--space-4), env(safe-area-inset-left))
+                    max(var(--space-4), env(safe-area-inset-right));
+  }
+}

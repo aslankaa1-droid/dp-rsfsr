@@ -611,3 +611,15 @@
   .btn { min-height: 44px; }
   .icon-btn { width: 44px; height: 44px; }
 }
+
+/* Панель браузера снизу и жестовая полоса */
+.drawer { height: 100vh; }
+@supports (height: 100dvh) {
+  .drawer { height: 100dvh; }
+}
+.drawer__body { padding-bottom: max(var(--space-4), env(safe-area-inset-bottom)); }
+.back-to-top { bottom: max(var(--space-6), calc(env(safe-area-inset-bottom) + var(--space-3))); }
+.footer { padding-bottom: max(var(--space-7), env(safe-area-inset-bottom)); }
+
+/* Шапка не должна округляться шире экрана */
+.top-bar, .top-bar__inner, .ticker { max-width: 100%; overflow-x: clip; }
