@@ -8,9 +8,9 @@
 (function () {
   'use strict';
   var HASHES = [
-    '30b2148f74281c67f9c7d55a416590b05e36243b5317226de476dd26cbe1823f'
+    '9f38b11617ffdc62beccb4049545bf98e78a7ff250f4ca8e4c0d1d2de1713f33'
   ];
-  var KEY = 'akaa-gate', DAYS = 30, LEN = 10, STYLE_ID = 'akaa-gate-style';
+  var KEY = 'akaa-gate-2609', DAYS = 30, LEN = 10, STYLE_ID = 'akaa-gate-style';
 
   function authed() {
     try {
